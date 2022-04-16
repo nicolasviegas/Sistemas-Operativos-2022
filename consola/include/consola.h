@@ -7,6 +7,7 @@
 #include<stdlib.h>
 #include<signal.h>
 #include<unistd.h>
+#include <stdbool.h>
 #include<sys/socket.h>
 #include<netdb.h>
 #include<string.h>
@@ -27,19 +28,35 @@ typedef struct{
 }inst;
 
 typedef enum{ //tipos de identificadores a parsear
-	NO_OP,
-	IO,
-	READ,
-	WRITE,
-	EXIT,
+	NO_OP, //0
+	IO, //1
+	READ, //2
+	COPY,//3 LO AGREGO YO
+	WRITE, //4
+	EXIT, //5
 }op_code_tipo_identificador;
 
 
+t_list* lista_instrucciones;
+
+t_config* config_consola;
+
 t_list* obtener_instrucciones(char*);
+
 
 void paquete_instrucciones(t_list*, int);
 
+bool recibir_confirmacion(int conexion);
+
 void terminar_consola(t_log* , t_list* , int, t_config*  );
+
+bool sintaxis(char* path);
+
+bool unParametro(char* id);
+
+bool dosParametros(char*id);
+
+bool analizar_sintaxis(char* buffer);
 
 
 #endif /*CONSOLA_H_*/

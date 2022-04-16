@@ -9,17 +9,13 @@ int main(int argc, char** argv){
 
 	bool success = false;
 
-	char* path;
+	char* path; //QUE ES ESTE PATH??
+	//path = ;
 	int tam;
-
 	char* ip;
 	char* puerto;
 
-	t_config* config_consola;
-	t_list* lista_instrucciones;
-	t_log* log_consola;
-
-	log_consola = log_create("log_consola.log",log_consola,1,LOG_LEVEL_INFO);
+	log_consola = log_create("consola.log","consola",1,LOG_LEVEL_INFO);
 
 	strcpy(path,argv[1]); //copio el path del argumento1 en la variable
 
@@ -35,15 +31,18 @@ int main(int argc, char** argv){
 	lista_instrucciones = obtener_instrucciones(path);
 
 	/*------------ AHORA UNA VEZ RESUELTA LA LISTA DE INSTRUCCIONES CREO CONEXION---------*/
-	config_consola = crear_config();
-	ip = config_get_string_value(config_consola,"IP");
-	puerto = config_get_string_value(config_consola, "PUERTO");
+	config_consola = config_create("consola.config");
+
+	ip = config_get_string_value(config_consola,"IP_KERNEL");
+
+	puerto = config_get_string_value(config_consola,"PUERTO_KERNEL");
+
 
 	int conexion = crear_conexion(ip,puerto); //ver bien lo de crear conexion
 
 	paquete_instrucciones(lista_instrucciones, conexion); //IMPLEMENTAR
 
-	success = recibir_confirmacion(conexion); //reveer esto creo q esta demas
+	success = recibir_confirmacion(conexion); //Implementar, reveer esto creo q esta demas
 
 	if(success){
 		terminar_consola(log_consola,lista_instrucciones, conexion,config_consola);
@@ -87,7 +86,7 @@ t_list* obtener_instrucciones(char* path){
 		return EXIT_FAILURE;
 	}
 	while(fgets(buffer, 100, f)){
-		assert("no implementado");
+		//assert("no implementado");
 		bool flag  = analizar_sintaxis(buffer);
 		char* token = strtok(buffer," ");
 		while(token != NULL){
@@ -114,7 +113,7 @@ bool sintaxis(char* path){
 	}
 
 	while(fgets(buffer,100,f)){
-		char* tok = strtok(buffer," ");
+		char* tok = strtok(buffer," "); //tok tiene que ser un int
 		switch(tok){
 			case (unParametro(tok)):
 					int i=0;
@@ -137,7 +136,7 @@ bool sintaxis(char* path){
 					break;
 
 
-			case(tok == "EXIT"):
+			case(tok == 5): //exit tiene que ser un numero
 					int i= 0;
 					tok = strtok(NULL," ");
 					if(tok != NULL){success = false;}
@@ -154,15 +153,16 @@ bool sintaxis(char* path){
 }
 
 bool unParametro(char* id){
-	if(id == "NO_OP" || id == "I/O" || id == "READ"){
+	if(id == 0 || id == 1 || id == 2){ //NO_OP, IO, READY
 		return true;
 	}
 	else return false;
 }
 
 bool dosParametros(char*id){
-	if(id == "COPY" || id == "WRITE"){
+	if(id == 3 || id == 4){ // COPY, WRITE
 		return true;
 	}
 	else return false;
 }
+
