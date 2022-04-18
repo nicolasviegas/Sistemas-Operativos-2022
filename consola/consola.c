@@ -27,7 +27,7 @@ int main(int argc, char** argv){
 
 	/* --------------------- CREO LISTA DE INSTRUCCIONES-------------------*/
 	lista_instrucciones = list_create();
-	lista_instrucciones = obtener_instrucciones(path);
+	obtener_instrucciones(path);
 
 	/*------------ AHORA UNA VEZ RESUELTA LA LISTA DE INSTRUCCIONES CREO CONEXION---------*/
 	config_consola = config_create("consola.config");
@@ -71,7 +71,7 @@ void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config)
 }
 
 
-void obtener_instrucciones(char* path){
+int obtener_instrucciones(char* path){
 	char* buffer[100];
 	instrucciones estructura_instrucciones;
 
@@ -82,51 +82,67 @@ void obtener_instrucciones(char* path){
 		return EXIT_FAILURE;
 	}
 
-	/*while(fgets(buffer, 100, f)){
-		//assert("no implementado");
-		int cant_parametros = 0;
-		//cant_parametros = nespacios;
+	while(fgets(buffer, 100, f)){
 
-		char* token = strtok(buffer," "); //hola 2 2 3
+	char* token = strtok(buffer," "); //NO_OP 5
 
-		strcpy(estructura_instrucciones.id,token);
+	char* identificador[] = token; // a chequear si funciona en teoria hay un NO_OP aca por ej
+
+	/*
+	 * Armo switch para asignarle un valor al identificador y poder usarlo en el otro switch
+	 */
+
+	switch(identificador[0]){
+	case 'N':
+
+		strcpy(token, estructura_instrucciones.id);
 
 		while(token != NULL){
-					token = strtok(NULL," ");
-					cant_parametros += 1;
-		}
 
-		cant_parametros -= 1;
-
-		char* token2 = strtok(buffer," "); //hola 2 2
-
-		while(token2 != NULL){
-			//Hacer algo que trate o procese el string
-			int a = atoi(token2);
-			token2 = strtok(NULL," ");
-			int b = atoi(token2);
-
-			if(cant_parametros == 1){
-				estructura_instrucciones.parametro1 = a;
-				estructura_instrucciones.parametro2 = NULL;
+			token = strtok(NULL," ");
+			estructura_instrucciones.parametro1 = token;
+			estructura_instrucciones.parametro2 = NULL;
 			}
 
-			if(cant_parametros == 2){
-				estructura_instrucciones.parametro1 = a;
-				estructura_instrucciones.parametro2 = b;
-			}
+		break;
 
+	case 'I':
+
+		strcpy(token, estructura_instrucciones.id);
+
+		while(token != NULL){
+			token = strtok(NULL," ");
+			estructura_instrucciones.parametro1 = token;
+			estructura_instrucciones.parametro2 = NULL;
 
 		}
-	}*/
+		break;
 
-	while(fgets(buffer, 100, f)){
-	char* token = strtok(buffer," "); //copy 2 1
-	int a = atoi(token); //hola
-	while(token != NULL){
+	case 'R':
+		strcpy(token, estructura_instrucciones.id);
+		while(token != NULL){
+			token = strtok(NULL," ");
+			estructura_instrucciones.parametro1 = token;
+			estructura_instrucciones.parametro2 = NULL;
 
-		token = strtok(NULL," ");
-		}
+				}
+		break;
+
+	case 'C':
+
+		break;
+
+	case 'W':
+
+		break;
+
+	case 'E':
+		v_identificador = 5;
+		break;
+
+	default:
+		v_identificador = 5;
+	}
 
 	}
 
