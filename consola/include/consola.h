@@ -25,7 +25,8 @@ typedef struct{
 	char* id;
 	int parametro1;
 	int parametro2;
-}inst;
+}instrucciones;
+
 
 typedef enum{ //tipos de identificadores a parsear
 	NO_OP, //0
@@ -41,7 +42,7 @@ t_list* lista_instrucciones;
 
 t_config* config_consola;
 
-t_list* obtener_instrucciones(char*);
+void obtener_instrucciones(char*);
 
 
 void paquete_instrucciones(t_list*, int);

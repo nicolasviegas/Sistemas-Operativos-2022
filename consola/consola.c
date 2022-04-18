@@ -9,8 +9,7 @@ int main(int argc, char** argv){
 
 	bool success = false;
 
-	char* path; //QUE ES ESTE PATH??
-	//path = ;
+	char* path;
 	int tam;
 	char* ip;
 	char* puerto;
@@ -72,33 +71,68 @@ void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config)
 }
 
 
-t_list* obtener_instrucciones(char* path){
-	t_list* aux;
+void obtener_instrucciones(char* path){
 	char* buffer[100];
-
-	aux = list_create();
+	instrucciones estructura_instrucciones;
 
 	FILE* f;
-
 	f = fopen(path,"r");
 	if(f == NULL){
 		printf("Error al abrir el archivo: %s",path);
 		return EXIT_FAILURE;
 	}
-	while(fgets(buffer, 100, f)){
+
+	/*while(fgets(buffer, 100, f)){
 		//assert("no implementado");
-		bool flag  = analizar_sintaxis(buffer);
-		char* token = strtok(buffer," ");
+		int cant_parametros = 0;
+		//cant_parametros = nespacios;
+
+		char* token = strtok(buffer," "); //hola 2 2 3
+
+		strcpy(estructura_instrucciones.id,token);
+
 		while(token != NULL){
-			//Hacer algo que trate o procese el string
-			token = strtok(NULL," ");
+					token = strtok(NULL," ");
+					cant_parametros += 1;
 		}
+
+		cant_parametros -= 1;
+
+		char* token2 = strtok(buffer," "); //hola 2 2
+
+		while(token2 != NULL){
+			//Hacer algo que trate o procese el string
+			int a = atoi(token2);
+			token2 = strtok(NULL," ");
+			int b = atoi(token2);
+
+			if(cant_parametros == 1){
+				estructura_instrucciones.parametro1 = a;
+				estructura_instrucciones.parametro2 = NULL;
+			}
+
+			if(cant_parametros == 2){
+				estructura_instrucciones.parametro1 = a;
+				estructura_instrucciones.parametro2 = b;
+			}
+
+
+		}
+	}*/
+
+	while(fgets(buffer, 100, f)){
+	char* token = strtok(buffer," "); //copy 2 1
+	int a = atoi(token); //hola
+	while(token != NULL){
+
+		token = strtok(NULL," ");
+		}
+
 	}
 
 	fclose(f);
 	free(buffer);
 
-	return aux;
 }
 
 
