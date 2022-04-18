@@ -72,7 +72,7 @@ void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config)
 
 
 int obtener_instrucciones(char* path){
-	char* buffer[100];
+	char* buffer[100]; // WRITE
 	instrucciones estructura_instrucciones;
 
 	FILE* f;
@@ -84,25 +84,26 @@ int obtener_instrucciones(char* path){
 
 	while(fgets(buffer, 100, f)){
 
-	char* token = strtok(buffer," "); //NO_OP 5
+	char* token = strtok(buffer," "); // tomo de buffer lo que esta desp del espacio(ej: NO_OP
+	char* parametros = buffer;
 
-	char* identificador[] = token; // a chequear si funciona en teoria hay un NO_OP aca por ej
+	parametros = strtok(NULL, " "); //Tomo los parametros
 
+	char* identificador[] = token; // token no es un array, esto hay que corregirlo
+
+	char primer_valor;
+	char segundo_valor;
 	/*
-	 * Armo switch para asignarle un valor al identificador y poder usarlo en el otro switch
+	 * SWITCH PARA CONTEMPLAR INSTRUCCIONES
 	 */
 
-	switch(identificador[0]){
+	switch(identificador[0]){ //identificador no es un int y deberia serlo. corregir con el otro switch que borre para poner los valores o hacer que identificador sea un int
 	case 'N':
 
 		strcpy(token, estructura_instrucciones.id);
 
-		while(token != NULL){
-
-			token = strtok(NULL," ");
-			estructura_instrucciones.parametro1 = token;
-			estructura_instrucciones.parametro2 = NULL;
-			}
+		estructura_instrucciones.parametro1 = parametros;
+		estructura_instrucciones.parametro2 = NULL;
 
 		break;
 
@@ -110,38 +111,54 @@ int obtener_instrucciones(char* path){
 
 		strcpy(token, estructura_instrucciones.id);
 
-		while(token != NULL){
-			token = strtok(NULL," ");
-			estructura_instrucciones.parametro1 = token;
-			estructura_instrucciones.parametro2 = NULL;
+		estructura_instrucciones.parametro1 = parametros;
+		estructura_instrucciones.parametro2 = NULL;
 
-		}
 		break;
 
 	case 'R':
 		strcpy(token, estructura_instrucciones.id);
-		while(token != NULL){
-			token = strtok(NULL," ");
-			estructura_instrucciones.parametro1 = token;
-			estructura_instrucciones.parametro2 = NULL;
 
-				}
+	    estructura_instrucciones.parametro1 = parametros;
+		estructura_instrucciones.parametro2 = NULL;
+
 		break;
 
 	case 'C':
+		strcpy(token, estructura_instrucciones.id);
+
+		primer_valor = strtok(parametros, " ");
+		segundo_valor = parametros;
+		segundo_valor = strtok(NULL, " ");  //dividimos los parametros en los 2 posibles valores
+		estructura_instrucciones.parametro1 = primer_valor;
+		estructura_instrucciones.parametro2 = segundo_valor;
+
 
 		break;
 
 	case 'W':
+		strcpy(token, estructura_instrucciones.id);
 
+		primer_valor = strtok(parametros, " ");
+		segundo_valor = parametros;
+		segundo_valor = strtok(NULL, " ");  //dividimos los parametros en los 2 posibles valores
+		estructura_instrucciones.parametro1 = primer_valor;
+		estructura_instrucciones.parametro2 = segundo_valor;
 		break;
 
 	case 'E':
-		v_identificador = 5;
+		strcpy(token, estructura_instrucciones.id);
+
+		primer_valor = strtok(parametros, " ");
+		segundo_valor = parametros;
+		segundo_valor = strtok(NULL, " ");  //dividimos los parametros en los 2 posibles valores
+		estructura_instrucciones.parametro1 = primer_valor;
+		estructura_instrucciones.parametro2 = segundo_valor;
+
 		break;
 
 	default:
-		v_identificador = 5;
+		//Estimados future selfs, agregar que devuelva error para cualquier otro id uwu
 	}
 
 	}
