@@ -1,7 +1,6 @@
 #ifndef CONSOLA_H_
 #define CONSOLA_H_
 
-
 #include<stdio.h>
 #include<ctype.h>
 #include<stdlib.h>
@@ -14,12 +13,10 @@
 #include<commons/log.h>
 #include<commons/config.h>
 #include<commons/collections/list.h>
+#include<commons/string.h>
 #include<assert.h>
-#include "../../consola/include/sumas.h"
 #include "../../shared/include/utils.h"
 
-
-//#include<utils.h>
 
 typedef struct{
 	char* id;
@@ -42,22 +39,15 @@ t_list* lista_instrucciones;
 
 t_config* config_consola;
 
-void obtener_instrucciones(char*);
+t_log* log_consola;
 
+void obtener_instrucciones(char* path);
 
-void paquete_instrucciones(t_list*, int);
+void paquete_instrucciones(t_list* lista_instrucciones, int socket);
 
 bool recibir_confirmacion(int conexion);
 
-void terminar_consola(t_log* , t_list* , int, t_config*  );
-
-bool sintaxis(char* path);
-
-bool unParametro(char* id);
-
-bool dosParametros(char*id);
-
-bool analizar_sintaxis(char* buffer);
+void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config);
 
 
 #endif /*CONSOLA_H_*/

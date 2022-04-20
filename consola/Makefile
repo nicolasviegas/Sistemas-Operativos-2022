@@ -8,15 +8,14 @@ SRC = $(shell find ./src -type f -iname "*.c" -exec basename {} \;)
 OBJ = $(SRC:%.c=./obj/%.o)
 
 SHARED = $(shell find ../shared/obj/*.o)
+LINK = -lpthread -lcommons -lm -lreadline
+CFLAGS = -c
 
 build: makefolder makeshared $(OBJ)
-	$(CC) -o $(OUTFILE) consola.c $(OBJ) $(SHARED)
+	$(CC) -o $(OUTFILE) consola.c $(OBJ) $(SHARED) $(LINK)
 
 valgrind: build
 	valgrind --leak-check=full --show-leak-kinds=all --log-file=valgrind.log ./$(OUTFILE)
-
-LINK = -lpthread -lcommons -lm
-CFLAGS = -c
 
 debug: CFLAGS := $(CFLAGS) -g
 debug: makeshared_debug build
