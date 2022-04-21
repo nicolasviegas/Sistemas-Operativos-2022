@@ -21,12 +21,13 @@ int main(int argc, char** argv){
 
 	log_consola = log_create("consola.log","consola",1,LOG_LEVEL_TRACE);
 
+	//memset(path,'\0',sizeof(path));
 	//strcpy(path,argv[1]); //copio el path del argumento1 en la variable
 	//EL STRCPY NO FUNCIONA
 
 	path = argv[1];
 
-	log_trace(log_consola, "pase strcpy");
+	//log_trace(log_consola, "pase strcpy");
 
 	/*if(!sintaxis(path)){
 		printf("Error de sintaxis en el archivo de pseudocodigo");
@@ -37,11 +38,9 @@ int main(int argc, char** argv){
 
 	/* --------------------- CREO LISTA DE INSTRUCCIONES-------------------*/
 	lista_instrucciones = list_create();
-	lista_instrucciones2 = queue_create();
 
 	obtener_instrucciones(path);
 
-	log_trace(log_consola,"pase obtener instrucciones");
 
 	/*------------ AHORA UNA VEZ RESUELTA LA LISTA DE INSTRUCCIONES CREO CONEXION---------*/
 	config_consola = config_create("consola.config");
@@ -84,10 +83,11 @@ void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config)
 	config_destroy(config);
 }
 
-void obtener_instrucciones(char* path){
+void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA ENVIAR LA LISTA CON EL FORMATO [NO_OP 4,I/O 1,..]
+										//ASI EN UNA LISTA DIVIDIDA CON COMAS Y QUE CPU LUEGO LO DIVIDA,
+										//2da idea: DENTRO DE NO_OP PONER LA FUNCION SEND_INSTRUCCION(int socket, int NO_OP)
 	char buffer[100];
 	char* linea_instrucciones = string_new();
-	instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
 
 	FILE* f;
 	f = fopen(path,"r");
@@ -106,121 +106,132 @@ void obtener_instrucciones(char* path){
 	//log_info(log_consola,token);
 
 	if(strncmp(buffer,"NO_OP",5) == 0){
-
+		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
 		log_error(log_consola,"Entre en NO_OP");
 
-		estructura_instrucciones->id = strtok(token," ");
-		estructura_instrucciones->parametro1 = strtok(NULL," ");
-		estructura_instrucciones->parametro2 = strtok(NULL," ");
+		char** parametros = string_n_split(token,2," ");
 
-		list_add(lista_instrucciones,estructura_instrucciones);
-		queue_push(lista_instrucciones2,estructura_instrucciones);
-
-		log_trace(log_consola,estructura_instrucciones->id);
-		log_trace(log_consola,estructura_instrucciones->parametro1);
-		log_trace(log_consola,estructura_instrucciones->parametro2);
-
-	}/*else if(strncmp(buffer,"I/O",3) == 0){
-
-		log_error(log_consola,"Entre en I/O");
-
-		//instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		estructura_instrucciones->id = strtok(token," ");
-		estructura_instrucciones->parametro1 = strtok(NULL," ");
-		estructura_instrucciones->parametro2 = strtok(NULL," ");
-
-		list_add(lista_instrucciones,&estructura_instrucciones);
-
-		log_trace(log_consola,estructura_instrucciones->id);
-		log_trace(log_consola,estructura_instrucciones->parametro1);
-		log_trace(log_consola,estructura_instrucciones->parametro2);
-
-	}else if(strncmp(buffer,"READ",4) == 0){
-
-		log_error(log_consola,"Entre en READ");
-
-		//instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		estructura_instrucciones->id = strtok(token," ");
-		estructura_instrucciones->parametro1 = strtok(NULL," ");
+		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->parametro1 = atoi(parametros[1]);
 		estructura_instrucciones->parametro2 = NULL;
 
-		list_add(lista_instrucciones,&estructura_instrucciones);
 
-		log_trace(log_consola,estructura_instrucciones->id);
-		log_trace(log_consola,estructura_instrucciones->parametro1);
-		log_trace(log_consola,estructura_instrucciones->parametro2);
+		list_add(lista_instrucciones,estructura_instrucciones);
+
+		//send_instruccion(conexion,NO_OP,parametro1,parametro2);// el kernel al recibir el NO_OP y los parametros podria asignarlos a la estructura
+
+		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
+
+
+	}else if(strncmp(buffer,"I/O",3) == 0){
+		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
+		log_error(log_consola,"Entre en I/O");
+
+
+		char** parametros = string_n_split(token,2," ");
+
+		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->parametro1 = atoi(parametros[1]);
+		estructura_instrucciones->parametro2 = NULL;
+
+
+		list_add(lista_instrucciones,estructura_instrucciones);
+
+		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
+
+	}else if(strncmp(buffer,"READ",4) == 0){
+		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
+		log_error(log_consola,"Entre en READ");
+
+		char** parametros = string_n_split(token,2," ");
+
+		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->parametro1 = atoi(parametros[1]);
+		estructura_instrucciones->parametro2 = NULL;
+
+		list_add(lista_instrucciones,estructura_instrucciones);
+
+		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
 	}else if(strncmp(buffer,"WRITE",5) == 0){
-
+		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
 		log_error(log_consola,"Entre en WRITE");
 
-		//instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		estructura_instrucciones->id = strtok(token," ");
-		estructura_instrucciones->parametro1 = strtok(NULL," ");
+		char** parametros = string_n_split(token,3," ");
 
-		estructura_instrucciones->parametro2 = strtok(NULL," ");
-		list_add(lista_instrucciones,&estructura_instrucciones);
+		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->parametro1 = atoi(parametros[1]);
+		estructura_instrucciones->parametro2 = atoi(parametros[2]);
 
-		log_trace(log_consola,estructura_instrucciones->id);
-		log_trace(log_consola,estructura_instrucciones->parametro1);
-		log_trace(log_consola,estructura_instrucciones->parametro2);
+		list_add(lista_instrucciones,estructura_instrucciones);
+
+		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
 	}else if(strncmp(buffer,"COPY",4) == 0){
-
+		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
 		log_error(log_consola,"Entre en COPY");
 
-		//instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		estructura_instrucciones->id = strtok(token," ");
-		estructura_instrucciones->parametro1 = strtok(NULL," ");
-		estructura_instrucciones->parametro2 = strtok(NULL," ");
+		char** parametros = string_n_split(token,3," ");
 
-		list_add(lista_instrucciones,&estructura_instrucciones);
+		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->parametro1 = atoi(parametros[1]);
+		estructura_instrucciones->parametro2 = atoi(parametros[2]);
 
-		log_trace(log_consola,estructura_instrucciones->id);
-		log_trace(log_consola,estructura_instrucciones->parametro1);
-		log_trace(log_consola,estructura_instrucciones->parametro2);
+		list_add(lista_instrucciones,estructura_instrucciones);
+
+		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
 	}else if(strncmp(buffer,"EXIT",4) == 0){
-
+		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
 		log_error(log_consola,"Entre en EXIT");
-		estructura_instrucciones->id = strtok(token," ");
 
-		list_add(lista_instrucciones,&estructura_instrucciones);
+		char** parametros = string_n_split(token,2," ");
+		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->parametro1 = NULL;
+		estructura_instrucciones->parametro2 = NULL;
 
+		list_add(lista_instrucciones,estructura_instrucciones);
+
+		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
+		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
 		//IMPLEMETNAR
 
-	}*/
+	}
 
 	//string_append_with_format(&linea_instrucciones,"%s;",token); //con esta funcion le agrego el ; entre cada instruccion
 
-	//log_warning(log_consola,linea_instrucciones);
+
 
 	}
 
-	mostrar_lista_instrucciones(lista_instrucciones);
+	//log_warning(log_consola,linea_instrucciones);
+
+	//mostrar_lista_instrucciones(lista_instrucciones);
+
+	instrucciones* a = malloc(sizeof(instrucciones));
+	a = list_get(lista_instrucciones,4);
+	log_error(log_consola,"ID de la primer operacion: %s",a->id);
+	log_error(log_consola,"PARAMETRO 1 de la primer operacion: %d",a->parametro1);
+	log_error(log_consola,"PARAMETRO 2  de la primer operacion: %d",a->parametro2);
+
 
 	fclose(f);
 	//free(buffer);
 
 }
 
-void mostrar_lista_instrucciones2(t_queue* queue,char * nombre_cola){
-	void mostrar_instrucciones(instrucciones* instruccion){
-		log_info(log_consola,"ID: %s   PARAMETRO1: %d PARAMETRO2: %d ", instruccion->id,instruccion->parametro1,instruccion->parametro2);
-	}
-	list_iterate(queue->elements, (void*) mostrar_instrucciones);
-}
 
-void mostrar_lista_instrucciones(t_list* lista){
-
-	void mostrar_instruccion(instrucciones lista){
-		log_warning(log_consola,"ID : %s",lista.id);
-		log_warning(log_consola,"PARAMETRO 1 : %d",lista.parametro1);
-		log_warning(log_consola,"PARAMETRO 2 : %d",lista.parametro2);
-	}
-		list_iterate(lista, (void*) mostrar_instruccion);
-
-}
 
 

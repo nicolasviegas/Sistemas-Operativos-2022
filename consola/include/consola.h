@@ -38,7 +38,6 @@ typedef enum{ //tipos de identificadores a parsear
 
 
 t_list* lista_instrucciones;
-t_queue* lista_instrucciones2;
 
 t_config* config_consola;
 

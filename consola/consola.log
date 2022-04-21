@@ -1146,3 +1146,835 @@
 [WARNING] 01:45:13:430 consola/(19030:19030): PARAMETRO 1 : -1096930512
 [WARNING] 01:45:13:431 consola/(19030:19030): PARAMETRO 2 : 69390336
 [TRACE] 01:45:13:432 consola/(19030:19030): pase obtener instrucciones
+[TRACE] 01:49:12:435 consola/(19636:19636): pase strcpy
+[INFO] 01:49:12:504 consola/(19636:19636): Pude leer el archivo 
+
+[ERROR] 01:49:12:514 consola/(19636:19636): Entre en NO_OP
+[TRACE] 01:49:12:517 consola/(19636:19636): NO_OP
+[TRACE] 01:49:12:518 consola/(19636:19636): 5
+[TRACE] 01:49:12:519 consola/(19636:19636): 
+[WARNING] 01:49:12:521 consola/(19636:19636): ID : @a#
+[WARNING] 01:49:12:524 consola/(19636:19636): PARAMETRO 1 : -1097323728
+[WARNING] 01:49:12:524 consola/(19636:19636): PARAMETRO 2 : 69390336
+[TRACE] 01:50:16:500 consola/(19801:19801): pase strcpy
+[INFO] 01:50:16:562 consola/(19801:19801): Pude leer el archivo 
+
+[ERROR] 01:50:16:569 consola/(19801:19801): Entre en NO_OP
+[TRACE] 01:50:16:570 consola/(19801:19801): NO_OP
+[TRACE] 01:50:16:570 consola/(19801:19801): 5
+[TRACE] 01:50:16:572 consola/(19801:19801): 
+[TRACE] 01:50:16:575 consola/(19801:19801): pase obtener instrucciones
+[TRACE] 01:50:43:455 consola/(19881:19881): pase strcpy
+[INFO] 01:50:43:516 consola/(19881:19881): Pude leer el archivo 
+
+[ERROR] 01:50:43:524 consola/(19881:19881): Entre en NO_OP
+[TRACE] 01:50:43:526 consola/(19881:19881): NO_OP
+[TRACE] 01:50:43:527 consola/(19881:19881): 5
+[TRACE] 01:50:43:529 consola/(19881:19881): 
+[WARNING] 01:50:43:533 consola/(19881:19881): ID : –`#ò`#a#häèæEXIT
+[WARNING] 01:50:43:536 consola/(19881:19881): PARAMETRO 1 : 69427408
+[WARNING] 01:50:43:536 consola/(19881:19881): PARAMETRO 2 : 69390336
+[TRACE] 01:50:43:538 consola/(19881:19881): pase obtener instrucciones
+[INFO] 10:08:00:404 consola/(4506:4506): Pude leer el archivo 
+
+[ERROR] 10:08:00:406 consola/(4506:4506): Entre en NO_OP
+[TRACE] 10:08:00:406 consola/(4506:4506): NO_OP
+[TRACE] 10:08:00:406 consola/(4506:4506): 5
+[TRACE] 10:08:00:406 consola/(4506:4506): 
+[WARNING] 10:08:00:406 consola/(4506:4506): ID : Ù˘øÙ˘ø
+[WARNING] 10:08:00:406 consola/(4506:4506): PARAMETRO 1 : -1074137888
+[WARNING] 10:08:00:406 consola/(4506:4506): PARAMETRO 2 : -1216847872
+[TRACE] 10:08:00:407 consola/(4506:4506): pase obtener instrucciones
+[INFO] 15:02:53:738 consola/(3938:3938): Pude leer el archivo 
+
+[ERROR] 15:02:53:739 consola/(3938:3938): Entre en NO_OP
+[TRACE] 15:02:53:739 consola/(3938:3938): NO_OP
+[TRACE] 15:02:53:739 consola/(3938:3938): 5
+[TRACE] 15:02:53:739 consola/(3938:3938): 
+[WARNING] 15:02:53:739 consola/(3938:3938): ID : ∏∆øæ∆ø
+[WARNING] 15:02:53:739 consola/(3938:3938): PARAMETRO 1 : -1077535104
+[WARNING] 15:02:53:739 consola/(3938:3938): PARAMETRO 2 : -1217617920
+[TRACE] 15:02:53:739 consola/(3938:3938): pase obtener instrucciones
+[INFO] 15:04:10:915 consola/(4242:4242): Pude leer el archivo 
+
+[ERROR] 15:04:10:915 consola/(4242:4242): Entre en NO_OP
+[TRACE] 15:04:10:915 consola/(4242:4242): NO_OP
+[TRACE] 15:04:10:915 consola/(4242:4242): 5
+[TRACE] 15:04:10:915 consola/(4242:4242): 
+[WARNING] 15:04:10:915 consola/(4242:4242): ID : ∏Ô≈øæÔ≈ø
+[WARNING] 15:04:10:915 consola/(4242:4242): PARAMETRO 1 : -1077546880
+[WARNING] 15:04:10:915 consola/(4242:4242): PARAMETRO 2 : -1217490944
+[TRACE] 15:04:10:915 consola/(4242:4242): pase obtener instrucciones
+[INFO] 15:09:08:034 consola/(5381:5381): Pude leer el archivo 
+
+[WARNING] 15:09:08:034 consola/(5381:5381): NO_OP 5;
+[WARNING] 15:09:08:034 consola/(5381:5381): NO_OP 5;I/O 3000;
+[WARNING] 15:09:08:034 consola/(5381:5381): NO_OP 5;I/O 3000;READ 0;
+[WARNING] 15:09:08:034 consola/(5381:5381): NO_OP 5;I/O 3000;READ 0;WRITE 4 42;
+[WARNING] 15:09:08:034 consola/(5381:5381): NO_OP 5;I/O 3000;READ 0;WRITE 4 42;COPY 0 4;
+[WARNING] 15:09:08:034 consola/(5381:5381): NO_OP 5;I/O 3000;READ 0;WRITE 4 42;COPY 0 4;EXIT;
+[TRACE] 15:09:08:034 consola/(5381:5381): pase obtener instrucciones
+[INFO] 15:10:14:015 consola/(5567:5567): Pude leer el archivo 
+
+[WARNING] 15:10:14:016 consola/(5567:5567): NO_OP 5;I/O 3000;READ 0;WRITE 4 42;COPY 0 4;EXIT;
+[TRACE] 15:10:14:016 consola/(5567:5567): pase obtener instrucciones
+[INFO] 15:21:48:919 consola/(7253:7253): Pude leer el archivo 
+
+[ERROR] 15:21:48:919 consola/(7253:7253): Entre en NO_OP
+[TRACE] 15:21:48:919 consola/(7253:7253): NO_OP
+[TRACE] 15:21:48:919 consola/(7253:7253): 5
+[TRACE] 15:21:48:919 consola/(7253:7253): 
+[ERROR] 15:21:48:919 consola/(7253:7253): Entre en I/O
+[TRACE] 15:21:48:919 consola/(7253:7253): I/O
+[TRACE] 15:21:48:919 consola/(7253:7253): 3000
+[TRACE] 15:21:48:919 consola/(7253:7253): îUÑƒ‘6
+[ERROR] 15:21:48:920 consola/(7253:7253): Entre en READ
+[TRACE] 15:21:48:920 consola/(7253:7253): READ
+[TRACE] 15:21:48:920 consola/(7253:7253): 0
+[TRACE] 15:21:48:920 consola/(7253:7253): îUìƒÿ6sola
+[ERROR] 15:21:48:920 consola/(7253:7253): Entre en WRITE
+[TRACE] 15:21:48:920 consola/(7253:7253): WRITE
+[TRACE] 15:21:48:920 consola/(7253:7253): 4
+[TRACE] 15:21:48:920 consola/(7253:7253): 42
+[ERROR] 15:21:48:920 consola/(7253:7253): Entre en COPY
+[TRACE] 15:21:48:920 consola/(7253:7253): COPY
+[TRACE] 15:21:48:920 consola/(7253:7253): 0
+[TRACE] 15:21:48:920 consola/(7253:7253): 4
+[ERROR] 15:21:48:920 consola/(7253:7253): Entre en EXIT
+[TRACE] 15:21:48:920 consola/(7253:7253): pase obtener instrucciones
+[INFO] 15:24:28:281 consola/(7677:7677): Pude leer el archivo 
+
+[ERROR] 15:24:28:281 consola/(7677:7677): Entre en NO_OP
+[TRACE] 15:24:28:281 consola/(7677:7677): NO_OP
+[TRACE] 15:24:28:281 consola/(7677:7677): 5
+[TRACE] 15:24:28:281 consola/(7677:7677): 
+[ERROR] 15:24:28:281 consola/(7677:7677): Entre en I/O
+[TRACE] 15:24:28:281 consola/(7677:7677): I/O
+[TRACE] 15:24:28:281 consola/(7677:7677): 3000
+[TRACE] 15:24:28:281 consola/(7677:7677): tjm§Õ
+[ERROR] 15:24:28:282 consola/(7677:7677): Entre en READ
+[TRACE] 15:24:28:282 consola/(7677:7677): READ
+[TRACE] 15:24:28:282 consola/(7677:7677): 0
+[TRACE] 15:24:28:282 consola/(7677:7677): tjø≠—sola
+[ERROR] 15:24:28:282 consola/(7677:7677): Entre en WRITE
+[TRACE] 15:24:28:282 consola/(7677:7677): WRITE
+[TRACE] 15:24:28:282 consola/(7677:7677): 4
+[TRACE] 15:24:28:282 consola/(7677:7677): 42
+[ERROR] 15:24:28:282 consola/(7677:7677): Entre en COPY
+[TRACE] 15:24:28:282 consola/(7677:7677): COPY
+[TRACE] 15:24:28:282 consola/(7677:7677): 0
+[TRACE] 15:24:28:282 consola/(7677:7677): 4
+[ERROR] 15:24:28:282 consola/(7677:7677): Entre en EXIT
+[WARNING] 15:24:28:282 consola/(7677:7677): ID : ∏]ıøΩ]ıøø]ıøa
+[WARNING] 15:24:28:282 consola/(7677:7677): PARAMETRO 1 : 141189552
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 2 : -1217449984
+[WARNING] 15:24:28:283 consola/(7677:7677): ID : ∞aj†aj¿aj∏]ıøEXIT
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 1 : 141189552
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 2 : -1217449984
+[WARNING] 15:24:28:283 consola/(7677:7677): ID : ∞aj†aj¿aj∏]ıøEXIT
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 1 : 141189552
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 2 : -1217449984
+[WARNING] 15:24:28:283 consola/(7677:7677): ID : ∞aj†aj¿aj∏]ıøEXIT
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 1 : 141189552
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 2 : -1217449984
+[WARNING] 15:24:28:283 consola/(7677:7677): ID : ∞aj†aj¿aj∏]ıøEXIT
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 1 : 141189552
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 2 : -1217449984
+[WARNING] 15:24:28:283 consola/(7677:7677): ID : ∞aj†aj¿aj∏]ıøEXIT
+[WARNING] 15:24:28:283 consola/(7677:7677): PARAMETRO 1 : 141189552
+[WARNING] 15:24:28:284 consola/(7677:7677): PARAMETRO 2 : -1217449984
+[TRACE] 15:24:28:284 consola/(7677:7677): pase obtener instrucciones
+[INFO] 15:25:39:893 consola/(7863:7863): Pude leer el archivo 
+
+[ERROR] 15:25:39:893 consola/(7863:7863): Entre en NO_OP
+[TRACE] 15:25:39:893 consola/(7863:7863): NO_OP
+[TRACE] 15:25:39:893 consola/(7863:7863): 5
+[TRACE] 15:25:39:893 consola/(7863:7863): 
+[ERROR] 15:25:39:893 consola/(7863:7863): Entre en I/O
+[TRACE] 15:25:39:893 consola/(7863:7863): I/O
+[TRACE] 15:25:39:893 consola/(7863:7863): 3000
+[TRACE] 15:25:39:893 consola/(7863:7863): =ä~G5
+[ERROR] 15:25:39:894 consola/(7863:7863): Entre en READ
+[TRACE] 15:25:39:894 consola/(7863:7863): READ
+[TRACE] 15:25:39:894 consola/(7863:7863): 0
+[TRACE] 15:25:39:894 consola/(7863:7863): =”£K5sola
+[ERROR] 15:25:39:894 consola/(7863:7863): Entre en WRITE
+[TRACE] 15:25:39:894 consola/(7863:7863): WRITE
+[TRACE] 15:25:39:894 consola/(7863:7863): 4
+[TRACE] 15:25:39:894 consola/(7863:7863): 42
+[ERROR] 15:25:39:894 consola/(7863:7863): Entre en COPY
+[TRACE] 15:25:39:894 consola/(7863:7863): COPY
+[TRACE] 15:25:39:894 consola/(7863:7863): 0
+[TRACE] 15:25:39:894 consola/(7863:7863): 4
+[ERROR] 15:25:39:894 consola/(7863:7863): Entre en EXIT
+[WARNING] 15:25:39:894 consola/(7863:7863): ID : ∏y¨øΩy¨øøy¨øa
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 1 : -1079215488
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 2 : -1217617920
+[WARNING] 15:25:39:895 consola/(7863:7863): ID : ∏y¨øΩy¨øøy¨øa
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 1 : -1079215488
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 2 : -1217617920
+[WARNING] 15:25:39:895 consola/(7863:7863): ID : ∏y¨øΩy¨øøy¨øa
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 1 : -1079215488
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 2 : -1217617920
+[WARNING] 15:25:39:895 consola/(7863:7863): ID : ∏y¨øΩy¨øøy¨øa
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 1 : -1079215488
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 2 : -1217617920
+[WARNING] 15:25:39:895 consola/(7863:7863): ID : ∏y¨øΩy¨øøy¨øa
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 1 : -1079215488
+[WARNING] 15:25:39:895 consola/(7863:7863): PARAMETRO 2 : -1217617920
+[WARNING] 15:25:39:896 consola/(7863:7863): ID : ∏y¨øΩy¨øøy¨øa
+[WARNING] 15:25:39:896 consola/(7863:7863): PARAMETRO 1 : -1079215488
+[WARNING] 15:25:39:896 consola/(7863:7863): PARAMETRO 2 : -1217617920
+[TRACE] 15:25:39:896 consola/(7863:7863): pase obtener instrucciones
+[INFO] 15:29:22:545 consola/(8511:8511): Pude leer el archivo 
+
+[ERROR] 15:29:22:545 consola/(8511:8511): Entre en NO_OP
+[TRACE] 15:29:22:545 consola/(8511:8511): NO_OP
+[TRACE] 15:29:22:545 consola/(8511:8511): 5
+[TRACE] 15:29:22:545 consola/(8511:8511): 
+[ERROR] 15:29:22:545 consola/(8511:8511): Entre en I/O
+[TRACE] 15:29:22:545 consola/(8511:8511): I/O
+[TRACE] 15:29:22:545 consola/(8511:8511): 3000
+[TRACE] 15:29:22:545 consola/(8511:8511): îm	yEÖ 
+[ERROR] 15:29:22:545 consola/(8511:8511): Entre en READ
+[TRACE] 15:29:22:545 consola/(8511:8511): READ
+[TRACE] 15:29:22:545 consola/(8511:8511): 0
+[TRACE] 15:29:22:545 consola/(8511:8511): îm	ò˛â sola
+[ERROR] 15:29:22:546 consola/(8511:8511): Entre en WRITE
+[TRACE] 15:29:22:546 consola/(8511:8511): WRITE
+[TRACE] 15:29:22:546 consola/(8511:8511): 4
+[TRACE] 15:29:22:546 consola/(8511:8511): 42
+[ERROR] 15:29:22:546 consola/(8511:8511): Entre en COPY
+[TRACE] 15:29:22:546 consola/(8511:8511): COPY
+[TRACE] 15:29:22:546 consola/(8511:8511): 0
+[TRACE] 15:29:22:546 consola/(8511:8511): 4
+[ERROR] 15:29:22:546 consola/(8511:8511): Entre en EXIT
+[INFO] 15:29:22:546 consola/(8511:8511): cantidad de instrucciones 6
+[TRACE] 15:29:22:546 consola/(8511:8511): pase obtener instrucciones
+[INFO] 15:31:13:207 consola/(8836:8836): Pude leer el archivo 
+
+[ERROR] 15:31:13:207 consola/(8836:8836): Entre en NO_OP
+[TRACE] 15:31:13:207 consola/(8836:8836): NO_OP
+[TRACE] 15:31:13:207 consola/(8836:8836): 5
+[TRACE] 15:31:13:207 consola/(8836:8836): 
+[ERROR] 15:31:13:207 consola/(8836:8836): Entre en I/O
+[TRACE] 15:31:13:207 consola/(8836:8836): I/O
+[TRACE] 15:31:13:208 consola/(8836:8836): 3000
+[TRACE] 15:31:13:208 consola/(8836:8836): d€tyf
+[ERROR] 15:31:13:208 consola/(8836:8836): Entre en READ
+[TRACE] 15:31:13:208 consola/(8836:8836): READ
+[TRACE] 15:31:13:208 consola/(8836:8836): 0
+[TRACE] 15:31:13:208 consola/(8836:8836): d€
+[ERROR] 15:31:13:208 consola/(8836:8836): Entre en WRITE
+[TRACE] 15:31:13:208 consola/(8836:8836): WRITE
+[TRACE] 15:31:13:208 consola/(8836:8836): 4
+[TRACE] 15:31:13:208 consola/(8836:8836): 42
+[ERROR] 15:31:13:208 consola/(8836:8836): Entre en COPY
+[TRACE] 15:31:13:208 consola/(8836:8836): COPY
+[TRACE] 15:31:13:208 consola/(8836:8836): 0
+[TRACE] 15:31:13:208 consola/(8836:8836): 4
+[ERROR] 15:31:13:209 consola/(8836:8836): Entre en EXIT
+[INFO] 15:31:13:209 consola/(8836:8836): ID de la primer operacion: (null)
+[TRACE] 15:31:13:209 consola/(8836:8836): pase obtener instrucciones
+[INFO] 15:31:41:700 consola/(8986:8986): Pude leer el archivo 
+
+[ERROR] 15:31:41:700 consola/(8986:8986): Entre en NO_OP
+[TRACE] 15:31:41:700 consola/(8986:8986): NO_OP
+[TRACE] 15:31:41:701 consola/(8986:8986): 5
+[TRACE] 15:31:41:701 consola/(8986:8986): 
+[ERROR] 15:31:41:701 consola/(8986:8986): Entre en I/O
+[TRACE] 15:31:41:701 consola/(8986:8986): I/O
+[TRACE] 15:31:41:701 consola/(8986:8986): 3000
+[TRACE] 15:31:41:701 consola/(8986:8986): §y	2‡Õ)
+[ERROR] 15:31:41:701 consola/(8986:8986): Entre en READ
+[TRACE] 15:31:41:701 consola/(8986:8986): READ
+[TRACE] 15:31:41:701 consola/(8986:8986): 0
+[TRACE] 15:31:41:701 consola/(8986:8986): §y	†ó“)sola
+[ERROR] 15:31:41:701 consola/(8986:8986): Entre en WRITE
+[TRACE] 15:31:41:701 consola/(8986:8986): WRITE
+[TRACE] 15:31:41:701 consola/(8986:8986): 4
+[TRACE] 15:31:41:702 consola/(8986:8986): 42
+[ERROR] 15:31:41:702 consola/(8986:8986): Entre en COPY
+[TRACE] 15:31:41:702 consola/(8986:8986): COPY
+[TRACE] 15:31:41:702 consola/(8986:8986): 0
+[TRACE] 15:31:41:702 consola/(8986:8986): 4
+[ERROR] 15:31:41:702 consola/(8986:8986): Entre en EXIT
+[INFO] 15:32:13:937 consola/(9126:9126): Pude leer el archivo 
+
+[ERROR] 15:32:13:937 consola/(9126:9126): Entre en NO_OP
+[TRACE] 15:32:13:937 consola/(9126:9126): NO_OP
+[TRACE] 15:32:13:937 consola/(9126:9126): 5
+[TRACE] 15:32:13:937 consola/(9126:9126): 
+[ERROR] 15:32:13:937 consola/(9126:9126): Entre en I/O
+[TRACE] 15:32:13:937 consola/(9126:9126): I/O
+[TRACE] 15:32:13:937 consola/(9126:9126): 3000
+[TRACE] 15:32:13:937 consola/(9126:9126): DöìöÊ7
+[ERROR] 15:32:13:937 consola/(9126:9126): Entre en READ
+[TRACE] 15:32:13:938 consola/(9126:9126): READ
+[TRACE] 15:32:13:938 consola/(9126:9126): 0
+[TRACE] 15:32:13:938 consola/(9126:9126): Döo∫Í7sola
+[ERROR] 15:32:13:938 consola/(9126:9126): Entre en WRITE
+[TRACE] 15:32:13:938 consola/(9126:9126): WRITE
+[TRACE] 15:32:13:938 consola/(9126:9126): 4
+[TRACE] 15:32:13:938 consola/(9126:9126): 42
+[ERROR] 15:32:13:938 consola/(9126:9126): Entre en COPY
+[TRACE] 15:32:13:938 consola/(9126:9126): COPY
+[TRACE] 15:32:13:938 consola/(9126:9126): 0
+[TRACE] 15:32:13:938 consola/(9126:9126): 4
+[ERROR] 15:32:13:938 consola/(9126:9126): Entre en EXIT
+[INFO] 15:32:13:938 consola/(9126:9126): ID de la primer operacion: (null)
+[TRACE] 15:32:13:938 consola/(9126:9126): pase obtener instrucciones
+[INFO] 15:32:36:407 consola/(9212:9212): Pude leer el archivo 
+
+[ERROR] 15:32:36:407 consola/(9212:9212): Entre en NO_OP
+[TRACE] 15:32:36:407 consola/(9212:9212): NO_OP
+[TRACE] 15:32:36:407 consola/(9212:9212): 5
+[TRACE] 15:32:36:407 consola/(9212:9212): 
+[ERROR] 15:32:36:407 consola/(9212:9212): Entre en I/O
+[TRACE] 15:32:36:407 consola/(9212:9212): I/O
+[TRACE] 15:32:36:407 consola/(9212:9212): 3000
+[TRACE] 15:32:36:407 consola/(9212:9212): $Û	b‡O
+[ERROR] 15:32:36:408 consola/(9212:9212): Entre en READ
+[TRACE] 15:32:36:408 consola/(9212:9212): READ
+[TRACE] 15:32:36:408 consola/(9212:9212): 0
+[TRACE] 15:32:36:408 consola/(9212:9212): $Û	˛aUsola
+[ERROR] 15:32:36:408 consola/(9212:9212): Entre en WRITE
+[TRACE] 15:32:36:408 consola/(9212:9212): WRITE
+[TRACE] 15:32:36:408 consola/(9212:9212): 4
+[TRACE] 15:32:36:408 consola/(9212:9212): 42
+[ERROR] 15:32:36:408 consola/(9212:9212): Entre en COPY
+[TRACE] 15:32:36:408 consola/(9212:9212): COPY
+[TRACE] 15:32:36:408 consola/(9212:9212): 0
+[TRACE] 15:32:36:408 consola/(9212:9212): 4
+[ERROR] 15:32:36:408 consola/(9212:9212): Entre en EXIT
+[INFO] 15:32:36:409 consola/(9212:9212): ID de la primer operacion: ∞Û	
+[TRACE] 15:32:36:409 consola/(9212:9212): pase obtener instrucciones
+[INFO] 15:34:31:911 consola/(9499:9499): Pude leer el archivo 
+
+[ERROR] 15:34:31:911 consola/(9499:9499): Entre en NO_OP
+[TRACE] 15:34:31:911 consola/(9499:9499): NO_OP
+[TRACE] 15:34:31:911 consola/(9499:9499): 5
+[TRACE] 15:34:31:911 consola/(9499:9499): 0À	åºV6ËGo∑
+[ERROR] 15:34:31:911 consola/(9499:9499): Entre en I/O
+[TRACE] 15:34:31:911 consola/(9499:9499): I/O
+[TRACE] 15:34:31:911 consola/(9499:9499): 3000
+[TRACE] 15:34:31:912 consola/(9499:9499): ‡À	bS[6V6ËG
+[ERROR] 15:34:31:912 consola/(9499:9499): Entre en READ
+[TRACE] 15:34:31:912 consola/(9499:9499): READ
+[TRACE] 15:34:31:912 consola/(9499:9499): 0
+[TRACE] 15:34:31:912 consola/(9499:9499): XÀ	ﬁ_6
+[ERROR] 15:34:31:912 consola/(9499:9499): Entre en WRITE
+[TRACE] 15:34:31:912 consola/(9499:9499): WRITE
+[TRACE] 15:34:31:912 consola/(9499:9499): 4
+[TRACE] 15:34:31:912 consola/(9499:9499): 42
+[ERROR] 15:34:31:912 consola/(9499:9499): Entre en COPY
+[TRACE] 15:34:31:912 consola/(9499:9499): COPY
+[TRACE] 15:34:31:912 consola/(9499:9499): 0
+[TRACE] 15:34:31:912 consola/(9499:9499): 4
+[ERROR] 15:34:31:912 consola/(9499:9499): Entre en EXIT
+[INFO] 15:34:31:913 consola/(9499:9499): ID de la primer operacion: À	
+[TRACE] 15:34:31:913 consola/(9499:9499): pase obtener instrucciones
+[INFO] 15:34:54:157 consola/(9596:9596): Pude leer el archivo 
+
+[ERROR] 15:34:54:157 consola/(9596:9596): Entre en NO_OP
+[TRACE] 15:34:54:157 consola/(9596:9596): NO_OP
+[TRACE] 15:34:54:157 consola/(9596:9596): 5
+[TRACE] 15:34:54:157 consola/(9596:9596): 0≈‘ñEi	Ëj∑
+[ERROR] 15:34:54:158 consola/(9596:9596): Entre en I/O
+[TRACE] 15:34:54:158 consola/(9596:9596): I/O
+[TRACE] 15:34:54:158 consola/(9596:9596): 3000
+[TRACE] 15:34:54:158 consola/(9596:9596): ‡ƒ‘ª“m	i	Ë
+[ERROR] 15:34:54:158 consola/(9596:9596): Entre en READ
+[TRACE] 15:34:54:158 consola/(9596:9596): READ
+[TRACE] 15:34:54:158 consola/(9596:9596): 0
+[TRACE] 15:34:54:158 consola/(9596:9596): X¥‘?◊r	
+[ERROR] 15:34:54:158 consola/(9596:9596): Entre en WRITE
+[TRACE] 15:34:54:158 consola/(9596:9596): WRITE
+[TRACE] 15:34:54:158 consola/(9596:9596): 4
+[TRACE] 15:34:54:158 consola/(9596:9596): 42
+[ERROR] 15:34:54:158 consola/(9596:9596): Entre en COPY
+[TRACE] 15:34:54:159 consola/(9596:9596): COPY
+[TRACE] 15:34:54:159 consola/(9596:9596): 0
+[TRACE] 15:34:54:159 consola/(9596:9596): 4
+[ERROR] 15:34:54:159 consola/(9596:9596): Entre en EXIT
+[INFO] 15:34:54:159 consola/(9596:9596): ID de la primer operacion: ≥‘
+[TRACE] 15:34:54:159 consola/(9596:9596): pase obtener instrucciones
+[INFO] 15:35:02:952 consola/(9614:9614): Pude leer el archivo 
+
+[ERROR] 15:35:02:952 consola/(9614:9614): Entre en NO_OP
+[TRACE] 15:35:02:952 consola/(9614:9614): NO_OP
+[TRACE] 15:35:02:952 consola/(9614:9614): 5
+[TRACE] 15:35:02:952 consola/(9614:9614): 0’Ó]‹»8Ëßq∑
+[ERROR] 15:35:02:952 consola/(9614:9614): Entre en I/O
+[TRACE] 15:35:02:952 consola/(9614:9614): I/O
+[TRACE] 15:35:02:952 consola/(9614:9614): 3000
+[TRACE] 15:35:02:953 consola/(9614:9614): ‡‘Ó.·Ã8»8Ëß
+[ERROR] 15:35:02:953 consola/(9614:9614): Entre en READ
+[TRACE] 15:35:02:953 consola/(9614:9614): READ
+[TRACE] 15:35:02:953 consola/(9614:9614): 0
+[TRACE] 15:35:02:953 consola/(9614:9614): XƒÓ‰–8
+[ERROR] 15:35:02:953 consola/(9614:9614): Entre en WRITE
+[TRACE] 15:35:02:953 consola/(9614:9614): WRITE
+[TRACE] 15:35:02:953 consola/(9614:9614): 4
+[TRACE] 15:35:02:953 consola/(9614:9614): 42
+[ERROR] 15:35:02:953 consola/(9614:9614): Entre en COPY
+[TRACE] 15:35:02:953 consola/(9614:9614): COPY
+[TRACE] 15:35:02:953 consola/(9614:9614): 0
+[TRACE] 15:35:02:953 consola/(9614:9614): 4
+[ERROR] 15:35:02:953 consola/(9614:9614): Entre en EXIT
+[INFO] 15:35:02:953 consola/(9614:9614): ID de la primer operacion: √Ó
+[TRACE] 15:35:02:954 consola/(9614:9614): pase obtener instrucciones
+[INFO] 15:40:31:992 consola/(10466:10466): Pude leer el archivo 
+
+[ERROR] 15:40:31:992 consola/(10466:10466): Entre en NO_OP
+[TRACE] 15:40:31:992 consola/(10466:10466): NO_OP
+[TRACE] 15:40:31:992 consola/(10466:10466): 5
+[TRACE] 15:40:31:992 consola/(10466:10466): ‡d 	b\-;
+[WARNING] 15:40:31:992 consola/(10466:10466): ID : ¯,Œø˛,Œø
+[WARNING] 15:40:31:993 consola/(10466:10466): PARAMETRO 1 : -1077006912
+[WARNING] 15:40:31:993 consola/(10466:10466): PARAMETRO 2 : -1217277952
+[INFO] 15:40:31:993 consola/(10466:10466): ID de la primer operacion: (null)
+[TRACE] 15:40:31:993 consola/(10466:10466): pase obtener instrucciones
+[INFO] 15:40:55:567 consola/(10552:10552): Pude leer el archivo 
+
+[ERROR] 15:40:55:567 consola/(10552:10552): Entre en NO_OP
+[TRACE] 15:40:55:567 consola/(10552:10552): NO_OP
+[TRACE] 15:40:55:567 consola/(10552:10552): 5
+[TRACE] 15:40:55:567 consola/(10552:10552): ‡D<µé–!
+[INFO] 15:40:55:567 consola/(10552:10552): ID de la primer operacion: (null)
+[TRACE] 15:40:55:567 consola/(10552:10552): pase obtener instrucciones
+[INFO] 15:43:37:985 consola/(10928:10928): Pude leer el archivo 
+
+[ERROR] 15:43:37:985 consola/(10928:10928): Entre en NO_OP
+[TRACE] 15:43:37:985 consola/(10928:10928): NO_OP
+[TRACE] 15:43:37:985 consola/(10928:10928): 5
+[TRACE] 15:43:37:985 consola/(10928:10928): ‡¥¨^Ùæ:
+[WARNING] 15:43:37:985 consola/(10928:10928): ID : ®ÌøÆÌø
+[WARNING] 15:43:37:985 consola/(10928:10928): PARAMETRO 1 : -1074985616
+[WARNING] 15:43:37:985 consola/(10928:10928): PARAMETRO 2 : -1216802816
+[INFO] 15:43:37:985 consola/(10928:10928): ID de la primer operacion: (null)
+[TRACE] 15:43:37:986 consola/(10928:10928): pase obtener instrucciones
+[INFO] 15:48:52:194 consola/(12103:12103): Pude leer el archivo 
+
+[ERROR] 15:48:52:198 consola/(12103:12103): Entre en NO_OP
+[INFO] 15:49:12:959 consola/(12199:12199): Pude leer el archivo 
+
+[ERROR] 15:49:12:959 consola/(12199:12199): Entre en NO_OP
+[TRACE] 15:49:12:959 consola/(12199:12199): El parametro de no op es: 5
+[WARNING] 15:49:12:959 consola/(12199:12199): ID : ∏gs∑∏gs∑
+[WARNING] 15:49:12:959 consola/(12199:12199): PARAMETRO 1 : -1081922976
+[WARNING] 15:49:12:959 consola/(12199:12199): PARAMETRO 2 : -1217175552
+[INFO] 15:49:12:959 consola/(12199:12199): ID de la primer operacion: (null)
+[TRACE] 15:49:12:959 consola/(12199:12199): pase obtener instrucciones
+[INFO] 15:51:22:572 consola/(12532:12532): Pude leer el archivo 
+
+[ERROR] 15:51:22:573 consola/(12532:12532): Entre en NO_OP
+[WARNING] 15:51:22:573 consola/(12532:12532): ID : »÷Ä
+[WARNING] 15:51:22:573 consola/(12532:12532): PARAMETRO 1 : -1080035792
+[WARNING] 15:51:22:573 consola/(12532:12532): PARAMETRO 2 : -1217486848
+[INFO] 15:51:22:573 consola/(12532:12532): ID de la primer operacion: (null)
+[TRACE] 15:51:22:573 consola/(12532:12532): pase obtener instrucciones
+[INFO] 15:51:37:235 consola/(12601:12601): Pude leer el archivo 
+
+[ERROR] 15:51:37:235 consola/(12601:12601): Entre en NO_OP
+[TRACE] 15:51:37:235 consola/(12601:12601): NO_OP
+[INFO] 15:52:17:723 consola/(12742:12742): Pude leer el archivo 
+
+[ERROR] 15:52:17:723 consola/(12742:12742): Entre en NO_OP
+[TRACE] 15:52:17:723 consola/(12742:12742): NO_OP
+[INFO] 15:52:31:474 consola/(12814:12814): Pude leer el archivo 
+
+[ERROR] 15:52:31:475 consola/(12814:12814): Entre en NO_OP
+[TRACE] 15:52:31:475 consola/(12814:12814): NO_OP
+[INFO] 15:53:03:886 consola/(12919:12919): Pude leer el archivo 
+
+[ERROR] 15:53:03:887 consola/(12919:12919): Entre en NO_OP
+[TRACE] 15:53:03:887 consola/(12919:12919): NO_OP
+[INFO] 15:53:14:016 consola/(12941:12941): Pude leer el archivo 
+
+[ERROR] 15:53:14:079 consola/(12941:12941): Entre en NO_OP
+[TRACE] 15:53:14:088 consola/(12941:12941): NO_OP
+[INFO] 15:54:12:471 consola/(13134:13134): Pude leer el archivo 
+
+[ERROR] 15:54:12:472 consola/(13134:13134): Entre en NO_OP
+[TRACE] 15:54:12:472 consola/(13134:13134): NO_OP
+[INFO] 15:54:16:833 consola/(13147:13147): Pude leer el archivo 
+
+[ERROR] 15:54:16:833 consola/(13147:13147): Entre en NO_OP
+[TRACE] 15:54:16:833 consola/(13147:13147): NO_OP
+[INFO] 15:54:27:782 consola/(13206:13206): Pude leer el archivo 
+
+[ERROR] 15:54:27:782 consola/(13206:13206): Entre en NO_OP
+[TRACE] 15:54:27:782 consola/(13206:13206): NO_OP
+[TRACE] 15:54:27:782 consola/(13206:13206): 5
+[TRACE] 15:54:27:782 consola/(13206:13206): ‡îQ	ÌÜ°.
+[INFO] 15:54:27:782 consola/(13206:13206): ID de la primer operacion: (null)
+[TRACE] 15:54:27:782 consola/(13206:13206): pase obtener instrucciones
+[INFO] 15:56:00:848 consola/(13469:13469): Pude leer el archivo 
+
+[ERROR] 15:56:00:848 consola/(13469:13469): Entre en NO_OP
+[WARNING] 15:56:00:848 consola/(13469:13469): a 5
+[TRACE] 15:56:00:848 consola/(13469:13469): NO_OP
+[INFO] 15:56:37:906 consola/(13589:13589): Pude leer el archivo 
+
+[ERROR] 15:56:37:906 consola/(13589:13589): Entre en NO_OP
+[WARNING] 15:56:37:906 consola/(13589:13589): a 5
+[TRACE] 15:56:37:906 consola/(13589:13589): NO_OP
+[TRACE] 15:56:37:906 consola/(13589:13589): parametro 1 5
+[TRACE] 15:56:37:906 consola/(13589:13589): ∞◊w∑Xtq
+[INFO] 15:56:37:906 consola/(13589:13589): ID de la primer operacion: (null)
+[TRACE] 15:56:37:906 consola/(13589:13589): pase obtener instrucciones
+[INFO] 15:56:50:338 consola/(13658:13658): Pude leer el archivo 
+
+[ERROR] 15:56:50:339 consola/(13658:13658): Entre en NO_OP
+[WARNING] 15:56:50:339 consola/(13658:13658): a 5
+[TRACE] 15:56:50:339 consola/(13658:13658): NO_OP
+[TRACE] 15:56:50:339 consola/(13658:13658):  5
+[TRACE] 15:56:50:339 consola/(13658:13658): ‡î˘.•9
+[INFO] 15:56:50:339 consola/(13658:13658): ID de la primer operacion: (null)
+[TRACE] 15:56:50:339 consola/(13658:13658): pase obtener instrucciones
+[INFO] 15:57:25:217 consola/(13814:13814): Pude leer el archivo 
+
+[ERROR] 15:57:25:217 consola/(13814:13814): Entre en NO_OP
+[TRACE] 15:57:25:217 consola/(13814:13814): NO_OP
+[TRACE] 15:57:25:217 consola/(13814:13814): 5
+[TRACE] 15:57:25:217 consola/(13814:13814): ‡4xl∆˘
+[INFO] 15:57:25:217 consola/(13814:13814): ID de la primer operacion: (null)
+[TRACE] 15:57:25:217 consola/(13814:13814): pase obtener instrucciones
+[INFO] 16:00:35:754 consola/(14263:14263): Pude leer el archivo 
+
+[ERROR] 16:00:35:755 consola/(14263:14263): Entre en NO_OP
+[TRACE] 16:00:35:755 consola/(14263:14263): NO_OP
+[TRACE] 16:00:35:755 consola/(14263:14263): 5
+[TRACE] 16:00:35:755 consola/(14263:14263): ‡QG∞-3): 
+[INFO] 16:00:35:755 consola/(14263:14263): ID de la primer operacion: (null)
+[TRACE] 16:00:35:755 consola/(14263:14263): pase obtener instrucciones
+[INFO] 16:02:38:790 consola/(14603:14603): Pude leer el archivo 
+
+[ERROR] 16:02:38:790 consola/(14603:14603): Entre en NO_OP
+[TRACE] 16:02:38:790 consola/(14603:14603): NO_OP
+[TRACE] 16:02:38:790 consola/(14603:14603): 5
+[TRACE] 16:02:38:791 consola/(14603:14603): 0
+[INFO] 16:02:38:791 consola/(14603:14603): ID de la primer operacion: (null)
+[TRACE] 16:02:38:791 consola/(14603:14603): pase obtener instrucciones
+[INFO] 16:03:11:699 consola/(14670:14670): Pude leer el archivo 
+
+[ERROR] 16:03:11:699 consola/(14670:14670): Entre en NO_OP
+[TRACE] 16:03:11:699 consola/(14670:14670): NO_OP
+[TRACE] 16:03:11:699 consola/(14670:14670): 500
+[TRACE] 16:03:11:699 consola/(14670:14670): 0
+[INFO] 16:03:11:699 consola/(14670:14670): ID de la primer operacion: (null)
+[TRACE] 16:03:11:699 consola/(14670:14670): pase obtener instrucciones
+[INFO] 16:04:39:759 consola/(14897:14897): Pude leer el archivo 
+
+[ERROR] 16:04:39:759 consola/(14897:14897): Entre en NO_OP
+[TRACE] 16:04:39:759 consola/(14897:14897): NO_OP
+[TRACE] 16:04:39:759 consola/(14897:14897): 500
+[TRACE] 16:04:39:759 consola/(14897:14897): 0
+[INFO] 16:04:39:759 consola/(14897:14897): ID de la primer operacion: 0
+[TRACE] 16:04:39:759 consola/(14897:14897): pase obtener instrucciones
+[INFO] 16:04:55:769 consola/(14974:14974): Pude leer el archivo 
+
+[ERROR] 16:04:55:770 consola/(14974:14974): Entre en NO_OP
+[TRACE] 16:04:55:770 consola/(14974:14974): NO_OP
+[TRACE] 16:04:55:770 consola/(14974:14974): 500
+[TRACE] 16:04:55:770 consola/(14974:14974): 0
+[INFO] 16:04:55:770 consola/(14974:14974): ID de la primer operacion: 540682548
+[TRACE] 16:04:55:770 consola/(14974:14974): pase obtener instrucciones
+[INFO] 16:05:19:332 consola/(15060:15060): Pude leer el archivo 
+
+[ERROR] 16:05:19:332 consola/(15060:15060): Entre en NO_OP
+[TRACE] 16:05:19:332 consola/(15060:15060): NO_OP
+[TRACE] 16:05:19:332 consola/(15060:15060): 500
+[TRACE] 16:05:19:332 consola/(15060:15060): 0
+[INFO] 16:05:19:333 consola/(15060:15060): ID de la primer operacion: (null)
+[TRACE] 16:05:19:333 consola/(15060:15060): pase obtener instrucciones
+[INFO] 16:08:37:173 consola/(15646:15646): Pude leer el archivo 
+
+[ERROR] 16:08:37:173 consola/(15646:15646): Entre en NO_OP
+[TRACE] 16:08:37:173 consola/(15646:15646): NO_OP
+[TRACE] 16:08:37:173 consola/(15646:15646): 500
+[TRACE] 16:08:37:173 consola/(15646:15646): 0
+[INFO] 16:08:37:173 consola/(15646:15646): ID de la primer operacion: 147547368
+[TRACE] 16:08:37:173 consola/(15646:15646): pase obtener instrucciones
+[INFO] 16:11:07:650 consola/(16042:16042): Pude leer el archivo 
+
+[ERROR] 16:11:07:653 consola/(16042:16042): Entre en NO_OP
+[TRACE] 16:11:07:653 consola/(16042:16042): NO_OP
+[TRACE] 16:11:07:653 consola/(16042:16042): 500
+[TRACE] 16:11:07:653 consola/(16042:16042): 0
+[INFO] 16:11:24:962 consola/(16120:16120): Pude leer el archivo 
+
+[ERROR] 16:11:24:962 consola/(16120:16120): Entre en NO_OP
+[TRACE] 16:11:24:962 consola/(16120:16120): NO_OP
+[TRACE] 16:11:24:962 consola/(16120:16120): 500
+[TRACE] 16:11:24:962 consola/(16120:16120): 0
+[INFO] 16:11:24:962 consola/(16120:16120): ID de la primer operacion: (null)
+[TRACE] 16:11:24:962 consola/(16120:16120): pase obtener instrucciones
+[TRACE] 16:14:22:236 consola/(16585:16585): pase obtener instrucciones
+[INFO] 16:14:22:236 consola/(16585:16585): ID de la primer operacion: (null)
+[INFO] 16:14:48:397 consola/(16677:16677): ID de la primer operacion: (null)
+[INFO] 16:15:04:105 consola/(16712:16712): ID de la primer operacion: (null)
+[ERROR] 16:15:24:731 consola/(16791:16791): ID de la primer operacion: (null)
+[ERROR] 16:18:09:922 consola/(17251:17251): ID de la primer operacion: (null)
+[ERROR] 16:21:53:159 consola/(17953:17953): ID de la primer operacion: 1
+[ERROR] 16:27:14:201 consola/(18714:18714): ID de la primer operacion: 1
+[ERROR] 16:27:26:646 consola/(18788:18788): ID de la primer operacion: 122
+[INFO] 16:29:27:618 consola/(19089:19089): Pude leer el archivo 
+
+[ERROR] 16:29:27:619 consola/(19089:19089): Entre en NO_OP
+[TRACE] 16:29:27:619 consola/(19089:19089): NO_OP
+[TRACE] 16:29:27:619 consola/(19089:19089): 500
+[TRACE] 16:29:27:619 consola/(19089:19089): 0
+[ERROR] 16:29:27:619 consola/(19089:19089): ID de la primer operacion: 159667912
+[ERROR] 16:29:27:619 consola/(19089:19089): PARAMETRO 1 de la primer operacion: 500
+[ERROR] 16:29:27:619 consola/(19089:19089): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:29:43:835 consola/(19159:19159): Pude leer el archivo 
+
+[ERROR] 16:29:43:836 consola/(19159:19159): Entre en NO_OP
+[TRACE] 16:29:43:836 consola/(19159:19159): NO_OP
+[TRACE] 16:29:43:836 consola/(19159:19159): 500
+[TRACE] 16:29:43:836 consola/(19159:19159): 0
+[ERROR] 16:29:43:836 consola/(19159:19159): ID de la primer operacion: NO_OP
+[ERROR] 16:29:43:836 consola/(19159:19159): PARAMETRO 1 de la primer operacion: 500
+[ERROR] 16:29:43:836 consola/(19159:19159): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:32:59:235 consola/(19627:19627): Pude leer el archivo 
+
+[ERROR] 16:32:59:236 consola/(19627:19627): Entre en NO_OP
+[TRACE] 16:32:59:236 consola/(19627:19627): NO_OP
+[TRACE] 16:32:59:236 consola/(19627:19627): 5
+[TRACE] 16:32:59:236 consola/(19627:19627): 0
+[ERROR] 16:32:59:236 consola/(19627:19627): Entre en I/O
+[TRACE] 16:32:59:236 consola/(19627:19627): I/O
+[TRACE] 16:32:59:236 consola/(19627:19627): 3000
+[TRACE] 16:32:59:236 consola/(19627:19627): 0
+[ERROR] 16:32:59:236 consola/(19627:19627): ID de la primer operacion: NO_OP
+[ERROR] 16:32:59:236 consola/(19627:19627): PARAMETRO 1 de la primer operacion: 5
+[ERROR] 16:32:59:236 consola/(19627:19627): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:33:10:875 consola/(19653:19653): Pude leer el archivo 
+
+[ERROR] 16:33:10:875 consola/(19653:19653): Entre en NO_OP
+[TRACE] 16:33:10:875 consola/(19653:19653): NO_OP
+[TRACE] 16:33:10:875 consola/(19653:19653): 5
+[TRACE] 16:33:10:875 consola/(19653:19653): 0
+[ERROR] 16:33:10:875 consola/(19653:19653): Entre en I/O
+[TRACE] 16:33:10:876 consola/(19653:19653): I/O
+[TRACE] 16:33:10:876 consola/(19653:19653): 3000
+[TRACE] 16:33:10:876 consola/(19653:19653): 0
+[ERROR] 16:33:10:876 consola/(19653:19653): ID de la primer operacion: NO_OP
+[ERROR] 16:33:10:876 consola/(19653:19653): PARAMETRO 1 de la primer operacion: 5
+[ERROR] 16:33:10:876 consola/(19653:19653): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:34:25:316 consola/(19843:19843): Pude leer el archivo 
+
+[ERROR] 16:34:25:316 consola/(19843:19843): Entre en NO_OP
+[TRACE] 16:34:25:316 consola/(19843:19843): NO_OP
+[TRACE] 16:34:25:316 consola/(19843:19843): 5
+[TRACE] 16:34:25:316 consola/(19843:19843): 0
+[ERROR] 16:34:25:316 consola/(19843:19843): Entre en I/O
+[TRACE] 16:34:25:316 consola/(19843:19843): I/O
+[TRACE] 16:34:25:316 consola/(19843:19843): 3000
+[TRACE] 16:34:25:316 consola/(19843:19843): 0
+[ERROR] 16:34:25:316 consola/(19843:19843): ID de la primer operacion: I/O
+[ERROR] 16:34:25:316 consola/(19843:19843): PARAMETRO 1 de la primer operacion: 3000
+[ERROR] 16:34:25:317 consola/(19843:19843): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:35:54:694 consola/(20080:20080): Pude leer el archivo 
+
+[ERROR] 16:35:54:694 consola/(20080:20080): Entre en NO_OP
+[TRACE] 16:35:54:694 consola/(20080:20080): NO_OP
+[TRACE] 16:35:54:695 consola/(20080:20080): 5
+[TRACE] 16:35:54:695 consola/(20080:20080): 0
+[ERROR] 16:35:54:695 consola/(20080:20080): Entre en I/O
+[TRACE] 16:35:54:696 consola/(20080:20080): I/O
+[TRACE] 16:35:54:696 consola/(20080:20080): 3000
+[TRACE] 16:35:54:696 consola/(20080:20080): 0
+[ERROR] 16:35:54:696 consola/(20080:20080): Entre en READ
+[TRACE] 16:35:54:696 consola/(20080:20080): READ
+[TRACE] 16:35:54:696 consola/(20080:20080): 0
+[TRACE] 16:35:54:696 consola/(20080:20080): 0
+[ERROR] 16:35:54:696 consola/(20080:20080): ID de la primer operacion: I/O
+[ERROR] 16:35:54:696 consola/(20080:20080): PARAMETRO 1 de la primer operacion: 3000
+[ERROR] 16:35:54:696 consola/(20080:20080): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:37:03:782 consola/(20263:20263): Pude leer el archivo 
+
+[ERROR] 16:37:03:782 consola/(20263:20263): Entre en NO_OP
+[TRACE] 16:37:03:782 consola/(20263:20263): NO_OP
+[TRACE] 16:37:03:782 consola/(20263:20263): 5
+[TRACE] 16:37:03:782 consola/(20263:20263): 0
+[ERROR] 16:37:03:782 consola/(20263:20263): Entre en I/O
+[TRACE] 16:37:03:782 consola/(20263:20263): I/O
+[TRACE] 16:37:03:782 consola/(20263:20263): 3000
+[TRACE] 16:37:03:782 consola/(20263:20263): 0
+[ERROR] 16:37:03:782 consola/(20263:20263): Entre en READ
+[TRACE] 16:37:03:782 consola/(20263:20263): READ
+[TRACE] 16:37:03:782 consola/(20263:20263): 0
+[TRACE] 16:37:03:782 consola/(20263:20263): 0
+[ERROR] 16:37:03:783 consola/(20263:20263): ID de la primer operacion: READ
+[ERROR] 16:37:03:783 consola/(20263:20263): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 16:37:03:783 consola/(20263:20263): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:37:14:220 consola/(20324:20324): Pude leer el archivo 
+
+[ERROR] 16:37:14:221 consola/(20324:20324): Entre en NO_OP
+[TRACE] 16:37:14:221 consola/(20324:20324): NO_OP
+[TRACE] 16:37:14:221 consola/(20324:20324): 5
+[TRACE] 16:37:14:221 consola/(20324:20324): 0
+[ERROR] 16:37:14:221 consola/(20324:20324): Entre en I/O
+[TRACE] 16:37:14:221 consola/(20324:20324): I/O
+[TRACE] 16:37:14:221 consola/(20324:20324): 3000
+[TRACE] 16:37:14:221 consola/(20324:20324): 0
+[ERROR] 16:37:14:221 consola/(20324:20324): Entre en READ
+[TRACE] 16:37:14:221 consola/(20324:20324): READ
+[TRACE] 16:37:14:221 consola/(20324:20324): 0
+[TRACE] 16:37:14:221 consola/(20324:20324): 0
+[ERROR] 16:37:14:221 consola/(20324:20324): ID de la primer operacion: I/O
+[ERROR] 16:37:14:222 consola/(20324:20324): PARAMETRO 1 de la primer operacion: 3000
+[ERROR] 16:37:14:222 consola/(20324:20324): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:37:26:769 consola/(20392:20392): Pude leer el archivo 
+
+[ERROR] 16:37:26:769 consola/(20392:20392): Entre en NO_OP
+[TRACE] 16:37:26:769 consola/(20392:20392): NO_OP
+[TRACE] 16:37:26:769 consola/(20392:20392): 5
+[TRACE] 16:37:26:769 consola/(20392:20392): 0
+[ERROR] 16:37:26:769 consola/(20392:20392): Entre en I/O
+[TRACE] 16:37:26:769 consola/(20392:20392): I/O
+[TRACE] 16:37:26:770 consola/(20392:20392): 3000
+[TRACE] 16:37:26:770 consola/(20392:20392): 0
+[ERROR] 16:37:26:770 consola/(20392:20392): Entre en READ
+[TRACE] 16:37:26:770 consola/(20392:20392): READ
+[TRACE] 16:37:26:770 consola/(20392:20392): 0
+[TRACE] 16:37:26:770 consola/(20392:20392): 0
+[ERROR] 16:37:26:770 consola/(20392:20392): ID de la primer operacion: NO_OP
+[ERROR] 16:37:26:770 consola/(20392:20392): PARAMETRO 1 de la primer operacion: 5
+[ERROR] 16:37:26:770 consola/(20392:20392): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:37:42:665 consola/(20422:20422): Pude leer el archivo 
+
+[ERROR] 16:37:42:665 consola/(20422:20422): Entre en NO_OP
+[TRACE] 16:37:42:666 consola/(20422:20422): NO_OP
+[TRACE] 16:37:42:666 consola/(20422:20422): 5
+[TRACE] 16:37:42:666 consola/(20422:20422): 0
+[ERROR] 16:37:42:666 consola/(20422:20422): Entre en I/O
+[TRACE] 16:37:42:666 consola/(20422:20422): I/O
+[TRACE] 16:37:42:666 consola/(20422:20422): 3000
+[TRACE] 16:37:42:666 consola/(20422:20422): 0
+[ERROR] 16:37:42:666 consola/(20422:20422): Entre en READ
+[TRACE] 16:37:42:666 consola/(20422:20422): READ
+[TRACE] 16:37:42:666 consola/(20422:20422): 0
+[TRACE] 16:37:42:666 consola/(20422:20422): 0
+[ERROR] 16:37:42:666 consola/(20422:20422): ID de la primer operacion: NO_OP
+[ERROR] 16:37:42:666 consola/(20422:20422): PARAMETRO 1 de la primer operacion: 5
+[ERROR] 16:37:42:666 consola/(20422:20422): PARAMETRO 2  de la primer operacion: 0
+[INFO] 16:38:10:253 consola/(20515:20515): Pude leer el archivo 
+
+[ERROR] 16:38:10:254 consola/(20515:20515): Entre en NO_OP
+[TRACE] 16:38:10:254 consola/(20515:20515): NO_OP
+[TRACE] 16:38:10:254 consola/(20515:20515): 5
+[TRACE] 16:38:10:254 consola/(20515:20515): 0
+[ERROR] 16:38:10:254 consola/(20515:20515): Entre en I/O
+[TRACE] 16:38:10:254 consola/(20515:20515): I/O
+[TRACE] 16:38:10:254 consola/(20515:20515): 3000
+[TRACE] 16:38:10:254 consola/(20515:20515): 0
+[ERROR] 16:38:10:254 consola/(20515:20515): Entre en READ
+[TRACE] 16:38:10:254 consola/(20515:20515): READ
+[TRACE] 16:38:10:254 consola/(20515:20515): 0
+[TRACE] 16:38:10:254 consola/(20515:20515): 0
+[INFO] 16:38:20:501 consola/(20578:20578): Pude leer el archivo 
+
+[ERROR] 16:38:20:501 consola/(20578:20578): Entre en NO_OP
+[TRACE] 16:38:20:501 consola/(20578:20578): NO_OP
+[TRACE] 16:38:20:501 consola/(20578:20578): 5
+[TRACE] 16:38:20:501 consola/(20578:20578): 0
+[ERROR] 16:38:20:501 consola/(20578:20578): Entre en I/O
+[TRACE] 16:38:20:501 consola/(20578:20578): I/O
+[TRACE] 16:38:20:501 consola/(20578:20578): 3000
+[TRACE] 16:38:20:501 consola/(20578:20578): 0
+[ERROR] 16:38:20:501 consola/(20578:20578): Entre en READ
+[TRACE] 16:38:20:502 consola/(20578:20578): READ
+[TRACE] 16:38:20:502 consola/(20578:20578): 0
+[TRACE] 16:38:20:502 consola/(20578:20578): 0
+[INFO] 16:38:31:376 consola/(20638:20638): Pude leer el archivo 
+
+[ERROR] 16:38:31:377 consola/(20638:20638): Entre en NO_OP
+[TRACE] 16:38:31:377 consola/(20638:20638): NO_OP
+[TRACE] 16:38:31:377 consola/(20638:20638): 5
+[TRACE] 16:38:31:377 consola/(20638:20638): 0
+[ERROR] 16:38:31:377 consola/(20638:20638): Entre en I/O
+[TRACE] 16:38:31:377 consola/(20638:20638): I/O
+[TRACE] 16:38:31:377 consola/(20638:20638): 3000
+[TRACE] 16:38:31:377 consola/(20638:20638): 0
+[ERROR] 16:38:31:377 consola/(20638:20638): Entre en READ
+[TRACE] 16:38:31:377 consola/(20638:20638): READ
+[TRACE] 16:38:31:377 consola/(20638:20638): 0
+[TRACE] 16:38:31:377 consola/(20638:20638): 0
+[INFO] 16:41:21:135 consola/(21083:21083): Pude leer el archivo 
+
+[ERROR] 16:41:21:135 consola/(21083:21083): Entre en NO_OP
+[TRACE] 16:41:21:135 consola/(21083:21083): NO_OP
+[TRACE] 16:41:21:136 consola/(21083:21083): 5
+[TRACE] 16:41:21:136 consola/(21083:21083): 0
+[ERROR] 16:41:21:136 consola/(21083:21083): Entre en I/O
+[TRACE] 16:41:21:136 consola/(21083:21083): I/O
+[TRACE] 16:41:21:136 consola/(21083:21083): 3000
+[TRACE] 16:41:21:136 consola/(21083:21083): 0
+[ERROR] 16:41:21:136 consola/(21083:21083): Entre en READ
+[INFO] 16:41:44:794 consola/(21171:21171): Pude leer el archivo 
+
+[ERROR] 16:41:44:794 consola/(21171:21171): Entre en NO_OP
+[TRACE] 16:41:44:794 consola/(21171:21171): NO_OP
+[TRACE] 16:41:44:794 consola/(21171:21171): 5
+[TRACE] 16:41:44:794 consola/(21171:21171): 0
+[ERROR] 16:41:44:794 consola/(21171:21171): Entre en I/O
+[TRACE] 16:41:44:795 consola/(21171:21171): I/O
+[TRACE] 16:41:44:795 consola/(21171:21171): 3000
+[TRACE] 16:41:44:795 consola/(21171:21171): 0
+[ERROR] 16:41:44:795 consola/(21171:21171): Entre en READ
+[TRACE] 16:41:44:795 consola/(21171:21171): READ
+[TRACE] 16:41:44:795 consola/(21171:21171): 0
+[TRACE] 16:41:44:795 consola/(21171:21171): 0
+[ERROR] 16:41:44:795 consola/(21171:21171): Entre en WRITE
+[INFO] 16:42:18:666 consola/(21288:21288): Pude leer el archivo 
+
+[ERROR] 16:42:18:666 consola/(21288:21288): Entre en NO_OP
+[TRACE] 16:42:18:666 consola/(21288:21288): NO_OP
+[TRACE] 16:42:18:667 consola/(21288:21288): 5
+[TRACE] 16:42:18:667 consola/(21288:21288): 0
+[ERROR] 16:42:18:667 consola/(21288:21288): Entre en I/O
+[TRACE] 16:42:18:667 consola/(21288:21288): I/O
+[TRACE] 16:42:18:667 consola/(21288:21288): 3000
+[TRACE] 16:42:18:667 consola/(21288:21288): 0
+[ERROR] 16:42:18:667 consola/(21288:21288): Entre en READ
+[TRACE] 16:42:18:667 consola/(21288:21288): READ
+[TRACE] 16:42:18:667 consola/(21288:21288): 0
+[TRACE] 16:42:18:667 consola/(21288:21288): 0
+[ERROR] 16:42:18:667 consola/(21288:21288): Entre en WRITE
+[TRACE] 16:42:18:667 consola/(21288:21288): WRITE
+[TRACE] 16:42:18:667 consola/(21288:21288): 4
+[TRACE] 16:42:18:667 consola/(21288:21288): 42
+[ERROR] 16:42:18:668 consola/(21288:21288): Entre en COPY
+[INFO] 16:42:35:432 consola/(21360:21360): Pude leer el archivo 
+
+[ERROR] 16:42:35:432 consola/(21360:21360): Entre en NO_OP
+[TRACE] 16:42:35:432 consola/(21360:21360): NO_OP
+[TRACE] 16:42:35:432 consola/(21360:21360): 5
+[TRACE] 16:42:35:432 consola/(21360:21360): 0
+[ERROR] 16:42:35:432 consola/(21360:21360): Entre en I/O
+[TRACE] 16:42:35:432 consola/(21360:21360): I/O
+[TRACE] 16:42:35:432 consola/(21360:21360): 3000
+[TRACE] 16:42:35:432 consola/(21360:21360): 0
+[ERROR] 16:42:35:432 consola/(21360:21360): Entre en READ
+[TRACE] 16:42:35:432 consola/(21360:21360): READ
+[TRACE] 16:42:35:433 consola/(21360:21360): 0
+[TRACE] 16:42:35:433 consola/(21360:21360): 0
+[ERROR] 16:42:35:433 consola/(21360:21360): Entre en WRITE
+[TRACE] 16:42:35:433 consola/(21360:21360): WRITE
+[TRACE] 16:42:35:433 consola/(21360:21360): 4
+[TRACE] 16:42:35:433 consola/(21360:21360): 42
+[ERROR] 16:42:35:433 consola/(21360:21360): Entre en COPY
+[TRACE] 16:42:35:433 consola/(21360:21360): COPY
+[TRACE] 16:42:35:433 consola/(21360:21360): 0
+[TRACE] 16:42:35:433 consola/(21360:21360): 4
+[ERROR] 16:42:35:433 consola/(21360:21360): Entre en EXIT
+[TRACE] 16:42:35:433 consola/(21360:21360): EXIT
+[TRACE] 16:42:35:433 consola/(21360:21360): 0
+[TRACE] 16:42:35:433 consola/(21360:21360): 0
+[ERROR] 16:42:35:434 consola/(21360:21360): ID de la primer operacion: COPY
+[ERROR] 16:42:35:434 consola/(21360:21360): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 16:42:35:434 consola/(21360:21360): PARAMETRO 2  de la primer operacion: 4
