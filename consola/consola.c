@@ -37,6 +37,8 @@ int main(int argc, char** argv){
 
 	/* --------------------- CREO LISTA DE INSTRUCCIONES-------------------*/
 	lista_instrucciones = list_create();
+	lista_instrucciones2 = queue_create();
+
 	obtener_instrucciones(path);
 
 	log_trace(log_consola,"pase obtener instrucciones");
@@ -85,13 +87,13 @@ void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config)
 void obtener_instrucciones(char* path){
 	char buffer[100];
 	char* linea_instrucciones = string_new();
-	instrucciones* estructura_instrucciones;
+	instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
 
 	FILE* f;
 	f = fopen(path,"r");
 	if(f == NULL){
 		printf("Error al abrir el archivo: %s \n",path);
-		return EXIT_FAILURE;
+		//return EXIT_FAILURE;
 	}
 
 	log_info(log_consola, "Pude leer el archivo \n");
@@ -101,18 +103,124 @@ void obtener_instrucciones(char* path){
 
 	token = strtok(buffer,"\n"); //con esta funcion separo cada instruccion por linea
 
-	log_info(log_consola,token);
+	//log_info(log_consola,token);
 
-	string_append_with_format(&linea_instrucciones,"%s;",token); //con esta funcion le agrego el ; entre cada instruccion
+	if(strncmp(buffer,"NO_OP",5) == 0){
 
-	log_warning(log_consola,linea_instrucciones);
+		log_error(log_consola,"Entre en NO_OP");
+
+		estructura_instrucciones->id = strtok(token," ");
+		estructura_instrucciones->parametro1 = strtok(NULL," ");
+		estructura_instrucciones->parametro2 = strtok(NULL," ");
+
+		list_add(lista_instrucciones,estructura_instrucciones);
+		queue_push(lista_instrucciones2,estructura_instrucciones);
+
+		log_trace(log_consola,estructura_instrucciones->id);
+		log_trace(log_consola,estructura_instrucciones->parametro1);
+		log_trace(log_consola,estructura_instrucciones->parametro2);
+
+	}/*else if(strncmp(buffer,"I/O",3) == 0){
+
+		log_error(log_consola,"Entre en I/O");
+
+		//instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
+		estructura_instrucciones->id = strtok(token," ");
+		estructura_instrucciones->parametro1 = strtok(NULL," ");
+		estructura_instrucciones->parametro2 = strtok(NULL," ");
+
+		list_add(lista_instrucciones,&estructura_instrucciones);
+
+		log_trace(log_consola,estructura_instrucciones->id);
+		log_trace(log_consola,estructura_instrucciones->parametro1);
+		log_trace(log_consola,estructura_instrucciones->parametro2);
+
+	}else if(strncmp(buffer,"READ",4) == 0){
+
+		log_error(log_consola,"Entre en READ");
+
+		//instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
+		estructura_instrucciones->id = strtok(token," ");
+		estructura_instrucciones->parametro1 = strtok(NULL," ");
+		estructura_instrucciones->parametro2 = NULL;
+
+		list_add(lista_instrucciones,&estructura_instrucciones);
+
+		log_trace(log_consola,estructura_instrucciones->id);
+		log_trace(log_consola,estructura_instrucciones->parametro1);
+		log_trace(log_consola,estructura_instrucciones->parametro2);
+
+	}else if(strncmp(buffer,"WRITE",5) == 0){
+
+		log_error(log_consola,"Entre en WRITE");
+
+		//instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
+		estructura_instrucciones->id = strtok(token," ");
+		estructura_instrucciones->parametro1 = strtok(NULL," ");
+
+		estructura_instrucciones->parametro2 = strtok(NULL," ");
+		list_add(lista_instrucciones,&estructura_instrucciones);
+
+		log_trace(log_consola,estructura_instrucciones->id);
+		log_trace(log_consola,estructura_instrucciones->parametro1);
+		log_trace(log_consola,estructura_instrucciones->parametro2);
+
+	}else if(strncmp(buffer,"COPY",4) == 0){
+
+		log_error(log_consola,"Entre en COPY");
+
+		//instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
+		estructura_instrucciones->id = strtok(token," ");
+		estructura_instrucciones->parametro1 = strtok(NULL," ");
+		estructura_instrucciones->parametro2 = strtok(NULL," ");
+
+		list_add(lista_instrucciones,&estructura_instrucciones);
+
+		log_trace(log_consola,estructura_instrucciones->id);
+		log_trace(log_consola,estructura_instrucciones->parametro1);
+		log_trace(log_consola,estructura_instrucciones->parametro2);
+
+	}else if(strncmp(buffer,"EXIT",4) == 0){
+
+		log_error(log_consola,"Entre en EXIT");
+		estructura_instrucciones->id = strtok(token," ");
+
+		list_add(lista_instrucciones,&estructura_instrucciones);
+
+
+		//IMPLEMETNAR
+
+	}*/
+
+	//string_append_with_format(&linea_instrucciones,"%s;",token); //con esta funcion le agrego el ; entre cada instruccion
+
+	//log_warning(log_consola,linea_instrucciones);
 
 	}
+
+	mostrar_lista_instrucciones(lista_instrucciones);
 
 	fclose(f);
 	//free(buffer);
 
 }
 
+void mostrar_lista_instrucciones2(t_queue* queue,char * nombre_cola){
+	void mostrar_instrucciones(instrucciones* instruccion){
+		log_info(log_consola,"ID: %s   PARAMETRO1: %d PARAMETRO2: %d ", instruccion->id,instruccion->parametro1,instruccion->parametro2);
+	}
+	list_iterate(queue->elements, (void*) mostrar_instrucciones);
+}
+
+void mostrar_lista_instrucciones(t_list* lista){
+
+	void mostrar_instruccion(instrucciones lista){
+		log_warning(log_consola,"ID : %s",lista.id);
+		log_warning(log_consola,"PARAMETRO 1 : %d",lista.parametro1);
+		log_warning(log_consola,"PARAMETRO 2 : %d",lista.parametro2);
+	}
+		list_iterate(lista, (void*) mostrar_instruccion);
+
+}
 
 
