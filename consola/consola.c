@@ -76,6 +76,7 @@ bool recibir_confirmacion(int conexion){
 	return true;
 }
 
+/*
 void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config){
 	log_destroy(log);
 	list_destroy(lista);
@@ -111,16 +112,16 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 		char** parametros = string_n_split(token,2," ");
 
-		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->id = NO_OP;
+		estructura_instrucciones->nombre = parametros[0];
 		estructura_instrucciones->parametro1 = atoi(parametros[1]);
 		estructura_instrucciones->parametro2 = NULL;
 
 
 		list_add(lista_instrucciones,estructura_instrucciones);
 
-		//send_instruccion(conexion,NO_OP,parametro1,parametro2);// el kernel al recibir el NO_OP y los parametros podria asignarlos a la estructura
-
-		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->id);
+		log_trace(log_consola,"%s",estructura_instrucciones->nombre);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
@@ -132,14 +133,16 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 		char** parametros = string_n_split(token,2," ");
 
-		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->id = IO;
+		estructura_instrucciones->nombre = parametros[0];
 		estructura_instrucciones->parametro1 = atoi(parametros[1]);
 		estructura_instrucciones->parametro2 = NULL;
 
 
 		list_add(lista_instrucciones,estructura_instrucciones);
 
-		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->id);
+		log_trace(log_consola,"%s",estructura_instrucciones->nombre);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
@@ -149,13 +152,15 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 		char** parametros = string_n_split(token,2," ");
 
-		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->id = READ;
+		estructura_instrucciones->nombre = parametros[0];
 		estructura_instrucciones->parametro1 = atoi(parametros[1]);
 		estructura_instrucciones->parametro2 = NULL;
 
 		list_add(lista_instrucciones,estructura_instrucciones);
 
-		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->id);
+		log_trace(log_consola,"%s",estructura_instrucciones->nombre);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
@@ -165,13 +170,15 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 		char** parametros = string_n_split(token,3," ");
 
-		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->id = WRITE;
+		estructura_instrucciones->nombre = parametros[0];
 		estructura_instrucciones->parametro1 = atoi(parametros[1]);
 		estructura_instrucciones->parametro2 = atoi(parametros[2]);
 
 		list_add(lista_instrucciones,estructura_instrucciones);
 
-		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->id);
+		log_trace(log_consola,"%s",estructura_instrucciones->nombre);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
@@ -181,13 +188,15 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 		char** parametros = string_n_split(token,3," ");
 
-		estructura_instrucciones->id = parametros[0];
+		estructura_instrucciones->id = COPY;
+		estructura_instrucciones->nombre = parametros[0];
 		estructura_instrucciones->parametro1 = atoi(parametros[1]);
 		estructura_instrucciones->parametro2 = atoi(parametros[2]);
 
 		list_add(lista_instrucciones,estructura_instrucciones);
 
-		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->id);
+		log_trace(log_consola,"%s",estructura_instrucciones->nombre);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
@@ -196,13 +205,16 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 		log_error(log_consola,"Entre en EXIT");
 
 		char** parametros = string_n_split(token,2," ");
-		estructura_instrucciones->id = parametros[0];
+
+		estructura_instrucciones->id = EXIT;
+		estructura_instrucciones->nombre = parametros[0];
 		estructura_instrucciones->parametro1 = NULL;
 		estructura_instrucciones->parametro2 = NULL;
 
 		list_add(lista_instrucciones,estructura_instrucciones);
 
-		log_trace(log_consola,"%s",estructura_instrucciones->id);
+		log_trace(log_consola,"%d",estructura_instrucciones->id);
+		log_trace(log_consola,"%s",estructura_instrucciones->nombre);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);
 
@@ -222,7 +234,8 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 	instrucciones* a = malloc(sizeof(instrucciones));
 	a = list_get(lista_instrucciones,4);
-	log_error(log_consola,"ID de la primer operacion: %s",a->id);
+	log_error(log_consola,"ID de la primer operacion: %d",a->id);
+	log_error(log_consola,"nombre de la primer operacion: %s",a->nombre);
 	log_error(log_consola,"PARAMETRO 1 de la primer operacion: %d",a->parametro1);
 	log_error(log_consola,"PARAMETRO 2  de la primer operacion: %d",a->parametro2);
 
@@ -235,3 +248,4 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 
 
+*/

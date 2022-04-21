@@ -17,24 +17,8 @@
 #include<commons/string.h>
 #include<assert.h>
 #include "../../shared/include/utils.h"
+#include "../../shared/include/consola-kernel.h"
 
-
-typedef struct{
-	char* id;
-	int parametro1;
-	int parametro2;
-}instrucciones;
-
-#define NULL_PROPIO 33
-
-typedef enum{ //tipos de identificadores a parsear
-	NO_OP, //0
-	IO, //1
-	READ, //2
-	COPY,//3 LO AGREGO YO
-	WRITE, //4
-	EXIT, //5
-}op_code_tipo_identificador;
 
 
 t_list* lista_instrucciones;
