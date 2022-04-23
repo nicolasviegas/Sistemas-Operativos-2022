@@ -17,6 +17,8 @@
 #include<commons/string.h>
 #include<assert.h>
 #include "../../shared/include/utils.h"
+#include "../../shared/include/protocolo.h"
+#include "../../shared/include/socket.h"
 
 typedef struct{
 	int id;
@@ -25,14 +27,15 @@ typedef struct{
 	int parametro2;
 }instrucciones;
 
-typedef enum{ //tipos de identificadores a parsear
+/*typedef enum{ //tipos de identificadores a parsear
 	NO_OP, //0
 	IO, //1
 	READ, //2
 	COPY,//3 LO AGREGO YO
 	WRITE, //4
 	EXIT, //5
-}op_code_tipo_identificador;
+}op_code_tipo_identificador;*/
+
 
 
 

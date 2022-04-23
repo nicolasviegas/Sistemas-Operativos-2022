@@ -1,4 +1,4 @@
-#include "../kernel/include/main.h"
+#include "../kernel/include/kernel.h"
 
 int main() {
 	print_hola("Messi");

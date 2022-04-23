@@ -1,5 +1,5 @@
-#ifndef CONSOLA_H_
-#define CONSOLA_H_
+#ifndef KERNEL_H_
+#define KERNEL_H_
 
 #include<stdio.h>
 #include<ctype.h>
@@ -23,25 +23,13 @@
 
 t_list* lista_instrucciones;
 
-t_config* config_consola;
+t_config* config_kernel;
 
-t_log* log_consola;
+t_log* log_kernel;
 
 t_paquete* paquete_consola_kernel;
 
-void empaquetar(int socket);
-
-void obtener_instrucciones(char* path);
-
-void paquete_instrucciones(t_list* lista_instrucciones, int socket);
-
-bool recibir_confirmacion(int conexion);
-
-void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config);
-
-void mostrar_lista_instrucciones(t_list* lista);
-
-void mostrar_lista_instrucciones2(t_queue* queue,char * nombre_cola);
 
 
-#endif /*CONSOLA_H_*/
+
+#endif /*KERNEL_H_*/

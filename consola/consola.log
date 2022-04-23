@@ -2143,3 +2143,15 @@
 [ERROR] 17:01:04:064 consola/(24325:24325): nombre de la primer operacion: COPY
 [ERROR] 17:01:04:065 consola/(24325:24325): PARAMETRO 1 de la primer operacion: 0
 [ERROR] 17:01:04:065 consola/(24325:24325): PARAMETRO 2  de la primer operacion: 4
+[INFO] 17:07:22:683 consola/(25274:25274): Pude leer el archivo 
+
+[ERROR] 17:07:22:683 consola/(25274:25274): Entre en NO_OP
+[ERROR] 17:07:22:683 consola/(25274:25274): Entre en I/O
+[ERROR] 17:07:22:683 consola/(25274:25274): Entre en READ
+[ERROR] 17:07:22:683 consola/(25274:25274): Entre en WRITE
+[ERROR] 17:07:22:683 consola/(25274:25274): Entre en COPY
+[ERROR] 17:07:22:683 consola/(25274:25274): Entre en EXIT
+[ERROR] 17:07:22:683 consola/(25274:25274): ID de la primer operacion: 3
+[ERROR] 17:07:22:683 consola/(25274:25274): nombre de la primer operacion: COPY
+[ERROR] 17:07:22:683 consola/(25274:25274): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 17:07:22:683 consola/(25274:25274): PARAMETRO 2  de la primer operacion: 4
