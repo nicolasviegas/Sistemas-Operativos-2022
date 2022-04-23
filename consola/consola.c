@@ -40,11 +40,12 @@ int main(int argc, char** argv){
 
 	paquete_consola_kernel = malloc(sizeof(t_paquete));
 
-	int conexion = crear_conexion(ip,puerto); //ver bien lo de crear conexion
+	//int conexion = crear_conexion(log_consola,"CONSOLA",ip,puerto); //ver bien lo de crear conexion
 
-	empaquetar(conexion);
+	int fd_consola = iniciar_servidor(log_consola,"CONSOLA",ip,puerto);
 
-	paquete_instrucciones(lista_instrucciones, conexion); //IMPLEMENTAR
+	while(server_escuchar(log_consola,"KERNEL",fd_consola));
+
 
 	//success = recibir_confirmacion(conexion); //Implementar, reveer esto creo q esta demas
 

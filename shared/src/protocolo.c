@@ -1,7 +1,7 @@
 #include "../include/protocolo.h"
 
 // APROBAR_OPERATIVOS
-static void* serializar_NO_OP(int nota1, uint8_t nota2) {
+static void* serializar_NO_OP(int parametro1) {
    /* void* stream = malloc(sizeof(op_code) + sizeof(uint8_t) * 2);
 
     op_code_instrucciones cop = NO_OP;

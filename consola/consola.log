@@ -2155,3 +2155,82 @@
 [ERROR] 17:07:22:683 consola/(25274:25274): nombre de la primer operacion: COPY
 [ERROR] 17:07:22:683 consola/(25274:25274): PARAMETRO 1 de la primer operacion: 0
 [ERROR] 17:07:22:683 consola/(25274:25274): PARAMETRO 2  de la primer operacion: 4
+[INFO] 16:37:47:067 consola/(7092:7092): Pude leer el archivo 
+
+[ERROR] 16:37:47:067 consola/(7092:7092): Entre en NO_OP
+[ERROR] 16:37:47:067 consola/(7092:7092): Entre en I/O
+[ERROR] 16:37:47:067 consola/(7092:7092): Entre en READ
+[ERROR] 16:37:47:067 consola/(7092:7092): Entre en WRITE
+[ERROR] 16:37:47:068 consola/(7092:7092): Entre en COPY
+[ERROR] 16:37:47:068 consola/(7092:7092): Entre en EXIT
+[ERROR] 16:37:47:068 consola/(7092:7092): ID de la primer operacion: 3
+[ERROR] 16:37:47:068 consola/(7092:7092): nombre de la primer operacion: COPY
+[ERROR] 16:37:47:068 consola/(7092:7092): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 16:37:47:068 consola/(7092:7092): PARAMETRO 2  de la primer operacion: 4
+[INFO] 16:37:47:068 consola/(7092:7092): Escuchando en 127.0.0.1:8000 (CONSOLA)
+
+[INFO] 16:38:03:773 consola/(7092:7092): Cliente conectado (a CONSOLA)
+
+[INFO] 16:38:03:775 consola/(7092:7098): DISCONNECT!
+[INFO] 16:40:41:984 consola/(7330:7330): Pude leer el archivo 
+
+[ERROR] 16:40:41:985 consola/(7330:7330): Entre en NO_OP
+[ERROR] 16:40:41:985 consola/(7330:7330): Entre en I/O
+[ERROR] 16:40:41:985 consola/(7330:7330): Entre en READ
+[ERROR] 16:40:41:985 consola/(7330:7330): Entre en WRITE
+[ERROR] 16:40:41:985 consola/(7330:7330): Entre en COPY
+[ERROR] 16:40:41:985 consola/(7330:7330): Entre en EXIT
+[ERROR] 16:40:41:985 consola/(7330:7330): ID de la primer operacion: 3
+[ERROR] 16:40:41:986 consola/(7330:7330): nombre de la primer operacion: COPY
+[ERROR] 16:40:41:986 consola/(7330:7330): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 16:40:41:986 consola/(7330:7330): PARAMETRO 2  de la primer operacion: 4
+[INFO] 16:40:41:986 consola/(7330:7330): Escuchando en 127.0.0.1:8000 (CONSOLA)
+
+[INFO] 16:42:10:399 consola/(7330:7330): Cliente conectado (a CONSOLA)
+
+[INFO] 16:42:10:401 consola/(7330:7362): DISCONNECT!
+[INFO] 16:43:32:607 consola/(7439:7439): Pude leer el archivo 
+
+[ERROR] 16:43:32:607 consola/(7439:7439): Entre en NO_OP
+[ERROR] 16:43:32:607 consola/(7439:7439): Entre en I/O
+[ERROR] 16:43:32:608 consola/(7439:7439): Entre en READ
+[ERROR] 16:43:32:608 consola/(7439:7439): Entre en WRITE
+[ERROR] 16:43:32:608 consola/(7439:7439): Entre en COPY
+[ERROR] 16:43:32:608 consola/(7439:7439): Entre en EXIT
+[ERROR] 16:43:32:608 consola/(7439:7439): ID de la primer operacion: 3
+[ERROR] 16:43:32:608 consola/(7439:7439): nombre de la primer operacion: COPY
+[ERROR] 16:43:32:608 consola/(7439:7439): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 16:43:32:608 consola/(7439:7439): PARAMETRO 2  de la primer operacion: 4
+[INFO] 16:43:32:609 consola/(7439:7439): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 16:44:09:350 consola/(7449:7449): Pude leer el archivo 
+
+[ERROR] 16:44:09:350 consola/(7449:7449): Entre en NO_OP
+[ERROR] 16:44:09:350 consola/(7449:7449): Entre en I/O
+[ERROR] 16:44:09:350 consola/(7449:7449): Entre en READ
+[ERROR] 16:44:09:350 consola/(7449:7449): Entre en WRITE
+[ERROR] 16:44:09:351 consola/(7449:7449): Entre en COPY
+[ERROR] 16:44:09:351 consola/(7449:7449): Entre en EXIT
+[ERROR] 16:44:09:351 consola/(7449:7449): ID de la primer operacion: 3
+[ERROR] 16:44:09:351 consola/(7449:7449): nombre de la primer operacion: COPY
+[ERROR] 16:44:09:351 consola/(7449:7449): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 16:44:09:351 consola/(7449:7449): PARAMETRO 2  de la primer operacion: 4
+[INFO] 16:44:09:351 consola/(7449:7449): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 16:44:31:659 consola/(7515:7515): Pude leer el archivo 
+
+[ERROR] 16:44:31:659 consola/(7515:7515): Entre en NO_OP
+[ERROR] 16:44:31:659 consola/(7515:7515): Entre en I/O
+[ERROR] 16:44:31:659 consola/(7515:7515): Entre en READ
+[ERROR] 16:44:31:660 consola/(7515:7515): Entre en WRITE
+[ERROR] 16:44:31:660 consola/(7515:7515): Entre en COPY
+[ERROR] 16:44:31:660 consola/(7515:7515): Entre en EXIT
+[ERROR] 16:44:31:660 consola/(7515:7515): ID de la primer operacion: 3
+[ERROR] 16:44:31:660 consola/(7515:7515): nombre de la primer operacion: COPY
+[ERROR] 16:44:31:660 consola/(7515:7515): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 16:44:31:660 consola/(7515:7515): PARAMETRO 2  de la primer operacion: 4
+[INFO] 16:44:31:660 consola/(7515:7515): Escuchando en 127.0.0.1:8000 (CONSOLA)
+
+[INFO] 16:44:46:536 consola/(7515:7515): Cliente conectado (a KERNEL)
+
+[INFO] 16:44:46:538 consola/(7515:7518): DISCONNECT!

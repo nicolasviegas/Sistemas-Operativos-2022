@@ -21,6 +21,7 @@
 
 
 
+
 t_list* lista_instrucciones;
 
 t_config* config_kernel;
@@ -29,6 +30,10 @@ t_log* log_kernel;
 
 t_paquete* paquete_consola_kernel;
 
+
+
+
+bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2);
 
 
 

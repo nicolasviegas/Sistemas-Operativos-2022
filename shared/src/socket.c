@@ -1,74 +1,62 @@
 #include "../include/socket.h"
 
+// INICIA SERVER ESCUCHANDO EN IP:PUERTO
+int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
+    int socket_servidor;
+    struct addrinfo hints, *servinfo;
 
+    // Inicializando hints
+    memset(&hints, 0, sizeof(hints));
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    hints.ai_flags = AI_PASSIVE;
 
-int socket_create_listener(char* ip, int port) {
-	if (ip == NULL)
-		return -1;
+    // Recibe los addrinfo
+    getaddrinfo(ip, puerto, &hints, &servinfo);
 
-	struct addrinfo hints;
-	struct addrinfo *server_info;
+    bool conecto = false;
 
-	memset(&hints, 0, sizeof(hints));
+    // Itera por cada addrinfo devuelto
+    for (struct addrinfo *p = servinfo; p != NULL; p = p->ai_next) {
+        socket_servidor = socket(p->ai_family, p->ai_socktype, p->ai_protocol);
+        if (socket_servidor == -1) // fallo de crear socket
+            continue;
 
-	hints.ai_family = AF_UNSPEC;
-	hints.ai_flags = AI_PASSIVE;
-	hints.ai_socktype = SOCK_STREAM;
-	char* port_char = string_itoa(port);
-	getaddrinfo(ip, port_char, &hints, &server_info);
-	free(port_char);
+        if (bind(socket_servidor, p->ai_addr, p->ai_addrlen) == -1) {
+            // Si entra aca fallo el bind
+            close(socket_servidor);
+            continue;
+        }
+        // Ni bien conecta uno nos vamos del for
+        conecto = true;
+        break;
+    }
 
-	int server_socket = socket(server_info->ai_family, server_info->ai_socktype, server_info->ai_protocol);
+    if(!conecto) {
+        free(servinfo);
+        return 0;
+    }
 
-	int activated = 1;
-	setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &activated, sizeof(activated));
+    listen(socket_servidor, SOMAXCONN); // Escuchando (hasta SOMAXCONN conexiones simultaneas)
 
-	if (server_socket == -1 || bind(server_socket, server_info->ai_addr, server_info->ai_addrlen) == -1) {
-		freeaddrinfo(server_info);
-		return -1;
-	}
+    // Aviso al logger
+    log_info(logger, "Escuchando en %s:%s (%s)\n", ip, puerto, name);
 
-	freeaddrinfo(server_info);
+    freeaddrinfo(servinfo);
 
-	if (listen(server_socket, BACKLOG) == -1)
-		return -1;
-	return server_socket;
+    return socket_servidor;
 }
 
-int socket_connect_to_server(char* ip, int port) {
-	if (ip == NULL)
-		return -1;
+// ESPERAR CONEXION DE CLIENTE EN UN SERVER ABIERTO
+int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
+    struct sockaddr_in dir_cliente;
+    socklen_t tam_direccion = sizeof(struct sockaddr_in);
 
-	struct addrinfo hints;
-	struct addrinfo *server_info;
+    int socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
 
-	memset(&hints, 0, sizeof(hints));
+    log_info(logger, "Cliente conectado (a %s)\n", name);
 
-	hints.ai_family = AF_UNSPEC;
-	hints.ai_socktype = SOCK_STREAM;
-
-	char* port_char = string_itoa(port);
-	getaddrinfo(ip, port_char, &hints, &server_info);
-	free(port_char);
-
-	int server_socket = socket(server_info->ai_family, server_info->ai_socktype, server_info->ai_protocol);
-
-	int result = connect(server_socket, server_info->ai_addr, server_info->ai_addrlen);
-
-	freeaddrinfo(server_info);
-
-	return (result < 0 || server_socket == -1) ? -1 : server_socket;
+    return socket_cliente;
 }
 
-int socket_accept_conection(int server_socket) {
-	struct sockaddr_in addr;
-	socklen_t addrlen = sizeof(addr);
 
-	int client_socket = accept(server_socket, (struct sockaddr *) &addr, &addrlen);
-	printf("%d", client_socket);
-	if (client_socket < 0) {
-		perror("Error al aceptar cliente");
-		return -1;
-	}
-	return client_socket;
-}

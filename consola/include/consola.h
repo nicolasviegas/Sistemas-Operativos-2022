@@ -18,6 +18,8 @@
 #include<assert.h>
 #include "../../shared/include/utils.h"
 #include "../../shared/include/consola-kernel.h"
+#include "../include/comunicacion_consola.h"
+
 
 
 
