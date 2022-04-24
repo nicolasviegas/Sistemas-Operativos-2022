@@ -36,7 +36,9 @@ typedef struct{
 	EXIT, //5
 }op_code_tipo_identificador;*/
 
-
-
+void* serializar_paquete(t_paquete* paquete, int bytes);
+int recibir_operacion(int socket_cliente);
+void recibir_mensaje(int socket_cliente,t_log* logger);
+void* recibir_buffer(int* size, int socket_cliente);
 
 #endif /* SHARED_INCLUDE_CONSOLA_KERNEL_H_ */

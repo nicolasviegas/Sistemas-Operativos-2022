@@ -21,11 +21,11 @@ typedef enum{ //tipos de identificadores a parsear
 
 #define BACKLOG 20
 
-bool send_NO_OP(int fd, uint8_t  nota1, uint8_t  nota2);
-bool recv_NO_OP(int fd, uint8_t* nota1, uint8_t* nota2);
+bool send_NO_OP(int fd, uint8_t  parametro1);
+bool recv_NO_OP(int fd, uint8_t* parametro1);
 
-bool send_IO(int fd, char*  peli, uint8_t  cant_pochoclos);
-bool recv_IO(int fd, char** peli, uint8_t* cant_pochoclos);
+bool send_IO(int fd, uint8_t  parametro1);
+bool recv_IO(int fd, uint8_t* parametro1);
 
 bool send_READ(int fd);
 bool recv_READ(int fd);
