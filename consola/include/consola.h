@@ -45,5 +45,6 @@ void mostrar_lista_instrucciones(t_list* lista);
 
 void mostrar_lista_instrucciones2(t_queue* queue,char * nombre_cola);
 
+void cerrar_programa(t_log* logger);
 
 #endif /*CONSOLA_H_*/

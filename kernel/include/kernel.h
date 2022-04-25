@@ -18,6 +18,7 @@
 #include<assert.h>
 #include "../../shared/include/utils.h"
 #include "../../shared/include/consola-kernel.h"
+#include "../include/comunicacion_kernel.h"
 
 
 
@@ -29,10 +30,7 @@ t_log* log_kernel;
 
 t_paquete* paquete_consola_kernel;
 
-
-
-bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2);
-
+int server_escuchar(t_log* logger, char* server_name, int server_socket);
 
 
 #endif /*KERNEL_H_*/

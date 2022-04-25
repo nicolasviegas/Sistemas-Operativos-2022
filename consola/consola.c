@@ -40,18 +40,26 @@ int main(int argc, char** argv){
 
 	paquete_consola_kernel = malloc(sizeof(t_paquete));
 
-	//int conexion = crear_conexion(log_consola,"CONSOLA",ip,puerto); //ver bien lo de crear conexion
+	int cant_instrucciones = list_size(lista_instrucciones);
 
-	int fd_consola = iniciar_servidor(log_consola,"CONSOLA",ip,puerto);
+	log_error(log_consola,"cant de instrucciones: %d",cant_instrucciones);
 
-	while(server_escuchar(log_consola,"KERNEL",fd_consola));
+	int fd_mod2=0;
+	if (!generar_conexiones(log_consola, ip, puerto, &fd_mod2)) {
+		cerrar_programa(logger);
+		return EXIT_FAILURE;
+	}
+	log_trace(log_consola,"El fd_mod2 despues de grar conexiones es: %d",fd_mod2);
 
+	send_instrucciones(lista_instrucciones,fd_mod2);
 
-	//success = recibir_confirmacion(conexion); //Implementar, reveer esto creo q esta demas
+/*
+	success = recibir_confirmacion(fd_mod2); //Implementar, reveer esto creo q esta demas
 
-	//if(success){
+	if(success){
 	// terminar_consola(log_consola,lista_instrucciones, conexion,config_consola);
-	//}
+	}
+*/
 
 	return EXIT_SUCCESS;
 }

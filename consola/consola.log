@@ -2234,3 +2234,272 @@
 [INFO] 16:44:46:536 consola/(7515:7515): Cliente conectado (a KERNEL)
 
 [INFO] 16:44:46:538 consola/(7515:7518): DISCONNECT!
+[INFO] 20:22:45:745 consola/(3611:3611): Pude leer el archivo 
+
+[ERROR] 20:22:45:746 consola/(3611:3611): Entre en NO_OP
+[ERROR] 20:22:45:746 consola/(3611:3611): Entre en I/O
+[ERROR] 20:22:45:746 consola/(3611:3611): Entre en READ
+[ERROR] 20:22:45:746 consola/(3611:3611): Entre en WRITE
+[ERROR] 20:22:45:746 consola/(3611:3611): Entre en COPY
+[ERROR] 20:22:45:746 consola/(3611:3611): Entre en EXIT
+[ERROR] 20:22:45:746 consola/(3611:3611): ID de la primer operacion: 3
+[ERROR] 20:22:45:746 consola/(3611:3611): nombre de la primer operacion: COPY
+[ERROR] 20:22:45:746 consola/(3611:3611): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 20:22:45:746 consola/(3611:3611): PARAMETRO 2  de la primer operacion: 4
+[INFO] 20:23:21:089 consola/(3761:3761): Pude leer el archivo 
+
+[ERROR] 20:23:21:089 consola/(3761:3761): Entre en NO_OP
+[ERROR] 20:23:21:089 consola/(3761:3761): Entre en I/O
+[ERROR] 20:23:21:089 consola/(3761:3761): Entre en READ
+[ERROR] 20:23:21:089 consola/(3761:3761): Entre en WRITE
+[ERROR] 20:23:21:089 consola/(3761:3761): Entre en COPY
+[ERROR] 20:23:21:089 consola/(3761:3761): Entre en EXIT
+[ERROR] 20:23:21:089 consola/(3761:3761): ID de la primer operacion: 3
+[ERROR] 20:23:21:089 consola/(3761:3761): nombre de la primer operacion: COPY
+[ERROR] 20:23:21:089 consola/(3761:3761): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 20:23:21:089 consola/(3761:3761): PARAMETRO 2  de la primer operacion: 4
+[INFO] 20:23:21:089 consola/(3761:3761): Escuchando en 127.0.0.1:8000 (CONSOLA)
+
+[INFO] 20:23:24:908 consola/(3761:3761): Cliente conectado (a KERNEL)
+
+[INFO] 20:23:24:909 consola/(3761:3773): DISCONNECT!
+[INFO] 20:18:03:164 consola/(13660:13660): Pude leer el archivo 
+
+[ERROR] 20:18:03:166 consola/(13660:13660): Entre en NO_OP
+[ERROR] 20:18:03:166 consola/(13660:13660): Entre en I/O
+[ERROR] 20:18:03:166 consola/(13660:13660): Entre en READ
+[ERROR] 20:18:03:166 consola/(13660:13660): Entre en WRITE
+[ERROR] 20:18:03:166 consola/(13660:13660): Entre en COPY
+[ERROR] 20:18:03:166 consola/(13660:13660): Entre en EXIT
+[ERROR] 20:18:03:166 consola/(13660:13660): ID de la primer operacion: 3
+[ERROR] 20:18:03:166 consola/(13660:13660): nombre de la primer operacion: COPY
+[ERROR] 20:18:03:166 consola/(13660:13660): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 20:18:03:166 consola/(13660:13660): PARAMETRO 2  de la primer operacion: 4
+[INFO] 20:18:03:167 consola/(13660:13660): Cliente conectado en 127.0.0.1:8000 (a CONSOLA)
+
+[INFO] 20:18:42:203 consola/(13803:13803): Pude leer el archivo 
+
+[ERROR] 20:18:42:203 consola/(13803:13803): Entre en NO_OP
+[ERROR] 20:18:42:204 consola/(13803:13803): Entre en I/O
+[ERROR] 20:18:42:204 consola/(13803:13803): Entre en READ
+[ERROR] 20:18:42:204 consola/(13803:13803): Entre en WRITE
+[ERROR] 20:18:42:204 consola/(13803:13803): Entre en COPY
+[ERROR] 20:18:42:204 consola/(13803:13803): Entre en EXIT
+[ERROR] 20:18:42:204 consola/(13803:13803): ID de la primer operacion: 3
+[ERROR] 20:18:42:204 consola/(13803:13803): nombre de la primer operacion: COPY
+[ERROR] 20:18:42:204 consola/(13803:13803): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 20:18:42:204 consola/(13803:13803): PARAMETRO 2  de la primer operacion: 4
+[INFO] 20:18:42:204 consola/(13803:13803): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 20:18:53:318 consola/(13827:13827): Pude leer el archivo 
+
+[ERROR] 20:18:53:319 consola/(13827:13827): Entre en NO_OP
+[ERROR] 20:18:53:319 consola/(13827:13827): Entre en I/O
+[ERROR] 20:18:53:319 consola/(13827:13827): Entre en READ
+[ERROR] 20:18:53:319 consola/(13827:13827): Entre en WRITE
+[ERROR] 20:18:53:319 consola/(13827:13827): Entre en COPY
+[ERROR] 20:18:53:319 consola/(13827:13827): Entre en EXIT
+[ERROR] 20:18:53:319 consola/(13827:13827): ID de la primer operacion: 3
+[ERROR] 20:18:53:319 consola/(13827:13827): nombre de la primer operacion: COPY
+[ERROR] 20:18:53:319 consola/(13827:13827): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 20:18:53:319 consola/(13827:13827): PARAMETRO 2  de la primer operacion: 4
+[ERROR] 20:18:53:319 consola/(13827:13827): Error al conectar (a KERNEL)
+
+[INFO] 20:19:04:743 consola/(13853:13853): Pude leer el archivo 
+
+[ERROR] 20:19:04:743 consola/(13853:13853): Entre en NO_OP
+[ERROR] 20:19:04:743 consola/(13853:13853): Entre en I/O
+[ERROR] 20:19:04:743 consola/(13853:13853): Entre en READ
+[ERROR] 20:19:04:743 consola/(13853:13853): Entre en WRITE
+[ERROR] 20:19:04:743 consola/(13853:13853): Entre en COPY
+[ERROR] 20:19:04:743 consola/(13853:13853): Entre en EXIT
+[ERROR] 20:19:04:743 consola/(13853:13853): ID de la primer operacion: 3
+[ERROR] 20:19:04:743 consola/(13853:13853): nombre de la primer operacion: COPY
+[ERROR] 20:19:04:743 consola/(13853:13853): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 20:19:04:743 consola/(13853:13853): PARAMETRO 2  de la primer operacion: 4
+[INFO] 20:19:04:744 consola/(13853:13853): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[INFO] 20:21:00:603 consola/(14252:14252): Pude leer el archivo 
+
+[ERROR] 20:21:00:604 consola/(14252:14252): Entre en NO_OP
+[ERROR] 20:21:00:604 consola/(14252:14252): Entre en I/O
+[ERROR] 20:21:00:604 consola/(14252:14252): Entre en READ
+[ERROR] 20:21:00:604 consola/(14252:14252): Entre en WRITE
+[ERROR] 20:21:00:604 consola/(14252:14252): Entre en COPY
+[ERROR] 20:21:00:604 consola/(14252:14252): Entre en EXIT
+[ERROR] 20:21:00:604 consola/(14252:14252): ID de la primer operacion: 3
+[ERROR] 20:21:00:604 consola/(14252:14252): nombre de la primer operacion: COPY
+[ERROR] 20:21:00:604 consola/(14252:14252): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 20:21:00:604 consola/(14252:14252): PARAMETRO 2  de la primer operacion: 4
+[INFO] 20:21:00:605 consola/(14252:14252): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 20:21:00:605 consola/(14252:14252): El fd_mod2 despues de grar conexiones es: 4
+[INFO] 20:22:37:419 consola/(14542:14542): Pude leer el archivo 
+
+[ERROR] 20:22:37:419 consola/(14542:14542): Entre en NO_OP
+[ERROR] 20:22:37:419 consola/(14542:14542): Entre en I/O
+[ERROR] 20:22:37:419 consola/(14542:14542): Entre en READ
+[ERROR] 20:22:37:419 consola/(14542:14542): Entre en WRITE
+[ERROR] 20:22:37:419 consola/(14542:14542): Entre en COPY
+[ERROR] 20:22:37:419 consola/(14542:14542): Entre en EXIT
+[ERROR] 20:22:37:419 consola/(14542:14542): ID de la primer operacion: 3
+[ERROR] 20:22:37:420 consola/(14542:14542): nombre de la primer operacion: COPY
+[ERROR] 20:22:37:420 consola/(14542:14542): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 20:22:37:420 consola/(14542:14542): PARAMETRO 2  de la primer operacion: 4
+[INFO] 20:22:37:420 consola/(14542:14542): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 20:22:37:420 consola/(14542:14542): El fd_mod2 despues de grar conexiones es: 4
+[INFO] 20:30:08:606 consola/(15649:15649): Pude leer el archivo 
+
+[INFO] 20:30:08:606 consola/(15649:15649): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 20:30:08:606 consola/(15649:15649): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 20:35:26:005 consola/(16478:16478): cant de instrucciones: %$d
+[INFO] 20:35:26:005 consola/(16478:16478): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 20:35:26:005 consola/(16478:16478): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 20:35:41:628 consola/(16577:16577): cant de instrucciones: 6
+[INFO] 20:35:41:628 consola/(16577:16577): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 20:35:41:628 consola/(16577:16577): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 21:07:35:835 consola/(20903:20903): cant de instrucciones: 6
+[ERROR] 21:07:35:836 consola/(20903:20903): Error al conectar (a KERNEL)
+
+[ERROR] 21:07:42:751 consola/(20917:20917): cant de instrucciones: 6
+[INFO] 21:07:42:751 consola/(20917:20917): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:07:42:751 consola/(20917:20917): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 21:08:31:666 consola/(21102:21102): cant de instrucciones: 6
+[INFO] 21:08:31:666 consola/(21102:21102): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:08:31:666 consola/(21102:21102): El fd_mod2 despues de grar conexiones es: 4
+[WARNING] 21:08:31:666 consola/(21102:21102): entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:09:42:885 consola/(21333:21333): cant de instrucciones: 6
+[ERROR] 21:09:42:885 consola/(21333:21333): Error al conectar (a KERNEL)
+
+[ERROR] 21:09:51:363 consola/(21356:21356): cant de instrucciones: 6
+[INFO] 21:09:51:364 consola/(21356:21356): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:09:51:364 consola/(21356:21356): El fd_mod2 despues de grar conexiones es: 4
+[WARNING] 21:09:51:364 consola/(21356:21356): entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:09:51:364 consola/(21356:21356): entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:09:51:364 consola/(21356:21356): entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:09:51:364 consola/(21356:21356): entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:09:51:364 consola/(21356:21356): entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:09:51:364 consola/(21356:21356): entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:11:14:797 consola/(21604:21604): cant de instrucciones: 6
+[INFO] 21:11:14:797 consola/(21604:21604): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:11:14:797 consola/(21604:21604): El fd_mod2 despues de grar conexiones es: 4
+[WARNING] 21:11:14:797 consola/(21604:21604): NO entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:11:14:798 consola/(21604:21604): NO entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:11:14:798 consola/(21604:21604): NO entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:11:14:798 consola/(21604:21604): NO entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:11:14:798 consola/(21604:21604): NO entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:11:14:798 consola/(21604:21604): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:11:43:254 consola/(21739:21739): cant de instrucciones: 6
+[INFO] 21:11:43:255 consola/(21739:21739): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:11:43:255 consola/(21739:21739): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 21:11:43:255 consola/(21739:21739): ID de la primer operacion: 0
+[ERROR] 21:11:43:255 consola/(21739:21739): nombre de la primer operacion: NO_OP
+[ERROR] 21:11:43:255 consola/(21739:21739): PARAMETRO 1 de la primer operacion: 5
+[ERROR] 21:11:43:255 consola/(21739:21739): PARAMETRO 2  de la primer operacion: 0
+[WARNING] 21:11:43:255 consola/(21739:21739): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:11:43:255 consola/(21739:21739): ID de la primer operacion: 1
+[ERROR] 21:11:43:255 consola/(21739:21739): nombre de la primer operacion: I/O
+[ERROR] 21:11:43:255 consola/(21739:21739): PARAMETRO 1 de la primer operacion: 3000
+[ERROR] 21:11:43:255 consola/(21739:21739): PARAMETRO 2  de la primer operacion: 0
+[WARNING] 21:11:43:255 consola/(21739:21739): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:11:43:255 consola/(21739:21739): ID de la primer operacion: 2
+[ERROR] 21:11:43:255 consola/(21739:21739): nombre de la primer operacion: READ
+[ERROR] 21:11:43:256 consola/(21739:21739): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 21:11:43:256 consola/(21739:21739): PARAMETRO 2  de la primer operacion: 0
+[WARNING] 21:11:43:256 consola/(21739:21739): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:11:43:256 consola/(21739:21739): ID de la primer operacion: 4
+[ERROR] 21:11:43:256 consola/(21739:21739): nombre de la primer operacion: WRITE
+[ERROR] 21:11:43:256 consola/(21739:21739): PARAMETRO 1 de la primer operacion: 4
+[ERROR] 21:11:43:256 consola/(21739:21739): PARAMETRO 2  de la primer operacion: 42
+[WARNING] 21:11:43:256 consola/(21739:21739): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:11:43:256 consola/(21739:21739): ID de la primer operacion: 3
+[ERROR] 21:11:43:256 consola/(21739:21739): nombre de la primer operacion: COPY
+[ERROR] 21:11:43:256 consola/(21739:21739): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 21:11:43:256 consola/(21739:21739): PARAMETRO 2  de la primer operacion: 4
+[WARNING] 21:11:43:257 consola/(21739:21739): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:11:43:257 consola/(21739:21739): ID de la primer operacion: 5
+[ERROR] 21:11:43:257 consola/(21739:21739): nombre de la primer operacion: EXIT
+[ERROR] 21:11:43:257 consola/(21739:21739): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 21:11:43:257 consola/(21739:21739): PARAMETRO 2  de la primer operacion: 0
+[WARNING] 21:11:43:257 consola/(21739:21739): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:12:47:219 consola/(22027:22027): cant de instrucciones: 6
+[INFO] 21:12:47:219 consola/(22027:22027): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:12:47:219 consola/(22027:22027): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 21:12:47:219 consola/(22027:22027): ID de la primer operacion: 0
+[ERROR] 21:12:47:219 consola/(22027:22027): nombre de la primer operacion: NO_OP
+[ERROR] 21:12:47:220 consola/(22027:22027): PARAMETRO 1 de la primer operacion: 5
+[ERROR] 21:12:47:220 consola/(22027:22027): PARAMETRO 2  de la primer operacion: 0
+[WARNING] 21:12:47:220 consola/(22027:22027): entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:12:47:220 consola/(22027:22027): ID de la primer operacion: 1
+[ERROR] 21:12:47:220 consola/(22027:22027): nombre de la primer operacion: I/O
+[ERROR] 21:12:47:220 consola/(22027:22027): PARAMETRO 1 de la primer operacion: 3000
+[ERROR] 21:12:47:220 consola/(22027:22027): PARAMETRO 2  de la primer operacion: 0
+[WARNING] 21:12:47:220 consola/(22027:22027): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:12:47:220 consola/(22027:22027): ID de la primer operacion: 2
+[ERROR] 21:12:47:220 consola/(22027:22027): nombre de la primer operacion: READ
+[ERROR] 21:12:47:220 consola/(22027:22027): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 21:12:47:220 consola/(22027:22027): PARAMETRO 2  de la primer operacion: 0
+[WARNING] 21:12:47:220 consola/(22027:22027): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:12:47:220 consola/(22027:22027): ID de la primer operacion: 4
+[ERROR] 21:12:47:221 consola/(22027:22027): nombre de la primer operacion: WRITE
+[ERROR] 21:12:47:221 consola/(22027:22027): PARAMETRO 1 de la primer operacion: 4
+[ERROR] 21:12:47:221 consola/(22027:22027): PARAMETRO 2  de la primer operacion: 42
+[WARNING] 21:12:47:221 consola/(22027:22027): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:12:47:221 consola/(22027:22027): ID de la primer operacion: 3
+[ERROR] 21:12:47:221 consola/(22027:22027): nombre de la primer operacion: COPY
+[ERROR] 21:12:47:221 consola/(22027:22027): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 21:12:47:221 consola/(22027:22027): PARAMETRO 2  de la primer operacion: 4
+[WARNING] 21:12:47:221 consola/(22027:22027): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:12:47:221 consola/(22027:22027): ID de la primer operacion: 5
+[ERROR] 21:12:47:221 consola/(22027:22027): nombre de la primer operacion: EXIT
+[ERROR] 21:12:47:221 consola/(22027:22027): PARAMETRO 1 de la primer operacion: 0
+[ERROR] 21:12:47:221 consola/(22027:22027): PARAMETRO 2  de la primer operacion: 0
+[WARNING] 21:12:47:221 consola/(22027:22027): NO entre en NO_OP dentro de send_instrucciones
+[ERROR] 21:14:50:237 consola/(22370:22370): cant de instrucciones: 6
+[INFO] 21:14:50:237 consola/(22370:22370): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:14:50:237 consola/(22370:22370): El fd_mod2 despues de grar conexiones es: 4
+[WARNING] 21:14:50:237 consola/(22370:22370): entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:14:50:238 consola/(22370:22370): entre en I/O dentro de send_instrucciones
+[WARNING] 21:14:50:238 consola/(22370:22370): entre en READ dentro de send_instrucciones
+[WARNING] 21:14:50:238 consola/(22370:22370): entre en WRITE dentro de send_instrucciones
+[WARNING] 21:14:50:238 consola/(22370:22370): entre en COPY dentro de send_instrucciones
+[WARNING] 21:14:50:238 consola/(22370:22370): entre en EXIT dentro de send_instrucciones
+[ERROR] 21:15:46:403 consola/(22493:22493): cant de instrucciones: 6
+[INFO] 21:15:46:403 consola/(22493:22493): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:15:46:403 consola/(22493:22493): El fd_mod2 despues de grar conexiones es: 4
+[WARNING] 21:15:46:404 consola/(22493:22493): entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:15:46:404 consola/(22493:22493): entre en I/O dentro de send_instrucciones
+[WARNING] 21:15:46:404 consola/(22493:22493): entre en READ dentro de send_instrucciones
+[WARNING] 21:15:46:404 consola/(22493:22493): entre en WRITE dentro de send_instrucciones
+[WARNING] 21:15:46:404 consola/(22493:22493): entre en COPY dentro de send_instrucciones
+[WARNING] 21:15:46:404 consola/(22493:22493): entre en EXIT dentro de send_instrucciones
+[ERROR] 21:15:56:918 consola/(22587:22587): cant de instrucciones: 6
+[INFO] 21:15:56:918 consola/(22587:22587): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:15:56:918 consola/(22587:22587): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 21:16:05:210 consola/(22670:22670): cant de instrucciones: 6
+[INFO] 21:16:05:211 consola/(22670:22670): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:16:05:211 consola/(22670:22670): El fd_mod2 despues de grar conexiones es: 4
+[WARNING] 21:16:05:211 consola/(22670:22670): entre en NO_OP dentro de send_instrucciones
+[WARNING] 21:16:05:211 consola/(22670:22670): entre en I/O dentro de send_instrucciones
+[WARNING] 21:16:05:211 consola/(22670:22670): entre en READ dentro de send_instrucciones
+[WARNING] 21:16:05:211 consola/(22670:22670): entre en WRITE dentro de send_instrucciones
+[WARNING] 21:16:05:211 consola/(22670:22670): entre en COPY dentro de send_instrucciones
+[WARNING] 21:16:05:213 consola/(22670:22670): entre en EXIT dentro de send_instrucciones
+[ERROR] 21:16:19:118 consola/(22770:22770): cant de instrucciones: 6
+[INFO] 21:16:19:118 consola/(22770:22770): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 21:16:19:118 consola/(22770:22770): El fd_mod2 despues de grar conexiones es: 4

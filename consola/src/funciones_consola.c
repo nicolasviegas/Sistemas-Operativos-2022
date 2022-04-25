@@ -21,8 +21,6 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 		//return EXIT_FAILURE;
 	}
 
-	log_info(log_consola, "Pude leer el archivo \n");
-
 	char* token;
 	while(fgets(buffer, 100, f)){
 
@@ -32,7 +30,7 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 	if(strncmp(buffer,"NO_OP",5) == 0){
 		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		log_error(log_consola,"Entre en NO_OP");
+		//log_error(log_consola,"Entre en NO_OP");
 
 		char** parametros = string_n_split(token,2," ");
 
@@ -40,7 +38,6 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 		estructura_instrucciones->nombre = parametros[0];
 		estructura_instrucciones->parametro1 = atoi(parametros[1]);
 		estructura_instrucciones->parametro2 = NULL;
-
 
 		list_add(lista_instrucciones,estructura_instrucciones);
 
@@ -52,7 +49,7 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 	}else if(strncmp(buffer,"I/O",3) == 0){
 		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		log_error(log_consola,"Entre en I/O");
+		//log_error(log_consola,"Entre en I/O");
 
 
 		char** parametros = string_n_split(token,2," ");
@@ -72,7 +69,7 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 	}else if(strncmp(buffer,"READ",4) == 0){
 		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		log_error(log_consola,"Entre en READ");
+		//log_error(log_consola,"Entre en READ");
 
 		char** parametros = string_n_split(token,2," ");
 
@@ -90,7 +87,7 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 	}else if(strncmp(buffer,"WRITE",5) == 0){
 		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		log_error(log_consola,"Entre en WRITE");
+		//log_error(log_consola,"Entre en WRITE");
 
 		char** parametros = string_n_split(token,3," ");
 
@@ -108,7 +105,7 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 	}else if(strncmp(buffer,"COPY",4) == 0){
 		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		log_error(log_consola,"Entre en COPY");
+		//log_error(log_consola,"Entre en COPY");
 
 		char** parametros = string_n_split(token,3," ");
 
@@ -126,7 +123,7 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 	}else if(strncmp(buffer,"EXIT",4) == 0){
 		instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
-		log_error(log_consola,"Entre en EXIT");
+		//log_error(log_consola,"Entre en EXIT");
 
 		char** parametros = string_n_split(token,2," ");
 
@@ -156,17 +153,23 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 	//mostrar_lista_instrucciones(lista_instrucciones);
 
-	instrucciones* a = malloc(sizeof(instrucciones));
+	//ESTO LO HICIMOS PARA VER SI SE CARGA BIEN LA LISTA CON LAS INSTRUCCIONES
+	/*instrucciones* a = malloc(sizeof(instrucciones));
 	a = list_get(lista_instrucciones,4);
 	log_error(log_consola,"ID de la primer operacion: %d",a->id);
 	log_error(log_consola,"nombre de la primer operacion: %s",a->nombre);
 	log_error(log_consola,"PARAMETRO 1 de la primer operacion: %d",a->parametro1);
 	log_error(log_consola,"PARAMETRO 2  de la primer operacion: %d",a->parametro2);
-
+	 */
 
 	fclose(f);
 	//free(buffer);
 }
+
+void cerrar_programa(t_log* logger) {
+    log_destroy(logger);
+}
+
 
 void empaquetar(int socket){
 

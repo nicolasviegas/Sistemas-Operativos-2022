@@ -6,9 +6,9 @@
 #include <string.h>
 #include <commons/log.h>
 #include <commons/config.h>
-#include "utils/log_config.h"
-#include "utils/comunicacion.h"
-#include "../shared/include/socket.h"
+#include "../../shared/include/utils.h"
+#include "../../shared/include/socket.h"
+#include "../../shared/include/protocolo.h"
 
 /*
  * void deserializar_sem_init(void* stream, mate_sem_name* nombre, unsigned int* valor);
