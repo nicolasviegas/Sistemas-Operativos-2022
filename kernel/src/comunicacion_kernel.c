@@ -9,47 +9,50 @@ typedef struct {
 
 static void procesar_conexion(void* void_args) {
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
-    t_log* logger = args->log;
+    t_log* log_kernel = args->log;
     int cliente_socket = args->fd;
     char* server_name = args->server_name;
     free(args);
 
-    op_code cop;
+    op_code_instrucciones cop;
     while (cliente_socket != -1) {
 
-        if (recv(cliente_socket, &cop, sizeof(op_code), 0) != sizeof(op_code)) {
-            log_info(logger, "DISCONNECT!");
+        if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
+
+            printf("El tam de op_code_instrucciones es %d\n", sizeof(op_code_instrucciones));
+        	log_error(log_kernel,"Elde recv vuelve %d",recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0));
+        	log_info(log_kernel, "DISCONNECT!");
             return;
         }
 
         switch (cop) {
             case NO_OP:
-                log_info(logger, "entre a NO_OP");
+                log_info(log_kernel, "entre a NO_OP");
                 break;
 
             case IO:
             {
-            	log_info(logger, "entre a IO");
+            	log_info(log_kernel, "entre a IO");
             	break;
             }
             case READ:
             {
-				log_info(logger, "entre a READ");
+				log_info(log_kernel, "entre a READ");
 				break;
 			}
             case COPY:
             {
-        	   	 log_info(logger, "entre a COPY");
+        	   	 log_info(log_kernel, "entre a COPY");
            		break;
            	}
             case WRITE:
             {
-            	log_info(logger, "entre a WRITE");
+            	log_info(log_kernel, "entre a WRITE");
             	break;
 			}
             case EXIT:
             {
-            	log_info(logger, "entre a EXIT");
+            	log_info(log_kernel, "entre a EXIT");
 				break;
 			}
 
@@ -57,16 +60,16 @@ static void procesar_conexion(void* void_args) {
 
             // Errores
             case -1:
-                log_error(logger, "Cliente desconectado de %s...", server_name);
+                log_error(log_kernel, "Cliente desconectado de %s...", server_name);
                 return;
             default:
-                log_error(logger, "Algo anduvo mal en el server de %s", server_name);
-                log_info(logger, "Cop: %d", cop);
+                log_error(log_kernel, "Algo anduvo mal en el server de %s", server_name);
+                log_info(log_kernel, "Cop: %d", cop);
                 return;
         }
     }
 
-    log_warning(logger, "El cliente se desconecto de %s server", server_name);
+    log_warning(log_kernel, "El cliente se desconecto de %s server", server_name);
     return;
 }
 

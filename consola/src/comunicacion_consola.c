@@ -17,11 +17,13 @@ void send_instrucciones(t_list* lista_instrucciones,int* fd_mod2){
 	int cant_instrucciones = list_size(lista_instrucciones);
 	int indice = 0;
 
-	while(indice <= cant_instrucciones){
+	while(indice < cant_instrucciones){
 		a = list_get(lista_instrucciones,indice);
 
 		if(a->id == NO_OP){
 			log_warning(log_consola,"entre en NO_OP dentro de send_instrucciones");
+			send_NO_OP_2(fd_mod2,a->parametro1);
+
 		}
 		else if(a->id == IO){
 			log_warning(log_consola,"entre en I/O dentro de send_instrucciones");
@@ -41,6 +43,8 @@ void send_instrucciones(t_list* lista_instrucciones,int* fd_mod2){
 
 		indice++;
 	}
+
+	free(a);
 
 
 }

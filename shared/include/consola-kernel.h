@@ -23,8 +23,8 @@
 typedef struct{
 	int id;
 	char* nombre;
-	int parametro1;
-	int parametro2;
+	uint32_t parametro1;
+	uint32_t parametro2;
 }instrucciones;
 
 /*typedef enum{ //tipos de identificadores a parsear

@@ -89,3 +89,101 @@
 [INFO] 21:16:19:118 consola/(21349:21349): Cliente conectado (a CONSOLA)
 
 [INFO] 21:16:19:119 consola/(21349:22771): DISCONNECT!
+[INFO] 21:20:13:897 consola/(21349:21349): Cliente conectado (a CONSOLA)
+
+[INFO] 21:20:14:016 consola/(21349:23496): DISCONNECT!
+[INFO] 21:20:57:427 consola/(23730:23730): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 21:20:59:716 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:20:59:831 consola/(23730:23736): DISCONNECT!
+[INFO] 21:21:10:967 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:21:12:424 consola/(23730:23760): DISCONNECT!
+[INFO] 21:22:31:259 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:22:31:377 consola/(23730:24039): DISCONNECT!
+[INFO] 21:22:34:515 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:22:34:639 consola/(23730:24042): DISCONNECT!
+[INFO] 21:22:47:725 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:22:47:881 consola/(23730:24136): DISCONNECT!
+[INFO] 21:22:51:978 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:22:52:139 consola/(23730:24148): DISCONNECT!
+[INFO] 21:23:31:327 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:23:31:497 consola/(23730:24306): DISCONNECT!
+[INFO] 21:23:53:773 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:23:53:774 consola/(23730:24417): DISCONNECT!
+[INFO] 21:25:25:261 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:25:25:385 consola/(23730:25005): DISCONNECT!
+[INFO] 21:26:51:935 consola/(23730:23730): Cliente conectado (a CONSOLA)
+
+[INFO] 21:26:51:936 consola/(23730:25345): DISCONNECT!
+[INFO] 21:31:06:372 consola/(25957:25957): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 21:31:09:300 consola/(25957:25957): Cliente conectado (a CONSOLA)
+
+[INFO] 21:31:09:301 consola/(25957:25966): DISCONNECT!
+[INFO] 21:33:50:843 consola/(26656:26656): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 21:33:53:326 consola/(26656:26656): Cliente conectado (a CONSOLA)
+
+[INFO] 21:33:53:327 consola/(26656:26665): DISCONNECT!
+[INFO] 21:34:34:745 consola/(26821:26821): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 21:35:00:692 consola/(26821:26821): Cliente conectado (a CONSOLA)
+
+[INFO] 21:35:00:693 consola/(26821:26872): DISCONNECT!
+[INFO] 21:36:32:028 consola/(27144:27144): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 21:36:34:326 consola/(27144:27144): Cliente conectado (a CONSOLA)
+
+[INFO] 21:36:34:328 consola/(27144:27146): DISCONNECT!
+[INFO] 21:39:48:615 consola/(27672:27672): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 21:39:50:953 consola/(27672:27672): Cliente conectado (a CONSOLA)
+
+[ERROR] 21:39:50:955 consola/(27672:27678): El recv devuelve 0
+[INFO] 21:39:50:955 consola/(27672:27678): DISCONNECT!
+[INFO] 21:42:41:977 consola/(28198:28198): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 21:42:44:094 consola/(28198:28198): Cliente conectado (a CONSOLA)
+
+[ERROR] 21:42:44:095 consola/(28198:28207): El recv devuelve 0
+[INFO] 21:42:44:095 consola/(28198:28207): DISCONNECT!
+[INFO] 22:03:00:665 consola/(31352:31352): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 22:03:02:504 consola/(31352:31352): Cliente conectado (a CONSOLA)
+
+[ERROR] 22:03:02:505 consola/(31352:31357): El recv devuelve 0
+[INFO] 22:03:02:505 consola/(31352:31357): DISCONNECT!
+[INFO] 22:04:13:842 consola/(31575:31575): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 22:04:15:559 consola/(31575:31575): Cliente conectado (a CONSOLA)
+
+[TRACE] 22:04:15:561 consola/(31575:31578): El sizeof de op_code_instrucciones es: 
+[ERROR] 22:04:15:561 consola/(31575:31578): El recv devuelve 0
+[INFO] 22:04:15:561 consola/(31575:31578): DISCONNECT!
+[INFO] 22:08:02:143 consola/(32126:32126): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 22:08:05:797 consola/(32126:32126): Cliente conectado (a CONSOLA)
+
+[ERROR] 22:08:05:798 consola/(32126:32132): El recv devuelve 0
+[INFO] 22:08:05:798 consola/(32126:32132): DISCONNECT!
+[INFO] 22:08:33:669 consola/(32245:32245): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 22:08:35:648 consola/(32245:32245): Cliente conectado (a CONSOLA)
+
+[ERROR] 22:08:35:649 consola/(32245:32248): El recv devuelve 0
+[INFO] 22:08:35:649 consola/(32245:32248): DISCONNECT!
+[INFO] 22:37:29:400 consola/(2319:2319): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 22:37:31:403 consola/(2319:2319): Cliente conectado (a CONSOLA)
+
+[ERROR] 22:37:31:404 consola/(2319:2322): Elde recv vuelve 0
+[INFO] 22:37:31:405 consola/(2319:2322): DISCONNECT!
