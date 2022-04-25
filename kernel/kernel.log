@@ -632,3 +632,90 @@
 [WARNING] 13:01:53:720 consola/(24153:24335): El codigo de operacion despues del recv es: 13
 [INFO] 13:01:53:720 consola/(24153:24335): Deserialice NO_OP el parametro es: 5 
 [INFO] 13:01:53:721 consola/(24153:24335): DISCONNECT!
+[INFO] 15:23:40:809 consola/(6609:6609): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:23:40:809 consola/(6609:6609): El socket : 4
+[INFO] 15:23:51:328 consola/(6609:6609): Cliente conectado (a KERNEL)
+
+[WARNING] 15:23:51:330 consola/(6609:6629): El codigo de operacion despues del recv es: 13
+[INFO] 15:23:51:330 consola/(6609:6629): Deserialice NO_OP el parametro es: 5 
+[INFO] 15:23:51:330 consola/(6609:6629): DISCONNECT!
+[INFO] 15:24:29:713 consola/(6830:6830): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:24:29:713 consola/(6830:6830): El socket : 4
+[INFO] 15:24:34:251 consola/(6830:6830): Cliente conectado (a KERNEL)
+
+[WARNING] 15:24:34:253 consola/(6830:6846): El codigo de operacion despues del recv es: 13
+[INFO] 15:24:34:253 consola/(6830:6846): Deserialice NO_OP el parametro es: 5 
+[INFO] 15:24:34:253 consola/(6830:6846): DISCONNECT!
+[INFO] 15:34:51:075 consola/(8288:8288): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:34:51:075 consola/(8288:8288): El socket : 4
+[INFO] 15:34:54:876 consola/(8288:8288): Cliente conectado (a KERNEL)
+
+[WARNING] 15:34:54:878 consola/(8288:8302): El codigo de operacion despues del recv es: 13
+[INFO] 15:34:54:878 consola/(8288:8302): Deserialice NO_OP el parametro es: 64 
+[INFO] 15:34:54:879 consola/(8288:8302): DISCONNECT!
+[INFO] 15:37:17:717 consola/(8740:8740): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:37:17:717 consola/(8740:8740): El socket : 4
+[INFO] 15:37:21:370 consola/(8740:8740): Cliente conectado (a KERNEL)
+
+[WARNING] 15:37:21:372 consola/(8740:8751): El codigo de operacion despues del recv es: 13
+[INFO] 15:37:21:373 consola/(8740:8751): Deserialice NO_OP el parametro es: -1228931008 
+[INFO] 15:37:21:373 consola/(8740:8751): DISCONNECT!
+[INFO] 15:37:50:073 consola/(8877:8877): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:37:50:073 consola/(8877:8877): El socket : 4
+[INFO] 15:37:52:246 consola/(8877:8877): Cliente conectado (a KERNEL)
+
+[WARNING] 15:37:52:248 consola/(8877:8879): El codigo de operacion despues del recv es: 13
+[INFO] 15:37:52:248 consola/(8877:8879): Deserialice NO_OP el parametro es: 5 
+[INFO] 15:37:52:248 consola/(8877:8879): DISCONNECT!
+[INFO] 15:52:11:659 consola/(10931:10931): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:52:11:659 consola/(10931:10931): El socket : 4
+[INFO] 15:57:16:315 consola/(11855:11855): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:57:16:316 consola/(11855:11855): El socket : 4
+[INFO] 15:57:20:745 consola/(11855:11855): Cliente conectado (a KERNEL)
+
+[WARNING] 15:57:20:747 consola/(11855:11867): El codigo de operacion despues del recv es: 13
+[INFO] 15:57:20:747 consola/(11855:11867): Deserialice NO_OP el parametro es: 5 
+[WARNING] 15:57:20:747 consola/(11855:11867): El codigo de operacion despues del recv es: 14
+[INFO] 15:57:20:748 consola/(11855:11867): entre a IO
+[WARNING] 15:57:20:748 consola/(11855:11867): El codigo de operacion despues del recv es: 184
+[ERROR] 15:57:20:748 consola/(11855:11867): Algo anduvo mal en el server de KERNEL
+[INFO] 15:57:20:748 consola/(11855:11867): Cop: 184
+[INFO] 16:06:02:227 consola/(13038:13038): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:06:02:227 consola/(13038:13038): El socket : 4
+[INFO] 16:06:10:518 consola/(13038:13038): Cliente conectado (a KERNEL)
+
+[WARNING] 16:06:10:520 consola/(13038:13064): El codigo de operacion despues del recv es: 13
+[INFO] 16:06:10:520 consola/(13038:13064): Deserialice NO_OP el parametro es: 5 
+[WARNING] 16:06:10:520 consola/(13038:13064): El codigo de operacion despues del recv es: 14
+[INFO] 16:06:10:520 consola/(13038:13064): entre a IO
+[WARNING] 16:06:10:520 consola/(13038:13064): El codigo de operacion despues del recv es: 184
+[ERROR] 16:06:10:520 consola/(13038:13064): Algo anduvo mal en el server de KERNEL
+[INFO] 16:06:10:520 consola/(13038:13064): Cop: 184
+[INFO] 16:13:59:915 consola/(13927:13927): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:13:59:915 consola/(13927:13927): El socket : 4
+[INFO] 16:14:06:358 consola/(13927:13927): Cliente conectado (a KERNEL)
+
+[WARNING] 16:14:06:360 consola/(13927:13939): El codigo de operacion despues del recv es: 13
+[INFO] 16:14:06:360 consola/(13927:13939): Deserialice NO_OP el parametro es: 5 
+[INFO] 16:14:06:360 consola/(13927:13939): DISCONNECT!
+[INFO] 16:14:38:970 consola/(14060:14060): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:14:38:970 consola/(14060:14060): El socket : 4
+[INFO] 16:14:47:857 consola/(14060:14060): Cliente conectado (a KERNEL)
+
+[WARNING] 16:14:47:859 consola/(14060:14075): El codigo de operacion despues del recv es: 13
+[INFO] 16:14:47:859 consola/(14060:14075): Deserialice NO_OP el parametro es: 5 
+[WARNING] 16:14:47:859 consola/(14060:14075): El codigo de operacion despues del recv es: 14
+[INFO] 16:14:47:859 consola/(14060:14075): entre a IO
+[WARNING] 16:14:47:859 consola/(14060:14075): El codigo de operacion despues del recv es: 184
+[ERROR] 16:14:47:859 consola/(14060:14075): Algo anduvo mal en el server de KERNEL
+[INFO] 16:14:47:860 consola/(14060:14075): Cop: 184

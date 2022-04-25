@@ -30,7 +30,8 @@ void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 
 		}
 		else if(a->id == IO){
-			//log_warning(log_consola,"entre en I/O dentro de send_instrucciones");
+			log_warning(log_consola,"entre en I/O dentro de send_instrucciones");
+			send_IO(fd_mod2,a->parametro1);
 		}
 		else if(a->id == READ){
 		//	log_warning(log_consola,"entre en READ dentro de send_instrucciones");
@@ -42,7 +43,8 @@ void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 		//	log_warning(log_consola,"entre en WRITE dentro de send_instrucciones");
 		}
 		else if(a->id == EXIT){
-			//log_warning(log_consola,"entre en EXIT dentro de send_instrucciones");
+			log_warning(log_consola,"Entre en EXIT dentro de send_instrucciones");
+			//send_EXIT(fd_mod2);
 		}
 
 		indice++;
