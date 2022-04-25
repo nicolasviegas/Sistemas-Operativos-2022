@@ -14,22 +14,41 @@ static void procesar_conexion(void* void_args) {
     char* server_name = args->server_name;
     free(args);
 
+    //log_error(log_kernel,"El cliente es: %s",server_name);
+
     op_code_instrucciones cop;
     while (cliente_socket != -1) {
 
+    	//log_warning(log_kernel,"El codigo de operacion es: %d",cop);
+
         if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
 
-            printf("El tam de op_code_instrucciones es %d\n", sizeof(op_code_instrucciones));
-        	log_error(log_kernel,"Elde recv vuelve %d",recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0));
+        	printf("El socket en procesar conexion es: %d \n",cliente_socket);
+
+        	printf("El tam de op_code_instrucciones es %d\n", sizeof(op_code_instrucciones));
+        	//log_error(log_kernel,"Elde recv vuelve %d",recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0));
         	log_info(log_kernel, "DISCONNECT!");
             return;
         }
 
-        switch (cop) {
-            case NO_OP:
-                log_info(log_kernel, "entre a NO_OP");
-                break;
+        log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
 
+        switch (cop) {
+            case NO_OP:{
+
+            	 uint32_t* parametro1;
+
+            	 if (!recv_NO_OP_2(cliente_socket, &parametro1)) {
+            	          log_error(log_kernel, "Fallo recibiendo APROBAR_OPERATIVOS");
+            	         break;
+            	      }
+
+           log_info(log_kernel, "Deserialice NO_OP el parametro es: %d ",parametro1);
+
+
+               // log_info(log_kernel, "entre al case NO_OP");
+                break;
+            }
             case IO:
             {
             	log_info(log_kernel, "entre a IO");
@@ -52,7 +71,7 @@ static void procesar_conexion(void* void_args) {
 			}
             case EXIT:
             {
-            	log_info(log_kernel, "entre a EXIT");
+            	log_info(log_kernel, "entre al case EXIT");
 				break;
 			}
 
@@ -67,6 +86,7 @@ static void procesar_conexion(void* void_args) {
                 log_info(log_kernel, "Cop: %d", cop);
                 return;
         }
+
     }
 
     log_warning(log_kernel, "El cliente se desconecto de %s server", server_name);

@@ -11,21 +11,21 @@
 #include <stdlib.h>
 
 typedef enum{ //tipos de identificadores a parsear
-	NO_OP, //0
-	IO, //1
-	READ, //2
-	COPY,//3 LO AGREGO YO
-	WRITE, //4
-	EXIT, //5
+	NO_OP = 13, //0
+	IO = 14, //1
+	READ = 15, //2
+	COPY = 16,//3 LO AGREGO YO
+	WRITE = 17, //4
+	EXIT = 18, //5
 }op_code_instrucciones;
 
 #define BACKLOG 20
 
-bool send_NO_OP(int fd, int parametro1);
-bool send_NO_OP_2(int fd_mod2,int parametro1);
+bool send_NO_OP(int fd, uint32_t parametro1);
 
-bool recv_NO_OP_2(int fd, int* parametro1);
+
 bool recv_NO_OP(int fd, uint8_t* parametro1);
+bool recv_NO_OP_2(int fd, uint32_t* parametro1);
 
 bool send_IO(int fd, uint8_t  parametro1);
 bool recv_IO(int fd, uint8_t* parametro1);
@@ -42,6 +42,7 @@ bool recv_WRITE(int fd);
 bool send_EXIT(int fd);
 bool recv_EXIT(int fd);
 
+static void* serializar_NO_OP(uint32_t parametro1);
 
 bool send_debug(int fd);
 

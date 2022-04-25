@@ -187,3 +187,448 @@
 
 [ERROR] 22:37:31:404 consola/(2319:2322): Elde recv vuelve 0
 [INFO] 22:37:31:405 consola/(2319:2322): DISCONNECT!
+[INFO] 10:39:07:313 consola/(7590:7590): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:39:08:834 consola/(7590:7590): Cliente conectado (a CONSOLA)
+
+[ERROR] 10:39:08:836 consola/(7590:7595): Elde recv vuelve 0
+[INFO] 10:39:08:836 consola/(7590:7595): DISCONNECT!
+[INFO] 10:42:04:179 consola/(8112:8112): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:42:07:923 consola/(8112:8112): Cliente conectado (a CONSOLA)
+
+[ERROR] 10:42:07:924 consola/(8112:8118): Elde recv vuelve 0
+[INFO] 10:42:07:925 consola/(8112:8118): DISCONNECT!
+[INFO] 10:46:48:685 consola/(8599:8599): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:46:51:675 consola/(8599:8599): Cliente conectado (a CONSOLA)
+
+[ERROR] 10:46:51:684 consola/(8599:8608): Elde recv vuelve 0
+[INFO] 10:46:51:684 consola/(8599:8608): DISCONNECT!
+[INFO] 10:50:28:628 consola/(9090:9090): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:50:31:040 consola/(9090:9090): Cliente conectado (a CONSOLA)
+
+[TRACE] 10:50:31:042 consola/(9090:9098): El socket antes de recibirlo es: 
+[ERROR] 10:50:31:042 consola/(9090:9098): Elde recv vuelve 0
+[INFO] 10:50:31:042 consola/(9090:9098): DISCONNECT!
+[INFO] 10:51:21:862 consola/(9248:9248): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:51:24:912 consola/(9248:9248): Cliente conectado (a CONSOLA)
+
+[ERROR] 10:51:24:913 consola/(9248:9254): Elde recv vuelve 0
+[INFO] 10:51:24:921 consola/(9248:9254): DISCONNECT!
+[INFO] 10:52:26:431 consola/(9424:9424): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:52:29:063 consola/(9424:9424): Cliente conectado (a CONSOLA)
+
+[INFO] 10:52:29:065 consola/(9424:9427): entre a NO_OP
+[INFO] 10:52:29:065 consola/(9424:9427): entre a EXIT
+[ERROR] 10:52:29:065 consola/(9424:9427): Elde recv vuelve 0
+[INFO] 10:52:29:065 consola/(9424:9427): DISCONNECT!
+[INFO] 10:54:57:931 consola/(9718:9718): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:55:00:314 consola/(9718:9718): Cliente conectado (a CONSOLA)
+
+[INFO] 10:55:00:315 consola/(9718:9724): entre a NO_OP
+[INFO] 10:55:00:315 consola/(9718:9724): entre a EXIT
+[ERROR] 10:55:00:316 consola/(9718:9724): Elde recv vuelve 0
+[INFO] 10:55:00:316 consola/(9718:9724): DISCONNECT!
+[INFO] 10:57:42:249 consola/(9966:9966): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:57:44:884 consola/(9966:9966): Cliente conectado (a CONSOLA)
+
+[INFO] 10:57:44:885 consola/(9966:9972): entre a NO_OP
+[INFO] 10:57:44:885 consola/(9966:9972): entre a EXIT
+[ERROR] 10:57:44:885 consola/(9966:9972): Elde recv vuelve 0
+[INFO] 10:57:44:885 consola/(9966:9972): DISCONNECT!
+[INFO] 10:58:36:336 consola/(10120:10120): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 10:58:38:564 consola/(10120:10120): Cliente conectado (a CONSOLA)
+
+[INFO] 10:58:38:565 consola/(10120:10123): entre a NO_OP
+[INFO] 10:58:38:566 consola/(10120:10123): entre a EXIT
+[ERROR] 10:58:38:566 consola/(10120:10123): Elde recv vuelve 0
+[INFO] 10:58:38:566 consola/(10120:10123): DISCONNECT!
+[INFO] 11:02:57:691 consola/(10740:10740): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:02:57:691 consola/(10740:10740): El socket : 4
+[INFO] 11:03:03:932 consola/(10740:10740): Cliente conectado (a CONSOLA)
+
+[INFO] 11:03:03:934 consola/(10740:10750): entre a NO_OP
+[INFO] 11:03:03:934 consola/(10740:10750): entre a EXIT
+[ERROR] 11:03:03:934 consola/(10740:10750): Elde recv vuelve 0
+[INFO] 11:03:03:934 consola/(10740:10750): DISCONNECT!
+[INFO] 11:06:29:332 consola/(11130:11130): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:06:29:333 consola/(11130:11130): El socket : 4
+[INFO] 11:06:33:042 consola/(11130:11130): Cliente conectado (a CONSOLA)
+
+[ERROR] 11:06:33:043 consola/(11130:11139): El server es: CONSOLA
+[INFO] 11:06:33:043 consola/(11130:11139): entre a NO_OP
+[INFO] 11:06:33:043 consola/(11130:11139): entre a EXIT
+[ERROR] 11:06:33:044 consola/(11130:11139): Elde recv vuelve 0
+[INFO] 11:06:33:044 consola/(11130:11139): DISCONNECT!
+[INFO] 11:10:32:368 consola/(11547:11547): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:10:32:369 consola/(11547:11547): El socket : 4
+[INFO] 11:10:35:356 consola/(11547:11547): Cliente conectado (a CONSOLA)
+
+[INFO] 11:10:35:364 consola/(11547:11553): entre a NO_OP
+[INFO] 11:10:35:365 consola/(11547:11553): entre a EXIT
+[ERROR] 11:10:35:365 consola/(11547:11553): Elde recv vuelve 0
+[INFO] 11:10:35:365 consola/(11547:11553): DISCONNECT!
+[INFO] 11:10:41:862 consola/(11547:11547): Cliente conectado (a CONSOLA)
+
+[INFO] 11:10:41:863 consola/(11547:11562): entre a NO_OP
+[INFO] 11:10:41:863 consola/(11547:11562): entre a EXIT
+[ERROR] 11:10:41:863 consola/(11547:11562): Elde recv vuelve 0
+[INFO] 11:10:41:863 consola/(11547:11562): DISCONNECT!
+[INFO] 11:10:47:222 consola/(11547:11547): Cliente conectado (a CONSOLA)
+
+[INFO] 11:10:47:223 consola/(11547:11573): entre a NO_OP
+[INFO] 11:10:47:224 consola/(11547:11573): entre a EXIT
+[ERROR] 11:10:47:224 consola/(11547:11573): Elde recv vuelve 0
+[INFO] 11:10:47:224 consola/(11547:11573): DISCONNECT!
+[INFO] 11:10:48:587 consola/(11547:11547): Cliente conectado (a CONSOLA)
+
+[INFO] 11:10:48:588 consola/(11547:11575): entre a NO_OP
+[INFO] 11:10:48:588 consola/(11547:11575): entre a EXIT
+[ERROR] 11:10:48:589 consola/(11547:11575): Elde recv vuelve 0
+[INFO] 11:10:48:589 consola/(11547:11575): DISCONNECT!
+[INFO] 11:10:49:347 consola/(11547:11547): Cliente conectado (a CONSOLA)
+
+[INFO] 11:10:49:348 consola/(11547:11577): entre a NO_OP
+[INFO] 11:10:49:348 consola/(11547:11577): entre a EXIT
+[ERROR] 11:10:49:348 consola/(11547:11577): Elde recv vuelve 0
+[INFO] 11:10:49:349 consola/(11547:11577): DISCONNECT!
+[INFO] 11:10:50:010 consola/(11547:11547): Cliente conectado (a CONSOLA)
+
+[INFO] 11:10:50:011 consola/(11547:11579): entre a NO_OP
+[INFO] 11:10:50:011 consola/(11547:11579): entre a EXIT
+[ERROR] 11:10:50:011 consola/(11547:11579): Elde recv vuelve 0
+[INFO] 11:10:50:011 consola/(11547:11579): DISCONNECT!
+[INFO] 11:10:50:627 consola/(11547:11547): Cliente conectado (a CONSOLA)
+
+[INFO] 11:10:50:628 consola/(11547:11584): entre a NO_OP
+[INFO] 11:10:50:628 consola/(11547:11584): entre a EXIT
+[ERROR] 11:10:50:628 consola/(11547:11584): Elde recv vuelve 0
+[INFO] 11:10:50:628 consola/(11547:11584): DISCONNECT!
+[INFO] 11:11:38:314 consola/(11655:11655): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:11:38:314 consola/(11655:11655): El socket : 4
+[INFO] 11:11:52:788 consola/(11655:11655): Cliente conectado (a CONSOLA)
+
+[INFO] 11:11:52:789 consola/(11655:11675): entre a NO_OP
+[INFO] 11:11:52:790 consola/(11655:11675): entre a EXIT
+[ERROR] 11:11:52:790 consola/(11655:11675): Elde recv vuelve 0
+[INFO] 11:11:52:790 consola/(11655:11675): DISCONNECT!
+[INFO] 11:20:32:203 consola/(12472:12472): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:20:32:203 consola/(12472:12472): El socket : 4
+[INFO] 11:20:35:281 consola/(12472:12472): Cliente conectado (a CONSOLA)
+
+[INFO] 11:20:35:282 consola/(12472:12478): entre a NO_OP
+[INFO] 11:20:35:282 consola/(12472:12478): entre a EXIT
+[ERROR] 11:20:35:282 consola/(12472:12478): Elde recv vuelve 0
+[INFO] 11:20:35:282 consola/(12472:12478): DISCONNECT!
+[INFO] 11:23:03:563 consola/(12817:12817): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:23:03:563 consola/(12817:12817): El socket : 4
+[INFO] 11:23:06:005 consola/(12817:12817): Cliente conectado (a CONSOLA)
+
+[INFO] 11:23:06:006 consola/(12817:12823): entre al case NO_OP
+[INFO] 11:23:06:006 consola/(12817:12823): entre al case EXIT
+[ERROR] 11:23:06:006 consola/(12817:12823): Elde recv vuelve 0
+[INFO] 11:23:06:006 consola/(12817:12823): DISCONNECT!
+[INFO] 11:24:31:681 consola/(13084:13084): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:24:31:682 consola/(13084:13084): El socket : 4
+[INFO] 11:24:34:628 consola/(13084:13084): Cliente conectado (a CONSOLA)
+
+[INFO] 11:24:34:629 consola/(13084:13090): entre al case NO_OP
+[INFO] 11:24:34:629 consola/(13084:13090): entre al case EXIT
+[ERROR] 11:24:34:629 consola/(13084:13090): Elde recv vuelve 0
+[INFO] 11:24:34:629 consola/(13084:13090): DISCONNECT!
+[INFO] 11:25:46:702 consola/(13253:13253): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:25:46:703 consola/(13253:13253): El socket : 4
+[INFO] 11:25:50:011 consola/(13253:13253): Cliente conectado (a CONSOLA)
+
+[INFO] 11:25:50:012 consola/(13253:13259): entre al case NO_OP
+[ERROR] 11:25:50:013 consola/(13253:13259): Algo anduvo mal en el server de CONSOLA
+[INFO] 11:25:50:013 consola/(13253:13259): Cop: 5
+[INFO] 11:28:40:762 consola/(13560:13560): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:28:40:762 consola/(13560:13560): El socket : 4
+[INFO] 11:28:43:324 consola/(13560:13560): Cliente conectado (a CONSOLA)
+
+[INFO] 11:28:43:325 consola/(13560:13569): entre al case NO_OP
+[ERROR] 11:28:43:325 consola/(13560:13569): Algo anduvo mal en el server de CONSOLA
+[INFO] 11:28:43:325 consola/(13560:13569): Cop: 5
+[INFO] 11:30:37:708 consola/(13797:13797): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:30:37:708 consola/(13797:13797): El socket : 4
+[INFO] 11:30:41:451 consola/(13797:13797): Cliente conectado (a KERNEL)
+
+[INFO] 11:30:41:452 consola/(13797:13807): entre al case NO_OP
+[ERROR] 11:30:41:452 consola/(13797:13807): Algo anduvo mal en el server de KERNEL
+[INFO] 11:30:41:452 consola/(13797:13807): Cop: 5
+[INFO] 11:33:16:106 consola/(14181:14181): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:33:16:106 consola/(14181:14181): El socket : 4
+[INFO] 11:33:18:832 consola/(14181:14181): Cliente conectado (a KERNEL)
+
+[INFO] 11:33:18:833 consola/(14181:14190): entre al case NO_OP
+[INFO] 11:33:18:833 consola/(14181:14190): entre al case EXIT
+[INFO] 11:33:18:833 consola/(14181:14190): DISCONNECT!
+[INFO] 11:34:24:526 consola/(14287:14287): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:34:24:527 consola/(14287:14287): El socket : 4
+[INFO] 11:34:26:914 consola/(14287:14287): Cliente conectado (a KERNEL)
+
+[INFO] 11:34:26:915 consola/(14287:14293): entre al case NO_OP
+[INFO] 11:34:26:915 consola/(14287:14293): entre al case EXIT
+[INFO] 11:34:26:915 consola/(14287:14293): DISCONNECT!
+[INFO] 11:35:47:844 consola/(14486:14486): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:35:47:844 consola/(14486:14486): El socket : 4
+[INFO] 11:35:50:278 consola/(14486:14486): Cliente conectado (a KERNEL)
+
+[INFO] 11:35:50:280 consola/(14486:14492): entre al case NO_OP
+[INFO] 11:35:50:280 consola/(14486:14492): entre al case EXIT
+[INFO] 11:35:50:280 consola/(14486:14492): DISCONNECT!
+[INFO] 11:49:08:253 consola/(15841:15841): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:49:08:253 consola/(15841:15841): El socket : 4
+[INFO] 11:49:11:084 consola/(15841:15841): Cliente conectado (a KERNEL)
+
+[WARNING] 11:49:11:085 consola/(15841:15847): El codigo de operacion es: 0
+[INFO] 11:49:11:085 consola/(15841:15847): entre al case NO_OP
+[WARNING] 11:49:11:085 consola/(15841:15847): El codigo de operacion es: 0
+[INFO] 11:49:11:085 consola/(15841:15847): entre al case EXIT
+[WARNING] 11:49:11:085 consola/(15841:15847): El codigo de operacion es: 5
+[INFO] 11:49:11:085 consola/(15841:15847): DISCONNECT!
+[INFO] 11:51:02:434 consola/(16080:16080): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:51:02:435 consola/(16080:16080): El socket : 4
+[INFO] 11:51:05:002 consola/(16080:16080): Cliente conectado (a KERNEL)
+
+[WARNING] 11:51:05:003 consola/(16080:16093): El codigo de operacion es: 0
+[INFO] 11:51:05:003 consola/(16080:16093): entre al case NO_OP
+[ERROR] 11:51:05:003 consola/(16080:16093): El codigo de operacion es: 0
+[WARNING] 11:51:05:003 consola/(16080:16093): El codigo de operacion es: 0
+[INFO] 11:51:05:003 consola/(16080:16093): entre al case EXIT
+[ERROR] 11:51:05:003 consola/(16080:16093): El codigo de operacion es: 5
+[WARNING] 11:51:05:003 consola/(16080:16093): El codigo de operacion es: 5
+[INFO] 11:51:05:004 consola/(16080:16093): DISCONNECT!
+[INFO] 11:52:39:854 consola/(16380:16380): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:52:39:854 consola/(16380:16380): El socket : 4
+[INFO] 11:52:42:699 consola/(16380:16380): Cliente conectado (a KERNEL)
+
+[WARNING] 11:52:42:700 consola/(16380:16386): El codigo de operacion es: 0
+[ERROR] 11:52:42:700 consola/(16380:16386): Algo anduvo mal en el server de KERNEL
+[INFO] 11:52:42:700 consola/(16380:16386): Cop: 0
+[INFO] 11:54:16:226 consola/(16380:16380): Cliente conectado (a KERNEL)
+
+[WARNING] 11:54:16:227 consola/(16380:16598): El codigo de operacion es: -1217396736
+[INFO] 11:54:16:227 consola/(16380:16598): DISCONNECT!
+[INFO] 11:54:34:982 consola/(16380:16380): Cliente conectado (a KERNEL)
+
+[WARNING] 11:54:34:983 consola/(16380:16694): El codigo de operacion es: -1217564672
+[INFO] 11:54:34:983 consola/(16380:16694): DISCONNECT!
+[INFO] 11:55:57:414 consola/(16888:16888): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:55:57:414 consola/(16888:16888): El socket : 4
+[INFO] 11:55:59:973 consola/(16888:16888): Cliente conectado (a KERNEL)
+
+[WARNING] 11:55:59:973 consola/(16888:16894): El codigo de operacion es: 0
+[INFO] 11:55:59:974 consola/(16888:16894): DISCONNECT!
+[INFO] 11:56:04:082 consola/(16888:16888): Cliente conectado (a KERNEL)
+
+[WARNING] 11:56:04:083 consola/(16888:16899): El codigo de operacion es: -1217523712
+[INFO] 11:56:04:083 consola/(16888:16899): DISCONNECT!
+[INFO] 11:58:57:801 consola/(17231:17231): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:58:57:801 consola/(17231:17231): El socket : 4
+[INFO] 11:58:59:981 consola/(17231:17231): Cliente conectado (a KERNEL)
+
+[WARNING] 11:58:59:982 consola/(17231:17237): El codigo de operacion es: 0
+[WARNING] 11:58:59:982 consola/(17231:17237): El codigo de operacion despues del recv es: 0
+[INFO] 11:58:59:983 consola/(17231:17237): DISCONNECT!
+[INFO] 12:02:40:777 consola/(17666:17666): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:02:40:777 consola/(17666:17666): El socket : 4
+[INFO] 12:02:42:786 consola/(17666:17666): Cliente conectado (a KERNEL)
+
+[WARNING] 12:02:42:787 consola/(17666:17672): El codigo de operacion es: 0
+[WARNING] 12:02:42:787 consola/(17666:17672): El codigo de operacion despues del recv es: 0
+[INFO] 12:02:42:787 consola/(17666:17672): DISCONNECT!
+[INFO] 12:03:31:525 consola/(17804:17804): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:03:31:525 consola/(17804:17804): El socket : 4
+[INFO] 12:03:33:249 consola/(17804:17804): Cliente conectado (a KERNEL)
+
+[WARNING] 12:03:33:250 consola/(17804:17809): El codigo de operacion es: 0
+[WARNING] 12:03:33:250 consola/(17804:17809): El codigo de operacion despues del recv es: 0
+[INFO] 12:03:33:250 consola/(17804:17809): DISCONNECT!
+[INFO] 12:04:56:589 consola/(17804:17804): Cliente conectado (a KERNEL)
+
+[WARNING] 12:04:56:589 consola/(17804:17942): El codigo de operacion es: -1216753664
+[WARNING] 12:04:56:590 consola/(17804:17942): El codigo de operacion despues del recv es: -1216753664
+[INFO] 12:04:56:590 consola/(17804:17942): DISCONNECT!
+[INFO] 12:05:35:390 consola/(18071:18071): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:05:35:390 consola/(18071:18071): El socket : 4
+[INFO] 12:05:37:553 consola/(18071:18071): Cliente conectado (a KERNEL)
+
+[WARNING] 12:05:37:554 consola/(18071:18074): El codigo de operacion es: 0
+[WARNING] 12:05:37:554 consola/(18071:18074): El codigo de operacion despues del recv es: 0
+[INFO] 12:05:37:554 consola/(18071:18074): DISCONNECT!
+[INFO] 12:09:20:966 consola/(18485:18485): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:09:20:966 consola/(18485:18485): El socket : 4
+[INFO] 12:09:23:323 consola/(18485:18485): Cliente conectado (a KERNEL)
+
+[WARNING] 12:09:23:324 consola/(18485:18491): El codigo de operacion es: 0
+[WARNING] 12:09:23:324 consola/(18485:18491): El codigo de operacion despues del recv es: 0
+[INFO] 12:09:23:324 consola/(18485:18491): DISCONNECT!
+[INFO] 12:10:02:127 consola/(18619:18619): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:10:02:128 consola/(18619:18619): El socket : 4
+[INFO] 12:10:04:162 consola/(18619:18619): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:04:163 consola/(18619:18625): El codigo de operacion es: 0
+[WARNING] 12:10:04:163 consola/(18619:18625): El codigo de operacion despues del recv es: 0
+[INFO] 12:10:04:163 consola/(18619:18625): DISCONNECT!
+[INFO] 12:11:26:064 consola/(18619:18619): Cliente conectado (a KERNEL)
+
+[WARNING] 12:11:26:065 consola/(18619:18750): El codigo de operacion es: -1217519616
+[WARNING] 12:11:26:065 consola/(18619:18750): El codigo de operacion despues del recv es: -1217519616
+[INFO] 12:11:26:065 consola/(18619:18750): DISCONNECT!
+[INFO] 12:12:44:492 consola/(18937:18937): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:12:44:492 consola/(18937:18937): El socket : 4
+[INFO] 12:12:46:911 consola/(18937:18937): Cliente conectado (a KERNEL)
+
+[WARNING] 12:12:46:912 consola/(18937:18943): El codigo de operacion es: 0
+[WARNING] 12:12:46:912 consola/(18937:18943): El codigo de operacion despues del recv es: 0
+[INFO] 12:12:46:912 consola/(18937:18943): DISCONNECT!
+[INFO] 12:15:07:770 consola/(19235:19235): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:15:07:770 consola/(19235:19235): El socket : 4
+[INFO] 12:15:10:729 consola/(19235:19235): Cliente conectado (a KERNEL)
+
+[WARNING] 12:15:10:731 consola/(19235:19244): El codigo de operacion es: 0
+[INFO] 12:15:10:731 consola/(19235:19244): entre al case NO_OP
+[WARNING] 12:15:10:731 consola/(19235:19244): El codigo de operacion es: 13
+[ERROR] 12:15:10:731 consola/(19235:19244): Algo anduvo mal en el server de KERNEL
+[INFO] 12:15:10:732 consola/(19235:19244): Cop: 5
+[INFO] 12:16:27:944 consola/(19427:19427): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:16:27:944 consola/(19427:19427): El socket : 4
+[INFO] 12:16:30:355 consola/(19427:19427): Cliente conectado (a KERNEL)
+
+[WARNING] 12:16:30:357 consola/(19427:19436): El codigo de operacion es: 0
+[INFO] 12:16:30:357 consola/(19427:19436): entre al case NO_OP
+[WARNING] 12:16:30:357 consola/(19427:19436): El codigo de operacion es: 13
+[ERROR] 12:16:30:357 consola/(19427:19436): Algo anduvo mal en el server de KERNEL
+[INFO] 12:16:30:357 consola/(19427:19436): Cop: 5
+[INFO] 12:16:49:661 consola/(19534:19534): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:16:49:662 consola/(19534:19534): El socket : 4
+[INFO] 12:16:52:201 consola/(19534:19534): Cliente conectado (a KERNEL)
+
+[WARNING] 12:16:52:203 consola/(19534:19540): El codigo de operacion es: 0
+[INFO] 12:16:52:203 consola/(19534:19540): entre al case NO_OP
+[WARNING] 12:16:52:203 consola/(19534:19540): El codigo de operacion es: 13
+[ERROR] 12:16:52:203 consola/(19534:19540): Algo anduvo mal en el server de KERNEL
+[INFO] 12:16:52:203 consola/(19534:19540): Cop: 5
+[INFO] 12:21:52:301 consola/(20043:20043): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:21:52:301 consola/(20043:20043): El socket : 4
+[INFO] 12:21:54:734 consola/(20043:20043): Cliente conectado (a KERNEL)
+
+[WARNING] 12:21:54:736 consola/(20043:20049): El codigo de operacion es: 0
+[WARNING] 12:21:54:736 consola/(20043:20049): El codigo de operacion despues del recv es: 13
+[INFO] 12:21:54:736 consola/(20043:20049): entre al case NO_OP
+[WARNING] 12:21:54:736 consola/(20043:20049): El codigo de operacion es: 13
+[WARNING] 12:21:54:736 consola/(20043:20049): El codigo de operacion despues del recv es: 5
+[ERROR] 12:21:54:736 consola/(20043:20049): Algo anduvo mal en el server de KERNEL
+[INFO] 12:21:54:736 consola/(20043:20049): Cop: 5
+[INFO] 12:23:15:868 consola/(20043:20043): Cliente conectado (a KERNEL)
+
+[WARNING] 12:23:15:870 consola/(20043:20237): El codigo de operacion es: -1217150976
+[WARNING] 12:23:15:870 consola/(20043:20237): El codigo de operacion despues del recv es: 13
+[INFO] 12:23:15:870 consola/(20043:20237): entre al case NO_OP
+[WARNING] 12:23:15:870 consola/(20043:20237): El codigo de operacion es: 13
+[WARNING] 12:23:15:870 consola/(20043:20237): El codigo de operacion despues del recv es: 5
+[ERROR] 12:23:15:870 consola/(20043:20237): Algo anduvo mal en el server de KERNEL
+[INFO] 12:23:15:870 consola/(20043:20237): Cop: 5
+[INFO] 12:23:27:690 consola/(20251:20251): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:23:27:690 consola/(20251:20251): El socket : 4
+[INFO] 12:23:30:061 consola/(20251:20251): Cliente conectado (a KERNEL)
+
+[WARNING] 12:23:30:062 consola/(20251:20257): El codigo de operacion despues del recv es: 13
+[INFO] 12:23:30:062 consola/(20251:20257): entre al case NO_OP
+[WARNING] 12:23:30:063 consola/(20251:20257): El codigo de operacion despues del recv es: 5
+[ERROR] 12:23:30:063 consola/(20251:20257): Algo anduvo mal en el server de KERNEL
+[INFO] 12:23:30:063 consola/(20251:20257): Cop: 5
+[INFO] 12:25:00:208 consola/(20454:20454): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:25:00:208 consola/(20454:20454): El socket : 4
+[INFO] 12:25:02:790 consola/(20454:20454): Cliente conectado (a KERNEL)
+
+[WARNING] 12:25:02:791 consola/(20454:20460): El codigo de operacion despues del recv es: 13
+[INFO] 12:25:02:791 consola/(20454:20460): entre al case NO_OP
+[WARNING] 12:25:02:791 consola/(20454:20460): El codigo de operacion despues del recv es: 5
+[ERROR] 12:25:02:791 consola/(20454:20460): Algo anduvo mal en el server de KERNEL
+[INFO] 12:25:02:791 consola/(20454:20460): Cop: 5
+[INFO] 12:28:21:652 consola/(20738:20738): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:28:21:652 consola/(20738:20738): El socket : 4
+[INFO] 12:28:24:613 consola/(20738:20738): Cliente conectado (a KERNEL)
+
+[WARNING] 12:28:24:619 consola/(20738:20744): El codigo de operacion despues del recv es: 13
+[INFO] 12:28:24:619 consola/(20738:20744): entre al case NO_OP
+[WARNING] 12:28:24:619 consola/(20738:20744): El codigo de operacion despues del recv es: 9
+[ERROR] 12:28:24:619 consola/(20738:20744): Algo anduvo mal en el server de KERNEL
+[INFO] 12:28:24:620 consola/(20738:20744): Cop: 9
+[INFO] 12:47:45:509 consola/(22685:22685): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:47:45:510 consola/(22685:22685): El socket : 4
+[INFO] 12:47:47:716 consola/(22685:22685): Cliente conectado (a KERNEL)
+
+[WARNING] 12:47:47:717 consola/(22685:22691): El codigo de operacion despues del recv es: 13
+[INFO] 12:47:47:717 consola/(22685:22691): entre al case NO_OP
+[WARNING] 12:47:47:717 consola/(22685:22691): El codigo de operacion despues del recv es: 5
+[ERROR] 12:47:47:717 consola/(22685:22691): Algo anduvo mal en el server de KERNEL
+[INFO] 12:47:47:717 consola/(22685:22691): Cop: 5
+[INFO] 12:59:11:663 consola/(24028:24028): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:59:11:664 consola/(24028:24028): El socket : 4
+[INFO] 12:59:13:772 consola/(24028:24028): Cliente conectado (a KERNEL)
+
+[WARNING] 12:59:13:773 consola/(24028:24034): El codigo de operacion despues del recv es: 13
+[INFO] 12:59:13:773 consola/(24028:24034): Deserialice NO_OP el parametro es: 
+[INFO] 12:59:13:774 consola/(24028:24034): DISCONNECT!
+[INFO] 12:59:30:753 consola/(24028:24028): Cliente conectado (a KERNEL)
+
+[WARNING] 12:59:30:754 consola/(24028:24058): El codigo de operacion despues del recv es: 13
+[INFO] 12:59:30:754 consola/(24028:24058): Deserialice NO_OP el parametro es: 
+[INFO] 12:59:30:754 consola/(24028:24058): DISCONNECT!
+[INFO] 12:59:48:006 consola/(24153:24153): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:59:48:006 consola/(24153:24153): El socket : 4
+[INFO] 12:59:50:566 consola/(24153:24153): Cliente conectado (a KERNEL)
+
+[WARNING] 12:59:50:568 consola/(24153:24159): El codigo de operacion despues del recv es: 13
+[INFO] 12:59:50:568 consola/(24153:24159): Deserialice NO_OP el parametro es: 5 
+[INFO] 12:59:50:568 consola/(24153:24159): DISCONNECT!
+[INFO] 13:01:53:719 consola/(24153:24153): Cliente conectado (a KERNEL)
+
+[WARNING] 13:01:53:720 consola/(24153:24335): El codigo de operacion despues del recv es: 13
+[INFO] 13:01:53:720 consola/(24153:24335): Deserialice NO_OP el parametro es: 5 
+[INFO] 13:01:53:721 consola/(24153:24335): DISCONNECT!

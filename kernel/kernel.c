@@ -16,7 +16,9 @@ int main() {
 
 	int fd_consola = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 
-	while(server_escuchar(log_kernel,"CONSOLA",fd_consola));
+	log_trace(log_kernel,"El socket : %d",fd_consola);
+
+	while(server_escuchar(log_kernel,"KERNEL",fd_consola));
 
 
 
