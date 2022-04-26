@@ -31,20 +31,25 @@ void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 		}
 		else if(a->id == IO){
 			log_warning(log_consola,"entre en I/O dentro de send_instrucciones");
+			//printf( "el parametro 1  de IO es: %d\n",a->parametro1);
 			send_IO(fd_mod2,a->parametro1);
 		}
 		else if(a->id == READ){
-		//	log_warning(log_consola,"entre en READ dentro de send_instrucciones");
+			log_warning(log_consola,"entre en READ dentro de send_instrucciones");
+			send_READ(fd_mod2,a->parametro1);
 		}
 		else if(a->id == COPY){
-		//	log_warning(log_consola,"entre en COPY dentro de send_instrucciones");
+			log_warning(log_consola,"entre en COPY dentro de send_instrucciones");
+			send_COPY(fd_mod2,a->parametro1,a->parametro2);
+
 		}
 		else if(a->id == WRITE){
-		//	log_warning(log_consola,"entre en WRITE dentro de send_instrucciones");
+			log_warning(log_consola,"entre en WRITE dentro de send_instrucciones");
+			send_WRITE(fd_mod2,a->parametro1,a->parametro2);
 		}
 		else if(a->id == EXIT){
 			log_warning(log_consola,"Entre en EXIT dentro de send_instrucciones");
-			//send_EXIT(fd_mod2);
+			send_EXIT(fd_mod2);
 		}
 
 		indice++;

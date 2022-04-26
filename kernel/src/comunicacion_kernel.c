@@ -29,6 +29,7 @@ static void procesar_conexion(void* void_args) {
         	//log_error(log_kernel,"Elde recv vuelve %d",recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0));
         	log_info(log_kernel, "DISCONNECT!");
             return;
+
         }
 
         log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
@@ -39,11 +40,11 @@ static void procesar_conexion(void* void_args) {
             	 uint32_t* parametro1;
 
             	 if (!recv_NO_OP_2(cliente_socket, &parametro1)) {
-            	          log_error(log_kernel, "Fallo recibiendo APROBAR_OPERATIVOS");
+            	          log_error(log_kernel, "Fallo recibiendo NO_OP");
             	         break;
             	      }
 
-           log_info(log_kernel, "Deserialice NO_OP el parametro es: %d ",parametro1);
+           log_info(log_kernel, "Deserialice NO_OP el parametro es: %d",parametro1);
 
 
                // log_info(log_kernel, "entre al case NO_OP");
@@ -51,27 +52,61 @@ static void procesar_conexion(void* void_args) {
             }
             case IO:
             {
-            	log_info(log_kernel, "entre a IO");
+            	uint32_t* parametro1;
+
+            	if (!recv_IO(cliente_socket, &parametro1)) {
+            	     log_error(log_kernel, "Fallo recibiendo IO");
+            	     break;
+            	}
+
+            	log_info(log_kernel, "Deserialice IO el parametro es: %d",parametro1);
+            	//log_info(log_kernel, "entre a IO");
             	break;
             }
             case READ:
             {
-				log_info(log_kernel, "entre a READ");
-				break;
+            	uint32_t* parametro1;
+
+            	if (!recv_READ(cliente_socket, &parametro1)) {
+        	     log_error(log_kernel, "Fallo recibiendo READ");
+        	     break;
+        	}
+
+        	log_info(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
+        	//log_info(log_kernel, "entre a IO");
+        	break;
 			}
             case COPY:
             {
-        	   	 log_info(log_kernel, "entre a COPY");
-           		break;
+            	uint32_t parametro1, parametro2;
+
+				if (!recv_COPY(cliente_socket, &parametro1, &parametro2)) {
+				   log_error(logger, "Fallo recibiendo COPY");
+				   break;
+				}
+
+				log_info(log_kernel, "Deserialice COPY el parametro1 es: %d",parametro1);
+				log_info(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
+				break;
            	}
             case WRITE:
             {
-            	log_info(log_kernel, "entre a WRITE");
+            	uint32_t parametro1, parametro2;
+
+            	if (!recv_WRITE(cliente_socket, &parametro1, &parametro2)) {
+            	   log_error(logger, "Fallo recibiendo WRITE");
+            	   break;
+            	}
+
+            	log_info(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
+            	log_info(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
             	break;
 			}
             case EXIT:
             {
-            	log_info(log_kernel, "entre al case EXIT");
+
+            	log_info(log_kernel, "Entre en EXIT");
+
 				break;
 			}
 

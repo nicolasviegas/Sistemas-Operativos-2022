@@ -719,3 +719,830 @@
 [WARNING] 16:14:47:859 consola/(14060:14075): El codigo de operacion despues del recv es: 184
 [ERROR] 16:14:47:859 consola/(14060:14075): Algo anduvo mal en el server de KERNEL
 [INFO] 16:14:47:860 consola/(14060:14075): Cop: 184
+[INFO] 10:37:34:785 consola/(5336:5336): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:37:34:785 consola/(5336:5336): El socket : 4
+[INFO] 10:37:36:691 consola/(5336:5336): Cliente conectado (a KERNEL)
+
+[WARNING] 10:37:36:693 consola/(5336:5344): El codigo de operacion despues del recv es: 13
+[INFO] 10:37:36:693 consola/(5336:5344): Deserialice NO_OP el parametro es: 5 
+[WARNING] 10:37:36:693 consola/(5336:5344): El codigo de operacion despues del recv es: 14
+[INFO] 10:37:36:693 consola/(5336:5344): entre a IO
+[WARNING] 10:37:36:693 consola/(5336:5344): El codigo de operacion despues del recv es: 184
+[ERROR] 10:37:36:693 consola/(5336:5344): Algo anduvo mal en el server de KERNEL
+[INFO] 10:37:36:693 consola/(5336:5344): Cop: 184
+[INFO] 10:44:06:340 consola/(6226:6226): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:44:06:340 consola/(6226:6226): El socket : 4
+[INFO] 10:44:11:729 consola/(6226:6226): Cliente conectado (a KERNEL)
+
+[WARNING] 10:44:11:730 consola/(6226:6238): El codigo de operacion despues del recv es: 13
+[INFO] 10:44:11:730 consola/(6226:6238): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:44:11:730 consola/(6226:6238): El codigo de operacion despues del recv es: 14
+[INFO] 10:44:11:730 consola/(6226:6238): Deserialice IO el parametro es: 17
+[WARNING] 10:44:11:730 consola/(6226:6238): El codigo de operacion despues del recv es: 0
+[ERROR] 10:44:11:731 consola/(6226:6238): Algo anduvo mal en el server de KERNEL
+[INFO] 10:44:11:731 consola/(6226:6238): Cop: 0
+[INFO] 10:50:10:402 consola/(7127:7127): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:50:10:403 consola/(7127:7127): El socket : 4
+[INFO] 10:50:13:479 consola/(7127:7127): Cliente conectado (a KERNEL)
+
+[WARNING] 10:50:13:481 consola/(7127:7136): El codigo de operacion despues del recv es: 13
+[INFO] 10:50:13:487 consola/(7127:7136): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:50:13:487 consola/(7127:7136): El codigo de operacion despues del recv es: 14
+[ERROR] 10:50:13:487 consola/(7127:7136): Fallo recibiendo IO
+[INFO] 10:50:13:487 consola/(7127:7136): DISCONNECT!
+[INFO] 10:51:01:275 consola/(7127:7127): Cliente conectado (a KERNEL)
+
+[WARNING] 10:51:01:285 consola/(7127:7278): El codigo de operacion despues del recv es: 13
+[INFO] 10:51:01:285 consola/(7127:7278): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:51:01:285 consola/(7127:7278): El codigo de operacion despues del recv es: 14
+[ERROR] 10:51:01:286 consola/(7127:7278): Fallo recibiendo IO
+[INFO] 10:51:01:286 consola/(7127:7278): DISCONNECT!
+[INFO] 10:56:32:153 consola/(7895:7895): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:56:32:153 consola/(7895:7895): El socket : 4
+[INFO] 10:56:34:995 consola/(7895:7895): Cliente conectado (a KERNEL)
+
+[WARNING] 10:56:34:996 consola/(7895:7901): El codigo de operacion despues del recv es: 13
+[INFO] 10:56:34:996 consola/(7895:7901): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:56:34:996 consola/(7895:7901): El codigo de operacion despues del recv es: 14
+[ERROR] 10:56:34:997 consola/(7895:7901): Fallo recibiendo IO
+[INFO] 10:56:34:997 consola/(7895:7901): DISCONNECT!
+[INFO] 10:57:38:907 consola/(8099:8099): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:57:38:907 consola/(8099:8099): El socket : 4
+[INFO] 10:57:43:612 consola/(8099:8099): Cliente conectado (a KERNEL)
+
+[WARNING] 10:57:43:613 consola/(8099:8108): El codigo de operacion despues del recv es: 13
+[INFO] 10:57:43:614 consola/(8099:8108): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:57:43:614 consola/(8099:8108): El codigo de operacion despues del recv es: 14
+[ERROR] 10:57:43:614 consola/(8099:8108): Fallo recibiendo IO
+[INFO] 10:57:43:614 consola/(8099:8108): DISCONNECT!
+[INFO] 10:58:49:080 consola/(8304:8304): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:58:49:080 consola/(8304:8304): El socket : 4
+[INFO] 10:58:51:359 consola/(8304:8304): Cliente conectado (a KERNEL)
+
+[WARNING] 10:58:51:360 consola/(8304:8310): El codigo de operacion despues del recv es: 13
+[INFO] 10:58:51:360 consola/(8304:8310): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:58:51:360 consola/(8304:8310): El codigo de operacion despues del recv es: 13
+[INFO] 10:58:51:360 consola/(8304:8310): Deserialice NO_OP el parametro es: 184
+[INFO] 10:58:51:361 consola/(8304:8310): DISCONNECT!
+[INFO] 10:59:59:459 consola/(8493:8493): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:59:59:459 consola/(8493:8493): El socket : 4
+[INFO] 11:00:01:616 consola/(8493:8493): Cliente conectado (a KERNEL)
+
+[WARNING] 11:00:01:618 consola/(8493:8498): El codigo de operacion despues del recv es: 13
+[INFO] 11:00:01:618 consola/(8493:8498): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:00:01:618 consola/(8493:8498): El codigo de operacion despues del recv es: 14
+[INFO] 11:00:01:618 consola/(8493:8498): Deserialice IO el parametro es: 184
+[INFO] 11:00:01:618 consola/(8493:8498): DISCONNECT!
+[INFO] 11:01:03:993 consola/(8493:8493): Cliente conectado (a KERNEL)
+
+[WARNING] 11:01:03:995 consola/(8493:8680): El codigo de operacion despues del recv es: 13
+[INFO] 11:01:03:995 consola/(8493:8680): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:01:03:995 consola/(8493:8680): El codigo de operacion despues del recv es: 14
+[INFO] 11:01:03:995 consola/(8493:8680): Deserialice IO el parametro es: 3000
+[INFO] 11:01:03:995 consola/(8493:8680): DISCONNECT!
+[INFO] 11:01:21:858 consola/(8493:8493): Cliente conectado (a KERNEL)
+
+[WARNING] 11:01:21:859 consola/(8493:8777): El codigo de operacion despues del recv es: 13
+[INFO] 11:01:21:860 consola/(8493:8777): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:01:21:860 consola/(8493:8777): El codigo de operacion despues del recv es: 14
+[INFO] 11:01:21:860 consola/(8493:8777): Deserialice IO el parametro es: 3000
+[INFO] 11:01:21:860 consola/(8493:8777): DISCONNECT!
+[INFO] 11:02:19:719 consola/(8493:8493): Cliente conectado (a KERNEL)
+
+[WARNING] 11:02:19:721 consola/(8493:8937): El codigo de operacion despues del recv es: 13
+[INFO] 11:02:19:721 consola/(8493:8937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:02:19:721 consola/(8493:8937): El codigo de operacion despues del recv es: 14
+[INFO] 11:02:19:721 consola/(8493:8937): Deserialice IO el parametro es: 3000
+[INFO] 11:02:19:721 consola/(8493:8937): DISCONNECT!
+[INFO] 11:03:06:370 consola/(9003:9003): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:03:06:370 consola/(9003:9003): El socket : 4
+[INFO] 11:03:08:632 consola/(9003:9003): Cliente conectado (a KERNEL)
+
+[WARNING] 11:03:08:634 consola/(9003:9008): El codigo de operacion despues del recv es: 13
+[INFO] 11:03:08:634 consola/(9003:9008): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:03:08:634 consola/(9003:9008): El codigo de operacion despues del recv es: 14
+[INFO] 11:03:08:634 consola/(9003:9008): Deserialice IO el parametro es: 3000
+[INFO] 11:03:08:634 consola/(9003:9008): DISCONNECT!
+[INFO] 11:06:16:444 consola/(9374:9374): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:06:16:445 consola/(9374:9374): El socket : 4
+[INFO] 11:06:20:914 consola/(9374:9374): Cliente conectado (a KERNEL)
+
+[WARNING] 11:06:20:915 consola/(9374:9379): El codigo de operacion despues del recv es: 13
+[INFO] 11:06:20:915 consola/(9374:9379): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:06:20:915 consola/(9374:9379): El codigo de operacion despues del recv es: 14
+[INFO] 11:06:20:916 consola/(9374:9379): Deserialice IO el parametro es: 3000
+[INFO] 11:06:20:916 consola/(9374:9379): DISCONNECT!
+[INFO] 11:14:45:493 consola/(10375:10375): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:14:45:493 consola/(10375:10375): El socket : 4
+[INFO] 11:14:48:271 consola/(10375:10375): Cliente conectado (a KERNEL)
+
+[WARNING] 11:14:48:274 consola/(10375:10384): El codigo de operacion despues del recv es: 13
+[INFO] 11:14:48:275 consola/(10375:10384): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:14:48:275 consola/(10375:10384): El codigo de operacion despues del recv es: 14
+[INFO] 11:14:48:275 consola/(10375:10384): Deserialice IO el parametro es: 3000
+[WARNING] 11:14:48:275 consola/(10375:10384): El codigo de operacion despues del recv es: 15
+[INFO] 11:14:48:275 consola/(10375:10384): Deserialice READ el parametro es: 0
+[INFO] 11:14:48:275 consola/(10375:10384): DISCONNECT!
+[INFO] 11:15:46:998 consola/(10375:10375): Cliente conectado (a KERNEL)
+
+[WARNING] 11:15:46:999 consola/(10375:10488): El codigo de operacion despues del recv es: 13
+[INFO] 11:15:46:999 consola/(10375:10488): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:15:47:000 consola/(10375:10488): El codigo de operacion despues del recv es: 14
+[INFO] 11:15:47:000 consola/(10375:10488): Deserialice IO el parametro es: 3000
+[WARNING] 11:15:47:000 consola/(10375:10488): El codigo de operacion despues del recv es: 15
+[INFO] 11:15:47:000 consola/(10375:10488): Deserialice READ el parametro es: 0
+[INFO] 11:15:47:000 consola/(10375:10488): DISCONNECT!
+[INFO] 11:21:46:247 consola/(11235:11235): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:21:46:247 consola/(11235:11235): El socket : 4
+[INFO] 11:21:48:370 consola/(11235:11235): Cliente conectado (a KERNEL)
+
+[WARNING] 11:21:48:371 consola/(11235:11240): El codigo de operacion despues del recv es: 13
+[INFO] 11:21:48:372 consola/(11235:11240): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:21:48:372 consola/(11235:11240): El codigo de operacion despues del recv es: 14
+[INFO] 11:21:48:372 consola/(11235:11240): Deserialice IO el parametro es: 3000
+[WARNING] 11:21:48:372 consola/(11235:11240): El codigo de operacion despues del recv es: 15
+[INFO] 11:21:48:372 consola/(11235:11240): Deserialice READ el parametro es: 0
+[INFO] 11:21:48:372 consola/(11235:11240): DISCONNECT!
+[INFO] 11:25:36:090 consola/(11860:11860): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:25:36:090 consola/(11860:11860): El socket : 4
+[INFO] 11:25:39:832 consola/(11860:11860): Cliente conectado (a KERNEL)
+
+[WARNING] 11:25:39:834 consola/(11860:11869): El codigo de operacion despues del recv es: 13
+[INFO] 11:25:39:834 consola/(11860:11869): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:25:39:834 consola/(11860:11869): El codigo de operacion despues del recv es: 14
+[INFO] 11:25:39:834 consola/(11860:11869): Deserialice IO el parametro es: 3000
+[WARNING] 11:25:39:834 consola/(11860:11869): El codigo de operacion despues del recv es: 15
+[INFO] 11:25:39:834 consola/(11860:11869): Deserialice READ el parametro es: 0
+[WARNING] 11:25:39:834 consola/(11860:11869): El codigo de operacion despues del recv es: 17
+[INFO] 11:25:39:834 consola/(11860:11869): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:25:39:834 consola/(11860:11869): Deserialice WRITE el parametro2 es: 42
+[INFO] 11:25:39:834 consola/(11860:11869): DISCONNECT!
+[INFO] 11:28:46:202 consola/(12263:12263): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:28:46:203 consola/(12263:12263): El socket : 4
+[INFO] 11:28:48:610 consola/(12263:12263): Cliente conectado (a KERNEL)
+
+[WARNING] 11:28:48:612 consola/(12263:12269): El codigo de operacion despues del recv es: 13
+[INFO] 11:28:48:612 consola/(12263:12269): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:28:48:612 consola/(12263:12269): El codigo de operacion despues del recv es: 14
+[INFO] 11:28:48:612 consola/(12263:12269): Deserialice IO el parametro es: 3000
+[WARNING] 11:28:48:612 consola/(12263:12269): El codigo de operacion despues del recv es: 15
+[INFO] 11:28:48:612 consola/(12263:12269): Deserialice READ el parametro es: 0
+[WARNING] 11:28:48:612 consola/(12263:12269): El codigo de operacion despues del recv es: 17
+[INFO] 11:28:48:612 consola/(12263:12269): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:28:48:612 consola/(12263:12269): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:28:48:613 consola/(12263:12269): El codigo de operacion despues del recv es: 17
+[INFO] 11:28:48:613 consola/(12263:12269): Deserialice WRITE el parametro1 es: 0
+[INFO] 11:28:48:613 consola/(12263:12269): Deserialice WRITE el parametro2 es: 4
+[INFO] 11:28:48:613 consola/(12263:12269): DISCONNECT!
+[INFO] 11:29:06:793 consola/(12370:12370): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:29:06:793 consola/(12370:12370): El socket : 4
+[INFO] 11:29:09:237 consola/(12370:12370): Cliente conectado (a KERNEL)
+
+[WARNING] 11:29:09:239 consola/(12370:12379): El codigo de operacion despues del recv es: 13
+[INFO] 11:29:09:239 consola/(12370:12379): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:29:09:239 consola/(12370:12379): El codigo de operacion despues del recv es: 14
+[INFO] 11:29:09:240 consola/(12370:12379): Deserialice IO el parametro es: 3000
+[WARNING] 11:29:09:240 consola/(12370:12379): El codigo de operacion despues del recv es: 15
+[INFO] 11:29:09:240 consola/(12370:12379): Deserialice READ el parametro es: 0
+[WARNING] 11:29:09:240 consola/(12370:12379): El codigo de operacion despues del recv es: 17
+[INFO] 11:29:09:240 consola/(12370:12379): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:29:09:240 consola/(12370:12379): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:29:09:240 consola/(12370:12379): El codigo de operacion despues del recv es: 16
+[INFO] 11:29:09:240 consola/(12370:12379): Deserialice COPY el parametro1 es: 0
+[INFO] 11:29:09:240 consola/(12370:12379): Deserialice COPY el parametro2 es: 4
+[INFO] 11:29:09:240 consola/(12370:12379): DISCONNECT!
+[INFO] 11:38:37:219 consola/(13353:13353): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:38:37:219 consola/(13353:13353): El socket : 4
+[INFO] 11:38:39:881 consola/(13353:13353): Cliente conectado (a KERNEL)
+
+[WARNING] 11:38:39:883 consola/(13353:13362): El codigo de operacion despues del recv es: 13
+[INFO] 11:38:39:883 consola/(13353:13362): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:38:39:883 consola/(13353:13362): El codigo de operacion despues del recv es: 14
+[INFO] 11:38:39:883 consola/(13353:13362): Deserialice IO el parametro es: 3000
+[WARNING] 11:38:39:883 consola/(13353:13362): El codigo de operacion despues del recv es: 15
+[INFO] 11:38:39:883 consola/(13353:13362): Deserialice READ el parametro es: 0
+[WARNING] 11:38:39:883 consola/(13353:13362): El codigo de operacion despues del recv es: 17
+[INFO] 11:38:39:883 consola/(13353:13362): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:38:39:883 consola/(13353:13362): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:38:39:883 consola/(13353:13362): El codigo de operacion despues del recv es: 16
+[INFO] 11:38:39:883 consola/(13353:13362): Deserialice COPY el parametro1 es: 0
+[INFO] 11:38:39:883 consola/(13353:13362): Deserialice COPY el parametro2 es: 4
+[INFO] 11:38:39:884 consola/(13353:13362): DISCONNECT!
+[INFO] 11:41:46:663 consola/(13718:13718): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:41:46:664 consola/(13718:13718): El socket : 4
+[INFO] 11:41:49:641 consola/(13718:13718): Cliente conectado (a KERNEL)
+
+[WARNING] 11:41:49:643 consola/(13718:13724): El codigo de operacion despues del recv es: 13
+[INFO] 11:41:49:643 consola/(13718:13724): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:41:49:643 consola/(13718:13724): El codigo de operacion despues del recv es: 14
+[INFO] 11:41:49:643 consola/(13718:13724): Deserialice IO el parametro es: 3000
+[WARNING] 11:41:49:643 consola/(13718:13724): El codigo de operacion despues del recv es: 15
+[INFO] 11:41:49:643 consola/(13718:13724): Deserialice READ el parametro es: 0
+[WARNING] 11:41:49:643 consola/(13718:13724): El codigo de operacion despues del recv es: 17
+[INFO] 11:41:49:643 consola/(13718:13724): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:41:49:643 consola/(13718:13724): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:41:49:643 consola/(13718:13724): El codigo de operacion despues del recv es: 16
+[INFO] 11:41:49:644 consola/(13718:13724): Deserialice COPY el parametro1 es: 0
+[INFO] 11:41:49:644 consola/(13718:13724): Deserialice COPY el parametro2 es: 4
+[INFO] 11:41:49:644 consola/(13718:13724): DISCONNECT!
+[INFO] 11:43:42:214 consola/(13952:13952): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:43:42:214 consola/(13952:13952): El socket : 4
+[INFO] 11:43:44:793 consola/(13952:13952): Cliente conectado (a KERNEL)
+
+[WARNING] 11:43:44:796 consola/(13952:13958): El codigo de operacion despues del recv es: 13
+[INFO] 11:43:44:796 consola/(13952:13958): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:43:44:796 consola/(13952:13958): El codigo de operacion despues del recv es: 14
+[INFO] 11:43:44:796 consola/(13952:13958): Deserialice IO el parametro es: 3000
+[WARNING] 11:43:44:796 consola/(13952:13958): El codigo de operacion despues del recv es: 15
+[INFO] 11:43:44:796 consola/(13952:13958): Deserialice READ el parametro es: 0
+[WARNING] 11:43:44:796 consola/(13952:13958): El codigo de operacion despues del recv es: 17
+[INFO] 11:43:44:796 consola/(13952:13958): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:43:44:796 consola/(13952:13958): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:43:44:796 consola/(13952:13958): El codigo de operacion despues del recv es: 16
+[INFO] 11:43:44:796 consola/(13952:13958): Deserialice COPY el parametro1 es: 0
+[INFO] 11:43:44:797 consola/(13952:13958): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:43:44:797 consola/(13952:13958): El codigo de operacion despues del recv es: 18
+[INFO] 11:46:10:316 consola/(14288:14288): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:46:10:316 consola/(14288:14288): El socket : 4
+[INFO] 11:46:12:944 consola/(14288:14288): Cliente conectado (a KERNEL)
+
+[WARNING] 11:46:12:947 consola/(14288:14291): El codigo de operacion despues del recv es: 13
+[INFO] 11:46:12:947 consola/(14288:14291): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:46:12:947 consola/(14288:14291): El codigo de operacion despues del recv es: 14
+[INFO] 11:46:12:947 consola/(14288:14291): Deserialice IO el parametro es: 3000
+[WARNING] 11:46:12:947 consola/(14288:14291): El codigo de operacion despues del recv es: 15
+[INFO] 11:46:12:947 consola/(14288:14291): Deserialice READ el parametro es: 0
+[WARNING] 11:46:12:947 consola/(14288:14291): El codigo de operacion despues del recv es: 17
+[INFO] 11:46:12:947 consola/(14288:14291): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:46:12:947 consola/(14288:14291): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:46:12:947 consola/(14288:14291): El codigo de operacion despues del recv es: 16
+[INFO] 11:46:12:948 consola/(14288:14291): Deserialice COPY el parametro1 es: 0
+[INFO] 11:46:12:948 consola/(14288:14291): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:46:12:948 consola/(14288:14291): El codigo de operacion despues del recv es: 18
+[INFO] 11:46:47:625 consola/(14423:14423): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:46:47:625 consola/(14423:14423): El socket : 4
+[INFO] 11:46:50:059 consola/(14423:14423): Cliente conectado (a KERNEL)
+
+[WARNING] 11:46:50:062 consola/(14423:14432): El codigo de operacion despues del recv es: 13
+[INFO] 11:46:50:062 consola/(14423:14432): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:46:50:062 consola/(14423:14432): El codigo de operacion despues del recv es: 14
+[INFO] 11:46:50:062 consola/(14423:14432): Deserialice IO el parametro es: 3000
+[WARNING] 11:46:50:062 consola/(14423:14432): El codigo de operacion despues del recv es: 15
+[INFO] 11:46:50:062 consola/(14423:14432): Deserialice READ el parametro es: 0
+[WARNING] 11:46:50:062 consola/(14423:14432): El codigo de operacion despues del recv es: 17
+[INFO] 11:46:50:062 consola/(14423:14432): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:46:50:062 consola/(14423:14432): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:46:50:062 consola/(14423:14432): El codigo de operacion despues del recv es: 16
+[INFO] 11:46:50:062 consola/(14423:14432): Deserialice COPY el parametro1 es: 0
+[INFO] 11:46:50:063 consola/(14423:14432): Deserialice COPY el parametro2 es: 4
+[INFO] 11:46:50:063 consola/(14423:14432): DISCONNECT!
+[INFO] 11:47:38:581 consola/(14565:14565): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:47:38:581 consola/(14565:14565): El socket : 4
+[INFO] 11:47:41:515 consola/(14565:14565): Cliente conectado (a KERNEL)
+
+[WARNING] 11:47:41:518 consola/(14565:14574): El codigo de operacion despues del recv es: 13
+[INFO] 11:47:41:518 consola/(14565:14574): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:47:41:518 consola/(14565:14574): El codigo de operacion despues del recv es: 14
+[INFO] 11:47:41:518 consola/(14565:14574): Deserialice IO el parametro es: 3000
+[WARNING] 11:47:41:518 consola/(14565:14574): El codigo de operacion despues del recv es: 15
+[INFO] 11:47:41:518 consola/(14565:14574): Deserialice READ el parametro es: 0
+[WARNING] 11:47:41:518 consola/(14565:14574): El codigo de operacion despues del recv es: 17
+[INFO] 11:47:41:518 consola/(14565:14574): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:47:41:518 consola/(14565:14574): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:47:41:518 consola/(14565:14574): El codigo de operacion despues del recv es: 16
+[INFO] 11:47:41:518 consola/(14565:14574): Deserialice COPY el parametro1 es: 0
+[INFO] 11:47:41:519 consola/(14565:14574): Deserialice COPY el parametro2 es: 4
+[INFO] 11:47:41:519 consola/(14565:14574): DISCONNECT!
+[WARNING] 11:47:41:519 consola/(14565:14574): El codigo de operacion despues del recv es: 16
+[INFO] 11:50:55:233 consola/(14913:14913): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:50:55:234 consola/(14913:14913): El socket : 4
+[INFO] 11:50:58:096 consola/(14913:14913): Cliente conectado (a KERNEL)
+
+[WARNING] 11:50:58:107 consola/(14913:14916): El codigo de operacion despues del recv es: 13
+[INFO] 11:50:58:107 consola/(14913:14916): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:58:107 consola/(14913:14916): El codigo de operacion despues del recv es: 14
+[INFO] 11:50:58:107 consola/(14913:14916): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:58:108 consola/(14913:14916): El codigo de operacion despues del recv es: 15
+[INFO] 11:50:58:108 consola/(14913:14916): Deserialice READ el parametro es: 0
+[WARNING] 11:50:58:108 consola/(14913:14916): El codigo de operacion despues del recv es: 17
+[INFO] 11:50:58:108 consola/(14913:14916): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:50:58:108 consola/(14913:14916): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:50:58:108 consola/(14913:14916): El codigo de operacion despues del recv es: 16
+[INFO] 11:50:58:108 consola/(14913:14916): Deserialice COPY el parametro1 es: 0
+[INFO] 11:50:58:108 consola/(14913:14916): Deserialice COPY el parametro2 es: 4
+[INFO] 11:50:58:108 consola/(14913:14916): DISCONNECT!
+[WARNING] 11:50:58:108 consola/(14913:14916): El cliente se desconecto de KERNEL server
+[INFO] 11:51:03:784 consola/(14913:14913): Cliente conectado (a KERNEL)
+
+[WARNING] 11:51:03:786 consola/(14913:14926): El codigo de operacion despues del recv es: 13
+[INFO] 11:51:03:786 consola/(14913:14926): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:51:03:786 consola/(14913:14926): El codigo de operacion despues del recv es: 14
+[INFO] 11:51:03:786 consola/(14913:14926): Deserialice IO el parametro es: 3000
+[WARNING] 11:51:03:786 consola/(14913:14926): El codigo de operacion despues del recv es: 15
+[INFO] 11:51:03:786 consola/(14913:14926): Deserialice READ el parametro es: 0
+[WARNING] 11:51:03:786 consola/(14913:14926): El codigo de operacion despues del recv es: 17
+[INFO] 11:51:03:786 consola/(14913:14926): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:51:03:787 consola/(14913:14926): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:51:03:787 consola/(14913:14926): El codigo de operacion despues del recv es: 16
+[INFO] 11:51:03:787 consola/(14913:14926): Deserialice COPY el parametro1 es: 0
+[INFO] 11:51:03:787 consola/(14913:14926): Deserialice COPY el parametro2 es: 4
+[INFO] 11:51:03:787 consola/(14913:14926): DISCONNECT!
+[WARNING] 11:51:03:787 consola/(14913:14926): El cliente se desconecto de KERNEL server
+[INFO] 11:53:28:464 consola/(15130:15130): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:53:28:515 consola/(15130:15130): El socket : 4
+[INFO] 11:53:37:267 consola/(15130:15130): Cliente conectado (a KERNEL)
+
+[WARNING] 11:53:37:302 consola/(15130:15144): El codigo de operacion despues del recv es: 13
+[INFO] 11:53:37:305 consola/(15130:15144): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:53:37:308 consola/(15130:15144): El codigo de operacion despues del recv es: 14
+[INFO] 11:53:37:309 consola/(15130:15144): Deserialice IO el parametro es: 3000
+[WARNING] 11:53:37:311 consola/(15130:15144): El codigo de operacion despues del recv es: 15
+[INFO] 11:53:37:312 consola/(15130:15144): Deserialice READ el parametro es: 0
+[WARNING] 11:53:37:316 consola/(15130:15144): El codigo de operacion despues del recv es: 17
+[INFO] 11:53:37:317 consola/(15130:15144): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:53:37:317 consola/(15130:15144): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:53:37:324 consola/(15130:15144): El codigo de operacion despues del recv es: 16
+[INFO] 11:53:37:325 consola/(15130:15144): Deserialice COPY el parametro1 es: 0
+[INFO] 11:53:37:325 consola/(15130:15144): Deserialice COPY el parametro2 es: 4
+[INFO] 11:53:37:364 consola/(15130:15144): DISCONNECT!
+[WARNING] 11:53:37:365 consola/(15130:15144): El cliente se desconecto de KERNEL server
+[INFO] 11:56:49:555 consola/(15545:15545): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:56:49:555 consola/(15545:15545): El socket : 4
+[INFO] 11:56:53:752 consola/(15545:15545): Cliente conectado (a KERNEL)
+
+[WARNING] 11:56:53:754 consola/(15545:15551): El codigo de operacion despues del recv es: 13
+[INFO] 11:56:53:754 consola/(15545:15551): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:56:53:754 consola/(15545:15551): El codigo de operacion despues del recv es: 14
+[INFO] 11:56:53:754 consola/(15545:15551): Deserialice IO el parametro es: 3000
+[WARNING] 11:56:53:754 consola/(15545:15551): El codigo de operacion despues del recv es: 15
+[INFO] 11:56:53:754 consola/(15545:15551): Deserialice READ el parametro es: 0
+[WARNING] 11:56:53:755 consola/(15545:15551): El codigo de operacion despues del recv es: 17
+[INFO] 11:56:53:755 consola/(15545:15551): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:56:53:755 consola/(15545:15551): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:56:53:755 consola/(15545:15551): El codigo de operacion despues del recv es: 16
+[INFO] 11:56:53:755 consola/(15545:15551): Deserialice COPY el parametro1 es: 0
+[INFO] 11:56:53:755 consola/(15545:15551): Deserialice COPY el parametro2 es: 4
+[INFO] 11:56:53:755 consola/(15545:15551): DISCONNECT!
+[INFO] 11:58:44:183 consola/(15785:15785): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:58:44:183 consola/(15785:15785): El socket : 4
+[INFO] 11:58:47:419 consola/(15785:15785): Cliente conectado (a KERNEL)
+
+[WARNING] 11:58:47:421 consola/(15785:15800): El codigo de operacion despues del recv es: 13
+[INFO] 11:58:47:421 consola/(15785:15800): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:58:47:421 consola/(15785:15800): El codigo de operacion despues del recv es: 14
+[INFO] 11:58:47:421 consola/(15785:15800): Deserialice IO el parametro es: 3000
+[WARNING] 11:58:47:421 consola/(15785:15800): El codigo de operacion despues del recv es: 15
+[INFO] 11:58:47:421 consola/(15785:15800): Deserialice READ el parametro es: 0
+[WARNING] 11:58:47:421 consola/(15785:15800): El codigo de operacion despues del recv es: 17
+[INFO] 11:58:47:422 consola/(15785:15800): Deserialice WRITE el parametro1 es: 4
+[INFO] 11:58:47:422 consola/(15785:15800): Deserialice WRITE el parametro2 es: 42
+[WARNING] 11:58:47:422 consola/(15785:15800): El codigo de operacion despues del recv es: 16
+[INFO] 11:58:47:422 consola/(15785:15800): Deserialice COPY el parametro1 es: 0
+[INFO] 11:58:47:422 consola/(15785:15800): Deserialice COPY el parametro2 es: 4
+[INFO] 11:58:47:422 consola/(15785:15800): DISCONNECT!
+[INFO] 12:00:34:295 consola/(16044:16044): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:00:34:295 consola/(16044:16044): El socket : 4
+[INFO] 12:00:36:989 consola/(16044:16044): Cliente conectado (a KERNEL)
+
+[WARNING] 12:00:36:992 consola/(16044:16053): El codigo de operacion despues del recv es: 13
+[INFO] 12:00:36:992 consola/(16044:16053): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:00:36:992 consola/(16044:16053): El codigo de operacion despues del recv es: 14
+[INFO] 12:00:36:992 consola/(16044:16053): Deserialice IO el parametro es: 3000
+[WARNING] 12:00:36:992 consola/(16044:16053): El codigo de operacion despues del recv es: 15
+[INFO] 12:00:36:992 consola/(16044:16053): Deserialice READ el parametro es: 0
+[WARNING] 12:00:36:992 consola/(16044:16053): El codigo de operacion despues del recv es: 17
+[INFO] 12:00:36:992 consola/(16044:16053): Deserialice COPY el parametro1 es: 4
+[INFO] 12:00:36:992 consola/(16044:16053): Deserialice COPY el parametro2 es: 42
+[WARNING] 12:00:36:992 consola/(16044:16053): El codigo de operacion despues del recv es: 16
+[INFO] 12:00:36:992 consola/(16044:16053): Deserialice WRITE el parametro1 es: 0
+[INFO] 12:00:36:993 consola/(16044:16053): Deserialice WRITE el parametro2 es: 4
+[INFO] 12:00:36:993 consola/(16044:16053): DISCONNECT!
+[INFO] 12:05:04:082 consola/(16572:16572): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:05:04:082 consola/(16572:16572): El socket : 4
+[INFO] 12:05:06:614 consola/(16572:16572): Cliente conectado (a KERNEL)
+
+[WARNING] 12:05:06:616 consola/(16572:16581): El codigo de operacion despues del recv es: 13
+[INFO] 12:05:06:616 consola/(16572:16581): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:05:06:616 consola/(16572:16581): El codigo de operacion despues del recv es: 14
+[INFO] 12:05:06:617 consola/(16572:16581): Deserialice IO el parametro es: 3000
+[WARNING] 12:05:06:617 consola/(16572:16581): El codigo de operacion despues del recv es: 15
+[INFO] 12:05:06:617 consola/(16572:16581): Deserialice READ el parametro es: 0
+[WARNING] 12:05:06:617 consola/(16572:16581): El codigo de operacion despues del recv es: 17
+[INFO] 12:05:06:617 consola/(16572:16581): Deserialice COPY el parametro1 es: 4
+[INFO] 12:05:06:617 consola/(16572:16581): Deserialice COPY el parametro2 es: 42
+[WARNING] 12:05:06:617 consola/(16572:16581): El codigo de operacion despues del recv es: 16
+[INFO] 12:05:06:617 consola/(16572:16581): Deserialice WRITE el parametro1 es: 0
+[INFO] 12:05:06:617 consola/(16572:16581): Deserialice WRITE el parametro2 es: 4
+[INFO] 12:05:06:617 consola/(16572:16581): DISCONNECT!
+[INFO] 12:05:29:340 consola/(16675:16675): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:05:29:340 consola/(16675:16675): El socket : 4
+[INFO] 12:05:32:035 consola/(16675:16675): Cliente conectado (a KERNEL)
+
+[WARNING] 12:05:32:037 consola/(16675:16684): El codigo de operacion despues del recv es: 13
+[INFO] 12:05:32:037 consola/(16675:16684): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:05:32:037 consola/(16675:16684): El codigo de operacion despues del recv es: 14
+[INFO] 12:05:32:038 consola/(16675:16684): Deserialice IO el parametro es: 3000
+[WARNING] 12:05:32:038 consola/(16675:16684): El codigo de operacion despues del recv es: 15
+[INFO] 12:05:32:038 consola/(16675:16684): Deserialice READ el parametro es: 0
+[WARNING] 12:05:32:038 consola/(16675:16684): El codigo de operacion despues del recv es: 17
+[INFO] 12:05:32:038 consola/(16675:16684): Deserialice COPY el parametro1 es: 4
+[INFO] 12:05:32:038 consola/(16675:16684): Deserialice COPY el parametro2 es: 42
+[WARNING] 12:05:32:038 consola/(16675:16684): El codigo de operacion despues del recv es: 16
+[INFO] 12:05:32:038 consola/(16675:16684): Deserialice WRITE el parametro1 es: 0
+[INFO] 12:05:32:038 consola/(16675:16684): Deserialice WRITE el parametro2 es: 4
+[WARNING] 12:05:32:038 consola/(16675:16684): El codigo de operacion despues del recv es: 18
+[INFO] 12:05:32:038 consola/(16675:16684): DISCONNECT!
+[INFO] 12:06:13:931 consola/(16817:16817): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:06:13:932 consola/(16817:16817): El socket : 4
+[INFO] 12:06:32:955 consola/(16817:16817): Cliente conectado (a KERNEL)
+
+[WARNING] 12:06:32:969 consola/(16817:16844): El codigo de operacion despues del recv es: 13
+[INFO] 12:06:32:969 consola/(16817:16844): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:06:32:969 consola/(16817:16844): El codigo de operacion despues del recv es: 14
+[INFO] 12:06:32:969 consola/(16817:16844): Deserialice IO el parametro es: 3000
+[WARNING] 12:06:32:969 consola/(16817:16844): El codigo de operacion despues del recv es: 15
+[INFO] 12:06:32:969 consola/(16817:16844): Deserialice READ el parametro es: 0
+[WARNING] 12:06:32:969 consola/(16817:16844): El codigo de operacion despues del recv es: 17
+[INFO] 12:06:32:969 consola/(16817:16844): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:06:32:969 consola/(16817:16844): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:06:32:969 consola/(16817:16844): El codigo de operacion despues del recv es: 16
+[INFO] 12:06:32:969 consola/(16817:16844): Deserialice COPY el parametro1 es: 0
+[INFO] 12:06:32:969 consola/(16817:16844): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:06:32:969 consola/(16817:16844): El codigo de operacion despues del recv es: 18
+[INFO] 12:08:57:250 consola/(17165:17165): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:08:57:250 consola/(17165:17165): El socket : 4
+[INFO] 12:08:59:779 consola/(17165:17165): Cliente conectado (a KERNEL)
+
+[WARNING] 12:08:59:782 consola/(17165:17168): El codigo de operacion despues del recv es: 13
+[INFO] 12:08:59:782 consola/(17165:17168): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:08:59:782 consola/(17165:17168): El codigo de operacion despues del recv es: 14
+[INFO] 12:08:59:782 consola/(17165:17168): Deserialice IO el parametro es: 3000
+[WARNING] 12:08:59:782 consola/(17165:17168): El codigo de operacion despues del recv es: 15
+[INFO] 12:08:59:782 consola/(17165:17168): Deserialice READ el parametro es: 0
+[WARNING] 12:08:59:782 consola/(17165:17168): El codigo de operacion despues del recv es: 17
+[INFO] 12:08:59:782 consola/(17165:17168): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:08:59:782 consola/(17165:17168): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:08:59:782 consola/(17165:17168): El codigo de operacion despues del recv es: 16
+[INFO] 12:08:59:783 consola/(17165:17168): Deserialice COPY el parametro1 es: 0
+[INFO] 12:08:59:783 consola/(17165:17168): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:08:59:783 consola/(17165:17168): El codigo de operacion despues del recv es: 18
+[INFO] 12:08:59:783 consola/(17165:17168): Entre en EXIT
+[INFO] 12:08:59:783 consola/(17165:17168): DISCONNECT!
+[INFO] 12:10:03:605 consola/(17261:17261): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:10:03:656 consola/(17261:17261): El socket : 4
+[INFO] 12:10:09:736 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:09:758 consola/(17261:17269): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:09:762 consola/(17261:17269): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:09:765 consola/(17261:17269): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:09:765 consola/(17261:17269): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:09:769 consola/(17261:17269): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:09:770 consola/(17261:17269): Deserialice READ el parametro es: 0
+[WARNING] 12:10:09:772 consola/(17261:17269): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:09:773 consola/(17261:17269): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:09:774 consola/(17261:17269): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:09:777 consola/(17261:17269): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:09:778 consola/(17261:17269): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:09:778 consola/(17261:17269): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:09:780 consola/(17261:17269): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:09:780 consola/(17261:17269): Entre en EXIT
+[INFO] 12:10:09:819 consola/(17261:17269): DISCONNECT!
+[INFO] 12:10:30:442 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:30:470 consola/(17261:17298): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:30:471 consola/(17261:17298): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:30:486 consola/(17261:17298): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:30:486 consola/(17261:17298): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:30:488 consola/(17261:17298): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:30:489 consola/(17261:17298): Deserialice READ el parametro es: 0
+[WARNING] 12:10:30:503 consola/(17261:17298): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:30:504 consola/(17261:17298): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:30:504 consola/(17261:17298): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:30:506 consola/(17261:17298): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:30:507 consola/(17261:17298): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:30:507 consola/(17261:17298): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:30:520 consola/(17261:17298): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:30:520 consola/(17261:17298): Entre en EXIT
+[INFO] 12:10:30:565 consola/(17261:17298): DISCONNECT!
+[INFO] 12:10:44:578 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:44:588 consola/(17261:17315): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:44:601 consola/(17261:17315): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:44:619 consola/(17261:17315): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:44:620 consola/(17261:17315): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:44:622 consola/(17261:17315): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:44:622 consola/(17261:17315): Deserialice READ el parametro es: 0
+[WARNING] 12:10:44:625 consola/(17261:17315): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:44:626 consola/(17261:17315): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:44:626 consola/(17261:17315): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:44:646 consola/(17261:17315): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:44:646 consola/(17261:17315): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:44:647 consola/(17261:17315): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:44:649 consola/(17261:17315): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:44:650 consola/(17261:17315): Entre en EXIT
+[INFO] 12:10:44:714 consola/(17261:17315): DISCONNECT!
+[INFO] 12:10:47:111 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:47:126 consola/(17261:17323): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:47:126 consola/(17261:17323): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:47:133 consola/(17261:17323): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:47:133 consola/(17261:17323): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:47:136 consola/(17261:17323): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:47:136 consola/(17261:17323): Deserialice READ el parametro es: 0
+[WARNING] 12:10:47:144 consola/(17261:17323): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:47:145 consola/(17261:17323): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:47:145 consola/(17261:17323): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:47:148 consola/(17261:17323): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:47:148 consola/(17261:17323): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:47:148 consola/(17261:17323): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:47:150 consola/(17261:17323): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:47:150 consola/(17261:17323): Entre en EXIT
+[INFO] 12:10:47:192 consola/(17261:17323): DISCONNECT!
+[INFO] 12:10:49:056 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:49:071 consola/(17261:17325): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:49:072 consola/(17261:17325): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:49:079 consola/(17261:17325): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:49:079 consola/(17261:17325): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:49:081 consola/(17261:17325): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:49:082 consola/(17261:17325): Deserialice READ el parametro es: 0
+[WARNING] 12:10:49:084 consola/(17261:17325): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:49:084 consola/(17261:17325): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:49:084 consola/(17261:17325): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:49:087 consola/(17261:17325): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:49:090 consola/(17261:17325): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:49:091 consola/(17261:17325): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:49:095 consola/(17261:17325): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:49:096 consola/(17261:17325): Entre en EXIT
+[INFO] 12:10:49:128 consola/(17261:17325): DISCONNECT!
+[INFO] 12:10:50:541 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:50:553 consola/(17261:17330): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:50:555 consola/(17261:17330): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:50:557 consola/(17261:17330): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:50:557 consola/(17261:17330): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:50:560 consola/(17261:17330): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:50:560 consola/(17261:17330): Deserialice READ el parametro es: 0
+[WARNING] 12:10:50:567 consola/(17261:17330): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:50:567 consola/(17261:17330): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:50:568 consola/(17261:17330): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:50:570 consola/(17261:17330): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:50:574 consola/(17261:17330): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:50:574 consola/(17261:17330): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:50:577 consola/(17261:17330): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:50:578 consola/(17261:17330): Entre en EXIT
+[INFO] 12:10:50:616 consola/(17261:17330): DISCONNECT!
+[INFO] 12:10:51:849 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:51:862 consola/(17261:17335): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:51:864 consola/(17261:17335): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:51:866 consola/(17261:17335): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:51:867 consola/(17261:17335): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:51:873 consola/(17261:17335): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:51:873 consola/(17261:17335): Deserialice READ el parametro es: 0
+[WARNING] 12:10:51:876 consola/(17261:17335): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:51:876 consola/(17261:17335): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:51:877 consola/(17261:17335): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:51:884 consola/(17261:17335): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:51:884 consola/(17261:17335): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:51:884 consola/(17261:17335): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:51:886 consola/(17261:17335): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:51:886 consola/(17261:17335): Entre en EXIT
+[INFO] 12:10:51:927 consola/(17261:17335): DISCONNECT!
+[INFO] 12:10:53:152 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:53:166 consola/(17261:17337): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:53:166 consola/(17261:17337): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:53:169 consola/(17261:17337): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:53:169 consola/(17261:17337): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:53:176 consola/(17261:17337): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:53:176 consola/(17261:17337): Deserialice READ el parametro es: 0
+[WARNING] 12:10:53:178 consola/(17261:17337): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:53:179 consola/(17261:17337): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:53:182 consola/(17261:17337): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:53:185 consola/(17261:17337): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:53:185 consola/(17261:17337): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:53:186 consola/(17261:17337): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:53:188 consola/(17261:17337): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:53:188 consola/(17261:17337): Entre en EXIT
+[INFO] 12:10:53:223 consola/(17261:17337): DISCONNECT!
+[INFO] 12:10:54:395 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:54:406 consola/(17261:17339): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:54:408 consola/(17261:17339): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:54:411 consola/(17261:17339): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:54:411 consola/(17261:17339): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:54:417 consola/(17261:17339): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:54:417 consola/(17261:17339): Deserialice READ el parametro es: 0
+[WARNING] 12:10:54:419 consola/(17261:17339): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:54:419 consola/(17261:17339): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:54:420 consola/(17261:17339): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:54:422 consola/(17261:17339): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:54:427 consola/(17261:17339): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:54:427 consola/(17261:17339): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:54:431 consola/(17261:17339): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:54:431 consola/(17261:17339): Entre en EXIT
+[INFO] 12:10:54:469 consola/(17261:17339): DISCONNECT!
+[INFO] 12:10:55:611 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:55:624 consola/(17261:17345): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:55:626 consola/(17261:17345): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:55:629 consola/(17261:17345): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:55:629 consola/(17261:17345): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:55:636 consola/(17261:17345): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:55:636 consola/(17261:17345): Deserialice READ el parametro es: 0
+[WARNING] 12:10:55:638 consola/(17261:17345): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:55:639 consola/(17261:17345): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:55:639 consola/(17261:17345): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:55:647 consola/(17261:17345): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:55:647 consola/(17261:17345): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:55:647 consola/(17261:17345): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:55:649 consola/(17261:17345): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:55:649 consola/(17261:17345): Entre en EXIT
+[INFO] 12:10:55:688 consola/(17261:17345): DISCONNECT!
+[INFO] 12:10:57:056 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:57:072 consola/(17261:17350): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:57:073 consola/(17261:17350): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:57:080 consola/(17261:17350): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:57:081 consola/(17261:17350): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:57:083 consola/(17261:17350): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:57:086 consola/(17261:17350): Deserialice READ el parametro es: 0
+[WARNING] 12:10:57:090 consola/(17261:17350): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:57:090 consola/(17261:17350): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:57:091 consola/(17261:17350): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:57:093 consola/(17261:17350): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:57:094 consola/(17261:17350): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:57:094 consola/(17261:17350): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:57:096 consola/(17261:17350): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:57:096 consola/(17261:17350): Entre en EXIT
+[INFO] 12:10:57:138 consola/(17261:17350): DISCONNECT!
+[INFO] 12:10:58:428 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:58:440 consola/(17261:17352): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:58:442 consola/(17261:17352): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:58:445 consola/(17261:17352): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:58:445 consola/(17261:17352): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:58:451 consola/(17261:17352): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:58:451 consola/(17261:17352): Deserialice READ el parametro es: 0
+[WARNING] 12:10:58:453 consola/(17261:17352): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:58:454 consola/(17261:17352): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:58:454 consola/(17261:17352): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:58:456 consola/(17261:17352): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:58:458 consola/(17261:17352): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:58:459 consola/(17261:17352): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:58:465 consola/(17261:17352): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:58:466 consola/(17261:17352): Entre en EXIT
+[INFO] 12:10:58:503 consola/(17261:17352): DISCONNECT!
+[INFO] 12:10:59:851 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:59:865 consola/(17261:17354): El codigo de operacion despues del recv es: 13
+[INFO] 12:10:59:866 consola/(17261:17354): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:59:868 consola/(17261:17354): El codigo de operacion despues del recv es: 14
+[INFO] 12:10:59:869 consola/(17261:17354): Deserialice IO el parametro es: 3000
+[WARNING] 12:10:59:875 consola/(17261:17354): El codigo de operacion despues del recv es: 15
+[INFO] 12:10:59:876 consola/(17261:17354): Deserialice READ el parametro es: 0
+[WARNING] 12:10:59:883 consola/(17261:17354): El codigo de operacion despues del recv es: 17
+[INFO] 12:10:59:883 consola/(17261:17354): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:10:59:883 consola/(17261:17354): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:10:59:886 consola/(17261:17354): El codigo de operacion despues del recv es: 16
+[INFO] 12:10:59:886 consola/(17261:17354): Deserialice COPY el parametro1 es: 0
+[INFO] 12:10:59:886 consola/(17261:17354): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:10:59:888 consola/(17261:17354): El codigo de operacion despues del recv es: 18
+[INFO] 12:10:59:889 consola/(17261:17354): Entre en EXIT
+[INFO] 12:10:59:930 consola/(17261:17354): DISCONNECT!
+[INFO] 12:11:01:243 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:11:01:256 consola/(17261:17364): El codigo de operacion despues del recv es: 13
+[INFO] 12:11:01:256 consola/(17261:17364): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:11:01:258 consola/(17261:17364): El codigo de operacion despues del recv es: 14
+[INFO] 12:11:01:259 consola/(17261:17364): Deserialice IO el parametro es: 3000
+[WARNING] 12:11:01:261 consola/(17261:17364): El codigo de operacion despues del recv es: 15
+[INFO] 12:11:01:261 consola/(17261:17364): Deserialice READ el parametro es: 0
+[WARNING] 12:11:01:267 consola/(17261:17364): El codigo de operacion despues del recv es: 17
+[INFO] 12:11:01:268 consola/(17261:17364): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:11:01:268 consola/(17261:17364): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:11:01:275 consola/(17261:17364): El codigo de operacion despues del recv es: 16
+[INFO] 12:11:01:275 consola/(17261:17364): Deserialice COPY el parametro1 es: 0
+[INFO] 12:11:01:276 consola/(17261:17364): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:11:01:278 consola/(17261:17364): El codigo de operacion despues del recv es: 18
+[INFO] 12:11:01:278 consola/(17261:17364): Entre en EXIT
+[INFO] 12:11:01:315 consola/(17261:17364): DISCONNECT!
+[INFO] 12:11:03:497 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:11:03:511 consola/(17261:17366): El codigo de operacion despues del recv es: 13
+[INFO] 12:11:03:511 consola/(17261:17366): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:11:03:514 consola/(17261:17366): El codigo de operacion despues del recv es: 14
+[INFO] 12:11:03:514 consola/(17261:17366): Deserialice IO el parametro es: 3000
+[WARNING] 12:11:03:520 consola/(17261:17366): El codigo de operacion despues del recv es: 15
+[INFO] 12:11:03:521 consola/(17261:17366): Deserialice READ el parametro es: 0
+[WARNING] 12:11:03:524 consola/(17261:17366): El codigo de operacion despues del recv es: 17
+[INFO] 12:11:03:528 consola/(17261:17366): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:11:03:528 consola/(17261:17366): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:11:03:532 consola/(17261:17366): El codigo de operacion despues del recv es: 16
+[INFO] 12:11:03:532 consola/(17261:17366): Deserialice COPY el parametro1 es: 0
+[INFO] 12:11:03:532 consola/(17261:17366): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:11:03:534 consola/(17261:17366): El codigo de operacion despues del recv es: 18
+[INFO] 12:11:03:535 consola/(17261:17366): Entre en EXIT
+[INFO] 12:11:03:574 consola/(17261:17366): DISCONNECT!
+[INFO] 12:11:09:819 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:11:09:834 consola/(17261:17374): El codigo de operacion despues del recv es: 13
+[INFO] 12:11:09:834 consola/(17261:17374): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:11:09:841 consola/(17261:17374): El codigo de operacion despues del recv es: 14
+[INFO] 12:11:09:842 consola/(17261:17374): Deserialice IO el parametro es: 3000
+[WARNING] 12:11:09:844 consola/(17261:17374): El codigo de operacion despues del recv es: 15
+[INFO] 12:11:09:845 consola/(17261:17374): Deserialice READ el parametro es: 0
+[WARNING] 12:11:09:852 consola/(17261:17374): El codigo de operacion despues del recv es: 17
+[INFO] 12:11:09:852 consola/(17261:17374): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:11:09:852 consola/(17261:17374): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:11:09:855 consola/(17261:17374): El codigo de operacion despues del recv es: 16
+[INFO] 12:11:09:855 consola/(17261:17374): Deserialice COPY el parametro1 es: 0
+[INFO] 12:11:09:855 consola/(17261:17374): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:11:09:858 consola/(17261:17374): El codigo de operacion despues del recv es: 18
+[INFO] 12:11:09:858 consola/(17261:17374): Entre en EXIT
+[INFO] 12:11:09:899 consola/(17261:17374): DISCONNECT!
+[INFO] 12:11:11:093 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:11:11:107 consola/(17261:17382): El codigo de operacion despues del recv es: 13
+[INFO] 12:11:11:108 consola/(17261:17382): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:11:11:110 consola/(17261:17382): El codigo de operacion despues del recv es: 14
+[INFO] 12:11:11:110 consola/(17261:17382): Deserialice IO el parametro es: 3000
+[WARNING] 12:11:11:117 consola/(17261:17382): El codigo de operacion despues del recv es: 15
+[INFO] 12:11:11:117 consola/(17261:17382): Deserialice READ el parametro es: 0
+[WARNING] 12:11:11:119 consola/(17261:17382): El codigo de operacion despues del recv es: 17
+[INFO] 12:11:11:123 consola/(17261:17382): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:11:11:123 consola/(17261:17382): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:11:11:128 consola/(17261:17382): El codigo de operacion despues del recv es: 16
+[INFO] 12:11:11:129 consola/(17261:17382): Deserialice COPY el parametro1 es: 0
+[INFO] 12:11:11:129 consola/(17261:17382): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:11:11:131 consola/(17261:17382): El codigo de operacion despues del recv es: 18
+[INFO] 12:11:11:131 consola/(17261:17382): Entre en EXIT
+[INFO] 12:11:11:170 consola/(17261:17382): DISCONNECT!
+[INFO] 12:11:12:347 consola/(17261:17261): Cliente conectado (a KERNEL)
+
+[WARNING] 12:11:12:364 consola/(17261:17384): El codigo de operacion despues del recv es: 13
+[INFO] 12:11:12:364 consola/(17261:17384): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:11:12:374 consola/(17261:17384): El codigo de operacion despues del recv es: 14
+[INFO] 12:11:12:376 consola/(17261:17384): Deserialice IO el parametro es: 3000
+[WARNING] 12:11:12:385 consola/(17261:17384): El codigo de operacion despues del recv es: 15
+[INFO] 12:11:12:386 consola/(17261:17384): Deserialice READ el parametro es: 0
+[WARNING] 12:11:12:392 consola/(17261:17384): El codigo de operacion despues del recv es: 17
+[INFO] 12:11:12:392 consola/(17261:17384): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:11:12:393 consola/(17261:17384): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:11:12:395 consola/(17261:17384): El codigo de operacion despues del recv es: 16
+[INFO] 12:11:12:396 consola/(17261:17384): Deserialice COPY el parametro1 es: 0
+[INFO] 12:11:12:396 consola/(17261:17384): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:11:12:398 consola/(17261:17384): El codigo de operacion despues del recv es: 18
+[INFO] 12:11:12:398 consola/(17261:17384): Entre en EXIT
+[INFO] 12:11:12:475 consola/(17261:17384): DISCONNECT!
+[INFO] 12:11:41:380 consola/(17423:17423): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:11:41:449 consola/(17423:17423): El socket : 4
+[INFO] 12:11:45:362 consola/(17423:17423): Cliente conectado (a KERNEL)
+
+[WARNING] 12:11:45:384 consola/(17423:17431): El codigo de operacion despues del recv es: 13
+[INFO] 12:11:45:387 consola/(17423:17431): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:11:45:387 consola/(17423:17431): El codigo de operacion despues del recv es: 14
+[INFO] 12:11:45:388 consola/(17423:17431): Deserialice IO el parametro es: 3000
+[WARNING] 12:11:45:393 consola/(17423:17431): El codigo de operacion despues del recv es: 15
+[INFO] 12:11:45:394 consola/(17423:17431): Deserialice READ el parametro es: 0
+[WARNING] 12:11:45:394 consola/(17423:17431): El codigo de operacion despues del recv es: 17
+[INFO] 12:11:45:396 consola/(17423:17431): Deserialice WRITE el parametro1 es: 4
+[INFO] 12:11:45:396 consola/(17423:17431): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:11:45:396 consola/(17423:17431): El codigo de operacion despues del recv es: 16
+[INFO] 12:11:45:397 consola/(17423:17431): Deserialice COPY el parametro1 es: 0
+[INFO] 12:11:45:398 consola/(17423:17431): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:11:45:398 consola/(17423:17431): El codigo de operacion despues del recv es: 18
+[INFO] 12:11:45:399 consola/(17423:17431): Entre en EXIT
+[INFO] 12:11:45:399 consola/(17423:17431): DISCONNECT!

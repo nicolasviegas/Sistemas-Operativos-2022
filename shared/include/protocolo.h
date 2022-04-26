@@ -24,20 +24,20 @@ typedef enum{ //tipos de identificadores a parsear
 bool send_NO_OP(int fd, uint32_t parametro1);
 
 
-bool recv_NO_OP(int fd, uint8_t* parametro1);
+//bool recv_NO_OP(int fd, uint8_t* parametro1);
 bool recv_NO_OP_2(int fd, uint32_t* parametro1);
 
-bool send_IO(int fd, uint8_t  parametro1);
-bool recv_IO(int fd, uint8_t* parametro1);
+bool send_IO(int fd, uint32_t  parametro1);
+bool recv_IO(int fd, uint32_t* parametro1);
 
-bool send_READ(int fd);
-bool recv_READ(int fd);
+bool send_READ(int fd,uint32_t parametro1);
+bool recv_READ(int fd,uint32_t* parametro1);
 
-bool send_COPY(int fd);
-bool recv_COPY(int fd);
+bool send_COPY(int fd,uint32_t parametro1,uint32_t parametro2);
+bool recv_COPY(int fd,uint32_t* parametro1,uint32_t* parametro2);
 
-bool send_WRITE(int fd);
-bool recv_WRITE(int fd);
+bool send_WRITE(int fd,uint32_t parametro1,uint32_t parametro2);
+bool recv_WRITE(int fd,uint32_t* parametro1,uint32_t* parametro2);
 
 bool send_EXIT(int fd);
 bool recv_EXIT(int fd);

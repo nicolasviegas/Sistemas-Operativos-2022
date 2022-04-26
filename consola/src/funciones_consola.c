@@ -62,7 +62,7 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 
 		list_add(lista_instrucciones,estructura_instrucciones);
 
-	/*	log_trace(log_consola,"%d",estructura_instrucciones->id);
+		/*log_trace(log_consola,"%d",estructura_instrucciones->id);
 		log_trace(log_consola,"%s",estructura_instrucciones->nombre);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro1);
 		log_trace(log_consola,"%d",estructura_instrucciones->parametro2);*/
