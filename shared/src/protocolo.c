@@ -318,3 +318,61 @@ bool recv_EXIT(int fd) {
     free(stream);
     return true;
 }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+static void* serializar_TAM(uint32_t parametro1) {
+   void* stream = malloc(sizeof(uint32_t));
+   // op_code_instrucciones cop = READ;
+    //memcpy(stream, &cop, sizeof(op_code_instrucciones));
+    memcpy(stream, &parametro1, sizeof(uint32_t));
+
+   // printf("El cop en serializar READ es: %d\n",cop);
+    printf("El tam a enviar es: %d\n",parametro1);
+    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+    return stream;
+}
+
+
+static void deserializar_TAM(void* stream, uint32_t* parametro1) {
+	size_t tam_param;
+
+    memcpy(parametro1, stream ,sizeof(uint32_t));
+    printf("El tam en deserializar tam es: %d \n", parametro1);
+
+}
+
+bool send_TAM(int fd, uint32_t parametro1) {
+	printf("Entre en send_TAM \n");
+   size_t size = sizeof(uint32_t);
+
+    void* stream = serializar_TAM(parametro1);
+
+
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    free(stream);
+    return true;
+}
+
+
+bool recv_TAM(int fd, uint32_t* parametro1) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_TAM(stream, parametro1);
+
+    free(stream);
+    return true;
+}
+
+

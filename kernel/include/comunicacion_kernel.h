@@ -9,6 +9,7 @@
 #include "../../shared/include/utils.h"
 #include "../../shared/include/socket.h"
 #include "../../shared/include/protocolo.h"
+#include "../../shared/include/consola-kernel.h"
 
 /*
  * void deserializar_sem_init(void* stream, mate_sem_name* nombre, unsigned int* valor);

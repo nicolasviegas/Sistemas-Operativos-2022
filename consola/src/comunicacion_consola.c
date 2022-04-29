@@ -11,13 +11,16 @@ bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2) {
     return *fd_mod2 != 0;
 }
 
-void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
+void send_instrucciones(t_list* lista_instrucciones,uint32_t tam,int fd_mod2){
 
 	instrucciones* a = malloc(sizeof(instrucciones));
 	int cant_instrucciones = list_size(lista_instrucciones);
 	int indice = 0;
 
 	log_error(log_consola,"El socket dentro de send instrcciones es : %d",fd_mod2);
+	log_error(log_consola,"El tam recibido por parametro a enviar es: %d",tam);
+
+
 
 	while(indice < cant_instrucciones){
 		a = list_get(lista_instrucciones,indice);
@@ -56,6 +59,5 @@ void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 	}
 
 	free(a);
-
 
 }

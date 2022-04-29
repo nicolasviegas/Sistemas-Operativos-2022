@@ -3874,3 +3874,683 @@
 [WARNING] 12:11:45:366 consola/(17430:17430): entre en COPY dentro de send_instrucciones
 [WARNING] 12:11:45:367 consola/(17430:17430): Entre en EXIT dentro de send_instrucciones
 [ERROR] 12:11:45:367 consola/(17430:17430): Pase el send instrucciones 
+[ERROR] 12:13:21:109 consola/(17693:17693): cant de instrucciones: 3
+[INFO] 12:13:21:113 consola/(17693:17693): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 12:13:21:113 consola/(17693:17693): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 12:13:21:113 consola/(17693:17693): El socket dentro de send instrcciones es : 4
+[WARNING] 12:13:21:113 consola/(17693:17693): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:13:21:114 consola/(17693:17693): entre en I/O dentro de send_instrucciones
+[WARNING] 12:13:21:114 consola/(17693:17693): Entre en EXIT dentro de send_instrucciones
+[ERROR] 12:13:21:114 consola/(17693:17693): Pase el send instrucciones 
+[ERROR] 12:23:28:457 consola/(18669:18669): cant de instrucciones: 6
+[INFO] 12:23:28:465 consola/(18669:18669): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 12:23:28:466 consola/(18669:18669): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 12:23:28:466 consola/(18669:18669): El socket dentro de send instrcciones es : 4
+[WARNING] 12:23:28:466 consola/(18669:18669): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:23:28:466 consola/(18669:18669): entre en I/O dentro de send_instrucciones
+[WARNING] 12:23:28:466 consola/(18669:18669): entre en READ dentro de send_instrucciones
+[WARNING] 12:23:28:467 consola/(18669:18669): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:23:28:467 consola/(18669:18669): entre en COPY dentro de send_instrucciones
+[WARNING] 12:23:28:467 consola/(18669:18669): Entre en EXIT dentro de send_instrucciones
+[ERROR] 12:23:28:467 consola/(18669:18669): Pase el send instrucciones 
+[ERROR] 12:23:39:836 consola/(18683:18683): cant de instrucciones: 6
+[INFO] 12:23:39:839 consola/(18683:18683): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 12:23:39:839 consola/(18683:18683): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 12:23:39:839 consola/(18683:18683): El socket dentro de send instrcciones es : 4
+[WARNING] 12:23:39:839 consola/(18683:18683): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:23:39:840 consola/(18683:18683): entre en I/O dentro de send_instrucciones
+[WARNING] 12:23:39:840 consola/(18683:18683): entre en READ dentro de send_instrucciones
+[WARNING] 12:23:39:840 consola/(18683:18683): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:23:39:840 consola/(18683:18683): entre en COPY dentro de send_instrucciones
+[WARNING] 12:23:39:841 consola/(18683:18683): Entre en EXIT dentro de send_instrucciones
+[ERROR] 12:23:39:841 consola/(18683:18683): Pase el send instrucciones 
+[ERROR] 12:23:41:411 consola/(18688:18688): cant de instrucciones: 6
+[INFO] 12:23:41:411 consola/(18688:18688): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 12:23:41:412 consola/(18688:18688): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 12:23:41:412 consola/(18688:18688): El socket dentro de send instrcciones es : 4
+[WARNING] 12:23:41:412 consola/(18688:18688): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:23:41:412 consola/(18688:18688): entre en I/O dentro de send_instrucciones
+[WARNING] 12:23:41:412 consola/(18688:18688): entre en READ dentro de send_instrucciones
+[WARNING] 12:23:41:412 consola/(18688:18688): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:23:41:413 consola/(18688:18688): entre en COPY dentro de send_instrucciones
+[WARNING] 12:23:41:413 consola/(18688:18688): Entre en EXIT dentro de send_instrucciones
+[ERROR] 12:23:41:413 consola/(18688:18688): Pase el send instrucciones 
+[ERROR] 12:33:06:034 consola/(19428:19428): cant de instrucciones: 6
+[INFO] 12:33:06:097 consola/(19428:19428): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 12:33:06:102 consola/(19428:19428): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 12:33:06:104 consola/(19428:19428): El socket dentro de send instrcciones es : 4
+[WARNING] 12:33:06:106 consola/(19428:19428): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:33:06:122 consola/(19428:19428): entre en I/O dentro de send_instrucciones
+[WARNING] 12:33:06:125 consola/(19428:19428): entre en READ dentro de send_instrucciones
+[WARNING] 12:33:06:130 consola/(19428:19428): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:33:06:135 consola/(19428:19428): entre en COPY dentro de send_instrucciones
+[WARNING] 12:33:06:139 consola/(19428:19428): Entre en EXIT dentro de send_instrucciones
+[ERROR] 12:33:06:142 consola/(19428:19428): Pase el send instrucciones 
+[ERROR] 11:25:51:038 consola/(5043:5043): cant de instrucciones: 6
+[INFO] 11:25:51:039 consola/(5043:5043): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:25:51:039 consola/(5043:5043): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:25:51:039 consola/(5043:5043): El socket dentro de send instrcciones es : 4
+[WARNING] 11:25:51:039 consola/(5043:5043): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:25:51:039 consola/(5043:5043): entre en I/O dentro de send_instrucciones
+[WARNING] 11:25:51:039 consola/(5043:5043): entre en READ dentro de send_instrucciones
+[WARNING] 11:25:51:040 consola/(5043:5043): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:25:51:040 consola/(5043:5043): entre en COPY dentro de send_instrucciones
+[WARNING] 11:25:51:040 consola/(5043:5043): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:25:51:040 consola/(5043:5043): Pase el send instrucciones 
+[ERROR] 09:55:30:643 consola/(5670:5670): cant de instrucciones: 6
+[INFO] 09:55:30:644 consola/(5670:5670): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 09:55:30:644 consola/(5670:5670): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 09:55:30:644 consola/(5670:5670): El socket dentro de send instrcciones es : 4
+[WARNING] 09:55:30:644 consola/(5670:5670): entre en NO_OP dentro de send_instrucciones
+[WARNING] 09:55:30:644 consola/(5670:5670): entre en I/O dentro de send_instrucciones
+[WARNING] 09:55:30:645 consola/(5670:5670): entre en READ dentro de send_instrucciones
+[WARNING] 09:55:30:645 consola/(5670:5670): entre en WRITE dentro de send_instrucciones
+[WARNING] 09:55:30:645 consola/(5670:5670): entre en COPY dentro de send_instrucciones
+[WARNING] 09:55:30:645 consola/(5670:5670): Entre en EXIT dentro de send_instrucciones
+[ERROR] 09:55:30:646 consola/(5670:5670): Pase el send instrucciones 
+[ERROR] 09:57:34:808 consola/(5917:5917): cant de instrucciones: 6
+[INFO] 09:57:34:815 consola/(5917:5917): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 09:57:34:815 consola/(5917:5917): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 09:57:34:815 consola/(5917:5917): El socket dentro de send instrcciones es : 4
+[WARNING] 09:57:34:815 consola/(5917:5917): entre en NO_OP dentro de send_instrucciones
+[WARNING] 09:57:34:816 consola/(5917:5917): entre en I/O dentro de send_instrucciones
+[WARNING] 09:57:34:816 consola/(5917:5917): entre en READ dentro de send_instrucciones
+[WARNING] 09:57:34:816 consola/(5917:5917): entre en WRITE dentro de send_instrucciones
+[WARNING] 09:57:34:816 consola/(5917:5917): entre en COPY dentro de send_instrucciones
+[WARNING] 09:57:34:817 consola/(5917:5917): Entre en EXIT dentro de send_instrucciones
+[ERROR] 09:57:34:817 consola/(5917:5917): Pase el send instrucciones 
+[ERROR] 09:57:50:837 consola/(5947:5947): cant de instrucciones: 6
+[INFO] 09:57:50:895 consola/(5947:5947): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 09:57:50:900 consola/(5947:5947): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 09:57:50:900 consola/(5947:5947): El socket dentro de send instrcciones es : 4
+[WARNING] 09:57:50:902 consola/(5947:5947): entre en NO_OP dentro de send_instrucciones
+[WARNING] 09:57:50:909 consola/(5947:5947): entre en I/O dentro de send_instrucciones
+[WARNING] 09:57:50:911 consola/(5947:5947): entre en READ dentro de send_instrucciones
+[WARNING] 09:57:50:917 consola/(5947:5947): entre en WRITE dentro de send_instrucciones
+[WARNING] 09:57:50:922 consola/(5947:5947): entre en COPY dentro de send_instrucciones
+[WARNING] 09:57:50:926 consola/(5947:5947): Entre en EXIT dentro de send_instrucciones
+[ERROR] 09:57:50:928 consola/(5947:5947): Pase el send instrucciones 
+[ERROR] 10:05:19:096 consola/(6959:6959): cant de instrucciones: 6
+[INFO] 10:05:19:159 consola/(6959:6959): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:05:19:162 consola/(6959:6959): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:05:19:165 consola/(6959:6959): El socket dentro de send instrcciones es : 4
+[WARNING] 10:05:19:168 consola/(6959:6959): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:05:19:177 consola/(6959:6959): entre en I/O dentro de send_instrucciones
+[WARNING] 10:05:19:180 consola/(6959:6959): entre en READ dentro de send_instrucciones
+[WARNING] 10:05:19:183 consola/(6959:6959): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:05:19:187 consola/(6959:6959): entre en COPY dentro de send_instrucciones
+[WARNING] 10:05:19:194 consola/(6959:6959): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:05:19:197 consola/(6959:6959): Pase el send instrucciones 
+[ERROR] 10:06:42:132 consola/(7235:7235): cant de instrucciones: 6
+[INFO] 10:06:42:194 consola/(7235:7235): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:06:42:198 consola/(7235:7235): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:06:42:200 consola/(7235:7235): El socket dentro de send instrcciones es : 4
+[WARNING] 10:06:42:203 consola/(7235:7235): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:06:42:211 consola/(7235:7235): entre en I/O dentro de send_instrucciones
+[WARNING] 10:06:42:217 consola/(7235:7235): entre en READ dentro de send_instrucciones
+[WARNING] 10:06:42:222 consola/(7235:7235): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:06:42:226 consola/(7235:7235): entre en COPY dentro de send_instrucciones
+[WARNING] 10:06:42:230 consola/(7235:7235): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:06:42:232 consola/(7235:7235): Pase el send instrucciones 
+[ERROR] 10:17:17:591 consola/(8889:8889): cant de instrucciones: 6
+[INFO] 10:17:17:675 consola/(8889:8889): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:17:17:681 consola/(8889:8889): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:17:17:682 consola/(8889:8889): El socket dentro de send instrcciones es : 4
+[ERROR] 10:17:17:686 consola/(8889:8889): El tam recibido por parametro a enviar es: 100
+[ERROR] 10:19:57:314 consola/(9343:9343): cant de instrucciones: 6
+[INFO] 10:19:57:390 consola/(9343:9343): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:19:57:393 consola/(9343:9343): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:19:57:396 consola/(9343:9343): El socket dentro de send instrcciones es : 4
+[ERROR] 10:19:57:396 consola/(9343:9343): El tam recibido por parametro a enviar es: 100
+[ERROR] 10:21:02:994 consola/(9552:9552): cant de instrucciones: 6
+[INFO] 10:21:03:054 consola/(9552:9552): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:21:03:058 consola/(9552:9552): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:21:03:059 consola/(9552:9552): El socket dentro de send instrcciones es : 4
+[ERROR] 10:21:03:060 consola/(9552:9552): El tam recibido por parametro a enviar es: 100
+[ERROR] 10:22:26:729 consola/(9799:9799): cant de instrucciones: 6
+[INFO] 10:22:26:784 consola/(9799:9799): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:22:26:789 consola/(9799:9799): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:22:26:790 consola/(9799:9799): El socket dentro de send instrcciones es : 4
+[ERROR] 10:22:26:790 consola/(9799:9799): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:22:26:795 consola/(9799:9799): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:22:26:800 consola/(9799:9799): entre en I/O dentro de send_instrucciones
+[WARNING] 10:22:26:801 consola/(9799:9799): entre en READ dentro de send_instrucciones
+[WARNING] 10:22:26:807 consola/(9799:9799): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:22:26:809 consola/(9799:9799): entre en COPY dentro de send_instrucciones
+[WARNING] 10:22:26:811 consola/(9799:9799): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:22:26:813 consola/(9799:9799): Pase el send instrucciones 
+[ERROR] 10:24:40:332 consola/(10104:10104): cant de instrucciones: 6
+[INFO] 10:24:40:333 consola/(10104:10104): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:24:40:333 consola/(10104:10104): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:24:40:333 consola/(10104:10104): El socket dentro de send instrcciones es : 4
+[ERROR] 10:24:40:333 consola/(10104:10104): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:24:40:333 consola/(10104:10104): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:24:40:333 consola/(10104:10104): entre en I/O dentro de send_instrucciones
+[WARNING] 10:24:40:334 consola/(10104:10104): entre en READ dentro de send_instrucciones
+[WARNING] 10:24:40:334 consola/(10104:10104): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:24:40:334 consola/(10104:10104): entre en COPY dentro de send_instrucciones
+[WARNING] 10:24:40:334 consola/(10104:10104): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:24:40:335 consola/(10104:10104): Pase el send instrucciones 
+[ERROR] 10:25:40:132 consola/(10299:10299): cant de instrucciones: 6
+[INFO] 10:25:40:132 consola/(10299:10299): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:25:40:132 consola/(10299:10299): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:25:40:132 consola/(10299:10299): El socket dentro de send instrcciones es : 4
+[ERROR] 10:25:40:133 consola/(10299:10299): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:25:40:133 consola/(10299:10299): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:25:40:133 consola/(10299:10299): entre en I/O dentro de send_instrucciones
+[WARNING] 10:25:40:133 consola/(10299:10299): entre en READ dentro de send_instrucciones
+[WARNING] 10:25:40:133 consola/(10299:10299): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:25:40:134 consola/(10299:10299): entre en COPY dentro de send_instrucciones
+[WARNING] 10:25:40:134 consola/(10299:10299): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:25:40:134 consola/(10299:10299): Pase el send instrucciones 
+[ERROR] 10:27:00:981 consola/(10604:10604): cant de instrucciones: 6
+[INFO] 10:27:00:982 consola/(10604:10604): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:27:00:982 consola/(10604:10604): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:27:00:982 consola/(10604:10604): El socket dentro de send instrcciones es : 4
+[ERROR] 10:27:00:982 consola/(10604:10604): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:27:00:982 consola/(10604:10604): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:27:00:983 consola/(10604:10604): entre en I/O dentro de send_instrucciones
+[WARNING] 10:27:00:983 consola/(10604:10604): entre en READ dentro de send_instrucciones
+[WARNING] 10:27:00:983 consola/(10604:10604): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:27:00:983 consola/(10604:10604): entre en COPY dentro de send_instrucciones
+[WARNING] 10:27:00:984 consola/(10604:10604): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:27:00:984 consola/(10604:10604): Pase el send instrucciones 
+[ERROR] 10:29:06:530 consola/(10936:10936): cant de instrucciones: 6
+[INFO] 10:29:06:530 consola/(10936:10936): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:29:06:531 consola/(10936:10936): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:29:06:531 consola/(10936:10936): El socket dentro de send instrcciones es : 4
+[ERROR] 10:29:06:531 consola/(10936:10936): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:29:06:531 consola/(10936:10936): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:29:06:531 consola/(10936:10936): entre en I/O dentro de send_instrucciones
+[WARNING] 10:29:06:531 consola/(10936:10936): entre en READ dentro de send_instrucciones
+[WARNING] 10:29:06:531 consola/(10936:10936): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:29:06:532 consola/(10936:10936): entre en COPY dentro de send_instrucciones
+[WARNING] 10:29:06:532 consola/(10936:10936): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:29:06:532 consola/(10936:10936): Pase el send instrucciones 
+[ERROR] 10:29:54:495 consola/(11168:11168): cant de instrucciones: 6
+[INFO] 10:29:54:495 consola/(11168:11168): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:29:54:495 consola/(11168:11168): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:29:54:495 consola/(11168:11168): El socket dentro de send instrcciones es : 4
+[ERROR] 10:29:54:495 consola/(11168:11168): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:29:54:495 consola/(11168:11168): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:29:54:495 consola/(11168:11168): entre en I/O dentro de send_instrucciones
+[WARNING] 10:29:54:496 consola/(11168:11168): entre en READ dentro de send_instrucciones
+[WARNING] 10:29:54:496 consola/(11168:11168): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:29:54:496 consola/(11168:11168): entre en COPY dentro de send_instrucciones
+[WARNING] 10:29:54:496 consola/(11168:11168): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:29:54:497 consola/(11168:11168): Pase el send instrucciones 
+[ERROR] 10:32:10:105 consola/(11534:11534): cant de instrucciones: 6
+[INFO] 10:32:10:108 consola/(11534:11534): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:32:10:108 consola/(11534:11534): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:32:10:108 consola/(11534:11534): El socket dentro de send instrcciones es : 4
+[ERROR] 10:32:10:108 consola/(11534:11534): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:32:10:108 consola/(11534:11534): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:32:10:108 consola/(11534:11534): entre en I/O dentro de send_instrucciones
+[WARNING] 10:32:10:109 consola/(11534:11534): entre en READ dentro de send_instrucciones
+[WARNING] 10:32:10:109 consola/(11534:11534): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:32:10:110 consola/(11534:11534): entre en COPY dentro de send_instrucciones
+[WARNING] 10:32:10:111 consola/(11534:11534): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:32:10:111 consola/(11534:11534): Pase el send instrucciones 
+[ERROR] 10:32:42:835 consola/(11670:11670): cant de instrucciones: 6
+[INFO] 10:32:42:835 consola/(11670:11670): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:32:42:835 consola/(11670:11670): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:32:42:835 consola/(11670:11670): El socket dentro de send instrcciones es : 4
+[ERROR] 10:32:42:835 consola/(11670:11670): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:32:42:835 consola/(11670:11670): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:32:42:836 consola/(11670:11670): entre en I/O dentro de send_instrucciones
+[WARNING] 10:32:42:836 consola/(11670:11670): entre en READ dentro de send_instrucciones
+[WARNING] 10:32:42:836 consola/(11670:11670): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:32:42:836 consola/(11670:11670): entre en COPY dentro de send_instrucciones
+[WARNING] 10:32:42:837 consola/(11670:11670): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:32:42:837 consola/(11670:11670): Pase el send instrucciones 
+[ERROR] 10:33:31:785 consola/(11841:11841): cant de instrucciones: 6
+[INFO] 10:33:31:785 consola/(11841:11841): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:33:31:785 consola/(11841:11841): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:33:31:785 consola/(11841:11841): El socket dentro de send instrcciones es : 4
+[ERROR] 10:33:31:786 consola/(11841:11841): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:33:31:786 consola/(11841:11841): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:33:31:786 consola/(11841:11841): entre en I/O dentro de send_instrucciones
+[WARNING] 10:33:31:786 consola/(11841:11841): entre en READ dentro de send_instrucciones
+[WARNING] 10:33:31:786 consola/(11841:11841): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:33:31:787 consola/(11841:11841): entre en COPY dentro de send_instrucciones
+[WARNING] 10:33:31:787 consola/(11841:11841): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:33:31:787 consola/(11841:11841): Pase el send instrucciones 
+[ERROR] 10:33:59:325 consola/(11901:11901): cant de instrucciones: 6
+[INFO] 10:33:59:326 consola/(11901:11901): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:33:59:326 consola/(11901:11901): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:33:59:326 consola/(11901:11901): El socket dentro de send instrcciones es : 4
+[ERROR] 10:33:59:326 consola/(11901:11901): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:33:59:326 consola/(11901:11901): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:33:59:326 consola/(11901:11901): entre en I/O dentro de send_instrucciones
+[WARNING] 10:33:59:326 consola/(11901:11901): entre en READ dentro de send_instrucciones
+[WARNING] 10:33:59:327 consola/(11901:11901): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:33:59:327 consola/(11901:11901): entre en COPY dentro de send_instrucciones
+[WARNING] 10:33:59:327 consola/(11901:11901): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:33:59:328 consola/(11901:11901): Pase el send instrucciones 
+[ERROR] 10:34:56:836 consola/(12025:12025): cant de instrucciones: 6
+[INFO] 10:34:56:836 consola/(12025:12025): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:34:56:836 consola/(12025:12025): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:34:56:836 consola/(12025:12025): El socket dentro de send instrcciones es : 4
+[ERROR] 10:34:56:836 consola/(12025:12025): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:34:56:836 consola/(12025:12025): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:34:56:837 consola/(12025:12025): entre en I/O dentro de send_instrucciones
+[WARNING] 10:34:56:837 consola/(12025:12025): entre en READ dentro de send_instrucciones
+[WARNING] 10:34:56:837 consola/(12025:12025): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:34:56:837 consola/(12025:12025): entre en COPY dentro de send_instrucciones
+[WARNING] 10:34:56:838 consola/(12025:12025): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:34:56:838 consola/(12025:12025): Pase el send instrucciones 
+[ERROR] 10:35:43:090 consola/(12188:12188): cant de instrucciones: 6
+[INFO] 10:35:43:091 consola/(12188:12188): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:35:43:091 consola/(12188:12188): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:35:43:091 consola/(12188:12188): El socket dentro de send instrcciones es : 4
+[ERROR] 10:35:43:091 consola/(12188:12188): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:35:43:091 consola/(12188:12188): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:35:43:091 consola/(12188:12188): entre en I/O dentro de send_instrucciones
+[WARNING] 10:35:43:092 consola/(12188:12188): entre en READ dentro de send_instrucciones
+[WARNING] 10:35:43:092 consola/(12188:12188): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:35:43:092 consola/(12188:12188): entre en COPY dentro de send_instrucciones
+[WARNING] 10:35:43:092 consola/(12188:12188): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:35:43:093 consola/(12188:12188): Pase el send instrucciones 
+[ERROR] 10:36:55:294 consola/(12408:12408): cant de instrucciones: 6
+[INFO] 10:36:55:294 consola/(12408:12408): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:36:55:294 consola/(12408:12408): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:36:55:294 consola/(12408:12408): El socket dentro de send instrcciones es : 4
+[ERROR] 10:36:55:294 consola/(12408:12408): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:36:55:294 consola/(12408:12408): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:36:55:295 consola/(12408:12408): entre en I/O dentro de send_instrucciones
+[WARNING] 10:36:55:295 consola/(12408:12408): entre en READ dentro de send_instrucciones
+[WARNING] 10:36:55:295 consola/(12408:12408): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:36:55:295 consola/(12408:12408): entre en COPY dentro de send_instrucciones
+[WARNING] 10:36:55:296 consola/(12408:12408): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:36:55:296 consola/(12408:12408): Pase el send instrucciones 
+[ERROR] 10:43:01:568 consola/(13239:13239): cant de instrucciones: 6
+[INFO] 10:43:01:568 consola/(13239:13239): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:43:01:568 consola/(13239:13239): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:43:01:568 consola/(13239:13239): El socket dentro de send instrcciones es : 4
+[ERROR] 10:43:01:568 consola/(13239:13239): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:43:01:568 consola/(13239:13239): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:43:01:569 consola/(13239:13239): entre en I/O dentro de send_instrucciones
+[WARNING] 10:43:01:569 consola/(13239:13239): entre en READ dentro de send_instrucciones
+[WARNING] 10:43:01:569 consola/(13239:13239): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:43:01:569 consola/(13239:13239): entre en COPY dentro de send_instrucciones
+[WARNING] 10:43:01:570 consola/(13239:13239): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:43:01:570 consola/(13239:13239): Pase el send instrucciones 
+[ERROR] 10:46:24:243 consola/(13728:13728): cant de instrucciones: 6
+[INFO] 10:46:24:243 consola/(13728:13728): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:46:24:243 consola/(13728:13728): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:46:24:243 consola/(13728:13728): El socket dentro de send instrcciones es : 4
+[ERROR] 10:46:24:243 consola/(13728:13728): El tam recibido por parametro a enviar es: 100
+[WARNING] 10:46:24:243 consola/(13728:13728): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:46:24:243 consola/(13728:13728): entre en I/O dentro de send_instrucciones
+[WARNING] 10:46:24:244 consola/(13728:13728): entre en READ dentro de send_instrucciones
+[WARNING] 10:46:24:244 consola/(13728:13728): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:46:24:244 consola/(13728:13728): entre en COPY dentro de send_instrucciones
+[WARNING] 10:46:24:244 consola/(13728:13728): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:46:24:245 consola/(13728:13728): Pase el send instrucciones 
+[ERROR] 10:52:54:514 consola/(14646:14646): cant de instrucciones: 6
+[INFO] 10:52:54:515 consola/(14646:14646): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 10:52:54:515 consola/(14646:14646): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 10:52:54:515 consola/(14646:14646): El socket dentro de send instrcciones es : 4
+[ERROR] 10:52:54:515 consola/(14646:14646): El tam recibido por parametro a enviar es: 1425
+[WARNING] 10:52:54:515 consola/(14646:14646): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:52:54:515 consola/(14646:14646): entre en I/O dentro de send_instrucciones
+[WARNING] 10:52:54:515 consola/(14646:14646): entre en READ dentro de send_instrucciones
+[WARNING] 10:52:54:516 consola/(14646:14646): entre en WRITE dentro de send_instrucciones
+[WARNING] 10:52:54:516 consola/(14646:14646): entre en COPY dentro de send_instrucciones
+[WARNING] 10:52:54:516 consola/(14646:14646): Entre en EXIT dentro de send_instrucciones
+[ERROR] 10:52:54:516 consola/(14646:14646): Pase el send instrucciones 
+[ERROR] 11:12:07:475 consola/(17565:17565): cant de instrucciones: 6
+[INFO] 11:12:07:476 consola/(17565:17565): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:12:07:476 consola/(17565:17565): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:12:07:476 consola/(17565:17565): El socket dentro de send instrcciones es : 4
+[ERROR] 11:12:07:476 consola/(17565:17565): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:12:07:476 consola/(17565:17565): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:12:07:476 consola/(17565:17565): entre en I/O dentro de send_instrucciones
+[WARNING] 11:12:07:477 consola/(17565:17565): entre en READ dentro de send_instrucciones
+[WARNING] 11:12:07:477 consola/(17565:17565): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:12:07:477 consola/(17565:17565): entre en COPY dentro de send_instrucciones
+[WARNING] 11:12:07:477 consola/(17565:17565): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:12:07:478 consola/(17565:17565): Pase el send instrucciones 
+[ERROR] 11:12:24:790 consola/(17601:17601): cant de instrucciones: 6
+[INFO] 11:12:24:797 consola/(17601:17601): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:12:24:797 consola/(17601:17601): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:12:24:797 consola/(17601:17601): El socket dentro de send instrcciones es : 4
+[ERROR] 11:12:24:798 consola/(17601:17601): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:12:24:798 consola/(17601:17601): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:12:24:798 consola/(17601:17601): entre en I/O dentro de send_instrucciones
+[WARNING] 11:12:24:798 consola/(17601:17601): entre en READ dentro de send_instrucciones
+[WARNING] 11:12:24:798 consola/(17601:17601): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:12:24:799 consola/(17601:17601): entre en COPY dentro de send_instrucciones
+[WARNING] 11:12:24:799 consola/(17601:17601): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:12:24:799 consola/(17601:17601): Pase el send instrucciones 
+[ERROR] 11:13:43:610 consola/(17841:17841): cant de instrucciones: 6
+[INFO] 11:13:43:617 consola/(17841:17841): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:13:43:617 consola/(17841:17841): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:13:43:617 consola/(17841:17841): El socket dentro de send instrcciones es : 4
+[ERROR] 11:13:43:617 consola/(17841:17841): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:13:43:617 consola/(17841:17841): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:13:43:618 consola/(17841:17841): entre en I/O dentro de send_instrucciones
+[WARNING] 11:13:43:618 consola/(17841:17841): entre en READ dentro de send_instrucciones
+[WARNING] 11:13:43:618 consola/(17841:17841): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:13:43:618 consola/(17841:17841): entre en COPY dentro de send_instrucciones
+[WARNING] 11:13:43:619 consola/(17841:17841): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:13:43:619 consola/(17841:17841): Pase el send instrucciones 
+[ERROR] 11:13:57:374 consola/(17872:17872): cant de instrucciones: 6
+[INFO] 11:13:57:375 consola/(17872:17872): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:13:57:375 consola/(17872:17872): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:13:57:375 consola/(17872:17872): El socket dentro de send instrcciones es : 4
+[ERROR] 11:13:57:375 consola/(17872:17872): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:13:57:375 consola/(17872:17872): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:13:57:375 consola/(17872:17872): entre en I/O dentro de send_instrucciones
+[WARNING] 11:13:57:375 consola/(17872:17872): entre en READ dentro de send_instrucciones
+[WARNING] 11:13:57:376 consola/(17872:17872): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:13:57:376 consola/(17872:17872): entre en COPY dentro de send_instrucciones
+[WARNING] 11:13:57:376 consola/(17872:17872): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:13:57:376 consola/(17872:17872): Pase el send instrucciones 
+[ERROR] 11:15:23:951 consola/(18123:18123): cant de instrucciones: 6
+[INFO] 11:15:23:951 consola/(18123:18123): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:15:23:951 consola/(18123:18123): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:15:23:951 consola/(18123:18123): El socket dentro de send instrcciones es : 4
+[ERROR] 11:15:23:951 consola/(18123:18123): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:15:23:952 consola/(18123:18123): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:15:23:952 consola/(18123:18123): entre en I/O dentro de send_instrucciones
+[WARNING] 11:15:23:952 consola/(18123:18123): entre en READ dentro de send_instrucciones
+[WARNING] 11:15:23:952 consola/(18123:18123): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:15:23:953 consola/(18123:18123): entre en COPY dentro de send_instrucciones
+[WARNING] 11:15:23:953 consola/(18123:18123): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:15:23:953 consola/(18123:18123): Pase el send instrucciones 
+[ERROR] 11:18:25:970 consola/(18479:18479): cant de instrucciones: 6
+[INFO] 11:18:25:970 consola/(18479:18479): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:18:25:970 consola/(18479:18479): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:18:25:970 consola/(18479:18479): El socket dentro de send instrcciones es : 4
+[ERROR] 11:18:25:970 consola/(18479:18479): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:18:25:970 consola/(18479:18479): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:18:25:970 consola/(18479:18479): entre en I/O dentro de send_instrucciones
+[WARNING] 11:18:25:971 consola/(18479:18479): entre en READ dentro de send_instrucciones
+[WARNING] 11:18:25:971 consola/(18479:18479): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:18:25:971 consola/(18479:18479): entre en COPY dentro de send_instrucciones
+[WARNING] 11:18:25:971 consola/(18479:18479): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:18:25:972 consola/(18479:18479): Pase el send instrucciones 
+[ERROR] 11:18:51:128 consola/(18600:18600): cant de instrucciones: 6
+[INFO] 11:18:51:128 consola/(18600:18600): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:18:51:129 consola/(18600:18600): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:18:51:129 consola/(18600:18600): El socket dentro de send instrcciones es : 4
+[ERROR] 11:18:51:129 consola/(18600:18600): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:18:51:129 consola/(18600:18600): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:18:51:129 consola/(18600:18600): entre en I/O dentro de send_instrucciones
+[WARNING] 11:18:51:129 consola/(18600:18600): entre en READ dentro de send_instrucciones
+[WARNING] 11:18:51:130 consola/(18600:18600): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:18:51:130 consola/(18600:18600): entre en COPY dentro de send_instrucciones
+[WARNING] 11:18:51:130 consola/(18600:18600): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:18:51:130 consola/(18600:18600): Pase el send instrucciones 
+[ERROR] 11:25:48:943 consola/(19315:19315): cant de instrucciones: 6
+[INFO] 11:25:48:944 consola/(19315:19315): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:25:48:944 consola/(19315:19315): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:25:48:944 consola/(19315:19315): El socket dentro de send instrcciones es : 4
+[ERROR] 11:25:48:944 consola/(19315:19315): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:25:48:944 consola/(19315:19315): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:25:48:945 consola/(19315:19315): entre en I/O dentro de send_instrucciones
+[WARNING] 11:25:48:952 consola/(19315:19315): entre en READ dentro de send_instrucciones
+[WARNING] 11:25:48:953 consola/(19315:19315): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:25:48:954 consola/(19315:19315): entre en COPY dentro de send_instrucciones
+[WARNING] 11:25:48:954 consola/(19315:19315): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:25:48:954 consola/(19315:19315): Pase el send instrucciones 
+[ERROR] 11:36:44:905 consola/(20319:20319): cant de instrucciones: 6
+[INFO] 11:36:44:905 consola/(20319:20319): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:36:44:905 consola/(20319:20319): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:36:44:905 consola/(20319:20319): El socket dentro de send instrcciones es : 4
+[ERROR] 11:36:44:905 consola/(20319:20319): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:36:44:905 consola/(20319:20319): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:36:44:906 consola/(20319:20319): entre en I/O dentro de send_instrucciones
+[WARNING] 11:36:44:906 consola/(20319:20319): entre en READ dentro de send_instrucciones
+[WARNING] 11:36:44:906 consola/(20319:20319): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:36:44:907 consola/(20319:20319): entre en COPY dentro de send_instrucciones
+[WARNING] 11:36:44:907 consola/(20319:20319): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:36:44:907 consola/(20319:20319): Pase el send instrucciones 
+[ERROR] 11:38:52:936 consola/(20577:20577): cant de instrucciones: 6
+[INFO] 11:38:52:936 consola/(20577:20577): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:38:52:936 consola/(20577:20577): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:38:52:936 consola/(20577:20577): El socket dentro de send instrcciones es : 4
+[ERROR] 11:38:52:936 consola/(20577:20577): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:38:52:936 consola/(20577:20577): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:38:52:936 consola/(20577:20577): entre en I/O dentro de send_instrucciones
+[WARNING] 11:38:52:937 consola/(20577:20577): entre en READ dentro de send_instrucciones
+[WARNING] 11:38:52:937 consola/(20577:20577): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:38:52:937 consola/(20577:20577): entre en COPY dentro de send_instrucciones
+[WARNING] 11:38:52:938 consola/(20577:20577): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:38:52:938 consola/(20577:20577): Pase el send instrucciones 
+[ERROR] 11:40:38:187 consola/(20877:20877): cant de instrucciones: 6
+[INFO] 11:40:38:188 consola/(20877:20877): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:40:38:188 consola/(20877:20877): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:40:38:188 consola/(20877:20877): El socket dentro de send instrcciones es : 4
+[ERROR] 11:40:38:188 consola/(20877:20877): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:40:38:188 consola/(20877:20877): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:40:38:188 consola/(20877:20877): entre en I/O dentro de send_instrucciones
+[WARNING] 11:40:38:189 consola/(20877:20877): entre en READ dentro de send_instrucciones
+[WARNING] 11:40:38:189 consola/(20877:20877): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:40:38:189 consola/(20877:20877): entre en COPY dentro de send_instrucciones
+[WARNING] 11:40:38:189 consola/(20877:20877): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:40:38:190 consola/(20877:20877): Pase el send instrucciones 
+[ERROR] 11:41:16:441 consola/(21000:21000): cant de instrucciones: 6
+[INFO] 11:41:16:442 consola/(21000:21000): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:41:16:442 consola/(21000:21000): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:41:16:442 consola/(21000:21000): El socket dentro de send instrcciones es : 4
+[ERROR] 11:41:16:442 consola/(21000:21000): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:41:16:442 consola/(21000:21000): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:41:16:442 consola/(21000:21000): entre en I/O dentro de send_instrucciones
+[WARNING] 11:41:16:443 consola/(21000:21000): entre en READ dentro de send_instrucciones
+[WARNING] 11:41:16:443 consola/(21000:21000): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:41:16:443 consola/(21000:21000): entre en COPY dentro de send_instrucciones
+[WARNING] 11:41:16:443 consola/(21000:21000): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:41:16:444 consola/(21000:21000): Pase el send instrucciones 
+[ERROR] 11:41:48:508 consola/(21051:21051): cant de instrucciones: 6
+[INFO] 11:41:48:515 consola/(21051:21051): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:41:48:515 consola/(21051:21051): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:41:48:515 consola/(21051:21051): El socket dentro de send instrcciones es : 4
+[ERROR] 11:41:48:515 consola/(21051:21051): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:41:48:516 consola/(21051:21051): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:41:48:516 consola/(21051:21051): entre en I/O dentro de send_instrucciones
+[WARNING] 11:41:48:516 consola/(21051:21051): entre en READ dentro de send_instrucciones
+[WARNING] 11:41:48:516 consola/(21051:21051): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:41:48:517 consola/(21051:21051): entre en COPY dentro de send_instrucciones
+[WARNING] 11:41:48:517 consola/(21051:21051): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:41:48:517 consola/(21051:21051): Pase el send instrucciones 
+[ERROR] 11:42:25:741 consola/(21179:21179): cant de instrucciones: 6
+[INFO] 11:42:25:745 consola/(21179:21179): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:42:25:745 consola/(21179:21179): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:42:25:746 consola/(21179:21179): El socket dentro de send instrcciones es : 4
+[ERROR] 11:42:25:746 consola/(21179:21179): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:42:25:746 consola/(21179:21179): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:42:25:746 consola/(21179:21179): entre en I/O dentro de send_instrucciones
+[WARNING] 11:42:25:746 consola/(21179:21179): entre en READ dentro de send_instrucciones
+[WARNING] 11:42:25:746 consola/(21179:21179): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:42:25:747 consola/(21179:21179): entre en COPY dentro de send_instrucciones
+[WARNING] 11:42:25:747 consola/(21179:21179): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:42:25:747 consola/(21179:21179): Pase el send instrucciones 
+[ERROR] 11:42:47:923 consola/(21289:21289): cant de instrucciones: 6
+[INFO] 11:42:47:930 consola/(21289:21289): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:42:47:930 consola/(21289:21289): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:42:47:930 consola/(21289:21289): El socket dentro de send instrcciones es : 4
+[ERROR] 11:42:47:930 consola/(21289:21289): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:42:47:930 consola/(21289:21289): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:42:47:930 consola/(21289:21289): entre en I/O dentro de send_instrucciones
+[WARNING] 11:42:47:930 consola/(21289:21289): entre en READ dentro de send_instrucciones
+[WARNING] 11:42:47:931 consola/(21289:21289): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:42:47:931 consola/(21289:21289): entre en COPY dentro de send_instrucciones
+[WARNING] 11:42:47:931 consola/(21289:21289): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:42:47:931 consola/(21289:21289): Pase el send instrucciones 
+[ERROR] 11:45:02:738 consola/(21676:21676): cant de instrucciones: 6
+[INFO] 11:45:02:746 consola/(21676:21676): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:45:02:746 consola/(21676:21676): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:45:02:746 consola/(21676:21676): El socket dentro de send instrcciones es : 4
+[ERROR] 11:45:02:746 consola/(21676:21676): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:45:02:746 consola/(21676:21676): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:45:02:747 consola/(21676:21676): entre en I/O dentro de send_instrucciones
+[WARNING] 11:45:02:747 consola/(21676:21676): entre en READ dentro de send_instrucciones
+[WARNING] 11:45:02:747 consola/(21676:21676): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:45:02:747 consola/(21676:21676): entre en COPY dentro de send_instrucciones
+[WARNING] 11:45:02:748 consola/(21676:21676): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:45:02:749 consola/(21676:21676): Pase el send instrucciones 
+[ERROR] 11:46:56:907 consola/(21922:21922): cant de instrucciones: 6
+[INFO] 11:46:56:914 consola/(21922:21922): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:46:56:914 consola/(21922:21922): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:46:56:914 consola/(21922:21922): El socket dentro de send instrcciones es : 4
+[ERROR] 11:46:56:914 consola/(21922:21922): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:46:56:914 consola/(21922:21922): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:46:56:914 consola/(21922:21922): entre en I/O dentro de send_instrucciones
+[WARNING] 11:46:56:915 consola/(21922:21922): entre en READ dentro de send_instrucciones
+[WARNING] 11:46:56:915 consola/(21922:21922): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:46:56:915 consola/(21922:21922): entre en COPY dentro de send_instrucciones
+[WARNING] 11:46:56:915 consola/(21922:21922): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:46:56:916 consola/(21922:21922): Pase el send instrucciones 
+[ERROR] 11:53:40:357 consola/(22453:22453): cant de instrucciones: 6
+[INFO] 11:53:40:364 consola/(22453:22453): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:53:40:364 consola/(22453:22453): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:53:40:364 consola/(22453:22453): El socket dentro de send instrcciones es : 4
+[ERROR] 11:53:40:364 consola/(22453:22453): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:53:40:365 consola/(22453:22453): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:53:40:365 consola/(22453:22453): entre en I/O dentro de send_instrucciones
+[WARNING] 11:53:40:365 consola/(22453:22453): entre en READ dentro de send_instrucciones
+[WARNING] 11:53:40:365 consola/(22453:22453): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:53:40:366 consola/(22453:22453): entre en COPY dentro de send_instrucciones
+[WARNING] 11:53:40:366 consola/(22453:22453): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:53:40:366 consola/(22453:22453): Pase el send instrucciones 
+[ERROR] 11:56:02:598 consola/(22795:22795): cant de instrucciones: 6
+[INFO] 11:56:02:606 consola/(22795:22795): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:56:02:606 consola/(22795:22795): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:56:02:606 consola/(22795:22795): El socket dentro de send instrcciones es : 4
+[ERROR] 11:56:02:606 consola/(22795:22795): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:56:02:606 consola/(22795:22795): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:56:02:606 consola/(22795:22795): entre en I/O dentro de send_instrucciones
+[WARNING] 11:56:02:607 consola/(22795:22795): entre en READ dentro de send_instrucciones
+[WARNING] 11:56:02:607 consola/(22795:22795): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:56:02:614 consola/(22795:22795): entre en COPY dentro de send_instrucciones
+[WARNING] 11:56:02:614 consola/(22795:22795): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:56:02:615 consola/(22795:22795): Pase el send instrucciones 
+[ERROR] 11:56:25:746 consola/(22906:22906): cant de instrucciones: 6
+[INFO] 11:56:25:751 consola/(22906:22906): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:56:25:751 consola/(22906:22906): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:56:25:751 consola/(22906:22906): El socket dentro de send instrcciones es : 4
+[ERROR] 11:56:25:751 consola/(22906:22906): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:56:25:751 consola/(22906:22906): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:56:25:751 consola/(22906:22906): entre en I/O dentro de send_instrucciones
+[WARNING] 11:56:25:751 consola/(22906:22906): entre en READ dentro de send_instrucciones
+[WARNING] 11:56:25:752 consola/(22906:22906): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:56:25:752 consola/(22906:22906): entre en COPY dentro de send_instrucciones
+[WARNING] 11:56:25:752 consola/(22906:22906): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:56:25:752 consola/(22906:22906): Pase el send instrucciones 
+[ERROR] 11:57:19:277 consola/(23045:23045): cant de instrucciones: 6
+[INFO] 11:57:19:283 consola/(23045:23045): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:57:19:284 consola/(23045:23045): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:57:19:284 consola/(23045:23045): El socket dentro de send instrcciones es : 4
+[ERROR] 11:57:19:284 consola/(23045:23045): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:57:19:284 consola/(23045:23045): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:57:19:284 consola/(23045:23045): entre en I/O dentro de send_instrucciones
+[WARNING] 11:57:19:284 consola/(23045:23045): entre en READ dentro de send_instrucciones
+[WARNING] 11:57:19:284 consola/(23045:23045): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:57:19:285 consola/(23045:23045): entre en COPY dentro de send_instrucciones
+[WARNING] 11:57:19:285 consola/(23045:23045): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:57:19:285 consola/(23045:23045): Pase el send instrucciones 
+[ERROR] 11:58:18:641 consola/(23158:23158): cant de instrucciones: 6
+[INFO] 11:58:18:648 consola/(23158:23158): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:58:18:648 consola/(23158:23158): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:58:18:648 consola/(23158:23158): El socket dentro de send instrcciones es : 4
+[ERROR] 11:58:18:648 consola/(23158:23158): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:58:18:648 consola/(23158:23158): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:58:18:649 consola/(23158:23158): entre en I/O dentro de send_instrucciones
+[WARNING] 11:58:18:649 consola/(23158:23158): entre en READ dentro de send_instrucciones
+[WARNING] 11:58:18:649 consola/(23158:23158): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:58:18:649 consola/(23158:23158): entre en COPY dentro de send_instrucciones
+[WARNING] 11:58:18:650 consola/(23158:23158): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:58:18:650 consola/(23158:23158): Pase el send instrucciones 
+[ERROR] 11:58:56:627 consola/(23290:23290): cant de instrucciones: 6
+[INFO] 11:58:56:634 consola/(23290:23290): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 11:58:56:634 consola/(23290:23290): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 11:58:56:634 consola/(23290:23290): El socket dentro de send instrcciones es : 4
+[ERROR] 11:58:56:634 consola/(23290:23290): El tam recibido por parametro a enviar es: 1425
+[WARNING] 11:58:56:634 consola/(23290:23290): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:58:56:634 consola/(23290:23290): entre en I/O dentro de send_instrucciones
+[WARNING] 11:58:56:635 consola/(23290:23290): entre en READ dentro de send_instrucciones
+[WARNING] 11:58:56:635 consola/(23290:23290): entre en WRITE dentro de send_instrucciones
+[WARNING] 11:58:56:635 consola/(23290:23290): entre en COPY dentro de send_instrucciones
+[WARNING] 11:58:56:635 consola/(23290:23290): Entre en EXIT dentro de send_instrucciones
+[ERROR] 11:58:56:635 consola/(23290:23290): Pase el send instrucciones 
+[ERROR] 12:28:37:275 consola/(25650:25650): cant de instrucciones: 6
+[INFO] 12:28:37:282 consola/(25650:25650): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 12:28:37:282 consola/(25650:25650): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 12:28:37:282 consola/(25650:25650): El socket dentro de send instrcciones es : 4
+[ERROR] 12:28:37:282 consola/(25650:25650): El tam recibido por parametro a enviar es: 1425
+[WARNING] 12:28:37:282 consola/(25650:25650): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:28:37:282 consola/(25650:25650): entre en I/O dentro de send_instrucciones
+[WARNING] 12:28:37:282 consola/(25650:25650): entre en READ dentro de send_instrucciones
+[WARNING] 12:28:37:283 consola/(25650:25650): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:28:37:283 consola/(25650:25650): entre en COPY dentro de send_instrucciones
+[WARNING] 12:28:37:283 consola/(25650:25650): Entre en EXIT dentro de send_instrucciones
+[ERROR] 12:28:37:283 consola/(25650:25650): Pase el send instrucciones 
+[ERROR] 12:28:59:691 consola/(25826:25826): cant de instrucciones: 6
+[INFO] 12:28:59:699 consola/(25826:25826): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 12:28:59:699 consola/(25826:25826): El fd_mod2 despues de grar conexiones es: 4
+[ERROR] 12:28:59:699 consola/(25826:25826): El socket dentro de send instrcciones es : 4
+[ERROR] 12:28:59:699 consola/(25826:25826): El tam recibido por parametro a enviar es: 1425
+[WARNING] 12:28:59:699 consola/(25826:25826): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:28:59:700 consola/(25826:25826): entre en I/O dentro de send_instrucciones
+[WARNING] 12:28:59:700 consola/(25826:25826): entre en READ dentro de send_instrucciones
+[WARNING] 12:28:59:700 consola/(25826:25826): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:28:59:700 consola/(25826:25826): entre en COPY dentro de send_instrucciones
+[WARNING] 12:28:59:701 consola/(25826:25826): Entre en EXIT dentro de send_instrucciones
+[ERROR] 12:28:59:702 consola/(25826:25826): Pase el send instrucciones 

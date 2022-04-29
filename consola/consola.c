@@ -4,7 +4,6 @@
 //ASI SE CORRE POR CONSOLA
 //./consola.out /home/utnso/tp-2022-1c-yaguarethreads-/consola/lista_instrucciones.txt 100
 
-
 int main(int argc, char** argv){
 
 	if(argc != 3){
@@ -15,7 +14,7 @@ int main(int argc, char** argv){
 	bool success = false;
 
 	char* path;
-	int tam;
+	uint32_t tam;
 	char* ip;
 	char* puerto;
 
@@ -46,14 +45,16 @@ int main(int argc, char** argv){
 
 	int fd_mod2=0;
 	if (!generar_conexiones(log_consola, ip, puerto, &fd_mod2)) {
-		cerrar_programa(logger);
+		cerrar_programa(log_consola);
 		return EXIT_FAILURE;
 	}
 	log_trace(log_consola,"El fd_mod2 despues de grar conexiones es: %d",fd_mod2);
 
-	send_instrucciones(lista_instrucciones,fd_mod2);
+	send_instrucciones(lista_instrucciones,tam,fd_mod2);
 
 	log_error(log_consola,"Pase el send instrucciones ");
+
+	//send_TAM(fd_mod2,tam);
 /*
 	success = recibir_confirmacion(fd_mod2); //Implementar, reveer esto creo q esta demas
 

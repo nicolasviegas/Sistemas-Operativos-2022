@@ -1,4 +1,6 @@
 #include "../include/comunicacion_kernel.h"
+#include "../include/kernel.h"
+#include "../include/funciones_kernel.h"
 
 
 typedef struct {
@@ -23,16 +25,18 @@ static void procesar_conexion(void* void_args) {
 
         if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
 
-        	printf("El socket en procesar conexion es: %d \n",cliente_socket);
+        	//printf("El socket en procesar conexion es: %d \n",cliente_socket);
 
-        	printf("El tam de op_code_instrucciones es %d\n", sizeof(op_code_instrucciones));
+        	//printf("El tam de op_code_instrucciones es %d\n", sizeof(op_code_instrucciones));
+
         	//log_error(log_kernel,"Elde recv vuelve %d",recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0));
-        	log_info(log_kernel, "DISCONNECT!");
-            return;
 
+        	log_info(log_kernel, "DISCONNECT!");
+            //return;
+        	break;
         }
 
-        log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
+      //  log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
 
         switch (cop) {
             case NO_OP:{
@@ -44,7 +48,8 @@ static void procesar_conexion(void* void_args) {
             	         break;
             	      }
 
-           log_info(log_kernel, "Deserialice NO_OP el parametro es: %d",parametro1);
+           log_warning(log_kernel, "Deserialice NO_OP el parametro es: %d",parametro1);
+            	 cargar_instruccion(NO_OP,"NO_OP",parametro1,NULL);
 
 
                // log_info(log_kernel, "entre al case NO_OP");
@@ -58,9 +63,11 @@ static void procesar_conexion(void* void_args) {
             	     log_error(log_kernel, "Fallo recibiendo IO");
             	     break;
             	}
-
-            	log_info(log_kernel, "Deserialice IO el parametro es: %d",parametro1);
+            	cargar_instruccion(IO,"I\O",parametro1,NULL);
+            	log_warning(log_kernel, "Deserialice IO el parametro es: %d",parametro1);
             	//log_info(log_kernel, "entre a IO");
+
+
             	break;
             }
             case READ:
@@ -71,8 +78,8 @@ static void procesar_conexion(void* void_args) {
         	     log_error(log_kernel, "Fallo recibiendo READ");
         	     break;
         	}
-
-        	log_info(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
+            	cargar_instruccion(READ,"READ",parametro1,NULL);
+        	log_warning(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
         	//log_info(log_kernel, "entre a IO");
         	break;
 			}
@@ -85,8 +92,9 @@ static void procesar_conexion(void* void_args) {
 				   break;
 				}
 
-				log_info(log_kernel, "Deserialice COPY el parametro1 es: %d",parametro1);
-				log_info(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
+				 cargar_instruccion(COPY,"COPY",parametro1,parametro2);
+				log_warning(log_kernel, "Deserialice COPY el parametro1 es: %d",parametro1);
+				//log_info(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
 				break;
            	}
             case WRITE:
@@ -98,30 +106,39 @@ static void procesar_conexion(void* void_args) {
             	   break;
             	}
 
-            	log_info(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
-            	log_info(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
+            	cargar_instruccion(READ,"READ",parametro1,parametro2);
+            	log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
+            	//log_info(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
             	break;
 			}
             case EXIT:
             {
-
-            	log_info(log_kernel, "Entre en EXIT");
+            	cargar_instruccion(EXIT,"EXIT",NULL,NULL);
+            	log_warning(log_kernel, "Entre en EXIT");
 
 				break;
 			}
-
-
 
             // Errores
             case -1:
                 log_error(log_kernel, "Cliente desconectado de %s...", server_name);
                 return;
+               // break;
             default:
                 log_error(log_kernel, "Algo anduvo mal en el server de %s", server_name);
                 log_info(log_kernel, "Cop: %d", cop);
                 return;
         }
 
+    	/*instrucciones* a = malloc(sizeof(instrucciones));
+    	a = list_get(lista_instrucciones_kernel,0);
+    	log_trace(log_kernel,"ID de la primer operacion: %d",a->id);
+    	log_trace(log_kernel,"nombre de la primer operacion: %s",a->nombre);
+    	log_trace(log_kernel,"PARAMETRO 1 de la primer operacion: %d",a->parametro1);
+    	log_trace(log_kernel,"PARAMETRO 2  de la primer operacion: %d",a->parametro2);
+    	free(a);*/
+
+    	//log_error(log_kernel,"------------------------------------------------------");
     }
 
     log_warning(log_kernel, "El cliente se desconecto de %s server", server_name);
@@ -137,8 +154,10 @@ int server_escuchar(t_log* logger, char* server_name, int server_socket) {
         args->log = logger;
         args->fd = cliente_socket;
         args->server_name = server_name;
+        log_error(log_kernel,"Estoy en sv escuchar antes de procesar conexion");
         pthread_create(&hilo, NULL, (void*) procesar_conexion, (void*) args);
         pthread_detach(hilo);
+        log_error(log_kernel,"Estoy en sv escuchar despues de procesar conexion");
         return 1;
     }
     return 0;

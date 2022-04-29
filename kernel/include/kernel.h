@@ -19,10 +19,13 @@
 #include "../../shared/include/utils.h"
 #include "../../shared/include/consola-kernel.h"
 #include "../include/comunicacion_kernel.h"
+#include "../include/funciones_kernel.h"
 
 
 
-t_list* lista_instrucciones;
+t_list* lista_instrucciones_kernel;
+
+uint32_t tam_del_proceso_por_archivo;
 
 t_config* config_kernel;
 
@@ -32,5 +35,6 @@ t_paquete* paquete_consola_kernel;
 
 int server_escuchar(t_log* logger, char* server_name, int server_socket);
 
+void cerrar_programa(t_log* logger);
 
 #endif /*KERNEL_H_*/
