@@ -45,6 +45,8 @@ bool recv_EXIT(int fd);
 bool send_TAM(int fd,uint32_t parametro1);
 bool recv_TAM(int fd,uint32_t* parametro1);
 
+void recv_TAM2(int fd,uint32_t* parametro1);
+
 static void* serializar_NO_OP(uint32_t parametro1);
 
 bool send_debug(int fd);

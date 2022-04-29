@@ -335,8 +335,7 @@ static void* serializar_TAM(uint32_t parametro1) {
 }
 
 
-static void deserializar_TAM(void* stream, uint32_t* parametro1) {
-	size_t tam_param;
+void deserializar_TAM(void* stream, uint32_t* parametro1) {
 
     memcpy(parametro1, stream ,sizeof(uint32_t));
     printf("El tam en deserializar tam es: %d \n", parametro1);

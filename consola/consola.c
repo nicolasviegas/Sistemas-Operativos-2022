@@ -54,7 +54,7 @@ int main(int argc, char** argv){
 
 	log_error(log_consola,"Pase el send instrucciones ");
 
-	//send_TAM(fd_mod2,tam);
+	send_TAM(fd_mod2,tam);
 /*
 	success = recibir_confirmacion(fd_mod2); //Implementar, reveer esto creo q esta demas
 

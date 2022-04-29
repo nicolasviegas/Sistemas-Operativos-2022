@@ -32,8 +32,8 @@ static void procesar_conexion(void* void_args) {
         	//log_error(log_kernel,"Elde recv vuelve %d",recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0));
 
         	log_info(log_kernel, "DISCONNECT!");
-            //return;
-        	break;
+            return;
+        	//break;
         }
 
       //  log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
@@ -41,7 +41,7 @@ static void procesar_conexion(void* void_args) {
         switch (cop) {
             case NO_OP:{
 
-            	 uint32_t* parametro1;
+            	 uint32_t parametro1;
 
             	 if (!recv_NO_OP_2(cliente_socket, &parametro1)) {
             	          log_error(log_kernel, "Fallo recibiendo NO_OP");
@@ -57,7 +57,7 @@ static void procesar_conexion(void* void_args) {
             }
             case IO:
             {
-            	uint32_t* parametro1;
+            	uint32_t parametro1;
 
             	if (!recv_IO(cliente_socket, &parametro1)) {
             	     log_error(log_kernel, "Fallo recibiendo IO");
@@ -72,7 +72,7 @@ static void procesar_conexion(void* void_args) {
             }
             case READ:
             {
-            	uint32_t* parametro1;
+            	uint32_t parametro1;
 
             	if (!recv_READ(cliente_socket, &parametro1)) {
         	     log_error(log_kernel, "Fallo recibiendo READ");
@@ -130,6 +130,7 @@ static void procesar_conexion(void* void_args) {
                 return;
         }
 
+
     	/*instrucciones* a = malloc(sizeof(instrucciones));
     	a = list_get(lista_instrucciones_kernel,0);
     	log_trace(log_kernel,"ID de la primer operacion: %d",a->id);
@@ -144,6 +145,16 @@ static void procesar_conexion(void* void_args) {
     log_warning(log_kernel, "El cliente se desconecto de %s server", server_name);
     return;
 }
+
+//void recv_TAM2(int fd, uint32_t* tam){
+//	if (!recv_NO_OP_2(fd, &tam)) {
+//				  log_error(log_kernel, "Fallo recibiendo NO_OP");
+//				  return;
+//	}
+//
+//	log_warning(log_kernel,"Deserialice el tam: %d",tam);
+//	return;
+//}
 
 int server_escuchar(t_log* logger, char* server_name, int server_socket) {
     int cliente_socket = esperar_cliente(logger, server_name, server_socket);
