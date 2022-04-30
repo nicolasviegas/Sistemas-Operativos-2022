@@ -50,11 +50,15 @@ int main(int argc, char** argv){
 	}
 	log_trace(log_consola,"El fd_mod2 despues de grar conexiones es: %d",fd_mod2);
 
+	send_TAM(fd_mod2,tam);
+
+	log_error(log_consola,"Pase el send TAM ");
+
 	send_instrucciones(lista_instrucciones,tam,fd_mod2);
 
 	log_error(log_consola,"Pase el send instrucciones ");
 
-	send_TAM(fd_mod2,tam);
+
 /*
 	success = recibir_confirmacion(fd_mod2); //Implementar, reveer esto creo q esta demas
 

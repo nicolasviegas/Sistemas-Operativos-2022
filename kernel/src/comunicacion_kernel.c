@@ -16,6 +16,16 @@ static void procesar_conexion(void* void_args) {
     char* server_name = args->server_name;
     free(args);
 
+
+    uint32_t tam;
+    if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+
+	log_info(log_kernel, "DISCONNECT!");
+	return;
+    }
+
+	log_warning(log_kernel,"El tam despues del recv es: %d",tam);
+
     //log_error(log_kernel,"El cliente es: %s",server_name);
 
     op_code_instrucciones cop;
@@ -94,7 +104,7 @@ static void procesar_conexion(void* void_args) {
 
 				 cargar_instruccion(COPY,"COPY",parametro1,parametro2);
 				log_warning(log_kernel, "Deserialice COPY el parametro1 es: %d",parametro1);
-				//log_info(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
+				log_warning(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
 				break;
            	}
             case WRITE:
@@ -108,7 +118,7 @@ static void procesar_conexion(void* void_args) {
 
             	cargar_instruccion(READ,"READ",parametro1,parametro2);
             	log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
-            	//log_info(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
+            	log_warning(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
             	break;
 			}
             case EXIT:

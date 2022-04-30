@@ -125,3 +125,20 @@
 [WARNING] 16:47:33:527 consola/(6038:6040): Entre en EXIT
 [ERROR] 16:47:33:527 consola/(6038:6040): Algo anduvo mal en el server de KERNEL
 [INFO] 16:47:33:527 consola/(6038:6040): Cop: 100
+[INFO] 12:04:05:269 consola/(11359:11359): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:04:05:270 consola/(11359:11359): El socket : 4
+[INFO] 12:04:20:313 consola/(11359:11359): Cliente conectado (a KERNEL)
+
+[ERROR] 12:04:20:313 consola/(11359:11359): Estoy en sv escuchar antes de procesar conexion
+[ERROR] 12:04:20:313 consola/(11359:11359): Estoy en sv escuchar despues de procesar conexion
+[WARNING] 12:04:20:317 consola/(11359:11371): El tam despues del recv es: 100
+[WARNING] 12:04:20:317 consola/(11359:11371): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:04:20:317 consola/(11359:11371): Deserialice IO el parametro es: 3000
+[WARNING] 12:04:20:317 consola/(11359:11371): Deserialice READ el parametro es: 0
+[WARNING] 12:04:20:318 consola/(11359:11371): Deserialice WRITE el parametro1 es: 4
+[WARNING] 12:04:20:318 consola/(11359:11371): Deserialice WRITE el parametro2 es: 42
+[WARNING] 12:04:20:318 consola/(11359:11371): Deserialice COPY el parametro1 es: 0
+[WARNING] 12:04:20:318 consola/(11359:11371): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:04:20:318 consola/(11359:11371): Entre en EXIT
+[INFO] 12:04:20:318 consola/(11359:11371): DISCONNECT!
