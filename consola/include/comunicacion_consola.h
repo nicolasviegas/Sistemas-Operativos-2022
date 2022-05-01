@@ -13,6 +13,6 @@
 
 bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2);
 
-void send_instrucciones(t_list* lista_instrucciones,uint32_t tam, int fd_mod2);
+void send_instrucciones(t_list* lista_instrucciones,int fd_mod2);
 
 #endif

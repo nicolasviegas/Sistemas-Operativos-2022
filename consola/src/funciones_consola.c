@@ -178,7 +178,4 @@ void empaquetar(int socket){
 void mostrar_lista_instrucciones(t_list* lista){
 
 }
-
-
-
-
+}

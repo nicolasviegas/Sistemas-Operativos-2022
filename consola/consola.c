@@ -61,7 +61,6 @@ int main(int argc, char** argv){
 
 /*
 	success = recibir_confirmacion(fd_mod2); //Implementar, reveer esto creo q esta demas
-
 	if(success){
 	// terminar_consola(log_consola,lista_instrucciones, conexion,config_consola);
 	}
@@ -83,5 +82,3 @@ bool recibir_confirmacion(int conexion){
 
 	return true;
 }
-
-

@@ -19,6 +19,7 @@ typedef struct{
 	bool suspendido;
 	t_list* semaforosRetenidos;
 	//t_semaforo* semaforoEsperado;
+	//espacio
 
 	int socketConsola;
 	int socketMemoria;

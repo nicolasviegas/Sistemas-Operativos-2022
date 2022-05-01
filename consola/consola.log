@@ -3874,6 +3874,7 @@
 [WARNING] 12:11:45:366 consola/(17430:17430): entre en COPY dentro de send_instrucciones
 [WARNING] 12:11:45:367 consola/(17430:17430): Entre en EXIT dentro de send_instrucciones
 [ERROR] 12:11:45:367 consola/(17430:17430): Pase el send instrucciones 
+<<<<<<< HEAD
 [ERROR] 12:13:21:109 consola/(17693:17693): cant de instrucciones: 3
 [INFO] 12:13:21:113 consola/(17693:17693): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
@@ -4672,3 +4673,5 @@
 [WARNING] 12:04:20:315 consola/(11370:11370): entre en COPY dentro de send_instrucciones
 [WARNING] 12:04:20:316 consola/(11370:11370): Entre en EXIT dentro de send_instrucciones
 [ERROR] 12:04:20:316 consola/(11370:11370): Pase el send instrucciones 
+=======
+>>>>>>> 73e6aae9964e2de934ac3fea5fc17bfbe7e08ba5

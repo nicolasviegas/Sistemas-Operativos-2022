@@ -1,5 +1,5 @@
-#ifndef KERNEL_H_
-#define KERNEL_H_
+#ifndef KERNELH
+#define KERNELH
 
 #include<stdio.h>
 #include<ctype.h>
@@ -37,4 +37,4 @@ int server_escuchar(t_log* logger, char* server_name, int server_socket);
 
 void cerrar_programa(t_log* logger);
 
-#endif /*KERNEL_H_*/
+#endif /KERNELH/

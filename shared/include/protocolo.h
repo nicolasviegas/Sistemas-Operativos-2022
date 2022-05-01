@@ -42,11 +42,14 @@ bool recv_WRITE(int fd,uint32_t* parametro1,uint32_t* parametro2);
 bool send_EXIT(int fd);
 bool recv_EXIT(int fd);
 
+<<<<<<< HEAD
 bool send_TAM(int fd,uint32_t parametro1);
 bool recv_TAM(int fd,uint32_t* parametro1);
 
 void recv_TAM2(int fd,uint32_t* parametro1);
 
+=======
+>>>>>>> 73e6aae9964e2de934ac3fea5fc17bfbe7e08ba5
 static void* serializar_NO_OP(uint32_t parametro1);
 
 bool send_debug(int fd);
