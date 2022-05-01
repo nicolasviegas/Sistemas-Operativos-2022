@@ -318,7 +318,6 @@ bool recv_EXIT(int fd) {
     free(stream);
     return true;
 }
-<<<<<<< HEAD
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -374,7 +373,3 @@ bool recv_TAM(int fd, uint32_t* parametro1) {
     free(stream);
     return true;
 }
-
-
-=======
->>>>>>> 73e6aae9964e2de934ac3fea5fc17bfbe7e08ba5

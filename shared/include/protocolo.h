@@ -1,5 +1,5 @@
-#ifndef PROTOCOLO_H_
-#define PROTOCOLO_H_
+#ifndef PROTOCOLOH
+#define PROTOCOLOH
 
 #include <inttypes.h>
 #include <sys/socket.h>
@@ -11,12 +11,12 @@
 #include <stdlib.h>
 
 typedef enum{ //tipos de identificadores a parsear
-	NO_OP = 13, //0
-	IO = 14, //1
-	READ = 15, //2
-	COPY = 16,//3 LO AGREGO YO
-	WRITE = 17, //4
-	EXIT = 18, //5
+    NO_OP = 13, //0
+    IO = 14, //1
+    READ = 15, //2
+    COPY = 16,//3 LO AGREGO YO
+    WRITE = 17, //4
+    EXIT = 18, //5
 }op_code_instrucciones;
 
 #define BACKLOG 20
@@ -42,14 +42,11 @@ bool recv_WRITE(int fd,uint32_t* parametro1,uint32_t* parametro2);
 bool send_EXIT(int fd);
 bool recv_EXIT(int fd);
 
-<<<<<<< HEAD
 bool send_TAM(int fd,uint32_t parametro1);
 bool recv_TAM(int fd,uint32_t* parametro1);
 
 void recv_TAM2(int fd,uint32_t* parametro1);
 
-=======
->>>>>>> 73e6aae9964e2de934ac3fea5fc17bfbe7e08ba5
 static void* serializar_NO_OP(uint32_t parametro1);
 
 bool send_debug(int fd);
