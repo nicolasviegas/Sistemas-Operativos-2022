@@ -17,9 +17,8 @@ static void procesar_conexion_kernel(void* void_args) {
     char* server_name = args->server_name;
     free(args);
 
-//    char* ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
-//       char* puerto_cpu_dispatch = config_get_string_value(config_kernel,"PUERTO_CPU_DISPATCH");
-//
+    int estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
+    int alfa = config_get_int_value(config_kernel,"ALFA");
 
     uint32_t tam;
     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -48,9 +47,35 @@ static void procesar_conexion_kernel(void* void_args) {
 
 
         	contador_cliente++;
+
+        	//Una vez que la consola nos da todas las instrucciones, aca abajo cargamos estas instrucciones en el pcb y se lo enviamos a cpu
+        	//////////////////////////////////////////////////////////////////////
+        	int a = list_size(lista_instrucciones_kernel);
+        	t_list* lista_nueva_kernel = list_create();
+        	lista_nueva_kernel = list_take_and_remove(lista_instrucciones_kernel,a);
+
+        	t_list* tabla_paginas = list_create();
+
+        	///////////////////////////////////////////////////
+        	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
+
+        	pcb_proceso->PID = contador_cliente;
+        	pcb_proceso->tamanio = tam;
+        	pcb_proceso->instrucciones = lista_nueva_kernel;
+        	pcb_proceso->tabla_paginas = tabla_paginas;
+        	pcb_proceso->estimacionRafaga = estimacion_inicial;
+        	pcb_proceso->alpha = alfa;
+
+        	//send_PCB(fd_cpu,pcb_proceso);
+
+
+        	free(pcb_proceso);
+
+
         	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
 ////////////////////////////////////////////////////////////////////////////////////
+
 
         	send_TAM(fd_cpu,100); //ESTO ES DE PRUEBA PARA VER SI SE ENVIA DE KERNEL A CPU BORRAR
 //////////////////////////////////////////////////////////////////////////////////
@@ -168,23 +193,10 @@ static void procesar_conexion_kernel(void* void_args) {
     }
     log_warning(log_kernel, "El cliente se desconecto de %s server", server_name);
 
-    //ACA ES DONDE HAY QUE HACER LAS CONEXIONES ENTRE KERNEL Y CPU/////////////////////////////////////////////////////////////////
-
-   // generar_conexion_kernel_cpu(log_kernel,ip_cpu,puerto_cpu_dispatch);
-
 
     return;
 }
 
-//void recv_TAM2(int fd, uint32_t* tam){
-//	if (!recv_NO_OP_2(fd, &tam)) {
-//				  log_error(log_kernel, "Fallo recibiendo NO_OP");
-//				  return;
-//	}
-//
-//	log_warning(log_kernel,"Deserialice el tam: %d",tam);
-//	return;
-//}
 
 int server_escuchar_kernel(t_log* logger, char* server_name, int server_socket) {
     int cliente_socket = esperar_cliente(logger, server_name, server_socket);

@@ -37,6 +37,7 @@ int main() {
 
 
     lista_instrucciones_kernel = list_create();
+    lista_pcb = list_create();
 
     int fd_consola = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 

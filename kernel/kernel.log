@@ -2327,3 +2327,208 @@
 [TRACE] 01:31:24:056 cpu/(17414:17418): El PID ES: 1
 [INFO] 01:31:24:056 cpu/(17414:17418): DISCONNECT!
 [TRACE] 01:31:24:061 cpu/(17414:17418): El socket de cpu despues de grar conexiones es: 5
+[INFO] 09:45:16:178 cpu/(3725:3725): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 09:45:16:206 cpu/(3725:3725): El socket : 4
+[ERROR] 09:45:16:206 cpu/(3725:3725): Error al conectar (a CPU)
+
+[ERROR] 09:45:16:206 cpu/(3725:3725): El ip en grar conexiones es: 127.0.0.1
+[ERROR] 09:45:16:206 cpu/(3725:3725): El puerto en grar conexiones es: 8001
+[ERROR] 09:45:16:207 cpu/(3725:3725): El socket  en generar conexiones cpu es: 134533272
+[INFO] 09:46:06:619 cpu/(4052:4052): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 09:46:06:619 cpu/(4052:4052): El socket : 4
+[INFO] 09:46:06:620 cpu/(4052:4052): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[ERROR] 09:46:06:620 cpu/(4052:4052): El ip en grar conexiones es: 127.0.0.1
+[ERROR] 09:46:06:620 cpu/(4052:4052): El puerto en grar conexiones es: 8001
+[ERROR] 09:46:06:620 cpu/(4052:4052): El socket  en generar conexiones cpu es: 134533272
+[TRACE] 09:46:06:620 cpu/(4052:4052): El fd_cpu despues de grar conexiones es: 5
+[INFO] 09:46:18:822 cpu/(4052:4052): Cliente conectado (a KERNEL)
+
+[WARNING] 09:46:18:828 cpu/(4052:4055): Deserialice NO_OP el parametro es: 5
+[WARNING] 09:46:18:829 cpu/(4052:4055): Deserialice IO el parametro es: 3000
+[WARNING] 09:46:18:829 cpu/(4052:4055): Deserialice READ el parametro es: 0
+[WARNING] 09:46:18:829 cpu/(4052:4055): Deserialice WRITE el parametro1 es: 4
+[WARNING] 09:46:18:829 cpu/(4052:4055): Deserialice WRITE el parametro2 es: 42
+[WARNING] 09:46:18:829 cpu/(4052:4055): Deserialice COPY el parametro1 es: 0
+[WARNING] 09:46:18:829 cpu/(4052:4055): Deserialice COPY el parametro2 es: 4
+[WARNING] 09:46:18:829 cpu/(4052:4055): Entre en EXIT
+[TRACE] 09:46:18:829 cpu/(4052:4055): El PID ES: 1
+[INFO] 09:46:18:830 cpu/(4052:4055): DISCONNECT!
+[TRACE] 09:46:18:841 cpu/(4052:4055): El socket de cpu despues de grar conexiones es: 5
+[INFO] 09:47:22:965 cpu/(4060:4060): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 09:47:22:965 cpu/(4060:4060): El socket : 4
+[INFO] 09:47:22:965 cpu/(4060:4060): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[ERROR] 09:47:22:965 cpu/(4060:4060): El ip en grar conexiones es: 127.0.0.1
+[ERROR] 09:47:22:965 cpu/(4060:4060): El puerto en grar conexiones es: 8001
+[ERROR] 09:47:22:965 cpu/(4060:4060): El socket  en generar conexiones cpu es: 134533272
+[TRACE] 09:47:22:966 cpu/(4060:4060): El fd_cpu despues de grar conexiones es: 5
+[INFO] 09:47:31:155 cpu/(4060:4060): Cliente conectado (a KERNEL)
+
+[WARNING] 09:47:31:159 cpu/(4060:4063): Deserialice NO_OP el parametro es: 5
+[WARNING] 09:47:31:159 cpu/(4060:4063): Deserialice IO el parametro es: 3000
+[WARNING] 09:47:31:159 cpu/(4060:4063): Deserialice READ el parametro es: 0
+[WARNING] 09:47:31:159 cpu/(4060:4063): Deserialice WRITE el parametro1 es: 4
+[WARNING] 09:47:31:159 cpu/(4060:4063): Deserialice WRITE el parametro2 es: 42
+[WARNING] 09:47:31:159 cpu/(4060:4063): Deserialice COPY el parametro1 es: 0
+[WARNING] 09:47:31:159 cpu/(4060:4063): Deserialice COPY el parametro2 es: 4
+[WARNING] 09:47:31:160 cpu/(4060:4063): Entre en EXIT
+[TRACE] 09:47:31:160 cpu/(4060:4063): El PID ES: 1
+[INFO] 09:47:31:160 cpu/(4060:4063): DISCONNECT!
+[TRACE] 09:47:31:160 cpu/(4060:4063): El socket de cpu despues de grar conexiones es: 5
+[INFO] 09:47:32:353 cpu/(4060:4060): Cliente conectado (a KERNEL)
+
+[WARNING] 09:47:32:357 cpu/(4060:4065): Deserialice NO_OP el parametro es: 5
+[WARNING] 09:47:32:357 cpu/(4060:4065): Deserialice IO el parametro es: 3000
+[WARNING] 09:47:32:357 cpu/(4060:4065): Deserialice READ el parametro es: 0
+[WARNING] 09:47:32:357 cpu/(4060:4065): Deserialice WRITE el parametro1 es: 4
+[WARNING] 09:47:32:357 cpu/(4060:4065): Deserialice WRITE el parametro2 es: 42
+[WARNING] 09:47:32:357 cpu/(4060:4065): Deserialice COPY el parametro1 es: 0
+[WARNING] 09:47:32:357 cpu/(4060:4065): Deserialice COPY el parametro2 es: 4
+[WARNING] 09:47:32:357 cpu/(4060:4065): Entre en EXIT
+[TRACE] 09:47:32:357 cpu/(4060:4065): El PID ES: 2
+[INFO] 09:47:32:357 cpu/(4060:4065): DISCONNECT!
+[INFO] 09:47:52:621 cpu/(4079:4079): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 09:47:52:621 cpu/(4079:4079): El socket : 4
+[INFO] 09:47:52:622 cpu/(4079:4079): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[ERROR] 09:47:52:622 cpu/(4079:4079): El ip en grar conexiones es: 127.0.0.1
+[ERROR] 09:47:52:622 cpu/(4079:4079): El puerto en grar conexiones es: 8001
+[ERROR] 09:47:52:622 cpu/(4079:4079): El socket  en generar conexiones cpu es: 134533272
+[TRACE] 09:47:52:622 cpu/(4079:4079): El fd_cpu despues de grar conexiones es: 5
+[INFO] 09:47:56:426 cpu/(4079:4079): Cliente conectado (a KERNEL)
+
+[WARNING] 09:47:56:445 cpu/(4079:4082): Deserialice NO_OP el parametro es: 5
+[WARNING] 09:47:56:446 cpu/(4079:4082): Deserialice IO el parametro es: 3000
+[WARNING] 09:47:56:446 cpu/(4079:4082): Deserialice READ el parametro es: 0
+[WARNING] 09:47:56:446 cpu/(4079:4082): Deserialice WRITE el parametro1 es: 4
+[WARNING] 09:47:56:446 cpu/(4079:4082): Deserialice WRITE el parametro2 es: 42
+[WARNING] 09:47:56:446 cpu/(4079:4082): Deserialice COPY el parametro1 es: 0
+[WARNING] 09:47:56:446 cpu/(4079:4082): Deserialice COPY el parametro2 es: 4
+[WARNING] 09:47:56:446 cpu/(4079:4082): Entre en EXIT
+[TRACE] 09:47:56:446 cpu/(4079:4082): El PID ES: 1
+[INFO] 09:47:56:446 cpu/(4079:4082): DISCONNECT!
+[TRACE] 09:47:56:464 cpu/(4079:4082): El socket de cpu despues de grar conexiones es: 5
+[INFO] 09:48:04:172 cpu/(4079:4079): Cliente conectado (a KERNEL)
+
+[WARNING] 09:48:04:189 cpu/(4079:4084): Deserialice NO_OP el parametro es: 5
+[WARNING] 09:48:04:189 cpu/(4079:4084): Deserialice IO el parametro es: 3000
+[WARNING] 09:48:04:189 cpu/(4079:4084): Deserialice READ el parametro es: 0
+[WARNING] 09:48:04:190 cpu/(4079:4084): Deserialice WRITE el parametro1 es: 4
+[WARNING] 09:48:04:190 cpu/(4079:4084): Deserialice WRITE el parametro2 es: 42
+[WARNING] 09:48:04:190 cpu/(4079:4084): Deserialice COPY el parametro1 es: 0
+[WARNING] 09:48:04:190 cpu/(4079:4084): Deserialice COPY el parametro2 es: 4
+[WARNING] 09:48:04:190 cpu/(4079:4084): Entre en EXIT
+[TRACE] 09:48:04:190 cpu/(4079:4084): El PID ES: 2
+[INFO] 09:48:04:190 cpu/(4079:4084): DISCONNECT!
+[TRACE] 09:48:04:190 cpu/(4079:4084): El socket de cpu despues de grar conexiones es: 5
+[INFO] 10:28:11:151 cpu/(5781:5781): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:28:11:159 cpu/(5781:5781): El socket : 4
+[INFO] 10:28:11:161 cpu/(5781:5781): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 10:28:11:161 cpu/(5781:5781): El fd_cpu despues de grar conexiones es: 5
+[INFO] 10:28:14:285 cpu/(5781:5781): Cliente conectado (a KERNEL)
+
+[WARNING] 10:28:14:298 cpu/(5781:5784): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:28:14:298 cpu/(5781:5784): Deserialice IO el parametro es: 3000
+[WARNING] 10:28:14:298 cpu/(5781:5784): Deserialice READ el parametro es: 0
+[WARNING] 10:28:14:298 cpu/(5781:5784): Deserialice WRITE el parametro1 es: 4
+[WARNING] 10:28:14:299 cpu/(5781:5784): Deserialice WRITE el parametro2 es: 42
+[WARNING] 10:28:14:299 cpu/(5781:5784): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:28:14:299 cpu/(5781:5784): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:28:14:299 cpu/(5781:5784): Entre en EXIT
+[TRACE] 10:28:14:299 cpu/(5781:5784): Cant de elementos en lista instrucciones 6
+[TRACE] 10:28:14:299 cpu/(5781:5784): El PID ES: 1
+[INFO] 10:28:14:299 cpu/(5781:5784): DISCONNECT!
+[TRACE] 10:28:14:303 cpu/(5781:5784): El socket de cpu despues de grar conexiones es: 5
+[INFO] 10:28:25:252 cpu/(5781:5781): Cliente conectado (a KERNEL)
+
+[WARNING] 10:28:25:265 cpu/(5781:5793): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:28:25:265 cpu/(5781:5793): Deserialice IO el parametro es: 3000
+[WARNING] 10:28:25:265 cpu/(5781:5793): Deserialice READ el parametro es: 0
+[WARNING] 10:28:25:266 cpu/(5781:5793): Deserialice WRITE el parametro1 es: 4
+[WARNING] 10:28:25:266 cpu/(5781:5793): Deserialice WRITE el parametro2 es: 42
+[WARNING] 10:28:25:266 cpu/(5781:5793): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:28:25:266 cpu/(5781:5793): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:28:25:267 cpu/(5781:5793): Entre en EXIT
+[TRACE] 10:28:25:269 cpu/(5781:5793): Cant de elementos en lista instrucciones 12
+[TRACE] 10:28:25:269 cpu/(5781:5793): El PID ES: 2
+[INFO] 10:28:25:269 cpu/(5781:5793): DISCONNECT!
+[TRACE] 10:28:25:269 cpu/(5781:5793): El socket de cpu despues de grar conexiones es: 5
+[INFO] 10:43:44:663 cpu/(6309:6309): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:43:44:663 cpu/(6309:6309): El socket : 4
+[INFO] 10:43:44:664 cpu/(6309:6309): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 10:43:44:664 cpu/(6309:6309): El fd_cpu despues de grar conexiones es: 5
+[INFO] 10:43:48:223 cpu/(6309:6309): Cliente conectado (a KERNEL)
+
+[ERROR] 10:43:48:229 cpu/(6309:6313): estimacion inicial 154671192
+[WARNING] 10:43:48:229 cpu/(6309:6313): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:43:48:229 cpu/(6309:6313): Deserialice IO el parametro es: 3000
+[WARNING] 10:43:48:230 cpu/(6309:6313): Deserialice READ el parametro es: 0
+[WARNING] 10:43:48:230 cpu/(6309:6313): Deserialice WRITE el parametro1 es: 4
+[WARNING] 10:43:48:230 cpu/(6309:6313): Deserialice WRITE el parametro2 es: 42
+[WARNING] 10:43:48:230 cpu/(6309:6313): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:43:48:230 cpu/(6309:6313): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:43:48:230 cpu/(6309:6313): Entre en EXIT
+[ERROR] 10:43:48:230 cpu/(6309:6313): El tam de la lista despues del take and remove es: 0
+[TRACE] 10:43:48:231 cpu/(6309:6313): El PID ES: 1
+[INFO] 10:43:48:231 cpu/(6309:6313): DISCONNECT!
+[TRACE] 10:43:48:249 cpu/(6309:6313): El socket de cpu despues de grar conexiones es: 5
+[INFO] 10:44:07:156 cpu/(6309:6309): Cliente conectado (a KERNEL)
+
+[ERROR] 10:44:07:174 cpu/(6309:6317): estimacion inicial 154671192
+[WARNING] 10:44:07:175 cpu/(6309:6317): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:44:07:175 cpu/(6309:6317): Deserialice IO el parametro es: 3000
+[WARNING] 10:44:07:175 cpu/(6309:6317): Deserialice READ el parametro es: 0
+[WARNING] 10:44:07:175 cpu/(6309:6317): Deserialice WRITE el parametro1 es: 4
+[WARNING] 10:44:07:175 cpu/(6309:6317): Deserialice WRITE el parametro2 es: 42
+[WARNING] 10:44:07:175 cpu/(6309:6317): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:44:07:176 cpu/(6309:6317): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:44:07:176 cpu/(6309:6317): Entre en EXIT
+[ERROR] 10:44:07:176 cpu/(6309:6317): El tam de la lista despues del take and remove es: 0
+[TRACE] 10:44:07:176 cpu/(6309:6317): El PID ES: 2
+[INFO] 10:44:07:176 cpu/(6309:6317): DISCONNECT!
+[TRACE] 10:44:07:176 cpu/(6309:6317): El socket de cpu despues de grar conexiones es: 5
+[INFO] 10:44:08:980 cpu/(6309:6309): Cliente conectado (a KERNEL)
+
+[ERROR] 10:44:08:993 cpu/(6309:6319): estimacion inicial 154671192
+[WARNING] 10:44:08:994 cpu/(6309:6319): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:44:08:994 cpu/(6309:6319): Deserialice IO el parametro es: 3000
+[WARNING] 10:44:08:994 cpu/(6309:6319): Deserialice READ el parametro es: 0
+[WARNING] 10:44:08:995 cpu/(6309:6319): Deserialice WRITE el parametro1 es: 4
+[WARNING] 10:44:08:995 cpu/(6309:6319): Deserialice WRITE el parametro2 es: 42
+[WARNING] 10:44:08:995 cpu/(6309:6319): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:44:08:995 cpu/(6309:6319): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:44:08:995 cpu/(6309:6319): Entre en EXIT
+[ERROR] 10:44:08:995 cpu/(6309:6319): El tam de la lista despues del take and remove es: 0
+[TRACE] 10:44:08:995 cpu/(6309:6319): El PID ES: 3
+[INFO] 10:44:08:995 cpu/(6309:6319): DISCONNECT!
+[TRACE] 10:44:08:996 cpu/(6309:6319): El socket de cpu despues de grar conexiones es: 5
+[INFO] 10:45:04:048 cpu/(6437:6437): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 10:45:04:055 cpu/(6437:6437): El socket : 4
+[INFO] 10:45:04:064 cpu/(6437:6437): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 10:45:04:064 cpu/(6437:6437): El fd_cpu despues de grar conexiones es: 5
+[INFO] 10:45:08:392 cpu/(6437:6437): Cliente conectado (a KERNEL)
+
+[ERROR] 10:45:08:397 cpu/(6437:6440): estimacion inicial 10000
+[WARNING] 10:45:08:397 cpu/(6437:6440): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:45:08:397 cpu/(6437:6440): Deserialice IO el parametro es: 3000
+[WARNING] 10:45:08:397 cpu/(6437:6440): Deserialice READ el parametro es: 0
+[WARNING] 10:45:08:397 cpu/(6437:6440): Deserialice WRITE el parametro1 es: 4
+[WARNING] 10:45:08:397 cpu/(6437:6440): Deserialice WRITE el parametro2 es: 42
+[WARNING] 10:45:08:397 cpu/(6437:6440): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:45:08:397 cpu/(6437:6440): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:45:08:397 cpu/(6437:6440): Entre en EXIT
+[ERROR] 10:45:08:397 cpu/(6437:6440): El tam de la lista despues del take and remove es: 0
+[TRACE] 10:45:08:397 cpu/(6437:6440): El PID ES: 1
+[INFO] 10:45:08:398 cpu/(6437:6440): DISCONNECT!
+[TRACE] 10:45:08:414 cpu/(6437:6440): El socket de cpu despues de grar conexiones es: 5

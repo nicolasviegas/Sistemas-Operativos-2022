@@ -460,3 +460,44 @@
 
 [WARNING] 01:31:15:062 cpu/(17413:17415): Entre en procesar conexion cpu
 [WARNING] 01:31:24:056 cpu/(17413:17415): El tam despues del recv es: 100
+[INFO] 09:45:41:072 cpu/(3923:3923): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 09:45:41:086 cpu/(3923:3923): El socket de kernel en cpu.c es : 4
+[INFO] 09:46:06:619 cpu/(3923:3923): Cliente conectado (a CPU)
+
+[WARNING] 09:46:06:620 cpu/(3923:4053): Entre en procesar conexion cpu
+[WARNING] 09:46:18:830 cpu/(3923:4053): El tam despues del recv es: 100
+[INFO] 09:47:19:813 cpu/(4059:4059): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 09:47:19:813 cpu/(4059:4059): El socket de kernel en cpu.c es : 4
+[INFO] 09:47:22:965 cpu/(4059:4059): Cliente conectado (a CPU)
+
+[WARNING] 09:47:22:966 cpu/(4059:4061): Entre en procesar conexion cpu
+[INFO] 09:47:49:321 cpu/(4076:4076): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 09:47:49:321 cpu/(4076:4076): El socket de kernel en cpu.c es : 4
+[INFO] 09:47:52:621 cpu/(4076:4076): Cliente conectado (a CPU)
+
+[WARNING] 09:47:52:624 cpu/(4076:4080): Entre en procesar conexion cpu
+[WARNING] 09:47:56:447 cpu/(4076:4080): El tam despues del recv es: 100
+[INFO] 10:28:07:659 cpu/(5779:5779): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 10:28:07:662 cpu/(5779:5779): El socket de kernel en cpu.c es : 4
+[INFO] 10:28:11:161 cpu/(5779:5779): Cliente conectado (a CPU)
+
+[WARNING] 10:28:11:163 cpu/(5779:5782): Entre en procesar conexion cpu
+[WARNING] 10:28:14:299 cpu/(5779:5782): El tam despues del recv es: 100
+[INFO] 10:43:42:113 cpu/(6308:6308): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 10:43:42:113 cpu/(6308:6308): El socket de kernel en cpu.c es : 4
+[INFO] 10:43:44:664 cpu/(6308:6308): Cliente conectado (a CPU)
+
+[WARNING] 10:43:44:664 cpu/(6308:6310): Entre en procesar conexion cpu
+[WARNING] 10:43:48:231 cpu/(6308:6310): El tam despues del recv es: 100
+[INFO] 10:45:00:308 cpu/(6435:6435): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 10:45:00:308 cpu/(6435:6435): El socket de kernel en cpu.c es : 4
+[INFO] 10:45:04:058 cpu/(6435:6435): Cliente conectado (a CPU)
+
+[WARNING] 10:45:04:063 cpu/(6435:6438): Entre en procesar conexion cpu
+[WARNING] 10:45:08:398 cpu/(6435:6438): El tam despues del recv es: 100
