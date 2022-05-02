@@ -144,6 +144,9 @@ int crear_conexion(t_log* logger,const char* server_name, char* ip, char* puerto
     // Crea un socket con la informacion recibida (del primero, suficiente)
     int socket_cliente = socket(servinfo->ai_family, servinfo->ai_socktype, servinfo->ai_protocol);
 
+  //  log_warning(logger,"En crear conexion, el socket cliente es: %d", socket_cliente);
+
+
     // Fallo en crear el socket
     if(socket_cliente == -1) {
         log_error(logger, "Error creando el socket para %s:%s", ip, puerto);

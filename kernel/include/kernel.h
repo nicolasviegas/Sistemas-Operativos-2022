@@ -20,6 +20,7 @@
 #include "../../shared/include/consola-kernel.h"
 #include "../include/comunicacion_kernel.h"
 #include "../include/funciones_kernel.h"
+#include "../../cpu/include/cpu.h"
 
 
 
@@ -33,8 +34,13 @@ t_log* log_kernel;
 
 t_paquete* paquete_consola_kernel;
 
-int server_escuchar(t_log* logger, char* server_name, int server_socket);
+//agregas colas_new, colas_ready, etc
 
-void cerrar_programa(t_log* logger);
+int server_escuchar_kernel(t_log* logger, char* server_name, int server_socket);
 
-#endif /KERNELH/
+void cerrar_programa_kernel(t_log* logger);
+
+bool generar_conexiones_cpu(t_log* logger, char* ip, char* puerto, int* fd_mod2);
+
+
+#endif /*KERNELH*/

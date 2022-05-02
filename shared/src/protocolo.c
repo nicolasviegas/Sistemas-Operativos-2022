@@ -120,7 +120,7 @@ static void* serializar_READ(uint32_t parametro1) {
 
     printf("El cop en serializar READ es: %d\n",cop);
     printf("El parametro 1 es: %d\n",parametro1);
-    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+    //printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
 
@@ -177,7 +177,7 @@ static void* serializar_WRITE(uint32_t parametro1, uint32_t parametro2) {
     printf("El cop en serializar WRITE es: %d\n",cop);
     printf("El parametro 1 es: %d\n",parametro1);
     printf("El parametro 2 es: %d\n",parametro2);
-    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
 
     return stream;
 }
@@ -227,7 +227,7 @@ static void* serializar_COPY(uint32_t parametro1, uint32_t parametro2) {
     printf("El cop en serializar WRITE es: %d\n",cop);
     printf("El parametro 1 es: %d\n",parametro1);
     printf("El parametro 2 es: %d\n",parametro2);
-    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+  //  printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
 
     return stream;
 }
@@ -275,7 +275,7 @@ static void* serializar_EXIT() {
 
     printf("El cop en serializar EXIT es: %d\n",cop);
 
-    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+  //  printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
 
@@ -330,7 +330,7 @@ static void* serializar_TAM(uint32_t parametro1) {
 
    // printf("El cop en serializar READ es: %d\n",cop);
     printf("El tam a enviar es: %d\n",parametro1);
-    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
 
@@ -338,7 +338,7 @@ static void* serializar_TAM(uint32_t parametro1) {
 void deserializar_TAM(void* stream, uint32_t* parametro1) {
 
     memcpy(parametro1, stream ,sizeof(uint32_t));
-    printf("El tam en deserializar tam es: %d \n", parametro1);
+//  printf("El tam en deserializar tam es: %d \n", parametro1);
 
 }
 

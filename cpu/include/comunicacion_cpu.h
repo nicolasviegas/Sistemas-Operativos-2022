@@ -1,5 +1,5 @@
-#ifndef KERNEL_INCLUDE_COMUNICACION_KERNEL_H_
-#define KERNEL_INCLUDE_COMUNICACION_KERNEL_H_
+#ifndef CPU_INCLUDE_COMUNICACION_CPU_H_
+#define CPU_INCLUDE_COMUNICACION_CPU_H_
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,12 +20,9 @@
 
 */
 
-int contador_cliente;
-
-
+//int contador_cliente;
 
 
 #endif /* KERNEL_INCLUDE_COMUNICACION_KERNEL_H_ */
-
 
 

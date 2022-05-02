@@ -9,22 +9,27 @@ typedef struct {
     char* server_name;
 } t_procesar_conexion_args;
 
-static void procesar_conexion(void* void_args) {
+static void procesar_conexion_kernel(void* void_args) {
+
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* log_kernel = args->log;
     int cliente_socket = args->fd;
     char* server_name = args->server_name;
     free(args);
 
+//    char* ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
+//       char* puerto_cpu_dispatch = config_get_string_value(config_kernel,"PUERTO_CPU_DISPATCH");
+//
 
     uint32_t tam;
     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-
 	log_info(log_kernel, "DISCONNECT!");
+
+
 	return;
     }
 
-	log_warning(log_kernel,"El tam despues del recv es: %d",tam);
+	//log_warning(log_kernel,"El tam despues del recv es: %d",tam);
 
     //log_error(log_kernel,"El cliente es: %s",server_name);
 
@@ -41,8 +46,18 @@ static void procesar_conexion(void* void_args) {
 
         	//log_error(log_kernel,"Elde recv vuelve %d",recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0));
 
+
+        	contador_cliente++;
+        	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
-            return;
+////////////////////////////////////////////////////////////////////////////////////
+
+        	send_TAM(fd_cpu,100); //ESTO ES DE PRUEBA PARA VER SI SE ENVIA DE KERNEL A CPU BORRAR
+//////////////////////////////////////////////////////////////////////////////////
+        	log_trace(log_kernel,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
+
+
+           return;
         	//break;
         }
 
@@ -151,8 +166,13 @@ static void procesar_conexion(void* void_args) {
 
     	//log_error(log_kernel,"------------------------------------------------------");
     }
-
     log_warning(log_kernel, "El cliente se desconecto de %s server", server_name);
+
+    //ACA ES DONDE HAY QUE HACER LAS CONEXIONES ENTRE KERNEL Y CPU/////////////////////////////////////////////////////////////////
+
+   // generar_conexion_kernel_cpu(log_kernel,ip_cpu,puerto_cpu_dispatch);
+
+
     return;
 }
 
@@ -166,7 +186,7 @@ static void procesar_conexion(void* void_args) {
 //	return;
 //}
 
-int server_escuchar(t_log* logger, char* server_name, int server_socket) {
+int server_escuchar_kernel(t_log* logger, char* server_name, int server_socket) {
     int cliente_socket = esperar_cliente(logger, server_name, server_socket);
 
     if (cliente_socket != -1) {
@@ -175,10 +195,10 @@ int server_escuchar(t_log* logger, char* server_name, int server_socket) {
         args->log = logger;
         args->fd = cliente_socket;
         args->server_name = server_name;
-        log_error(log_kernel,"Estoy en sv escuchar antes de procesar conexion");
-        pthread_create(&hilo, NULL, (void*) procesar_conexion, (void*) args);
+       // log_error(log_kernel,"Estoy en sv escuchar antes de procesar conexion");
+        pthread_create(&hilo, NULL, (void*) procesar_conexion_kernel, (void*) args);
         pthread_detach(hilo);
-        log_error(log_kernel,"Estoy en sv escuchar despues de procesar conexion");
+       // log_error(log_kernel,"Estoy en sv escuchar despues de procesar conexion");
         return 1;
     }
     return 0;

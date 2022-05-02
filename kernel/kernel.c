@@ -12,19 +12,29 @@ void sighandler(int s) {
 }
 */
 
+void cerrar_programa2(t_log* logger) {
+    log_destroy(logger);
+}
+
 int main() {
 
-    char ip;
+    char* ip;
     char* puerto_escucha;
+    contador_cliente = 0;
 
     //signal(SIGINT, sighandler);
 
-    log_kernel = log_create("kernel.log","consola",1,LOG_LEVEL_TRACE);
+    log_kernel = log_create("kernel.log","cpu",1,LOG_LEVEL_TRACE);
 
     config_kernel = config_create("kernel.config");
 
     ip = config_get_string_value(config_kernel,"IP_MEMORIA");
     puerto_escucha = config_get_string_value(config_kernel,"PUERTO_ESCUCHA");
+
+    char* ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
+    char* puerto_cpu_dispatch = config_get_string_value(config_kernel,"PUERTO_CPU_DISPATCH");
+
+
 
     lista_instrucciones_kernel = list_create();
 
@@ -32,8 +42,16 @@ int main() {
 
     log_trace(log_kernel,"El socket : %d",fd_consola);
 
+    fd_cpu = 0;
+    if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_dispatch, &fd_cpu)) {
+    		cerrar_programa2(log_kernel);
+    		return EXIT_FAILURE;
+    }
+    log_trace(log_kernel,"El fd_cpu despues de grar conexiones es: %d",fd_cpu);
+
+
     //conexion entre Kernel (Servidor) y consola(cliente)
-    while(server_escuchar(log_kernel,"KERNEL",fd_consola));
+    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_consola));
 
 /*
     instrucciones* a = malloc(sizeof(instrucciones));
@@ -46,7 +64,7 @@ int main() {
 */
     log_warning(log_kernel,"Despues de server escuchar");
 
-    //cerrar_programa(log_kernel);
+    //cerrar_programa_kernel(log_kernel);
 
-    return 0;
+    return EXIT_SUCCESS;
 }

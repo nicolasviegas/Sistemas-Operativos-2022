@@ -2,14 +2,14 @@
 
 //////////////////////
 //NUEVA EN CONSOLA, ESTABA EN KERNEL ANTES
-bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2) {
-    // No hardcodear, levantar de config
-
-
-    *fd_mod2 = crear_conexion(logger,"KERNEL", ip, puerto );
-
-    return *fd_mod2 != 0;
-}
+//bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2) {
+//    // No hardcodear, levantar de config
+//
+//
+//    *fd_mod2 = crear_conexion(logger,"KERNEL", ip, puerto );
+//
+//    return *fd_mod2 != 0;
+//}
 
 void send_instrucciones(t_list* lista_instrucciones,uint32_t tam,int fd_mod2){
 

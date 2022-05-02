@@ -41,8 +41,6 @@ int main(int argc, char** argv){
 
 	int cant_instrucciones = list_size(lista_instrucciones);
 
-	log_error(log_consola,"cant de instrucciones: %d",cant_instrucciones);
-
 	int fd_mod2=0;
 	if (!generar_conexiones(log_consola, ip, puerto, &fd_mod2)) {
 		cerrar_programa(log_consola);
