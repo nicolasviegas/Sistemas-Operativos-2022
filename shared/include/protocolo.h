@@ -9,6 +9,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <stdlib.h>
+#include "../../kernel/include/planificacion.h"
 
 typedef enum{ //tipos de identificadores a parsear
     NO_OP = 13, //0

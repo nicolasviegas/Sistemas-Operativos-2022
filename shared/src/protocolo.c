@@ -373,3 +373,73 @@ bool recv_TAM(int fd, uint32_t* parametro1) {
     free(stream);
     return true;
 }
+
+///////////////////////////////////////////////////////////////////////////////
+//\
+
+//HAY UN INVALID WRITE, PERO NO SE DONDE ES QUE ESCRIBE DE MAS
+void* serializar_PCB(pcb_t* pcb) {
+	printf("El size del pcb en serializar es: %d\n",sizeof(pcb_t));
+	printf("El size del tlist en serializar es: %d\n",sizeof(t_list));
+    void* stream = malloc(sizeof(pcb_t));
+    if (stream == NULL) return NULL;
+
+    memcpy(stream, &pcb->PID, sizeof(uint32_t));
+    memcpy(stream+sizeof(uint32_t), &pcb->tamanio, sizeof(uint32_t));
+    memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t), &pcb->instrucciones, sizeof(t_list));
+    memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list), &pcb->PC, sizeof(uint32_t));
+  //  memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t), &pcb->tabla_paginas, sizeof(t_list));
+///    memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t)+sizeof(t_list), &pcb->estimacionRafaga, sizeof(uint32_t));
+ ///   memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t), &pcb->alpha, sizeof(uint32_t));//este HAY QUE CAMBIARLO NO ES UINT
+
+    return stream;
+}
+
+void deserializar_PCB(void* stream,pcb_t* pcb) {
+	pcb = malloc(sizeof(pcb_t));
+    if (pcb == NULL){
+    	printf("error al deserializar el pcb \n");
+    }
+    memcpy(&pcb->PID, stream, sizeof(uint32_t));
+    memcpy(&pcb->tamanio, stream+sizeof(uint32_t), sizeof(uint32_t));
+    memcpy(&pcb->instrucciones, stream+sizeof(uint32_t)+sizeof(uint32_t), sizeof(t_list));
+    memcpy(&pcb->PC, stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list), sizeof(uint32_t));
+    //memcpy(&pcb->tabla_paginas, stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t), sizeof(t_list));
+    //memcpy(&pcb->estimacionRafaga, stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t)+sizeof(t_list), sizeof(uint32_t));
+  //  memcpy(&pcb->alpha, stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t), sizeof(uint32_t));
+
+}
+
+//estas 2, send y rcv no se si van
+bool send_PCB(int fd, pcb_t* parametro1) {
+	printf("Entre en send_PCB \n");
+   size_t size = sizeof(pcb_t);
+
+    void* stream = serializar_PCB(parametro1);
+
+
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    free(stream);
+    return true;
+}
+
+bool recv_PCB(int fd, pcb_t** parametro1) {
+	printf("Entre en send_PCB \n");
+    size_t size = sizeof(pcb_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_PCB(stream,parametro1);
+
+    free(stream);
+    return true;
+}
+

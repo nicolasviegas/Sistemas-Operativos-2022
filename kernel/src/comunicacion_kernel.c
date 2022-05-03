@@ -17,8 +17,13 @@ static void procesar_conexion_kernel(void* void_args) {
     char* server_name = args->server_name;
     free(args);
 
-    int estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
-    int alfa = config_get_int_value(config_kernel,"ALFA");
+    uint32_t estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
+    //char* alfa = config_get_string_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT
+
+    uint32_t alfa = 1; //////////////////////////////////CAMBIAR NO ES ASI HAY QUE SACARLO DE CONFIG, LO USO ASI AHORA PARA VER SI FUNCIONA ////////////////////////////////////////
+
+    //log_error(log_kernel,"la estimacion inicial desp del config es: %d",estimacion_inicial);
+    //log_error(log_kernel,"el alfa desp del config es: %s",alfa);
 
     uint32_t tam;
     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -28,22 +33,11 @@ static void procesar_conexion_kernel(void* void_args) {
 	return;
     }
 
-	//log_warning(log_kernel,"El tam despues del recv es: %d",tam);
-
-    //log_error(log_kernel,"El cliente es: %s",server_name);
 
     op_code_instrucciones cop;
     while (cliente_socket != -1) {
 
-    	//log_warning(log_kernel,"El codigo de operacion es: %d",cop);
-
         if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
-
-        	//printf("El socket en procesar conexion es: %d \n",cliente_socket);
-
-        	//printf("El tam de op_code_instrucciones es %d\n", sizeof(op_code_instrucciones));
-
-        	//log_error(log_kernel,"Elde recv vuelve %d",recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0));
 
 
         	contador_cliente++;
@@ -62,11 +56,11 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso->PID = contador_cliente;
         	pcb_proceso->tamanio = tam;
         	pcb_proceso->instrucciones = lista_nueva_kernel;
-        	pcb_proceso->tabla_paginas = tabla_paginas;
-        	pcb_proceso->estimacionRafaga = estimacion_inicial;
-        	pcb_proceso->alpha = alfa;
+        	//pcb_proceso->tabla_paginas = tabla_paginas;
+        	//pcb_proceso->estimacionRafaga = estimacion_inicial;
+        	//pcb_proceso->alpha = alfa;
 
-        	//send_PCB(fd_cpu,pcb_proceso);
+        	send_PCB(fd_cpu,pcb_proceso);
 
 
         	free(pcb_proceso);
@@ -77,7 +71,7 @@ static void procesar_conexion_kernel(void* void_args) {
 ////////////////////////////////////////////////////////////////////////////////////
 
 
-        	send_TAM(fd_cpu,100); //ESTO ES DE PRUEBA PARA VER SI SE ENVIA DE KERNEL A CPU BORRAR
+        //	send_TAM(fd_cpu,100); //ESTO ES DE PRUEBA PARA VER SI SE ENVIA DE KERNEL A CPU BORRAR
 //////////////////////////////////////////////////////////////////////////////////
         	log_trace(log_kernel,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
 

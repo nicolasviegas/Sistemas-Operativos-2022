@@ -22,30 +22,33 @@ static void procesar_conexion_cpu(void* void_args) {
 	log_warning(log_cpu,"Entre en procesar conexion cpu");
 
 
-	 uint32_t tam;
+//	 uint32_t tam;
+//
+//	     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+//	 	log_info(log_cpu, "DISCONNECT!");
+//
+//
+//	 	return;
+//	     }
+//	     log_warning(log_cpu,"El tam despues del recv es: %d",tam);
 
-	     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-	 	log_info(log_cpu, "DISCONNECT!");
-
-
-	 	return;
-	     }
-	     log_warning(log_cpu,"El tam despues del recv es: %d",tam);
-
+	 pcb_t* pcb;
 	 while (cliente_socket != -1) {
 
-		    	//log_warning(log_kernel,"El codigo de operacion es: %d",cop);
+		    	log_warning(log_cpu,"Entre en el while de cliente socket");
 
-//		        if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-//
-//		        	log_info(log_cpu, "DISCONNECT!");
-//
-//		        	log_trace(log_cpu,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
-//
-//
-//		           return;
-//		        	//break;
-//		        }
+		        if (recv(cliente_socket, &pcb, sizeof(pcb_t), 0) != sizeof(pcb_t)) {//ESTA RECIBIENDO MAL. EN VEZ DE RECIBIR 16BYTES RECIBE 4
+
+		        	printf("el tam que recibe es: %d\n",sizeof(recv(cliente_socket, &pcb, sizeof(pcb_t), 0)));
+		        	log_trace(log_cpu,"size de pcb %d",sizeof(pcb_t));
+		        	log_info(log_cpu, "DISCONNECT!");
+
+		        	log_trace(log_cpu,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
+
+
+		           return;
+		        	//break;
+		        }
 
 		      //  log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
 
