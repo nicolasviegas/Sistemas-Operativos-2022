@@ -25,14 +25,13 @@ typedef struct{
 
 typedef struct{
 	uint32_t PID;
-	uint32_t tamanio;
+	//uint32_t tamanio;
 	t_list* instrucciones;
-	uint32_t PC;
+//	uint32_t PC;
 	//t_list* tabla_paginas;
-//	uint32_t estimacionRafaga;
+	//uint32_t estimacionRafaga;
 	//uint32_t alpha;
 
-	//	TIENE QUE TENER ESTADO???  NEW BLOQ ETC
 
 	//t_semaforo* semaforoEsperado;
 	//comentario prueba 2

@@ -1,665 +1,330 @@
-[INFO] 23:08:22:524 cpu/(8887:8887): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 23:08:22:524 cpu/(8887:8887): El socket : 4
-[INFO] 23:09:29:917 cpu/(9024:9024): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 23:09:29:917 cpu/(9024:9024): El socket : 4
-[INFO] 23:10:42:579 cpu/(9087:9087): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 23:10:42:580 cpu/(9087:9087): El socket : 4
-[INFO] 23:17:09:818 cpu/(9702:9702): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 23:17:09:818 cpu/(9702:9702): El socket : 4
-[INFO] 23:17:16:765 cpu/(9702:9702): Cliente conectado (a CPU)
-
-[WARNING] 23:17:16:766 cpu/(9702:9702): El socket en sv escuchar cpu es: 4
-[WARNING] 23:17:16:766 cpu/(9702:9711): Entre en procesar conexion cpu
-[WARNING] 23:17:16:766 cpu/(9702:9711): El cliente se desconecto de CPU server
-[INFO] 23:17:26:709 cpu/(9702:9702): Cliente conectado (a CPU)
-
-[WARNING] 23:17:26:709 cpu/(9702:9702): El socket en sv escuchar cpu es: 4
-[WARNING] 23:17:26:709 cpu/(9702:9714): Entre en procesar conexion cpu
-[WARNING] 23:17:26:709 cpu/(9702:9714): El cliente se desconecto de CPU server
-[INFO] 23:17:28:043 cpu/(9702:9702): Cliente conectado (a CPU)
-
-[WARNING] 23:17:28:043 cpu/(9702:9702): El socket en sv escuchar cpu es: 4
-[WARNING] 23:17:28:044 cpu/(9702:9717): Entre en procesar conexion cpu
-[WARNING] 23:17:28:044 cpu/(9702:9717): El cliente se desconecto de CPU server
-[INFO] 23:17:29:370 cpu/(9702:9702): Cliente conectado (a CPU)
-
-[WARNING] 23:17:29:370 cpu/(9702:9702): El socket en sv escuchar cpu es: 4
-[WARNING] 23:17:29:370 cpu/(9702:9720): Entre en procesar conexion cpu
-[WARNING] 23:17:29:370 cpu/(9702:9720): El cliente se desconecto de CPU server
-[INFO] 23:17:45:225 cpu/(9702:9702): Cliente conectado (a CPU)
-
-[WARNING] 23:17:45:225 cpu/(9702:9702): El socket en sv escuchar cpu es: 4
-[WARNING] 23:17:45:226 cpu/(9702:9723): Entre en procesar conexion cpu
-[WARNING] 23:17:45:226 cpu/(9702:9723): El cliente se desconecto de CPU server
-[INFO] 23:20:37:796 cpu/(10006:10006): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 23:20:37:796 cpu/(10006:10006): El socket : 4
-[INFO] 23:20:46:117 cpu/(10006:10006): Cliente conectado (a CPU)
-
-[WARNING] 23:20:46:117 cpu/(10006:10006): El socket en sv escuchar cpu es: 4
-[WARNING] 23:20:46:118 cpu/(10006:10011): Entre en procesar conexion cpu
-[INFO] 23:20:49:574 cpu/(10006:10006): Cliente conectado (a CPU)
-
-[WARNING] 23:20:49:574 cpu/(10006:10006): El socket en sv escuchar cpu es: 4
-[WARNING] 23:20:49:575 cpu/(10006:10014): Entre en procesar conexion cpu
-[INFO] 23:20:52:459 cpu/(10006:10006): Cliente conectado (a CPU)
-
-[WARNING] 23:20:52:459 cpu/(10006:10006): El socket en sv escuchar cpu es: 4
-[WARNING] 23:20:52:460 cpu/(10006:10017): Entre en procesar conexion cpu
-[INFO] 23:24:34:338 cpu/(10006:10017): DISCONNECT!
-[INFO] 23:24:34:338 cpu/(10006:10014): DISCONNECT!
-[INFO] 23:24:34:338 cpu/(10006:10011): DISCONNECT!
-[INFO] 23:24:41:346 cpu/(10502:10502): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 23:24:41:346 cpu/(10502:10502): El socket : 4
-[INFO] 23:24:46:733 cpu/(10502:10502): Cliente conectado (a CPU)
-
-[WARNING] 23:24:46:733 cpu/(10502:10502): El socket en sv escuchar cpu es: 4
-[ERROR] 23:24:46:733 cpu/(10502:10502): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:24:46:733 cpu/(10502:10502): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:24:46:734 cpu/(10502:10507): Entre en procesar conexion cpu
-[INFO] 23:24:53:396 cpu/(10502:10502): Cliente conectado (a CPU)
-
-[WARNING] 23:24:53:397 cpu/(10502:10502): El socket en sv escuchar cpu es: 4
-[ERROR] 23:24:53:397 cpu/(10502:10502): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:24:53:397 cpu/(10502:10502): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:24:53:398 cpu/(10502:10510): Entre en procesar conexion cpu
-[INFO] 23:24:54:795 cpu/(10502:10502): Cliente conectado (a CPU)
-
-[WARNING] 23:24:54:796 cpu/(10502:10502): El socket en sv escuchar cpu es: 4
-[ERROR] 23:24:54:796 cpu/(10502:10502): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:24:54:796 cpu/(10502:10502): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:24:54:797 cpu/(10502:10513): Entre en procesar conexion cpu
-[INFO] 23:24:57:315 cpu/(10502:10502): Cliente conectado (a CPU)
-
-[WARNING] 23:24:57:315 cpu/(10502:10502): El socket en sv escuchar cpu es: 4
-[ERROR] 23:24:57:315 cpu/(10502:10502): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:24:57:315 cpu/(10502:10502): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:24:57:315 cpu/(10502:10516): Entre en procesar conexion cpu
-[INFO] 23:24:59:138 cpu/(10502:10502): Cliente conectado (a CPU)
-
-[WARNING] 23:24:59:138 cpu/(10502:10502): El socket en sv escuchar cpu es: 4
-[ERROR] 23:24:59:138 cpu/(10502:10502): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:24:59:138 cpu/(10502:10502): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:24:59:139 cpu/(10502:10519): Entre en procesar conexion cpu
-[INFO] 23:25:08:150 cpu/(10502:10502): Cliente conectado (a CPU)
-
-[WARNING] 23:25:08:150 cpu/(10502:10502): El socket en sv escuchar cpu es: 4
-[ERROR] 23:25:08:150 cpu/(10502:10502): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:25:08:150 cpu/(10502:10502): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:25:08:151 cpu/(10502:10524): Entre en procesar conexion cpu
-[TRACE] 23:25:14:779 cpu/(10525:10525): El socket : 0
-[INFO] 23:25:14:779 cpu/(10525:10525): Cliente conectado (a CPU)
-
-[WARNING] 23:25:14:779 cpu/(10525:10525): El socket en sv escuchar cpu es: 0
-[WARNING] 23:25:14:780 cpu/(10525:10525): Despues de server escuchar
-[TRACE] 23:25:17:366 cpu/(10526:10526): El socket : 0
-[INFO] 23:25:17:366 cpu/(10526:10526): Cliente conectado (a CPU)
-
-[WARNING] 23:25:17:366 cpu/(10526:10526): El socket en sv escuchar cpu es: 0
-[WARNING] 23:25:17:366 cpu/(10526:10526): Despues de server escuchar
-[TRACE] 23:25:20:587 cpu/(10528:10528): El socket : 0
-[INFO] 23:25:20:587 cpu/(10528:10528): Cliente conectado (a CPU)
-
-[WARNING] 23:25:20:587 cpu/(10528:10528): El socket en sv escuchar cpu es: 0
-[WARNING] 23:25:20:587 cpu/(10528:10528): Despues de server escuchar
-[TRACE] 23:25:26:245 cpu/(10530:10530): El socket : 0
-[INFO] 23:25:26:245 cpu/(10530:10530): Cliente conectado (a CPU)
-
-[WARNING] 23:25:26:246 cpu/(10530:10530): El socket en sv escuchar cpu es: 0
-[WARNING] 23:25:26:246 cpu/(10530:10530): Despues de server escuchar
-[TRACE] 23:25:39:457 cpu/(10550:10550): El socket : 0
-[INFO] 23:25:39:457 cpu/(10550:10550): Cliente conectado (a CPU)
-
-[WARNING] 23:25:39:457 cpu/(10550:10550): El socket en sv escuchar cpu es: 0
-[WARNING] 23:25:39:457 cpu/(10550:10550): Despues de server escuchar
-[INFO] 23:27:18:338 cpu/(10672:10672): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 23:27:18:338 cpu/(10672:10672): El socket : 4
-[INFO] 23:27:37:121 cpu/(10672:10672): Cliente conectado (a CPU)
-
-[WARNING] 23:27:37:121 cpu/(10672:10672): El socket en sv escuchar cpu es: 4
-[ERROR] 23:27:37:121 cpu/(10672:10672): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:27:37:122 cpu/(10672:10672): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:27:37:122 cpu/(10672:10678): Entre en procesar conexion cpu
-[INFO] 23:28:39:113 cpu/(10672:10678): DISCONNECT!
-[INFO] 23:29:14:094 cpu/(10672:10672): Cliente conectado (a CPU)
-
-[WARNING] 23:29:14:094 cpu/(10672:10672): El socket en sv escuchar cpu es: 4
-[ERROR] 23:29:14:094 cpu/(10672:10672): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:29:14:094 cpu/(10672:10672): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:29:14:095 cpu/(10672:10828): Entre en procesar conexion cpu
-[INFO] 23:59:13:147 cpu/(11387:11387): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 23:59:13:148 cpu/(11387:11387): El socket : 4
-[INFO] 23:59:18:793 cpu/(11387:11387): Cliente conectado (a CPU)
-
-[WARNING] 23:59:18:793 cpu/(11387:11387): El socket en sv escuchar cpu es: 4
-[ERROR] 23:59:18:793 cpu/(11387:11387): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 23:59:18:793 cpu/(11387:11387): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 23:59:18:794 cpu/(11387:11391): Entre en procesar conexion cpu
-[INFO] 00:02:16:355 cpu/(11636:11636): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 00:02:16:355 cpu/(11636:11636): El socket : 4
-[INFO] 00:02:22:747 cpu/(11636:11636): Cliente conectado (a CPU)
-
-[WARNING] 00:02:22:747 cpu/(11636:11636): El socket en sv escuchar cpu es: 4
-[ERROR] 00:02:22:747 cpu/(11636:11636): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:02:22:747 cpu/(11636:11636): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:02:22:748 cpu/(11636:11642): Entre en procesar conexion cpu
-[INFO] 00:04:42:242 cpu/(11636:11642): DISCONNECT!
-[INFO] 00:04:46:942 cpu/(11790:11790): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 00:04:46:942 cpu/(11790:11790): El socket : 4
-[INFO] 00:04:53:964 cpu/(11790:11790): Cliente conectado (a CPU)
-
-[WARNING] 00:04:53:964 cpu/(11790:11790): El socket en sv escuchar cpu es: 4
-[ERROR] 00:04:53:964 cpu/(11790:11790): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:04:53:964 cpu/(11790:11790): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:04:53:965 cpu/(11790:11801): Entre en procesar conexion cpu
-[INFO] 00:06:24:577 cpu/(11790:11790): Cliente conectado (a CPU)
-
-[WARNING] 00:06:24:577 cpu/(11790:11790): El socket en sv escuchar cpu es: 4
-[ERROR] 00:06:24:577 cpu/(11790:11790): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:06:24:578 cpu/(11790:11790): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:06:24:581 cpu/(11790:11950): Entre en procesar conexion cpu
-[INFO] 00:06:30:617 cpu/(11790:11950): DISCONNECT!
-[INFO] 00:06:30:618 cpu/(11790:11801): DISCONNECT!
-[INFO] 00:06:35:225 cpu/(11952:11952): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 00:06:35:226 cpu/(11952:11952): El socket : 4
-[INFO] 00:06:41:704 cpu/(11952:11952): Cliente conectado (a CPU)
-
-[WARNING] 00:06:41:705 cpu/(11952:11952): El socket en sv escuchar cpu es: 4
-[ERROR] 00:06:41:705 cpu/(11952:11952): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:06:41:705 cpu/(11952:11952): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:06:41:705 cpu/(11952:11957): Entre en procesar conexion cpu
-[TRACE] 00:13:08:689 cpu/(12315:12315): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:08:689 cpu/(12315:12315): Cliente conectado (a CPU)
-
-[WARNING] 00:13:08:689 cpu/(12315:12315): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:08:689 cpu/(12315:12315): Despues de server escuchar
-[TRACE] 00:13:19:497 cpu/(12319:12319): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:19:497 cpu/(12319:12319): Cliente conectado (a CPU)
-
-[WARNING] 00:13:19:497 cpu/(12319:12319): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:19:497 cpu/(12319:12319): Despues de server escuchar
-[TRACE] 00:13:25:086 cpu/(12322:12322): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:25:087 cpu/(12322:12322): Cliente conectado (a CPU)
-
-[WARNING] 00:13:25:087 cpu/(12322:12322): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:25:087 cpu/(12322:12322): Despues de server escuchar
-[TRACE] 00:13:43:099 cpu/(12324:12324): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:43:100 cpu/(12324:12324): Cliente conectado (a CPU)
-
-[WARNING] 00:13:43:100 cpu/(12324:12324): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:43:100 cpu/(12324:12324): Despues de server escuchar
-[TRACE] 00:13:54:590 cpu/(12328:12328): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:54:590 cpu/(12328:12328): Cliente conectado (a CPU)
-
-[WARNING] 00:13:54:590 cpu/(12328:12328): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:54:590 cpu/(12328:12328): Despues de server escuchar
-[TRACE] 00:13:55:407 cpu/(12334:12334): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:55:407 cpu/(12334:12334): Cliente conectado (a CPU)
-
-[WARNING] 00:13:55:408 cpu/(12334:12334): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:55:408 cpu/(12334:12334): Despues de server escuchar
-[TRACE] 00:13:56:014 cpu/(12335:12335): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:56:014 cpu/(12335:12335): Cliente conectado (a CPU)
-
-[WARNING] 00:13:56:015 cpu/(12335:12335): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:56:015 cpu/(12335:12335): Despues de server escuchar
-[TRACE] 00:13:56:583 cpu/(12336:12336): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:56:583 cpu/(12336:12336): Cliente conectado (a CPU)
-
-[WARNING] 00:13:56:583 cpu/(12336:12336): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:56:584 cpu/(12336:12336): Despues de server escuchar
-[TRACE] 00:13:57:169 cpu/(12337:12337): El socket de kernel en cpu.c es : 0
-[INFO] 00:13:57:169 cpu/(12337:12337): Cliente conectado (a CPU)
-
-[WARNING] 00:13:57:169 cpu/(12337:12337): El socket en sv escuchar cpu es: 0
-[WARNING] 00:13:57:169 cpu/(12337:12337): Despues de server escuchar
-[TRACE] 00:14:03:882 cpu/(12345:12345): El socket de kernel en cpu.c es : 0
-[INFO] 00:14:03:994 cpu/(12345:12345): Cliente conectado (a CPU)
-
-[WARNING] 00:14:04:000 cpu/(12345:12345): El socket en sv escuchar cpu es: 0
-[WARNING] 00:14:04:003 cpu/(12345:12345): Despues de server escuchar
-[INFO] 00:14:13:648 cpu/(12346:12346): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 00:14:13:768 cpu/(12346:12346): El socket de kernel en cpu.c es : 4
-[INFO] 00:14:25:110 cpu/(12346:12346): Cliente conectado (a CPU)
-
-[WARNING] 00:14:25:119 cpu/(12346:12346): El socket en sv escuchar cpu es: 4
-[ERROR] 00:14:25:129 cpu/(12346:12346): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:14:25:154 cpu/(12346:12346): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:14:25:164 cpu/(12346:12351): Entre en procesar conexion cpu
-[INFO] 00:14:41:773 cpu/(12346:12346): Cliente conectado (a CPU)
-
-[WARNING] 00:14:41:773 cpu/(12346:12346): El socket en sv escuchar cpu es: 4
-[ERROR] 00:14:41:774 cpu/(12346:12346): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:14:41:776 cpu/(12346:12346): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:14:41:790 cpu/(12346:12359): Entre en procesar conexion cpu
-[INFO] 00:14:44:112 cpu/(12346:12346): Cliente conectado (a CPU)
-
-[WARNING] 00:14:44:113 cpu/(12346:12346): El socket en sv escuchar cpu es: 4
-[ERROR] 00:14:44:113 cpu/(12346:12346): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:14:44:128 cpu/(12346:12346): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:14:44:129 cpu/(12346:12362): Entre en procesar conexion cpu
-[INFO] 00:14:44:805 cpu/(12346:12346): Cliente conectado (a CPU)
-
-[WARNING] 00:14:44:806 cpu/(12346:12346): El socket en sv escuchar cpu es: 4
-[ERROR] 00:14:44:806 cpu/(12346:12346): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:14:44:821 cpu/(12346:12346): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:14:44:822 cpu/(12346:12365): Entre en procesar conexion cpu
-[TRACE] 00:22:14:566 cpu/(12993:12993): El socket de kernel en cpu.c es : 0
-[INFO] 00:22:14:566 cpu/(12993:12993): Cliente conectado (a CPU)
-
-[WARNING] 00:22:14:567 cpu/(12993:12993): El socket en sv escuchar cpu es: 0
-[WARNING] 00:22:14:567 cpu/(12993:12993): Despues de server escuchar
-[INFO] 00:25:40:061 cpu/(13047:13047): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 00:25:40:061 cpu/(13047:13047): El socket de kernel en cpu.c es : 4
-[INFO] 00:25:48:498 cpu/(13047:13047): Cliente conectado (a CPU)
-
-[WARNING] 00:25:48:498 cpu/(13047:13047): El socket en sv escuchar cpu es: 4
-[ERROR] 00:25:48:498 cpu/(13047:13047): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:25:48:498 cpu/(13047:13047): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:25:48:499 cpu/(13047:13052): Entre en procesar conexion cpu
-[INFO] 00:26:01:664 cpu/(13047:13047): Cliente conectado (a CPU)
-
-[WARNING] 00:26:01:664 cpu/(13047:13047): El socket en sv escuchar cpu es: 4
-[ERROR] 00:26:01:664 cpu/(13047:13047): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:26:01:665 cpu/(13047:13047): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:26:01:666 cpu/(13047:13067): Entre en procesar conexion cpu
-[INFO] 00:49:53:935 cpu/(13813:13813): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 00:49:53:935 cpu/(13813:13813): El socket de kernel en cpu.c es : 4
-[INFO] 00:50:04:381 cpu/(13813:13813): Cliente conectado (a CPU)
-
-[WARNING] 00:50:04:382 cpu/(13813:13813): El socket en sv escuchar cpu es: 4
-[ERROR] 00:50:04:382 cpu/(13813:13813): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 00:50:04:382 cpu/(13813:13813): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 00:50:04:382 cpu/(13813:13822): Entre en procesar conexion cpu
-[TRACE] 00:56:12:858 cpu/(14113:14113): El socket de kernel en cpu.c es : 0
-[INFO] 00:56:12:860 cpu/(14113:14113): Cliente conectado (a CPU)
-
-[WARNING] 00:56:12:860 cpu/(14113:14113): El socket en sv escuchar cpu es: 0
-[WARNING] 00:56:12:861 cpu/(14113:14113): Despues de server escuchar
-[INFO] 00:57:06:240 cpu/(14240:14240): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 00:57:06:240 cpu/(14240:14240): El socket de kernel en cpu.c es : 4
-[INFO] 00:59:27:779 cpu/(14496:14496): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 00:59:27:779 cpu/(14496:14496): El socket de kernel en cpu.c es : 4
-[INFO] 01:01:17:558 cpu/(14665:14665): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:01:17:559 cpu/(14665:14665): El socket de kernel en cpu.c es : 4
-[INFO] 01:02:03:593 cpu/(14790:14790): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:02:03:593 cpu/(14790:14790): El socket de kernel en cpu.c es : 4
-[INFO] 01:02:06:053 cpu/(14790:14790): Cliente conectado (a CPU)
-
-[WARNING] 01:02:06:053 cpu/(14790:14790): El socket en sv escuchar cpu es: 4
-[ERROR] 01:02:06:053 cpu/(14790:14790): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 01:02:06:053 cpu/(14790:14790): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 01:02:06:054 cpu/(14790:14793): Entre en procesar conexion cpu
-[INFO] 01:05:23:409 cpu/(15107:15107): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:05:23:410 cpu/(15107:15107): El socket de kernel en cpu.c es : 4
-[INFO] 01:05:25:837 cpu/(15107:15107): Cliente conectado (a CPU)
-
-[WARNING] 01:05:25:837 cpu/(15107:15107): El socket en sv escuchar cpu es: 4
-[ERROR] 01:05:25:837 cpu/(15107:15107): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 01:05:25:837 cpu/(15107:15107): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 01:05:25:838 cpu/(15107:15109): Entre en procesar conexion cpu
-[INFO] 01:07:15:867 cpu/(15269:15269): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:07:15:867 cpu/(15269:15269): El socket de kernel en cpu.c es : 4
-[INFO] 01:07:18:618 cpu/(15269:15269): Cliente conectado (a CPU)
-
-[WARNING] 01:07:18:618 cpu/(15269:15269): El socket en sv escuchar cpu es: 4
-[ERROR] 01:07:18:618 cpu/(15269:15269): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 01:07:18:619 cpu/(15269:15269): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 01:07:18:619 cpu/(15269:15272): Entre en procesar conexion cpu
-[WARNING] 01:07:18:619 cpu/(15269:15272): El tam despues del recv es: 100
-[WARNING] 01:07:18:619 cpu/(15269:15272): El cliente se desconecto de CPU server
-[TRACE] 01:08:16:907 cpu/(15397:15397): El socket de kernel en cpu.c es : 0
-[INFO] 01:08:16:907 cpu/(15397:15397): Cliente conectado (a CPU)
-
-[WARNING] 01:08:16:907 cpu/(15397:15397): El socket en sv escuchar cpu es: 0
-[WARNING] 01:08:16:907 cpu/(15397:15397): Despues de server escuchar
-[TRACE] 01:08:18:899 cpu/(15399:15399): El socket de kernel en cpu.c es : 0
-[INFO] 01:08:18:899 cpu/(15399:15399): Cliente conectado (a CPU)
-
-[WARNING] 01:08:18:899 cpu/(15399:15399): El socket en sv escuchar cpu es: 0
-[WARNING] 01:08:18:899 cpu/(15399:15399): Despues de server escuchar
-[TRACE] 01:08:25:671 cpu/(15401:15401): El socket de kernel en cpu.c es : 0
-[INFO] 01:08:25:672 cpu/(15401:15401): Cliente conectado (a CPU)
-
-[WARNING] 01:08:25:672 cpu/(15401:15401): El socket en sv escuchar cpu es: 0
-[WARNING] 01:08:25:672 cpu/(15401:15401): Despues de server escuchar
-[TRACE] 01:08:27:600 cpu/(15403:15403): El socket de kernel en cpu.c es : 0
-[INFO] 01:08:27:600 cpu/(15403:15403): Cliente conectado (a CPU)
-
-[WARNING] 01:08:27:600 cpu/(15403:15403): El socket en sv escuchar cpu es: 0
-[WARNING] 01:08:27:600 cpu/(15403:15403): Despues de server escuchar
-[TRACE] 01:08:29:213 cpu/(15405:15405): El socket de kernel en cpu.c es : 0
-[INFO] 01:08:29:213 cpu/(15405:15405): Cliente conectado (a CPU)
-
-[WARNING] 01:08:29:214 cpu/(15405:15405): El socket en sv escuchar cpu es: 0
-[WARNING] 01:08:29:214 cpu/(15405:15405): Despues de server escuchar
-[TRACE] 01:08:30:622 cpu/(15407:15407): El socket de kernel en cpu.c es : 0
-[INFO] 01:08:30:622 cpu/(15407:15407): Cliente conectado (a CPU)
-
-[WARNING] 01:08:30:622 cpu/(15407:15407): El socket en sv escuchar cpu es: 0
-[WARNING] 01:08:30:622 cpu/(15407:15407): Despues de server escuchar
-[INFO] 01:10:26:441 cpu/(15649:15649): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:10:26:441 cpu/(15649:15649): El socket de kernel en cpu.c es : 4
-[INFO] 01:10:30:143 cpu/(15649:15649): Cliente conectado (a CPU)
-
-[WARNING] 01:10:30:143 cpu/(15649:15649): El socket en sv escuchar cpu es: 4
-[ERROR] 01:10:30:143 cpu/(15649:15649): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 01:10:30:143 cpu/(15649:15649): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 01:10:30:144 cpu/(15649:15652): Entre en procesar conexion cpu
-[TRACE] 01:11:38:719 cpu/(15783:15783): El socket de kernel en cpu.c es : 0
-[INFO] 01:11:38:719 cpu/(15783:15783): Cliente conectado (a CPU)
-
-[WARNING] 01:11:38:720 cpu/(15783:15783): El socket en sv escuchar cpu es: 0
-[WARNING] 01:11:38:720 cpu/(15783:15783): Despues de server escuchar
-[INFO] 01:11:48:530 cpu/(15787:15787): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:11:48:530 cpu/(15787:15787): El socket de kernel en cpu.c es : 4
-[INFO] 01:11:50:976 cpu/(15787:15787): Cliente conectado (a CPU)
-
-[WARNING] 01:11:50:976 cpu/(15787:15787): El socket en sv escuchar cpu es: 4
-[ERROR] 01:11:50:976 cpu/(15787:15787): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 01:11:50:976 cpu/(15787:15787): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 01:11:50:977 cpu/(15787:15789): Entre en procesar conexion cpu
-[WARNING] 01:11:53:922 cpu/(15787:15789): El tam despues del recv es: 100
-[WARNING] 01:11:53:923 cpu/(15787:15789): El cliente se desconecto de CPU server
-[INFO] 01:13:45:941 cpu/(15941:15941): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:13:45:941 cpu/(15941:15941): El socket de kernel en cpu.c es : 4
-[INFO] 01:13:48:795 cpu/(15941:15941): Cliente conectado (a CPU)
-
-[WARNING] 01:13:48:795 cpu/(15941:15941): El socket en sv escuchar cpu es: 4
-[ERROR] 01:13:48:795 cpu/(15941:15941): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 01:13:48:795 cpu/(15941:15941): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 01:13:48:796 cpu/(15941:15944): Entre en procesar conexion cpu
-[WARNING] 01:13:54:512 cpu/(15941:15944): El tam despues del recv es: 100
-[INFO] 01:18:13:343 cpu/(16247:16247): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:18:13:344 cpu/(16247:16247): El socket de kernel en cpu.c es : 4
-[INFO] 01:18:16:052 cpu/(16247:16247): Cliente conectado (a CPU)
-
-[WARNING] 01:18:16:052 cpu/(16247:16247): El socket en sv escuchar cpu es: 4
-[ERROR] 01:18:16:052 cpu/(16247:16247): Estoy en sv escuchar antes de procesar conexion
-[ERROR] 01:18:16:052 cpu/(16247:16247): Estoy en sv escuchar despues de procesar conexion
-[WARNING] 01:18:16:053 cpu/(16247:16250): Entre en procesar conexion cpu
-[TRACE] 01:20:18:336 cpu/(16414:16414): El socket de kernel en cpu.c es : 0
-[INFO] 01:20:18:336 cpu/(16414:16414): Cliente conectado (a CPU)
-
-[WARNING] 01:20:18:336 cpu/(16414:16414): El socket en sv escuchar cpu es: 0
-[WARNING] 01:20:18:336 cpu/(16414:16414): Despues de server escuchar
-[TRACE] 01:20:20:174 cpu/(16416:16416): El socket de kernel en cpu.c es : 0
-[INFO] 01:20:20:175 cpu/(16416:16416): Cliente conectado (a CPU)
-
-[WARNING] 01:20:20:175 cpu/(16416:16416): El socket en sv escuchar cpu es: 0
-[WARNING] 01:20:20:175 cpu/(16416:16416): Despues de server escuchar
-[TRACE] 01:20:22:064 cpu/(16418:16418): El socket de kernel en cpu.c es : 0
-[INFO] 01:20:22:065 cpu/(16418:16418): Cliente conectado (a CPU)
-
-[WARNING] 01:20:22:065 cpu/(16418:16418): El socket en sv escuchar cpu es: 0
-[WARNING] 01:20:22:065 cpu/(16418:16418): Despues de server escuchar
-[INFO] 01:22:39:652 cpu/(16434:16434): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:22:39:653 cpu/(16434:16434): El socket de kernel en cpu.c es : 4
-[INFO] 01:22:43:630 cpu/(16434:16434): Cliente conectado (a CPU)
-
-[WARNING] 01:22:43:630 cpu/(16434:16434): El socket en sv escuchar cpu es: 4
-[WARNING] 01:22:43:631 cpu/(16434:16436): Entre en procesar conexion cpu
-[WARNING] 01:22:47:982 cpu/(16434:16436): El tam despues del recv es: 100
-[INFO] 01:26:15:531 cpu/(16737:16737): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:26:15:531 cpu/(16737:16737): El socket de kernel en cpu.c es : 4
-[INFO] 01:26:18:366 cpu/(16737:16737): Cliente conectado (a CPU)
-
-[WARNING] 01:26:18:366 cpu/(16737:16737): El socket en sv escuchar cpu es: 4
-[WARNING] 01:26:18:367 cpu/(16737:16739): Entre en procesar conexion cpu
-[WARNING] 01:26:29:481 cpu/(16737:16739): El tam despues del recv es: 100
-[TRACE] 01:27:04:417 cpu/(16849:16849): El socket de kernel en cpu.c es : 0
-[INFO] 01:27:04:418 cpu/(16849:16849): Cliente conectado (a CPU)
-
-[WARNING] 01:27:04:418 cpu/(16849:16849): Despues de server escuchar
-[TRACE] 01:27:07:890 cpu/(16851:16851): El socket de kernel en cpu.c es : 0
-[INFO] 01:27:07:890 cpu/(16851:16851): Cliente conectado (a CPU)
-
-[WARNING] 01:27:07:890 cpu/(16851:16851): Despues de server escuchar
-[TRACE] 01:27:52:872 cpu/(16966:16966): El socket de kernel en cpu.c es : 0
-[INFO] 01:27:52:872 cpu/(16966:16966): Cliente conectado (a CPU)
-
-[TRACE] 01:27:56:755 cpu/(16968:16968): El socket de kernel en cpu.c es : 0
-[INFO] 01:27:56:755 cpu/(16968:16968): Cliente conectado (a CPU)
-
-[INFO] 01:28:04:218 cpu/(16971:16971): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:28:04:312 cpu/(16971:16971): El socket de kernel en cpu.c es : 4
-[INFO] 01:28:11:552 cpu/(16971:16971): Cliente conectado (a CPU)
-
-[WARNING] 01:28:11:581 cpu/(16971:16976): Entre en procesar conexion cpu
-[WARNING] 01:28:47:822 cpu/(16971:16976): El tam despues del recv es: 100
-[INFO] 01:31:11:505 cpu/(17413:17413): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 01:31:11:505 cpu/(17413:17413): El socket de kernel en cpu.c es : 4
-[INFO] 01:31:15:061 cpu/(17413:17413): Cliente conectado (a CPU)
-
-[WARNING] 01:31:15:062 cpu/(17413:17415): Entre en procesar conexion cpu
-[WARNING] 01:31:24:056 cpu/(17413:17415): El tam despues del recv es: 100
-[INFO] 09:45:41:072 cpu/(3923:3923): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 09:45:41:086 cpu/(3923:3923): El socket de kernel en cpu.c es : 4
-[INFO] 09:46:06:619 cpu/(3923:3923): Cliente conectado (a CPU)
-
-[WARNING] 09:46:06:620 cpu/(3923:4053): Entre en procesar conexion cpu
-[WARNING] 09:46:18:830 cpu/(3923:4053): El tam despues del recv es: 100
-[INFO] 09:47:19:813 cpu/(4059:4059): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 09:47:19:813 cpu/(4059:4059): El socket de kernel en cpu.c es : 4
-[INFO] 09:47:22:965 cpu/(4059:4059): Cliente conectado (a CPU)
-
-[WARNING] 09:47:22:966 cpu/(4059:4061): Entre en procesar conexion cpu
-[INFO] 09:47:49:321 cpu/(4076:4076): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 09:47:49:321 cpu/(4076:4076): El socket de kernel en cpu.c es : 4
-[INFO] 09:47:52:621 cpu/(4076:4076): Cliente conectado (a CPU)
-
-[WARNING] 09:47:52:624 cpu/(4076:4080): Entre en procesar conexion cpu
-[WARNING] 09:47:56:447 cpu/(4076:4080): El tam despues del recv es: 100
-[INFO] 10:28:07:659 cpu/(5779:5779): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 10:28:07:662 cpu/(5779:5779): El socket de kernel en cpu.c es : 4
-[INFO] 10:28:11:161 cpu/(5779:5779): Cliente conectado (a CPU)
-
-[WARNING] 10:28:11:163 cpu/(5779:5782): Entre en procesar conexion cpu
-[WARNING] 10:28:14:299 cpu/(5779:5782): El tam despues del recv es: 100
-[INFO] 10:43:42:113 cpu/(6308:6308): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 10:43:42:113 cpu/(6308:6308): El socket de kernel en cpu.c es : 4
-[INFO] 10:43:44:664 cpu/(6308:6308): Cliente conectado (a CPU)
-
-[WARNING] 10:43:44:664 cpu/(6308:6310): Entre en procesar conexion cpu
-[WARNING] 10:43:48:231 cpu/(6308:6310): El tam despues del recv es: 100
-[INFO] 10:45:00:308 cpu/(6435:6435): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 10:45:00:308 cpu/(6435:6435): El socket de kernel en cpu.c es : 4
-[INFO] 10:45:04:058 cpu/(6435:6435): Cliente conectado (a CPU)
-
-[WARNING] 10:45:04:063 cpu/(6435:6438): Entre en procesar conexion cpu
-[WARNING] 10:45:08:398 cpu/(6435:6438): El tam despues del recv es: 100
-[INFO] 11:17:29:370 cpu/(7806:7806): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 11:17:29:370 cpu/(7806:7806): El socket de kernel en cpu.c es : 4
-[INFO] 11:17:33:985 cpu/(7806:7806): Cliente conectado (a CPU)
-
-[WARNING] 11:17:33:985 cpu/(7806:7808): Entre en procesar conexion cpu
-[WARNING] 11:17:42:990 cpu/(7806:7808): El tam despues del recv es: 100
-[INFO] 14:13:08:690 cpu/(2984:2984): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 14:13:08:719 cpu/(2984:2984): El socket de kernel en cpu.c es : 4
-[INFO] 14:14:20:195 cpu/(2984:2984): Cliente conectado (a CPU)
-
-[WARNING] 14:14:20:197 cpu/(2984:2996): Entre en procesar conexion cpu
-[WARNING] 14:14:29:437 cpu/(2984:2996): El tam despues del recv es: 100
-[INFO] 14:28:44:902 cpu/(3723:3723): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 14:28:44:903 cpu/(3723:3723): El socket de kernel en cpu.c es : 4
-[INFO] 14:28:49:610 cpu/(3723:3723): Cliente conectado (a CPU)
-
-[WARNING] 14:28:49:610 cpu/(3723:3726): Entre en procesar conexion cpu
-[WARNING] 14:28:52:163 cpu/(3723:3726): El tam despues del recv es: 100
-[INFO] 14:57:57:461 cpu/(4984:4984): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 14:57:57:462 cpu/(4984:4984): El socket de kernel en cpu.c es : 4
-[INFO] 14:58:01:089 cpu/(4984:4984): Cliente conectado (a CPU)
-
-[WARNING] 14:58:01:090 cpu/(4984:4986): Entre en procesar conexion cpu
-[WARNING] 14:58:01:090 cpu/(4984:4986): Entre en el while de cliente socket
-[WARNING] 14:58:08:126 cpu/(4984:4986): Entre en el while de cliente socket
-[INFO] 14:58:08:126 cpu/(4984:4986): DISCONNECT!
-[TRACE] 14:58:08:126 cpu/(4984:4986): El socket de cpu despues de grar conexiones es: 0
-[TRACE] 14:58:51:945 cpu/(4996:4996): El socket de kernel en cpu.c es : 0
-[INFO] 14:58:52:059 cpu/(4996:4996): Cliente conectado (a CPU)
-
-[TRACE] 14:58:57:967 cpu/(4997:4997): El socket de kernel en cpu.c es : 0
-[INFO] 14:58:58:082 cpu/(4997:4997): Cliente conectado (a CPU)
-
-[TRACE] 14:59:04:862 cpu/(4999:4999): El socket de kernel en cpu.c es : 0
-[INFO] 14:59:05:056 cpu/(4999:4999): Cliente conectado (a CPU)
-
-[INFO] 14:59:15:180 cpu/(5001:5001): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 14:59:15:289 cpu/(5001:5001): El socket de kernel en cpu.c es : 4
-[INFO] 14:59:19:108 cpu/(5001:5001): Cliente conectado (a CPU)
-
-[WARNING] 14:59:19:189 cpu/(5001:5003): Entre en procesar conexion cpu
-[WARNING] 14:59:19:206 cpu/(5001:5003): Entre en el while de cliente socket
-[WARNING] 14:59:22:986 cpu/(5001:5003): Entre en el while de cliente socket
-[INFO] 14:59:22:988 cpu/(5001:5003): DISCONNECT!
-[TRACE] 14:59:22:993 cpu/(5001:5003): El socket de cpu despues de grar conexiones es: 0
-[INFO] 15:02:47:436 cpu/(5283:5283): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 15:02:48:077 cpu/(5283:5283): El socket de kernel en cpu.c es : 4
-[INFO] 15:02:52:837 cpu/(5283:5283): Cliente conectado (a CPU)
-
-[WARNING] 15:02:52:885 cpu/(5283:5286): Entre en procesar conexion cpu
-[WARNING] 15:02:52:893 cpu/(5283:5286): Entre en el while de cliente socket
-[INFO] 15:02:57:527 cpu/(5283:5286): DISCONNECT!
-[TRACE] 15:02:57:528 cpu/(5283:5286): El socket de cpu despues de grar conexiones es: 0
-[TRACE] 15:04:45:527 cpu/(5490:5490): El socket de kernel en cpu.c es : 0
-[INFO] 15:04:45:795 cpu/(5490:5490): Cliente conectado (a CPU)
-
-[TRACE] 15:04:59:423 cpu/(5494:5494): El socket de kernel en cpu.c es : 0
-[INFO] 15:04:59:535 cpu/(5494:5494): Cliente conectado (a CPU)
-
-[TRACE] 15:05:09:654 cpu/(5496:5496): El socket de kernel en cpu.c es : 0
-[INFO] 15:05:09:770 cpu/(5496:5496): Cliente conectado (a CPU)
-
-[TRACE] 15:05:21:547 cpu/(5498:5498): El socket de kernel en cpu.c es : 0
-[INFO] 15:05:21:663 cpu/(5498:5498): Cliente conectado (a CPU)
-
-[INFO] 15:05:55:350 cpu/(5502:5502): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 15:05:55:470 cpu/(5502:5502): El socket de kernel en cpu.c es : 4
-[INFO] 15:05:59:859 cpu/(5502:5502): Cliente conectado (a CPU)
-
-[WARNING] 15:05:59:898 cpu/(5502:5504): Entre en procesar conexion cpu
-[WARNING] 15:05:59:903 cpu/(5502:5504): Entre en el while de cliente socket
-[INFO] 15:06:03:088 cpu/(5502:5504): DISCONNECT!
-[TRACE] 15:06:03:115 cpu/(5502:5504): El socket de cpu despues de grar conexiones es: 0
-[TRACE] 15:07:43:423 cpu/(5653:5653): El socket de kernel en cpu.c es : 0
-[INFO] 15:07:43:537 cpu/(5653:5653): Cliente conectado (a CPU)
-
-[INFO] 15:10:32:231 cpu/(5666:5666): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 15:10:32:348 cpu/(5666:5666): El socket de kernel en cpu.c es : 4
-[INFO] 15:10:36:770 cpu/(5666:5666): Cliente conectado (a CPU)
-
-[WARNING] 15:10:36:807 cpu/(5666:5668): Entre en procesar conexion cpu
-[WARNING] 15:10:36:812 cpu/(5666:5668): Entre en el while de cliente socket
-[WARNING] 15:10:40:034 cpu/(5666:5668): Entre en el while de cliente socket
-[TRACE] 15:10:40:059 cpu/(5666:5668): size de pcb 16
-[INFO] 15:10:40:062 cpu/(5666:5668): DISCONNECT!
-[TRACE] 15:10:40:064 cpu/(5666:5668): El socket de cpu despues de grar conexiones es: 0
-[INFO] 15:12:31:521 cpu/(5788:5788): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 15:12:31:773 cpu/(5788:5788): El socket de kernel en cpu.c es : 4
-[INFO] 15:12:35:863 cpu/(5788:5788): Cliente conectado (a CPU)
-
-[WARNING] 15:12:35:901 cpu/(5788:5790): Entre en procesar conexion cpu
-[WARNING] 15:12:35:911 cpu/(5788:5790): Entre en el while de cliente socket
-[WARNING] 15:12:38:937 cpu/(5788:5790): Entre en el while de cliente socket
-[TRACE] 15:12:38:976 cpu/(5788:5790): size de pcb 16
-[INFO] 15:12:38:993 cpu/(5788:5790): DISCONNECT!
-[TRACE] 15:12:39:023 cpu/(5788:5790): El socket de cpu despues de grar conexiones es: 0
-[TRACE] 15:16:36:322 cpu/(6054:6054): El socket de kernel en cpu.c es : 0
-[INFO] 15:16:36:960 cpu/(6054:6054): Cliente conectado (a CPU)
-
-[TRACE] 15:17:05:939 cpu/(6060:6060): El socket de kernel en cpu.c es : 0
-[INFO] 15:17:06:079 cpu/(6060:6060): Cliente conectado (a CPU)
-
-[INFO] 15:18:01:128 cpu/(6064:6064): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 15:18:01:258 cpu/(6064:6064): El socket de kernel en cpu.c es : 4
-[INFO] 15:18:05:499 cpu/(6064:6064): Cliente conectado (a CPU)
-
-[WARNING] 15:18:05:581 cpu/(6064:6066): Entre en procesar conexion cpu
-[WARNING] 15:18:05:593 cpu/(6064:6066): Entre en el while de cliente socket
-[WARNING] 15:18:10:795 cpu/(6064:6066): Entre en el while de cliente socket
-[TRACE] 15:18:10:797 cpu/(6064:6066): size de pcb 16
-[INFO] 15:18:10:799 cpu/(6064:6066): DISCONNECT!
-[TRACE] 15:18:10:801 cpu/(6064:6066): El socket de cpu despues de grar conexiones es: 0
-[TRACE] 15:20:35:327 cpu/(6280:6280): El socket de kernel en cpu.c es : 0
-[INFO] 15:20:35:477 cpu/(6280:6280): Cliente conectado (a CPU)
-
-[TRACE] 15:21:09:350 cpu/(6283:6283): El socket de kernel en cpu.c es : 0
-[INFO] 15:21:09:467 cpu/(6283:6283): Cliente conectado (a CPU)
-
-[INFO] 15:21:34:486 cpu/(6290:6290): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 15:21:34:641 cpu/(6290:6290): El socket de kernel en cpu.c es : 4
-[INFO] 15:21:39:760 cpu/(6290:6290): Cliente conectado (a CPU)
-
-[WARNING] 15:21:39:836 cpu/(6290:6292): Entre en procesar conexion cpu
-[WARNING] 15:21:39:848 cpu/(6290:6292): Entre en el while de cliente socket
-[WARNING] 15:21:43:847 cpu/(6290:6292): Entre en el while de cliente socket
-[TRACE] 15:21:43:872 cpu/(6290:6292): size de pcb 16
-[INFO] 15:21:43:893 cpu/(6290:6292): DISCONNECT!
-[TRACE] 15:21:43:937 cpu/(6290:6292): El socket de cpu despues de grar conexiones es: 0
-[TRACE] 15:23:24:048 cpu/(6519:6519): El socket de kernel en cpu.c es : 0
-[INFO] 15:23:24:169 cpu/(6519:6519): Cliente conectado (a CPU)
-
-[TRACE] 15:23:44:091 cpu/(6520:6520): El socket de kernel en cpu.c es : 0
-[INFO] 15:23:44:208 cpu/(6520:6520): Cliente conectado (a CPU)
-
-[TRACE] 15:23:59:230 cpu/(6523:6523): El socket de kernel en cpu.c es : 0
-[INFO] 15:23:59:346 cpu/(6523:6523): Cliente conectado (a CPU)
-
-[TRACE] 15:24:15:358 cpu/(6524:6524): El socket de kernel en cpu.c es : 0
-[INFO] 15:24:15:475 cpu/(6524:6524): Cliente conectado (a CPU)
-
-[INFO] 15:24:30:720 cpu/(6525:6525): Escuchando en 127.0.0.1:8001 (CPU)
-
-[TRACE] 15:24:30:837 cpu/(6525:6525): El socket de kernel en cpu.c es : 4
-[INFO] 15:24:34:753 cpu/(6525:6525): Cliente conectado (a CPU)
-
-[WARNING] 15:24:34:790 cpu/(6525:6529): Entre en procesar conexion cpu
-[WARNING] 15:24:34:794 cpu/(6525:6529): Entre en el while de cliente socket
-[WARNING] 15:24:37:282 cpu/(6525:6529): Entre en el while de cliente socket
-[TRACE] 15:24:37:297 cpu/(6525:6529): size de pcb 16
-[INFO] 15:24:37:302 cpu/(6525:6529): DISCONNECT!
-[TRACE] 15:24:37:306 cpu/(6525:6529): El socket de cpu despues de grar conexiones es: 0
+[TRACE] 11:09:37:316 cpu/(11436:11436): El socket de kernel en cpu.c es : 0
+[INFO] 11:09:37:367 cpu/(11436:11436): Cliente conectado (a CPU)
+
+[TRACE] 11:09:49:555 cpu/(11453:11453): El socket de kernel en cpu.c es : 0
+[INFO] 11:09:49:606 cpu/(11453:11453): Cliente conectado (a CPU)
+
+[TRACE] 11:10:01:007 cpu/(11467:11467): El socket de kernel en cpu.c es : 0
+[INFO] 11:10:01:059 cpu/(11467:11467): Cliente conectado (a CPU)
+
+[TRACE] 11:10:03:977 cpu/(11474:11474): El socket de kernel en cpu.c es : 0
+[INFO] 11:10:04:028 cpu/(11474:11474): Cliente conectado (a CPU)
+
+[TRACE] 11:10:15:706 cpu/(11491:11491): El socket de kernel en cpu.c es : 0
+[INFO] 11:10:15:757 cpu/(11491:11491): Cliente conectado (a CPU)
+
+[INFO] 11:10:20:814 cpu/(11499:11499): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:10:20:865 cpu/(11499:11499): El socket de kernel en cpu.c es : 4
+[INFO] 11:12:12:839 cpu/(11939:11939): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:12:12:972 cpu/(11939:11939): El socket de kernel en cpu.c es : 4
+[INFO] 11:12:17:304 cpu/(11939:11939): Cliente conectado (a CPU)
+
+[WARNING] 11:12:17:319 cpu/(11939:11951): Entre en procesar conexion cpu
+[WARNING] 11:12:17:321 cpu/(11939:11951): Entre en el while de cliente socket
+[TRACE] 11:12:42:204 cpu/(11984:11984): El socket de kernel en cpu.c es : 0
+[INFO] 11:12:42:257 cpu/(11984:11984): Cliente conectado (a CPU)
+
+[TRACE] 11:12:53:592 cpu/(12002:12002): El socket de kernel en cpu.c es : 0
+[INFO] 11:12:53:662 cpu/(12002:12002): Cliente conectado (a CPU)
+
+[TRACE] 11:13:36:621 cpu/(12161:12161): El socket de kernel en cpu.c es : 0
+[INFO] 11:13:36:669 cpu/(12161:12161): Cliente conectado (a CPU)
+
+[INFO] 11:14:17:355 cpu/(12215:12215): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:14:17:405 cpu/(12215:12215): El socket de kernel en cpu.c es : 4
+[INFO] 11:14:19:887 cpu/(12215:12215): Cliente conectado (a CPU)
+
+[WARNING] 11:14:19:900 cpu/(12215:12223): Entre en procesar conexion cpu
+[WARNING] 11:14:19:902 cpu/(12215:12223): Entre en el while de cliente socket
+[INFO] 11:15:47:364 cpu/(12448:12448): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:15:47:419 cpu/(12448:12448): El socket de kernel en cpu.c es : 4
+[INFO] 11:15:51:433 cpu/(12448:12448): Cliente conectado (a CPU)
+
+[WARNING] 11:15:51:445 cpu/(12448:12457): Entre en procesar conexion cpu
+[ERROR] 11:15:51:447 cpu/(12448:12457): El tam del pcb es: 4
+[WARNING] 11:15:51:448 cpu/(12448:12457): Entre en el while de cliente socket
+[INFO] 11:17:18:109 cpu/(12680:12680): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:17:18:160 cpu/(12680:12680): El socket de kernel en cpu.c es : 4
+[INFO] 11:17:21:357 cpu/(12680:12680): Cliente conectado (a CPU)
+
+[WARNING] 11:17:21:388 cpu/(12680:12686): Entre en procesar conexion cpu
+[ERROR] 11:17:21:401 cpu/(12680:12686): El tam del pcb es: 4
+[WARNING] 11:17:21:402 cpu/(12680:12686): Entre en el while de cliente socket
+[TRACE] 11:18:05:518 cpu/(12852:12852): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:05:628 cpu/(12852:12852): Cliente conectado (a CPU)
+
+[TRACE] 11:18:16:518 cpu/(12868:12868): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:16:571 cpu/(12868:12868): Cliente conectado (a CPU)
+
+[TRACE] 11:18:23:627 cpu/(12878:12878): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:23:680 cpu/(12878:12878): Cliente conectado (a CPU)
+
+[TRACE] 11:18:24:956 cpu/(12882:12882): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:25:009 cpu/(12882:12882): Cliente conectado (a CPU)
+
+[TRACE] 11:18:26:147 cpu/(12888:12888): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:26:200 cpu/(12888:12888): Cliente conectado (a CPU)
+
+[TRACE] 11:18:27:439 cpu/(12889:12889): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:27:491 cpu/(12889:12889): Cliente conectado (a CPU)
+
+[TRACE] 11:18:28:728 cpu/(12893:12893): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:28:782 cpu/(12893:12893): Cliente conectado (a CPU)
+
+[TRACE] 11:18:30:135 cpu/(12897:12897): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:30:189 cpu/(12897:12897): Cliente conectado (a CPU)
+
+[TRACE] 11:18:31:599 cpu/(12898:12898): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:31:652 cpu/(12898:12898): Cliente conectado (a CPU)
+
+[TRACE] 11:18:33:018 cpu/(12902:12902): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:33:070 cpu/(12902:12902): Cliente conectado (a CPU)
+
+[TRACE] 11:18:34:566 cpu/(12908:12908): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:34:616 cpu/(12908:12908): Cliente conectado (a CPU)
+
+[TRACE] 11:18:38:713 cpu/(12921:12921): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:38:764 cpu/(12921:12921): Cliente conectado (a CPU)
+
+[TRACE] 11:18:43:994 cpu/(12928:12928): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:44:044 cpu/(12928:12928): Cliente conectado (a CPU)
+
+[TRACE] 11:18:54:812 cpu/(12941:12941): El socket de kernel en cpu.c es : 0
+[INFO] 11:18:54:863 cpu/(12941:12941): Cliente conectado (a CPU)
+
+[INFO] 11:19:13:636 cpu/(12969:12969): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:19:13:688 cpu/(12969:12969): El socket de kernel en cpu.c es : 4
+[INFO] 11:19:19:737 cpu/(12969:12969): Cliente conectado (a CPU)
+
+[WARNING] 11:19:19:751 cpu/(12969:12980): Entre en procesar conexion cpu
+[ERROR] 11:19:19:754 cpu/(12969:12980): El tam del pcb es: 4
+[WARNING] 11:19:19:755 cpu/(12969:12980): Entre en el while de cliente socket
+[INFO] 11:20:44:819 cpu/(13303:13303): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:20:44:870 cpu/(13303:13303): El socket de kernel en cpu.c es : 4
+[INFO] 11:20:47:887 cpu/(13303:13303): Cliente conectado (a CPU)
+
+[WARNING] 11:20:47:910 cpu/(13303:13312): Entre en procesar conexion cpu
+[ERROR] 11:20:47:912 cpu/(13303:13312): El tam del pcb es: 4
+[WARNING] 11:20:47:913 cpu/(13303:13312): Entre en el while de cliente socket
+[ERROR] 11:20:50:214 cpu/(13303:13312): fallo al recibir
+[INFO] 11:47:18:047 cpu/(16194:16194): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:47:18:151 cpu/(16194:16194): El socket de kernel en cpu.c es : 4
+[INFO] 11:47:20:500 cpu/(16194:16194): Cliente conectado (a CPU)
+
+[WARNING] 11:47:20:511 cpu/(16194:16199): Entre en procesar conexion cpu
+[ERROR] 11:47:20:514 cpu/(16194:16199): El tam del pcb es: 4
+[WARNING] 11:47:20:515 cpu/(16194:16199): Entre en el while de cliente socket
+[ERROR] 11:47:20:515 cpu/(16194:16199): fallo al recibir
+[INFO] 11:57:08:876 cpu/(17255:17255): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:57:08:959 cpu/(17255:17255): El socket de kernel en cpu.c es : 4
+[INFO] 11:57:11:975 cpu/(17255:17255): Cliente conectado (a CPU)
+
+[WARNING] 11:57:11:993 cpu/(17255:17270): Entre en procesar conexion cpu
+[WARNING] 11:57:16:127 cpu/(17255:17270): El pid despues del recv es: 1
+[ERROR] 11:57:16:128 cpu/(17255:17270): El tam del pcb es: 4
+[INFO] 11:58:11:403 cpu/(17451:17451): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:58:11:481 cpu/(17451:17451): El socket de kernel en cpu.c es : 4
+[INFO] 11:58:14:515 cpu/(17451:17451): Cliente conectado (a CPU)
+
+[WARNING] 11:58:14:533 cpu/(17451:17457): Entre en procesar conexion cpu
+[ERROR] 11:58:14:536 cpu/(17451:17457): El tam del pcb es: 4
+[WARNING] 11:58:16:960 cpu/(17451:17457): El pid despues del recv es: 1
+[WARNING] 11:58:17:925 cpu/(17451:17457): El pid despues del recv es: 2
+[WARNING] 11:58:18:721 cpu/(17451:17457): El pid despues del recv es: 3
+[WARNING] 11:58:19:216 cpu/(17451:17457): El pid despues del recv es: 4
+[WARNING] 11:58:19:679 cpu/(17451:17457): El pid despues del recv es: 5
+[WARNING] 11:58:20:102 cpu/(17451:17457): El pid despues del recv es: 6
+[WARNING] 11:58:20:521 cpu/(17451:17457): El pid despues del recv es: 7
+[WARNING] 11:58:20:898 cpu/(17451:17457): El pid despues del recv es: 8
+[TRACE] 12:06:57:911 cpu/(18686:18686): El socket de kernel en cpu.c es : 0
+[INFO] 12:06:57:961 cpu/(18686:18686): Cliente conectado (a CPU)
+
+[INFO] 12:08:54:669 cpu/(18840:18840): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:08:54:727 cpu/(18840:18840): El socket de kernel en cpu.c es : 4
+[INFO] 12:08:57:606 cpu/(18840:18840): Cliente conectado (a CPU)
+
+[WARNING] 12:08:57:626 cpu/(18840:18848): Entre en procesar conexion cpu
+[ERROR] 12:08:57:629 cpu/(18840:18848): El tam del pcb es: 8
+[WARNING] 12:09:01:305 cpu/(18840:18848): El pid despues del recv es: 1
+[INFO] 12:10:21:407 cpu/(19073:19073): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:10:21:466 cpu/(19073:19073): El socket de kernel en cpu.c es : 4
+[INFO] 12:10:24:932 cpu/(19073:19073): Cliente conectado (a CPU)
+
+[WARNING] 12:10:24:943 cpu/(19073:19079): Entre en procesar conexion cpu
+[ERROR] 12:10:24:946 cpu/(19073:19079): El tam del pcb es: 8
+[WARNING] 12:10:27:677 cpu/(19073:19079): El pid despues del recv es: 1
+[TRACE] 12:11:19:800 cpu/(19253:19253): El socket de kernel en cpu.c es : 0
+[INFO] 12:11:19:959 cpu/(19253:19253): Cliente conectado (a CPU)
+
+[TRACE] 12:11:35:266 cpu/(19274:19274): El socket de kernel en cpu.c es : 0
+[INFO] 12:11:35:317 cpu/(19274:19274): Cliente conectado (a CPU)
+
+[TRACE] 12:11:38:236 cpu/(19282:19282): El socket de kernel en cpu.c es : 0
+[INFO] 12:11:38:285 cpu/(19282:19282): Cliente conectado (a CPU)
+
+[TRACE] 12:11:40:416 cpu/(19284:19284): El socket de kernel en cpu.c es : 0
+[INFO] 12:11:40:475 cpu/(19284:19284): Cliente conectado (a CPU)
+
+[TRACE] 12:12:07:884 cpu/(19322:19322): El socket de kernel en cpu.c es : 0
+[INFO] 12:12:07:981 cpu/(19322:19322): Cliente conectado (a CPU)
+
+[TRACE] 12:12:12:611 cpu/(19335:19335): El socket de kernel en cpu.c es : 0
+[INFO] 12:12:12:660 cpu/(19335:19335): Cliente conectado (a CPU)
+
+[INFO] 12:12:24:833 cpu/(19351:19351): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:12:24:887 cpu/(19351:19351): El socket de kernel en cpu.c es : 4
+[INFO] 12:12:28:725 cpu/(19351:19351): Cliente conectado (a CPU)
+
+[WARNING] 12:12:28:749 cpu/(19351:19359): Entre en procesar conexion cpu
+[ERROR] 12:12:28:751 cpu/(19351:19359): El tam del pcb es: 8
+[WARNING] 12:12:31:051 cpu/(19351:19359): El pid despues del recv es: 1
+[ERROR] 12:12:31:054 cpu/(19351:19359): Tam de lista instrucc despues del rcv 4
+[INFO] 12:22:17:522 cpu/(20388:20388): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:22:17:623 cpu/(20388:20388): El socket de kernel en cpu.c es : 4
+[INFO] 12:22:21:112 cpu/(20388:20388): Cliente conectado (a CPU)
+
+[WARNING] 12:22:21:122 cpu/(20388:20397): Entre en procesar conexion cpu
+[ERROR] 12:22:21:125 cpu/(20388:20397): El tam del pcb es: 8
+[WARNING] 12:22:23:621 cpu/(20388:20397): El pid despues del recv es: 1
+[ERROR] 12:22:23:623 cpu/(20388:20397): Tam de lista instrucc despues del rcv 4
+[WARNING] 12:22:26:780 cpu/(20388:20397): El pid despues del recv es: 2
+[ERROR] 12:22:26:781 cpu/(20388:20397): Tam de lista instrucc despues del rcv 4
+[TRACE] 12:23:01:257 cpu/(20550:20550): El socket de kernel en cpu.c es : 0
+[INFO] 12:23:01:310 cpu/(20550:20550): Cliente conectado (a CPU)
+
+[INFO] 12:24:09:940 cpu/(20665:20665): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:24:09:992 cpu/(20665:20665): El socket de kernel en cpu.c es : 4
+[INFO] 12:24:14:100 cpu/(20665:20665): Cliente conectado (a CPU)
+
+[WARNING] 12:24:14:111 cpu/(20665:20674): Entre en procesar conexion cpu
+[ERROR] 12:24:14:114 cpu/(20665:20674): El tam del pcb es: 8
+[WARNING] 12:24:16:482 cpu/(20665:20674): El pid despues del recv es: 1
+[ERROR] 12:24:16:485 cpu/(20665:20674): Tam de lista instrucc despues del rcv 0
+[TRACE] 12:26:54:058 cpu/(21014:21014): El socket de kernel en cpu.c es : 0
+[INFO] 12:26:54:110 cpu/(21014:21014): Cliente conectado (a CPU)
+
+[TRACE] 12:27:21:987 cpu/(21051:21051): El socket de kernel en cpu.c es : 0
+[INFO] 12:27:22:036 cpu/(21051:21051): Cliente conectado (a CPU)
+
+[INFO] 12:28:26:604 cpu/(21233:21233): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:28:26:656 cpu/(21233:21233): El socket de kernel en cpu.c es : 4
+[INFO] 12:28:28:938 cpu/(21233:21233): Cliente conectado (a CPU)
+
+[WARNING] 12:28:28:951 cpu/(21233:21241): Entre en procesar conexion cpu
+[ERROR] 12:28:28:953 cpu/(21233:21241): El tam del pcb es: 8
+[WARNING] 12:28:31:293 cpu/(21233:21241): El pid despues del recv es: 1
+[ERROR] 12:28:39:164 cpu/(21233:21241): Fallo recibiendo NO_OP
+[WARNING] 12:28:39:164 cpu/(21233:21241): El cliente se desconecto de CPU server
+[INFO] 12:29:15:313 cpu/(21411:21411): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:29:15:380 cpu/(21411:21411): El socket de kernel en cpu.c es : 4
+[INFO] 12:29:17:932 cpu/(21411:21411): Cliente conectado (a CPU)
+
+[WARNING] 12:29:17:962 cpu/(21411:21417): Entre en procesar conexion cpu
+[ERROR] 12:29:17:966 cpu/(21411:21417): El tam del pcb es: 8
+[WARNING] 12:29:20:528 cpu/(21411:21417): El pid despues del recv es: 1
+[ERROR] 12:29:20:532 cpu/(21411:21417): Tam de lista instrucc despues del rcv 0
+[WARNING] 12:29:28:340 cpu/(21411:21417): El pid despues del recv es: 2
+[ERROR] 12:29:28:341 cpu/(21411:21417): Tam de lista instrucc despues del rcv 0
+[WARNING] 12:29:29:732 cpu/(21411:21417): El pid despues del recv es: 3
+[ERROR] 12:29:29:732 cpu/(21411:21417): Tam de lista instrucc despues del rcv 0
+[WARNING] 12:29:30:533 cpu/(21411:21417): El pid despues del recv es: 4
+[ERROR] 12:29:30:533 cpu/(21411:21417): Tam de lista instrucc despues del rcv 0
+[TRACE] 12:30:33:146 cpu/(21634:21634): El socket de kernel en cpu.c es : 0
+[INFO] 12:30:33:258 cpu/(21634:21634): Cliente conectado (a CPU)
+
+[INFO] 12:30:36:928 cpu/(21639:21639): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:30:36:979 cpu/(21639:21639): El socket de kernel en cpu.c es : 4
+[INFO] 12:30:39:915 cpu/(21639:21639): Cliente conectado (a CPU)
+
+[WARNING] 12:30:39:936 cpu/(21639:21648): Entre en procesar conexion cpu
+[ERROR] 12:30:39:940 cpu/(21639:21648): El tam del pcb es: 8
+[WARNING] 12:30:42:353 cpu/(21639:21648): El pid despues del recv es: 1
+[ERROR] 12:30:42:356 cpu/(21639:21648): Tam de lista instrucc despues del rcv 0
+[TRACE] 12:31:06:918 cpu/(21781:21781): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:06:968 cpu/(21781:21781): Cliente conectado (a CPU)
+
+[TRACE] 12:31:18:970 cpu/(21802:21802): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:19:026 cpu/(21802:21802): Cliente conectado (a CPU)
+
+[TRACE] 12:31:24:914 cpu/(21810:21810): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:24:964 cpu/(21810:21810): Cliente conectado (a CPU)
+
+[TRACE] 12:31:26:746 cpu/(21811:21811): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:26:797 cpu/(21811:21811): Cliente conectado (a CPU)
+
+[TRACE] 12:31:28:100 cpu/(21815:21815): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:28:150 cpu/(21815:21815): Cliente conectado (a CPU)
+
+[TRACE] 12:31:29:345 cpu/(21819:21819): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:29:396 cpu/(21819:21819): Cliente conectado (a CPU)
+
+[TRACE] 12:31:30:580 cpu/(21820:21820): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:30:631 cpu/(21820:21820): Cliente conectado (a CPU)
+
+[TRACE] 12:31:32:318 cpu/(21824:21824): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:32:369 cpu/(21824:21824): Cliente conectado (a CPU)
+
+[TRACE] 12:31:33:553 cpu/(21825:21825): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:33:603 cpu/(21825:21825): Cliente conectado (a CPU)
+
+[TRACE] 12:31:34:760 cpu/(21829:21829): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:34:810 cpu/(21829:21829): Cliente conectado (a CPU)
+
+[TRACE] 12:31:36:003 cpu/(21830:21830): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:36:054 cpu/(21830:21830): Cliente conectado (a CPU)
+
+[TRACE] 12:31:53:300 cpu/(21854:21854): El socket de kernel en cpu.c es : 0
+[INFO] 12:31:53:349 cpu/(21854:21854): Cliente conectado (a CPU)
+
+[INFO] 12:32:33:812 cpu/(21906:21906): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:32:33:863 cpu/(21906:21906): El socket de kernel en cpu.c es : 4
+[INFO] 12:32:36:654 cpu/(21906:21906): Cliente conectado (a CPU)
+
+[WARNING] 12:32:36:665 cpu/(21906:21914): Entre en procesar conexion cpu
+[ERROR] 12:32:36:678 cpu/(21906:21914): El tam del pcb es: 8
+[WARNING] 12:32:39:532 cpu/(21906:21914): El pid despues del recv es: 1
+[ERROR] 12:32:39:542 cpu/(21906:21914): Tam de lista instrucc despues del rcv 0
+[TRACE] 12:34:17:173 cpu/(22164:22164): El socket de kernel en cpu.c es : 0
+[INFO] 12:34:17:223 cpu/(22164:22164): Cliente conectado (a CPU)
+
+[TRACE] 12:34:50:749 cpu/(22204:22204): El socket de kernel en cpu.c es : 0
+[INFO] 12:34:50:800 cpu/(22204:22204): Cliente conectado (a CPU)
+
+[TRACE] 12:35:01:839 cpu/(22218:22218): El socket de kernel en cpu.c es : 0
+[INFO] 12:35:01:890 cpu/(22218:22218): Cliente conectado (a CPU)
+
+[TRACE] 12:35:04:363 cpu/(22226:22226): El socket de kernel en cpu.c es : 0
+[INFO] 12:35:04:413 cpu/(22226:22226): Cliente conectado (a CPU)
+
+[INFO] 12:35:14:761 cpu/(22242:22242): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:35:14:814 cpu/(22242:22242): El socket de kernel en cpu.c es : 4
+[INFO] 12:35:18:155 cpu/(22242:22242): Cliente conectado (a CPU)
+
+[WARNING] 12:35:18:177 cpu/(22242:22247): Entre en procesar conexion cpu
+[ERROR] 12:35:18:181 cpu/(22242:22247): El tam del pcb es: 8
+[WARNING] 12:35:20:158 cpu/(22242:22247): El pid despues del recv es: 1
+[ERROR] 12:35:20:163 cpu/(22242:22247): Tam de lista instrucc despues del rcv 0
+[WARNING] 12:35:24:236 cpu/(22242:22247): El pid despues del recv es: 2
+[ERROR] 12:35:24:236 cpu/(22242:22247): Tam de lista instrucc despues del rcv 0
+[WARNING] 12:35:25:115 cpu/(22242:22247): El pid despues del recv es: 3
+[ERROR] 12:35:25:116 cpu/(22242:22247): Tam de lista instrucc despues del rcv 0

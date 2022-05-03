@@ -377,59 +377,44 @@ bool recv_TAM(int fd, uint32_t* parametro1) {
 ///////////////////////////////////////////////////////////////////////////////
 //\
 
-//HAY UN INVALID WRITE, PERO NO SE DONDE ES QUE ESCRIBE DE MAS
-void* serializar_PCB(pcb_t* pcb) {
-	printf("El size del pcb en serializar es: %d\n",sizeof(pcb_t));
-	printf("El size del tlist en serializar es: %d\n",sizeof(t_list));
-    void* stream = malloc(sizeof(pcb_t));
-    if (stream == NULL) return NULL;
+static void* serializar_pid(uint32_t parametro1) {
+   void* stream = malloc(sizeof(uint32_t));
+   // op_code_instrucciones cop = READ;
+    //memcpy(stream, &cop, sizeof(op_code_instrucciones));
+    memcpy(stream, &parametro1, sizeof(uint32_t));
 
-    memcpy(stream, &pcb->PID, sizeof(uint32_t));
-    memcpy(stream+sizeof(uint32_t), &pcb->tamanio, sizeof(uint32_t));
-    memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t), &pcb->instrucciones, sizeof(t_list));
-    memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list), &pcb->PC, sizeof(uint32_t));
-  //  memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t), &pcb->tabla_paginas, sizeof(t_list));
-///    memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t)+sizeof(t_list), &pcb->estimacionRafaga, sizeof(uint32_t));
- ///   memcpy(stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t), &pcb->alpha, sizeof(uint32_t));//este HAY QUE CAMBIARLO NO ES UINT
-
+   // printf("El cop en serializar READ es: %d\n",cop);
+    printf("El tam a enviar es: %d\n",parametro1);
+   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
 
-void deserializar_PCB(void* stream,pcb_t* pcb) {
-	pcb = malloc(sizeof(pcb_t));
-    if (pcb == NULL){
-    	printf("error al deserializar el pcb \n");
-    }
-    memcpy(&pcb->PID, stream, sizeof(uint32_t));
-    memcpy(&pcb->tamanio, stream+sizeof(uint32_t), sizeof(uint32_t));
-    memcpy(&pcb->instrucciones, stream+sizeof(uint32_t)+sizeof(uint32_t), sizeof(t_list));
-    memcpy(&pcb->PC, stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list), sizeof(uint32_t));
-    //memcpy(&pcb->tabla_paginas, stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t), sizeof(t_list));
-    //memcpy(&pcb->estimacionRafaga, stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t)+sizeof(t_list), sizeof(uint32_t));
-  //  memcpy(&pcb->alpha, stream+sizeof(uint32_t)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t)+sizeof(t_list)+sizeof(uint32_t), sizeof(uint32_t));
+
+void deserializar_pid(void* stream, uint32_t* parametro1) {
+
+    memcpy(parametro1, stream ,sizeof(uint32_t));
+//  printf("El tam en deserializar tam es: %d \n", parametro1);
 
 }
 
-//estas 2, send y rcv no se si van
-bool send_PCB(int fd, pcb_t* parametro1) {
-	printf("Entre en send_PCB \n");
-   size_t size = sizeof(pcb_t);
+bool send_pid_to_cpu(int fd,uint32_t parametro1){
+	printf("Entre en send_PID \n");
+	   size_t size = sizeof(uint32_t);
 
-    void* stream = serializar_PCB(parametro1);
+	    void* stream = serializar_pid(parametro1);
 
 
-    if (send(fd, stream, size, 0) != size) {
-        free(stream);
-        return false;
-    }
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
 
-    free(stream);
-    return true;
+	    free(stream);
+	    return true;
 }
 
-bool recv_PCB(int fd, pcb_t** parametro1) {
-	printf("Entre en send_PCB \n");
-    size_t size = sizeof(pcb_t);
+bool recv_pid_to_cpu(int fd, uint32_t* parametro1) {
+    size_t size = sizeof(uint32_t);
     void* stream = malloc(size);
 
     if (recv(fd, stream, size, 0) != size) {
@@ -437,9 +422,59 @@ bool recv_PCB(int fd, pcb_t** parametro1) {
         return false;
     }
 
-    deserializar_PCB(stream,parametro1);
+    deserializar_pid(stream, parametro1);
 
     free(stream);
     return true;
 }
+////////////////////////////////////////////////////////////////////
+static void* serializar_instrucciones(t_list* parametro1) {
+   void* stream = malloc(sizeof(t_list));
+   // op_code_instrucciones cop = READ;
+    //memcpy(stream, &cop, sizeof(op_code_instrucciones));
+    memcpy(stream, &parametro1, sizeof(t_list));
 
+   // printf("El cop en serializar READ es: %d\n",cop);
+    printf("El tam a enviar es: %d\n",parametro1);
+   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+    return stream;
+}
+
+
+void deserializar_instrucciones(void* stream, t_list** parametro1) {
+
+    memcpy(parametro1, stream ,sizeof(t_list));
+//  printf("El tam en deserializar tam es: %d \n", parametro1);
+
+}
+
+bool send_instrucciones_to_cpu(int fd,t_list* parametro1){
+	printf("Entre en send_PID \n");
+	   size_t size = sizeof(t_list);
+
+	    void* stream = serializar_instrucciones(parametro1);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_instrucciones_to_cpu(int fd, t_list** parametro1) {
+    size_t size = sizeof(t_list);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_instrucciones(stream, parametro1);
+
+    free(stream);
+    return true;
+}

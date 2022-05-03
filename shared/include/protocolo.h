@@ -50,6 +50,15 @@ void recv_TAM2(int fd,uint32_t* parametro1);
 
 static void* serializar_NO_OP(uint32_t parametro1);
 
+bool send_PCB(int fd_cpu,pcb_t* pcb_proceso);
+
+bool send_pid_to_cpu(int fd,uint32_t parametro1);
+bool recv_pid_to_cpu(int fd, uint32_t* parametro1);
+
+bool send_instrucciones_to_cpu(int fd,t_list* parametro1);
+bool recv_instrucciones_to_cpu(int fd, t_list** parametro1);
+
 bool send_debug(int fd);
+
 
 #endif

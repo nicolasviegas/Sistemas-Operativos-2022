@@ -54,15 +54,19 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
 
         	pcb_proceso->PID = contador_cliente;
-        	pcb_proceso->tamanio = tam;
+        	//pcb_proceso->tamanio = tam;
         	pcb_proceso->instrucciones = lista_nueva_kernel;
         	//pcb_proceso->tabla_paginas = tabla_paginas;
         	//pcb_proceso->estimacionRafaga = estimacion_inicial;
         	//pcb_proceso->alpha = alfa;
 
-        	send_PCB(fd_cpu,pcb_proceso);
+        	//send_PCB(fd_cpu,pcb_proceso);
+        	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
+        	send_instrucciones_to_cpu(fd_cpu,pcb_proceso->instrucciones);
 
 
+
+        	list_add(lista_pcb,pcb_proceso);
         	free(pcb_proceso);
 
 

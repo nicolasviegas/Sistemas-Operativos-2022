@@ -21,21 +21,44 @@ static void procesar_conexion_cpu(void* void_args) {
 
 	log_warning(log_cpu,"Entre en procesar conexion cpu");
 
-
-//	 uint32_t tam;
-//
-//	     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-//	 	log_info(log_cpu, "DISCONNECT!");
-//
-//
-//	 	return;
-//	     }
-//	     log_warning(log_cpu,"El tam despues del recv es: %d",tam);
-
 	 pcb_t* pcb;
+
+
+	 log_error(log_cpu,"El tam del pcb es: %d", sizeof(pcb_t));
 	 while (cliente_socket != -1) {
 
-		    	log_warning(log_cpu,"Entre en el while de cliente socket");
+
+	////////////////
+		 	 uint32_t pid;
+		     /*if (recv(cliente_socket, &pid, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+		 	log_info(log_cpu, "DISCONNECT!");
+		 	return;
+		     }*/
+		 	 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
+		 				     log_error(log_cpu, "Fallo recibiendo instrucciones");
+		 				 break;
+		 				 }
+		     log_warning(log_cpu,"El pid despues del recv es: %d",pid);
+	////////////////////////
+		     t_list* lista_instrucc = list_create();
+			/* if (recv(cliente_socket, &lista_instrucc, sizeof(t_list), 0) != sizeof(t_list)) {
+			log_info(log_cpu, "DISCONNECT!");
+			return;
+			 }*/
+			 if (!recv_instrucciones_to_cpu(cliente_socket, &lista_instrucc)) {
+			     log_error(log_cpu, "Fallo recibiendo instrucciones");
+			 break;
+			 }
+
+			           // log_warning(log_kernel, "Deserialice NO_OP el parametro es: %d",parametro1);
+			 log_error(log_cpu,"Tam de lista instrucc despues del rcv %d",list_size(lista_instrucc));
+ ///////////////////////////
+
+
+
+//////////////////////////
+
+		    	/*log_warning(log_cpu,"Entre en el while de cliente socket");
 
 		        if (recv(cliente_socket, &pcb, sizeof(pcb_t), 0) != sizeof(pcb_t)) {//ESTA RECIBIENDO MAL. EN VEZ DE RECIBIR 16BYTES RECIBE 4
 
@@ -48,7 +71,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		           return;
 		        	//break;
-		        }
+		        }*/
 
 		      //  log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
 
