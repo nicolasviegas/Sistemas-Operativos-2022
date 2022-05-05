@@ -20,7 +20,7 @@
 
 */
 
-//int contador_cliente;
+int contador_instrucciones;
 
 
 #endif /* KERNEL_INCLUDE_COMUNICACION_KERNEL_H_ */

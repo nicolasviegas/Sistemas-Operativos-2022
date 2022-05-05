@@ -20,9 +20,18 @@
 #include "../../shared/include/protocolo.h"
 #include "../include/comunicacion_cpu.h"
 
+typedef struct{
+	uint32_t PID;
+	uint32_t tamanio;
+	t_list* instrucciones;
+	uint32_t PC;
+	uint32_t tabla_paginas;
 
+}pcb_cpu;
 
-//t_list* lista_instrucciones_kernel;
+t_list* lista_instrucciones_cpu;
+
+t_list* lista_pcb_cpu;
 
 //uint32_t tam_del_proceso_por_archivo;
 

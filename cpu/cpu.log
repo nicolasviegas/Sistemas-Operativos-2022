@@ -328,3 +328,497 @@
 [ERROR] 12:35:24:236 cpu/(22242:22247): Tam de lista instrucc despues del rcv 0
 [WARNING] 12:35:25:115 cpu/(22242:22247): El pid despues del recv es: 3
 [ERROR] 12:35:25:116 cpu/(22242:22247): Tam de lista instrucc despues del rcv 0
+[INFO] 14:18:59:359 cpu/(4671:4671): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 14:18:59:360 cpu/(4671:4671): El socket de kernel en cpu.c es : 4
+[INFO] 14:19:02:469 cpu/(4671:4671): Cliente conectado (a CPU)
+
+[WARNING] 14:19:02:469 cpu/(4671:4679): Entre en procesar conexion cpu
+[ERROR] 14:19:02:469 cpu/(4671:4679): El tam del pcb es: 8
+[WARNING] 14:19:08:522 cpu/(4671:4679): El pid despues del recv es: 1
+[ERROR] 14:19:08:522 cpu/(4671:4679): Tam de lista instrucc despues del rcv 81
+[INFO] 10:49:50:179 cpu/(8187:8187): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 10:49:50:187 cpu/(8187:8187): El socket de kernel en cpu.c es : 4
+[INFO] 10:49:52:835 cpu/(8187:8187): Cliente conectado (a CPU)
+
+[WARNING] 10:49:52:835 cpu/(8187:8192): Entre en procesar conexion cpu
+[ERROR] 10:49:52:835 cpu/(8187:8192): El tam del pcb es: 24
+[WARNING] 10:49:59:561 cpu/(8187:8192): El pid despues del recv es: 1
+[INFO] 11:08:13:451 cpu/(10122:10122): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:08:13:451 cpu/(10122:10122): El socket de kernel en cpu.c es : 4
+[INFO] 11:08:16:127 cpu/(10122:10122): Cliente conectado (a CPU)
+
+[WARNING] 11:08:16:127 cpu/(10122:10133): Entre en procesar conexion cpu
+[WARNING] 11:08:19:093 cpu/(10122:10133): El pid despues del recv es: 1
+[WARNING] 11:08:19:094 cpu/(10122:10133): El codigo de operacion despues del recv es: 13
+[WARNING] 11:08:19:094 cpu/(10122:10133): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:08:19:094 cpu/(10122:10133): El pid despues del recv es: 14
+[WARNING] 11:08:19:094 cpu/(10122:10133): El codigo de operacion despues del recv es: 3000
+[ERROR] 11:08:19:094 cpu/(10122:10133): Algo anduvo mal en el server de CPU
+[INFO] 11:08:19:094 cpu/(10122:10133): Cop: 3000
+[INFO] 11:17:15:213 cpu/(11030:11030): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:17:15:214 cpu/(11030:11030): El socket de kernel en cpu.c es : 4
+[INFO] 11:17:17:066 cpu/(11030:11030): Cliente conectado (a CPU)
+
+[WARNING] 11:17:17:067 cpu/(11030:11040): Entre en procesar conexion cpu
+[WARNING] 11:17:18:854 cpu/(11030:11040): El codigo de operacion despues del recv es: 1
+[ERROR] 11:17:18:854 cpu/(11030:11040): Algo anduvo mal en el server de CPU
+[INFO] 11:17:18:854 cpu/(11030:11040): Cop: 1
+[INFO] 11:18:41:313 cpu/(11410:11410): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:18:41:313 cpu/(11410:11410): El socket de kernel en cpu.c es : 4
+[INFO] 11:18:43:689 cpu/(11410:11410): Cliente conectado (a CPU)
+
+[WARNING] 11:18:43:689 cpu/(11410:11416): Entre en procesar conexion cpu
+[WARNING] 11:18:50:245 cpu/(11410:11416): El pid despues del recv es: 1
+[WARNING] 11:18:50:246 cpu/(11410:11416): El codigo de operacion despues del recv es: 13
+[WARNING] 11:18:50:246 cpu/(11410:11416): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:18:50:246 cpu/(11410:11416): El codigo de operacion despues del recv es: 14
+[WARNING] 11:18:50:246 cpu/(11410:11416): Deserialice IO el parametro es: 3000
+[WARNING] 11:18:50:246 cpu/(11410:11416): El codigo de operacion despues del recv es: 15
+[WARNING] 11:18:50:246 cpu/(11410:11416): Deserialice READ el parametro es: 0
+[WARNING] 11:18:50:246 cpu/(11410:11416): El codigo de operacion despues del recv es: 15
+[WARNING] 11:18:50:246 cpu/(11410:11416): Deserialice READ el parametro es: 4
+[WARNING] 11:18:50:247 cpu/(11410:11416): El codigo de operacion despues del recv es: 16
+[WARNING] 11:18:50:247 cpu/(11410:11416): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:18:50:247 cpu/(11410:11416): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:18:50:247 cpu/(11410:11416): El codigo de operacion despues del recv es: 18
+[WARNING] 11:18:50:247 cpu/(11410:11416): Entre en EXIT
+[WARNING] 11:19:33:383 cpu/(11410:11416): El codigo de operacion despues del recv es: 2
+[ERROR] 11:19:33:383 cpu/(11410:11416): Algo anduvo mal en el server de CPU
+[INFO] 11:19:33:383 cpu/(11410:11416): Cop: 2
+[INFO] 11:24:16:246 cpu/(12022:12022): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:24:16:246 cpu/(12022:12022): El socket de kernel en cpu.c es : 4
+[INFO] 11:24:18:333 cpu/(12022:12022): Cliente conectado (a CPU)
+
+[WARNING] 11:24:18:333 cpu/(12022:12027): Entre en procesar conexion cpu
+[WARNING] 11:24:21:881 cpu/(12022:12027): El codigo de operacion despues del recv es: 13
+[WARNING] 11:24:21:882 cpu/(12022:12027): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:24:21:882 cpu/(12022:12027): El codigo de operacion despues del recv es: 14
+[WARNING] 11:24:21:882 cpu/(12022:12027): Deserialice IO el parametro es: 3000
+[WARNING] 11:24:21:882 cpu/(12022:12027): El codigo de operacion despues del recv es: 15
+[WARNING] 11:24:21:882 cpu/(12022:12027): Deserialice READ el parametro es: 0
+[WARNING] 11:24:21:882 cpu/(12022:12027): El codigo de operacion despues del recv es: 15
+[WARNING] 11:24:21:882 cpu/(12022:12027): Deserialice READ el parametro es: 4
+[WARNING] 11:24:21:883 cpu/(12022:12027): El codigo de operacion despues del recv es: 16
+[WARNING] 11:24:21:883 cpu/(12022:12027): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:24:21:883 cpu/(12022:12027): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:24:21:883 cpu/(12022:12027): El codigo de operacion despues del recv es: 18
+[WARNING] 11:24:21:883 cpu/(12022:12027): Entre en EXIT
+[WARNING] 11:24:21:883 cpu/(12022:12027): El codigo de operacion despues del recv es: 1
+[ERROR] 11:24:21:883 cpu/(12022:12027): Algo anduvo mal en el server de CPU
+[INFO] 11:24:21:883 cpu/(12022:12027): Cop: 1
+[INFO] 11:34:06:573 cpu/(13046:13046): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:34:06:574 cpu/(13046:13046): El socket de kernel en cpu.c es : 4
+[INFO] 11:34:08:798 cpu/(13046:13046): Cliente conectado (a CPU)
+
+[WARNING] 11:34:08:798 cpu/(13046:13054): Entre en procesar conexion cpu
+[WARNING] 11:34:11:251 cpu/(13046:13054): El codigo de operacion despues del recv es: 13
+[WARNING] 11:34:11:251 cpu/(13046:13054): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:34:11:251 cpu/(13046:13054): El codigo de operacion despues del recv es: 14
+[WARNING] 11:34:11:251 cpu/(13046:13054): Deserialice IO el parametro es: 3000
+[WARNING] 11:34:11:252 cpu/(13046:13054): El codigo de operacion despues del recv es: 15
+[WARNING] 11:34:11:252 cpu/(13046:13054): Deserialice READ el parametro es: 0
+[WARNING] 11:34:11:252 cpu/(13046:13054): El codigo de operacion despues del recv es: 15
+[WARNING] 11:34:11:252 cpu/(13046:13054): Deserialice READ el parametro es: 4
+[WARNING] 11:34:11:252 cpu/(13046:13054): El codigo de operacion despues del recv es: 16
+[WARNING] 11:34:11:252 cpu/(13046:13054): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:34:11:252 cpu/(13046:13054): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:34:11:253 cpu/(13046:13054): El codigo de operacion despues del recv es: 18
+[WARNING] 11:34:11:253 cpu/(13046:13054): Entre en EXIT
+[WARNING] 11:34:11:253 cpu/(13046:13054): El codigo de operacion despues del recv es: 1
+[ERROR] 11:34:11:253 cpu/(13046:13054): Algo anduvo mal en el server de CPU
+[INFO] 11:34:11:253 cpu/(13046:13054): Cop: 1
+[INFO] 11:36:02:498 cpu/(13225:13225): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:36:02:498 cpu/(13225:13225): El socket de kernel en cpu.c es : 4
+[INFO] 11:36:04:274 cpu/(13225:13225): Cliente conectado (a CPU)
+
+[WARNING] 11:36:04:274 cpu/(13225:13230): Entre en procesar conexion cpu
+[WARNING] 11:36:06:019 cpu/(13225:13230): El codigo de operacion despues del recv es: 13
+[WARNING] 11:36:06:019 cpu/(13225:13230): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:36:06:019 cpu/(13225:13230): El codigo de operacion despues del recv es: 14
+[WARNING] 11:36:06:019 cpu/(13225:13230): Deserialice IO el parametro es: 3000
+[WARNING] 11:36:06:019 cpu/(13225:13230): El codigo de operacion despues del recv es: 15
+[WARNING] 11:36:06:019 cpu/(13225:13230): Deserialice READ el parametro es: 0
+[WARNING] 11:36:06:020 cpu/(13225:13230): El codigo de operacion despues del recv es: 15
+[WARNING] 11:36:06:020 cpu/(13225:13230): Deserialice READ el parametro es: 4
+[WARNING] 11:36:06:020 cpu/(13225:13230): El codigo de operacion despues del recv es: 16
+[WARNING] 11:36:06:020 cpu/(13225:13230): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:36:06:020 cpu/(13225:13230): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:36:06:020 cpu/(13225:13230): El codigo de operacion despues del recv es: 18
+[WARNING] 11:36:06:020 cpu/(13225:13230): Entre en EXIT
+[WARNING] 11:36:06:020 cpu/(13225:13230): El codigo de operacion despues del recv es: 1
+[ERROR] 11:36:06:020 cpu/(13225:13230): Algo anduvo mal en el server de CPU
+[INFO] 11:36:06:020 cpu/(13225:13230): Cop: 1
+[TRACE] 11:42:39:880 cpu/(13859:13859): El socket de kernel en cpu.c es : 0
+[INFO] 11:42:39:881 cpu/(13859:13859): Cliente conectado (a CPU)
+
+[TRACE] 11:43:04:951 cpu/(13892:13892): El socket de kernel en cpu.c es : 0
+[INFO] 11:43:04:952 cpu/(13892:13892): Cliente conectado (a CPU)
+
+[INFO] 11:50:00:218 cpu/(14932:14932): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:50:00:218 cpu/(14932:14932): El socket de kernel en cpu.c es : 4
+[INFO] 11:50:02:501 cpu/(14932:14932): Cliente conectado (a CPU)
+
+[WARNING] 11:50:02:501 cpu/(14932:14937): Entre en procesar conexion cpu
+[WARNING] 11:50:04:947 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:04:947 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:04:948 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:04:948 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:04:948 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:04:948 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:04:948 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:04:948 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:04:948 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:04:948 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:04:948 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:04:949 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:04:949 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:07:388 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:07:388 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:07:389 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:07:389 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:07:389 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:07:389 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:07:389 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:07:389 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:07:389 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:07:389 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:07:389 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:07:390 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:07:390 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:08:341 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:08:341 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:08:341 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:08:341 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:08:341 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:08:341 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:08:341 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:08:342 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:08:342 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:08:342 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:08:342 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:08:342 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:08:342 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:09:063 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:09:063 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:09:063 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:09:063 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:09:063 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:09:063 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:09:063 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:09:063 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:09:064 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:09:064 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:09:064 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:09:064 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:09:064 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:09:608 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:09:608 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:09:608 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:09:608 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:09:609 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:09:609 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:09:609 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:09:609 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:09:609 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:09:609 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:09:609 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:09:610 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:09:610 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:10:062 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:10:062 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:10:062 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:10:062 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:10:062 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:10:062 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:10:063 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:10:063 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:10:063 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:10:063 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:10:063 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:10:063 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:10:063 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:10:445 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:10:445 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:10:445 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:10:445 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:10:445 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:10:445 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:10:446 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:10:446 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:10:446 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:10:446 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:10:446 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:10:446 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:10:446 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:10:777 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:10:777 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:10:777 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:10:777 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:10:778 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:10:778 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:10:778 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:10:778 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:10:778 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:10:778 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:10:778 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:10:778 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:10:778 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:11:101 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:11:101 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:11:101 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:11:101 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:11:101 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:11:102 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:11:102 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:11:102 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:11:102 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:11:102 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:11:102 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:11:102 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:11:102 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:11:408 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:11:408 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:11:409 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:11:409 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:11:409 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:11:409 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:11:409 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:11:409 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:11:409 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:11:409 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:11:409 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:11:410 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:11:410 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:11:771 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:11:771 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:11:771 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:11:771 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:11:772 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:11:772 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:11:772 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:11:772 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:11:772 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:11:772 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:11:772 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:11:773 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:11:773 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:12:043 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:12:043 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:12:043 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:12:043 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:12:044 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:12:044 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:12:044 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:12:044 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:12:044 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:12:044 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:12:044 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:12:044 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:12:044 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:12:330 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:12:330 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:12:330 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:12:330 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:12:331 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:12:331 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:12:331 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:12:331 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:12:331 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:12:331 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:12:331 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:12:331 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:12:331 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:12:664 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:12:664 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:12:664 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:12:665 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:12:665 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:12:665 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:12:665 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:12:665 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:12:665 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:12:665 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:12:665 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:12:666 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:12:666 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:12:895 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:12:895 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:12:895 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:12:895 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:12:895 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:12:895 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:12:896 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:12:896 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:12:896 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:12:896 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:12:896 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:12:896 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:12:896 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:13:124 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:13:124 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:13:124 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:13:124 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:13:124 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:13:124 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:13:125 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:13:125 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:13:125 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:13:125 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:13:125 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:13:125 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:13:125 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:13:319 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:13:319 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:13:319 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:13:319 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:13:320 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:13:320 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:13:320 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:13:320 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:13:320 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:13:320 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:13:320 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:13:320 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:13:320 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:13:493 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:13:493 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:13:493 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:13:493 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:13:493 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:13:493 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:13:494 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:13:494 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:13:494 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:13:494 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:13:494 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:13:494 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:13:494 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:14:574 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:14:575 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:14:575 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:14:575 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:14:575 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:14:575 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:14:575 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:14:575 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:14:576 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:14:576 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:14:576 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:14:576 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:14:576 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:15:051 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:15:051 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:15:052 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:15:052 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:15:052 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:15:052 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:15:052 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:15:052 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:15:052 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:15:053 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:15:053 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:15:053 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:15:053 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:15:461 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:15:461 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:15:462 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:15:462 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:15:462 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:15:462 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:15:462 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:15:462 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:15:462 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:15:463 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:15:463 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:15:463 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:15:463 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:15:871 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:15:872 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:15:872 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:15:872 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:15:872 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:15:872 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:15:872 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:15:872 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:15:873 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:15:873 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:15:873 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:15:873 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:15:873 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:16:279 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:16:279 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:16:280 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:16:280 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:16:280 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:16:280 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:16:280 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:16:280 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:16:281 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:16:281 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:16:281 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:16:281 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:16:281 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:16:687 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:16:687 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:16:687 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:16:687 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:16:687 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:16:687 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:16:688 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:16:688 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:16:688 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:16:688 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:16:688 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:16:688 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:16:688 cpu/(14932:14937): Entre en EXIT
+[WARNING] 11:50:17:058 cpu/(14932:14937): El codigo de operacion despues del recv es: 13
+[WARNING] 11:50:17:058 cpu/(14932:14937): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:17:058 cpu/(14932:14937): El codigo de operacion despues del recv es: 14
+[WARNING] 11:50:17:058 cpu/(14932:14937): Deserialice IO el parametro es: 3000
+[WARNING] 11:50:17:058 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:17:058 cpu/(14932:14937): Deserialice READ el parametro es: 0
+[WARNING] 11:50:17:059 cpu/(14932:14937): El codigo de operacion despues del recv es: 15
+[WARNING] 11:50:17:059 cpu/(14932:14937): Deserialice READ el parametro es: 4
+[WARNING] 11:50:17:059 cpu/(14932:14937): El codigo de operacion despues del recv es: 16
+[WARNING] 11:50:17:059 cpu/(14932:14937): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:50:17:059 cpu/(14932:14937): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:50:17:059 cpu/(14932:14937): El codigo de operacion despues del recv es: 18
+[WARNING] 11:50:17:059 cpu/(14932:14937): Entre en EXIT
+[INFO] 12:13:08:718 cpu/(16981:16981): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:13:08:718 cpu/(16981:16981): El socket de kernel en cpu.c es : 4
+[INFO] 12:13:10:668 cpu/(16981:16981): Cliente conectado (a CPU)
+
+[WARNING] 12:13:10:669 cpu/(16981:16986): Entre en procesar conexion cpu
+[WARNING] 12:13:12:478 cpu/(16981:16986): El pid despues del recv es: 1
+[WARNING] 12:13:12:478 cpu/(16981:16986): El codigo de operacion despues del recv es: 13
+[WARNING] 12:13:12:478 cpu/(16981:16986): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:13:12:479 cpu/(16981:16986): El pid despues del recv es: 14
+[WARNING] 12:13:12:479 cpu/(16981:16986): El codigo de operacion despues del recv es: 3000
+[ERROR] 12:13:12:479 cpu/(16981:16986): Algo anduvo mal en el server de CPU
+[INFO] 12:13:12:479 cpu/(16981:16986): Cop: 3000
+[INFO] 12:14:16:971 cpu/(17173:17173): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:14:16:972 cpu/(17173:17173): El socket de kernel en cpu.c es : 4
+[INFO] 12:14:40:424 cpu/(17404:17404): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:14:40:424 cpu/(17404:17404): El socket de kernel en cpu.c es : 4
+[INFO] 12:14:43:092 cpu/(17404:17404): Cliente conectado (a CPU)
+
+[WARNING] 12:14:43:092 cpu/(17404:17409): Entre en procesar conexion cpu
+[WARNING] 12:14:45:439 cpu/(17404:17409): El pid despues del recv es: 1
+[WARNING] 12:14:45:440 cpu/(17404:17409): El codigo de operacion despues del recv es: 13
+[WARNING] 12:14:45:440 cpu/(17404:17409): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:14:45:440 cpu/(17404:17409): El pid despues del recv es: 14
+[WARNING] 12:14:45:440 cpu/(17404:17409): El codigo de operacion despues del recv es: 3000
+[ERROR] 12:14:45:440 cpu/(17404:17409): Algo anduvo mal en el server de CPU
+[INFO] 12:14:45:440 cpu/(17404:17409): Cop: 3000

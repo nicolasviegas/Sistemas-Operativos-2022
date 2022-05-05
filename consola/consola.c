@@ -52,7 +52,7 @@ int main(int argc, char** argv){
 
 	log_error(log_consola,"Pase el send TAM ");
 
-	send_instrucciones(lista_instrucciones,tam,fd_mod2);
+	send_instrucciones(lista_instrucciones,fd_mod2);
 
 	log_error(log_consola,"Pase el send instrucciones ");
 

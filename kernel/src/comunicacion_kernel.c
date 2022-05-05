@@ -43,40 +43,42 @@ static void procesar_conexion_kernel(void* void_args) {
         	contador_cliente++;
 
         	//Una vez que la consola nos da todas las instrucciones, aca abajo cargamos estas instrucciones en el pcb y se lo enviamos a cpu
-        	//////////////////////////////////////////////////////////////////////
+
+
+        	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
         	int a = list_size(lista_instrucciones_kernel);
         	t_list* lista_nueva_kernel = list_create();
-        	lista_nueva_kernel = list_take_and_remove(lista_instrucciones_kernel,a);
 
-        	t_list* tabla_paginas = list_create();
-
-        	///////////////////////////////////////////////////
-        	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
+        	lista_nueva_kernel = lista_instrucciones_kernel;
 
         	pcb_proceso->PID = contador_cliente;
-        	//pcb_proceso->tamanio = tam;
+        	pcb_proceso->tamanio = tam;
         	pcb_proceso->instrucciones = lista_nueva_kernel;
-        	//pcb_proceso->tabla_paginas = tabla_paginas;
-        	//pcb_proceso->estimacionRafaga = estimacion_inicial;
-        	//pcb_proceso->alpha = alfa;
+        	pcb_proceso->PC = 0;//arranca desde la instruccion 0
+        	pcb_proceso->tabla_paginas = 0 ;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
+        	pcb_proceso->estimacionRafaga = estimacion_inicial;
+        	pcb_proceso->alpha = alfa;
 
-        	//send_PCB(fd_cpu,pcb_proceso);
-        	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
-        	send_instrucciones_to_cpu(fd_cpu,pcb_proceso->instrucciones);
+        	 send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
+        	 send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
 
 
 
-        	list_add(lista_pcb,pcb_proceso);
-        	free(pcb_proceso);
+        	 list_add(lista_pcb,pcb_proceso);
+        	 free(pcb_proceso);
+
+        	//////////////////////////////////////////////////////////////////////
+
+        	lista_nueva_kernel = list_take_and_remove(lista_instrucciones_kernel,a);
+
+
+        	///////////////////////////////////////////////////
+
 
 
         	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
-////////////////////////////////////////////////////////////////////////////////////
 
-
-        //	send_TAM(fd_cpu,100); //ESTO ES DE PRUEBA PARA VER SI SE ENVIA DE KERNEL A CPU BORRAR
-//////////////////////////////////////////////////////////////////////////////////
         	log_trace(log_kernel,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
 
 

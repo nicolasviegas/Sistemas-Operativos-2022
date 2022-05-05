@@ -25,12 +25,12 @@ typedef struct{
 
 typedef struct{
 	uint32_t PID;
-	//uint32_t tamanio;
+	uint32_t tamanio;
 	t_list* instrucciones;
-//	uint32_t PC;
-	//t_list* tabla_paginas;
-	//uint32_t estimacionRafaga;
-	//uint32_t alpha;
+	uint32_t PC;
+	uint32_t tabla_paginas;
+	uint32_t estimacionRafaga;
+	uint32_t alpha;
 
 
 	//t_semaforo* semaforoEsperado;
@@ -52,5 +52,9 @@ typedef enum{
 t_list* lista_pcb;
 
 void cargar_PCB_kernel(int contador_cliente, uint32_t tam, t_list* lista_nueva_kernel, t_list* tabla_paginas, int estimacion_inicial, int alfa);
+
+//void cargar_lista_nueva(t_list* lista_nueva_kernel,int fd_cpu);
+
+void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* lista_instrucciones);
 
 #endif /* KERNEL_INCLUDE_PLANIFICACION_H_ */

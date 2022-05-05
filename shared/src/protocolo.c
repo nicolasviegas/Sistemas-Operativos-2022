@@ -440,6 +440,34 @@ static void* serializar_instrucciones(t_list* parametro1) {
     return stream;
 }
 
+///////////////////
+/*void serializar_lista_instrucciones(t_list* lista_instrucciones_kernel, int fd){
+    int i;
+    int cantidad_instrucciones = list_size(lista_instrucciones_kernel);
+    int tamanio_lista = sizeof(int);
+    int tamanio_instruccion = sizeof(int) + sizeof(char) + sizeof(int) + sizeof(int);
+    int tamanio_total = tamanio_lista + (tamanio_instruccion * cantidad_instrucciones);
+    void* buffer = malloc(tamanio_total);
+    int offset = 0;
+    memcpy(buffer + offset, &cantidad_instrucciones, sizeof(int));
+    offset += sizeof(int);
+    for(i = 0; i < cantidad_instrucciones; i++){
+           instrucciones* instruccion = list_get(lista_instrucciones_kernel, i);
+           memcpy(buffer + offset, &instruccion->id, sizeof(int));
+           offset += sizeof(int);
+           memcpy(buffer + offset, &instruccion->nombre, sizeof(char));
+           offset += sizeof(char);
+           memcpy(buffer + offset, &instruccion->parametro1, sizeof(int));
+           offset += sizeof(int);
+           memcpy(buffer + offset, &instruccion->parametro2, sizeof(int));
+           offset += sizeof(int);
+       }
+    send(fd, buffer, tamanio_total, 0);
+      free(buffer);
+  }*/
+
+//////////////////////
+
 
 void deserializar_instrucciones(void* stream, t_list** parametro1) {
 
