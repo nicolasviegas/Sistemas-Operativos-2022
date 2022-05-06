@@ -24268,3 +24268,240 @@
 [WARNING] 11:00:50:256 cpu/(9594:9599): Entre en EXIT
 [ERROR] 11:00:55:040 cpu/(9594:9599): Fallo recibiendo pid
 [WARNING] 11:00:55:041 cpu/(9594:9599): El cliente se desconecto de CPU server
+[INFO] 11:07:46:801 cpu/(10318:10318): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:07:46:857 cpu/(10318:10318): El socket de kernel en cpu.c es : 4
+[INFO] 11:07:48:512 cpu/(10318:10318): Cliente conectado (a CPU)
+
+[WARNING] 11:07:50:038 cpu/(10318:10323): El pid despues del recv es: 1
+[ERROR] 11:07:50:043 cpu/(10318:10323): cant_instrucciones despues del recv es: 6
+[WARNING] 11:07:50:047 cpu/(10318:10323): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:07:50:052 cpu/(10318:10323): Deserialice IO el parametro es: 3000
+[WARNING] 11:07:50:055 cpu/(10318:10323): Deserialice READ el parametro es: 0
+[WARNING] 11:07:50:057 cpu/(10318:10323): Deserialice READ el parametro es: 4
+[WARNING] 11:07:50:059 cpu/(10318:10323): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:07:50:060 cpu/(10318:10323): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:07:50:066 cpu/(10318:10323): Entre en EXIT
+[ERROR] 11:08:19:616 cpu/(10318:10323): Fallo recibiendo pid
+[WARNING] 11:08:19:616 cpu/(10318:10323): El cliente se desconecto de CPU server
+[INFO] 11:19:29:528 cpu/(11445:11445): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:19:29:578 cpu/(11445:11445): El socket de kernel en cpu.c es : 4
+[INFO] 11:19:31:439 cpu/(11445:11445): Cliente conectado (a CPU)
+
+[ERROR] 11:19:33:436 cpu/(11445:11447): El pid despues del recv es: 1
+[ERROR] 11:19:33:439 cpu/(11445:11447): El tam despues del recv es: 100
+[ERROR] 11:19:33:441 cpu/(11445:11447): cant_instrucciones despues del recv es: 6
+[WARNING] 11:19:33:446 cpu/(11445:11447): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:19:33:452 cpu/(11445:11447): Deserialice IO el parametro es: 3000
+[WARNING] 11:19:33:455 cpu/(11445:11447): Deserialice READ el parametro es: 0
+[WARNING] 11:19:33:457 cpu/(11445:11447): Deserialice READ el parametro es: 4
+[WARNING] 11:19:33:459 cpu/(11445:11447): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:19:33:460 cpu/(11445:11447): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:19:33:465 cpu/(11445:11447): Entre en EXIT
+[ERROR] 11:19:37:581 cpu/(11445:11447): El pid despues del recv es: 2
+[ERROR] 11:19:37:581 cpu/(11445:11447): El tam despues del recv es: 123
+[ERROR] 11:19:37:581 cpu/(11445:11447): cant_instrucciones despues del recv es: 6
+[WARNING] 11:19:37:594 cpu/(11445:11447): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:19:37:597 cpu/(11445:11447): Deserialice IO el parametro es: 3000
+[WARNING] 11:19:37:598 cpu/(11445:11447): Deserialice READ el parametro es: 0
+[WARNING] 11:19:37:599 cpu/(11445:11447): Deserialice READ el parametro es: 4
+[WARNING] 11:19:37:599 cpu/(11445:11447): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:19:37:600 cpu/(11445:11447): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:19:37:600 cpu/(11445:11447): Entre en EXIT
+[ERROR] 11:19:45:392 cpu/(11445:11447): Fallo recibiendo pid
+[WARNING] 11:19:45:393 cpu/(11445:11447): El cliente se desconecto de CPU server
+[INFO] 11:23:09:370 cpu/(11865:11865): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:23:09:424 cpu/(11865:11865): El socket de kernel en cpu.c es : 4
+[INFO] 11:23:11:276 cpu/(11865:11865): Cliente conectado (a CPU)
+
+[ERROR] 11:23:13:068 cpu/(11865:11870): El pid despues del recv es: 1
+[ERROR] 11:23:13:072 cpu/(11865:11870): El tam despues del recv es: 123
+[ERROR] 11:23:13:074 cpu/(11865:11870): cant_instrucciones despues del recv es: 6
+[WARNING] 11:23:13:079 cpu/(11865:11870): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:23:13:084 cpu/(11865:11870): Deserialice IO el parametro es: 3000
+[WARNING] 11:23:13:087 cpu/(11865:11870): Deserialice READ el parametro es: 0
+[WARNING] 11:23:13:092 cpu/(11865:11870): Deserialice READ el parametro es: 4
+[WARNING] 11:23:13:095 cpu/(11865:11870): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:23:13:095 cpu/(11865:11870): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:23:13:097 cpu/(11865:11870): Entre en EXIT
+[TRACE] 11:23:13:098 cpu/(11865:11870): Sali de los recv
+[ERROR] 11:23:16:292 cpu/(11865:11870): Fallo recibiendo pid
+[WARNING] 11:23:16:293 cpu/(11865:11870): El cliente se desconecto de CPU server
+[INFO] 11:25:10:230 cpu/(12183:12183): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:25:10:281 cpu/(12183:12183): El socket de kernel en cpu.c es : 4
+[INFO] 11:25:12:484 cpu/(12183:12183): Cliente conectado (a CPU)
+
+[ERROR] 11:25:14:650 cpu/(12183:12185): El pid despues del recv es: 1
+[ERROR] 11:25:14:653 cpu/(12183:12185): El tam despues del recv es: 123
+[ERROR] 11:25:14:654 cpu/(12183:12185): cant_instrucciones despues del recv es: 6
+[WARNING] 11:25:14:660 cpu/(12183:12185): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:25:14:665 cpu/(12183:12185): Deserialice IO el parametro es: 3000
+[WARNING] 11:25:14:668 cpu/(12183:12185): Deserialice READ el parametro es: 0
+[WARNING] 11:25:14:670 cpu/(12183:12185): Deserialice READ el parametro es: 4
+[WARNING] 11:25:14:672 cpu/(12183:12185): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:25:14:673 cpu/(12183:12185): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:25:14:679 cpu/(12183:12185): Entre en EXIT
+[TRACE] 11:25:14:680 cpu/(12183:12185): Sali de los recv
+[ERROR] 11:25:14:680 cpu/(12183:12185): El tam de la lista pcb cpu una vez terminado un proceso: 
+[TRACE] 11:25:42:424 cpu/(12332:12332): El socket de kernel en cpu.c es : 0
+[INFO] 11:25:42:488 cpu/(12332:12332): Cliente conectado (a CPU)
+
+[INFO] 11:27:08:080 cpu/(12445:12445): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:27:08:131 cpu/(12445:12445): El socket de kernel en cpu.c es : 4
+[INFO] 11:27:10:278 cpu/(12445:12445): Cliente conectado (a CPU)
+
+[ERROR] 11:27:12:196 cpu/(12445:12451): El pid despues del recv es: 1
+[ERROR] 11:27:12:199 cpu/(12445:12451): El tam despues del recv es: 123
+[ERROR] 11:27:12:201 cpu/(12445:12451): cant_instrucciones despues del recv es: 6
+[WARNING] 11:27:12:207 cpu/(12445:12451): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:27:12:212 cpu/(12445:12451): Deserialice IO el parametro es: 3000
+[WARNING] 11:27:12:220 cpu/(12445:12451): Deserialice READ el parametro es: 0
+[WARNING] 11:27:12:221 cpu/(12445:12451): Deserialice READ el parametro es: 4
+[WARNING] 11:27:12:225 cpu/(12445:12451): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:27:12:226 cpu/(12445:12451): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:27:12:228 cpu/(12445:12451): Entre en EXIT
+[TRACE] 11:27:12:229 cpu/(12445:12451): Sali de los recv
+[ERROR] 11:27:24:584 cpu/(12445:12451): El pid despues del recv es: 2
+[ERROR] 11:27:24:584 cpu/(12445:12451): El tam despues del recv es: 123
+[ERROR] 11:27:24:584 cpu/(12445:12451): cant_instrucciones despues del recv es: 6
+[WARNING] 11:27:24:586 cpu/(12445:12451): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:27:24:595 cpu/(12445:12451): Deserialice IO el parametro es: 3000
+[WARNING] 11:27:24:596 cpu/(12445:12451): Deserialice READ el parametro es: 0
+[WARNING] 11:27:24:597 cpu/(12445:12451): Deserialice READ el parametro es: 4
+[WARNING] 11:27:24:598 cpu/(12445:12451): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:27:24:598 cpu/(12445:12451): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:27:24:599 cpu/(12445:12451): Entre en EXIT
+[TRACE] 11:27:24:599 cpu/(12445:12451): Sali de los recv
+[ERROR] 11:27:32:994 cpu/(12445:12451): El pid despues del recv es: 3
+[ERROR] 11:27:32:995 cpu/(12445:12451): El tam despues del recv es: 123
+[ERROR] 11:27:32:995 cpu/(12445:12451): cant_instrucciones despues del recv es: 6
+[WARNING] 11:27:32:996 cpu/(12445:12451): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:27:32:997 cpu/(12445:12451): Deserialice IO el parametro es: 3000
+[WARNING] 11:27:32:998 cpu/(12445:12451): Deserialice READ el parametro es: 0
+[WARNING] 11:27:32:999 cpu/(12445:12451): Deserialice READ el parametro es: 4
+[WARNING] 11:27:33:009 cpu/(12445:12451): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:27:33:009 cpu/(12445:12451): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:27:33:011 cpu/(12445:12451): Entre en EXIT
+[TRACE] 11:27:33:011 cpu/(12445:12451): Sali de los recv
+[TRACE] 11:28:24:670 cpu/(12656:12656): El socket de kernel en cpu.c es : 0
+[INFO] 11:28:24:719 cpu/(12656:12656): Cliente conectado (a CPU)
+
+[INFO] 11:28:45:466 cpu/(12685:12685): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:28:45:516 cpu/(12685:12685): El socket de kernel en cpu.c es : 4
+[INFO] 11:28:48:515 cpu/(12685:12685): Cliente conectado (a CPU)
+
+[ERROR] 11:28:50:270 cpu/(12685:12691): El pid despues del recv es: 1
+[ERROR] 11:28:50:274 cpu/(12685:12691): El tam despues del recv es: 123
+[ERROR] 11:28:50:275 cpu/(12685:12691): cant_instrucciones despues del recv es: 6
+[WARNING] 11:28:50:281 cpu/(12685:12691): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:28:50:286 cpu/(12685:12691): Deserialice IO el parametro es: 3000
+[WARNING] 11:28:50:289 cpu/(12685:12691): Deserialice READ el parametro es: 0
+[WARNING] 11:28:50:291 cpu/(12685:12691): Deserialice READ el parametro es: 4
+[WARNING] 11:28:50:293 cpu/(12685:12691): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:28:50:294 cpu/(12685:12691): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:28:50:300 cpu/(12685:12691): Entre en EXIT
+[TRACE] 11:28:50:301 cpu/(12685:12691): Sali de los recv
+[WARNING] 11:28:50:302 cpu/(12685:12691): El cliente se desconecto de CPU server
+[INFO] 11:29:12:460 cpu/(12822:12822): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:29:12:510 cpu/(12822:12822): El socket de kernel en cpu.c es : 4
+[INFO] 11:29:15:161 cpu/(12822:12822): Cliente conectado (a CPU)
+
+[ERROR] 11:29:16:820 cpu/(12822:12833): El pid despues del recv es: 1
+[ERROR] 11:29:16:823 cpu/(12822:12833): El tam despues del recv es: 123
+[ERROR] 11:29:16:824 cpu/(12822:12833): cant_instrucciones despues del recv es: 6
+[WARNING] 11:29:16:830 cpu/(12822:12833): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:29:16:835 cpu/(12822:12833): Deserialice IO el parametro es: 3000
+[WARNING] 11:29:16:838 cpu/(12822:12833): Deserialice READ el parametro es: 0
+[WARNING] 11:29:16:840 cpu/(12822:12833): Deserialice READ el parametro es: 4
+[WARNING] 11:29:16:842 cpu/(12822:12833): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:29:16:842 cpu/(12822:12833): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:29:16:848 cpu/(12822:12833): Entre en EXIT
+[TRACE] 11:29:16:850 cpu/(12822:12833): Sali de los recv
+[INFO] 11:29:40:524 cpu/(12974:12974): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:29:40:575 cpu/(12974:12974): El socket de kernel en cpu.c es : 4
+[INFO] 11:29:43:044 cpu/(12974:12974): Cliente conectado (a CPU)
+
+[ERROR] 11:29:45:330 cpu/(12974:12980): El pid despues del recv es: 1
+[ERROR] 11:29:45:333 cpu/(12974:12980): El tam despues del recv es: 123
+[ERROR] 11:29:45:334 cpu/(12974:12980): cant_instrucciones despues del recv es: 6
+[WARNING] 11:29:45:340 cpu/(12974:12980): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:29:45:345 cpu/(12974:12980): Deserialice IO el parametro es: 3000
+[WARNING] 11:29:45:348 cpu/(12974:12980): Deserialice READ el parametro es: 0
+[WARNING] 11:29:45:350 cpu/(12974:12980): Deserialice READ el parametro es: 4
+[WARNING] 11:29:45:352 cpu/(12974:12980): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:29:45:352 cpu/(12974:12980): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:29:45:358 cpu/(12974:12980): Entre en EXIT
+[TRACE] 11:29:45:360 cpu/(12974:12980): Sali de los recv
+[INFO] 11:30:40:239 cpu/(13180:13180): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:30:40:292 cpu/(13180:13180): El socket de kernel en cpu.c es : 4
+[INFO] 11:30:44:026 cpu/(13180:13180): Cliente conectado (a CPU)
+
+[ERROR] 11:30:45:960 cpu/(13180:13186): El pid despues del recv es: 1
+[ERROR] 11:30:45:963 cpu/(13180:13186): El tam despues del recv es: 123
+[ERROR] 11:30:45:964 cpu/(13180:13186): cant_instrucciones despues del recv es: 6
+[WARNING] 11:30:45:970 cpu/(13180:13186): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:30:45:976 cpu/(13180:13186): Deserialice IO el parametro es: 3000
+[WARNING] 11:30:45:979 cpu/(13180:13186): Deserialice READ el parametro es: 0
+[WARNING] 11:30:45:980 cpu/(13180:13186): Deserialice READ el parametro es: 4
+[WARNING] 11:30:45:983 cpu/(13180:13186): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:30:45:983 cpu/(13180:13186): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:30:45:985 cpu/(13180:13186): Entre en EXIT
+[TRACE] 11:30:45:986 cpu/(13180:13186): Sali de los recv
+[ERROR] 11:30:48:034 cpu/(13180:13186): El pid despues del recv es: 2
+[ERROR] 11:30:48:034 cpu/(13180:13186): El tam despues del recv es: 123
+[ERROR] 11:30:48:035 cpu/(13180:13186): cant_instrucciones despues del recv es: 6
+[WARNING] 11:30:48:036 cpu/(13180:13186): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:30:48:045 cpu/(13180:13186): Deserialice IO el parametro es: 3000
+[WARNING] 11:30:48:046 cpu/(13180:13186): Deserialice READ el parametro es: 0
+[WARNING] 11:30:48:047 cpu/(13180:13186): Deserialice READ el parametro es: 4
+[WARNING] 11:30:48:047 cpu/(13180:13186): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:30:48:048 cpu/(13180:13186): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:30:48:048 cpu/(13180:13186): Entre en EXIT
+[TRACE] 11:30:48:049 cpu/(13180:13186): Sali de los recv
+[ERROR] 11:30:48:977 cpu/(13180:13186): El pid despues del recv es: 3
+[ERROR] 11:30:48:978 cpu/(13180:13186): El tam despues del recv es: 123
+[ERROR] 11:30:48:978 cpu/(13180:13186): cant_instrucciones despues del recv es: 6
+[WARNING] 11:30:48:980 cpu/(13180:13186): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:30:48:981 cpu/(13180:13186): Deserialice IO el parametro es: 3000
+[WARNING] 11:30:48:981 cpu/(13180:13186): Deserialice READ el parametro es: 0
+[WARNING] 11:30:48:991 cpu/(13180:13186): Deserialice READ el parametro es: 4
+[WARNING] 11:30:48:992 cpu/(13180:13186): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:30:48:992 cpu/(13180:13186): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:30:48:993 cpu/(13180:13186): Entre en EXIT
+[TRACE] 11:30:48:993 cpu/(13180:13186): Sali de los recv
+[ERROR] 11:30:57:817 cpu/(13180:13186): Fallo recibiendo pid
+[WARNING] 11:30:57:817 cpu/(13180:13186): El cliente se desconecto de CPU server 
+[INFO] 11:31:03:837 cpu/(13180:13180): Cliente conectado (a CPU)
+
+[ERROR] 11:31:05:759 cpu/(13180:13219): El pid despues del recv es: 1
+[ERROR] 11:31:05:760 cpu/(13180:13219): El tam despues del recv es: 123
+[ERROR] 11:31:05:761 cpu/(13180:13219): cant_instrucciones despues del recv es: 6
+[WARNING] 11:31:05:765 cpu/(13180:13219): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:31:05:768 cpu/(13180:13219): Deserialice IO el parametro es: 3000
+[WARNING] 11:31:05:770 cpu/(13180:13219): Deserialice READ el parametro es: 0
+[WARNING] 11:31:05:772 cpu/(13180:13219): Deserialice READ el parametro es: 4
+[WARNING] 11:31:05:775 cpu/(13180:13219): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:31:05:775 cpu/(13180:13219): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:31:05:777 cpu/(13180:13219): Entre en EXIT
+[TRACE] 11:31:05:777 cpu/(13180:13219): Sali de los recv
+[ERROR] 11:31:09:310 cpu/(13180:13219): El pid despues del recv es: 2
+[ERROR] 11:31:09:311 cpu/(13180:13219): El tam despues del recv es: 123
+[ERROR] 11:31:09:311 cpu/(13180:13219): cant_instrucciones despues del recv es: 6
+[WARNING] 11:31:09:313 cpu/(13180:13219): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:31:09:323 cpu/(13180:13219): Deserialice IO el parametro es: 3000
+[WARNING] 11:31:09:324 cpu/(13180:13219): Deserialice READ el parametro es: 0
+[WARNING] 11:31:09:324 cpu/(13180:13219): Deserialice READ el parametro es: 4
+[WARNING] 11:31:09:325 cpu/(13180:13219): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:31:09:325 cpu/(13180:13219): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:31:09:326 cpu/(13180:13219): Entre en EXIT
+[TRACE] 11:31:09:326 cpu/(13180:13219): Sali de los recv
+[ERROR] 11:31:16:908 cpu/(13180:13219): Fallo recibiendo pid
+[WARNING] 11:31:16:909 cpu/(13180:13219): El cliente se desconecto de CPU server 

@@ -19,43 +19,38 @@ static void procesar_conexion_cpu(void* void_args) {
 
 
 	 uint32_t pid;
+	 uint32_t tam;
 	 uint32_t cant_instrucciones;
 	 op_code_instrucciones co_op;
-
-	/* if (!recv_pid_to_cpu(cliente_socket, &pid)) {
-		log_error(log_cpu, "Fallo recibiendo pid");
-		break;
-		}
-	 log_warning(log_cpu,"El pid despues del recv es: %d",pid);*/
-
 
 	 while (cliente_socket != -1) {
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
 		 		log_error(log_cpu, "Fallo recibiendo pid");
 		 		break;
-		 		}
-		 	 log_warning(log_cpu,"El pid despues del recv es: %d",pid);
+		 }
+		 log_error(log_cpu,"El pid despues del recv es: %d",pid);
+
+
+		 if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+		 log_info(log_kernel, "DISCONNECT!");
+		 		return;
+		 }
+		 log_error(log_cpu,"El tam despues del recv es: %d",tam);
 
 		 if (!recv_cant_instrucciones(cliente_socket, &cant_instrucciones)) {
 		 	 	log_error(log_cpu, "Fallo recibiendo cant_instrucciones");
 
 		 	 }
-		 	 log_error(log_cpu,"cant_instrucciones despues del recv es: %d",cant_instrucciones);
+		 log_error(log_cpu,"cant_instrucciones despues del recv es: %d",cant_instrucciones);
+
+
+		 ////////////FALTA EL RECV DEL INIDICE DE TABLAS DE PAGINA
+
 
 		for(int i = 0; i<cant_instrucciones;i++){
 			if (recv(cliente_socket, &co_op, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
 
-						 pcb_cpu* pcb_proceso_cpu = malloc(sizeof(pcb_cpu));
 
-
-						 pcb_proceso_cpu->PID = pid;
-						 pcb_proceso_cpu->instrucciones = lista_instrucciones_cpu;
-						 pcb_proceso_cpu->PC = contador_instrucciones;
-						 pcb_proceso_cpu->tabla_paginas; //faltan cargar
-						 pcb_proceso_cpu->tamanio;//faltan cargar
-
-						 list_add(lista_pcb_cpu,pcb_proceso_cpu);
-						 free(pcb_proceso_cpu);
 
 					     log_trace(log_cpu,"El PID ES: %d",contador_cliente);
 					     log_info(log_cpu, "DISCONNECT!");
@@ -63,7 +58,7 @@ static void procesar_conexion_cpu(void* void_args) {
 					     log_trace(log_cpu,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
 
 					    // return;
-					         	break;
+					    break;
 					 }
 
 					       //  log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
@@ -163,17 +158,30 @@ static void procesar_conexion_cpu(void* void_args) {
 		}
 
 
-		/*
+
+		pcb_cpu* pcb_proceso_cpu = malloc(sizeof(pcb_cpu));
 
 
-	 */}
+		pcb_proceso_cpu->PID = pid;
+		pcb_proceso_cpu->instrucciones = lista_instrucciones_cpu;
+		pcb_proceso_cpu->PC = contador_instrucciones;
+		pcb_proceso_cpu->indice_tabla_paginas = 2; //faltan cargar, 2 HARDCODEADO
+		pcb_proceso_cpu->tamanio = tam;
+
+		list_add(lista_pcb_cpu,pcb_proceso_cpu);
+		free(pcb_proceso_cpu);
+
+
+		log_trace(log_cpu,"Sali de los recv");
+
+		printf("El tam de la lista pcb cpu una vez terminado un proceso: %d \n",list_size(lista_pcb_cpu));
+
+	 }
 
 
 
-    log_warning(log_cpu, "El cliente se desconecto de %s server", server_name);
+    log_warning(log_cpu, "El cliente se desconecto de %s server ", server_name);
 
-
-    return;
 }
 
 int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket) {

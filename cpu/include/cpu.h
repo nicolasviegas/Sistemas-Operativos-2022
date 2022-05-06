@@ -25,7 +25,7 @@ typedef struct{
 	uint32_t tamanio;
 	t_list* instrucciones;
 	uint32_t PC;
-	uint32_t tabla_paginas;
+	uint32_t indice_tabla_paginas;
 
 }pcb_cpu;
 
