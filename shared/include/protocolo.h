@@ -20,6 +20,13 @@ typedef enum{ //tipos de identificadores a parsear
     EXIT = 18, //5
 }op_code_instrucciones;
 
+typedef struct{
+	int id;
+	char* nombre;
+	uint32_t parametro1;
+	uint32_t parametro2;
+}instrucciones;
+
 #define BACKLOG 20
 
 bool send_NO_OP(int fd, uint32_t parametro1);
@@ -56,7 +63,11 @@ bool send_pid_to_cpu(int fd,uint32_t parametro1);
 bool recv_pid_to_cpu(int fd, uint32_t* parametro1);
 
 bool send_instrucciones_to_cpu(int fd,t_list* parametro1);
-bool recv_instrucciones_to_cpu(int fd, t_list** parametro1);
+bool recv_instrucciones_to_cpu(int fd, t_list** parametro1,int tam);
+
+bool send_cant_instrucciones(int fd,uint32_t cantidad);
+bool recv_cant_instrucciones(int fd, uint32_t* cantidad);
+
 
 bool send_debug(int fd);
 

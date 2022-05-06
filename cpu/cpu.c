@@ -29,7 +29,9 @@ int main() {
     ip = config_get_string_value(config_cpu,"IP_MEMORIA");
     puerto_escucha = config_get_string_value(config_cpu,"PUERTO_ESCUCHA_DISPATCH");
 
-   // lista_instrucciones_kernel = list_create();
+
+    lista_instrucciones_cpu = list_create();
+    lista_pcb_cpu = list_create();
 
     int fd_kernel = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
 

@@ -1,7 +1,6 @@
 #include "../include/comunicacion_cpu.h"
 #include "../include/cpu.h"
-//#include "../include/kernel.h"
-//#include "../include/funciones_kernel.h"
+#include "../include/funciones_cpu.h"
 
 
 typedef struct {
@@ -19,140 +18,155 @@ static void procesar_conexion_cpu(void* void_args) {
     free(args);
 
 
-	log_warning(log_cpu,"Entre en procesar conexion cpu");
-
-	 op_code_instrucciones cop;
 	 uint32_t pid;
+	 uint32_t cant_instrucciones;
+	 op_code_instrucciones co_op;
+
+	/* if (!recv_pid_to_cpu(cliente_socket, &pid)) {
+		log_error(log_cpu, "Fallo recibiendo pid");
+		break;
+		}
+	 log_warning(log_cpu,"El pid despues del recv es: %d",pid);*/
 
 
 	 while (cliente_socket != -1) {
+		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
+		 		log_error(log_cpu, "Fallo recibiendo pid");
+		 		break;
+		 		}
+		 	 log_warning(log_cpu,"El pid despues del recv es: %d",pid);
 
-		 	 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
-		 	log_error(log_cpu, "Fallo recibiendo pid");
-		 	break;
-		 	}
-		     log_warning(log_cpu,"El pid despues del recv es: %d",pid);
+		 if (!recv_cant_instrucciones(cliente_socket, &cant_instrucciones)) {
+		 	 	log_error(log_cpu, "Fallo recibiendo cant_instrucciones");
 
+		 	 }
+		 	 log_error(log_cpu,"cant_instrucciones despues del recv es: %d",cant_instrucciones);
 
-		     if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
+		for(int i = 0; i<cant_instrucciones;i++){
+			if (recv(cliente_socket, &co_op, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
 
-		    	 pcb_cpu* pcb_proceso_cpu = malloc(sizeof(pcb_cpu));
-
-
-		    	 pcb_proceso_cpu->PID = pid;
-		    	 pcb_proceso_cpu->instrucciones = lista_instrucciones_cpu;
-		    	 pcb_proceso_cpu->PC = contador_instrucciones;
-		    	 pcb_proceso_cpu->tabla_paginas; //faltan cargar
-		    	 pcb_proceso_cpu->tamanio;//faltan cargar
-
-		    	 list_add(lista_pcb_cpu,pcb_proceso_cpu);
-		    	 free(pcb_proceso_cpu);
-
-		    	 log_info(log_cpu, "DISCONNECT!");
-
-		        	log_trace(log_cpu,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
+						 pcb_cpu* pcb_proceso_cpu = malloc(sizeof(pcb_cpu));
 
 
-		           return;
-		     }
-		        log_warning(log_cpu,"El codigo de operacion despues del recv es: %d",cop);
+						 pcb_proceso_cpu->PID = pid;
+						 pcb_proceso_cpu->instrucciones = lista_instrucciones_cpu;
+						 pcb_proceso_cpu->PC = contador_instrucciones;
+						 pcb_proceso_cpu->tabla_paginas; //faltan cargar
+						 pcb_proceso_cpu->tamanio;//faltan cargar
 
-		        switch (cop) {
-		        contador_instrucciones = 0; //esta variable es para ir modificando el PC
-		            case NO_OP:{
+						 list_add(lista_pcb_cpu,pcb_proceso_cpu);
+						 free(pcb_proceso_cpu);
 
-		            	 uint32_t parametro1;
+					     log_trace(log_cpu,"El PID ES: %d",contador_cliente);
+					     log_info(log_cpu, "DISCONNECT!");
 
-		            	 if (!recv_NO_OP_2(cliente_socket, &parametro1)) {
-		            	          log_error(log_cpu, "Fallo recibiendo NO_OP");
-		            	         break;
+					     log_trace(log_cpu,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
 
-		            	      }
+					    // return;
+					         	break;
+					 }
 
-		           log_warning(log_cpu, "Deserialice NO_OP el parametro es: %d",parametro1);
-		           //cargar_instruccion(NO_OP,"NO_OP",parametro1,NULL);
+					       //  log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
 
+					         switch (co_op) {
+					             case NO_OP:{
 
-		               // log_info(log_cpu, "entre al case NO_OP");
-		                break;
-		            }
-		            case IO:
-		            {
-		            	uint32_t parametro1;
+					             	 uint32_t parametro1;
 
-		            	if (!recv_IO(cliente_socket, &parametro1)) {
-		            	     log_error(log_cpu, "Fallo recibiendo IO");
-		            	     break;
-		            	}
-		            	//cargar_instruccion(IO,"I\O",parametro1,NULL);
-		            	log_warning(log_cpu, "Deserialice IO el parametro es: %d",parametro1);
-		            	//log_info(log_cpu, "entre a IO");
+					             	 if (!recv_NO_OP_2(cliente_socket, &parametro1)) {
+					             	          log_error(log_kernel, "Fallo recibiendo NO_OP");
+					             	         break;
+					             	      }
+
+					            log_warning(log_cpu, "Deserialice NO_OP el parametro es: %d",parametro1);
+					             	 cargar_instruccion_cpu(NO_OP,"NO_OP",parametro1,NULL);
 
 
-		            	break;
-		            }
-		            case READ:
-		            {
-		            	uint32_t parametro1;
+					                // log_info(log_kernel, "entre al case NO_OP");
+					                 break;
+					             }
+					             case IO:
+					             {
+					             	uint32_t parametro1;
 
-		            	if (!recv_READ(cliente_socket, &parametro1)) {
-		        	     log_error(log_cpu, "Fallo recibiendo READ");
-		        	     break;
-		        	}
-		            	//cargar_instruccion(READ,"READ",parametro1,NULL);
+					             	if (!recv_IO(cliente_socket, &parametro1)) {
+					             	     log_error(log_cpu, "Fallo recibiendo IO");
+					             	     break;
+					             	}
+					             	cargar_instruccion_cpu(IO,"I\O",parametro1,NULL);
+					             	log_warning(log_cpu, "Deserialice IO el parametro es: %d",parametro1);
+					             	//log_info(log_kernel, "entre a IO");
 
-		            	log_warning(log_cpu, "Deserialice READ el parametro es: %d",parametro1);
-		        	//log_info(log_cpu, "entre a IO");
-		        	break;
-					}
-		            case COPY:
-		            {
-		            	uint32_t parametro1, parametro2;
 
-						if (!recv_COPY(cliente_socket, &parametro1, &parametro2)) {
-						   log_error(logger, "Fallo recibiendo COPY");
-						   break;
-						}
+					             	break;
+					             }
+					             case READ:
+					             {
+					             	uint32_t parametro1;
 
-						 //cargar_instruccion(COPY,"COPY",parametro1,parametro2);
-						log_warning(log_cpu, "Deserialice COPY el parametro1 es: %d",parametro1);
-						log_warning(log_cpu, "Deserialice COPY el parametro2 es: %d",parametro2);
-						break;
-		           	}
-		            case WRITE:
-		            {
-		            	uint32_t parametro1, parametro2;
+					             	if (!recv_READ(cliente_socket, &parametro1)) {
+					         	     log_error(log_cpu, "Fallo recibiendo READ");
+					         	     break;
+					         	}
+					             	cargar_instruccion_cpu(READ,"READ",parametro1,NULL);
+					         	log_warning(log_cpu, "Deserialice READ el parametro es: %d",parametro1);
+					         	//log_info(log_kernel, "entre a IO");
+					         	break;
+					 			}
+					             case COPY:
+					             {
+					             	uint32_t parametro1, parametro2;
 
-		            	if (!recv_WRITE(cliente_socket, &parametro1, &parametro2)) {
-		            	   log_error(logger, "Fallo recibiendo WRITE");
-		            	   break;
-		            	}
+					 				if (!recv_COPY(cliente_socket, &parametro1, &parametro2)) {
+					 				   log_error(log_cpu, "Fallo recibiendo COPY");
+					 				   break;
+					 				}
 
-		            	//cargar_instruccion(READ,"READ",parametro1,parametro2);
-		            	log_warning(log_cpu, "Deserialice WRITE el parametro1 es: %d",parametro1);
-		            	log_warning(log_cpu, "Deserialice WRITE el parametro2 es: %d",parametro2);
-		            	break;
-					}
-		            case EXIT:
-		            {
-		            	//cargar_instruccion(EXIT,"EXIT",NULL,NULL);
-		            	log_warning(log_cpu, "Entre en EXIT");
+					 				cargar_instruccion_cpu(COPY,"COPY",parametro1,parametro2);
+					 				log_warning(log_cpu, "Deserialice COPY el parametro1 es: %d",parametro1);
+					 				log_warning(log_cpu, "Deserialice COPY el parametro2 es: %d",parametro2);
+					 				break;
+					            	}
+					             case WRITE:
+					             {
+					             	uint32_t parametro1, parametro2;
 
-						break;
-					}
+					             	if (!recv_WRITE(cliente_socket, &parametro1, &parametro2)) {
+					             	   log_error(log_cpu, "Fallo recibiendo WRITE");
+					             	   break;
+					             	}
 
-		            // Errores
-		            case -1:
-		                log_error(log_cpu, "Cliente desconectado de %s...", server_name);
-		                return;
-		               // break;
-		            default:
-		                log_error(log_cpu, "Algo anduvo mal en el server de %s", server_name);
-		                log_info(log_cpu, "Cop: %d", cop);
-		                return;
-		        }
+					             	cargar_instruccion_cpu(READ,"READ",parametro1,parametro2);
+					             	log_warning(log_cpu, "Deserialice WRITE el parametro1 es: %d",parametro1);
+					             	log_warning(log_cpu, "Deserialice WRITE el parametro2 es: %d",parametro2);
+					             	break;
+					 			}
+					             case EXIT:
+					             {
+					            	 cargar_instruccion_cpu(EXIT,"EXIT",NULL,NULL);
+					             	log_warning(log_cpu, "Entre en EXIT");
 
-	 }
+					 				break;
+					 			}
+
+					             // Errores
+					             case -1:
+					                 log_error(log_cpu, "Cliente desconectado de %s...", server_name);
+					                 //return;
+					                 break;
+					             default:
+					                 log_error(log_cpu, "Algo anduvo mal en el server de %s", server_name);
+					                 log_info(log_cpu, "Cop: %d", co_op);
+					                 //return;
+					                 break;
+					         }
+		}
+
+
+		/*
+
+
+	 */}
 
 
 

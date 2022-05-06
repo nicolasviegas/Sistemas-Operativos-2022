@@ -46,30 +46,37 @@ static void procesar_conexion_kernel(void* void_args) {
 
 
         	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
-        	int a = list_size(lista_instrucciones_kernel);
-        	t_list* lista_nueva_kernel = list_create();
-
-        	lista_nueva_kernel = lista_instrucciones_kernel;
+        	uint32_t a = list_size(lista_instrucciones_kernel);
+        	printf("El tamanio de la lista es: %d\n",a);
+        	//t_list* lista_nueva_kernel = list_create();
 
         	pcb_proceso->PID = contador_cliente;
         	pcb_proceso->tamanio = tam;
-        	pcb_proceso->instrucciones = lista_nueva_kernel;
+        	pcb_proceso->instrucciones = lista_instrucciones_kernel;
         	pcb_proceso->PC = 0;//arranca desde la instruccion 0
         	pcb_proceso->tabla_paginas = 0 ;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
         	pcb_proceso->estimacionRafaga = estimacion_inicial;
         	pcb_proceso->alpha = alfa;
 
-        	 send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
-        	 send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
+        	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
+        	send_cant_instrucciones(fd_cpu,a);
+        	send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
+
+        	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
+
+        	log_error(log_kernel,"El tam de la lista instrucc despues de mandarla a cpu es: %d",list_size(lista_instrucciones_kernel));
+
+        	//log_error(log_cpu,"El tam de lista instrucc es: %d",a);
+        	//send_instrucciones_to_cpu(fd_cpu,lista_nueva_kernel);
 
 
 
-        	 list_add(lista_pcb,pcb_proceso);
-        	 free(pcb_proceso);
+        	 //list_add(lista_pcb,pcb_proceso);
+        	// free(pcb_proceso);
 
         	//////////////////////////////////////////////////////////////////////
 
-        	lista_nueva_kernel = list_take_and_remove(lista_instrucciones_kernel,a);
+        	//lista_nueva_kernel = list_take_and_remove(lista_instrucciones_kernel,a);
 
 
         	///////////////////////////////////////////////////
@@ -82,8 +89,8 @@ static void procesar_conexion_kernel(void* void_args) {
         	log_trace(log_kernel,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
 
 
-           return;
-        	//break;
+          // return;
+        	break;
         }
 
       //  log_warning(log_kernel,"El codigo de operacion despues del recv es: %d",cop);
