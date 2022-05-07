@@ -87,11 +87,22 @@ bool generar_conexiones_cpu(t_log* logger, char* ip, char* puerto, int* fd_mod3)
 ///////////////////////////
 
 
-int generar_conexion_kernel_cpu(t_log* logger, char* ip, char* puerto,int fd_mod3){
-	//int fd_mod3=0;
-	if (!generar_conexiones_cpu(logger, ip, puerto, &fd_mod3)) {
-		//cerrar_programa(logger);
-		return EXIT_FAILURE;
-	}
-	return EXIT_SUCCESS;
+//int generar_conexion_kernel_cpu(t_log* logger, char* ip, char* puerto,int fd_mod3){
+//	//int fd_mod3=0;
+//	if (!generar_conexiones_cpu(logger, ip, puerto, &fd_mod3)) {
+//		//cerrar_programa(logger);
+//		return EXIT_FAILURE;
+//	}
+//	return EXIT_SUCCESS;
+//}
+
+bool generar_conexion_kernel_a_memoria(t_log* logger, char* ip, char* puerto,int* fd_mod3){
+	 *fd_mod3 = crear_conexion(logger,"MEMORIA", ip, puerto );
+
+	   // log_error(logger,"El ip en grar conexiones es: %s",ip);
+	   // log_error(logger,"El puerto en grar conexiones es: %s",puerto);
+	   // log_error(logger,"El socket  en generar conexiones cpu es: %d",fd_mod3);
+
+	    return *fd_mod3 != 0;
 }
+

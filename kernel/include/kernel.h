@@ -21,7 +21,7 @@
 #include "../include/comunicacion_kernel.h"
 #include "../include/funciones_kernel.h"
 #include "../include/planificacion.h"
-#include "../../cpu/include/cpu.h"
+//#include "../../cpu/include/cpu.h"
 
 
 

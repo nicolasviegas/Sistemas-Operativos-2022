@@ -62,8 +62,11 @@ static void* serializar_NO_OP(uint32_t parametro1);
 bool send_pid_to_cpu(int fd,uint32_t parametro1);
 bool recv_pid_to_cpu(int fd, uint32_t* parametro1);
 
-bool send_instrucciones_to_cpu(int fd,t_list* parametro1);
-bool recv_instrucciones_to_cpu(int fd, t_list** parametro1,int tam);
+bool send_indice_a_kernel(int fd_memoria,uint32_t parametro1);
+bool recv_indice_a_kernel(int fd_memoria,uint32_t* parametro1);
+
+//bool send_instrucciones_to_cpu(int fd,t_list* parametro1);
+//bool recv_instrucciones_to_cpu(int fd, t_list** parametro1,int tam);
 
 bool send_cant_instrucciones(int fd,uint32_t cantidad);
 bool recv_cant_instrucciones(int fd, uint32_t* cantidad);

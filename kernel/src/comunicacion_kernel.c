@@ -38,13 +38,26 @@ static void procesar_conexion_kernel(void* void_args) {
     while (cliente_socket != -1) {
 
         if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
-
-
         	contador_cliente++;
+
+
 
         	//Una vez que la consola nos da todas las instrucciones, aca abajo cargamos estas instrucciones en el pcb y se lo enviamos a cpu
 
         	//ACA HAY QUE HACER UNA FUNCION QUE LE PIDA LA TABLA DE PAGINAS A MEMORIA
+
+        	//pedir tabla_a_memoria();
+
+
+
+//        	uint32_t indice_tabla;
+//        	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {
+//        	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
+//        	            	     break;
+//        	}
+//        	log_error(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
+
+//////////////////////////////////////////////////////////////////////////////////////////////
 
         	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
         	uint32_t a = list_size(lista_instrucciones_kernel);
@@ -67,25 +80,6 @@ static void procesar_conexion_kernel(void* void_args) {
 
 
         	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
-
-        	log_error(log_kernel,"El tam de la lista instrucc despues de mandarla a cpu es: %d",list_size(lista_instrucciones_kernel));
-
-        	//log_error(log_cpu,"El tam de lista instrucc es: %d",a);
-        	//send_instrucciones_to_cpu(fd_cpu,lista_nueva_kernel);
-
-
-
-        	 //list_add(lista_pcb,pcb_proceso);
-        	// free(pcb_proceso);
-
-        	//////////////////////////////////////////////////////////////////////
-
-        	//lista_nueva_kernel = list_take_and_remove(lista_instrucciones_kernel,a);
-
-
-        	///////////////////////////////////////////////////
-
-
 
         	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");

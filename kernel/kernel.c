@@ -24,11 +24,11 @@ int main() {
 
     //signal(SIGINT, sighandler);
 
-    log_kernel = log_create("kernel.log","cpu",1,LOG_LEVEL_TRACE);
+    log_kernel = log_create("kernel.log","kernel",1,LOG_LEVEL_TRACE);
 
     config_kernel = config_create("kernel.config");
 
-    ip = config_get_string_value(config_kernel,"IP_MEMORIA");
+    ip = config_get_string_value(config_kernel,"IP_MEMORIA");// esto no se si va
     puerto_escucha = config_get_string_value(config_kernel,"PUERTO_ESCUCHA");
 
     char* ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
@@ -39,9 +39,25 @@ int main() {
     lista_instrucciones_kernel = list_create();
     lista_pcb = list_create();
 
-    int fd_consola = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
+    fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 
-    log_trace(log_kernel,"El socket : %d",fd_consola);
+    log_trace(log_kernel,"El socket : %d",fd_kernel);
+
+    /////////////////////////////////////////////////////////
+
+    char* ip_memoria = config_get_string_value(config_kernel,"IP_MEMORIA");
+    char* puerto_memoria = config_get_string_value(config_kernel,"PUERTO_MEMORIA");
+
+
+    fd_memoria=0;
+    		if (!generar_conexion_kernel_a_memoria(log_kernel, ip_memoria, puerto_memoria, &fd_memoria)) {
+    			cerrar_programa4(log_kernel);
+    			//return EXIT_FAILURE;
+    		}
+    		log_trace(log_kernel,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+
+
+    ////////////////////////////////////////////////////////////
 
     fd_cpu = 0;
     if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_dispatch, &fd_cpu)) {
@@ -52,7 +68,7 @@ int main() {
 
 
     //conexion entre Kernel (Servidor) y consola(cliente)
-    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_consola));
+    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
 
 /*
     instrucciones* a = malloc(sizeof(instrucciones));
@@ -65,7 +81,7 @@ int main() {
 */
     log_warning(log_kernel,"Despues de server escuchar");
 
-    //cerrar_programa_kernel(log_kernel);
+    cerrar_programa2(log_kernel);
 
     return EXIT_SUCCESS;
 }

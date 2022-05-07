@@ -41,18 +41,18 @@ int main(int argc, char** argv){
 
 	int cant_instrucciones = list_size(lista_instrucciones);
 
-	int fd_mod2=0;
-	if (!generar_conexiones(log_consola, ip, puerto, &fd_mod2)) {
+	fd_kernel=0;
+	if (!generar_conexiones(log_consola, ip, puerto, &fd_kernel)) {
 		cerrar_programa(log_consola);
 		return EXIT_FAILURE;
 	}
-	log_trace(log_consola,"El fd_mod2 despues de grar conexiones es: %d",fd_mod2);
+	log_trace(log_consola,"El fd_kernel despues de grar conexiones es: %d",fd_kernel);
 
-	send_TAM(fd_mod2,tam);
+	send_TAM(fd_kernel,tam);
 
 	log_error(log_consola,"Pase el send TAM ");
 
-	send_instrucciones(lista_instrucciones,fd_mod2);
+	send_instrucciones(lista_instrucciones,fd_kernel);
 
 	log_error(log_consola,"Pase el send instrucciones ");
 

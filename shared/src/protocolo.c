@@ -23,7 +23,7 @@ static void deserializar_NO_OP_2(void* stream, uint32_t* parametro1) {
 }
 
 bool send_NO_OP(int fd, uint32_t parametro1) {
-	printf("Entre en send_NO_OP \n");
+	//printf("Entre en send_NO_OP \n");
    size_t size = sizeof(op_code_instrucciones) + sizeof(uint32_t);
 
     void* stream = serializar_NO_OP(parametro1);
@@ -78,7 +78,7 @@ static void deserializar_IO(void* stream, uint32_t* parametro1) {
 }
 
 bool send_IO(int fd, uint32_t parametro1) {
-	printf("Entre en send_IO \n");
+	//printf("Entre en send_IO \n");
    size_t size = sizeof(op_code_instrucciones) + sizeof(uint32_t);
 
     void* stream = serializar_IO(parametro1);
@@ -133,7 +133,7 @@ static void deserializar_READ(void* stream, uint32_t* parametro1) {
 }
 
 bool send_READ(int fd, uint32_t parametro1) {
-	printf("Entre en send_READ \n");
+	//printf("Entre en send_READ \n");
    size_t size = sizeof(op_code_instrucciones) + sizeof(uint32_t);
 
     void* stream = serializar_READ(parametro1);
@@ -188,7 +188,7 @@ static void deserializar_WRITE(void* stream, uint32_t* parametro1, uint32_t* par
 }
 
 bool send_WRITE(int fd, uint32_t parametro1, uint32_t parametro2) {
-	printf("Entre en send_WRITE \n");
+	//printf("Entre en send_WRITE \n");
     size_t size = sizeof(op_code_instrucciones) + sizeof(uint32_t) * 2;
     void* stream = serializar_WRITE(parametro1, parametro2);
     if (send(fd, stream, size, 0) != size) {
@@ -238,7 +238,7 @@ static void deserializar_COPY(void* stream, uint32_t* parametro1, uint32_t* para
 }
 
 bool send_COPY(int fd, uint32_t parametro1, uint32_t parametro2) {
-	printf("Entre en send_COPY \n");
+	//printf("Entre en send_COPY \n");
     size_t size = sizeof(op_code_instrucciones) + sizeof(uint32_t) * 2;
     void* stream = serializar_COPY(parametro1, parametro2);
     if (send(fd, stream, size, 0) != size) {
@@ -288,7 +288,7 @@ static void deserializar_EXIT(void* stream) {
 }
 
 bool send_EXIT(int fd) {
-	printf("Entre en send_EXIT \n");
+	//printf("Entre en send_EXIT \n");
    size_t size = sizeof(op_code_instrucciones);
 
     void* stream = serializar_EXIT();
@@ -394,7 +394,7 @@ void deserializar_TAM(void* stream, uint32_t* parametro1) {
 }
 
 bool send_TAM(int fd, uint32_t parametro1) {
-	printf("Entre en send_TAM \n");
+	//printf("Entre en send_TAM \n");
    size_t size = sizeof(uint32_t);
 
     void* stream = serializar_TAM(parametro1);
@@ -435,7 +435,7 @@ static void* serializar_pid(uint32_t parametro1) {
     memcpy(stream, &parametro1, sizeof(uint32_t));
 
    // printf("El cop en serializar READ es: %d\n",cop);
-    printf("El tam a enviar es: %d\n",parametro1);
+   // printf("El tam a enviar es: %d\n",parametro1);
    // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
@@ -449,7 +449,7 @@ void deserializar_pid(void* stream, uint32_t* parametro1) {
 }
 
 bool send_pid_to_cpu(int fd,uint32_t parametro1){
-	printf("Entre en send_PID \n");
+	//printf("Entre en send_PID \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_pid(parametro1);
@@ -479,133 +479,40 @@ bool recv_pid_to_cpu(int fd, uint32_t* parametro1) {
     return true;
 }
 ////////////////////////////////////////////////////////////////////
-static void* serializar_instrucciones(t_list* parametro1) {
-   void* stream = malloc(sizeof(t_list));
-   // op_code_instrucciones cop = READ;
-    //memcpy(stream, &cop, sizeof(op_code_instrucciones));
-    memcpy(stream, &parametro1, sizeof(t_list));
+static void* serializar_indice_a_kernel(uint32_t parametro1) {
+   void* stream = malloc(sizeof(uint32_t));
 
-   // printf("El cop en serializar READ es: %d\n",cop);
-    printf("El tam a enviar es: %d\n",parametro1);
-   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+    memcpy(stream, &parametro1, sizeof(uint32_t));
+
     return stream;
 }
 
-///////////////////
-/*
-static void* serializar_lista_instrucciones(t_list* lista_instrucciones_kernel, int fd){
-    int i;
-    int cantidad_instrucciones = list_size(lista_instrucciones_kernel);
-    int tamanio_lista = sizeof(int);
-    int tamanio_instruccion = sizeof(int) + sizeof(char) + sizeof(int) + sizeof(int);
-    int tamanio_total = tamanio_lista + (tamanio_instruccion * cantidad_instrucciones);
-    void* buffer = malloc(tamanio_total);
-    int offset = 0;
-    memcpy(buffer + offset, &cantidad_instrucciones, sizeof(int));
-    offset += sizeof(int);
-    for(i = 0; i < cantidad_instrucciones; i++){
-           instrucciones* instruccion = list_get(lista_instrucciones_kernel, i);
-           memcpy(buffer + offset, &instruccion->id, sizeof(int));
-           offset += sizeof(int);
-           memcpy(buffer + offset, &instruccion->nombre, sizeof(char));
-           offset += sizeof(char);
-           memcpy(buffer + offset, &instruccion->parametro1, sizeof(int));
-           offset += sizeof(int);
-           memcpy(buffer + offset, &instruccion->parametro2, sizeof(int));
-           offset += sizeof(int);
-       }
-    send(fd, buffer, tamanio_total, 0);
-      free(buffer);
-  }
 
-//////////////////////
+void deserializar_indice_a_kernel(void* stream, uint32_t* parametro1) {
 
+    memcpy(parametro1, stream ,sizeof(uint32_t));
+  printf("El indice en deserializar tam es: %d \n", parametro1);
 
-
-
-void deserializar_lista_instrucciones(int fd, t_list* lista_instrucciones_kernel,int tam){
-
-    int i;
-    for(i=0;i<tam;i++){
-        instrucciones* instruccion = malloc(sizeof(instrucciones));
-        if (!recv_NO_OP_2(fd, &instruccion)) {
-                      log_error(log_kernel, "Fallo recibiendo ID");
-                      return;
-        }
-        if (!recv_IO()(fd, &instruccion->nombre)) {
-                      log_error(log_kernel, "Fallo recibiendo NOMBRE");
-                      return;
-        }
-        if (!recv_PARAMETRO1(fd, &instruccion->parametro1)) {
-                      log_error(log_kernel, "Fallo recibiendo PARAMETRO1");
-                      return;
-        }
-        if (!recv_PARAMETRO2(fd, &instruccion->parametro2)) {
-                      log_error(log_kernel, "Fallo recibiendo PARAMETRO2");
-                      return;
-        }
-        list_add(lista_instrucciones_kernel,instruccion);
-        free(instruccion);
-    }
-    return;
-}
-
-*/
-
-static void* serializar_t_list_instrucciones(size_t* size, t_list* lista) {
-	*size = sizeof(instrucciones)*list_size(lista); // 2 uint8_t por cada elemento
-    void* stream = malloc(*size);
-
-    // serializo los elementos
-    t_list_iterator* list_it = list_iterator_create(lista);
-    for (uint8_t i=0; list_iterator_has_next(list_it); i+=2) {
-        instrucciones* instrucc = list_iterator_next(list_it);
-        memcpy(stream, &instrucc->id, sizeof(uint32_t));
-        memcpy(stream+sizeof(uint32_t), &instrucc->nombre, sizeof(char));
-        memcpy(stream+sizeof(uint32_t)+sizeof(char), &instrucc->parametro1, sizeof(uint32_t));
-        memcpy(stream+sizeof(uint32_t)+sizeof(char)+sizeof(uint32_t), &instrucc->parametro2, sizeof(uint32_t));
-        //memcpy(stream+(i+1)*sizeof(uint8_t), &instrucc->y, sizeof(uint8_t));
-    }
-    list_iterator_destroy(list_it);
-    return stream;
-}
-
-static t_list* deserializar_t_list_instrucciones(void* stream, int n_elements) {
-    t_list* lista = list_create();
-
-    // De-serializo y los meto en la lista
-    for (int i=0; n_elements>0; n_elements--) {
-        instrucciones* instrucc = malloc(sizeof(instrucciones));
-        memcpy(&instrucc->id, stream,  sizeof(uint32_t));
-        memcpy(&instrucc->nombre,stream+sizeof(uint32_t), sizeof(char));
-        memcpy(&instrucc->parametro1, stream+sizeof(uint32_t)+sizeof(char), sizeof(uint32_t));
-        memcpy(&instrucc->parametro2, stream+sizeof(uint32_t)+sizeof(char)+sizeof(uint32_t),  sizeof(uint32_t));
-
-
-        list_add(lista, instrucc);
-    }
-    return lista;
-}
-
-bool send_instrucciones_to_cpu(int fd,t_list* parametro1){
-	printf("Entre en send_instrucciones \n");
-	   size_t size;// = sizeof(t_list);
-
-	    void* stream = serializar_t_list_instrucciones(size,&parametro1);
-
-
-	    if (send(fd, stream, size, 0) != size) {
-	        free(stream);
-	        return false;
-	    }
-
-	    free(stream);
-	    return true;
 }
 
 
-bool recv_instrucciones_to_cpu(int fd, t_list** parametro1,int tam) {
-    size_t size = sizeof(t_list);
+bool send_indice_a_kernel(int fd_memoria,uint32_t parametro1){
+	 size_t size = sizeof(uint32_t);
+
+		    void* stream = serializar_indice_a_kernel(parametro1);
+
+
+		    if (send(fd_memoria, stream, size, 0) != size) {
+		        free(stream);
+		        return false;
+		    }
+
+		    free(stream);
+		    return true;
+}
+
+bool recv_indice_a_kernel(int fd, uint32_t* parametro1) {
+    size_t size = sizeof(uint32_t);
     void* stream = malloc(size);
 
     if (recv(fd, stream, size, 0) != size) {
@@ -613,8 +520,9 @@ bool recv_instrucciones_to_cpu(int fd, t_list** parametro1,int tam) {
         return false;
     }
 
-    deserializar_t_list_instrucciones(stream,6);//HARDCODEADO EL 6 HAY QUE DARLE LA VUELTA
+    deserializar_indice_a_kernel(stream, parametro1);
 
     free(stream);
     return true;
 }
+//////////////////////////

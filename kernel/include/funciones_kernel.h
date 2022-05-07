@@ -10,6 +10,7 @@
 #include "../../shared/include/socket.h"
 #include "../../shared/include/protocolo.h"
 #include "../../shared/include/consola-kernel.h"
+#include "../include/kernel.h"
 
 /*typedef struct{
 	int id;
@@ -19,5 +20,9 @@
 }instrucciones;*/
 
 void cargar_instruccion(int id, char* nombre, uint32_t parametro1, uint32_t parametro2);
+
+void conexion_kernel_a_memoria();
+
+
 
 #endif /* KERNEL_INCLUDE_FUNCIONES_KERNEL_H_ */
