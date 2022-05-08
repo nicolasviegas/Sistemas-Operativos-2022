@@ -34,7 +34,9 @@ void conexion_kernel_a_memoria(){
 		//return fd_memoria;
 }
 
-
+void pedir_tabla_a_memoria(){
+	send_TAM(fd_memoria,666);
+}
 
 
 

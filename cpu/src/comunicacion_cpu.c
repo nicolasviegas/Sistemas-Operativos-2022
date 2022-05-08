@@ -21,6 +21,7 @@ static void procesar_conexion_cpu(void* void_args) {
 	 uint32_t pid;
 	 uint32_t tam;
 	 uint32_t cant_instrucciones;
+	 uint32_t indice_tabla;
 	 op_code_instrucciones co_op;
 
 	 while (cliente_socket != -1) {
@@ -43,8 +44,11 @@ static void procesar_conexion_cpu(void* void_args) {
 		 	 }
 		 log_error(log_cpu,"cant_instrucciones despues del recv es: %d",cant_instrucciones);
 
+		 if (!recv_indice_tabla_paginas_a_cpu(cliente_socket, &indice_tabla)) {
+				 log_error(log_cpu, "Fallo recibiendo indice tabla paginas");
 
-		 ////////////FALTA EL RECV DEL INIDICE DE TABLAS DE PAGINA
+			}
+		log_error(log_cpu,"indice tabla pags despues del recv es: %d",indice_tabla);
 
 
 		for(int i = 0; i<cant_instrucciones;i++){
@@ -165,7 +169,7 @@ static void procesar_conexion_cpu(void* void_args) {
 		pcb_proceso_cpu->PID = pid;
 		pcb_proceso_cpu->instrucciones = lista_instrucciones_cpu;
 		pcb_proceso_cpu->PC = contador_instrucciones;
-		pcb_proceso_cpu->indice_tabla_paginas = 2; //faltan cargar, 2 HARDCODEADO
+		pcb_proceso_cpu->indice_tabla_paginas = indice_tabla;
 		pcb_proceso_cpu->tamanio = tam;
 
 		list_add(lista_pcb_cpu,pcb_proceso_cpu);

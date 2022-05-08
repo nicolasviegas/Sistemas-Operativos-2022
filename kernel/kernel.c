@@ -51,7 +51,7 @@ int main() {
 
     fd_memoria=0;
     		if (!generar_conexion_kernel_a_memoria(log_kernel, ip_memoria, puerto_memoria, &fd_memoria)) {
-    			cerrar_programa4(log_kernel);
+    			cerrar_programa2(log_kernel);
     			//return EXIT_FAILURE;
     		}
     		log_trace(log_kernel,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);

@@ -30,7 +30,7 @@ int main() {
     puerto_escucha = config_get_string_value(config_memoria,"PUERTO_ESCUCHA");
 
 
-    int fd_memoria = iniciar_servidor(log_memoria,"MEMORIA",ip,puerto_escucha);
+    fd_memoria = iniciar_servidor(log_memoria,"MEMORIA",ip,puerto_escucha);
 
     log_trace(log_memoria,"El socket de memoria es : %d",fd_memoria);
 

@@ -18,14 +18,17 @@ static void procesar_conexion_memoria(void* void_args) {
 
     	//log_trace(log_memoria,"Estoy dentro del while cliente socket");
 
+    		uint32_t condicion;
+    	    if (recv(cliente_socket, &condicion, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+    		log_info(log_kernel, "DISCONNECT!");
+    		return;
+    	    }
 
-    	// log_trace(log_memoria,"antes de enviar el inice a kernel");
 
+    	     send_indice_a_kernel(cliente_socket,indice_tabla);
 
-    	     // send_indice_a_kernel(fd_kernel,indice_tabla);
+    	     log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
 
-
-    	    //  log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
 
     	 // break; //borrar despues esto es solo para que no me itere ahora
     }

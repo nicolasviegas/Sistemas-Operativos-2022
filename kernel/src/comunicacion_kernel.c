@@ -46,16 +46,14 @@ static void procesar_conexion_kernel(void* void_args) {
 
         	//ACA HAY QUE HACER UNA FUNCION QUE LE PIDA LA TABLA DE PAGINAS A MEMORIA
 
-        	//pedir tabla_a_memoria();
+        	pedir_tabla_a_memoria();
 
-
-
-//        	uint32_t indice_tabla;
-//        	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {
-//        	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
-//        	            	     break;
-//        	}
-//        	log_error(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
+        	uint32_t indice_tabla;
+        	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {//puede ser fd_memoria en vez de cliente socket
+        	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
+        	            	     break;
+        	}
+        	log_error(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -68,15 +66,16 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso->tamanio = tam;
         	pcb_proceso->instrucciones = lista_instrucciones_kernel;
         	pcb_proceso->PC = 0;//arranca desde la instruccion 0
-        	pcb_proceso->tabla_paginas = 0 ;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
+        	pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
         	pcb_proceso->estimacionRafaga = estimacion_inicial;
         	pcb_proceso->alpha = alfa;
 
         	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
         	send_TAM(fd_cpu,pcb_proceso->tamanio);
         	send_cant_instrucciones(fd_cpu,a);
+        	send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
         	send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
-        	//send indice tabla paginas_a_cpu
+
 
 
         	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
