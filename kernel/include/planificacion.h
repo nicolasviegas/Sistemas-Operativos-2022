@@ -31,7 +31,7 @@ typedef struct{
 	uint32_t indice_tabla_paginas;
 	uint32_t estimacionRafaga;
 	uint32_t alpha;
-
+	uint32_t estado;
 
 	//t_semaforo* semaforoEsperado;
 	//comentario prueba 2
@@ -49,7 +49,8 @@ typedef enum{
 	FIFO
 }t_algoritmo_planificacion;
 
-t_list* lista_pcb;
+t_list* lista_pcb_en_memoria;
+t_list* lista_pcb_totales;
 
 void cargar_PCB_kernel(int contador_cliente, uint32_t tam, t_list* lista_nueva_kernel, t_list* tabla_paginas, int estimacion_inicial, int alfa);
 

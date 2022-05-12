@@ -18,12 +18,10 @@ static void procesar_conexion_kernel(void* void_args) {
     free(args);
 
     uint32_t estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
-    //char* alfa = config_get_string_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT
+    uint32_t grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
+    char* alfa_char = config_get_string_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT
 
-    uint32_t alfa = 1; //////////////////////////////////CAMBIAR NO ES ASI HAY QUE SACARLO DE CONFIG, LO USO ASI AHORA PARA VER SI FUNCIONA ////////////////////////////////////////
-
-    //log_error(log_kernel,"la estimacion inicial desp del config es: %d",estimacion_inicial);
-    //log_error(log_kernel,"el alfa desp del config es: %s",alfa);
+    uint32_t alfa = atoi(alfa_char); //////////////////////////////////CAMBIAR NO ES ASI HAY QUE SACARLO DE CONFIG, LO USO ASI AHORA PARA VER SI FUNCIONA ////////////////////////////////////////
 
     uint32_t tam;
     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -72,6 +70,27 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
         	pcb_proceso->estimacionRafaga = estimacion_inicial;
         	pcb_proceso->alpha = alfa;
+        	pcb_proceso->estado = NEW;
+
+        	//////////////////////////////////////////////////////////////////////////////////////////////////////
+        	if(list_size(lista_pcb_en_memoria) <= grado_multiprogramacion ){
+        		if(algoritmo_actual == "FIFO"){
+
+        		}
+        	}
+
+
+
+        	interrupcion = false;
+
+
+        	/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+        	////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
 
         	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
         	send_TAM(fd_cpu,pcb_proceso->tamanio);
@@ -83,15 +102,7 @@ static void procesar_conexion_kernel(void* void_args) {
 
 
         	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
-///////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        	//ACA ES DONDE KERNEL TIENE QUE HACER TODO LO SUYO
-        	 /////////////////////////////////////////////////////////////////////////////////////////////////////////
-        	    interrupcion = false;
-        	  /////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
         	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
 

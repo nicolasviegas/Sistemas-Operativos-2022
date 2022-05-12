@@ -34,10 +34,10 @@ int main() {
     char* ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
     char* puerto_cpu_dispatch = config_get_string_value(config_kernel,"PUERTO_CPU_DISPATCH");
 
-
+    algoritmo_actual = config_get_string_value(config_kernel,"ALGORITMO_PLANIFICACION");
 
     lista_instrucciones_kernel = list_create();
-    lista_pcb = list_create();
+    lista_pcb_en_memoria = list_create();
 
     fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 

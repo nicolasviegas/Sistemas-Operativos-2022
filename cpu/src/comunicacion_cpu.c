@@ -189,7 +189,18 @@ static void procesar_conexion_cpu(void* void_args) {
 		instrucciones* proxima_a_ejecutar = malloc(sizeof(instrucciones)); //hacer un free al final
 
 
-		while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones)){
+
+		////////////////////////////////////////CAMBIAR DESPUES
+		//if (recv(cliente_socket, &interrupcion, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+		//			 log_info(log_cpu, "DISCONNECT!");
+			//				return;
+		//}
+		//log_error(log_cpu,"El tam despues del recv es: %d",pc);
+		//////////////////////////////////////////
+
+		/*-------------------------------------------------------------------------------------------------------*/
+
+		while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones)){//la interrupcion verla segun el puerto interrupt
 		log_error(log_cpu,"Entre en el while de interrupcion");
 		proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);

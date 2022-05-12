@@ -23,8 +23,17 @@
 #include "../include/planificacion.h"
 //#include "../../cpu/include/cpu.h"
 
+typedef enum{ //tipos de identificadores a parsear
+    NEW = 25, //0
+    READY = 26, //1
+    EXEC = 27, //2
+    BLOCKED = 28,//3 LO AGREGO YO
+    SUSPENDED_BLOCKED = 29, //4
+    SUSPENDED_READY = 30,
+	FINISH = 31, //5
+}op_estados;
 
-
+char algoritmo_actual;
 
 t_list* lista_instrucciones_kernel;
 
