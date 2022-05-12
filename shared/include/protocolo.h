@@ -74,6 +74,9 @@ bool recv_cant_instrucciones(int fd, uint32_t* cantidad);
 bool send_indice_tabla_paginas_a_cpu(int fd,uint32_t parametro1);
 bool recv_indice_tabla_paginas_a_cpu(int fd,uint32_t* parametro1);
 
+bool send_PC(int fd, uint32_t parametro1);
+bool recv_PC(int fd, uint32_t* parametro1);
+
 bool send_debug(int fd);
 
 

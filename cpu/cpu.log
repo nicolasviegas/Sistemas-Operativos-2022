@@ -25665,3 +25665,432 @@
 [WARNING] 17:30:10:296 cpu/(14323:14331): Deserialice COPY el parametro2 es: 4
 [WARNING] 17:30:10:296 cpu/(14323:14331): Entre en EXIT
 [TRACE] 17:30:10:297 cpu/(14323:14331): Sali de los recv
+[INFO] 21:15:18:294 cpu/(3631:3631): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 21:15:18:295 cpu/(3631:3631): El socket de kernel en cpu.c es : 4
+[INFO] 21:15:18:295 cpu/(3631:3631): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 21:15:18:295 cpu/(3631:3631): El fd_memoria despues de grar conexiones es: 5
+[INFO] 21:15:24:384 cpu/(3631:3631): Cliente conectado (a CPU)
+
+[ERROR] 21:15:33:290 cpu/(3631:3641): El pid despues del recv es: 1
+[ERROR] 21:15:33:290 cpu/(3631:3641): El tam despues del recv es: 123
+[ERROR] 21:15:33:290 cpu/(3631:3641): cant_instrucciones despues del recv es: 6
+[ERROR] 21:15:33:290 cpu/(3631:3641): indice tabla pags despues del recv es: 412
+[WARNING] 21:15:33:290 cpu/(3631:3641): Deserialice NO_OP el parametro es: 5
+[WARNING] 21:15:33:291 cpu/(3631:3641): Deserialice IO el parametro es: 3000
+[WARNING] 21:15:33:291 cpu/(3631:3641): Deserialice READ el parametro es: 0
+[WARNING] 21:15:33:291 cpu/(3631:3641): Deserialice READ el parametro es: 4
+[WARNING] 21:15:33:291 cpu/(3631:3641): Deserialice COPY el parametro1 es: 0
+[WARNING] 21:15:33:291 cpu/(3631:3641): Deserialice COPY el parametro2 es: 4
+[WARNING] 21:15:33:292 cpu/(3631:3641): Entre en EXIT
+[TRACE] 21:15:33:292 cpu/(3631:3641): Sali de los recv
+[ERROR] 21:15:47:905 cpu/(3631:3641): El pid despues del recv es: 2
+[ERROR] 21:15:47:905 cpu/(3631:3641): El tam despues del recv es: 123
+[ERROR] 21:15:47:905 cpu/(3631:3641): cant_instrucciones despues del recv es: 6
+[ERROR] 21:15:47:905 cpu/(3631:3641): indice tabla pags despues del recv es: 412
+[WARNING] 21:15:47:906 cpu/(3631:3641): Deserialice NO_OP el parametro es: 5
+[WARNING] 21:15:47:906 cpu/(3631:3641): Deserialice IO el parametro es: 3000
+[WARNING] 21:15:47:906 cpu/(3631:3641): Deserialice READ el parametro es: 0
+[WARNING] 21:15:47:907 cpu/(3631:3641): Deserialice READ el parametro es: 4
+[WARNING] 21:15:47:907 cpu/(3631:3641): Deserialice COPY el parametro1 es: 0
+[WARNING] 21:15:47:907 cpu/(3631:3641): Deserialice COPY el parametro2 es: 4
+[WARNING] 21:15:47:907 cpu/(3631:3641): Entre en EXIT
+[TRACE] 21:15:47:907 cpu/(3631:3641): Sali de los recv
+[ERROR] 21:15:49:054 cpu/(3631:3641): El pid despues del recv es: 3
+[ERROR] 21:15:49:054 cpu/(3631:3641): El tam despues del recv es: 123
+[ERROR] 21:15:49:054 cpu/(3631:3641): cant_instrucciones despues del recv es: 6
+[ERROR] 21:15:49:054 cpu/(3631:3641): indice tabla pags despues del recv es: 412
+[WARNING] 21:15:49:055 cpu/(3631:3641): Deserialice NO_OP el parametro es: 5
+[WARNING] 21:15:49:055 cpu/(3631:3641): Deserialice IO el parametro es: 3000
+[WARNING] 21:15:49:055 cpu/(3631:3641): Deserialice READ el parametro es: 0
+[WARNING] 21:15:49:056 cpu/(3631:3641): Deserialice READ el parametro es: 4
+[WARNING] 21:15:49:056 cpu/(3631:3641): Deserialice COPY el parametro1 es: 0
+[WARNING] 21:15:49:056 cpu/(3631:3641): Deserialice COPY el parametro2 es: 4
+[WARNING] 21:15:49:056 cpu/(3631:3641): Entre en EXIT
+[TRACE] 21:15:49:056 cpu/(3631:3641): Sali de los recv
+[ERROR] 21:15:50:525 cpu/(3631:3641): El pid despues del recv es: 4
+[ERROR] 21:15:50:525 cpu/(3631:3641): El tam despues del recv es: 123
+[ERROR] 21:15:50:525 cpu/(3631:3641): cant_instrucciones despues del recv es: 6
+[ERROR] 21:15:50:525 cpu/(3631:3641): indice tabla pags despues del recv es: 412
+[WARNING] 21:15:50:526 cpu/(3631:3641): Deserialice NO_OP el parametro es: 5
+[WARNING] 21:15:50:526 cpu/(3631:3641): Deserialice IO el parametro es: 3000
+[WARNING] 21:15:50:526 cpu/(3631:3641): Deserialice READ el parametro es: 0
+[WARNING] 21:15:50:526 cpu/(3631:3641): Deserialice READ el parametro es: 4
+[WARNING] 21:15:50:527 cpu/(3631:3641): Deserialice COPY el parametro1 es: 0
+[WARNING] 21:15:50:527 cpu/(3631:3641): Deserialice COPY el parametro2 es: 4
+[WARNING] 21:15:50:527 cpu/(3631:3641): Entre en EXIT
+[TRACE] 21:15:50:527 cpu/(3631:3641): Sali de los recv
+[ERROR] 21:15:52:040 cpu/(3631:3641): El pid despues del recv es: 5
+[ERROR] 21:15:52:041 cpu/(3631:3641): El tam despues del recv es: 123
+[ERROR] 21:15:52:041 cpu/(3631:3641): cant_instrucciones despues del recv es: 6
+[ERROR] 21:15:52:041 cpu/(3631:3641): indice tabla pags despues del recv es: 412
+[WARNING] 21:15:52:041 cpu/(3631:3641): Deserialice NO_OP el parametro es: 5
+[WARNING] 21:15:52:041 cpu/(3631:3641): Deserialice IO el parametro es: 3000
+[WARNING] 21:15:52:042 cpu/(3631:3641): Deserialice READ el parametro es: 0
+[WARNING] 21:15:52:042 cpu/(3631:3641): Deserialice READ el parametro es: 4
+[WARNING] 21:15:52:042 cpu/(3631:3641): Deserialice COPY el parametro1 es: 0
+[WARNING] 21:15:52:042 cpu/(3631:3641): Deserialice COPY el parametro2 es: 4
+[WARNING] 21:15:52:042 cpu/(3631:3641): Entre en EXIT
+[TRACE] 21:15:52:042 cpu/(3631:3641): Sali de los recv
+[ERROR] 21:15:53:138 cpu/(3631:3641): El pid despues del recv es: 6
+[ERROR] 21:15:53:139 cpu/(3631:3641): El tam despues del recv es: 123
+[ERROR] 21:15:53:139 cpu/(3631:3641): cant_instrucciones despues del recv es: 6
+[ERROR] 21:15:53:139 cpu/(3631:3641): indice tabla pags despues del recv es: 412
+[WARNING] 21:15:53:140 cpu/(3631:3641): Deserialice NO_OP el parametro es: 5
+[WARNING] 21:15:53:140 cpu/(3631:3641): Deserialice IO el parametro es: 3000
+[WARNING] 21:15:53:141 cpu/(3631:3641): Deserialice READ el parametro es: 0
+[WARNING] 21:15:53:141 cpu/(3631:3641): Deserialice READ el parametro es: 4
+[WARNING] 21:15:53:141 cpu/(3631:3641): Deserialice COPY el parametro1 es: 0
+[WARNING] 21:15:53:141 cpu/(3631:3641): Deserialice COPY el parametro2 es: 4
+[WARNING] 21:15:53:142 cpu/(3631:3641): Entre en EXIT
+[TRACE] 21:15:53:142 cpu/(3631:3641): Sali de los recv
+[INFO] 10:42:45:261 cpu/(4507:4507): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 10:42:45:262 cpu/(4507:4507): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 10:42:52:067 cpu/(4507:4507): Cliente conectado (a CPU)
+
+[ERROR] 10:43:02:365 cpu/(4507:4520): El pid despues del recv es: 1
+[ERROR] 10:43:02:366 cpu/(4507:4520): El tam despues del recv es: 123
+[ERROR] 10:43:02:366 cpu/(4507:4520): cant_instrucciones despues del recv es: 6
+[ERROR] 10:43:02:366 cpu/(4507:4520): indice tabla pags despues del recv es: 412
+[WARNING] 10:43:02:366 cpu/(4507:4520): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:43:02:366 cpu/(4507:4520): Deserialice IO el parametro es: 3000
+[WARNING] 10:43:02:367 cpu/(4507:4520): Deserialice READ el parametro es: 0
+[WARNING] 10:43:02:367 cpu/(4507:4520): Deserialice READ el parametro es: 4
+[WARNING] 10:43:02:367 cpu/(4507:4520): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:43:02:367 cpu/(4507:4520): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:43:02:367 cpu/(4507:4520): Entre en EXIT
+[TRACE] 10:43:02:367 cpu/(4507:4520): Sali de los recv
+[ERROR] 10:43:12:494 cpu/(4507:4520): El pid despues del recv es: 2
+[ERROR] 10:43:12:494 cpu/(4507:4520): El tam despues del recv es: 123
+[ERROR] 10:43:12:494 cpu/(4507:4520): cant_instrucciones despues del recv es: 6
+[ERROR] 10:43:12:494 cpu/(4507:4520): indice tabla pags despues del recv es: 412
+[WARNING] 10:43:12:495 cpu/(4507:4520): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:43:12:495 cpu/(4507:4520): Deserialice IO el parametro es: 3000
+[WARNING] 10:43:12:495 cpu/(4507:4520): Deserialice READ el parametro es: 0
+[WARNING] 10:43:12:495 cpu/(4507:4520): Deserialice READ el parametro es: 4
+[WARNING] 10:43:12:496 cpu/(4507:4520): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:43:12:496 cpu/(4507:4520): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:43:12:496 cpu/(4507:4520): Entre en EXIT
+[TRACE] 10:43:12:496 cpu/(4507:4520): Sali de los recv
+[INFO] 10:44:44:814 cpu/(5037:5037): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 10:44:44:814 cpu/(5037:5037): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 10:44:47:716 cpu/(5037:5037): Cliente conectado (a CPU)
+
+[ERROR] 10:44:50:848 cpu/(5037:5045): El pid despues del recv es: 1
+[ERROR] 10:44:50:848 cpu/(5037:5045): El tam despues del recv es: 123
+[ERROR] 10:44:50:848 cpu/(5037:5045): cant_instrucciones despues del recv es: 6
+[ERROR] 10:44:50:848 cpu/(5037:5045): indice tabla pags despues del recv es: 412
+[WARNING] 10:44:50:849 cpu/(5037:5045): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:44:50:849 cpu/(5037:5045): Deserialice IO el parametro es: 3000
+[WARNING] 10:44:50:849 cpu/(5037:5045): Deserialice READ el parametro es: 0
+[WARNING] 10:44:50:849 cpu/(5037:5045): Deserialice READ el parametro es: 4
+[WARNING] 10:44:50:850 cpu/(5037:5045): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:44:50:850 cpu/(5037:5045): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:44:50:850 cpu/(5037:5045): Entre en EXIT
+[TRACE] 10:44:50:850 cpu/(5037:5045): El tamanio de la lista de intrucciones en cpu es: 6
+[TRACE] 10:44:50:850 cpu/(5037:5045): Sali de los recv
+[ERROR] 10:44:55:655 cpu/(5037:5045): El pid despues del recv es: 2
+[ERROR] 10:44:55:655 cpu/(5037:5045): El tam despues del recv es: 123
+[ERROR] 10:44:55:655 cpu/(5037:5045): cant_instrucciones despues del recv es: 6
+[ERROR] 10:44:55:655 cpu/(5037:5045): indice tabla pags despues del recv es: 412
+[WARNING] 10:44:55:655 cpu/(5037:5045): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:44:55:655 cpu/(5037:5045): Deserialice IO el parametro es: 3000
+[WARNING] 10:44:55:656 cpu/(5037:5045): Deserialice READ el parametro es: 0
+[WARNING] 10:44:55:656 cpu/(5037:5045): Deserialice READ el parametro es: 4
+[WARNING] 10:44:55:656 cpu/(5037:5045): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:44:55:656 cpu/(5037:5045): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:44:55:656 cpu/(5037:5045): Entre en EXIT
+[TRACE] 10:44:55:656 cpu/(5037:5045): El tamanio de la lista de intrucciones en cpu es: 12
+[TRACE] 10:44:55:656 cpu/(5037:5045): Sali de los recv
+[INFO] 10:48:42:545 cpu/(5531:5531): Escuchando en 127.0.0.1:8001 (CPU)
+
+[ERROR] 10:48:42:545 cpu/(5531:5531): Error al conectar (a CPU)
+
+[INFO] 10:48:48:283 cpu/(5540:5540): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 10:48:48:284 cpu/(5540:5540): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 10:48:50:714 cpu/(5540:5540): Cliente conectado (a CPU)
+
+[ERROR] 10:48:54:602 cpu/(5540:5548): El pid despues del recv es: 1
+[ERROR] 10:48:54:602 cpu/(5540:5548): El tam despues del recv es: 123
+[ERROR] 10:48:54:602 cpu/(5540:5548): cant_instrucciones despues del recv es: 6
+[ERROR] 10:48:54:602 cpu/(5540:5548): indice tabla pags despues del recv es: 412
+[WARNING] 10:48:54:602 cpu/(5540:5548): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:48:54:603 cpu/(5540:5548): Deserialice IO el parametro es: 3000
+[WARNING] 10:48:54:603 cpu/(5540:5548): Deserialice READ el parametro es: 0
+[WARNING] 10:48:54:603 cpu/(5540:5548): Deserialice READ el parametro es: 4
+[WARNING] 10:48:54:603 cpu/(5540:5548): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:48:54:603 cpu/(5540:5548): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:48:54:604 cpu/(5540:5548): Entre en EXIT
+[TRACE] 10:48:54:604 cpu/(5540:5548): El tamanio de la lista de intrucciones en cpu es: 6
+[TRACE] 10:48:54:604 cpu/(5540:5548): Sali de los recv
+[ERROR] 10:48:58:490 cpu/(5540:5548): El pid despues del recv es: 2
+[ERROR] 10:48:58:490 cpu/(5540:5548): El tam despues del recv es: 123
+[ERROR] 10:48:58:490 cpu/(5540:5548): cant_instrucciones despues del recv es: 6
+[ERROR] 10:48:58:490 cpu/(5540:5548): indice tabla pags despues del recv es: 412
+[WARNING] 10:48:58:490 cpu/(5540:5548): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:48:58:491 cpu/(5540:5548): Deserialice IO el parametro es: 3000
+[WARNING] 10:48:58:491 cpu/(5540:5548): Deserialice READ el parametro es: 0
+[WARNING] 10:48:58:491 cpu/(5540:5548): Deserialice READ el parametro es: 4
+[WARNING] 10:48:58:491 cpu/(5540:5548): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:48:58:491 cpu/(5540:5548): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:48:58:492 cpu/(5540:5548): Entre en EXIT
+[TRACE] 10:48:58:492 cpu/(5540:5548): El tamanio de la lista de intrucciones en cpu es: 6
+[TRACE] 10:48:58:492 cpu/(5540:5548): Sali de los recv
+[ERROR] 10:48:59:551 cpu/(5540:5548): El pid despues del recv es: 3
+[ERROR] 10:48:59:551 cpu/(5540:5548): El tam despues del recv es: 123
+[ERROR] 10:48:59:551 cpu/(5540:5548): cant_instrucciones despues del recv es: 6
+[ERROR] 10:48:59:551 cpu/(5540:5548): indice tabla pags despues del recv es: 412
+[WARNING] 10:48:59:551 cpu/(5540:5548): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:48:59:552 cpu/(5540:5548): Deserialice IO el parametro es: 3000
+[WARNING] 10:48:59:552 cpu/(5540:5548): Deserialice READ el parametro es: 0
+[WARNING] 10:48:59:552 cpu/(5540:5548): Deserialice READ el parametro es: 4
+[WARNING] 10:48:59:552 cpu/(5540:5548): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:48:59:552 cpu/(5540:5548): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:48:59:553 cpu/(5540:5548): Entre en EXIT
+[TRACE] 10:48:59:553 cpu/(5540:5548): El tamanio de la lista de intrucciones en cpu es: 6
+[TRACE] 10:48:59:553 cpu/(5540:5548): Sali de los recv
+[ERROR] 10:49:00:098 cpu/(5540:5548): El pid despues del recv es: 4
+[ERROR] 10:49:00:098 cpu/(5540:5548): El tam despues del recv es: 123
+[ERROR] 10:49:00:098 cpu/(5540:5548): cant_instrucciones despues del recv es: 6
+[ERROR] 10:49:00:098 cpu/(5540:5548): indice tabla pags despues del recv es: 412
+[WARNING] 10:49:00:098 cpu/(5540:5548): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:49:00:099 cpu/(5540:5548): Deserialice IO el parametro es: 3000
+[WARNING] 10:49:00:099 cpu/(5540:5548): Deserialice READ el parametro es: 0
+[WARNING] 10:49:00:099 cpu/(5540:5548): Deserialice READ el parametro es: 4
+[WARNING] 10:49:00:099 cpu/(5540:5548): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:49:00:100 cpu/(5540:5548): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:49:00:100 cpu/(5540:5548): Entre en EXIT
+[TRACE] 10:49:00:100 cpu/(5540:5548): El tamanio de la lista de intrucciones en cpu es: 6
+[TRACE] 10:49:00:100 cpu/(5540:5548): Sali de los recv
+[ERROR] 10:49:00:563 cpu/(5540:5548): El pid despues del recv es: 5
+[ERROR] 10:49:00:563 cpu/(5540:5548): El tam despues del recv es: 123
+[ERROR] 10:49:00:563 cpu/(5540:5548): cant_instrucciones despues del recv es: 6
+[ERROR] 10:49:00:563 cpu/(5540:5548): indice tabla pags despues del recv es: 412
+[WARNING] 10:49:00:564 cpu/(5540:5548): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:49:00:564 cpu/(5540:5548): Deserialice IO el parametro es: 3000
+[WARNING] 10:49:00:564 cpu/(5540:5548): Deserialice READ el parametro es: 0
+[WARNING] 10:49:00:564 cpu/(5540:5548): Deserialice READ el parametro es: 4
+[WARNING] 10:49:00:565 cpu/(5540:5548): Deserialice COPY el parametro1 es: 0
+[WARNING] 10:49:00:565 cpu/(5540:5548): Deserialice COPY el parametro2 es: 4
+[WARNING] 10:49:00:565 cpu/(5540:5548): Entre en EXIT
+[TRACE] 10:49:00:565 cpu/(5540:5548): El tamanio de la lista de intrucciones en cpu es: 6
+[TRACE] 10:49:00:565 cpu/(5540:5548): Sali de los recv
+[ERROR] 10:49:14:913 cpu/(5540:5548): El pid despues del recv es: 6
+[ERROR] 10:49:14:913 cpu/(5540:5548): El tam despues del recv es: 123
+[ERROR] 10:49:14:913 cpu/(5540:5548): cant_instrucciones despues del recv es: 3
+[ERROR] 10:49:14:913 cpu/(5540:5548): indice tabla pags despues del recv es: 412
+[WARNING] 10:49:14:914 cpu/(5540:5548): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:49:14:914 cpu/(5540:5548): Deserialice IO el parametro es: 3000
+[WARNING] 10:49:14:914 cpu/(5540:5548): Deserialice READ el parametro es: 0
+[TRACE] 10:49:14:914 cpu/(5540:5548): El tamanio de la lista de intrucciones en cpu es: 3
+[TRACE] 10:49:14:914 cpu/(5540:5548): Sali de los recv
+[INFO] 11:50:55:475 cpu/(12676:12676): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:50:55:475 cpu/(12676:12676): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:50:59:177 cpu/(12676:12676): Cliente conectado (a CPU)
+
+[ERROR] 11:51:02:181 cpu/(12676:12689): El pid despues del recv es: 1
+[ERROR] 11:51:02:181 cpu/(12676:12689): El tam despues del recv es: 123
+[ERROR] 11:51:02:181 cpu/(12676:12689): cant_instrucciones despues del recv es: 6
+[ERROR] 11:51:02:181 cpu/(12676:12689): indice tabla pags despues del recv es: 412
+[WARNING] 11:51:02:182 cpu/(12676:12689): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:51:02:182 cpu/(12676:12689): Deserialice IO el parametro es: 3000
+[WARNING] 11:51:02:182 cpu/(12676:12689): Deserialice READ el parametro es: 0
+[WARNING] 11:51:02:182 cpu/(12676:12689): Deserialice READ el parametro es: 4
+[WARNING] 11:51:02:182 cpu/(12676:12689): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:51:02:183 cpu/(12676:12689): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:51:02:183 cpu/(12676:12689): Entre en EXIT
+[WARNING] 11:51:02:183 cpu/(12676:12689): Antes del sleep
+[INFO] 11:54:37:934 cpu/(13139:13139): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:54:37:934 cpu/(13139:13139): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:54:39:640 cpu/(13139:13139): Cliente conectado (a CPU)
+
+[ERROR] 11:54:42:011 cpu/(13139:13146): El pid despues del recv es: 1
+[ERROR] 11:54:42:011 cpu/(13139:13146): El tam despues del recv es: 123
+[ERROR] 11:54:42:011 cpu/(13139:13146): cant_instrucciones despues del recv es: 6
+[ERROR] 11:54:42:011 cpu/(13139:13146): indice tabla pags despues del recv es: 412
+[WARNING] 11:54:42:011 cpu/(13139:13146): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:54:42:012 cpu/(13139:13146): Deserialice IO el parametro es: 3000
+[WARNING] 11:54:42:012 cpu/(13139:13146): Deserialice READ el parametro es: 0
+[WARNING] 11:54:42:012 cpu/(13139:13146): Deserialice READ el parametro es: 4
+[WARNING] 11:54:42:012 cpu/(13139:13146): Deserialice COPY el parametro1 es: 0
+[WARNING] 11:54:42:012 cpu/(13139:13146): Deserialice COPY el parametro2 es: 4
+[WARNING] 11:54:42:013 cpu/(13139:13146): Entre en EXIT
+[WARNING] 11:54:42:013 cpu/(13139:13146): Antes del sleep
+[WARNING] 11:54:47:014 cpu/(13139:13146): Termine NO_OP donde hago el execute
+[TRACE] 11:54:47:015 cpu/(13139:13146): Sali de los recv
+[INFO] 12:35:19:275 cpu/(17275:17275): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:35:19:276 cpu/(17275:17275): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:35:23:924 cpu/(17275:17275): Cliente conectado (a CPU)
+
+[ERROR] 12:35:27:633 cpu/(17275:17285): El pid despues del recv es: 1
+[ERROR] 12:35:27:633 cpu/(17275:17285): El tam despues del recv es: 123
+[ERROR] 12:35:27:633 cpu/(17275:17285): cant_instrucciones despues del recv es: 6
+[ERROR] 12:35:27:633 cpu/(17275:17285): indice tabla pags despues del recv es: 412
+[WARNING] 12:35:27:633 cpu/(17275:17285): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:35:27:634 cpu/(17275:17285): Deserialice IO el parametro es: 3000
+[WARNING] 12:35:27:634 cpu/(17275:17285): Deserialice READ el parametro es: 0
+[WARNING] 12:35:27:634 cpu/(17275:17285): Deserialice READ el parametro es: 4
+[WARNING] 12:35:27:634 cpu/(17275:17285): Deserialice COPY el parametro1 es: 0
+[WARNING] 12:35:27:634 cpu/(17275:17285): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:35:27:635 cpu/(17275:17285): Entre en EXIT
+[ERROR] 12:35:27:635 cpu/(17275:17285): El tam despues del recv es: 0
+[WARNING] 12:35:27:635 cpu/(17275:17285): Antes del sleep
+[WARNING] 12:35:32:640 cpu/(17275:17285): Termine NO_OP donde hago el execute
+[WARNING] 12:35:32:640 cpu/(17275:17285): Entre en IO
+[WARNING] 12:35:32:640 cpu/(17275:17285): El tiempo bloqueante es: 3000
+[TRACE] 12:35:32:641 cpu/(17275:17285): Sali de los recv
+[ERROR] 12:36:59:365 cpu/(17413:17413): Error al conectar (a CPU)
+
+[INFO] 12:38:59:962 cpu/(17818:17818): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:38:59:963 cpu/(17818:17818): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:39:02:075 cpu/(17818:17818): Cliente conectado (a CPU)
+
+[ERROR] 12:39:04:456 cpu/(17818:17827): El pid despues del recv es: 1
+[ERROR] 12:39:04:456 cpu/(17818:17827): El tam despues del recv es: 123
+[ERROR] 12:39:04:456 cpu/(17818:17827): cant_instrucciones despues del recv es: 6
+[ERROR] 12:39:04:456 cpu/(17818:17827): indice tabla pags despues del recv es: 412
+[WARNING] 12:39:04:457 cpu/(17818:17827): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:39:04:457 cpu/(17818:17827): Deserialice IO el parametro es: 3000
+[WARNING] 12:39:04:457 cpu/(17818:17827): Deserialice READ el parametro es: 0
+[WARNING] 12:39:04:457 cpu/(17818:17827): Deserialice READ el parametro es: 4
+[WARNING] 12:39:04:458 cpu/(17818:17827): Deserialice COPY el parametro1 es: 0
+[WARNING] 12:39:04:458 cpu/(17818:17827): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:39:04:458 cpu/(17818:17827): Entre en EXIT
+[ERROR] 12:39:04:458 cpu/(17818:17827): El tam despues del recv es: 0
+[ERROR] 12:39:04:458 cpu/(17818:17827): Entre en el while de interrupcion
+[WARNING] 12:39:04:458 cpu/(17818:17827): Antes del sleep
+[WARNING] 12:39:09:460 cpu/(17818:17827): Termine NO_OP donde hago el execute
+[ERROR] 12:39:09:460 cpu/(17818:17827): Entre en el while de interrupcion
+[WARNING] 12:39:09:460 cpu/(17818:17827): Entre en IO
+[WARNING] 12:39:09:460 cpu/(17818:17827): El tiempo bloqueante es: 3000
+[TRACE] 12:39:09:460 cpu/(17818:17827): Sali de los recv
+[INFO] 12:43:41:540 cpu/(18372:18372): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:43:41:541 cpu/(18372:18372): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:43:43:254 cpu/(18372:18372): Cliente conectado (a CPU)
+
+[ERROR] 12:43:45:151 cpu/(18372:18376): El pid despues del recv es: 1
+[ERROR] 12:43:45:151 cpu/(18372:18376): El tam despues del recv es: 123
+[ERROR] 12:43:45:151 cpu/(18372:18376): cant_instrucciones despues del recv es: 6
+[ERROR] 12:43:45:152 cpu/(18372:18376): indice tabla pags despues del recv es: 412
+[WARNING] 12:43:45:152 cpu/(18372:18376): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:43:45:152 cpu/(18372:18376): Deserialice IO el parametro es: 3000
+[WARNING] 12:43:45:152 cpu/(18372:18376): Deserialice READ el parametro es: 0
+[WARNING] 12:43:45:153 cpu/(18372:18376): Deserialice READ el parametro es: 4
+[WARNING] 12:43:45:153 cpu/(18372:18376): Deserialice COPY el parametro1 es: 0
+[WARNING] 12:43:45:153 cpu/(18372:18376): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:43:45:153 cpu/(18372:18376): Entre en EXIT
+[ERROR] 12:43:45:153 cpu/(18372:18376): El tam despues del recv es: 0
+[ERROR] 12:43:45:153 cpu/(18372:18376): Entre en el while de interrupcion
+[WARNING] 12:43:45:153 cpu/(18372:18376): Antes del sleep
+[WARNING] 12:43:50:155 cpu/(18372:18376): Termine NO_OP donde hago el execute
+[ERROR] 12:43:50:155 cpu/(18372:18376): Entre en el while de interrupcion
+[WARNING] 12:43:50:155 cpu/(18372:18376): Entre en IO
+[WARNING] 12:43:50:155 cpu/(18372:18376): El tiempo bloqueante es: 3000
+[ERROR] 12:43:50:155 cpu/(18372:18376): El pc despues de las intrucciones es: 
+[TRACE] 12:43:50:155 cpu/(18372:18376): Sali de los recv
+[INFO] 12:45:19:693 cpu/(18752:18752): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:45:19:693 cpu/(18752:18752): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:45:21:990 cpu/(18752:18752): Cliente conectado (a CPU)
+
+[ERROR] 12:45:25:225 cpu/(18752:18759): El pid despues del recv es: 1
+[ERROR] 12:45:25:225 cpu/(18752:18759): El tam despues del recv es: 123
+[ERROR] 12:45:25:225 cpu/(18752:18759): cant_instrucciones despues del recv es: 6
+[ERROR] 12:45:25:225 cpu/(18752:18759): indice tabla pags despues del recv es: 412
+[WARNING] 12:45:25:226 cpu/(18752:18759): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:45:25:226 cpu/(18752:18759): Deserialice IO el parametro es: 3000
+[WARNING] 12:45:25:226 cpu/(18752:18759): Deserialice READ el parametro es: 0
+[WARNING] 12:45:25:226 cpu/(18752:18759): Deserialice READ el parametro es: 4
+[WARNING] 12:45:25:227 cpu/(18752:18759): Deserialice COPY el parametro1 es: 0
+[WARNING] 12:45:25:227 cpu/(18752:18759): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:45:25:227 cpu/(18752:18759): Entre en EXIT
+[ERROR] 12:45:25:227 cpu/(18752:18759): El tam despues del recv es: 0
+[ERROR] 12:45:25:227 cpu/(18752:18759): Entre en el while de interrupcion
+[WARNING] 12:45:25:227 cpu/(18752:18759): Antes del sleep
+[WARNING] 12:45:30:228 cpu/(18752:18759): Termine NO_OP donde hago el execute
+[ERROR] 12:45:30:228 cpu/(18752:18759): Entre en el while de interrupcion
+[WARNING] 12:45:30:228 cpu/(18752:18759): Entre en IO
+[WARNING] 12:45:30:228 cpu/(18752:18759): El tiempo bloqueante es: 3000
+[TRACE] 12:45:30:228 cpu/(18752:18759): Sali de los recv
+[INFO] 12:46:57:615 cpu/(19018:19018): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:46:57:616 cpu/(19018:19018): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:46:59:999 cpu/(19018:19018): Cliente conectado (a CPU)
+
+[ERROR] 12:47:01:876 cpu/(19018:19025): El pid despues del recv es: 1
+[ERROR] 12:47:01:876 cpu/(19018:19025): El tam despues del recv es: 123
+[ERROR] 12:47:01:877 cpu/(19018:19025): cant_instrucciones despues del recv es: 6
+[ERROR] 12:47:01:877 cpu/(19018:19025): indice tabla pags despues del recv es: 412
+[WARNING] 12:47:01:877 cpu/(19018:19025): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:47:01:877 cpu/(19018:19025): Deserialice IO el parametro es: 3000
+[WARNING] 12:47:01:878 cpu/(19018:19025): Deserialice READ el parametro es: 0
+[WARNING] 12:47:01:878 cpu/(19018:19025): Deserialice READ el parametro es: 4
+[WARNING] 12:47:01:878 cpu/(19018:19025): Deserialice COPY el parametro1 es: 0
+[WARNING] 12:47:01:878 cpu/(19018:19025): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:47:01:878 cpu/(19018:19025): Entre en EXIT
+[ERROR] 12:47:01:878 cpu/(19018:19025): El tam despues del recv es: 0
+[ERROR] 12:47:01:878 cpu/(19018:19025): Entre en el while de interrupcion
+[WARNING] 12:47:01:878 cpu/(19018:19025): Antes del sleep
+[WARNING] 12:47:06:879 cpu/(19018:19025): Termine NO_OP donde hago el execute
+[ERROR] 12:47:06:879 cpu/(19018:19025): Entre en el while de interrupcion
+[WARNING] 12:47:06:879 cpu/(19018:19025): Entre en IO
+[WARNING] 12:47:06:879 cpu/(19018:19025): El tiempo bloqueante es: 3000
+[ERROR] 12:47:06:879 cpu/(19018:19025): Entre en el while de interrupcion
+[WARNING] 12:47:06:879 cpu/(19018:19025): Entre en READ
+[ERROR] 12:47:06:879 cpu/(19018:19025): Entre en el while de interrupcion
+[WARNING] 12:47:06:879 cpu/(19018:19025): Entre en READ
+[ERROR] 12:47:06:879 cpu/(19018:19025): Entre en el while de interrupcion
+[WARNING] 12:47:06:879 cpu/(19018:19025): Entre en COPY
+[ERROR] 12:47:06:879 cpu/(19018:19025): Entre en el while de interrupcion
+[ERROR] 12:47:06:879 cpu/(19018:19025): Entre en el while de interrupcion
+[INFO] 12:49:40:941 cpu/(19617:19617): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:49:40:941 cpu/(19617:19617): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:49:42:526 cpu/(19617:19617): Cliente conectado (a CPU)
+
+[ERROR] 12:49:44:538 cpu/(19617:19621): El pid despues del recv es: 1
+[ERROR] 12:49:44:538 cpu/(19617:19621): El tam despues del recv es: 123
+[ERROR] 12:49:44:538 cpu/(19617:19621): cant_instrucciones despues del recv es: 6
+[ERROR] 12:49:44:538 cpu/(19617:19621): indice tabla pags despues del recv es: 412
+[WARNING] 12:49:44:539 cpu/(19617:19621): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:49:44:539 cpu/(19617:19621): Deserialice IO el parametro es: 3000
+[WARNING] 12:49:44:539 cpu/(19617:19621): Deserialice READ el parametro es: 0
+[WARNING] 12:49:44:539 cpu/(19617:19621): Deserialice READ el parametro es: 4
+[WARNING] 12:49:44:540 cpu/(19617:19621): Deserialice COPY el parametro1 es: 0
+[WARNING] 12:49:44:540 cpu/(19617:19621): Deserialice COPY el parametro2 es: 4
+[WARNING] 12:49:44:540 cpu/(19617:19621): Entre en EXIT
+[ERROR] 12:49:44:540 cpu/(19617:19621): El tam despues del recv es: 0
+[ERROR] 12:49:44:540 cpu/(19617:19621): Entre en el while de interrupcion
+[WARNING] 12:49:44:540 cpu/(19617:19621): Antes del sleep
+[WARNING] 12:49:49:541 cpu/(19617:19621): Termine NO_OP donde hago el execute
+[ERROR] 12:49:49:541 cpu/(19617:19621): Entre en el while de interrupcion
+[WARNING] 12:49:49:541 cpu/(19617:19621): Entre en IO
+[WARNING] 12:49:49:541 cpu/(19617:19621): El tiempo bloqueante es: 3000
+[ERROR] 12:49:49:541 cpu/(19617:19621): Entre en el while de interrupcion
+[WARNING] 12:49:49:541 cpu/(19617:19621): Entre en READ
+[ERROR] 12:49:49:541 cpu/(19617:19621): Entre en el while de interrupcion
+[WARNING] 12:49:49:542 cpu/(19617:19621): Entre en READ
+[ERROR] 12:49:49:542 cpu/(19617:19621): Entre en el while de interrupcion
+[WARNING] 12:49:49:542 cpu/(19617:19621): Entre en COPY
+[ERROR] 12:49:49:542 cpu/(19617:19621): Entre en el while de interrupcion
+[TRACE] 12:49:49:542 cpu/(19617:19621): Sali de los recv

@@ -23,6 +23,7 @@ static void procesar_conexion_cpu(void* void_args) {
 	 uint32_t cant_instrucciones;
 	 uint32_t indice_tabla;
 	 op_code_instrucciones co_op;
+	 uint32_t pc;
 
 	 while (cliente_socket != -1) {
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
@@ -44,7 +45,7 @@ static void procesar_conexion_cpu(void* void_args) {
 		 	 }
 		 log_error(log_cpu,"cant_instrucciones despues del recv es: %d",cant_instrucciones);
 
-		 if (!recv_indice_tabla_paginas_a_cpu(cliente_socket, &indice_tabla)) {
+		 if (!recv_indice_tabla_paginas_a_cpu(cliente_socket, &indice_tabla)) {//FALTA HACER LA PARTE DE MEMORIA
 				 log_error(log_cpu, "Fallo recibiendo indice tabla paginas");
 
 			}
@@ -161,6 +162,12 @@ static void procesar_conexion_cpu(void* void_args) {
 					         }
 		}
 
+		 if (recv(cliente_socket, &pc, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+			 log_info(log_cpu, "DISCONNECT!");
+					return;
+			 }
+			 log_error(log_cpu,"El tam despues del recv es: %d",pc);
+
 
 
 		pcb_cpu* pcb_proceso_cpu = malloc(sizeof(pcb_cpu));
@@ -168,17 +175,47 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		pcb_proceso_cpu->PID = pid;
 		pcb_proceso_cpu->instrucciones = lista_instrucciones_cpu;
-		pcb_proceso_cpu->PC = contador_instrucciones;
+		pcb_proceso_cpu->PC = pc;
 		pcb_proceso_cpu->indice_tabla_paginas = indice_tabla;
 		pcb_proceso_cpu->tamanio = tam;
 
 		list_add(lista_pcb_cpu,pcb_proceso_cpu);
 		free(pcb_proceso_cpu);
 
+		//log_trace(log_cpu,"El tamanio de la lista de intrucciones en cpu es: %d",list_size(lista_instrucciones_cpu));
+		lista_instrucciones_cpu = list_take_and_remove(lista_instrucciones_cpu,0);
+
+		/*------------------------------------ACA COMIENZA EL CICLO DE EJECUCION----------------------*/
+		instrucciones* proxima_a_ejecutar = malloc(sizeof(instrucciones)); //hacer un free al final
+
+
+		while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones)){
+		log_error(log_cpu,"Entre en el while de interrupcion");
+		proxima_a_ejecutar = fetch(pcb_proceso_cpu);
+		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
+		}
+
+		printf("El pc despues de las intrucciones es: %d",pcb_proceso_cpu->PC);
+
+		//habria que poner que la interrupcion fue antendida ?
+		//interrupcion =
+		//ACA SE VE SI KERNEL NOS MANDA UNA INTERRUPCION
+
+
+		/*send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
+			send_TAM(fd_cpu,pcb_proceso->tamanio);
+			send_cant_instrucciones(fd_cpu,a);
+			send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
+			send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);*/
+
+
+
+		//free(proxima_a_ejecutar);
+
+		printf("El tam de la lista pcb cpu una vez terminado un proceso: %d \n",list_size(lista_pcb_cpu));
 
 		log_trace(log_cpu,"Sali de los recv");
 
-		printf("El tam de la lista pcb cpu una vez terminado un proceso: %d \n",list_size(lista_pcb_cpu));
 
 	 }
 

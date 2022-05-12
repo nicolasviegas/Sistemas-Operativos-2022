@@ -35,7 +35,7 @@ int main() {
 
     fd_kernel = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
 
-    log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
+   // log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
 
     char* ip_memoria = config_get_string_value(config_cpu,"IP_MEMORIA");
     char* puerto_memoria = config_get_string_value(config_cpu,"PUERTO_MEMORIA");
@@ -45,7 +45,7 @@ int main() {
        			cerrar_programa3(log_cpu);
        			return EXIT_FAILURE;
        		}
-    log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+   //log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
 
     //conexion entre cpu (Servidor) y kernel(cliente)
@@ -54,7 +54,7 @@ int main() {
 
   //  log_warning(log_cpu,"Despues de server escuchar");
 
-    cerrar_programa3(log_cpu);
+    cerrar_programa3(log_cpu); //hay que agregar listas a destruir, el config y otras cosas
 
     return 0;
 }

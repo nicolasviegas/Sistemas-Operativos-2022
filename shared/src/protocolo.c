@@ -578,3 +578,57 @@ bool recv_indice_tabla_paginas_a_cpu(int fd, uint32_t* parametro1) {
     free(stream);
     return true;
 }
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+static void* serializar_PC(uint32_t parametro1) {
+   void* stream = malloc(sizeof(uint32_t));
+   // op_code_instrucciones cop = READ;
+    //memcpy(stream, &cop, sizeof(op_code_instrucciones));
+    memcpy(stream, &parametro1, sizeof(uint32_t));
+
+   // printf("El cop en serializar READ es: %d\n",cop);
+   // printf("El tam a enviar es: %d\n",parametro1);
+   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+    return stream;
+}
+
+
+void deserializar_PC(void* stream, uint32_t* parametro1) {
+
+    memcpy(parametro1, stream ,sizeof(uint32_t));
+//  printf("El PC en deserializar PC es: %d \n", parametro1);
+
+}
+
+bool send_PC(int fd, uint32_t parametro1) {
+	//printf("Entre en send_PC \n");
+   size_t size = sizeof(uint32_t);
+
+    void* stream = serializar_PC(parametro1);
+
+
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    free(stream);
+    return true;
+}
+
+
+bool recv_PC(int fd, uint32_t* parametro1) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_PC(stream, parametro1);
+
+    free(stream);
+    return true;
+}
+

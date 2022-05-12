@@ -34,6 +34,9 @@ static void procesar_conexion_kernel(void* void_args) {
     }
 
 
+
+
+
     op_code_instrucciones cop;
     while (cliente_socket != -1) {
 
@@ -65,7 +68,7 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso->PID = contador_cliente;
         	pcb_proceso->tamanio = tam;
         	pcb_proceso->instrucciones = lista_instrucciones_kernel;
-        	pcb_proceso->PC = 0;//arranca desde la instruccion 0
+        	pcb_proceso->PC = 0;//contador_instruccion;//arranca desde la instruccion 0
         	pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
         	pcb_proceso->estimacionRafaga = estimacion_inicial;
         	pcb_proceso->alpha = alfa;
@@ -75,11 +78,20 @@ static void procesar_conexion_kernel(void* void_args) {
         	send_cant_instrucciones(fd_cpu,a);
         	send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
         	send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
+        	send_PC(fd_cpu,pcb_proceso->PC);
 
 
 
         	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
+        	//ACA ES DONDE KERNEL TIENE QUE HACER TODO LO SUYO
+        	 /////////////////////////////////////////////////////////////////////////////////////////////////////////
+        	    interrupcion = false;
+        	  /////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
         	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
 
@@ -131,8 +143,8 @@ static void procesar_conexion_kernel(void* void_args) {
             	if (!recv_READ(cliente_socket, &parametro1)) {
         	     log_error(log_kernel, "Fallo recibiendo READ");
         	     break;
-        	}
-            	cargar_instruccion(READ,"READ",parametro1,NULL);
+            	}
+            cargar_instruccion(READ,"READ",parametro1,NULL);
         	log_warning(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
         	//log_info(log_kernel, "entre a IO");
         	break;
