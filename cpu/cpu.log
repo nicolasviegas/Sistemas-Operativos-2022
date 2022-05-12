@@ -26094,3 +26094,87 @@
 [WARNING] 12:49:49:542 cpu/(19617:19621): Entre en COPY
 [ERROR] 12:49:49:542 cpu/(19617:19621): Entre en el while de interrupcion
 [TRACE] 12:49:49:542 cpu/(19617:19621): Sali de los recv
+[INFO] 16:20:59:940 cpu/(11438:11438): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:20:59:941 cpu/(11438:11438): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:21:05:979 cpu/(11438:11438): Cliente conectado (a CPU)
+
+[ERROR] 16:21:15:417 cpu/(11438:11463): El pid despues del recv es: 1
+[ERROR] 16:21:15:417 cpu/(11438:11463): El tam despues del recv es: 123
+[ERROR] 16:21:15:418 cpu/(11438:11463): cant_instrucciones despues del recv es: 6
+[ERROR] 16:21:15:418 cpu/(11438:11463): indice tabla pags despues del recv es: 412
+[WARNING] 16:21:15:418 cpu/(11438:11463): Deserialice NO_OP el parametro es: 5
+[WARNING] 16:21:15:418 cpu/(11438:11463): Deserialice IO el parametro es: 3000
+[WARNING] 16:21:15:419 cpu/(11438:11463): Deserialice READ el parametro es: 0
+[WARNING] 16:21:15:419 cpu/(11438:11463): Deserialice READ el parametro es: 4
+[WARNING] 16:21:15:419 cpu/(11438:11463): Deserialice COPY el parametro1 es: 0
+[WARNING] 16:21:15:419 cpu/(11438:11463): Deserialice COPY el parametro2 es: 4
+[WARNING] 16:21:15:419 cpu/(11438:11463): Entre en EXIT
+[ERROR] 16:21:15:419 cpu/(11438:11463): El tam despues del recv es: 0
+[ERROR] 16:21:15:419 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:15:419 cpu/(11438:11463): Antes del sleep
+[WARNING] 16:21:20:422 cpu/(11438:11463): Termine NO_OP donde hago el execute
+[ERROR] 16:21:20:422 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:20:422 cpu/(11438:11463): Entre en IO
+[WARNING] 16:21:20:422 cpu/(11438:11463): El tiempo bloqueante es: 3000
+[ERROR] 16:21:20:422 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:20:422 cpu/(11438:11463): Entre en READ
+[ERROR] 16:21:20:423 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:20:423 cpu/(11438:11463): Entre en READ
+[ERROR] 16:21:20:423 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:20:423 cpu/(11438:11463): Entre en COPY
+[ERROR] 16:21:20:423 cpu/(11438:11463): Entre en el while de interrupcion
+[TRACE] 16:21:20:423 cpu/(11438:11463): Sali de los recv
+[ERROR] 16:21:24:831 cpu/(11438:11463): El pid despues del recv es: 2
+[ERROR] 16:21:24:831 cpu/(11438:11463): El tam despues del recv es: 123
+[ERROR] 16:21:24:831 cpu/(11438:11463): cant_instrucciones despues del recv es: 6
+[ERROR] 16:21:24:831 cpu/(11438:11463): indice tabla pags despues del recv es: 412
+[WARNING] 16:21:24:831 cpu/(11438:11463): Deserialice NO_OP el parametro es: 5
+[WARNING] 16:21:24:832 cpu/(11438:11463): Deserialice IO el parametro es: 3000
+[WARNING] 16:21:24:832 cpu/(11438:11463): Deserialice READ el parametro es: 0
+[WARNING] 16:21:24:832 cpu/(11438:11463): Deserialice READ el parametro es: 4
+[WARNING] 16:21:24:833 cpu/(11438:11463): Deserialice COPY el parametro1 es: 0
+[WARNING] 16:21:24:833 cpu/(11438:11463): Deserialice COPY el parametro2 es: 4
+[WARNING] 16:21:24:833 cpu/(11438:11463): Entre en EXIT
+[ERROR] 16:21:24:833 cpu/(11438:11463): El tam despues del recv es: 0
+[ERROR] 16:21:24:833 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:24:833 cpu/(11438:11463): Antes del sleep
+[WARNING] 16:21:29:835 cpu/(11438:11463): Termine NO_OP donde hago el execute
+[ERROR] 16:21:29:835 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:29:835 cpu/(11438:11463): Entre en IO
+[WARNING] 16:21:29:835 cpu/(11438:11463): El tiempo bloqueante es: 3000
+[ERROR] 16:21:29:835 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:29:835 cpu/(11438:11463): Entre en READ
+[ERROR] 16:21:29:835 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:29:835 cpu/(11438:11463): Entre en READ
+[ERROR] 16:21:29:835 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:29:835 cpu/(11438:11463): Entre en COPY
+[ERROR] 16:21:29:835 cpu/(11438:11463): Entre en el while de interrupcion
+[TRACE] 16:21:29:835 cpu/(11438:11463): Sali de los recv
+[ERROR] 16:21:33:469 cpu/(11438:11463): El pid despues del recv es: 3
+[ERROR] 16:21:33:470 cpu/(11438:11463): El tam despues del recv es: 123
+[ERROR] 16:21:33:470 cpu/(11438:11463): cant_instrucciones despues del recv es: 6
+[ERROR] 16:21:33:470 cpu/(11438:11463): indice tabla pags despues del recv es: 412
+[WARNING] 16:21:33:470 cpu/(11438:11463): Deserialice NO_OP el parametro es: 5
+[WARNING] 16:21:33:470 cpu/(11438:11463): Deserialice IO el parametro es: 3000
+[WARNING] 16:21:33:471 cpu/(11438:11463): Deserialice READ el parametro es: 0
+[WARNING] 16:21:33:471 cpu/(11438:11463): Deserialice READ el parametro es: 4
+[WARNING] 16:21:33:471 cpu/(11438:11463): Deserialice COPY el parametro1 es: 0
+[WARNING] 16:21:33:471 cpu/(11438:11463): Deserialice COPY el parametro2 es: 4
+[WARNING] 16:21:33:471 cpu/(11438:11463): Entre en EXIT
+[ERROR] 16:21:33:472 cpu/(11438:11463): El tam despues del recv es: 0
+[ERROR] 16:21:33:472 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:33:472 cpu/(11438:11463): Antes del sleep
+[WARNING] 16:21:38:473 cpu/(11438:11463): Termine NO_OP donde hago el execute
+[ERROR] 16:21:38:473 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:38:473 cpu/(11438:11463): Entre en IO
+[WARNING] 16:21:38:473 cpu/(11438:11463): El tiempo bloqueante es: 3000
+[ERROR] 16:21:38:473 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:38:473 cpu/(11438:11463): Entre en READ
+[ERROR] 16:21:38:473 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:38:473 cpu/(11438:11463): Entre en READ
+[ERROR] 16:21:38:473 cpu/(11438:11463): Entre en el while de interrupcion
+[WARNING] 16:21:38:473 cpu/(11438:11463): Entre en COPY
+[ERROR] 16:21:38:473 cpu/(11438:11463): Entre en el while de interrupcion
+[TRACE] 16:21:38:473 cpu/(11438:11463): Sali de los recv

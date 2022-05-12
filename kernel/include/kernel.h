@@ -33,7 +33,7 @@ typedef enum{ //tipos de identificadores a parsear
 	FINISH = 31, //5
 }op_estados;
 
-char algoritmo_actual;
+char* algoritmo_actual;
 
 t_list* lista_instrucciones_kernel;
 

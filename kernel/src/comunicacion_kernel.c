@@ -73,12 +73,12 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso->estado = NEW;
 
         	//////////////////////////////////////////////////////////////////////////////////////////////////////
-        	if(list_size(lista_pcb_en_memoria) <= grado_multiprogramacion ){
+        /*	if(list_size(lista_pcb_en_memoria) <= grado_multiprogramacion ){
         		if(algoritmo_actual == "FIFO"){
 
         		}
         	}
-
+*/
 
 
         	interrupcion = false;

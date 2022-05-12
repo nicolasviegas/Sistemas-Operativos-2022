@@ -16,6 +16,7 @@
 //
 //	//free(pcb_proceso);
 //}
+/*
 
 void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso){
 		instrucciones* a = malloc(sizeof(instrucciones));
@@ -69,3 +70,4 @@ void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso
 }
 
 
+*/
