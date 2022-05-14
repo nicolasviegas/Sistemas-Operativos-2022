@@ -26178,3 +26178,183 @@
 [WARNING] 16:21:38:473 cpu/(11438:11463): Entre en COPY
 [ERROR] 16:21:38:473 cpu/(11438:11463): Entre en el while de interrupcion
 [TRACE] 16:21:38:473 cpu/(11438:11463): Sali de los recv
+[INFO] 16:50:46:179 cpu/(12241:12241): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:50:46:181 cpu/(12241:12241): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:50:51:553 cpu/(12241:12241): Cliente conectado (a CPU)
+
+[ERROR] 16:51:41:802 cpu/(12241:12258): Fallo recibiendo pid
+[WARNING] 16:51:41:802 cpu/(12241:12258): El cliente se desconecto de CPU server 
+[INFO] 17:36:14:011 cpu/(10768:10768): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:36:14:013 cpu/(10768:10768): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:36:16:978 cpu/(10768:10768): Cliente conectado (a CPU)
+
+[ERROR] 17:36:17:095 cpu/(10768:10779): Fallo recibiendo pid
+[WARNING] 17:36:17:095 cpu/(10768:10779): El cliente se desconecto de CPU server 
+[INFO] 17:36:27:913 cpu/(10794:10794): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:36:27:913 cpu/(10794:10794): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:36:30:007 cpu/(10794:10794): Cliente conectado (a CPU)
+
+[ERROR] 17:36:30:124 cpu/(10794:10799): Fallo recibiendo pid
+[WARNING] 17:36:30:124 cpu/(10794:10799): El cliente se desconecto de CPU server 
+[INFO] 17:38:32:130 cpu/(11240:11240): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:38:32:130 cpu/(11240:11240): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:38:37:172 cpu/(11240:11240): Cliente conectado (a CPU)
+
+[ERROR] 17:38:37:286 cpu/(11240:11252): Fallo recibiendo pid
+[WARNING] 17:38:37:286 cpu/(11240:11252): El cliente se desconecto de CPU server 
+[INFO] 17:40:57:507 cpu/(11463:11463): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:40:57:507 cpu/(11463:11463): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:41:00:703 cpu/(11463:11463): Cliente conectado (a CPU)
+
+[ERROR] 17:41:00:812 cpu/(11463:11469): Fallo recibiendo pid
+[WARNING] 17:41:00:812 cpu/(11463:11469): El cliente se desconecto de CPU server 
+[INFO] 17:45:21:670 cpu/(12018:12018): Escuchando en 127.0.0.1:8001 (CPU)
+
+[ERROR] 17:45:21:671 cpu/(12018:12018): Error al conectar (a CPU)
+
+[INFO] 17:45:26:582 cpu/(12024:12024): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:45:26:582 cpu/(12024:12024): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:45:30:002 cpu/(12024:12024): Cliente conectado (a CPU)
+
+[ERROR] 17:45:30:110 cpu/(12024:12035): Fallo recibiendo pid
+[WARNING] 17:45:30:110 cpu/(12024:12035): El cliente se desconecto de CPU server 
+[INFO] 17:47:39:888 cpu/(12358:12358): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:47:39:888 cpu/(12358:12358): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:47:41:037 cpu/(12358:12358): Cliente conectado (a CPU)
+
+[ERROR] 17:47:41:148 cpu/(12358:12363): Fallo recibiendo pid
+[WARNING] 17:47:41:148 cpu/(12358:12363): El cliente se desconecto de CPU server 
+[INFO] 17:48:18:149 cpu/(12542:12542): Escuchando en 127.0.0.1:8001 (CPU)
+
+[ERROR] 17:48:18:149 cpu/(12542:12542): Error al conectar (a CPU)
+
+[INFO] 17:49:07:761 cpu/(12740:12740): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:49:07:762 cpu/(12740:12740): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:49:11:010 cpu/(12740:12740): Cliente conectado (a CPU)
+
+[ERROR] 17:49:21:083 cpu/(12740:12744): Fallo recibiendo pid
+[WARNING] 17:49:21:083 cpu/(12740:12744): El cliente se desconecto de CPU server 
+[INFO] 17:50:05:130 cpu/(12936:12936): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:50:05:131 cpu/(12936:12936): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:50:08:283 cpu/(12936:12936): Cliente conectado (a CPU)
+
+[ERROR] 17:51:00:545 cpu/(12936:12949): Fallo recibiendo pid
+[WARNING] 17:51:00:545 cpu/(12936:12949): El cliente se desconecto de CPU server 
+[INFO] 17:51:53:032 cpu/(13238:13238): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:51:53:033 cpu/(13238:13238): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:51:56:595 cpu/(13238:13238): Cliente conectado (a CPU)
+
+[ERROR] 17:51:59:107 cpu/(13238:13243): El pid despues del recv es: 1
+[ERROR] 17:51:59:108 cpu/(13238:13243): El tam despues del recv es: 123
+[ERROR] 17:51:59:110 cpu/(13238:13243): cant_instrucciones despues del recv es: 6
+[ERROR] 17:51:59:110 cpu/(13238:13243): indice tabla pags despues del recv es: 412
+[WARNING] 17:51:59:114 cpu/(13238:13243): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:51:59:116 cpu/(13238:13243): Deserialice IO el parametro es: 3000
+[WARNING] 17:51:59:117 cpu/(13238:13243): Deserialice READ el parametro es: 0
+[WARNING] 17:51:59:118 cpu/(13238:13243): Deserialice READ el parametro es: 4
+[WARNING] 17:51:59:120 cpu/(13238:13243): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:51:59:120 cpu/(13238:13243): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:51:59:121 cpu/(13238:13243): Entre en EXIT
+[ERROR] 17:51:59:122 cpu/(13238:13243): El tam despues del recv es: 0
+[ERROR] 17:51:59:122 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:51:59:122 cpu/(13238:13243): Antes del sleep
+[WARNING] 17:52:04:122 cpu/(13238:13243): Termine NO_OP donde hago el execute
+[ERROR] 17:52:04:122 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:04:122 cpu/(13238:13243): Entre en IO
+[WARNING] 17:52:04:122 cpu/(13238:13243): El tiempo bloqueante es: 3000
+[ERROR] 17:52:04:122 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:04:122 cpu/(13238:13243): Entre en READ
+[ERROR] 17:52:04:122 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:04:122 cpu/(13238:13243): Entre en READ
+[ERROR] 17:52:04:122 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:04:123 cpu/(13238:13243): Entre en COPY
+[ERROR] 17:52:04:123 cpu/(13238:13243): Entre en el while de interrupcion
+[TRACE] 17:52:04:123 cpu/(13238:13243): Sali de los recv
+[ERROR] 17:52:10:971 cpu/(13238:13243): El pid despues del recv es: 2
+[ERROR] 17:52:10:971 cpu/(13238:13243): El tam despues del recv es: 123
+[ERROR] 17:52:10:971 cpu/(13238:13243): cant_instrucciones despues del recv es: 6
+[ERROR] 17:52:10:972 cpu/(13238:13243): indice tabla pags despues del recv es: 412
+[WARNING] 17:52:10:973 cpu/(13238:13243): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:52:10:973 cpu/(13238:13243): Deserialice IO el parametro es: 3000
+[WARNING] 17:52:10:974 cpu/(13238:13243): Deserialice READ el parametro es: 0
+[WARNING] 17:52:10:981 cpu/(13238:13243): Deserialice READ el parametro es: 4
+[WARNING] 17:52:10:983 cpu/(13238:13243): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:52:10:983 cpu/(13238:13243): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:52:10:983 cpu/(13238:13243): Entre en EXIT
+[ERROR] 17:52:10:983 cpu/(13238:13243): El tam despues del recv es: 0
+[ERROR] 17:52:10:983 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:10:983 cpu/(13238:13243): Antes del sleep
+[WARNING] 17:52:15:983 cpu/(13238:13243): Termine NO_OP donde hago el execute
+[ERROR] 17:52:15:984 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:15:984 cpu/(13238:13243): Entre en IO
+[WARNING] 17:52:15:984 cpu/(13238:13243): El tiempo bloqueante es: 3000
+[ERROR] 17:52:15:984 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:15:984 cpu/(13238:13243): Entre en READ
+[ERROR] 17:52:15:984 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:15:984 cpu/(13238:13243): Entre en READ
+[ERROR] 17:52:15:984 cpu/(13238:13243): Entre en el while de interrupcion
+[WARNING] 17:52:15:984 cpu/(13238:13243): Entre en COPY
+[ERROR] 17:52:15:984 cpu/(13238:13243): Entre en el while de interrupcion
+[TRACE] 17:52:15:984 cpu/(13238:13243): Sali de los recv
+[ERROR] 17:52:18:894 cpu/(13238:13243): Fallo recibiendo pid
+[WARNING] 17:52:18:895 cpu/(13238:13243): El cliente se desconecto de CPU server 
+[INFO] 17:55:16:930 cpu/(13622:13622): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:55:16:931 cpu/(13622:13622): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:55:23:052 cpu/(13622:13622): Cliente conectado (a CPU)
+
+[ERROR] 17:55:37:928 cpu/(13622:13636): El pid despues del recv es: 1
+[ERROR] 17:55:37:929 cpu/(13622:13636): El tam despues del recv es: 123
+[ERROR] 17:55:37:931 cpu/(13622:13636): cant_instrucciones despues del recv es: 6
+[ERROR] 17:55:37:932 cpu/(13622:13636): indice tabla pags despues del recv es: 412
+[WARNING] 17:55:37:935 cpu/(13622:13636): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:55:37:937 cpu/(13622:13636): Deserialice IO el parametro es: 3000
+[WARNING] 17:55:37:940 cpu/(13622:13636): Deserialice READ el parametro es: 0
+[WARNING] 17:55:37:940 cpu/(13622:13636): Deserialice READ el parametro es: 4
+[WARNING] 17:55:37:942 cpu/(13622:13636): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:55:37:942 cpu/(13622:13636): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:55:37:943 cpu/(13622:13636): Entre en EXIT
+[ERROR] 17:55:37:944 cpu/(13622:13636): El tam despues del recv es: 0
+[ERROR] 17:55:37:944 cpu/(13622:13636): Entre en el while de interrupcion
+[WARNING] 17:55:37:944 cpu/(13622:13636): Antes del sleep
+[WARNING] 17:55:42:944 cpu/(13622:13636): Termine NO_OP donde hago el execute
+[ERROR] 17:55:42:944 cpu/(13622:13636): Entre en el while de interrupcion
+[WARNING] 17:55:42:945 cpu/(13622:13636): Entre en IO
+[WARNING] 17:55:42:945 cpu/(13622:13636): El tiempo bloqueante es: 3000
+[ERROR] 17:55:42:945 cpu/(13622:13636): Entre en el while de interrupcion
+[WARNING] 17:55:42:945 cpu/(13622:13636): Entre en READ
+[ERROR] 17:55:42:945 cpu/(13622:13636): Entre en el while de interrupcion
+[WARNING] 17:55:42:945 cpu/(13622:13636): Entre en READ
+[ERROR] 17:55:42:945 cpu/(13622:13636): Entre en el while de interrupcion
+[WARNING] 17:55:42:945 cpu/(13622:13636): Entre en COPY
+[ERROR] 17:55:42:945 cpu/(13622:13636): Entre en el while de interrupcion
+[TRACE] 17:55:42:945 cpu/(13622:13636): Sali de los recv
+[ERROR] 17:55:48:322 cpu/(13622:13636): Fallo recibiendo pid
+[WARNING] 17:55:48:322 cpu/(13622:13636): El cliente se desconecto de CPU server 
+[INFO] 17:56:04:208 cpu/(13808:13808): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:56:04:208 cpu/(13808:13808): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:56:09:320 cpu/(13808:13808): Cliente conectado (a CPU)
+

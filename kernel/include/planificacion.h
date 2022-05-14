@@ -33,21 +33,20 @@ typedef struct{
 	uint32_t alpha;
 	uint32_t estado;
 
-	//t_semaforo* semaforoEsperado;
-	//comentario prueba 2
-
-//	int socketConsola;
-//	int socketMemoria;
-//	int socketCpu;
-//	t_log* logger;
-//	char* nombreServidor;
-
+	clock_t rafagaAnterior;
+	int estimacionActual;
+	int estimacionAnterior;
+	clock_t horaDeIngresoAExe;
+	clock_t tiempoEspera;
+	bool suspendido;
 }pcb_t;
 
 typedef enum{
 	SRT,
 	FIFO
 }t_algoritmo_planificacion;
+
+
 
 t_list* lista_pcb_en_memoria;
 t_list* lista_pcb_totales;
@@ -57,5 +56,61 @@ void cargar_PCB_kernel(int contador_cliente, uint32_t tam, t_list* lista_nueva_k
 //void cargar_lista_nueva(t_list* lista_nueva_kernel,int fd_cpu);
 
 void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* lista_instrucciones);
+
+///////////////////////////////////////////////////////// COLAS /////////////////////////////////////////////////////////
+
+t_queue* colaNew;
+t_list* colaReady;
+t_list* listaExe;
+t_list* listaBlock;
+t_list* listaExit;
+t_list* listaBlockSuspended;
+t_queue* colaReadySuspended;
+t_list* listaPotencialesRetensores;
+
+void agregarANew(pcb_t* proceso);
+pcb_t* sacarDeNew();
+void agregarAReady(pcb_t* proceso);
+void agregarABlock(pcb_t* proceso);
+void sacarDeBlock(pcb_t* proceso);
+void agregarASuspended(pcb_t* proceso);
+void sacarDeSuspended(pcb_t* proceso);
+void agregarAReadySuspended(pcb_t* proceso);
+pcb_t* sacarDeReadySuspended();
+
+void hiloNew_Ready();
+void hiloReady_Exe();
+void hiloBlockASuspension();
+void hiloSuspensionAReady();
+void deteccionYRecuperacion();
+
+
+pcb_t* obtenerSiguienteDeReady();
+pcb_t* obtenerSiguienteSJF();
+pcb_t* obtenerSiguienteHRRN();
+void actualizarTiemposDeEspera();
+
+//
+pthread_mutex_t mutexNew;
+pthread_mutex_t mutexReady;
+pthread_mutex_t mutexBlock;
+pthread_mutex_t mutexExe;
+pthread_mutex_t mutexExit;
+pthread_mutex_t mutexBlockSuspended;
+pthread_mutex_t mutexReadySuspended;
+pthread_mutex_t mutexPotencialesRetensores;
+
+sem_t contadorNew;
+sem_t contadorReady;
+sem_t contadorExe;
+sem_t contadorProcesosEnMemoria;
+sem_t multiprogramacion;
+sem_t multiprocesamiento;
+sem_t contadorBlock;
+sem_t analizarSuspension;
+sem_t suspensionFinalizada;
+sem_t largoPlazo;
+sem_t contadorReadySuspended;
+sem_t medianoPlazo;
 
 #endif /* KERNEL_INCLUDE_PLANIFICACION_H_ */

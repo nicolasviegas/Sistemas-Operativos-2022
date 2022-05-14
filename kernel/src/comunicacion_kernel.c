@@ -17,11 +17,11 @@ static void procesar_conexion_kernel(void* void_args) {
     char* server_name = args->server_name;
     free(args);
 
-    uint32_t estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
-    uint32_t grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
-    char* alfa_char = config_get_string_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT
+  /*  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
+    grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
+    float alfa = (float) config_get_double_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT*/
 
-    uint32_t alfa = atoi(alfa_char); //////////////////////////////////CAMBIAR NO ES ASI HAY QUE SACARLO DE CONFIG, LO USO ASI AHORA PARA VER SI FUNCIONA ////////////////////////////////////////
+  //  uint32_t alfa = atoi(alfa_char); //////////////////////////////////CAMBIAR NO ES ASI HAY QUE SACARLO DE CONFIG, LO USO ASI AHORA PARA VER SI FUNCIONA ////////////////////////////////////////
 
     uint32_t tam;
     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -30,9 +30,6 @@ static void procesar_conexion_kernel(void* void_args) {
 
 	return;
     }
-
-
-
 
 
     op_code_instrucciones cop;
@@ -79,17 +76,10 @@ static void procesar_conexion_kernel(void* void_args) {
         		}
         	}
 */
+        	agregarANew(pcb_proceso);
+        	//AGREGAR A NEW SE QUEDA BLOQUEADO ESPERANDO ALGO
 
-
-        	interrupcion = false;
-
-
-        	/////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-        	////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+        	interrupcion = false; //esto hay que borrarlo
 
 
         	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);

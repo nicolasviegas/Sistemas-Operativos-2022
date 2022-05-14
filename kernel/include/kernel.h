@@ -21,7 +21,6 @@
 #include "../include/comunicacion_kernel.h"
 #include "../include/funciones_kernel.h"
 #include "../include/planificacion.h"
-//#include "../../cpu/include/cpu.h"
 
 typedef enum{ //tipos de identificadores a parsear
     NEW = 25, //0
@@ -33,7 +32,24 @@ typedef enum{ //tipos de identificadores a parsear
 	FINISH = 31, //5
 }op_estados;
 
-char* algoritmo_actual;
+
+pthread_t hiloNewReady;
+
+char* ip;
+char* puerto_escucha;
+char* ip_cpu;
+char* ip_memoria;
+char* puerto_memoria;
+char* puerto_cpu_dispatch;
+char* puerto_cpu_interrupt;
+int algoritmo_config;
+int estimacion_inicial;
+float alfa;
+uint32_t grado_multiprogramacion;
+uint32_t tiempo_max_bloqueado;
+
+
+
 
 t_list* lista_instrucciones_kernel;
 
@@ -46,6 +62,12 @@ t_log* log_kernel;
 t_paquete* paquete_consola_kernel;
 
 //agregas colas_new, colas_ready, etc
+void inicializar_config();
+void inicializar_listas();
+void inicializar_semaforos();
+void inicializar_planificacion();
+
+int obtener_algoritmo(char* algoritmo_char);
 
 int server_escuchar_kernel(t_log* logger, char* server_name, int server_socket);
 

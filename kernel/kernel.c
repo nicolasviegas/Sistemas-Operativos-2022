@@ -12,14 +12,89 @@ void sighandler(int s) {
 }
 */
 
+void inicializar_semaforos(){
+
+	pthread_mutex_init(&mutexPotencialesRetensores, NULL);
+	pthread_mutex_init(&mutexBlockSuspended, NULL);
+	pthread_mutex_init(&mutexReadySuspended, NULL);
+	pthread_mutex_init(&mutexNew, NULL);
+	pthread_mutex_init(&mutexReady, NULL);
+	pthread_mutex_init(&mutexBlock, NULL);
+	pthread_mutex_init(&mutexExe, NULL);
+	pthread_mutex_init(&mutexExit, NULL);
+	sem_init(&analizarSuspension, 0, 0);
+	sem_init(&suspensionFinalizada, 0, 0);
+	sem_init(&contadorNew, 0, 0); // Estado New
+	sem_init(&contadorReady, 0, 0); // Estado Ready
+	sem_init(&contadorExe, 0, 0); // Estado Exe
+	sem_init(&contadorProcesosEnMemoria, 0, 0);    // Memoria IMP HAY QUE VER COMO SE INICIALIZA PORQUE ESTO AFECTA LA DISPONIBILIDAD DE LA COLA READY
+	sem_init(&multiprogramacion, 0, grado_multiprogramacion); // Memoria
+	sem_init(&contadorBlock, 0, 0);
+	sem_init(&largoPlazo, 0, 1);
+	sem_init(&contadorReadySuspended, 0, 0);
+	sem_init(&medianoPlazo, 0, 1);
+}
+
+void inicializar_planificacion(){
+
+	/*pthread_create(&hiloQueDesuspende, NULL, (void)hiloSuspensionAReady, NULL);
+	pthread_create(&hiloMedianoPlazo, NULL, (void)hiloBlockASuspension, NULL);
+	pthread_detach(hiloQueDesuspende);
+	pthread_detach(hiloMedianoPlazo);*/
+	pthread_create(&hiloNewReady, NULL, (void*)hiloNew_Ready, NULL);
+//	pthread_create(&hiloReady_Exec, NULL, (void)hiloReady_Exe, NULL);
+	pthread_detach(hiloNewReady);
+//	pthread_detach(hiloReady_Exec);
+
+ }
+
+
+
+
+void inicializar_config(){
+	  ip = config_get_string_value(config_kernel,"IP_MEMORIA");// esto no se si va
+	  puerto_escucha = config_get_string_value(config_kernel,"PUERTO_ESCUCHA");
+
+	  ip_memoria = config_get_string_value(config_kernel,"IP_MEMORIA");
+	  puerto_memoria = config_get_string_value(config_kernel,"PUERTO_MEMORIA");
+
+	  ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
+	  puerto_cpu_dispatch = config_get_string_value(config_kernel,"PUERTO_CPU_DISPATCH");
+
+	/*  char* algoritmo_char = config_get_string_value(config_kernel,"ALGORITMO_PLANIFICACION");
+	  algoritmo_config = obtener_algoritmo(algoritmo_char);*/
+
+	  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
+	  grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
+	 // alfa = (float) config_get_double_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT
+	  tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
+}
+
+void inicializar_listas(){
+
+
+	listaPotencialesRetensores = list_create();
+	colaNew = queue_create();
+	colaReady = list_create();
+	listaExe = list_create();
+	listaBlock = list_create();
+	listaExit = list_create();
+	listaBlockSuspended = list_create();
+	colaReadySuspended = queue_create();
+
+	  lista_instrucciones_kernel = list_create();
+	    lista_pcb_en_memoria = list_create();
+
+}
+
+
 void cerrar_programa2(t_log* logger) {
     log_destroy(logger);
 }
 
 int main() {
 
-    char* ip;
-    char* puerto_escucha;
+
     contador_cliente = 0;
 
     //signal(SIGINT, sighandler);
@@ -28,33 +103,30 @@ int main() {
 
     config_kernel = config_create("kernel.config");
 
-    ip = config_get_string_value(config_kernel,"IP_MEMORIA");// esto no se si va
-    puerto_escucha = config_get_string_value(config_kernel,"PUERTO_ESCUCHA");
 
-    char* ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
-    char* puerto_cpu_dispatch = config_get_string_value(config_kernel,"PUERTO_CPU_DISPATCH");
 
-    algoritmo_actual = config_get_string_value(config_kernel,"ALGORITMO_PLANIFICACION");
+    ///////////////////
 
-    lista_instrucciones_kernel = list_create();
-    lista_pcb_en_memoria = list_create();
 
+    //HACER TODAS LAS INICIALIZACIONES
+    inicializar_config();
+    inicializar_listas();
+   // inicializar_planificacion();
+   // inicializar_semaforos();
+
+    ////////////////////
     fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 
     log_trace(log_kernel,"El socket : %d",fd_kernel);
 
     /////////////////////////////////////////////////////////
 
-    char* ip_memoria = config_get_string_value(config_kernel,"IP_MEMORIA");
-    char* puerto_memoria = config_get_string_value(config_kernel,"PUERTO_MEMORIA");
-
-
     fd_memoria=0;
-    		if (!generar_conexion_kernel_a_memoria(log_kernel, ip_memoria, puerto_memoria, &fd_memoria)) {
+    if (!generar_conexion_kernel_a_memoria(log_kernel, ip_memoria, puerto_memoria, &fd_memoria)) {
     			cerrar_programa2(log_kernel);
-    			//return EXIT_FAILURE;
-    		}
-    		log_trace(log_kernel,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+    			return EXIT_FAILURE;
+    }
+    log_trace(log_kernel,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
 
     ////////////////////////////////////////////////////////////
@@ -70,15 +142,7 @@ int main() {
     //conexion entre Kernel (Servidor) y consola(cliente)
     while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
 
-/*
-    instrucciones* a = malloc(sizeof(instrucciones));
-    a = list_get(lista_instrucciones_kernel,0);
-    log_error(log_kernel,"ID de la primer operacion: %d",a->id);
-    log_error(log_kernel,"nombre de la primer operacion: %s",a->nombre);
-    log_error(log_kernel,"PARAMETRO 1 de la primer operacion: %d",a->parametro1);
-    log_error(log_kernel,"PARAMETRO 2  de la primer operacion: %d",a->parametro2);
-    free(a);
-*/
+
     log_warning(log_kernel,"Despues de server escuchar");
 
     cerrar_programa2(log_kernel);
