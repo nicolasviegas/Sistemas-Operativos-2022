@@ -77,9 +77,11 @@ static void procesar_conexion_kernel(void* void_args) {
         	}
 */
         	agregarANew(pcb_proceso);
+        	log_warning(log_kernel,"pase el agregar a NEW");
+        	//hiloNew_Ready();
         	//AGREGAR A NEW SE QUEDA BLOQUEADO ESPERANDO ALGO
 
-        	interrupcion = false; //esto hay que borrarlo
+        //	interrupcion = false; //esto hay que borrarlo
 
 
         	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);

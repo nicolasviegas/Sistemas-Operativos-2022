@@ -77,6 +77,9 @@ void agregarASuspended(pcb_t* proceso);
 void sacarDeSuspended(pcb_t* proceso);
 void agregarAReadySuspended(pcb_t* proceso);
 pcb_t* sacarDeReadySuspended();
+void agregarABlockSuspended(pcb_t* pcb);
+
+
 
 void hiloNew_Ready();
 void hiloReady_Exe();
@@ -89,6 +92,8 @@ pcb_t* obtenerSiguienteDeReady();
 pcb_t* obtenerSiguienteSJF();
 pcb_t* obtenerSiguienteHRRN();
 void actualizarTiemposDeEspera();
+
+bool condiciones_de_suspension();
 
 //
 pthread_mutex_t mutexNew;

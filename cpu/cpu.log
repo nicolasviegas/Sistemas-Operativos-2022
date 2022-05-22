@@ -26358,3 +26358,111 @@
 
 [INFO] 17:56:09:320 cpu/(13808:13808): Cliente conectado (a CPU)
 
+[INFO] 13:12:01:810 cpu/(4579:4579): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 13:12:01:811 cpu/(4579:4579): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 13:12:08:043 cpu/(4579:4579): Cliente conectado (a CPU)
+
+[INFO] 13:20:55:744 cpu/(6250:6250): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 13:20:55:744 cpu/(6250:6250): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 13:20:58:757 cpu/(6250:6250): Cliente conectado (a CPU)
+
+[ERROR] 13:21:31:858 cpu/(6250:6261): Fallo recibiendo pid
+[WARNING] 13:21:31:859 cpu/(6250:6261): El cliente se desconecto de CPU server 
+[INFO] 13:24:36:336 cpu/(6725:6725): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 13:24:36:336 cpu/(6725:6725): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 13:24:39:230 cpu/(6725:6725): Cliente conectado (a CPU)
+
+[ERROR] 13:25:52:719 cpu/(6725:6733): Fallo recibiendo pid
+[WARNING] 13:25:52:720 cpu/(6725:6733): El cliente se desconecto de CPU server 
+[INFO] 15:51:48:435 cpu/(5225:5225): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 15:51:48:437 cpu/(5225:5225): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 15:51:51:350 cpu/(5225:5225): Cliente conectado (a CPU)
+
+[INFO] 15:54:15:329 cpu/(5574:5574): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 15:54:15:330 cpu/(5574:5574): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 15:54:19:689 cpu/(5574:5574): Cliente conectado (a CPU)
+
+[INFO] 15:59:36:219 cpu/(6030:6030): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 15:59:36:220 cpu/(6030:6030): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 15:59:38:510 cpu/(6030:6030): Cliente conectado (a CPU)
+
+[ERROR] 15:59:40:618 cpu/(6030:6034): Fallo recibiendo pid
+[WARNING] 15:59:40:618 cpu/(6030:6034): El cliente se desconecto de CPU server 
+[INFO] 16:18:26:946 cpu/(8020:8020): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:18:26:947 cpu/(8020:8020): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:18:28:533 cpu/(8020:8020): Cliente conectado (a CPU)
+
+[ERROR] 16:18:56:282 cpu/(8020:8024): Fallo recibiendo pid
+[WARNING] 16:18:56:283 cpu/(8020:8024): El cliente se desconecto de CPU server 
+[INFO] 16:24:37:729 cpu/(8441:8441): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:24:37:729 cpu/(8441:8441): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:24:39:607 cpu/(8441:8441): Cliente conectado (a CPU)
+
+[INFO] 16:35:26:728 cpu/(9420:9420): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:35:26:729 cpu/(9420:9420): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:35:29:675 cpu/(9420:9420): Cliente conectado (a CPU)
+
+[INFO] 16:40:58:396 cpu/(9828:9828): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:40:58:396 cpu/(9828:9828): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:41:00:375 cpu/(9828:9828): Cliente conectado (a CPU)
+
+[INFO] 16:44:58:518 cpu/(10264:10264): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:44:58:518 cpu/(10264:10264): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:45:01:362 cpu/(10264:10264): Cliente conectado (a CPU)
+
+[ERROR] 16:45:38:213 cpu/(10264:10271): Fallo recibiendo pid
+[WARNING] 16:45:38:213 cpu/(10264:10271): El cliente se desconecto de CPU server 
+[INFO] 16:49:26:354 cpu/(10638:10638): Escuchando en 127.0.0.1:8001 (CPU)
+
+[ERROR] 16:49:26:354 cpu/(10638:10638): Error al conectar (a CPU)
+
+[INFO] 16:49:31:935 cpu/(10648:10648): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:49:31:935 cpu/(10648:10648): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:49:34:132 cpu/(10648:10648): Cliente conectado (a CPU)
+
+[ERROR] 16:49:37:087 cpu/(10648:10656): Fallo recibiendo pid
+[WARNING] 16:49:37:087 cpu/(10648:10656): El cliente se desconecto de CPU server 
+[INFO] 16:49:56:122 cpu/(10648:10648): Cliente conectado (a CPU)
+
+[ERROR] 16:50:14:589 cpu/(10648:10679): Fallo recibiendo pid
+[WARNING] 16:50:14:589 cpu/(10648:10679): El cliente se desconecto de CPU server 
+[INFO] 16:53:42:559 cpu/(11198:11198): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:53:42:560 cpu/(11198:11198): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:53:50:304 cpu/(11198:11198): Cliente conectado (a CPU)
+
+[ERROR] 16:53:53:286 cpu/(11198:11209): Fallo recibiendo pid
+[WARNING] 16:53:53:286 cpu/(11198:11209): El cliente se desconecto de CPU server 
+[INFO] 16:56:34:187 cpu/(11592:11592): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:56:34:188 cpu/(11592:11592): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:56:37:879 cpu/(11592:11592): Cliente conectado (a CPU)
+
+[ERROR] 16:57:09:281 cpu/(11592:11603): Fallo recibiendo pid
+[WARNING] 16:57:09:281 cpu/(11592:11603): El cliente se desconecto de CPU server 

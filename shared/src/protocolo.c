@@ -491,7 +491,7 @@ static void* serializar_indice_a_kernel(uint32_t parametro1) {
 void deserializar_indice_a_kernel(void* stream, uint32_t* parametro1) {
 
     memcpy(parametro1, stream ,sizeof(uint32_t));
-  printf("El indice en deserializar tam es: %d \n", parametro1);
+ // printf("El indice en deserializar tam es: %d \n", parametro1);
 
 }
 

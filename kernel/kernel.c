@@ -35,21 +35,6 @@ void inicializar_semaforos(){
 	sem_init(&medianoPlazo, 0, 1);
 }
 
-void inicializar_planificacion(){
-
-	/*pthread_create(&hiloQueDesuspende, NULL, (void)hiloSuspensionAReady, NULL);
-	pthread_create(&hiloMedianoPlazo, NULL, (void)hiloBlockASuspension, NULL);
-	pthread_detach(hiloQueDesuspende);
-	pthread_detach(hiloMedianoPlazo);*/
-	pthread_create(&hiloNewReady, NULL, (void*)hiloNew_Ready, NULL);
-//	pthread_create(&hiloReady_Exec, NULL, (void)hiloReady_Exe, NULL);
-	pthread_detach(hiloNewReady);
-//	pthread_detach(hiloReady_Exec);
-
- }
-
-
-
 
 void inicializar_config(){
 	  ip = config_get_string_value(config_kernel,"IP_MEMORIA");// esto no se si va
@@ -87,6 +72,19 @@ void inicializar_listas(){
 
 }
 
+void inicializar_planificacion(){
+
+	pthread_create(&hiloQueDesuspende, NULL, (void*)hiloSuspensionAReady, NULL);
+	pthread_create(&hiloMedianoPlazo, NULL, (void*)hiloBlockASuspension, NULL);
+	pthread_detach(hiloQueDesuspende);
+	pthread_detach(hiloMedianoPlazo);
+
+	pthread_create(&hiloNewReady, NULL, (void*)hiloNew_Ready, NULL);
+	//pthread_create(&hiloReady_Exec, NULL, (void*)hiloReady_Exe, NULL);
+	pthread_detach(hiloNewReady);
+	pthread_detach(hiloReady_Exec);
+
+}
 
 void cerrar_programa2(t_log* logger) {
     log_destroy(logger);
@@ -111,8 +109,8 @@ int main() {
     //HACER TODAS LAS INICIALIZACIONES
     inicializar_config();
     inicializar_listas();
-   // inicializar_planificacion();
-   // inicializar_semaforos();
+    inicializar_planificacion();
+    inicializar_semaforos();
 
     ////////////////////
     fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
