@@ -8859,3 +8859,1545 @@
 [ERROR] 16:57:07:091 kernel/(11598:11632): El indice tabla de pagina es: 412
 [INFO] 16:57:07:091 kernel/(11598:11632): [NEW] Entra el proceso de PID: 7 a la cola.
 [ERROR] 16:57:07:101 kernel/(11598:11632): Entre en agregar a NEW 
+[INFO] 17:18:25:809 kernel/(13441:13441): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 17:18:25:862 kernel/(13441:13441): El socket : 4
+[INFO] 17:18:25:866 kernel/(13441:13441): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 17:18:25:867 kernel/(13441:13441): El fd_memoria despues de grar conexiones es: 5
+[INFO] 17:18:25:868 kernel/(13441:13441): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 17:18:25:868 kernel/(13441:13441): El fd_cpu despues de grar conexiones es: 7
+[INFO] 17:18:28:284 kernel/(13441:13441): Cliente conectado (a KERNEL)
+
+[WARNING] 17:18:28:291 kernel/(13441:13448): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:18:28:302 kernel/(13441:13448): Deserialice IO el parametro es: 3000
+[WARNING] 17:18:28:303 kernel/(13441:13448): Deserialice READ el parametro es: 0
+[WARNING] 17:18:28:305 kernel/(13441:13448): Deserialice WRITE el parametro1 es: 4
+[WARNING] 17:18:28:305 kernel/(13441:13448): Deserialice WRITE el parametro2 es: 42
+[WARNING] 17:18:28:307 kernel/(13441:13448): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:18:28:307 kernel/(13441:13448): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:18:28:308 kernel/(13441:13448): Entre en EXIT
+[ERROR] 17:18:28:316 kernel/(13441:13448): El indice tabla de pagina es: 412
+[INFO] 17:18:28:318 kernel/(13441:13448): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:18:28:319 kernel/(13441:13448): Entre en agregar a NEW 
+[INFO] 17:24:20:421 kernel/(13839:13839): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 17:24:20:481 kernel/(13839:13839): El socket : 4
+[INFO] 17:24:20:485 kernel/(13839:13839): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 17:24:20:486 kernel/(13839:13839): El fd_memoria despues de grar conexiones es: 5
+[INFO] 17:24:20:487 kernel/(13839:13839): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 17:24:20:488 kernel/(13839:13839): El fd_cpu despues de grar conexiones es: 7
+[INFO] 17:24:23:002 kernel/(13839:13839): Cliente conectado (a KERNEL)
+
+[WARNING] 17:24:23:009 kernel/(13839:13846): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:24:23:020 kernel/(13839:13846): Deserialice IO el parametro es: 3000
+[WARNING] 17:24:23:022 kernel/(13839:13846): Deserialice READ el parametro es: 0
+[WARNING] 17:24:23:023 kernel/(13839:13846): Deserialice WRITE el parametro1 es: 4
+[WARNING] 17:24:23:024 kernel/(13839:13846): Deserialice WRITE el parametro2 es: 42
+[WARNING] 17:24:23:025 kernel/(13839:13846): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:24:23:025 kernel/(13839:13846): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:24:23:026 kernel/(13839:13846): Entre en EXIT
+[ERROR] 17:24:23:034 kernel/(13839:13846): El indice tabla de pagina es: 412
+[INFO] 17:24:23:036 kernel/(13839:13846): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:24:23:037 kernel/(13839:13846): Entre en agregar a NEW 
+[INFO] 17:25:40:622 kernel/(14041:14041): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 17:25:40:611 kernel/(14041:14044): Entre en hilo New Ready
+[TRACE] 17:25:40:679 kernel/(14041:14041): El socket : 4
+[INFO] 17:25:40:682 kernel/(14041:14041): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 17:25:40:682 kernel/(14041:14041): El fd_memoria despues de grar conexiones es: 5
+[INFO] 17:25:40:684 kernel/(14041:14041): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 17:25:40:684 kernel/(14041:14041): El fd_cpu despues de grar conexiones es: 7
+[INFO] 17:25:42:894 kernel/(14041:14041): Cliente conectado (a KERNEL)
+
+[WARNING] 17:25:42:900 kernel/(14041:14049): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:25:42:912 kernel/(14041:14049): Deserialice IO el parametro es: 3000
+[WARNING] 17:25:42:913 kernel/(14041:14049): Deserialice READ el parametro es: 0
+[WARNING] 17:25:42:915 kernel/(14041:14049): Deserialice WRITE el parametro1 es: 4
+[WARNING] 17:25:42:915 kernel/(14041:14049): Deserialice WRITE el parametro2 es: 42
+[WARNING] 17:25:42:916 kernel/(14041:14049): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:25:42:917 kernel/(14041:14049): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:25:42:917 kernel/(14041:14049): Entre en EXIT
+[ERROR] 17:25:42:920 kernel/(14041:14049): El indice tabla de pagina es: 412
+[INFO] 17:25:42:927 kernel/(14041:14049): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:25:42:928 kernel/(14041:14049): Entre en agregar a NEW 
+[INFO] 17:25:42:934 kernel/(14041:14044): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 17:25:42:936 kernel/(14041:14044): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:25:42:936 kernel/(14041:14049): Salgo de agregar a NEW tranqui
+[ERROR] 17:25:42:937 kernel/(14041:14044): Sali hilo new ready 
+[WARNING] 17:25:42:937 kernel/(14041:14049): pase el agregar a NEW
+[ERROR] 17:25:42:942 kernel/(14041:14049): El socket dentro de send instrcciones es : 7
+[WARNING] 17:25:42:943 kernel/(14041:14049): entre en NO_OP dentro de send_instrucciones
+[WARNING] 17:25:42:945 kernel/(14041:14049): entre en I/O dentro de send_instrucciones
+[WARNING] 17:25:42:947 kernel/(14041:14049): entre en READ dentro de send_instrucciones
+[WARNING] 17:25:42:949 kernel/(14041:14049): entre en READ dentro de send_instrucciones
+[WARNING] 17:25:42:950 kernel/(14041:14049): entre en COPY dentro de send_instrucciones
+[WARNING] 17:25:42:952 kernel/(14041:14049): Entre en EXIT dentro de send_instrucciones
+[TRACE] 17:25:42:956 kernel/(14041:14049): El PID ES: 1
+[INFO] 17:25:42:959 kernel/(14041:14049): DISCONNECT!
+[TRACE] 17:25:42:960 kernel/(14041:14049): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 17:25:42:960 kernel/(14041:14049): El cliente se desconecto de KERNEL server
+[INFO] 17:26:10:431 kernel/(14041:14041): Cliente conectado (a KERNEL)
+
+[WARNING] 17:26:10:436 kernel/(14041:14069): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:26:10:436 kernel/(14041:14069): Deserialice IO el parametro es: 3000
+[WARNING] 17:26:10:436 kernel/(14041:14069): Deserialice READ el parametro es: 0
+[WARNING] 17:26:10:437 kernel/(14041:14069): Deserialice WRITE el parametro1 es: 4
+[WARNING] 17:26:10:437 kernel/(14041:14069): Deserialice WRITE el parametro2 es: 42
+[WARNING] 17:26:10:437 kernel/(14041:14069): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:26:10:438 kernel/(14041:14069): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:26:10:438 kernel/(14041:14069): Entre en EXIT
+[ERROR] 17:26:10:438 kernel/(14041:14069): El indice tabla de pagina es: 412
+[INFO] 17:26:10:439 kernel/(14041:14069): [NEW] Entra el proceso de PID: 2 a la cola.
+[ERROR] 17:26:10:439 kernel/(14041:14069): Entre en agregar a NEW 
+[INFO] 17:26:10:439 kernel/(14041:14044): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 17:26:10:440 kernel/(14041:14044): [READY] Entra el proceso de PID: 2 a la cola.
+[ERROR] 17:26:10:440 kernel/(14041:14044): Sali hilo new ready 
+[ERROR] 17:26:10:441 kernel/(14041:14069): Salgo de agregar a NEW tranqui
+[WARNING] 17:26:10:441 kernel/(14041:14069): pase el agregar a NEW
+[ERROR] 17:26:10:450 kernel/(14041:14069): El socket dentro de send instrcciones es : 7
+[WARNING] 17:26:10:450 kernel/(14041:14069): entre en NO_OP dentro de send_instrucciones
+[WARNING] 17:26:10:451 kernel/(14041:14069): entre en I/O dentro de send_instrucciones
+[WARNING] 17:26:10:453 kernel/(14041:14069): entre en READ dentro de send_instrucciones
+[WARNING] 17:26:10:453 kernel/(14041:14069): entre en READ dentro de send_instrucciones
+[WARNING] 17:26:10:454 kernel/(14041:14069): entre en COPY dentro de send_instrucciones
+[WARNING] 17:26:10:455 kernel/(14041:14069): Entre en EXIT dentro de send_instrucciones
+[TRACE] 17:26:10:455 kernel/(14041:14069): El PID ES: 2
+[INFO] 17:26:10:456 kernel/(14041:14069): DISCONNECT!
+[TRACE] 17:26:10:456 kernel/(14041:14069): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 17:26:10:456 kernel/(14041:14069): El cliente se desconecto de KERNEL server
+[INFO] 17:27:51:530 kernel/(14265:14265): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 17:27:51:519 kernel/(14265:14268): Entre en hilo New Ready
+[TRACE] 17:27:51:580 kernel/(14265:14265): El socket : 4
+[INFO] 17:27:51:583 kernel/(14265:14265): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 17:27:51:584 kernel/(14265:14265): El fd_memoria despues de grar conexiones es: 5
+[INFO] 17:27:51:584 kernel/(14265:14265): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 17:27:51:585 kernel/(14265:14265): El fd_cpu despues de grar conexiones es: 7
+[INFO] 17:27:54:343 kernel/(14265:14265): Cliente conectado (a KERNEL)
+
+[WARNING] 17:27:54:349 kernel/(14265:14275): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:27:54:361 kernel/(14265:14275): Deserialice IO el parametro es: 3000
+[WARNING] 17:27:54:363 kernel/(14265:14275): Deserialice READ el parametro es: 0
+[WARNING] 17:27:54:364 kernel/(14265:14275): Deserialice WRITE el parametro1 es: 4
+[WARNING] 17:27:54:365 kernel/(14265:14275): Deserialice WRITE el parametro2 es: 42
+[WARNING] 17:27:54:366 kernel/(14265:14275): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:27:54:366 kernel/(14265:14275): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:27:54:367 kernel/(14265:14275): Entre en EXIT
+[ERROR] 17:27:54:374 kernel/(14265:14275): El indice tabla de pagina es: 412
+[INFO] 17:27:54:376 kernel/(14265:14275): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:27:54:377 kernel/(14265:14275): Entre en agregar a NEW 
+[ERROR] 17:40:13:667 kernel/(15546:15549): Entre en hilo New Ready
+[INFO] 17:40:13:656 kernel/(15546:15546): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 17:40:13:714 kernel/(15546:15546): El socket : 4
+[INFO] 17:40:13:716 kernel/(15546:15546): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 17:40:13:717 kernel/(15546:15546): El fd_memoria despues de grar conexiones es: 5
+[INFO] 17:40:13:717 kernel/(15546:15546): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 17:40:13:718 kernel/(15546:15546): El fd_cpu despues de grar conexiones es: 7
+[INFO] 17:40:16:020 kernel/(15546:15546): Cliente conectado (a KERNEL)
+
+[WARNING] 17:40:16:027 kernel/(15546:15556): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:40:16:040 kernel/(15546:15556): Deserialice IO el parametro es: 3000
+[WARNING] 17:40:16:042 kernel/(15546:15556): Deserialice READ el parametro es: 0
+[WARNING] 17:40:16:043 kernel/(15546:15556): Deserialice WRITE el parametro1 es: 4
+[WARNING] 17:40:16:043 kernel/(15546:15556): Deserialice WRITE el parametro2 es: 42
+[WARNING] 17:40:16:045 kernel/(15546:15556): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:40:16:049 kernel/(15546:15556): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:40:16:050 kernel/(15546:15556): Entre en EXIT
+[ERROR] 17:40:16:054 kernel/(15546:15556): El indice tabla de pagina es: 412
+[INFO] 17:40:16:057 kernel/(15546:15556): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:40:16:058 kernel/(15546:15556): Entre en agregar a NEW 
+[INFO] 17:40:16:062 kernel/(15546:15549): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 17:40:16:064 kernel/(15546:15549): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:40:16:065 kernel/(15546:15556): Salgo de agregar a NEW tranqui
+[WARNING] 17:40:16:065 kernel/(15546:15556): pase el agregar a NEW
+[TRACE] 17:40:16:066 kernel/(15546:15556): El PID ES: 1
+[INFO] 17:40:16:067 kernel/(15546:15556): DISCONNECT!
+[TRACE] 17:40:16:067 kernel/(15546:15556): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 17:40:16:068 kernel/(15546:15556): El cliente se desconecto de KERNEL server
+[ERROR] 17:40:16:068 kernel/(15546:15549): Sali hilo new ready 
+[INFO] 17:43:32:600 kernel/(16010:16010): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 17:43:32:589 kernel/(16010:16013): Entre en hilo New Ready
+[TRACE] 17:43:32:646 kernel/(16010:16010): El socket : 4
+[INFO] 17:43:32:648 kernel/(16010:16010): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 17:43:32:649 kernel/(16010:16010): El fd_memoria despues de grar conexiones es: 5
+[INFO] 17:43:32:650 kernel/(16010:16010): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 17:43:32:650 kernel/(16010:16010): El fd_cpu despues de grar conexiones es: 7
+[INFO] 17:43:34:349 kernel/(16010:16010): Cliente conectado (a KERNEL)
+
+[WARNING] 17:43:34:359 kernel/(16010:16017): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:43:34:362 kernel/(16010:16017): Deserialice IO el parametro es: 3000
+[WARNING] 17:43:34:376 kernel/(16010:16017): Deserialice READ el parametro es: 0
+[WARNING] 17:43:34:378 kernel/(16010:16017): Deserialice WRITE el parametro1 es: 4
+[WARNING] 17:43:34:384 kernel/(16010:16017): Deserialice WRITE el parametro2 es: 42
+[WARNING] 17:43:34:387 kernel/(16010:16017): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:43:34:388 kernel/(16010:16017): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:43:34:389 kernel/(16010:16017): Entre en EXIT
+[ERROR] 17:43:34:393 kernel/(16010:16017): El indice tabla de pagina es: 412
+[INFO] 17:43:34:397 kernel/(16010:16017): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:43:34:398 kernel/(16010:16017): Entre en agregar a NEW 
+[INFO] 17:58:13:474 kernel/(16958:16958): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 17:58:13:463 kernel/(16958:16961): Entre en hilo New Ready
+[TRACE] 17:58:13:523 kernel/(16958:16958): El socket : 4
+[INFO] 17:58:13:525 kernel/(16958:16958): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 17:58:13:526 kernel/(16958:16958): El fd_memoria despues de grar conexiones es: 5
+[INFO] 17:58:13:526 kernel/(16958:16958): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 17:58:13:527 kernel/(16958:16958): El fd_cpu despues de grar conexiones es: 7
+[INFO] 17:58:17:681 kernel/(16958:16958): Cliente conectado (a KERNEL)
+
+[WARNING] 17:58:17:688 kernel/(16958:16968): Deserialice NO_OP el parametro es: 5
+[WARNING] 17:58:17:699 kernel/(16958:16968): Deserialice IO el parametro es: 3000
+[WARNING] 17:58:17:701 kernel/(16958:16968): Deserialice READ el parametro es: 0
+[WARNING] 17:58:17:702 kernel/(16958:16968): Deserialice WRITE el parametro1 es: 4
+[WARNING] 17:58:17:703 kernel/(16958:16968): Deserialice WRITE el parametro2 es: 42
+[WARNING] 17:58:17:704 kernel/(16958:16968): Deserialice COPY el parametro1 es: 0
+[WARNING] 17:58:17:705 kernel/(16958:16968): Deserialice COPY el parametro2 es: 4
+[WARNING] 17:58:17:705 kernel/(16958:16968): Entre en EXIT
+[ERROR] 17:58:17:713 kernel/(16958:16968): El indice tabla de pagina es: 412
+[INFO] 17:58:17:715 kernel/(16958:16968): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:58:17:716 kernel/(16958:16968): Entre en agregar a NEW 
+[INFO] 17:58:17:720 kernel/(16958:16961): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 17:58:17:722 kernel/(16958:16961): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 17:58:17:722 kernel/(16958:16968): Salgo de agregar a NEW tranqui
+[ERROR] 17:58:17:723 kernel/(16958:16961): Sali hilo new ready 
+[WARNING] 17:58:17:724 kernel/(16958:16968): pase el agregar a NEW
+[ERROR] 17:58:17:730 kernel/(16958:16968): El socket dentro de send instrcciones es : 7
+[WARNING] 17:58:17:732 kernel/(16958:16968): entre en NO_OP dentro de send_instrucciones
+[WARNING] 17:58:17:734 kernel/(16958:16968): entre en I/O dentro de send_instrucciones
+[WARNING] 17:58:17:736 kernel/(16958:16968): entre en READ dentro de send_instrucciones
+[WARNING] 17:58:17:737 kernel/(16958:16968): entre en READ dentro de send_instrucciones
+[WARNING] 17:58:17:738 kernel/(16958:16968): entre en COPY dentro de send_instrucciones
+[WARNING] 17:58:17:740 kernel/(16958:16968): Entre en EXIT dentro de send_instrucciones
+[TRACE] 17:58:17:748 kernel/(16958:16968): El PID ES: 1
+[INFO] 17:58:17:748 kernel/(16958:16968): DISCONNECT!
+[TRACE] 17:58:17:749 kernel/(16958:16968): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 17:58:17:749 kernel/(16958:16968): El cliente se desconecto de KERNEL server
+[INFO] 18:01:15:069 kernel/(17262:17262): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 18:01:15:055 kernel/(17262:17265): Entre en hilo New Ready
+[TRACE] 18:01:15:121 kernel/(17262:17262): El socket : 4
+[INFO] 18:01:15:123 kernel/(17262:17262): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:01:15:124 kernel/(17262:17262): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:01:15:125 kernel/(17262:17262): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:01:15:126 kernel/(17262:17262): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:01:17:195 kernel/(17262:17262): Cliente conectado (a KERNEL)
+
+[WARNING] 18:01:17:201 kernel/(17262:17272): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:01:17:205 kernel/(17262:17272): Deserialice IO el parametro es: 3000
+[WARNING] 18:01:17:206 kernel/(17262:17272): Deserialice READ el parametro es: 0
+[WARNING] 18:01:17:217 kernel/(17262:17272): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:01:17:218 kernel/(17262:17272): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:01:17:219 kernel/(17262:17272): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:01:17:219 kernel/(17262:17272): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:01:17:220 kernel/(17262:17272): Entre en EXIT
+[ERROR] 18:01:17:229 kernel/(17262:17272): El indice tabla de pagina es: 412
+[INFO] 18:01:17:232 kernel/(17262:17272): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:01:17:233 kernel/(17262:17272): Entre en agregar a NEW 
+[INFO] 18:05:08:753 kernel/(17606:17606): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 18:05:08:741 kernel/(17606:17609): Entre en hilo New Ready
+[TRACE] 18:05:08:804 kernel/(17606:17606): El socket : 4
+[INFO] 18:05:08:806 kernel/(17606:17606): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:05:08:807 kernel/(17606:17606): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:05:08:808 kernel/(17606:17606): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:05:08:808 kernel/(17606:17606): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:05:10:692 kernel/(17606:17606): Cliente conectado (a KERNEL)
+
+[WARNING] 18:05:10:698 kernel/(17606:17613): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:05:10:711 kernel/(17606:17613): Deserialice IO el parametro es: 3000
+[WARNING] 18:05:10:712 kernel/(17606:17613): Deserialice READ el parametro es: 0
+[WARNING] 18:05:10:714 kernel/(17606:17613): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:05:10:714 kernel/(17606:17613): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:05:10:716 kernel/(17606:17613): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:05:10:716 kernel/(17606:17613): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:05:10:716 kernel/(17606:17613): Entre en EXIT
+[ERROR] 18:05:10:724 kernel/(17606:17613): El indice tabla de pagina es: 412
+[INFO] 18:05:10:726 kernel/(17606:17613): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:05:10:727 kernel/(17606:17613): Entre en agregar a NEW 
+[INFO] 18:13:23:948 kernel/(18480:18480): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 18:13:23:925 kernel/(18480:18483): Entre en hilo New Ready
+[TRACE] 18:13:24:014 kernel/(18480:18480): El socket : 4
+[INFO] 18:13:24:017 kernel/(18480:18480): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:13:24:018 kernel/(18480:18480): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:13:24:019 kernel/(18480:18480): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:13:24:020 kernel/(18480:18480): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:13:26:745 kernel/(18480:18480): Cliente conectado (a KERNEL)
+
+[WARNING] 18:13:26:752 kernel/(18480:18490): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:13:26:763 kernel/(18480:18490): Deserialice IO el parametro es: 3000
+[WARNING] 18:13:26:765 kernel/(18480:18490): Deserialice READ el parametro es: 0
+[WARNING] 18:13:26:766 kernel/(18480:18490): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:13:26:766 kernel/(18480:18490): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:13:26:768 kernel/(18480:18490): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:13:26:768 kernel/(18480:18490): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:13:26:769 kernel/(18480:18490): Entre en EXIT
+[ERROR] 18:13:26:776 kernel/(18480:18490): El indice tabla de pagina es: 412
+[INFO] 18:13:26:779 kernel/(18480:18490): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:13:26:780 kernel/(18480:18490): Entre en agregar a NEW 
+[INFO] 18:13:26:784 kernel/(18480:18483): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 18:13:26:786 kernel/(18480:18483): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:13:26:786 kernel/(18480:18490): Salgo de agregar a NEW tranqui
+[ERROR] 18:13:26:787 kernel/(18480:18483): Sali hilo new ready 
+[WARNING] 18:13:26:787 kernel/(18480:18490): pase el agregar a NEW
+[TRACE] 18:13:26:789 kernel/(18480:18490): El PID ES: 1
+[INFO] 18:13:26:789 kernel/(18480:18490): DISCONNECT!
+[TRACE] 18:13:26:790 kernel/(18480:18490): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:13:26:790 kernel/(18480:18490): El cliente se desconecto de KERNEL server
+[INFO] 18:14:03:906 kernel/(18480:18480): Cliente conectado (a KERNEL)
+
+[WARNING] 18:14:03:912 kernel/(18480:18519): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:14:03:912 kernel/(18480:18519): Deserialice IO el parametro es: 3000
+[WARNING] 18:14:03:912 kernel/(18480:18519): Deserialice READ el parametro es: 0
+[WARNING] 18:14:03:913 kernel/(18480:18519): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:14:03:913 kernel/(18480:18519): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:14:03:913 kernel/(18480:18519): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:14:03:914 kernel/(18480:18519): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:14:03:914 kernel/(18480:18519): Entre en EXIT
+[ERROR] 18:14:03:914 kernel/(18480:18519): El indice tabla de pagina es: 412
+[INFO] 18:14:03:915 kernel/(18480:18519): [NEW] Entra el proceso de PID: 2 a la cola.
+[ERROR] 18:14:03:915 kernel/(18480:18519): Entre en agregar a NEW 
+[INFO] 18:14:03:916 kernel/(18480:18483): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 18:14:03:920 kernel/(18480:18483): [READY] Entra el proceso de PID: 2 a la cola.
+[ERROR] 18:14:03:924 kernel/(18480:18483): Sali hilo new ready 
+[ERROR] 18:14:03:926 kernel/(18480:18519): Salgo de agregar a NEW tranqui
+[WARNING] 18:14:03:926 kernel/(18480:18519): pase el agregar a NEW
+[TRACE] 18:14:03:926 kernel/(18480:18519): El PID ES: 2
+[INFO] 18:14:03:927 kernel/(18480:18519): DISCONNECT!
+[TRACE] 18:14:03:927 kernel/(18480:18519): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:14:03:927 kernel/(18480:18519): El cliente se desconecto de KERNEL server
+[INFO] 18:14:13:859 kernel/(18480:18480): Cliente conectado (a KERNEL)
+
+[WARNING] 18:14:13:863 kernel/(18480:18527): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:14:13:863 kernel/(18480:18527): Deserialice IO el parametro es: 3000
+[WARNING] 18:14:13:864 kernel/(18480:18527): Deserialice READ el parametro es: 0
+[WARNING] 18:14:13:864 kernel/(18480:18527): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:14:13:865 kernel/(18480:18527): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:14:13:865 kernel/(18480:18527): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:14:13:866 kernel/(18480:18527): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:14:13:867 kernel/(18480:18527): Entre en EXIT
+[ERROR] 18:14:13:868 kernel/(18480:18527): El indice tabla de pagina es: 412
+[INFO] 18:14:13:868 kernel/(18480:18527): [NEW] Entra el proceso de PID: 3 a la cola.
+[ERROR] 18:14:13:869 kernel/(18480:18527): Entre en agregar a NEW 
+[INFO] 18:14:13:895 kernel/(18480:18483): [NEW] Se saca el proceso de PID: 3 de la cola
+[INFO] 18:14:13:895 kernel/(18480:18483): [READY] Entra el proceso de PID: 3 a la cola.
+[ERROR] 18:14:13:896 kernel/(18480:18483): Sali hilo new ready 
+[ERROR] 18:14:13:896 kernel/(18480:18527): Salgo de agregar a NEW tranqui
+[WARNING] 18:14:13:896 kernel/(18480:18527): pase el agregar a NEW
+[TRACE] 18:14:13:897 kernel/(18480:18527): El PID ES: 3
+[INFO] 18:14:13:899 kernel/(18480:18527): DISCONNECT!
+[TRACE] 18:14:13:901 kernel/(18480:18527): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:14:13:902 kernel/(18480:18527): El cliente se desconecto de KERNEL server
+[ERROR] 18:18:22:188 kernel/(18998:19004): Entre en hilo New Ready
+[INFO] 18:18:22:179 kernel/(18998:18998): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:18:22:234 kernel/(18998:18998): El socket : 4
+[INFO] 18:18:22:237 kernel/(18998:18998): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:18:22:238 kernel/(18998:18998): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:18:22:239 kernel/(18998:18998): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:18:22:239 kernel/(18998:18998): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:18:24:568 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:18:24:574 kernel/(18998:19008): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:18:24:587 kernel/(18998:19008): Deserialice IO el parametro es: 3000
+[WARNING] 18:18:24:588 kernel/(18998:19008): Deserialice READ el parametro es: 0
+[WARNING] 18:18:24:589 kernel/(18998:19008): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:18:24:590 kernel/(18998:19008): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:18:24:591 kernel/(18998:19008): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:18:24:591 kernel/(18998:19008): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:18:24:592 kernel/(18998:19008): Entre en EXIT
+[ERROR] 18:18:24:599 kernel/(18998:19008): El indice tabla de pagina es: 412
+[INFO] 18:18:24:601 kernel/(18998:19008): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:18:24:602 kernel/(18998:19008): Entre en agregar a NEW 
+[INFO] 18:19:23:279 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:23:283 kernel/(18998:19050): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:23:284 kernel/(18998:19050): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:23:284 kernel/(18998:19050): Deserialice READ el parametro es: 0
+[WARNING] 18:19:23:284 kernel/(18998:19050): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:23:284 kernel/(18998:19050): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:23:285 kernel/(18998:19050): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:23:285 kernel/(18998:19050): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:23:285 kernel/(18998:19050): Entre en EXIT
+[ERROR] 18:19:23:286 kernel/(18998:19050): El indice tabla de pagina es: 412
+[INFO] 18:19:23:286 kernel/(18998:19050): [NEW] Entra el proceso de PID: 2 a la cola.
+[ERROR] 18:19:23:287 kernel/(18998:19050): Entre en agregar a NEW 
+[INFO] 18:19:23:989 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:23:993 kernel/(18998:19052): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:23:993 kernel/(18998:19052): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:23:994 kernel/(18998:19052): Deserialice READ el parametro es: 0
+[WARNING] 18:19:23:994 kernel/(18998:19052): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:23:994 kernel/(18998:19052): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:23:994 kernel/(18998:19052): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:23:995 kernel/(18998:19052): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:23:995 kernel/(18998:19052): Entre en EXIT
+[ERROR] 18:19:23:996 kernel/(18998:19052): El indice tabla de pagina es: 412
+[INFO] 18:19:23:996 kernel/(18998:19052): [NEW] Entra el proceso de PID: 3 a la cola.
+[ERROR] 18:19:23:996 kernel/(18998:19052): Entre en agregar a NEW 
+[INFO] 18:19:24:405 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:24:409 kernel/(18998:19054): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:24:409 kernel/(18998:19054): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:24:410 kernel/(18998:19054): Deserialice READ el parametro es: 0
+[WARNING] 18:19:24:410 kernel/(18998:19054): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:24:410 kernel/(18998:19054): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:24:410 kernel/(18998:19054): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:24:411 kernel/(18998:19054): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:24:411 kernel/(18998:19054): Entre en EXIT
+[ERROR] 18:19:24:412 kernel/(18998:19054): El indice tabla de pagina es: 412
+[INFO] 18:19:24:412 kernel/(18998:19054): [NEW] Entra el proceso de PID: 4 a la cola.
+[ERROR] 18:19:24:412 kernel/(18998:19054): Entre en agregar a NEW 
+[INFO] 18:19:24:806 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:24:809 kernel/(18998:19056): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:24:810 kernel/(18998:19056): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:24:810 kernel/(18998:19056): Deserialice READ el parametro es: 0
+[WARNING] 18:19:24:810 kernel/(18998:19056): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:24:811 kernel/(18998:19056): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:24:811 kernel/(18998:19056): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:24:811 kernel/(18998:19056): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:24:812 kernel/(18998:19056): Entre en EXIT
+[ERROR] 18:19:24:812 kernel/(18998:19056): El indice tabla de pagina es: 412
+[INFO] 18:19:24:812 kernel/(18998:19056): [NEW] Entra el proceso de PID: 5 a la cola.
+[ERROR] 18:19:24:813 kernel/(18998:19056): Entre en agregar a NEW 
+[INFO] 18:19:25:208 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:25:212 kernel/(18998:19058): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:25:212 kernel/(18998:19058): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:25:213 kernel/(18998:19058): Deserialice READ el parametro es: 0
+[WARNING] 18:19:25:213 kernel/(18998:19058): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:25:213 kernel/(18998:19058): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:25:214 kernel/(18998:19058): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:25:214 kernel/(18998:19058): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:25:214 kernel/(18998:19058): Entre en EXIT
+[ERROR] 18:19:25:215 kernel/(18998:19058): El indice tabla de pagina es: 412
+[INFO] 18:19:25:215 kernel/(18998:19058): [NEW] Entra el proceso de PID: 6 a la cola.
+[ERROR] 18:19:25:215 kernel/(18998:19058): Entre en agregar a NEW 
+[INFO] 18:19:25:605 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:25:609 kernel/(18998:19060): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:25:609 kernel/(18998:19060): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:25:610 kernel/(18998:19060): Deserialice READ el parametro es: 0
+[WARNING] 18:19:25:610 kernel/(18998:19060): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:25:610 kernel/(18998:19060): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:25:610 kernel/(18998:19060): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:25:611 kernel/(18998:19060): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:25:611 kernel/(18998:19060): Entre en EXIT
+[ERROR] 18:19:25:612 kernel/(18998:19060): El indice tabla de pagina es: 412
+[INFO] 18:19:25:612 kernel/(18998:19060): [NEW] Entra el proceso de PID: 7 a la cola.
+[ERROR] 18:19:25:612 kernel/(18998:19060): Entre en agregar a NEW 
+[INFO] 18:19:25:966 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:25:971 kernel/(18998:19062): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:25:972 kernel/(18998:19062): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:25:972 kernel/(18998:19062): Deserialice READ el parametro es: 0
+[WARNING] 18:19:25:972 kernel/(18998:19062): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:25:973 kernel/(18998:19062): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:25:973 kernel/(18998:19062): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:25:973 kernel/(18998:19062): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:25:974 kernel/(18998:19062): Entre en EXIT
+[ERROR] 18:19:25:974 kernel/(18998:19062): El indice tabla de pagina es: 412
+[INFO] 18:19:25:975 kernel/(18998:19062): [NEW] Entra el proceso de PID: 8 a la cola.
+[ERROR] 18:19:25:975 kernel/(18998:19062): Entre en agregar a NEW 
+[INFO] 18:19:26:414 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:26:418 kernel/(18998:19064): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:26:419 kernel/(18998:19064): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:26:419 kernel/(18998:19064): Deserialice READ el parametro es: 0
+[WARNING] 18:19:26:419 kernel/(18998:19064): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:26:419 kernel/(18998:19064): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:26:420 kernel/(18998:19064): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:26:420 kernel/(18998:19064): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:26:420 kernel/(18998:19064): Entre en EXIT
+[ERROR] 18:19:26:421 kernel/(18998:19064): El indice tabla de pagina es: 412
+[INFO] 18:19:26:421 kernel/(18998:19064): [NEW] Entra el proceso de PID: 9 a la cola.
+[ERROR] 18:19:26:422 kernel/(18998:19064): Entre en agregar a NEW 
+[INFO] 18:19:26:800 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:26:804 kernel/(18998:19066): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:26:805 kernel/(18998:19066): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:26:805 kernel/(18998:19066): Deserialice READ el parametro es: 0
+[WARNING] 18:19:26:805 kernel/(18998:19066): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:26:806 kernel/(18998:19066): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:26:806 kernel/(18998:19066): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:26:806 kernel/(18998:19066): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:26:807 kernel/(18998:19066): Entre en EXIT
+[ERROR] 18:19:26:807 kernel/(18998:19066): El indice tabla de pagina es: 412
+[INFO] 18:19:26:807 kernel/(18998:19066): [NEW] Entra el proceso de PID: 10 a la cola.
+[ERROR] 18:19:26:808 kernel/(18998:19066): Entre en agregar a NEW 
+[INFO] 18:19:27:075 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:27:090 kernel/(18998:19068): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:27:093 kernel/(18998:19068): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:27:093 kernel/(18998:19068): Deserialice READ el parametro es: 0
+[WARNING] 18:19:27:095 kernel/(18998:19068): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:27:095 kernel/(18998:19068): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:27:095 kernel/(18998:19068): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:27:096 kernel/(18998:19068): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:27:098 kernel/(18998:19068): Entre en EXIT
+[ERROR] 18:19:27:099 kernel/(18998:19068): El indice tabla de pagina es: 412
+[INFO] 18:19:27:099 kernel/(18998:19068): [NEW] Entra el proceso de PID: 11 a la cola.
+[ERROR] 18:19:27:100 kernel/(18998:19068): Entre en agregar a NEW 
+[INFO] 18:19:27:309 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:27:313 kernel/(18998:19075): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:27:314 kernel/(18998:19075): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:27:314 kernel/(18998:19075): Deserialice READ el parametro es: 0
+[WARNING] 18:19:27:315 kernel/(18998:19075): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:27:315 kernel/(18998:19075): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:27:315 kernel/(18998:19075): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:27:316 kernel/(18998:19075): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:27:316 kernel/(18998:19075): Entre en EXIT
+[ERROR] 18:19:27:317 kernel/(18998:19075): El indice tabla de pagina es: 412
+[INFO] 18:19:27:317 kernel/(18998:19075): [NEW] Entra el proceso de PID: 12 a la cola.
+[ERROR] 18:19:27:317 kernel/(18998:19075): Entre en agregar a NEW 
+[INFO] 18:19:27:527 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:27:531 kernel/(18998:19077): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:27:531 kernel/(18998:19077): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:27:532 kernel/(18998:19077): Deserialice READ el parametro es: 0
+[WARNING] 18:19:27:532 kernel/(18998:19077): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:27:533 kernel/(18998:19077): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:27:533 kernel/(18998:19077): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:27:533 kernel/(18998:19077): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:27:534 kernel/(18998:19077): Entre en EXIT
+[ERROR] 18:19:27:534 kernel/(18998:19077): El indice tabla de pagina es: 412
+[INFO] 18:19:27:535 kernel/(18998:19077): [NEW] Entra el proceso de PID: 13 a la cola.
+[ERROR] 18:19:27:535 kernel/(18998:19077): Entre en agregar a NEW 
+[INFO] 18:19:27:720 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:27:725 kernel/(18998:19079): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:27:725 kernel/(18998:19079): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:27:726 kernel/(18998:19079): Deserialice READ el parametro es: 0
+[WARNING] 18:19:27:726 kernel/(18998:19079): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:27:726 kernel/(18998:19079): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:27:727 kernel/(18998:19079): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:27:727 kernel/(18998:19079): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:27:727 kernel/(18998:19079): Entre en EXIT
+[ERROR] 18:19:27:728 kernel/(18998:19079): El indice tabla de pagina es: 412
+[INFO] 18:19:27:728 kernel/(18998:19079): [NEW] Entra el proceso de PID: 14 a la cola.
+[ERROR] 18:19:27:728 kernel/(18998:19079): Entre en agregar a NEW 
+[INFO] 18:19:27:888 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:27:893 kernel/(18998:19081): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:27:894 kernel/(18998:19081): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:27:894 kernel/(18998:19081): Deserialice READ el parametro es: 0
+[WARNING] 18:19:27:894 kernel/(18998:19081): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:27:895 kernel/(18998:19081): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:27:895 kernel/(18998:19081): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:27:895 kernel/(18998:19081): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:27:896 kernel/(18998:19081): Entre en EXIT
+[ERROR] 18:19:27:896 kernel/(18998:19081): El indice tabla de pagina es: 412
+[INFO] 18:19:27:896 kernel/(18998:19081): [NEW] Entra el proceso de PID: 15 a la cola.
+[ERROR] 18:19:27:897 kernel/(18998:19081): Entre en agregar a NEW 
+[INFO] 18:19:28:063 kernel/(18998:18998): Cliente conectado (a KERNEL)
+
+[WARNING] 18:19:28:067 kernel/(18998:19083): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:19:28:067 kernel/(18998:19083): Deserialice IO el parametro es: 3000
+[WARNING] 18:19:28:068 kernel/(18998:19083): Deserialice READ el parametro es: 0
+[WARNING] 18:19:28:068 kernel/(18998:19083): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:19:28:068 kernel/(18998:19083): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:19:28:069 kernel/(18998:19083): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:19:28:069 kernel/(18998:19083): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:19:28:069 kernel/(18998:19083): Entre en EXIT
+[ERROR] 18:19:28:070 kernel/(18998:19083): El indice tabla de pagina es: 412
+[INFO] 18:19:28:070 kernel/(18998:19083): [NEW] Entra el proceso de PID: 16 a la cola.
+[ERROR] 18:19:28:070 kernel/(18998:19083): Entre en agregar a NEW 
+[INFO] 18:20:43:886 kernel/(19272:19272): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 18:20:43:874 kernel/(19272:19275): Entre en hilo New Ready
+[TRACE] 18:20:43:937 kernel/(19272:19272): El socket : 4
+[INFO] 18:20:43:940 kernel/(19272:19272): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:20:43:944 kernel/(19272:19272): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:20:43:945 kernel/(19272:19272): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:20:43:948 kernel/(19272:19272): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:20:45:446 kernel/(19272:19272): Cliente conectado (a KERNEL)
+
+[WARNING] 18:20:45:453 kernel/(19272:19279): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:20:45:464 kernel/(19272:19279): Deserialice IO el parametro es: 3000
+[WARNING] 18:20:45:466 kernel/(19272:19279): Deserialice READ el parametro es: 0
+[WARNING] 18:20:45:467 kernel/(19272:19279): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:20:45:468 kernel/(19272:19279): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:20:45:469 kernel/(19272:19279): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:20:45:469 kernel/(19272:19279): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:20:45:470 kernel/(19272:19279): Entre en EXIT
+[ERROR] 18:20:45:472 kernel/(19272:19279): El indice tabla de pagina es: 412
+[INFO] 18:20:45:479 kernel/(19272:19279): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:20:45:480 kernel/(19272:19279): Entre en agregar a NEW 
+[INFO] 18:20:45:485 kernel/(19272:19275): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 18:20:45:487 kernel/(19272:19275): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:20:45:487 kernel/(19272:19279): Salgo de agregar a NEW tranqui
+[ERROR] 18:20:45:488 kernel/(19272:19275): Sali hilo new ready 
+[WARNING] 18:20:45:488 kernel/(19272:19279): pase el agregar a NEW
+[TRACE] 18:20:45:490 kernel/(19272:19279): El PID ES: 1
+[INFO] 18:20:45:490 kernel/(19272:19279): DISCONNECT!
+[TRACE] 18:20:45:491 kernel/(19272:19279): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:20:45:491 kernel/(19272:19279): El cliente se desconecto de KERNEL server
+[INFO] 18:22:52:680 kernel/(19511:19511): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 18:22:52:669 kernel/(19511:19517): Entre en hilo New Ready
+[TRACE] 18:22:52:732 kernel/(19511:19511): El socket : 4
+[INFO] 18:22:52:735 kernel/(19511:19511): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:22:52:736 kernel/(19511:19511): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:22:52:737 kernel/(19511:19511): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:22:52:737 kernel/(19511:19511): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:22:54:546 kernel/(19511:19511): Cliente conectado (a KERNEL)
+
+[WARNING] 18:22:54:553 kernel/(19511:19521): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:22:54:556 kernel/(19511:19521): Deserialice IO el parametro es: 3000
+[WARNING] 18:22:54:557 kernel/(19511:19521): Deserialice READ el parametro es: 0
+[WARNING] 18:22:54:567 kernel/(19511:19521): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:22:54:567 kernel/(19511:19521): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:22:54:568 kernel/(19511:19521): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:22:54:569 kernel/(19511:19521): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:22:54:569 kernel/(19511:19521): Entre en EXIT
+[ERROR] 18:22:54:572 kernel/(19511:19521): El indice tabla de pagina es: 412
+[INFO] 18:22:54:574 kernel/(19511:19521): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:22:54:580 kernel/(19511:19521): Entre en agregar a NEW 
+[INFO] 18:24:47:655 kernel/(19727:19727): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 18:24:47:644 kernel/(19727:19733): Entre en hilo New Ready
+[TRACE] 18:24:47:703 kernel/(19727:19727): El socket : 4
+[INFO] 18:24:47:705 kernel/(19727:19727): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:24:47:706 kernel/(19727:19727): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:24:47:707 kernel/(19727:19727): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:24:47:708 kernel/(19727:19727): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:24:49:820 kernel/(19727:19727): Cliente conectado (a KERNEL)
+
+[WARNING] 18:24:49:827 kernel/(19727:19737): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:24:49:841 kernel/(19727:19737): Deserialice IO el parametro es: 3000
+[WARNING] 18:24:49:843 kernel/(19727:19737): Deserialice READ el parametro es: 0
+[WARNING] 18:24:49:844 kernel/(19727:19737): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:24:49:845 kernel/(19727:19737): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:24:49:846 kernel/(19727:19737): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:24:49:846 kernel/(19727:19737): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:24:49:852 kernel/(19727:19737): Entre en EXIT
+[ERROR] 18:24:49:854 kernel/(19727:19737): El indice tabla de pagina es: 412
+[INFO] 18:24:49:857 kernel/(19727:19737): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:24:49:858 kernel/(19727:19737): Entre en agregar a NEW 
+[INFO] 18:26:18:493 kernel/(19932:19932): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 18:26:18:482 kernel/(19932:19935): Entre en hilo New Ready
+[TRACE] 18:26:18:542 kernel/(19932:19932): El socket : 4
+[INFO] 18:26:18:545 kernel/(19932:19932): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:26:18:545 kernel/(19932:19932): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:26:18:546 kernel/(19932:19932): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:26:18:547 kernel/(19932:19932): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:26:20:232 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:20:238 kernel/(19932:19939): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:20:242 kernel/(19932:19939): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:20:243 kernel/(19932:19939): Deserialice READ el parametro es: 0
+[WARNING] 18:26:20:253 kernel/(19932:19939): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:20:253 kernel/(19932:19939): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:20:254 kernel/(19932:19939): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:20:254 kernel/(19932:19939): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:20:255 kernel/(19932:19939): Entre en EXIT
+[ERROR] 18:26:20:258 kernel/(19932:19939): El indice tabla de pagina es: 412
+[INFO] 18:26:20:265 kernel/(19932:19939): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:26:20:265 kernel/(19932:19939): Entre en agregar a NEW 
+[INFO] 18:26:25:410 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:25:414 kernel/(19932:19944): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:25:415 kernel/(19932:19944): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:25:415 kernel/(19932:19944): Deserialice READ el parametro es: 0
+[WARNING] 18:26:25:415 kernel/(19932:19944): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:25:416 kernel/(19932:19944): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:25:416 kernel/(19932:19944): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:25:416 kernel/(19932:19944): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:25:417 kernel/(19932:19944): Entre en EXIT
+[ERROR] 18:26:25:417 kernel/(19932:19944): El indice tabla de pagina es: 412
+[INFO] 18:26:25:418 kernel/(19932:19944): [NEW] Entra el proceso de PID: 2 a la cola.
+[ERROR] 18:26:25:418 kernel/(19932:19944): Entre en agregar a NEW 
+[INFO] 18:26:25:944 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:25:948 kernel/(19932:19946): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:25:948 kernel/(19932:19946): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:25:948 kernel/(19932:19946): Deserialice READ el parametro es: 0
+[WARNING] 18:26:25:949 kernel/(19932:19946): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:25:949 kernel/(19932:19946): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:25:949 kernel/(19932:19946): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:25:949 kernel/(19932:19946): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:25:950 kernel/(19932:19946): Entre en EXIT
+[ERROR] 18:26:25:950 kernel/(19932:19946): El indice tabla de pagina es: 412
+[INFO] 18:26:25:951 kernel/(19932:19946): [NEW] Entra el proceso de PID: 3 a la cola.
+[ERROR] 18:26:25:951 kernel/(19932:19946): Entre en agregar a NEW 
+[INFO] 18:26:26:360 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:26:364 kernel/(19932:19948): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:26:364 kernel/(19932:19948): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:26:364 kernel/(19932:19948): Deserialice READ el parametro es: 0
+[WARNING] 18:26:26:365 kernel/(19932:19948): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:26:365 kernel/(19932:19948): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:26:365 kernel/(19932:19948): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:26:365 kernel/(19932:19948): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:26:366 kernel/(19932:19948): Entre en EXIT
+[ERROR] 18:26:26:366 kernel/(19932:19948): El indice tabla de pagina es: 412
+[INFO] 18:26:26:367 kernel/(19932:19948): [NEW] Entra el proceso de PID: 4 a la cola.
+[ERROR] 18:26:26:367 kernel/(19932:19948): Entre en agregar a NEW 
+[INFO] 18:26:26:752 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:26:756 kernel/(19932:19950): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:26:756 kernel/(19932:19950): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:26:756 kernel/(19932:19950): Deserialice READ el parametro es: 0
+[WARNING] 18:26:26:757 kernel/(19932:19950): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:26:757 kernel/(19932:19950): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:26:757 kernel/(19932:19950): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:26:758 kernel/(19932:19950): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:26:758 kernel/(19932:19950): Entre en EXIT
+[ERROR] 18:26:26:758 kernel/(19932:19950): El indice tabla de pagina es: 412
+[INFO] 18:26:26:759 kernel/(19932:19950): [NEW] Entra el proceso de PID: 5 a la cola.
+[ERROR] 18:26:26:759 kernel/(19932:19950): Entre en agregar a NEW 
+[INFO] 18:26:27:129 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:27:134 kernel/(19932:19952): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:27:135 kernel/(19932:19952): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:27:135 kernel/(19932:19952): Deserialice READ el parametro es: 0
+[WARNING] 18:26:27:136 kernel/(19932:19952): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:27:136 kernel/(19932:19952): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:27:136 kernel/(19932:19952): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:27:136 kernel/(19932:19952): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:27:137 kernel/(19932:19952): Entre en EXIT
+[ERROR] 18:26:27:137 kernel/(19932:19952): El indice tabla de pagina es: 412
+[INFO] 18:26:27:137 kernel/(19932:19952): [NEW] Entra el proceso de PID: 6 a la cola.
+[ERROR] 18:26:27:138 kernel/(19932:19952): Entre en agregar a NEW 
+[INFO] 18:26:27:479 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:27:483 kernel/(19932:19954): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:27:483 kernel/(19932:19954): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:27:483 kernel/(19932:19954): Deserialice READ el parametro es: 0
+[WARNING] 18:26:27:484 kernel/(19932:19954): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:27:484 kernel/(19932:19954): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:27:484 kernel/(19932:19954): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:27:484 kernel/(19932:19954): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:27:485 kernel/(19932:19954): Entre en EXIT
+[ERROR] 18:26:27:485 kernel/(19932:19954): El indice tabla de pagina es: 412
+[INFO] 18:26:27:486 kernel/(19932:19954): [NEW] Entra el proceso de PID: 7 a la cola.
+[ERROR] 18:26:27:486 kernel/(19932:19954): Entre en agregar a NEW 
+[INFO] 18:26:27:818 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:27:822 kernel/(19932:19961): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:27:822 kernel/(19932:19961): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:27:823 kernel/(19932:19961): Deserialice READ el parametro es: 0
+[WARNING] 18:26:27:823 kernel/(19932:19961): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:27:823 kernel/(19932:19961): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:27:823 kernel/(19932:19961): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:27:824 kernel/(19932:19961): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:27:824 kernel/(19932:19961): Entre en EXIT
+[ERROR] 18:26:27:824 kernel/(19932:19961): El indice tabla de pagina es: 412
+[INFO] 18:26:27:825 kernel/(19932:19961): [NEW] Entra el proceso de PID: 8 a la cola.
+[ERROR] 18:26:27:825 kernel/(19932:19961): Entre en agregar a NEW 
+[INFO] 18:26:28:063 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:28:067 kernel/(19932:19963): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:28:068 kernel/(19932:19963): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:28:068 kernel/(19932:19963): Deserialice READ el parametro es: 0
+[WARNING] 18:26:28:069 kernel/(19932:19963): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:28:069 kernel/(19932:19963): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:28:069 kernel/(19932:19963): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:28:070 kernel/(19932:19963): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:28:070 kernel/(19932:19963): Entre en EXIT
+[ERROR] 18:26:28:070 kernel/(19932:19963): El indice tabla de pagina es: 412
+[INFO] 18:26:28:071 kernel/(19932:19963): [NEW] Entra el proceso de PID: 9 a la cola.
+[ERROR] 18:26:28:071 kernel/(19932:19963): Entre en agregar a NEW 
+[INFO] 18:26:28:311 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:28:315 kernel/(19932:19965): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:28:315 kernel/(19932:19965): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:28:316 kernel/(19932:19965): Deserialice READ el parametro es: 0
+[WARNING] 18:26:28:316 kernel/(19932:19965): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:28:316 kernel/(19932:19965): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:28:317 kernel/(19932:19965): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:28:317 kernel/(19932:19965): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:28:317 kernel/(19932:19965): Entre en EXIT
+[ERROR] 18:26:28:318 kernel/(19932:19965): El indice tabla de pagina es: 412
+[INFO] 18:26:28:318 kernel/(19932:19965): [NEW] Entra el proceso de PID: 10 a la cola.
+[ERROR] 18:26:28:318 kernel/(19932:19965): Entre en agregar a NEW 
+[INFO] 18:26:28:503 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:28:508 kernel/(19932:19967): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:28:508 kernel/(19932:19967): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:28:509 kernel/(19932:19967): Deserialice READ el parametro es: 0
+[WARNING] 18:26:28:509 kernel/(19932:19967): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:28:509 kernel/(19932:19967): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:28:509 kernel/(19932:19967): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:28:510 kernel/(19932:19967): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:28:510 kernel/(19932:19967): Entre en EXIT
+[ERROR] 18:26:28:510 kernel/(19932:19967): El indice tabla de pagina es: 412
+[INFO] 18:26:28:511 kernel/(19932:19967): [NEW] Entra el proceso de PID: 11 a la cola.
+[ERROR] 18:26:28:511 kernel/(19932:19967): Entre en agregar a NEW 
+[INFO] 18:26:28:662 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:28:666 kernel/(19932:19969): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:28:666 kernel/(19932:19969): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:28:667 kernel/(19932:19969): Deserialice READ el parametro es: 0
+[WARNING] 18:26:28:667 kernel/(19932:19969): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:28:667 kernel/(19932:19969): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:28:667 kernel/(19932:19969): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:28:668 kernel/(19932:19969): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:28:668 kernel/(19932:19969): Entre en EXIT
+[ERROR] 18:26:28:668 kernel/(19932:19969): El indice tabla de pagina es: 412
+[INFO] 18:26:28:669 kernel/(19932:19969): [NEW] Entra el proceso de PID: 12 a la cola.
+[ERROR] 18:26:28:669 kernel/(19932:19969): Entre en agregar a NEW 
+[INFO] 18:26:28:805 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:28:810 kernel/(19932:19971): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:28:810 kernel/(19932:19971): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:28:810 kernel/(19932:19971): Deserialice READ el parametro es: 0
+[WARNING] 18:26:28:811 kernel/(19932:19971): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:28:811 kernel/(19932:19971): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:28:811 kernel/(19932:19971): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:28:812 kernel/(19932:19971): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:28:812 kernel/(19932:19971): Entre en EXIT
+[ERROR] 18:26:28:812 kernel/(19932:19971): El indice tabla de pagina es: 412
+[INFO] 18:26:28:813 kernel/(19932:19971): [NEW] Entra el proceso de PID: 13 a la cola.
+[ERROR] 18:26:28:813 kernel/(19932:19971): Entre en agregar a NEW 
+[INFO] 18:26:28:968 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:28:971 kernel/(19932:19973): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:28:972 kernel/(19932:19973): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:28:972 kernel/(19932:19973): Deserialice READ el parametro es: 0
+[WARNING] 18:26:28:972 kernel/(19932:19973): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:28:973 kernel/(19932:19973): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:28:973 kernel/(19932:19973): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:28:973 kernel/(19932:19973): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:28:973 kernel/(19932:19973): Entre en EXIT
+[ERROR] 18:26:28:974 kernel/(19932:19973): El indice tabla de pagina es: 412
+[INFO] 18:26:28:974 kernel/(19932:19973): [NEW] Entra el proceso de PID: 14 a la cola.
+[ERROR] 18:26:28:975 kernel/(19932:19973): Entre en agregar a NEW 
+[INFO] 18:26:29:501 kernel/(19932:19932): Cliente conectado (a KERNEL)
+
+[WARNING] 18:26:29:505 kernel/(19932:19976): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:26:29:505 kernel/(19932:19976): Deserialice IO el parametro es: 3000
+[WARNING] 18:26:29:506 kernel/(19932:19976): Deserialice READ el parametro es: 0
+[WARNING] 18:26:29:506 kernel/(19932:19976): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:26:29:506 kernel/(19932:19976): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:26:29:507 kernel/(19932:19976): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:26:29:507 kernel/(19932:19976): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:26:29:507 kernel/(19932:19976): Entre en EXIT
+[ERROR] 18:26:29:508 kernel/(19932:19976): El indice tabla de pagina es: 412
+[INFO] 18:26:29:508 kernel/(19932:19976): [NEW] Entra el proceso de PID: 15 a la cola.
+[ERROR] 18:26:29:508 kernel/(19932:19976): Entre en agregar a NEW 
+[ERROR] 18:31:16:963 kernel/(20343:20346): Entre en hilo New Ready
+[INFO] 18:31:17:020 kernel/(20343:20343): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:31:17:030 kernel/(20343:20343): El socket : 4
+[INFO] 18:31:17:033 kernel/(20343:20343): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:31:17:034 kernel/(20343:20343): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:31:17:034 kernel/(20343:20343): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:31:17:035 kernel/(20343:20343): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:31:18:549 kernel/(20343:20343): Cliente conectado (a KERNEL)
+
+[WARNING] 18:31:18:556 kernel/(20343:20354): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:31:18:566 kernel/(20343:20354): Deserialice IO el parametro es: 3000
+[WARNING] 18:31:18:568 kernel/(20343:20354): Deserialice READ el parametro es: 0
+[WARNING] 18:31:18:569 kernel/(20343:20354): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:31:18:570 kernel/(20343:20354): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:31:18:571 kernel/(20343:20354): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:31:18:571 kernel/(20343:20354): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:31:18:572 kernel/(20343:20354): Entre en EXIT
+[ERROR] 18:31:18:575 kernel/(20343:20354): El indice tabla de pagina es: 412
+[INFO] 18:31:18:583 kernel/(20343:20354): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:31:18:584 kernel/(20343:20354): Entre en agregar a NEW 
+[INFO] 18:33:42:943 kernel/(20585:20585): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[ERROR] 18:33:42:910 kernel/(20585:20591): Entre en hilo New Ready
+[TRACE] 18:33:42:981 kernel/(20585:20585): El socket : 5
+[INFO] 18:33:42:983 kernel/(20585:20585): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:33:42:984 kernel/(20585:20585): El fd_memoria despues de grar conexiones es: 4
+[INFO] 18:33:42:985 kernel/(20585:20585): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:33:42:985 kernel/(20585:20585): El fd_cpu despues de grar conexiones es: 7
+[INFO] 18:33:44:531 kernel/(20585:20585): Cliente conectado (a KERNEL)
+
+[WARNING] 18:33:44:543 kernel/(20585:20596): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:33:44:555 kernel/(20585:20596): Deserialice IO el parametro es: 3000
+[WARNING] 18:33:44:556 kernel/(20585:20596): Deserialice READ el parametro es: 0
+[WARNING] 18:33:44:557 kernel/(20585:20596): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:33:44:558 kernel/(20585:20596): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:33:44:559 kernel/(20585:20596): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:33:44:564 kernel/(20585:20596): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:33:44:564 kernel/(20585:20596): Entre en EXIT
+[ERROR] 18:33:44:567 kernel/(20585:20596): El indice tabla de pagina es: 412
+[INFO] 18:33:44:569 kernel/(20585:20596): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:33:44:570 kernel/(20585:20596): Entre en agregar a NEW 
+[INFO] 18:35:04:720 kernel/(20783:20783): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:35:04:720 kernel/(20783:20783): El socket : 4
+[INFO] 18:35:04:720 kernel/(20783:20783): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:35:04:720 kernel/(20783:20783): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:35:04:720 kernel/(20783:20783): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:35:04:720 kernel/(20783:20783): El fd_cpu despues de grar conexiones es: 7
+[ERROR] 18:35:04:720 kernel/(20783:20786): Entre en hilo New Ready
+[INFO] 18:35:12:467 kernel/(20783:20783): Cliente conectado (a KERNEL)
+
+[WARNING] 18:35:12:470 kernel/(20783:20799): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:35:12:470 kernel/(20783:20799): Deserialice IO el parametro es: 3000
+[WARNING] 18:35:12:470 kernel/(20783:20799): Deserialice READ el parametro es: 0
+[WARNING] 18:35:12:470 kernel/(20783:20799): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:35:12:470 kernel/(20783:20799): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:35:12:471 kernel/(20783:20799): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:35:12:471 kernel/(20783:20799): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:35:12:471 kernel/(20783:20799): Entre en EXIT
+[ERROR] 18:35:12:471 kernel/(20783:20799): El indice tabla de pagina es: 412
+[INFO] 18:35:12:471 kernel/(20783:20799): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:35:12:471 kernel/(20783:20799): Entre en agregar a NEW 
+[INFO] 18:35:12:471 kernel/(20783:20786): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 18:35:12:471 kernel/(20783:20786): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:35:12:471 kernel/(20783:20786): Sali hilo new ready 
+[ERROR] 18:35:12:471 kernel/(20783:20799): Salgo de agregar a NEW tranqui
+[WARNING] 18:35:12:472 kernel/(20783:20799): pase el agregar a NEW
+[TRACE] 18:35:12:472 kernel/(20783:20799): El PID ES: 1
+[INFO] 18:35:12:472 kernel/(20783:20799): DISCONNECT!
+[TRACE] 18:35:12:472 kernel/(20783:20799): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:35:12:472 kernel/(20783:20799): El cliente se desconecto de KERNEL server
+[INFO] 18:37:01:021 kernel/(21122:21122): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:37:01:021 kernel/(21122:21122): El socket : 4
+[INFO] 18:37:01:021 kernel/(21122:21122): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:37:01:021 kernel/(21122:21122): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:37:01:022 kernel/(21122:21122): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:37:01:022 kernel/(21122:21122): El fd_cpu despues de grar conexiones es: 7
+[ERROR] 18:37:01:022 kernel/(21122:21125): Entre en hilo New Ready
+[INFO] 18:37:04:159 kernel/(21122:21122): Cliente conectado (a KERNEL)
+
+[WARNING] 18:37:04:161 kernel/(21122:21133): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:37:04:161 kernel/(21122:21133): Deserialice IO el parametro es: 3000
+[WARNING] 18:37:04:161 kernel/(21122:21133): Deserialice READ el parametro es: 0
+[WARNING] 18:37:04:161 kernel/(21122:21133): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:37:04:162 kernel/(21122:21133): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:37:04:162 kernel/(21122:21133): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:37:04:162 kernel/(21122:21133): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:37:04:162 kernel/(21122:21133): Entre en EXIT
+[ERROR] 18:37:04:162 kernel/(21122:21133): El indice tabla de pagina es: 412
+[INFO] 18:37:04:162 kernel/(21122:21133): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:37:04:162 kernel/(21122:21133): Entre en agregar a NEW 
+[INFO] 18:37:04:162 kernel/(21122:21125): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 18:37:04:162 kernel/(21122:21125): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:37:04:162 kernel/(21122:21125): Sali hilo new ready 
+[ERROR] 18:37:04:162 kernel/(21122:21133): Salgo de agregar a NEW tranqui
+[WARNING] 18:37:04:162 kernel/(21122:21133): pase el agregar a NEW
+[TRACE] 18:37:04:162 kernel/(21122:21133): El PID ES: 1
+[INFO] 18:37:04:162 kernel/(21122:21133): DISCONNECT!
+[TRACE] 18:37:04:163 kernel/(21122:21133): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:37:04:163 kernel/(21122:21133): El cliente se desconecto de KERNEL server
+[INFO] 18:41:19:666 kernel/(21461:21461): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:41:19:666 kernel/(21461:21461): El socket : 4
+[INFO] 18:41:19:666 kernel/(21461:21461): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:41:19:666 kernel/(21461:21461): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:41:19:667 kernel/(21461:21461): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:41:19:667 kernel/(21461:21461): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 18:41:19:667 kernel/(21461:21465): Entre en hilo ready exe
+[ERROR] 18:41:19:667 kernel/(21461:21464): Entre en hilo New Ready
+[TRACE] 18:41:19:667 kernel/(21461:21463): Entre en hilo bloq a suspension
+[TRACE] 18:41:19:667 kernel/(21461:21462): Entre en hilo suspencion a ready
+[INFO] 18:41:31:414 kernel/(21461:21461): Cliente conectado (a KERNEL)
+
+[WARNING] 18:41:31:416 kernel/(21461:21477): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:41:31:416 kernel/(21461:21477): Deserialice IO el parametro es: 3000
+[WARNING] 18:41:31:416 kernel/(21461:21477): Deserialice READ el parametro es: 0
+[WARNING] 18:41:31:417 kernel/(21461:21477): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:41:31:417 kernel/(21461:21477): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:41:31:417 kernel/(21461:21477): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:41:31:417 kernel/(21461:21477): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:41:31:417 kernel/(21461:21477): Entre en EXIT
+[ERROR] 18:41:31:417 kernel/(21461:21477): El indice tabla de pagina es: 412
+[INFO] 18:41:31:417 kernel/(21461:21477): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:41:31:417 kernel/(21461:21477): Entre en agregar a NEW 
+[INFO] 18:41:31:417 kernel/(21461:21464): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 18:41:31:417 kernel/(21461:21464): Entre en agregar a ready
+[INFO] 18:41:31:417 kernel/(21461:21464): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:41:31:417 kernel/(21461:21464): Sali hilo new ready 
+[ERROR] 18:41:31:417 kernel/(21461:21477): Salgo de agregar a NEW tranqui
+[WARNING] 18:41:31:417 kernel/(21461:21477): pase el agregar a NEW
+[TRACE] 18:41:31:417 kernel/(21461:21477): El PID ES: 1
+[INFO] 18:41:31:418 kernel/(21461:21477): DISCONNECT!
+[TRACE] 18:41:31:418 kernel/(21461:21477): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:41:31:418 kernel/(21461:21477): El cliente se desconecto de KERNEL server
+[INFO] 18:43:44:595 kernel/(21700:21700): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:43:44:595 kernel/(21700:21700): El socket : 4
+[INFO] 18:43:44:596 kernel/(21700:21700): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:43:44:596 kernel/(21700:21700): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:43:44:596 kernel/(21700:21700): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:43:44:596 kernel/(21700:21700): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 18:43:44:596 kernel/(21700:21704): Entre en hilo ready exe
+[ERROR] 18:43:44:596 kernel/(21700:21703): Entre en hilo New Ready
+[TRACE] 18:43:44:597 kernel/(21700:21702): Entre en hilo bloq a suspension
+[TRACE] 18:43:44:597 kernel/(21700:21701): Entre en hilo suspencion a ready
+[TRACE] 18:43:44:597 kernel/(21700:21701): Entre en hilo suspencion a ready
+[INFO] 18:43:51:314 kernel/(21700:21700): Cliente conectado (a KERNEL)
+
+[WARNING] 18:43:51:316 kernel/(21700:21711): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:43:51:316 kernel/(21700:21711): Deserialice IO el parametro es: 3000
+[WARNING] 18:43:51:316 kernel/(21700:21711): Deserialice READ el parametro es: 0
+[WARNING] 18:43:51:316 kernel/(21700:21711): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:43:51:316 kernel/(21700:21711): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:43:51:317 kernel/(21700:21711): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:43:51:317 kernel/(21700:21711): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:43:51:317 kernel/(21700:21711): Entre en EXIT
+[ERROR] 18:43:51:317 kernel/(21700:21711): El indice tabla de pagina es: 412
+[INFO] 18:43:51:317 kernel/(21700:21711): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:43:51:317 kernel/(21700:21711): Entre en agregar a NEW 
+[TRACE] 18:43:51:317 kernel/(21700:21702): Entre en hilo bloq a suspension
+[INFO] 18:43:51:317 kernel/(21700:21703): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 18:43:51:317 kernel/(21700:21703): Entre en agregar a ready
+[INFO] 18:43:51:317 kernel/(21700:21703): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:43:51:317 kernel/(21700:21703): Sali hilo new ready 
+[ERROR] 18:43:51:317 kernel/(21700:21703): Entre en hilo New Ready
+[ERROR] 18:43:51:317 kernel/(21700:21711): Salgo de agregar a NEW tranqui
+[WARNING] 18:43:51:317 kernel/(21700:21711): pase el agregar a NEW
+[TRACE] 18:43:51:317 kernel/(21700:21711): El PID ES: 1
+[INFO] 18:43:51:318 kernel/(21700:21711): DISCONNECT!
+[TRACE] 18:43:51:318 kernel/(21700:21711): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:43:51:318 kernel/(21700:21711): El cliente se desconecto de KERNEL server
+[INFO] 18:47:40:065 kernel/(22144:22144): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:47:40:065 kernel/(22144:22144): El socket : 4
+[INFO] 18:47:40:065 kernel/(22144:22144): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:47:40:065 kernel/(22144:22144): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:47:40:065 kernel/(22144:22144): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:47:40:066 kernel/(22144:22144): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 18:47:40:066 kernel/(22144:22148): Entre en hilo ready exe
+[ERROR] 18:47:40:066 kernel/(22144:22147): Entre en hilo New Ready
+[TRACE] 18:47:40:066 kernel/(22144:22146): Entre en hilo bloq a suspension
+[TRACE] 18:47:40:066 kernel/(22144:22145): Entre en hilo suspencion a ready
+[TRACE] 18:47:40:066 kernel/(22144:22145): Entre en hilo suspencion a ready
+[INFO] 18:47:42:450 kernel/(22144:22144): Cliente conectado (a KERNEL)
+
+[WARNING] 18:47:42:452 kernel/(22144:22152): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:47:42:452 kernel/(22144:22152): Deserialice IO el parametro es: 3000
+[WARNING] 18:47:42:452 kernel/(22144:22152): Deserialice READ el parametro es: 0
+[WARNING] 18:47:42:453 kernel/(22144:22152): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:47:42:453 kernel/(22144:22152): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:47:42:453 kernel/(22144:22152): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:47:42:453 kernel/(22144:22152): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:47:42:453 kernel/(22144:22152): Entre en EXIT
+[ERROR] 18:47:42:453 kernel/(22144:22152): El indice tabla de pagina es: 412
+[INFO] 18:47:42:453 kernel/(22144:22152): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:47:42:453 kernel/(22144:22152): Entre en agregar a NEW 
+[TRACE] 18:47:42:453 kernel/(22144:22146): Entre en hilo bloq a suspension
+[INFO] 18:47:42:453 kernel/(22144:22147): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 18:47:42:453 kernel/(22144:22147): Entre en agregar a ready
+[INFO] 18:47:42:453 kernel/(22144:22147): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:47:42:453 kernel/(22144:22147): Sali hilo new ready 
+[ERROR] 18:47:42:453 kernel/(22144:22147): Entre en hilo New Ready
+[TRACE] 18:47:42:453 kernel/(22144:22146): Entre en hilo bloq a suspension
+[TRACE] 18:47:42:453 kernel/(22144:22148): Entre en hilo ready exe
+[ERROR] 18:47:42:453 kernel/(22144:22152): Salgo de agregar a NEW tranqui
+[WARNING] 18:47:42:454 kernel/(22144:22152): pase el agregar a NEW
+[TRACE] 18:47:42:454 kernel/(22144:22152): El PID ES: 1
+[INFO] 18:47:42:454 kernel/(22144:22152): DISCONNECT!
+[TRACE] 18:47:42:454 kernel/(22144:22152): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:47:42:454 kernel/(22144:22152): El cliente se desconecto de KERNEL server
+[TRACE] 18:47:42:454 kernel/(22144:22153): Entre a enviar pcb a cpu
+[ERROR] 18:47:42:454 kernel/(22144:22153): El socket dentro de send instrcciones es : 7
+[WARNING] 18:47:42:455 kernel/(22144:22153): entre en NO_OP dentro de send_instrucciones
+[WARNING] 18:47:42:455 kernel/(22144:22153): entre en I/O dentro de send_instrucciones
+[WARNING] 18:47:42:455 kernel/(22144:22153): entre en READ dentro de send_instrucciones
+[WARNING] 18:47:42:455 kernel/(22144:22153): entre en READ dentro de send_instrucciones
+[WARNING] 18:47:42:456 kernel/(22144:22153): entre en COPY dentro de send_instrucciones
+[WARNING] 18:47:42:456 kernel/(22144:22153): Entre en EXIT dentro de send_instrucciones
+[INFO] 18:51:14:654 kernel/(22461:22461): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:51:14:654 kernel/(22461:22461): El socket : 4
+[INFO] 18:51:14:654 kernel/(22461:22461): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:51:14:654 kernel/(22461:22461): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:51:14:655 kernel/(22461:22461): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:51:14:655 kernel/(22461:22461): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 18:51:14:655 kernel/(22461:22465): Entre en hilo ready exe
+[ERROR] 18:51:14:655 kernel/(22461:22464): Entre en hilo New Ready
+[TRACE] 18:51:14:655 kernel/(22461:22463): Entre en hilo bloq a suspension
+[TRACE] 18:51:14:655 kernel/(22461:22462): Entre en hilo suspencion a ready
+[TRACE] 18:51:14:655 kernel/(22461:22462): Entre en hilo suspencion a ready
+[INFO] 18:51:16:581 kernel/(22461:22461): Cliente conectado (a KERNEL)
+
+[WARNING] 18:51:16:583 kernel/(22461:22469): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:51:16:583 kernel/(22461:22469): Deserialice IO el parametro es: 3000
+[WARNING] 18:51:16:583 kernel/(22461:22469): Deserialice READ el parametro es: 0
+[WARNING] 18:51:16:583 kernel/(22461:22469): Deserialice WRITE el parametro1 es: 4
+[WARNING] 18:51:16:583 kernel/(22461:22469): Deserialice WRITE el parametro2 es: 42
+[WARNING] 18:51:16:583 kernel/(22461:22469): Deserialice COPY el parametro1 es: 0
+[WARNING] 18:51:16:583 kernel/(22461:22469): Deserialice COPY el parametro2 es: 4
+[WARNING] 18:51:16:583 kernel/(22461:22469): Entre en EXIT
+[ERROR] 18:51:16:584 kernel/(22461:22469): El indice tabla de pagina es: 412
+[INFO] 18:51:16:584 kernel/(22461:22469): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:51:16:584 kernel/(22461:22469): Entre en agregar a NEW 
+[TRACE] 18:51:16:584 kernel/(22461:22463): Entre en hilo bloq a suspension
+[INFO] 18:51:16:584 kernel/(22461:22464): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 18:51:16:584 kernel/(22461:22464): Entre en agregar a ready
+[INFO] 18:51:16:584 kernel/(22461:22464): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:51:16:584 kernel/(22461:22464): Sali hilo new ready 
+[ERROR] 18:51:16:584 kernel/(22461:22464): Entre en hilo New Ready
+[TRACE] 18:51:16:584 kernel/(22461:22463): Entre en hilo bloq a suspension
+[TRACE] 18:51:16:584 kernel/(22461:22465): Entre en hilo ready exe
+[ERROR] 18:51:16:584 kernel/(22461:22469): Salgo de agregar a NEW tranqui
+[WARNING] 18:51:16:584 kernel/(22461:22469): pase el agregar a NEW
+[TRACE] 18:51:16:584 kernel/(22461:22469): El PID ES: 1
+[INFO] 18:51:16:585 kernel/(22461:22469): DISCONNECT!
+[TRACE] 18:51:16:585 kernel/(22461:22469): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:51:16:585 kernel/(22461:22469): El cliente se desconecto de KERNEL server
+[TRACE] 18:51:16:585 kernel/(22461:22470): Entre a enviar pcb a cpu
+[ERROR] 18:51:16:585 kernel/(22461:22470): El socket dentro de send instrcciones es : 7
+[WARNING] 18:51:16:585 kernel/(22461:22470): entre en NO_OP dentro de send_instrucciones
+[WARNING] 18:51:16:586 kernel/(22461:22470): entre en I/O dentro de send_instrucciones
+[WARNING] 18:51:16:586 kernel/(22461:22470): entre en READ dentro de send_instrucciones
+[WARNING] 18:51:16:586 kernel/(22461:22470): entre en READ dentro de send_instrucciones
+[WARNING] 18:51:16:586 kernel/(22461:22470): entre en COPY dentro de send_instrucciones
+[WARNING] 18:51:16:587 kernel/(22461:22470): Entre en EXIT dentro de send_instrucciones
+[INFO] 18:59:42:154 kernel/(23105:23105): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:59:42:155 kernel/(23105:23105): El socket : 4
+[INFO] 18:59:42:155 kernel/(23105:23105): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 18:59:42:155 kernel/(23105:23105): El fd_memoria despues de grar conexiones es: 5
+[INFO] 18:59:42:155 kernel/(23105:23105): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 18:59:42:155 kernel/(23105:23105): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 18:59:42:155 kernel/(23105:23109): Entre en hilo ready exe
+[ERROR] 18:59:42:156 kernel/(23105:23108): Entre en hilo New Ready
+[TRACE] 18:59:42:156 kernel/(23105:23107): Entre en hilo bloq a suspension
+[TRACE] 18:59:42:156 kernel/(23105:23106): Entre en hilo suspencion a ready
+[TRACE] 18:59:42:156 kernel/(23105:23106): Entre en hilo suspencion a ready
+[INFO] 18:59:44:867 kernel/(23105:23105): Cliente conectado (a KERNEL)
+
+[WARNING] 18:59:44:868 kernel/(23105:23116): Deserialice NO_OP el parametro es: 5
+[WARNING] 18:59:44:869 kernel/(23105:23116): Entre en EXIT
+[ERROR] 18:59:44:869 kernel/(23105:23116): El indice tabla de pagina es: 412
+[INFO] 18:59:44:869 kernel/(23105:23116): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:59:44:869 kernel/(23105:23116): Entre en agregar a NEW 
+[TRACE] 18:59:44:869 kernel/(23105:23107): Entre en hilo bloq a suspension
+[INFO] 18:59:44:869 kernel/(23105:23108): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 18:59:44:869 kernel/(23105:23108): Entre en agregar a ready
+[INFO] 18:59:44:869 kernel/(23105:23108): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 18:59:44:869 kernel/(23105:23108): Sali hilo new ready 
+[ERROR] 18:59:44:869 kernel/(23105:23108): Entre en hilo New Ready
+[INFO] 18:59:44:869 kernel/(23105:23109): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de -0.000000 milisegundos.
+[TRACE] 18:59:44:869 kernel/(23105:23107): Entre en hilo bloq a suspension
+[TRACE] 18:59:44:869 kernel/(23105:23109): Entre en hilo ready exe
+[ERROR] 18:59:44:869 kernel/(23105:23116): Salgo de agregar a NEW tranqui
+[WARNING] 18:59:44:869 kernel/(23105:23116): pase el agregar a NEW
+[TRACE] 18:59:44:869 kernel/(23105:23116): El PID ES: 1
+[INFO] 18:59:44:869 kernel/(23105:23116): DISCONNECT!
+[TRACE] 18:59:44:870 kernel/(23105:23116): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 18:59:44:870 kernel/(23105:23116): El cliente se desconecto de KERNEL server
+[TRACE] 18:59:44:870 kernel/(23105:23117): Entre a enviar pcb a cpu
+[ERROR] 18:59:44:870 kernel/(23105:23117): El socket dentro de send instrcciones es : 7
+[WARNING] 18:59:44:870 kernel/(23105:23117): entre en NO_OP dentro de send_instrucciones
+[WARNING] 18:59:44:871 kernel/(23105:23117): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:04:00:018 kernel/(23440:23440): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 19:04:00:018 kernel/(23440:23440): El socket : 4
+[INFO] 19:04:00:018 kernel/(23440:23440): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 19:04:00:018 kernel/(23440:23440): El fd_memoria despues de grar conexiones es: 5
+[INFO] 19:04:00:018 kernel/(23440:23440): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 19:04:00:018 kernel/(23440:23440): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 19:04:00:019 kernel/(23440:23444): Entre en hilo ready exe
+[ERROR] 19:04:00:019 kernel/(23440:23443): Entre en hilo New Ready
+[TRACE] 19:04:00:019 kernel/(23440:23442): Entre en hilo bloq a suspension
+[TRACE] 19:04:00:019 kernel/(23440:23441): Entre en hilo suspencion a ready
+[TRACE] 19:04:00:019 kernel/(23440:23441): Entre en hilo suspencion a ready
+[INFO] 19:04:02:663 kernel/(23440:23440): Cliente conectado (a KERNEL)
+
+[WARNING] 19:04:02:664 kernel/(23440:23448): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:04:02:664 kernel/(23440:23448): Entre en EXIT
+[ERROR] 19:04:02:665 kernel/(23440:23448): El indice tabla de pagina es: 412
+[INFO] 19:04:02:665 kernel/(23440:23448): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 19:04:02:665 kernel/(23440:23448): Entre en agregar a NEW 
+[TRACE] 19:04:02:665 kernel/(23440:23442): Entre en hilo bloq a suspension
+[INFO] 19:04:02:665 kernel/(23440:23443): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 19:04:02:665 kernel/(23440:23443): Entre en agregar a ready
+[INFO] 19:04:02:665 kernel/(23440:23443): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 19:04:02:665 kernel/(23440:23443): Sali hilo new ready 
+[ERROR] 19:04:02:665 kernel/(23440:23443): Entre en hilo New Ready
+[INFO] 19:04:02:665 kernel/(23440:23444): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de -0.000000 milisegundos.
+[TRACE] 19:04:02:665 kernel/(23440:23442): Entre en hilo bloq a suspension
+[TRACE] 19:04:02:665 kernel/(23440:23444): Entre en hilo ready exe
+[ERROR] 19:04:02:665 kernel/(23440:23448): Salgo de agregar a NEW tranqui
+[WARNING] 19:04:02:665 kernel/(23440:23448): pase el agregar a NEW
+[TRACE] 19:04:02:665 kernel/(23440:23448): El PID ES: 1
+[INFO] 19:04:02:665 kernel/(23440:23448): DISCONNECT!
+[TRACE] 19:04:02:665 kernel/(23440:23448): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:04:02:666 kernel/(23440:23448): El cliente se desconecto de KERNEL server
+[TRACE] 19:04:02:666 kernel/(23440:23449): Entre a enviar pcb a cpu
+[ERROR] 19:04:02:666 kernel/(23440:23449): El socket dentro de send instrcciones es : 7
+[WARNING] 19:04:02:666 kernel/(23440:23449): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:04:02:666 kernel/(23440:23449): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:04:18:484 kernel/(23440:23440): Cliente conectado (a KERNEL)
+
+[WARNING] 19:04:18:485 kernel/(23440:23460): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:04:18:485 kernel/(23440:23460): Entre en EXIT
+[ERROR] 19:04:18:486 kernel/(23440:23460): El indice tabla de pagina es: 412
+[INFO] 19:04:18:486 kernel/(23440:23460): [NEW] Entra el proceso de PID: 2 a la cola.
+[ERROR] 19:04:18:486 kernel/(23440:23460): Entre en agregar a NEW 
+[TRACE] 19:04:18:486 kernel/(23440:23442): Entre en hilo bloq a suspension
+[INFO] 19:04:18:486 kernel/(23440:23443): [NEW] Se saca el proceso de PID: 2 de la cola
+[TRACE] 19:04:18:486 kernel/(23440:23443): Entre en agregar a ready
+[INFO] 19:04:18:486 kernel/(23440:23443): [READY] Entra el proceso de PID: 2 a la cola.
+[ERROR] 19:04:18:486 kernel/(23440:23443): Sali hilo new ready 
+[ERROR] 19:04:18:486 kernel/(23440:23443): Entre en hilo New Ready
+[INFO] 19:04:18:486 kernel/(23440:23444): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de -0.000000 milisegundos.
+[TRACE] 19:04:18:486 kernel/(23440:23442): Entre en hilo bloq a suspension
+[TRACE] 19:04:18:486 kernel/(23440:23444): Entre en hilo ready exe
+[ERROR] 19:04:18:486 kernel/(23440:23460): Salgo de agregar a NEW tranqui
+[WARNING] 19:04:18:486 kernel/(23440:23460): pase el agregar a NEW
+[TRACE] 19:04:18:486 kernel/(23440:23460): El PID ES: 2
+[INFO] 19:04:18:486 kernel/(23440:23460): DISCONNECT!
+[TRACE] 19:04:18:486 kernel/(23440:23460): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:04:18:486 kernel/(23440:23460): El cliente se desconecto de KERNEL server
+[TRACE] 19:04:18:487 kernel/(23440:23461): Entre a enviar pcb a cpu
+[ERROR] 19:04:18:487 kernel/(23440:23461): El socket dentro de send instrcciones es : 7
+[WARNING] 19:04:18:487 kernel/(23440:23461): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:04:18:488 kernel/(23440:23461): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:06:39:619 kernel/(23581:23581): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 19:06:39:619 kernel/(23581:23581): El socket : 4
+[INFO] 19:06:39:619 kernel/(23581:23581): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 19:06:39:620 kernel/(23581:23581): El fd_memoria despues de grar conexiones es: 5
+[INFO] 19:06:39:620 kernel/(23581:23581): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 19:06:39:620 kernel/(23581:23581): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 19:06:39:620 kernel/(23581:23585): Entre en hilo ready exe
+[ERROR] 19:06:39:620 kernel/(23581:23584): Entre en hilo New Ready
+[TRACE] 19:06:39:620 kernel/(23581:23583): Entre en hilo bloq a suspension
+[TRACE] 19:06:39:620 kernel/(23581:23582): Entre en hilo suspencion a ready
+[TRACE] 19:06:39:620 kernel/(23581:23582): Entre en hilo suspencion a ready
+[INFO] 19:06:44:943 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:06:44:944 kernel/(23581:23592): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:06:44:944 kernel/(23581:23592): Entre en EXIT
+[ERROR] 19:06:44:945 kernel/(23581:23592): El indice tabla de pagina es: 412
+[INFO] 19:06:44:945 kernel/(23581:23592): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 19:06:44:945 kernel/(23581:23592): Entre en agregar a NEW 
+[TRACE] 19:06:44:945 kernel/(23581:23583): Entre en hilo bloq a suspension
+[INFO] 19:06:44:945 kernel/(23581:23584): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 19:06:44:945 kernel/(23581:23584): Entre en agregar a ready
+[INFO] 19:06:44:945 kernel/(23581:23584): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 19:06:44:945 kernel/(23581:23584): Sali hilo new ready 
+[ERROR] 19:06:44:945 kernel/(23581:23584): Entre en hilo New Ready
+[INFO] 19:06:44:945 kernel/(23581:23585): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de -0.000000 milisegundos.
+[TRACE] 19:06:44:945 kernel/(23581:23583): Entre en hilo bloq a suspension
+[TRACE] 19:06:44:945 kernel/(23581:23585): Entre en hilo ready exe
+[ERROR] 19:06:44:945 kernel/(23581:23592): Salgo de agregar a NEW tranqui
+[WARNING] 19:06:44:945 kernel/(23581:23592): pase el agregar a NEW
+[TRACE] 19:06:44:945 kernel/(23581:23592): El PID ES: 1
+[INFO] 19:06:44:945 kernel/(23581:23592): DISCONNECT!
+[TRACE] 19:06:44:946 kernel/(23581:23592): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:06:44:946 kernel/(23581:23592): El cliente se desconecto de KERNEL server
+[TRACE] 19:06:44:946 kernel/(23581:23593): Entre a enviar pcb a cpu
+[ERROR] 19:06:44:946 kernel/(23581:23593): El socket dentro de send instrcciones es : 7
+[WARNING] 19:06:44:946 kernel/(23581:23593): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:06:44:947 kernel/(23581:23593): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:06:45:333 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:06:45:335 kernel/(23581:23595): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:06:45:335 kernel/(23581:23595): Entre en EXIT
+[ERROR] 19:06:45:335 kernel/(23581:23595): El indice tabla de pagina es: 412
+[INFO] 19:06:45:335 kernel/(23581:23595): [NEW] Entra el proceso de PID: 2 a la cola.
+[ERROR] 19:06:45:335 kernel/(23581:23595): Entre en agregar a NEW 
+[TRACE] 19:06:45:335 kernel/(23581:23583): Entre en hilo bloq a suspension
+[INFO] 19:06:45:335 kernel/(23581:23584): [NEW] Se saca el proceso de PID: 2 de la cola
+[TRACE] 19:06:45:335 kernel/(23581:23584): Entre en agregar a ready
+[INFO] 19:06:45:336 kernel/(23581:23584): [READY] Entra el proceso de PID: 2 a la cola.
+[ERROR] 19:06:45:336 kernel/(23581:23584): Sali hilo new ready 
+[ERROR] 19:06:45:336 kernel/(23581:23584): Entre en hilo New Ready
+[INFO] 19:06:45:336 kernel/(23581:23585): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de -0.000000 milisegundos.
+[TRACE] 19:06:45:336 kernel/(23581:23583): Entre en hilo bloq a suspension
+[TRACE] 19:06:45:336 kernel/(23581:23585): Entre en hilo ready exe
+[ERROR] 19:06:45:336 kernel/(23581:23595): Salgo de agregar a NEW tranqui
+[WARNING] 19:06:45:336 kernel/(23581:23595): pase el agregar a NEW
+[TRACE] 19:06:45:336 kernel/(23581:23595): El PID ES: 2
+[INFO] 19:06:45:336 kernel/(23581:23595): DISCONNECT!
+[TRACE] 19:06:45:336 kernel/(23581:23595): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:06:45:336 kernel/(23581:23595): El cliente se desconecto de KERNEL server
+[TRACE] 19:06:45:336 kernel/(23581:23596): Entre a enviar pcb a cpu
+[ERROR] 19:06:45:337 kernel/(23581:23596): El socket dentro de send instrcciones es : 7
+[WARNING] 19:06:45:337 kernel/(23581:23596): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:06:45:337 kernel/(23581:23596): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:07:01:479 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:01:480 kernel/(23581:23607): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:01:480 kernel/(23581:23607): Entre en EXIT
+[ERROR] 19:07:01:481 kernel/(23581:23607): El indice tabla de pagina es: 412
+[INFO] 19:07:01:481 kernel/(23581:23607): [NEW] Entra el proceso de PID: 3 a la cola.
+[ERROR] 19:07:01:481 kernel/(23581:23607): Entre en agregar a NEW 
+[TRACE] 19:07:01:481 kernel/(23581:23583): Entre en hilo bloq a suspension
+[INFO] 19:07:01:481 kernel/(23581:23584): [NEW] Se saca el proceso de PID: 3 de la cola
+[TRACE] 19:07:01:481 kernel/(23581:23584): Entre en agregar a ready
+[INFO] 19:07:01:481 kernel/(23581:23584): [READY] Entra el proceso de PID: 3 a la cola.
+[ERROR] 19:07:01:481 kernel/(23581:23584): Sali hilo new ready 
+[ERROR] 19:07:01:481 kernel/(23581:23584): Entre en hilo New Ready
+[INFO] 19:07:01:481 kernel/(23581:23585): [EXEC] Ingresa el proceso de PID: 3 con una rafaga de ejecucion estimada de -0.000000 milisegundos.
+[TRACE] 19:07:01:481 kernel/(23581:23583): Entre en hilo bloq a suspension
+[TRACE] 19:07:01:481 kernel/(23581:23585): Entre en hilo ready exe
+[ERROR] 19:07:01:481 kernel/(23581:23607): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:01:481 kernel/(23581:23607): pase el agregar a NEW
+[TRACE] 19:07:01:481 kernel/(23581:23607): El PID ES: 3
+[INFO] 19:07:01:481 kernel/(23581:23607): DISCONNECT!
+[TRACE] 19:07:01:482 kernel/(23581:23607): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:01:482 kernel/(23581:23607): El cliente se desconecto de KERNEL server
+[TRACE] 19:07:01:482 kernel/(23581:23608): Entre a enviar pcb a cpu
+[ERROR] 19:07:01:482 kernel/(23581:23608): El socket dentro de send instrcciones es : 7
+[WARNING] 19:07:01:482 kernel/(23581:23608): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:07:01:483 kernel/(23581:23608): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:07:01:684 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:01:686 kernel/(23581:23610): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:01:686 kernel/(23581:23610): Entre en EXIT
+[ERROR] 19:07:01:686 kernel/(23581:23610): El indice tabla de pagina es: 412
+[INFO] 19:07:01:687 kernel/(23581:23610): [NEW] Entra el proceso de PID: 4 a la cola.
+[ERROR] 19:07:01:687 kernel/(23581:23610): Entre en agregar a NEW 
+[TRACE] 19:07:01:687 kernel/(23581:23583): Entre en hilo bloq a suspension
+[INFO] 19:07:01:687 kernel/(23581:23584): [NEW] Se saca el proceso de PID: 4 de la cola
+[TRACE] 19:07:01:687 kernel/(23581:23584): Entre en agregar a ready
+[INFO] 19:07:01:687 kernel/(23581:23584): [READY] Entra el proceso de PID: 4 a la cola.
+[ERROR] 19:07:01:687 kernel/(23581:23584): Sali hilo new ready 
+[ERROR] 19:07:01:687 kernel/(23581:23584): Entre en hilo New Ready
+[INFO] 19:07:01:687 kernel/(23581:23585): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de -0.000000 milisegundos.
+[TRACE] 19:07:01:687 kernel/(23581:23583): Entre en hilo bloq a suspension
+[TRACE] 19:07:01:687 kernel/(23581:23585): Entre en hilo ready exe
+[ERROR] 19:07:01:687 kernel/(23581:23610): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:01:687 kernel/(23581:23610): pase el agregar a NEW
+[TRACE] 19:07:01:687 kernel/(23581:23610): El PID ES: 4
+[INFO] 19:07:01:687 kernel/(23581:23610): DISCONNECT!
+[TRACE] 19:07:01:687 kernel/(23581:23610): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:01:687 kernel/(23581:23610): El cliente se desconecto de KERNEL server
+[TRACE] 19:07:01:687 kernel/(23581:23611): Entre a enviar pcb a cpu
+[ERROR] 19:07:01:688 kernel/(23581:23611): El socket dentro de send instrcciones es : 7
+[WARNING] 19:07:01:688 kernel/(23581:23611): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:07:01:688 kernel/(23581:23611): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:07:01:861 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:01:863 kernel/(23581:23613): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:01:863 kernel/(23581:23613): Entre en EXIT
+[ERROR] 19:07:01:863 kernel/(23581:23613): El indice tabla de pagina es: 412
+[INFO] 19:07:01:863 kernel/(23581:23613): [NEW] Entra el proceso de PID: 5 a la cola.
+[ERROR] 19:07:01:863 kernel/(23581:23613): Entre en agregar a NEW 
+[TRACE] 19:07:01:863 kernel/(23581:23583): Entre en hilo bloq a suspension
+[INFO] 19:07:01:863 kernel/(23581:23584): [NEW] Se saca el proceso de PID: 5 de la cola
+[ERROR] 19:07:01:863 kernel/(23581:23613): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:01:863 kernel/(23581:23613): pase el agregar a NEW
+[TRACE] 19:07:01:863 kernel/(23581:23613): El PID ES: 5
+[INFO] 19:07:01:863 kernel/(23581:23613): DISCONNECT!
+[TRACE] 19:07:01:864 kernel/(23581:23613): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:01:864 kernel/(23581:23613): El cliente se desconecto de KERNEL server
+[INFO] 19:07:02:041 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:02:043 kernel/(23581:23615): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:02:043 kernel/(23581:23615): Entre en EXIT
+[ERROR] 19:07:02:043 kernel/(23581:23615): El indice tabla de pagina es: 412
+[INFO] 19:07:02:043 kernel/(23581:23615): [NEW] Entra el proceso de PID: 6 a la cola.
+[ERROR] 19:07:02:043 kernel/(23581:23615): Entre en agregar a NEW 
+[TRACE] 19:07:02:043 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:02:043 kernel/(23581:23615): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:02:043 kernel/(23581:23615): pase el agregar a NEW
+[TRACE] 19:07:02:043 kernel/(23581:23615): El PID ES: 6
+[INFO] 19:07:02:043 kernel/(23581:23615): DISCONNECT!
+[TRACE] 19:07:02:043 kernel/(23581:23615): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:02:044 kernel/(23581:23615): El cliente se desconecto de KERNEL server
+[INFO] 19:07:02:217 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:02:218 kernel/(23581:23617): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:02:218 kernel/(23581:23617): Entre en EXIT
+[ERROR] 19:07:02:218 kernel/(23581:23617): El indice tabla de pagina es: 412
+[INFO] 19:07:02:218 kernel/(23581:23617): [NEW] Entra el proceso de PID: 7 a la cola.
+[ERROR] 19:07:02:218 kernel/(23581:23617): Entre en agregar a NEW 
+[TRACE] 19:07:02:219 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:02:219 kernel/(23581:23617): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:02:219 kernel/(23581:23617): pase el agregar a NEW
+[TRACE] 19:07:02:219 kernel/(23581:23617): El PID ES: 7
+[INFO] 19:07:02:219 kernel/(23581:23617): DISCONNECT!
+[TRACE] 19:07:02:219 kernel/(23581:23617): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:02:219 kernel/(23581:23617): El cliente se desconecto de KERNEL server
+[INFO] 19:07:02:389 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:02:391 kernel/(23581:23619): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:02:391 kernel/(23581:23619): Entre en EXIT
+[ERROR] 19:07:02:391 kernel/(23581:23619): El indice tabla de pagina es: 412
+[INFO] 19:07:02:391 kernel/(23581:23619): [NEW] Entra el proceso de PID: 8 a la cola.
+[ERROR] 19:07:02:391 kernel/(23581:23619): Entre en agregar a NEW 
+[TRACE] 19:07:02:391 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:02:391 kernel/(23581:23619): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:02:391 kernel/(23581:23619): pase el agregar a NEW
+[TRACE] 19:07:02:391 kernel/(23581:23619): El PID ES: 8
+[INFO] 19:07:02:392 kernel/(23581:23619): DISCONNECT!
+[TRACE] 19:07:02:392 kernel/(23581:23619): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:02:392 kernel/(23581:23619): El cliente se desconecto de KERNEL server
+[INFO] 19:07:02:565 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:02:566 kernel/(23581:23621): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:02:567 kernel/(23581:23621): Entre en EXIT
+[ERROR] 19:07:02:567 kernel/(23581:23621): El indice tabla de pagina es: 412
+[INFO] 19:07:02:567 kernel/(23581:23621): [NEW] Entra el proceso de PID: 9 a la cola.
+[ERROR] 19:07:02:567 kernel/(23581:23621): Entre en agregar a NEW 
+[TRACE] 19:07:02:567 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:02:567 kernel/(23581:23621): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:02:567 kernel/(23581:23621): pase el agregar a NEW
+[TRACE] 19:07:02:567 kernel/(23581:23621): El PID ES: 9
+[INFO] 19:07:02:567 kernel/(23581:23621): DISCONNECT!
+[TRACE] 19:07:02:567 kernel/(23581:23621): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:02:567 kernel/(23581:23621): El cliente se desconecto de KERNEL server
+[INFO] 19:07:02:734 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:02:736 kernel/(23581:23623): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:02:736 kernel/(23581:23623): Entre en EXIT
+[ERROR] 19:07:02:736 kernel/(23581:23623): El indice tabla de pagina es: 412
+[INFO] 19:07:02:737 kernel/(23581:23623): [NEW] Entra el proceso de PID: 10 a la cola.
+[ERROR] 19:07:02:737 kernel/(23581:23623): Entre en agregar a NEW 
+[TRACE] 19:07:02:737 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:02:737 kernel/(23581:23623): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:02:737 kernel/(23581:23623): pase el agregar a NEW
+[TRACE] 19:07:02:737 kernel/(23581:23623): El PID ES: 10
+[INFO] 19:07:02:737 kernel/(23581:23623): DISCONNECT!
+[TRACE] 19:07:02:737 kernel/(23581:23623): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:02:737 kernel/(23581:23623): El cliente se desconecto de KERNEL server
+[INFO] 19:07:02:899 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:02:900 kernel/(23581:23625): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:02:900 kernel/(23581:23625): Entre en EXIT
+[ERROR] 19:07:02:901 kernel/(23581:23625): El indice tabla de pagina es: 412
+[INFO] 19:07:02:901 kernel/(23581:23625): [NEW] Entra el proceso de PID: 11 a la cola.
+[ERROR] 19:07:02:901 kernel/(23581:23625): Entre en agregar a NEW 
+[TRACE] 19:07:02:901 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:02:901 kernel/(23581:23625): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:02:901 kernel/(23581:23625): pase el agregar a NEW
+[TRACE] 19:07:02:901 kernel/(23581:23625): El PID ES: 11
+[INFO] 19:07:02:901 kernel/(23581:23625): DISCONNECT!
+[TRACE] 19:07:02:901 kernel/(23581:23625): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:02:902 kernel/(23581:23625): El cliente se desconecto de KERNEL server
+[INFO] 19:07:03:065 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:03:067 kernel/(23581:23627): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:03:067 kernel/(23581:23627): Entre en EXIT
+[ERROR] 19:07:03:067 kernel/(23581:23627): El indice tabla de pagina es: 412
+[INFO] 19:07:03:067 kernel/(23581:23627): [NEW] Entra el proceso de PID: 12 a la cola.
+[ERROR] 19:07:03:067 kernel/(23581:23627): Entre en agregar a NEW 
+[TRACE] 19:07:03:067 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:03:067 kernel/(23581:23627): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:03:067 kernel/(23581:23627): pase el agregar a NEW
+[TRACE] 19:07:03:067 kernel/(23581:23627): El PID ES: 12
+[INFO] 19:07:03:067 kernel/(23581:23627): DISCONNECT!
+[TRACE] 19:07:03:067 kernel/(23581:23627): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:03:068 kernel/(23581:23627): El cliente se desconecto de KERNEL server
+[INFO] 19:07:03:228 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:03:230 kernel/(23581:23629): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:03:230 kernel/(23581:23629): Entre en EXIT
+[ERROR] 19:07:03:230 kernel/(23581:23629): El indice tabla de pagina es: 412
+[INFO] 19:07:03:230 kernel/(23581:23629): [NEW] Entra el proceso de PID: 13 a la cola.
+[ERROR] 19:07:03:231 kernel/(23581:23629): Entre en agregar a NEW 
+[TRACE] 19:07:03:231 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:03:231 kernel/(23581:23629): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:03:231 kernel/(23581:23629): pase el agregar a NEW
+[TRACE] 19:07:03:231 kernel/(23581:23629): El PID ES: 13
+[INFO] 19:07:03:231 kernel/(23581:23629): DISCONNECT!
+[TRACE] 19:07:03:231 kernel/(23581:23629): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:03:231 kernel/(23581:23629): El cliente se desconecto de KERNEL server
+[INFO] 19:07:03:400 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:03:401 kernel/(23581:23631): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:03:401 kernel/(23581:23631): Entre en EXIT
+[ERROR] 19:07:03:402 kernel/(23581:23631): El indice tabla de pagina es: 412
+[INFO] 19:07:03:402 kernel/(23581:23631): [NEW] Entra el proceso de PID: 14 a la cola.
+[ERROR] 19:07:03:402 kernel/(23581:23631): Entre en agregar a NEW 
+[TRACE] 19:07:03:402 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:03:402 kernel/(23581:23631): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:03:402 kernel/(23581:23631): pase el agregar a NEW
+[TRACE] 19:07:03:402 kernel/(23581:23631): El PID ES: 14
+[INFO] 19:07:03:402 kernel/(23581:23631): DISCONNECT!
+[TRACE] 19:07:03:402 kernel/(23581:23631): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:03:402 kernel/(23581:23631): El cliente se desconecto de KERNEL server
+[INFO] 19:07:03:573 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:03:575 kernel/(23581:23633): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:03:575 kernel/(23581:23633): Entre en EXIT
+[ERROR] 19:07:03:576 kernel/(23581:23633): El indice tabla de pagina es: 412
+[INFO] 19:07:03:576 kernel/(23581:23633): [NEW] Entra el proceso de PID: 15 a la cola.
+[ERROR] 19:07:03:576 kernel/(23581:23633): Entre en agregar a NEW 
+[TRACE] 19:07:03:576 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:03:576 kernel/(23581:23633): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:03:576 kernel/(23581:23633): pase el agregar a NEW
+[TRACE] 19:07:03:576 kernel/(23581:23633): El PID ES: 15
+[INFO] 19:07:03:576 kernel/(23581:23633): DISCONNECT!
+[TRACE] 19:07:03:576 kernel/(23581:23633): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:03:576 kernel/(23581:23633): El cliente se desconecto de KERNEL server
+[INFO] 19:07:03:739 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:03:741 kernel/(23581:23635): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:03:741 kernel/(23581:23635): Entre en EXIT
+[ERROR] 19:07:03:741 kernel/(23581:23635): El indice tabla de pagina es: 412
+[INFO] 19:07:03:741 kernel/(23581:23635): [NEW] Entra el proceso de PID: 16 a la cola.
+[ERROR] 19:07:03:741 kernel/(23581:23635): Entre en agregar a NEW 
+[TRACE] 19:07:03:741 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:03:741 kernel/(23581:23635): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:03:741 kernel/(23581:23635): pase el agregar a NEW
+[TRACE] 19:07:03:742 kernel/(23581:23635): El PID ES: 16
+[INFO] 19:07:03:742 kernel/(23581:23635): DISCONNECT!
+[TRACE] 19:07:03:742 kernel/(23581:23635): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:03:742 kernel/(23581:23635): El cliente se desconecto de KERNEL server
+[INFO] 19:07:03:936 kernel/(23581:23581): Cliente conectado (a KERNEL)
+
+[WARNING] 19:07:03:937 kernel/(23581:23637): Deserialice NO_OP el parametro es: 5
+[WARNING] 19:07:03:937 kernel/(23581:23637): Entre en EXIT
+[ERROR] 19:07:03:938 kernel/(23581:23637): El indice tabla de pagina es: 412
+[INFO] 19:07:03:938 kernel/(23581:23637): [NEW] Entra el proceso de PID: 17 a la cola.
+[ERROR] 19:07:03:938 kernel/(23581:23637): Entre en agregar a NEW 
+[TRACE] 19:07:03:938 kernel/(23581:23583): Entre en hilo bloq a suspension
+[ERROR] 19:07:03:938 kernel/(23581:23637): Salgo de agregar a NEW tranqui
+[WARNING] 19:07:03:938 kernel/(23581:23637): pase el agregar a NEW
+[TRACE] 19:07:03:938 kernel/(23581:23637): El PID ES: 17
+[INFO] 19:07:03:938 kernel/(23581:23637): DISCONNECT!
+[TRACE] 19:07:03:938 kernel/(23581:23637): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 19:07:03:938 kernel/(23581:23637): El cliente se desconecto de KERNEL server

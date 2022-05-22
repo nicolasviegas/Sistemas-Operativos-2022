@@ -90,7 +90,7 @@ void deteccionYRecuperacion();
 
 pcb_t* obtenerSiguienteDeReady();
 pcb_t* obtenerSiguienteSJF();
-pcb_t* obtenerSiguienteHRRN();
+pcb_t* obtenerSiguienteFIFO();
 void actualizarTiemposDeEspera();
 
 bool condiciones_de_suspension();
@@ -117,5 +117,8 @@ sem_t suspensionFinalizada;
 sem_t largoPlazo;
 sem_t contadorReadySuspended;
 sem_t medianoPlazo;
+
+void enviar_pcb_a_cpu(void* pcb_proceso);
+
 
 #endif /* KERNEL_INCLUDE_PLANIFICACION_H_ */

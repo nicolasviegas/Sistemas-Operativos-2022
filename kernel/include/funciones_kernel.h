@@ -11,6 +11,7 @@
 #include "../../shared/include/protocolo.h"
 #include "../../shared/include/consola-kernel.h"
 #include "../include/kernel.h"
+#include "../include/planificacion.h"
 
 /*typedef struct{
 	int id;
@@ -24,5 +25,6 @@ void cargar_instruccion(int id, char* nombre, uint32_t parametro1, uint32_t para
 void conexion_kernel_a_memoria();
 
 void pedir_tabla_a_memoria();
+
 
 #endif /* KERNEL_INCLUDE_FUNCIONES_KERNEL_H_ */

@@ -63,6 +63,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 			}
 			 case EXIT:
 			 {
+				 log_trace(log_cpu,"Finalizo el proceso");
 				 pcb->PC += 1;
 				break;
 			}

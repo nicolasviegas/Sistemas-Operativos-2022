@@ -206,7 +206,7 @@ static void procesar_conexion_cpu(void* void_args) {
 		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
 		}
 
-		printf("El pc despues de las intrucciones es: %d",pcb_proceso_cpu->PC);
+		printf("El pc despues de las intrucciones es: %d\n",pcb_proceso_cpu->PC);
 
 		//habria que poner que la interrupcion fue antendida ?
 		//interrupcion =

@@ -80,7 +80,7 @@ void inicializar_planificacion(){
 	pthread_detach(hiloMedianoPlazo);
 
 	pthread_create(&hiloNewReady, NULL, (void*)hiloNew_Ready, NULL);
-	//pthread_create(&hiloReady_Exec, NULL, (void*)hiloReady_Exe, NULL);
+	pthread_create(&hiloReady_Exec, NULL, (void*)hiloReady_Exe, NULL);
 	pthread_detach(hiloNewReady);
 	pthread_detach(hiloReady_Exec);
 

@@ -56,9 +56,9 @@ static void procesar_conexion_kernel(void* void_args) {
 //////////////////////////////////////////////////////////////////////////////////////////////
 
         	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
-        	uint32_t a = list_size(lista_instrucciones_kernel);
-        	printf("El tamanio de la lista es: %d\n",a);
-        	//t_list* lista_nueva_kernel = list_create();
+        //	uint32_t a = list_size(lista_instrucciones_kernel);
+
+
 
         	pcb_proceso->PID = contador_cliente;
         	pcb_proceso->tamanio = tam;
@@ -69,6 +69,13 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso->alpha = alfa;
         	pcb_proceso->estado = NEW;
 
+        	pcb_proceso->rafagaAnterior;
+        	pcb_proceso->estimacionActual;
+        	pcb_proceso->estimacionAnterior;
+        	pcb_proceso->horaDeIngresoAExe;
+        	pcb_proceso->tiempoEspera;
+        	pcb_proceso-> suspendido = false;
+
         	//////////////////////////////////////////////////////////////////////////////////////////////////////
         /*	if(list_size(lista_pcb_en_memoria) <= grado_multiprogramacion ){
         		if(algoritmo_actual == "FIFO"){
@@ -78,22 +85,22 @@ static void procesar_conexion_kernel(void* void_args) {
 */
         	agregarANew(pcb_proceso);
         	log_warning(log_kernel,"pase el agregar a NEW");
-        	//hiloNew_Ready();
-        	//AGREGAR A NEW SE QUEDA BLOQUEADO ESPERANDO ALGO
-
-        //	interrupcion = false; //esto hay que borrarlo
 
 
+        	interrupcion = false; //esto hay que borrarlo
+
+        	/*uint32_t a = list_size(lista_instrucciones_kernel);
         	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
         	send_TAM(fd_cpu,pcb_proceso->tamanio);
         	send_cant_instrucciones(fd_cpu,a);
         	send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
         	send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
-        	send_PC(fd_cpu,pcb_proceso->PC);
+        	send_PC(fd_cpu,pcb_proceso->PC);*/
 
 
 
-        	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
+
+        	//lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
 
         	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");

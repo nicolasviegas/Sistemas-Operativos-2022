@@ -39,6 +39,23 @@ void pedir_tabla_a_memoria(){
 }
 
 
+void enviar_pcb_a_cpu(void* proceso){
+
+	log_trace(log_kernel,"Entre a enviar pcb a cpu");
+	pcb_t* pcb_proceso = (pcb_t *) proceso;
+
+	uint32_t a = list_size(lista_instrucciones_kernel);
+
+	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
+	send_TAM(fd_cpu,pcb_proceso->tamanio);
+	send_cant_instrucciones(fd_cpu,a);
+	send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
+	send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
+	send_PC(fd_cpu,pcb_proceso->PC);
+
+	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
+}
+
 
 
 
