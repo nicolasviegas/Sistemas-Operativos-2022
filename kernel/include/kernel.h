@@ -36,6 +36,7 @@ typedef enum{ //tipos de identificadores a parsear
 pthread_t hiloNewReady;
 
 pthread_t hiloReady_Exec;
+pthread_t hiloExec_Exit;
 pthread_t hiloMedianoPlazo;
 pthread_t hiloQueDesuspende;
 

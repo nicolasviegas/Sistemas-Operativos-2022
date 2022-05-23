@@ -83,6 +83,7 @@ void agregarABlockSuspended(pcb_t* pcb);
 
 void hiloNew_Ready();
 void hiloReady_Exe();
+void hiloExecAExit();
 void hiloBlockASuspension();
 void hiloSuspensionAReady();
 void deteccionYRecuperacion();

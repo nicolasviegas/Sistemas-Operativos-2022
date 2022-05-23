@@ -70,7 +70,10 @@ void agregarAReady(pcb_t* proceso){
 
 	proceso->suspendido = false;
 	list_add(colaReady, proceso);
+
 	log_info(log_kernel, "[READY] Entra el proceso de PID: %d a la cola.", proceso->PID);
+
+	printf("PROCESOS EN READY: %d \n", list_size(colaReady));
 
 	pthread_mutex_unlock(&mutexReady);
 	sem_post(&contadorReady);
@@ -252,18 +255,16 @@ void hiloReady_Exe(){
 			list_add(listaExe, carpinchoAEjecutar);
 			pthread_mutex_unlock(&mutexExe);
 
-
 			////////////////////////////// VER COMO HACER PARA QUE LO HAGA CPU Y NO KERNEL (HAY QUE ENVIAR A CPU Y QUE EL EJECUTE)
 			pthread_t hiloCPU;
 			pthread_create(&hiloCPU, NULL, (void*) enviar_pcb_a_cpu, (void*) carpinchoAEjecutar); //Esta funcion ejecutar seria la que se hace en cpu
 			pthread_detach(hiloCPU);
-
 			//enviar_pcb_a_cpu(carpinchoAEjecutar);
 
 			if(algoritmo_config == SRT){
 				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", carpinchoAEjecutar->PID, carpinchoAEjecutar->estimacionActual);
 			}else{
-				log_info(logger, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", carpinchoAEjecutar->PID);
+				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", carpinchoAEjecutar->PID);
 
 			}
 
@@ -279,6 +280,41 @@ void hiloReady_Exe(){
 	}
 }
 
+//Hilo que maneja la finalizacion de procesos
+void hiloExecAExit(){
+	log_trace(log_kernel,"Entre en hilo exec a exit");
+	sem_wait(&contadorExe);
+	sem_wait(&contadorProcesosEnMemoria);
+	//sem_wait(&hilo_sincro_cpu_kernel);
+
+	pcb_t* proceso = list_get(listaExe,0);
+
+
+
+	uint32_t pc;
+	if (!recv_PC(fd_cpu, &pc)) {
+		log_error(log_kernel, "Fallo recibiendo pc");
+	}
+	log_error(log_kernel,"El PC despues del recv es: %d",pc);
+
+	proceso->PC = pc;
+
+
+	log_trace(log_kernel,"El pc del exit proceso de list_get es: %d",proceso->PC);
+
+
+	pthread_mutex_lock(&mutexExe);
+	list_remove(listaExe,0);
+	pthread_mutex_unlock(&mutexExe);
+
+	pthread_mutex_lock(&mutexExe);
+
+	terminarEjecucion(proceso);
+
+	pthread_mutex_unlock(&mutexExe);
+
+	sem_post(&multiprogramacion);
+}
 
 // Hilo que maneja la suspension de procesos
 void hiloBlockASuspension(){
@@ -350,6 +386,7 @@ bool condiciones_de_suspension(){
 
 pcb_t* obtenerSiguienteDeReady(){
 
+	log_trace(log_kernel,"Entre en obtener sig de ready");
 	sem_wait(&contadorReady);
 
 	pcb_t* carpinchoPlanificado = NULL;
@@ -370,6 +407,8 @@ pcb_t* obtenerSiguienteDeReady(){
 		// Aca dentro un SWITCH para los distintos algoritmos q llama a una funcion para cada uno
 		switch(algoritmo_config){
 
+
+			//	log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
 				//CASO FIFO
 				case FIFO:
 					carpinchoPlanificado = obtenerSiguienteFIFO();
@@ -389,11 +428,17 @@ pcb_t* obtenerSiguienteDeReady(){
 }
 
 pcb_t* obtenerSiguienteFIFO(){
+
+	log_warning(log_kernel,"Esto en obtenre siguiente fifo");
 	pcb_t* carpinchoPlanificado = NULL;
 
+	pthread_mutex_lock(&mutexReady);
 	carpinchoPlanificado = list_remove(colaReady, 0);
+    pthread_mutex_unlock(&mutexReady);
 
 	return carpinchoPlanificado;
+
+	//FREE??
 }
 
 
@@ -416,7 +461,7 @@ pcb_t* obtenerSiguienteSJF(){
 	//sem_wait(&contadorReady);
 	pthread_mutex_lock(&mutexReady);
 
-	printf("CARPINCHOS EN READY: %d \n", list_size(colaReady));
+	printf("PROCESOS EN READY: %d \n", list_size(colaReady));
 
     for(i=1;i<list_size(colaReady);i++){
     	carpinchoAux = list_get(colaReady,i);
@@ -433,4 +478,28 @@ pcb_t* obtenerSiguienteSJF(){
     pthread_mutex_unlock(&mutexReady);
 
 	return carpinchoPlanificado;
+}
+
+void terminarEjecucion(pcb_t* pcb){
+
+	pthread_mutex_lock(&mutexExit);
+
+	list_add(listaExit, pcb);
+	log_info(log_kernel, "[EXIT] Finaliza el carpincho de PID: %d", pcb->PID);
+
+	pthread_mutex_unlock(&mutexExit);
+
+	size_t size = sizeof(op_estados)+sizeof(uint32_t);
+
+	void* stream = malloc(size);
+
+	op_estados opCode = FINISH;
+
+	memcpy(stream, &opCode, sizeof(op_estados));
+	memcpy(stream + sizeof(op_estados), &(pcb->PID), sizeof(uint32_t));
+
+	send(fd_memoria, stream, size, 0);
+
+
+	free(stream);
 }

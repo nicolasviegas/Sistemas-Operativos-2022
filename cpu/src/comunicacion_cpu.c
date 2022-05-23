@@ -204,13 +204,12 @@ static void procesar_conexion_cpu(void* void_args) {
 		log_error(log_cpu,"Entre en el while de interrupcion");
 		proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
+		//bool interrupcion check interrupciones, un rcv que se
+			//if(interrupcion) break;
+			//else{}
 		}
 
 		printf("El pc despues de las intrucciones es: %d\n",pcb_proceso_cpu->PC);
-
-		//habria que poner que la interrupcion fue antendida ?
-		//interrupcion =
-		//ACA SE VE SI KERNEL NOS MANDA UNA INTERRUPCION
 
 
 		/*send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
@@ -219,6 +218,8 @@ static void procesar_conexion_cpu(void* void_args) {
 			send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
 			send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);*/
 
+		//sem_post(&hilo_sincro_cpu_kernel);
+		//send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
 
 		//free(proxima_a_ejecutar);

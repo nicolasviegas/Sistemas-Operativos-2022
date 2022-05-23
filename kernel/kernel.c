@@ -33,6 +33,9 @@ void inicializar_semaforos(){
 	sem_init(&largoPlazo, 0, 1);
 	sem_init(&contadorReadySuspended, 0, 0);
 	sem_init(&medianoPlazo, 0, 1);
+
+
+	sem_init(&hilo_sincro_cpu_kernel, 0, 0);
 }
 
 
@@ -46,8 +49,10 @@ void inicializar_config(){
 	  ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
 	  puerto_cpu_dispatch = config_get_string_value(config_kernel,"PUERTO_CPU_DISPATCH");
 
-	/*  char* algoritmo_char = config_get_string_value(config_kernel,"ALGORITMO_PLANIFICACION");
-	  algoritmo_config = obtener_algoritmo(algoritmo_char);*/
+	  char* algoritmo_char = config_get_string_value(config_kernel,"ALGORITMO_PLANIFICACION");
+	  algoritmo_config = obtener_algoritmo(algoritmo_char);
+
+
 
 	  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
 	  grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
@@ -81,8 +86,10 @@ void inicializar_planificacion(){
 
 	pthread_create(&hiloNewReady, NULL, (void*)hiloNew_Ready, NULL);
 	pthread_create(&hiloReady_Exec, NULL, (void*)hiloReady_Exe, NULL);
+	pthread_create(&hiloExec_Exit,NULL, (void*)hiloExecAExit,NULL);
 	pthread_detach(hiloNewReady);
 	pthread_detach(hiloReady_Exec);
+	pthread_detach(hiloExec_Exit);
 
 }
 
@@ -113,6 +120,10 @@ int main() {
     inicializar_semaforos();
 
     ////////////////////
+	log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
+
+    ///
+
     fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 
     log_trace(log_kernel,"El socket : %d",fd_kernel);
