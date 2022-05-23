@@ -180,7 +180,6 @@ static void procesar_conexion_cpu(void* void_args) {
 		pcb_proceso_cpu->tamanio = tam;
 
 		list_add(lista_pcb_cpu,pcb_proceso_cpu);
-		free(pcb_proceso_cpu);
 
 		//log_trace(log_cpu,"El tamanio de la lista de intrucciones en cpu es: %d",list_size(lista_instrucciones_cpu));
 		lista_instrucciones_cpu = list_take_and_remove(lista_instrucciones_cpu,0);
@@ -203,7 +202,8 @@ static void procesar_conexion_cpu(void* void_args) {
 		while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones)){//la interrupcion verla segun el puerto interrupt
 		log_error(log_cpu,"Entre en el while de interrupcion");
 		proxima_a_ejecutar = fetch(pcb_proceso_cpu);
-		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
+		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);//VER SI VA CON & O NO
+		log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
 		//bool interrupcion check interrupciones, un rcv que se
 			//if(interrupcion) break;
 			//else{}
@@ -218,16 +218,23 @@ static void procesar_conexion_cpu(void* void_args) {
 			send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
 			send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);*/
 
-		//sem_post(&hilo_sincro_cpu_kernel);
+		sem_post(&hilo_sincro_cpu_kernel);
+		int a;
+						sem_getvalue(&hilo_sincro_cpu_kernel,&a);
+
+						log_warning(log_cpu,"el valor del semaforo es: %d",a);
+
+
 		//send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
 
 		//free(proxima_a_ejecutar);
 
-		printf("El tam de la lista pcb cpu una vez terminado un proceso: %d \n",list_size(lista_pcb_cpu));
+		//printf("El tam de la lista pcb cpu una vez terminado un proceso: %d \n",list_size(lista_pcb_cpu));
 
 		log_trace(log_cpu,"Sali de los recv");
 
+		free(pcb_proceso_cpu);
 
 	 }
 

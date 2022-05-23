@@ -601,7 +601,7 @@ void deserializar_PC(void* stream, uint32_t* parametro1) {
 }
 
 bool send_PC(int fd, uint32_t parametro1) {
-	//printf("Entre en send_PC \n");
+	printf("Entre en send_PC \n");
    size_t size = sizeof(uint32_t);
 
     void* stream = serializar_PC(parametro1);

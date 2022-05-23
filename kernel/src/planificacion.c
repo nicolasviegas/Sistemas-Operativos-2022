@@ -43,7 +43,7 @@ void agregarANew(pcb_t* proceso) {
 	sem_post(&contadorNew); // Despierta al planificador de largo plazo
 	sem_post(&largoPlazo);
 
-	log_error(log_kernel,"Salgo de agregar a NEW tranqui");
+	//log_error(log_kernel,"Salgo de agregar a NEW tranqui");
 }
 
 pcb_t* sacarDeNew(){
@@ -256,13 +256,15 @@ void hiloReady_Exe(){
 			pthread_mutex_unlock(&mutexExe);
 
 			////////////////////////////// VER COMO HACER PARA QUE LO HAGA CPU Y NO KERNEL (HAY QUE ENVIAR A CPU Y QUE EL EJECUTE)
-			pthread_t hiloCPU;
-			pthread_create(&hiloCPU, NULL, (void*) enviar_pcb_a_cpu, (void*) carpinchoAEjecutar); //Esta funcion ejecutar seria la que se hace en cpu
-			pthread_detach(hiloCPU);
-			//enviar_pcb_a_cpu(carpinchoAEjecutar);
+//			pthread_t hiloCPU;
+//			pthread_create(&hiloCPU, NULL, (void*) enviar_pcb_a_cpu, (void*) carpinchoAEjecutar); //Esta funcion ejecutar seria la que se hace en cpu
+//			pthread_detach(hiloCPU);
+			enviar_pcb_a_cpu(carpinchoAEjecutar);
+
+			log_info(log_kernel,"Pase el hilo cpu, que tiene la funcion enviar pcb a cpu");
+
 
 			if(algoritmo_config == SRT){
-				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", carpinchoAEjecutar->PID, carpinchoAEjecutar->estimacionActual);
 			}else{
 				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", carpinchoAEjecutar->PID);
 
@@ -272,6 +274,7 @@ void hiloReady_Exe(){
 
 			sem_post(&analizarSuspension); // Despues de que un carpincho se va de Ready y hace su transicion, se analiza la suspension
 			sem_wait(&suspensionFinalizada);
+			//sem_post(&hilo_sincro_cpu_kernel);
 
 		}else{
 			//sem_post(&multiprocesamiento);
@@ -280,41 +283,61 @@ void hiloReady_Exe(){
 	}
 }
 
-//Hilo que maneja la finalizacion de procesos
+//Hilo que maneja de EXE A EXIT
 void hiloExecAExit(){
-	log_trace(log_kernel,"Entre en hilo exec a exit");
-	sem_wait(&contadorExe);
-	sem_wait(&contadorProcesosEnMemoria);
-	//sem_wait(&hilo_sincro_cpu_kernel);
-
-	pcb_t* proceso = list_get(listaExe,0);
+	//log_trace(log_kernel,"Entre en hilo exec a exit");
 
 
+	while(1){
+		log_trace(log_kernel,"Entre en hilo exec a exit");
 
-	uint32_t pc;
-	if (!recv_PC(fd_cpu, &pc)) {
-		log_error(log_kernel, "Fallo recibiendo pc");
+		   int a;
+				sem_getvalue(&hilo_sincro_cpu_kernel,&a);
+
+				log_warning(log_kernel,"el valor del semaforo es: %d",a);
+		//sem_wait(&contadorExe);
+			//sem_wait(&contadorProcesosEnMemoria);
+			sem_wait(&hilo_sincro_cpu_kernel);
+
+			log_trace(log_kernel,"Pase los waits en exec a exit");
+
+
+
+			pcb_t* proceso = list_get(listaExe,0);
+
+
+
+		//	uint32_t pc;
+		//	if (!recv_PC(fd_cpu, &pc)) {
+		//		log_error(log_kernel, "Fallo recibiendo pc");
+		//	}
+		//	log_error(log_kernel,"El PC despues del recv es: %d",pc);
+		//
+		//	proceso->PC = pc;
+		//
+		//
+		//	log_trace(log_kernel,"El pc del exit proceso de list_get es: %d",proceso->PC);
+
+
+			pthread_mutex_lock(&mutexExe);
+			list_remove(listaExe,0);
+			pthread_mutex_unlock(&mutexExe);
+
+			log_trace(log_kernel,"antes de terminar ejecucion");
+
+		//	pthread_mutex_lock(&mutexExe);
+
+			terminarEjecucion(proceso);
+
+		//	pthread_mutex_unlock(&mutexExe);
+
+
+
+			sem_post(&multiprogramacion);
+
+
 	}
-	log_error(log_kernel,"El PC despues del recv es: %d",pc);
-
-	proceso->PC = pc;
-
-
-	log_trace(log_kernel,"El pc del exit proceso de list_get es: %d",proceso->PC);
-
-
-	pthread_mutex_lock(&mutexExe);
-	list_remove(listaExe,0);
-	pthread_mutex_unlock(&mutexExe);
-
-	pthread_mutex_lock(&mutexExe);
-
-	terminarEjecucion(proceso);
-
-	pthread_mutex_unlock(&mutexExe);
-
-	sem_post(&multiprogramacion);
-}
+	}
 
 // Hilo que maneja la suspension de procesos
 void hiloBlockASuspension(){
@@ -495,10 +518,13 @@ void terminarEjecucion(pcb_t* pcb){
 
 	op_estados opCode = FINISH;
 
-	memcpy(stream, &opCode, sizeof(op_estados));
-	memcpy(stream + sizeof(op_estados), &(pcb->PID), sizeof(uint32_t));
 
-	send(fd_memoria, stream, size, 0);
+	//DESCOMENTAR
+
+//	memcpy(stream, &opCode, sizeof(op_estados));
+//	memcpy(stream + sizeof(op_estados), &(pcb->PID), sizeof(uint32_t));
+//
+//	send(fd_memoria, stream, size, 0);
 
 
 	free(stream);

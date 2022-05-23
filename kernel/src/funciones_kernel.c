@@ -54,6 +54,8 @@ void enviar_pcb_a_cpu(void* proceso){
 	send_PC(fd_cpu,pcb_proceso->PC);
 
 	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
+
+	log_trace(log_kernel,"Sali de enviar pcb a cpu");
 }
 
 

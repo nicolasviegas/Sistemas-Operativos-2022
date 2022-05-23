@@ -94,6 +94,8 @@ pcb_t* obtenerSiguienteSJF();
 pcb_t* obtenerSiguienteFIFO();
 void actualizarTiemposDeEspera();
 
+void terminarEjecucion(pcb_t* pcb);
+
 bool condiciones_de_suspension();
 
 //

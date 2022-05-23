@@ -102,6 +102,7 @@ static void procesar_conexion_kernel(void* void_args) {
 
         	//lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
 
+
         	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
 

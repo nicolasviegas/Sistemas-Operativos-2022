@@ -21,19 +21,23 @@ instrucciones* fetch(pcb_cpu* pcb){
 }
 
 void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
-	uint32_t co_op = instruccion_a_decodificar->id;
+	int co_op = instruccion_a_decodificar->id;
 	uint32_t tiempo_bloqueante = 0;
 
 	switch (co_op) {
 			case NO_OP:{
 				log_warning(log_cpu,"Antes del sleep");
+				//log_warning(log_cpu,"EL PARAMETRO 1 ES: %d",instruccion_a_decodificar->parametro1);
 				int retardo_NO_OP = config_get_int_value(config_cpu,"RETARDO_NOOP");
 				retardo_NO_OP = retardo_NO_OP / 1000;
 				for(int i=0;i<instruccion_a_decodificar->parametro1;i++){
 					sleep(retardo_NO_OP);
 				}
-				pcb->PC += 1;
+				log_warning(log_cpu,"El program counter es: %d",pcb->PC);
+
 				log_warning(log_cpu,"Termine NO_OP donde hago el execute");
+
+				pcb->PC += 1;
 
 			break;
 			}
@@ -63,6 +67,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 			}
 			 case EXIT:
 			 {
+				 log_trace(log_cpu,"ENTRE EN EXIT");
 				 log_trace(log_cpu,"Finalizo el proceso");
 				 pcb->PC += 1;
 				break;
@@ -77,7 +82,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 
 
 
-	log_warning("Se aumento el program counter, la sig instruccion es: ",pcb->PC);
+	log_warning("Se aumento el program counter, la sig instruccion es: %d",pcb->PC);
 
 
 
