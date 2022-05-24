@@ -124,7 +124,9 @@ int main() {
 
     ///
 
-    fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
+   // fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
+	int fd_kernel_1 = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
+
 
     log_trace(log_kernel,"El socket : %d",fd_kernel);
 
@@ -149,7 +151,8 @@ int main() {
 
 
     //conexion entre Kernel (Servidor) y consola(cliente)
-    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
+   // while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
+    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel_1));
 
 
     log_warning(log_kernel,"Despues de server escuchar");

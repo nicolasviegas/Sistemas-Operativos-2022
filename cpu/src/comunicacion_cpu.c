@@ -25,6 +25,12 @@ static void procesar_conexion_cpu(void* void_args) {
 	 op_code_instrucciones co_op;
 	 uint32_t pc;
 
+	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	 log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
+	 printf("El cliente socket en cpu.c es : %d\n",cliente_socket);
+	 fd_kernel = cliente_socket;/////////////////////////////////////////////HARDCODEADO, PREGUNTAR
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	 while (cliente_socket != -1) {
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
 		 		log_error(log_cpu, "Fallo recibiendo pid");
@@ -218,14 +224,9 @@ static void procesar_conexion_cpu(void* void_args) {
 			send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
 			send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);*/
 
-		sem_post(&hilo_sincro_cpu_kernel);
-		int a;
-						sem_getvalue(&hilo_sincro_cpu_kernel,&a);
-
-						log_warning(log_cpu,"el valor del semaforo es: %d",a);
-
-
-		//send_PC(fd_kernel,pcb_proceso_cpu->PC);
+		log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
+		log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
+		send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
 
 		//free(proxima_a_ejecutar);

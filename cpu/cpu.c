@@ -33,9 +33,13 @@ int main() {
     lista_instrucciones_cpu = list_create();
     lista_pcb_cpu = list_create();
 
-    fd_kernel = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
+    //fd_kernel = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
+    fd_cpu = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
 
-   // log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
+
+
+    log_trace(log_cpu,"El socket en cpu.c es : %d",fd_cpu);
+
 
     char* ip_memoria = config_get_string_value(config_cpu,"IP_MEMORIA");
     char* puerto_memoria = config_get_string_value(config_cpu,"PUERTO_MEMORIA");
@@ -45,12 +49,13 @@ int main() {
        			cerrar_programa3(log_cpu);
        			return EXIT_FAILURE;
        		}
-   //log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+   log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
 
     //conexion entre cpu (Servidor) y kernel(cliente)
-    while(server_escuchar_cpu(log_cpu,"CPU",fd_kernel));
 
+    //  while(server_escuchar_cpu(log_cpu,"CPU",fd_kernel));
+    while(server_escuchar_cpu(log_cpu,"CPU",fd_cpu));
 
   //  log_warning(log_cpu,"Despues de server escuchar");
 

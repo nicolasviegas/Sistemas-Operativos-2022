@@ -28565,3 +28565,824 @@
 [TRACE] 18:25:54:990 cpu/(13736:13746): El pc despues de ejecutar una instruccion es: 2
 [WARNING] 18:25:54:991 cpu/(13736:13746): el valor del semaforo es: 3
 [TRACE] 18:25:54:991 cpu/(13736:13746): Sali de los recv
+[INFO] 11:09:28:225 cpu/(6274:6274): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:09:28:226 cpu/(6274:6274): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:09:31:184 cpu/(6274:6274): Cliente conectado (a CPU)
+
+[ERROR] 11:09:31:320 cpu/(6274:6286): Fallo recibiendo pid
+[WARNING] 11:09:31:320 cpu/(6274:6286): El cliente se desconecto de CPU server 
+[INFO] 11:10:21:957 cpu/(6478:6478): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:10:21:958 cpu/(6478:6478): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:10:25:373 cpu/(6478:6478): Cliente conectado (a CPU)
+
+[ERROR] 11:10:32:110 cpu/(6478:6494): El pid despues del recv es: 1
+[ERROR] 11:10:32:110 cpu/(6478:6494): El tam despues del recv es: 123
+[ERROR] 11:10:32:110 cpu/(6478:6494): cant_instrucciones despues del recv es: 2
+[ERROR] 11:10:32:110 cpu/(6478:6494): indice tabla pags despues del recv es: 412
+[WARNING] 11:10:32:110 cpu/(6478:6494): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:10:32:110 cpu/(6478:6494): Entre en EXIT
+[ERROR] 11:10:32:111 cpu/(6478:6494): El tam despues del recv es: 0
+[ERROR] 11:10:32:111 cpu/(6478:6494): Entre en el while de interrupcion
+[WARNING] 11:10:32:111 cpu/(6478:6494): Antes del sleep
+[WARNING] 11:10:37:114 cpu/(6478:6494): El program counter es: 0
+[WARNING] 11:10:37:115 cpu/(6478:6494): Termine NO_OP donde hago el execute
+[TRACE] 11:10:37:115 cpu/(6478:6494): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:10:37:115 cpu/(6478:6494): Entre en el while de interrupcion
+[TRACE] 11:10:37:115 cpu/(6478:6494): ENTRE EN EXIT
+[TRACE] 11:10:37:115 cpu/(6478:6494): Finalizo el proceso
+[TRACE] 11:10:37:115 cpu/(6478:6494): El pc despues de ejecutar una instruccion es: 2
+[INFO] 11:14:52:421 cpu/(6993:6993): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:14:52:421 cpu/(6993:6993): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:15:00:337 cpu/(6993:6993): Cliente conectado (a CPU)
+
+[ERROR] 11:15:39:981 cpu/(6993:7018): El pid despues del recv es: 1
+[ERROR] 11:15:39:982 cpu/(6993:7018): El tam despues del recv es: 123
+[ERROR] 11:15:39:982 cpu/(6993:7018): cant_instrucciones despues del recv es: 2
+[ERROR] 11:15:39:982 cpu/(6993:7018): indice tabla pags despues del recv es: 412
+[WARNING] 11:15:39:982 cpu/(6993:7018): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:15:39:982 cpu/(6993:7018): Entre en EXIT
+[ERROR] 11:15:39:982 cpu/(6993:7018): El tam despues del recv es: 0
+[ERROR] 11:15:39:982 cpu/(6993:7018): Entre en el while de interrupcion
+[WARNING] 11:15:39:982 cpu/(6993:7018): Antes del sleep
+[WARNING] 11:15:44:983 cpu/(6993:7018): El program counter es: 0
+[WARNING] 11:15:44:984 cpu/(6993:7018): Termine NO_OP donde hago el execute
+[TRACE] 11:15:44:984 cpu/(6993:7018): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:15:44:984 cpu/(6993:7018): Entre en el while de interrupcion
+[TRACE] 11:15:44:984 cpu/(6993:7018): ENTRE EN EXIT
+[TRACE] 11:15:44:984 cpu/(6993:7018): Finalizo el proceso
+[TRACE] 11:15:44:984 cpu/(6993:7018): El pc despues de ejecutar una instruccion es: 2
+[INFO] 11:17:04:246 cpu/(7325:7325): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:17:04:246 cpu/(7325:7325): Cliente conectado (a CPU)
+
+[INFO] 11:17:15:761 cpu/(7345:7345): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:17:15:761 cpu/(7345:7345): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:17:17:685 cpu/(7345:7345): Cliente conectado (a CPU)
+
+[ERROR] 11:17:20:889 cpu/(7345:7354): El pid despues del recv es: 1
+[ERROR] 11:17:20:889 cpu/(7345:7354): El tam despues del recv es: 123
+[ERROR] 11:17:20:889 cpu/(7345:7354): cant_instrucciones despues del recv es: 2
+[ERROR] 11:17:20:889 cpu/(7345:7354): indice tabla pags despues del recv es: 412
+[WARNING] 11:17:20:889 cpu/(7345:7354): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:17:20:889 cpu/(7345:7354): Entre en EXIT
+[ERROR] 11:17:20:889 cpu/(7345:7354): El tam despues del recv es: 0
+[ERROR] 11:17:20:890 cpu/(7345:7354): Entre en el while de interrupcion
+[WARNING] 11:17:20:890 cpu/(7345:7354): Antes del sleep
+[WARNING] 11:17:25:891 cpu/(7345:7354): El program counter es: 0
+[WARNING] 11:17:25:891 cpu/(7345:7354): Termine NO_OP donde hago el execute
+[TRACE] 11:17:25:891 cpu/(7345:7354): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:17:25:891 cpu/(7345:7354): Entre en el while de interrupcion
+[TRACE] 11:17:25:892 cpu/(7345:7354): ENTRE EN EXIT
+[TRACE] 11:17:25:892 cpu/(7345:7354): Finalizo el proceso
+[TRACE] 11:17:25:892 cpu/(7345:7354): El pc despues de ejecutar una instruccion es: 2
+[TRACE] 11:17:25:892 cpu/(7345:7354): Sali de los recv
+[INFO] 11:20:03:034 cpu/(7738:7738): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:20:03:034 cpu/(7738:7738): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:20:05:166 cpu/(7738:7738): Cliente conectado (a CPU)
+
+[ERROR] 11:20:09:437 cpu/(7738:7751): El pid despues del recv es: 1
+[ERROR] 11:20:09:437 cpu/(7738:7751): El tam despues del recv es: 123
+[ERROR] 11:20:09:437 cpu/(7738:7751): cant_instrucciones despues del recv es: 2
+[ERROR] 11:20:09:437 cpu/(7738:7751): indice tabla pags despues del recv es: 412
+[WARNING] 11:20:09:437 cpu/(7738:7751): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:20:09:437 cpu/(7738:7751): Entre en EXIT
+[ERROR] 11:20:09:437 cpu/(7738:7751): El tam despues del recv es: 0
+[ERROR] 11:20:09:437 cpu/(7738:7751): Entre en el while de interrupcion
+[WARNING] 11:20:09:437 cpu/(7738:7751): Antes del sleep
+[WARNING] 11:20:14:438 cpu/(7738:7751): El program counter es: 0
+[WARNING] 11:20:14:438 cpu/(7738:7751): Termine NO_OP donde hago el execute
+[TRACE] 11:20:14:438 cpu/(7738:7751): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:20:14:438 cpu/(7738:7751): Entre en el while de interrupcion
+[TRACE] 11:20:14:438 cpu/(7738:7751): ENTRE EN EXIT
+[TRACE] 11:20:14:438 cpu/(7738:7751): Finalizo el proceso
+[TRACE] 11:20:14:438 cpu/(7738:7751): El pc despues de ejecutar una instruccion es: 2
+[INFO] 11:22:24:011 cpu/(8095:8095): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:22:24:011 cpu/(8095:8095): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:22:26:324 cpu/(8095:8095): Cliente conectado (a CPU)
+
+[ERROR] 11:22:29:381 cpu/(8095:8108): El pid despues del recv es: 1
+[ERROR] 11:22:29:382 cpu/(8095:8108): El tam despues del recv es: 123
+[ERROR] 11:22:29:382 cpu/(8095:8108): cant_instrucciones despues del recv es: 2
+[ERROR] 11:22:29:382 cpu/(8095:8108): indice tabla pags despues del recv es: 412
+[WARNING] 11:22:29:382 cpu/(8095:8108): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:22:29:382 cpu/(8095:8108): Entre en EXIT
+[ERROR] 11:22:29:382 cpu/(8095:8108): El tam despues del recv es: 0
+[ERROR] 11:22:29:382 cpu/(8095:8108): Entre en el while de interrupcion
+[WARNING] 11:22:29:382 cpu/(8095:8108): Antes del sleep
+[WARNING] 11:22:34:384 cpu/(8095:8108): El program counter es: 0
+[WARNING] 11:22:34:384 cpu/(8095:8108): Termine NO_OP donde hago el execute
+[TRACE] 11:22:34:384 cpu/(8095:8108): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:22:34:384 cpu/(8095:8108): Entre en el while de interrupcion
+[TRACE] 11:22:34:384 cpu/(8095:8108): ENTRE EN EXIT
+[TRACE] 11:22:34:384 cpu/(8095:8108): Finalizo el proceso
+[TRACE] 11:22:34:384 cpu/(8095:8108): El pc despues de ejecutar una instruccion es: 2
+[TRACE] 11:22:34:384 cpu/(8095:8108): Sali de los recv
+[INFO] 11:24:54:669 cpu/(8307:8307): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:24:54:670 cpu/(8307:8307): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:24:57:882 cpu/(8307:8307): Cliente conectado (a CPU)
+
+[ERROR] 11:25:03:455 cpu/(8307:8319): El pid despues del recv es: 1
+[ERROR] 11:25:03:455 cpu/(8307:8319): El tam despues del recv es: 123
+[ERROR] 11:25:03:456 cpu/(8307:8319): cant_instrucciones despues del recv es: 2
+[ERROR] 11:25:03:456 cpu/(8307:8319): indice tabla pags despues del recv es: 412
+[WARNING] 11:25:03:456 cpu/(8307:8319): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:25:03:456 cpu/(8307:8319): Entre en EXIT
+[ERROR] 11:25:03:456 cpu/(8307:8319): El tam despues del recv es: 0
+[ERROR] 11:25:03:456 cpu/(8307:8319): Entre en el while de interrupcion
+[WARNING] 11:25:03:456 cpu/(8307:8319): Antes del sleep
+[WARNING] 11:25:08:460 cpu/(8307:8319): El program counter es: 0
+[WARNING] 11:25:08:460 cpu/(8307:8319): Termine NO_OP donde hago el execute
+[TRACE] 11:25:08:460 cpu/(8307:8319): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:25:08:460 cpu/(8307:8319): Entre en el while de interrupcion
+[TRACE] 11:25:08:460 cpu/(8307:8319): ENTRE EN EXIT
+[TRACE] 11:25:08:460 cpu/(8307:8319): Finalizo el proceso
+[TRACE] 11:25:08:460 cpu/(8307:8319): El pc despues de ejecutar una instruccion es: 2
+[TRACE] 11:25:08:460 cpu/(8307:8319): Sali de los recv
+[INFO] 11:29:12:551 cpu/(8936:8936): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:29:12:551 cpu/(8936:8936): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:29:18:444 cpu/(8936:8936): Cliente conectado (a CPU)
+
+[INFO] 11:32:27:968 cpu/(9453:9453): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:32:27:968 cpu/(9453:9453): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:32:29:817 cpu/(9453:9453): Cliente conectado (a CPU)
+
+[ERROR] 11:32:33:292 cpu/(9453:9465): El pid despues del recv es: 1
+[ERROR] 11:32:33:292 cpu/(9453:9465): El tam despues del recv es: 123
+[ERROR] 11:32:33:292 cpu/(9453:9465): cant_instrucciones despues del recv es: 2
+[ERROR] 11:32:33:292 cpu/(9453:9465): indice tabla pags despues del recv es: 412
+[WARNING] 11:32:33:292 cpu/(9453:9465): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:32:33:292 cpu/(9453:9465): Entre en EXIT
+[ERROR] 11:32:33:292 cpu/(9453:9465): El tam despues del recv es: 0
+[ERROR] 11:32:33:292 cpu/(9453:9465): Entre en el while de interrupcion
+[WARNING] 11:32:33:292 cpu/(9453:9465): Antes del sleep
+[WARNING] 11:32:38:294 cpu/(9453:9465): El program counter es: 0
+[WARNING] 11:32:38:295 cpu/(9453:9465): Termine NO_OP donde hago el execute
+[TRACE] 11:32:38:295 cpu/(9453:9465): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:32:38:295 cpu/(9453:9465): Entre en el while de interrupcion
+[TRACE] 11:32:38:295 cpu/(9453:9465): ENTRE EN EXIT
+[TRACE] 11:32:38:295 cpu/(9453:9465): Finalizo el proceso
+[TRACE] 11:32:38:295 cpu/(9453:9465): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:32:38:295 cpu/(9453:9465): el fd_cpu antes de send pc es: 0
+[WARNING] 11:32:38:295 cpu/(9453:9465): el fd_kernel antes de send pc es: 4
+[INFO] 11:35:33:777 cpu/(9867:9867): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:35:33:777 cpu/(9867:9867): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:35:33:777 cpu/(9867:9867): Cliente conectado (a CPU)
+
+[INFO] 11:36:03:582 cpu/(9911:9911): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:36:03:582 cpu/(9911:9911): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:36:03:582 cpu/(9911:9911): Cliente conectado (a CPU)
+
+[INFO] 11:36:37:018 cpu/(9958:9958): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:36:37:018 cpu/(9958:9958): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:36:37:018 cpu/(9958:9958): Cliente conectado (a CPU)
+
+[INFO] 11:36:52:594 cpu/(9979:9979): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:36:52:594 cpu/(9979:9979): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:36:52:594 cpu/(9979:9979): Cliente conectado (a CPU)
+
+[INFO] 11:36:58:752 cpu/(9988:9988): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:36:58:753 cpu/(9988:9988): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:36:58:753 cpu/(9988:9988): Cliente conectado (a CPU)
+
+[INFO] 11:37:02:524 cpu/(9996:9996): Escuchando en 127.0.0.1:8001 (CPU)
+
+[ERROR] 11:37:02:524 cpu/(9996:9996): Error al conectar (a CPU)
+
+[INFO] 11:37:14:627 cpu/(10012:10012): Escuchando en 127.0.0.1:8001 (CPU)
+
+[ERROR] 11:37:14:628 cpu/(10012:10012): Error al conectar (a CPU)
+
+[INFO] 11:37:18:803 cpu/(10017:10017): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:37:18:803 cpu/(10017:10017): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:37:18:803 cpu/(10017:10017): Cliente conectado (a CPU)
+
+[INFO] 11:37:19:816 cpu/(10022:10022): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:37:19:816 cpu/(10022:10022): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:37:19:816 cpu/(10022:10022): Cliente conectado (a CPU)
+
+[INFO] 11:37:22:538 cpu/(10029:10029): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:37:22:539 cpu/(10029:10029): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:37:22:539 cpu/(10029:10029): Cliente conectado (a CPU)
+
+[INFO] 11:39:12:308 cpu/(10334:10334): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:39:12:309 cpu/(10334:10334): El socket de kernel en cpu.c es : 4
+[INFO] 11:39:12:309 cpu/(10334:10334): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:39:12:309 cpu/(10334:10334): Cliente conectado (a CPU)
+
+[INFO] 11:40:34:782 cpu/(10574:10574): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:40:34:782 cpu/(10574:10574): El socket de kernel en cpu.c es : 0
+[INFO] 11:40:34:783 cpu/(10574:10574): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:40:41:478 cpu/(10574:10574): Cliente conectado (a CPU)
+
+[ERROR] 11:40:43:903 cpu/(10574:10589): El pid despues del recv es: 1
+[ERROR] 11:40:43:903 cpu/(10574:10589): El tam despues del recv es: 123
+[ERROR] 11:40:43:903 cpu/(10574:10589): cant_instrucciones despues del recv es: 2
+[ERROR] 11:40:43:903 cpu/(10574:10589): indice tabla pags despues del recv es: 412
+[WARNING] 11:40:43:903 cpu/(10574:10589): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:40:43:903 cpu/(10574:10589): Entre en EXIT
+[ERROR] 11:40:43:904 cpu/(10574:10589): El tam despues del recv es: 0
+[ERROR] 11:40:43:904 cpu/(10574:10589): Entre en el while de interrupcion
+[WARNING] 11:40:43:904 cpu/(10574:10589): Antes del sleep
+[WARNING] 11:40:48:905 cpu/(10574:10589): El program counter es: 0
+[WARNING] 11:40:48:905 cpu/(10574:10589): Termine NO_OP donde hago el execute
+[TRACE] 11:40:48:905 cpu/(10574:10589): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:40:48:905 cpu/(10574:10589): Entre en el while de interrupcion
+[TRACE] 11:40:48:905 cpu/(10574:10589): ENTRE EN EXIT
+[TRACE] 11:40:48:905 cpu/(10574:10589): Finalizo el proceso
+[TRACE] 11:40:48:905 cpu/(10574:10589): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:40:48:905 cpu/(10574:10589): el fd_cpu antes de send pc es: 0
+[WARNING] 11:40:48:905 cpu/(10574:10589): el fd_kernel antes de send pc es: 4
+[TRACE] 11:40:48:905 cpu/(10574:10589): Sali de los recv
+[INFO] 11:43:07:149 cpu/(10919:10919): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:43:07:149 cpu/(10919:10919): El socket de kernel en cpu.c es : 0
+[INFO] 11:43:07:150 cpu/(10919:10919): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:43:08:790 cpu/(10919:10919): Cliente conectado (a CPU)
+
+[ERROR] 11:43:11:250 cpu/(10919:10928): El pid despues del recv es: 1
+[ERROR] 11:43:11:250 cpu/(10919:10928): El tam despues del recv es: 123
+[ERROR] 11:43:11:250 cpu/(10919:10928): cant_instrucciones despues del recv es: 2
+[ERROR] 11:43:11:250 cpu/(10919:10928): indice tabla pags despues del recv es: 412
+[WARNING] 11:43:11:250 cpu/(10919:10928): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:43:11:250 cpu/(10919:10928): Entre en EXIT
+[ERROR] 11:43:11:250 cpu/(10919:10928): El tam despues del recv es: 0
+[ERROR] 11:43:11:250 cpu/(10919:10928): Entre en el while de interrupcion
+[WARNING] 11:43:11:250 cpu/(10919:10928): Antes del sleep
+[WARNING] 11:43:16:252 cpu/(10919:10928): El program counter es: 0
+[WARNING] 11:43:16:252 cpu/(10919:10928): Termine NO_OP donde hago el execute
+[TRACE] 11:43:16:252 cpu/(10919:10928): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:43:16:252 cpu/(10919:10928): Entre en el while de interrupcion
+[TRACE] 11:43:16:252 cpu/(10919:10928): ENTRE EN EXIT
+[TRACE] 11:43:16:252 cpu/(10919:10928): Finalizo el proceso
+[TRACE] 11:43:16:252 cpu/(10919:10928): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:43:16:252 cpu/(10919:10928): el fd_cpu antes de send pc es: 0
+[WARNING] 11:43:16:252 cpu/(10919:10928): el fd_kernel antes de send pc es: 4
+[INFO] 11:45:27:505 cpu/(11376:11376): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:45:27:505 cpu/(11376:11376): El socket de kernel en cpu.c es : 0
+[INFO] 11:45:27:505 cpu/(11376:11376): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:45:31:104 cpu/(11376:11376): Cliente conectado (a CPU)
+
+[ERROR] 11:45:37:310 cpu/(11376:11388): El pid despues del recv es: 1
+[ERROR] 11:45:37:311 cpu/(11376:11388): El tam despues del recv es: 123
+[ERROR] 11:45:37:311 cpu/(11376:11388): cant_instrucciones despues del recv es: 2
+[ERROR] 11:45:37:311 cpu/(11376:11388): indice tabla pags despues del recv es: 412
+[WARNING] 11:45:37:311 cpu/(11376:11388): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:45:37:311 cpu/(11376:11388): Entre en EXIT
+[ERROR] 11:45:37:311 cpu/(11376:11388): El tam despues del recv es: 0
+[ERROR] 11:45:37:311 cpu/(11376:11388): Entre en el while de interrupcion
+[WARNING] 11:45:37:311 cpu/(11376:11388): Antes del sleep
+[WARNING] 11:45:42:313 cpu/(11376:11388): El program counter es: 0
+[WARNING] 11:45:42:313 cpu/(11376:11388): Termine NO_OP donde hago el execute
+[TRACE] 11:45:42:313 cpu/(11376:11388): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:45:42:314 cpu/(11376:11388): Entre en el while de interrupcion
+[TRACE] 11:45:42:314 cpu/(11376:11388): ENTRE EN EXIT
+[TRACE] 11:45:42:314 cpu/(11376:11388): Finalizo el proceso
+[TRACE] 11:45:42:314 cpu/(11376:11388): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:45:42:314 cpu/(11376:11388): el fd_cpu antes de send pc es: 0
+[WARNING] 11:45:42:314 cpu/(11376:11388): el fd_kernel antes de send pc es: 4
+[INFO] 11:48:42:819 cpu/(11794:11794): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:48:42:819 cpu/(11794:11794): El socket en cpu.c es : 4
+[INFO] 11:48:42:819 cpu/(11794:11794): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:48:42:819 cpu/(11794:11794): Cliente conectado (a CPU)
+
+[INFO] 11:49:03:444 cpu/(11827:11827): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:49:03:444 cpu/(11827:11827): El socket en cpu.c es : 4
+[ERROR] 11:49:03:444 cpu/(11827:11827): Error al conectar (a CPU)
+
+[INFO] 11:49:08:619 cpu/(11841:11841): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:49:08:619 cpu/(11841:11841): El socket en cpu.c es : 4
+[INFO] 11:49:08:619 cpu/(11841:11841): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:49:08:619 cpu/(11841:11841): Cliente conectado (a CPU)
+
+[INFO] 11:49:09:942 cpu/(11846:11846): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:49:09:942 cpu/(11846:11846): El socket en cpu.c es : 4
+[INFO] 11:49:09:943 cpu/(11846:11846): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:49:09:943 cpu/(11846:11846): Cliente conectado (a CPU)
+
+[INFO] 11:50:40:318 cpu/(12128:12128): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:50:40:318 cpu/(12128:12128): El socket en cpu.c es : 4
+[INFO] 11:50:40:318 cpu/(12128:12128): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:50:44:113 cpu/(12128:12128): Cliente conectado (a CPU)
+
+[ERROR] 11:50:47:602 cpu/(12128:12141): El pid despues del recv es: 1
+[ERROR] 11:50:47:602 cpu/(12128:12141): El tam despues del recv es: 123
+[ERROR] 11:50:47:603 cpu/(12128:12141): cant_instrucciones despues del recv es: 2
+[ERROR] 11:50:47:603 cpu/(12128:12141): indice tabla pags despues del recv es: 412
+[WARNING] 11:50:47:603 cpu/(12128:12141): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:47:603 cpu/(12128:12141): Entre en EXIT
+[ERROR] 11:50:47:603 cpu/(12128:12141): El tam despues del recv es: 0
+[ERROR] 11:50:47:603 cpu/(12128:12141): Entre en el while de interrupcion
+[WARNING] 11:50:47:603 cpu/(12128:12141): Antes del sleep
+[WARNING] 11:50:52:605 cpu/(12128:12141): El program counter es: 0
+[WARNING] 11:50:52:605 cpu/(12128:12141): Termine NO_OP donde hago el execute
+[TRACE] 11:50:52:605 cpu/(12128:12141): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:50:52:605 cpu/(12128:12141): Entre en el while de interrupcion
+[TRACE] 11:50:52:605 cpu/(12128:12141): ENTRE EN EXIT
+[TRACE] 11:50:52:605 cpu/(12128:12141): Finalizo el proceso
+[TRACE] 11:50:52:605 cpu/(12128:12141): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:50:52:605 cpu/(12128:12141): el fd_cpu antes de send pc es: 4
+[WARNING] 11:50:52:605 cpu/(12128:12141): el fd_kernel antes de send pc es: 0
+[TRACE] 11:50:52:605 cpu/(12128:12141): Sali de los recv
+[ERROR] 11:50:59:082 cpu/(12128:12141): Fallo recibiendo pid
+[WARNING] 11:50:59:083 cpu/(12128:12141): El cliente se desconecto de CPU server 
+[INFO] 11:51:25:428 cpu/(12320:12320): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:51:25:429 cpu/(12320:12320): El socket en cpu.c es : 4
+[INFO] 11:51:25:429 cpu/(12320:12320): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:51:28:863 cpu/(12320:12320): Cliente conectado (a CPU)
+
+[ERROR] 11:51:32:436 cpu/(12320:12338): El pid despues del recv es: 1
+[ERROR] 11:51:32:436 cpu/(12320:12338): El tam despues del recv es: 123
+[ERROR] 11:51:32:436 cpu/(12320:12338): cant_instrucciones despues del recv es: 2
+[ERROR] 11:51:32:436 cpu/(12320:12338): indice tabla pags despues del recv es: 412
+[WARNING] 11:51:32:436 cpu/(12320:12338): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:51:32:436 cpu/(12320:12338): Entre en EXIT
+[ERROR] 11:51:32:436 cpu/(12320:12338): El tam despues del recv es: 0
+[ERROR] 11:51:32:436 cpu/(12320:12338): Entre en el while de interrupcion
+[WARNING] 11:51:32:436 cpu/(12320:12338): Antes del sleep
+[WARNING] 11:51:37:437 cpu/(12320:12338): El program counter es: 0
+[WARNING] 11:51:37:437 cpu/(12320:12338): Termine NO_OP donde hago el execute
+[TRACE] 11:51:37:437 cpu/(12320:12338): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:51:37:437 cpu/(12320:12338): Entre en el while de interrupcion
+[TRACE] 11:51:37:437 cpu/(12320:12338): ENTRE EN EXIT
+[TRACE] 11:51:37:437 cpu/(12320:12338): Finalizo el proceso
+[TRACE] 11:51:37:437 cpu/(12320:12338): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:51:37:437 cpu/(12320:12338): el fd_cpu antes de send pc es: 4
+[WARNING] 11:51:37:437 cpu/(12320:12338): el fd_kernel antes de send pc es: 0
+[TRACE] 11:51:37:437 cpu/(12320:12338): Sali de los recv
+[INFO] 11:53:12:194 cpu/(12608:12608): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:53:12:194 cpu/(12608:12608): El socket en cpu.c es : 4
+[INFO] 11:53:12:195 cpu/(12608:12608): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:53:16:158 cpu/(12608:12608): Cliente conectado (a CPU)
+
+[ERROR] 11:53:24:604 cpu/(12608:12620): El pid despues del recv es: 1
+[ERROR] 11:53:24:604 cpu/(12608:12620): El tam despues del recv es: 123
+[ERROR] 11:53:24:604 cpu/(12608:12620): cant_instrucciones despues del recv es: 2
+[ERROR] 11:53:24:605 cpu/(12608:12620): indice tabla pags despues del recv es: 412
+[WARNING] 11:53:24:605 cpu/(12608:12620): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:53:24:605 cpu/(12608:12620): Entre en EXIT
+[ERROR] 11:53:24:605 cpu/(12608:12620): El tam despues del recv es: 0
+[ERROR] 11:53:24:605 cpu/(12608:12620): Entre en el while de interrupcion
+[WARNING] 11:53:24:605 cpu/(12608:12620): Antes del sleep
+[WARNING] 11:53:29:608 cpu/(12608:12620): El program counter es: 0
+[WARNING] 11:53:29:608 cpu/(12608:12620): Termine NO_OP donde hago el execute
+[TRACE] 11:53:29:608 cpu/(12608:12620): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:53:29:608 cpu/(12608:12620): Entre en el while de interrupcion
+[TRACE] 11:53:29:608 cpu/(12608:12620): ENTRE EN EXIT
+[TRACE] 11:53:29:608 cpu/(12608:12620): Finalizo el proceso
+[TRACE] 11:53:29:608 cpu/(12608:12620): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:53:29:608 cpu/(12608:12620): el fd_cpu antes de send pc es: 4
+[WARNING] 11:53:29:608 cpu/(12608:12620): el fd_kernel antes de send pc es: 0
+[TRACE] 11:54:28:528 cpu/(12850:12850): El socket en cpu.c es : 0
+[INFO] 11:54:28:528 cpu/(12850:12850): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:54:28:528 cpu/(12850:12850): Cliente conectado (a CPU)
+
+[TRACE] 11:54:30:611 cpu/(12856:12856): El socket en cpu.c es : 0
+[INFO] 11:54:30:611 cpu/(12856:12856): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:54:30:612 cpu/(12856:12856): Cliente conectado (a CPU)
+
+[TRACE] 11:54:37:235 cpu/(12870:12870): El socket en cpu.c es : 0
+[INFO] 11:54:37:235 cpu/(12870:12870): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:54:37:236 cpu/(12870:12870): Cliente conectado (a CPU)
+
+[TRACE] 11:54:39:933 cpu/(12876:12876): El socket en cpu.c es : 0
+[INFO] 11:54:39:933 cpu/(12876:12876): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:54:39:933 cpu/(12876:12876): Cliente conectado (a CPU)
+
+[TRACE] 11:54:43:156 cpu/(12882:12882): El socket en cpu.c es : 0
+[INFO] 11:54:43:156 cpu/(12882:12882): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:54:43:156 cpu/(12882:12882): Cliente conectado (a CPU)
+
+[TRACE] 11:54:59:195 cpu/(12903:12903): El socket en cpu.c es : 0
+[INFO] 11:54:59:195 cpu/(12903:12903): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:54:59:195 cpu/(12903:12903): Cliente conectado (a CPU)
+
+[TRACE] 11:55:06:227 cpu/(12917:12917): El socket en cpu.c es : 0
+[INFO] 11:55:06:227 cpu/(12917:12917): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:55:06:227 cpu/(12917:12917): Cliente conectado (a CPU)
+
+[INFO] 11:55:30:008 cpu/(13079:13079): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:55:30:008 cpu/(13079:13079): El socket en cpu.c es : 4
+[INFO] 11:55:30:008 cpu/(13079:13079): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:56:33:277 cpu/(13309:13309): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:56:33:278 cpu/(13309:13309): El socket en cpu.c es : 4
+[INFO] 11:56:33:278 cpu/(13309:13309): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 11:56:35:777 cpu/(13309:13309): Cliente conectado (a CPU)
+
+[ERROR] 11:56:37:601 cpu/(13309:13322): El pid despues del recv es: 1
+[ERROR] 11:56:37:601 cpu/(13309:13322): El tam despues del recv es: 123
+[ERROR] 11:56:37:602 cpu/(13309:13322): cant_instrucciones despues del recv es: 2
+[ERROR] 11:56:37:602 cpu/(13309:13322): indice tabla pags despues del recv es: 412
+[WARNING] 11:56:37:602 cpu/(13309:13322): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:56:37:602 cpu/(13309:13322): Entre en EXIT
+[ERROR] 11:56:37:602 cpu/(13309:13322): El tam despues del recv es: 0
+[ERROR] 11:56:37:602 cpu/(13309:13322): Entre en el while de interrupcion
+[WARNING] 11:56:37:602 cpu/(13309:13322): Antes del sleep
+[WARNING] 11:56:42:602 cpu/(13309:13322): El program counter es: 0
+[WARNING] 11:56:42:603 cpu/(13309:13322): Termine NO_OP donde hago el execute
+[TRACE] 11:56:42:603 cpu/(13309:13322): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:56:42:603 cpu/(13309:13322): Entre en el while de interrupcion
+[TRACE] 11:56:42:603 cpu/(13309:13322): ENTRE EN EXIT
+[TRACE] 11:56:42:603 cpu/(13309:13322): Finalizo el proceso
+[TRACE] 11:56:42:603 cpu/(13309:13322): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:56:42:603 cpu/(13309:13322): el fd_cpu antes de send pc es: 4
+[WARNING] 11:56:42:603 cpu/(13309:13322): el fd_kernel antes de send pc es: 0
+[TRACE] 11:56:42:603 cpu/(13309:13322): Sali de los recv
+[INFO] 12:03:07:933 cpu/(14014:14014): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:03:07:933 cpu/(14014:14014): El socket en cpu.c es : 0
+[INFO] 12:03:07:934 cpu/(14014:14014): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:03:10:720 cpu/(14014:14014): Cliente conectado (a CPU)
+
+[ERROR] 12:03:13:316 cpu/(14014:14027): El pid despues del recv es: 1
+[ERROR] 12:03:13:316 cpu/(14014:14027): El tam despues del recv es: 123
+[ERROR] 12:03:13:316 cpu/(14014:14027): cant_instrucciones despues del recv es: 2
+[ERROR] 12:03:13:316 cpu/(14014:14027): indice tabla pags despues del recv es: 412
+[WARNING] 12:03:13:317 cpu/(14014:14027): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:03:13:317 cpu/(14014:14027): Entre en EXIT
+[ERROR] 12:03:13:317 cpu/(14014:14027): El tam despues del recv es: 0
+[ERROR] 12:03:13:317 cpu/(14014:14027): Entre en el while de interrupcion
+[WARNING] 12:03:13:317 cpu/(14014:14027): Antes del sleep
+[WARNING] 12:03:18:320 cpu/(14014:14027): El program counter es: 0
+[WARNING] 12:03:18:320 cpu/(14014:14027): Termine NO_OP donde hago el execute
+[TRACE] 12:03:18:320 cpu/(14014:14027): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:03:18:320 cpu/(14014:14027): Entre en el while de interrupcion
+[TRACE] 12:03:18:321 cpu/(14014:14027): ENTRE EN EXIT
+[TRACE] 12:03:18:321 cpu/(14014:14027): Finalizo el proceso
+[TRACE] 12:03:18:321 cpu/(14014:14027): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:03:18:321 cpu/(14014:14027): el fd_cpu antes de send pc es: 0
+[WARNING] 12:03:18:321 cpu/(14014:14027): el fd_kernel antes de send pc es: 0
+[TRACE] 12:03:18:321 cpu/(14014:14027): Sali de los recv
+[INFO] 12:05:43:105 cpu/(14375:14375): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:05:43:105 cpu/(14375:14375): El socket en cpu.c es : 0
+[INFO] 12:05:43:105 cpu/(14375:14375): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:05:49:670 cpu/(14375:14375): Cliente conectado (a CPU)
+
+[ERROR] 12:05:53:939 cpu/(14375:14391): El pid despues del recv es: 1
+[ERROR] 12:05:53:939 cpu/(14375:14391): El tam despues del recv es: 123
+[ERROR] 12:05:53:939 cpu/(14375:14391): cant_instrucciones despues del recv es: 2
+[ERROR] 12:05:53:939 cpu/(14375:14391): indice tabla pags despues del recv es: 412
+[WARNING] 12:05:53:939 cpu/(14375:14391): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:05:53:939 cpu/(14375:14391): Entre en EXIT
+[ERROR] 12:05:53:939 cpu/(14375:14391): El tam despues del recv es: 0
+[ERROR] 12:05:53:939 cpu/(14375:14391): Entre en el while de interrupcion
+[WARNING] 12:05:53:939 cpu/(14375:14391): Antes del sleep
+[WARNING] 12:05:58:941 cpu/(14375:14391): El program counter es: 0
+[WARNING] 12:05:58:941 cpu/(14375:14391): Termine NO_OP donde hago el execute
+[TRACE] 12:05:58:941 cpu/(14375:14391): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:05:58:941 cpu/(14375:14391): Entre en el while de interrupcion
+[TRACE] 12:05:58:941 cpu/(14375:14391): ENTRE EN EXIT
+[TRACE] 12:05:58:941 cpu/(14375:14391): Finalizo el proceso
+[TRACE] 12:05:58:941 cpu/(14375:14391): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:05:58:941 cpu/(14375:14391): el fd_cpu antes de send pc es: 0
+[WARNING] 12:05:58:941 cpu/(14375:14391): el fd_kernel antes de send pc es: 0
+[TRACE] 12:05:58:941 cpu/(14375:14391): Sali de los recv
+[INFO] 12:10:35:900 cpu/(15377:15377): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:10:35:900 cpu/(15377:15377): El socket en cpu.c es : 4
+[INFO] 12:10:35:900 cpu/(15377:15377): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:10:38:521 cpu/(15377:15377): Cliente conectado (a CPU)
+
+[ERROR] 12:10:41:319 cpu/(15377:15389): El pid despues del recv es: 1
+[ERROR] 12:10:41:319 cpu/(15377:15389): El tam despues del recv es: 123
+[ERROR] 12:10:41:319 cpu/(15377:15389): cant_instrucciones despues del recv es: 2
+[ERROR] 12:10:41:319 cpu/(15377:15389): indice tabla pags despues del recv es: 412
+[WARNING] 12:10:41:319 cpu/(15377:15389): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:41:319 cpu/(15377:15389): Entre en EXIT
+[ERROR] 12:10:41:319 cpu/(15377:15389): El tam despues del recv es: 0
+[ERROR] 12:10:41:319 cpu/(15377:15389): Entre en el while de interrupcion
+[WARNING] 12:10:41:319 cpu/(15377:15389): Antes del sleep
+[WARNING] 12:10:46:322 cpu/(15377:15389): El program counter es: 0
+[WARNING] 12:10:46:322 cpu/(15377:15389): Termine NO_OP donde hago el execute
+[TRACE] 12:10:46:322 cpu/(15377:15389): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:10:46:322 cpu/(15377:15389): Entre en el while de interrupcion
+[TRACE] 12:10:46:322 cpu/(15377:15389): ENTRE EN EXIT
+[TRACE] 12:10:46:322 cpu/(15377:15389): Finalizo el proceso
+[TRACE] 12:10:46:322 cpu/(15377:15389): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:10:46:322 cpu/(15377:15389): el fd_cpu antes de send pc es: 4
+[WARNING] 12:10:46:322 cpu/(15377:15389): el fd_kernel antes de send pc es: 0
+[TRACE] 12:10:46:322 cpu/(15377:15389): Sali de los recv
+[INFO] 12:16:26:171 cpu/(16350:16350): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:16:26:171 cpu/(16350:16350): El socket en cpu.c es : 4
+[TRACE] 12:16:26:171 cpu/(16350:16350): El socket de kernel en cpu.c es : 0
+[INFO] 12:16:26:172 cpu/(16350:16350): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:16:39:204 cpu/(16350:16350): Cliente conectado (a CPU)
+
+[ERROR] 12:16:53:519 cpu/(16350:16375): El pid despues del recv es: 1
+[ERROR] 12:16:53:519 cpu/(16350:16375): El tam despues del recv es: 123
+[ERROR] 12:16:53:519 cpu/(16350:16375): cant_instrucciones despues del recv es: 2
+[ERROR] 12:16:53:519 cpu/(16350:16375): indice tabla pags despues del recv es: 412
+[WARNING] 12:16:53:519 cpu/(16350:16375): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:16:53:520 cpu/(16350:16375): Entre en EXIT
+[ERROR] 12:16:53:520 cpu/(16350:16375): El tam despues del recv es: 0
+[ERROR] 12:16:53:520 cpu/(16350:16375): Entre en el while de interrupcion
+[WARNING] 12:16:53:520 cpu/(16350:16375): Antes del sleep
+[WARNING] 12:16:58:522 cpu/(16350:16375): El program counter es: 0
+[WARNING] 12:16:58:522 cpu/(16350:16375): Termine NO_OP donde hago el execute
+[TRACE] 12:16:58:522 cpu/(16350:16375): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:16:58:522 cpu/(16350:16375): Entre en el while de interrupcion
+[TRACE] 12:16:58:522 cpu/(16350:16375): ENTRE EN EXIT
+[TRACE] 12:16:58:522 cpu/(16350:16375): Finalizo el proceso
+[TRACE] 12:16:58:522 cpu/(16350:16375): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:16:58:522 cpu/(16350:16375): el fd_cpu antes de send pc es: 4
+[WARNING] 12:16:58:522 cpu/(16350:16375): el fd_kernel antes de send pc es: 0
+[TRACE] 12:16:58:522 cpu/(16350:16375): Sali de los recv
+[TRACE] 12:17:49:174 cpu/(16599:16599): El socket en cpu.c es : 0
+[TRACE] 12:17:49:174 cpu/(16599:16599): El socket de kernel en cpu.c es : 0
+[INFO] 12:17:49:174 cpu/(16599:16599): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:17:49:175 cpu/(16599:16599): Cliente conectado (a CPU)
+
+[TRACE] 12:17:56:832 cpu/(16611:16611): El socket en cpu.c es : 0
+[TRACE] 12:17:56:832 cpu/(16611:16611): El socket de kernel en cpu.c es : 0
+[INFO] 12:17:56:833 cpu/(16611:16611): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:17:56:833 cpu/(16611:16611): Cliente conectado (a CPU)
+
+[INFO] 12:18:23:914 cpu/(16650:16650): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:18:23:915 cpu/(16650:16650): El socket en cpu.c es : 4
+[TRACE] 12:18:23:915 cpu/(16650:16650): El socket de kernel en cpu.c es : 0
+[INFO] 12:18:23:915 cpu/(16650:16650): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 12:18:27:870 cpu/(16650:16650): Cliente conectado (a CPU)
+
+[ERROR] 12:18:31:814 cpu/(16650:16663): El pid despues del recv es: 1
+[ERROR] 12:18:31:814 cpu/(16650:16663): El tam despues del recv es: 123
+[ERROR] 12:18:31:814 cpu/(16650:16663): cant_instrucciones despues del recv es: 2
+[ERROR] 12:18:31:814 cpu/(16650:16663): indice tabla pags despues del recv es: 412
+[WARNING] 12:18:31:814 cpu/(16650:16663): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:18:31:814 cpu/(16650:16663): Entre en EXIT
+[ERROR] 12:18:31:814 cpu/(16650:16663): El tam despues del recv es: 0
+[ERROR] 12:18:31:814 cpu/(16650:16663): Entre en el while de interrupcion
+[WARNING] 12:18:31:814 cpu/(16650:16663): Antes del sleep
+[WARNING] 12:18:36:815 cpu/(16650:16663): El program counter es: 0
+[WARNING] 12:18:36:815 cpu/(16650:16663): Termine NO_OP donde hago el execute
+[TRACE] 12:18:36:816 cpu/(16650:16663): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:18:36:816 cpu/(16650:16663): Entre en el while de interrupcion
+[TRACE] 12:18:36:816 cpu/(16650:16663): ENTRE EN EXIT
+[TRACE] 12:18:36:816 cpu/(16650:16663): Finalizo el proceso
+[TRACE] 12:18:36:816 cpu/(16650:16663): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:18:36:816 cpu/(16650:16663): el fd_cpu antes de send pc es: 4
+[WARNING] 12:18:36:816 cpu/(16650:16663): el fd_kernel antes de send pc es: 0
+[INFO] 12:22:35:301 cpu/(17163:17163): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:22:35:301 cpu/(17163:17163): El socket en cpu.c es : 4
+[TRACE] 12:22:35:301 cpu/(17163:17163): El socket de kernel en cpu.c es : 0
+[INFO] 12:22:35:301 cpu/(17163:17163): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:22:35:301 cpu/(17163:17163): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:22:52:046 cpu/(17163:17163): Cliente conectado (a CPU)
+
+[ERROR] 12:23:24:133 cpu/(17163:17193): Fallo recibiendo pid
+[WARNING] 12:23:24:134 cpu/(17163:17193): El cliente se desconecto de CPU server 
+[INFO] 12:25:19:923 cpu/(17646:17646): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:25:19:923 cpu/(17646:17646): El socket en cpu.c es : 4
+[INFO] 12:25:19:924 cpu/(17646:17646): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:25:19:924 cpu/(17646:17646): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:25:24:167 cpu/(17646:17646): Cliente conectado (a CPU)
+
+[TRACE] 12:25:24:167 cpu/(17646:17664): El socket de kernel en cpu.c es : 0
+[ERROR] 12:25:53:927 cpu/(17646:17664): El pid despues del recv es: 1
+[ERROR] 12:25:53:927 cpu/(17646:17664): El tam despues del recv es: 123
+[ERROR] 12:25:53:927 cpu/(17646:17664): cant_instrucciones despues del recv es: 2
+[ERROR] 12:25:53:927 cpu/(17646:17664): indice tabla pags despues del recv es: 412
+[WARNING] 12:25:53:927 cpu/(17646:17664): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:25:53:928 cpu/(17646:17664): Entre en EXIT
+[ERROR] 12:25:53:928 cpu/(17646:17664): El tam despues del recv es: 0
+[ERROR] 12:25:53:928 cpu/(17646:17664): Entre en el while de interrupcion
+[WARNING] 12:25:53:928 cpu/(17646:17664): Antes del sleep
+[WARNING] 12:25:58:930 cpu/(17646:17664): El program counter es: 0
+[WARNING] 12:25:58:930 cpu/(17646:17664): Termine NO_OP donde hago el execute
+[TRACE] 12:25:58:930 cpu/(17646:17664): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:25:58:930 cpu/(17646:17664): Entre en el while de interrupcion
+[TRACE] 12:25:58:930 cpu/(17646:17664): ENTRE EN EXIT
+[TRACE] 12:25:58:930 cpu/(17646:17664): Finalizo el proceso
+[TRACE] 12:25:58:930 cpu/(17646:17664): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:25:58:930 cpu/(17646:17664): el fd_cpu antes de send pc es: 4
+[WARNING] 12:25:58:930 cpu/(17646:17664): el fd_kernel antes de send pc es: 0
+[INFO] 12:28:57:156 cpu/(18095:18095): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:28:57:156 cpu/(18095:18095): El socket en cpu.c es : 4
+[INFO] 12:28:57:156 cpu/(18095:18095): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:28:57:156 cpu/(18095:18095): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:29:09:936 cpu/(18095:18095): Cliente conectado (a CPU)
+
+[TRACE] 12:29:09:937 cpu/(18095:18120): El socket de kernel en cpu.c es : 0
+[ERROR] 12:29:57:747 cpu/(18095:18120): El pid despues del recv es: 1
+[ERROR] 12:29:57:747 cpu/(18095:18120): El tam despues del recv es: 123
+[ERROR] 12:29:57:747 cpu/(18095:18120): cant_instrucciones despues del recv es: 2
+[ERROR] 12:29:57:747 cpu/(18095:18120): indice tabla pags despues del recv es: 412
+[WARNING] 12:29:57:747 cpu/(18095:18120): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:29:57:747 cpu/(18095:18120): Entre en EXIT
+[ERROR] 12:29:57:747 cpu/(18095:18120): El tam despues del recv es: 0
+[ERROR] 12:29:57:748 cpu/(18095:18120): Entre en el while de interrupcion
+[WARNING] 12:29:57:748 cpu/(18095:18120): Antes del sleep
+[WARNING] 12:30:02:748 cpu/(18095:18120): El program counter es: 0
+[WARNING] 12:30:02:748 cpu/(18095:18120): Termine NO_OP donde hago el execute
+[TRACE] 12:30:02:748 cpu/(18095:18120): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:30:02:748 cpu/(18095:18120): Entre en el while de interrupcion
+[TRACE] 12:30:02:748 cpu/(18095:18120): ENTRE EN EXIT
+[TRACE] 12:30:02:748 cpu/(18095:18120): Finalizo el proceso
+[TRACE] 12:30:02:748 cpu/(18095:18120): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:30:02:748 cpu/(18095:18120): el fd_cpu antes de send pc es: 4
+[WARNING] 12:30:02:748 cpu/(18095:18120): el fd_kernel antes de send pc es: 0
+[TRACE] 12:30:20:606 cpu/(18345:18345): El socket en cpu.c es : 0
+[INFO] 12:30:20:606 cpu/(18345:18345): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:30:20:607 cpu/(18345:18345): El fd_memoria despues de grar conexiones es: 4
+[INFO] 12:30:20:607 cpu/(18345:18345): Cliente conectado (a CPU)
+
+[TRACE] 12:30:51:598 cpu/(18394:18394): El socket en cpu.c es : 0
+[INFO] 12:30:51:599 cpu/(18394:18394): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:30:51:599 cpu/(18394:18394): El fd_memoria despues de grar conexiones es: 4
+[INFO] 12:30:51:599 cpu/(18394:18394): Cliente conectado (a CPU)
+
+[TRACE] 12:31:07:030 cpu/(18415:18415): El socket en cpu.c es : 0
+[INFO] 12:31:07:031 cpu/(18415:18415): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:31:07:031 cpu/(18415:18415): El fd_memoria despues de grar conexiones es: 4
+[INFO] 12:31:07:031 cpu/(18415:18415): Cliente conectado (a CPU)
+
+[INFO] 12:31:41:838 cpu/(18470:18470): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:31:41:838 cpu/(18470:18470): El socket en cpu.c es : 4
+[INFO] 12:31:41:838 cpu/(18470:18470): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:31:41:838 cpu/(18470:18470): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:31:44:139 cpu/(18470:18470): Cliente conectado (a CPU)
+
+[TRACE] 12:31:44:139 cpu/(18470:18482): El socket de kernel en cpu.c es : 0
+[ERROR] 12:33:05:490 cpu/(18470:18482): El pid despues del recv es: 1
+[ERROR] 12:33:05:490 cpu/(18470:18482): El tam despues del recv es: 123
+[ERROR] 12:33:05:490 cpu/(18470:18482): cant_instrucciones despues del recv es: 2
+[ERROR] 12:33:05:490 cpu/(18470:18482): indice tabla pags despues del recv es: 412
+[WARNING] 12:33:05:490 cpu/(18470:18482): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:33:05:490 cpu/(18470:18482): Entre en EXIT
+[ERROR] 12:33:05:490 cpu/(18470:18482): El tam despues del recv es: 0
+[ERROR] 12:33:05:491 cpu/(18470:18482): Entre en el while de interrupcion
+[WARNING] 12:33:05:491 cpu/(18470:18482): Antes del sleep
+[WARNING] 12:33:10:492 cpu/(18470:18482): El program counter es: 0
+[WARNING] 12:33:10:492 cpu/(18470:18482): Termine NO_OP donde hago el execute
+[TRACE] 12:33:10:492 cpu/(18470:18482): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:33:10:492 cpu/(18470:18482): Entre en el while de interrupcion
+[TRACE] 12:33:10:492 cpu/(18470:18482): ENTRE EN EXIT
+[TRACE] 12:33:10:492 cpu/(18470:18482): Finalizo el proceso
+[TRACE] 12:33:10:492 cpu/(18470:18482): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:33:10:492 cpu/(18470:18482): el fd_cpu antes de send pc es: 4
+[WARNING] 12:33:10:492 cpu/(18470:18482): el fd_kernel antes de send pc es: 0
+[TRACE] 12:33:53:174 cpu/(18784:18784): El socket en cpu.c es : 0
+[INFO] 12:33:53:175 cpu/(18784:18784): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:33:53:175 cpu/(18784:18784): El fd_memoria despues de grar conexiones es: 4
+[INFO] 12:33:53:175 cpu/(18784:18784): Cliente conectado (a CPU)
+
+[INFO] 12:35:00:366 cpu/(18885:18885): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:35:00:366 cpu/(18885:18885): El socket en cpu.c es : 4
+[INFO] 12:35:00:366 cpu/(18885:18885): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:35:00:366 cpu/(18885:18885): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:35:02:364 cpu/(18885:18885): Cliente conectado (a CPU)
+
+[TRACE] 12:35:02:364 cpu/(18885:18897): El socket de kernel en cpu.c es : 0
+[ERROR] 12:35:05:463 cpu/(18885:18897): El pid despues del recv es: 1
+[ERROR] 12:35:05:463 cpu/(18885:18897): El tam despues del recv es: 123
+[ERROR] 12:35:05:463 cpu/(18885:18897): cant_instrucciones despues del recv es: 2
+[ERROR] 12:35:05:463 cpu/(18885:18897): indice tabla pags despues del recv es: 412
+[WARNING] 12:35:05:463 cpu/(18885:18897): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:35:05:463 cpu/(18885:18897): Entre en EXIT
+[ERROR] 12:35:05:463 cpu/(18885:18897): El tam despues del recv es: 0
+[ERROR] 12:35:05:463 cpu/(18885:18897): Entre en el while de interrupcion
+[WARNING] 12:35:05:464 cpu/(18885:18897): Antes del sleep
+[WARNING] 12:35:10:465 cpu/(18885:18897): El program counter es: 0
+[WARNING] 12:35:10:465 cpu/(18885:18897): Termine NO_OP donde hago el execute
+[TRACE] 12:35:10:465 cpu/(18885:18897): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:35:10:466 cpu/(18885:18897): Entre en el while de interrupcion
+[TRACE] 12:35:10:466 cpu/(18885:18897): ENTRE EN EXIT
+[TRACE] 12:35:10:466 cpu/(18885:18897): Finalizo el proceso
+[TRACE] 12:35:10:466 cpu/(18885:18897): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:35:10:466 cpu/(18885:18897): el fd_cpu antes de send pc es: 4
+[WARNING] 12:35:10:466 cpu/(18885:18897): el fd_kernel antes de send pc es: 0
+[TRACE] 12:35:10:466 cpu/(18885:18897): Sali de los recv
+[ERROR] 12:35:30:597 cpu/(18885:18897): El pid despues del recv es: 2
+[ERROR] 12:35:30:597 cpu/(18885:18897): El tam despues del recv es: 123
+[ERROR] 12:35:30:597 cpu/(18885:18897): cant_instrucciones despues del recv es: 2
+[ERROR] 12:35:30:597 cpu/(18885:18897): indice tabla pags despues del recv es: 412
+[WARNING] 12:35:30:597 cpu/(18885:18897): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:35:30:597 cpu/(18885:18897): Entre en EXIT
+[ERROR] 12:35:30:597 cpu/(18885:18897): El tam despues del recv es: 0
+[ERROR] 12:35:30:597 cpu/(18885:18897): Entre en el while de interrupcion
+[WARNING] 12:35:30:597 cpu/(18885:18897): Antes del sleep
+[WARNING] 12:35:35:602 cpu/(18885:18897): El program counter es: 0
+[WARNING] 12:35:35:602 cpu/(18885:18897): Termine NO_OP donde hago el execute
+[TRACE] 12:35:35:602 cpu/(18885:18897): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:35:35:602 cpu/(18885:18897): Entre en el while de interrupcion
+[TRACE] 12:35:35:602 cpu/(18885:18897): ENTRE EN EXIT
+[TRACE] 12:35:35:602 cpu/(18885:18897): Finalizo el proceso
+[TRACE] 12:35:35:602 cpu/(18885:18897): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:35:35:602 cpu/(18885:18897): el fd_cpu antes de send pc es: 4
+[WARNING] 12:35:35:602 cpu/(18885:18897): el fd_kernel antes de send pc es: 0
+[TRACE] 12:35:35:602 cpu/(18885:18897): Sali de los recv
+[INFO] 12:37:58:516 cpu/(19282:19282): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 12:37:58:516 cpu/(19282:19282): El socket en cpu.c es : 4
+[INFO] 12:37:58:516 cpu/(19282:19282): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:37:58:516 cpu/(19282:19282): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:38:00:833 cpu/(19282:19282): Cliente conectado (a CPU)
+
+[TRACE] 12:38:00:833 cpu/(19282:19295): El socket de kernel en cpu.c es : 0
+[ERROR] 12:38:04:498 cpu/(19282:19295): El pid despues del recv es: 1
+[ERROR] 12:38:04:498 cpu/(19282:19295): El tam despues del recv es: 123
+[ERROR] 12:38:04:498 cpu/(19282:19295): cant_instrucciones despues del recv es: 2
+[ERROR] 12:38:04:498 cpu/(19282:19295): indice tabla pags despues del recv es: 412
+[WARNING] 12:38:04:498 cpu/(19282:19295): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:38:04:498 cpu/(19282:19295): Entre en EXIT
+[ERROR] 12:38:04:498 cpu/(19282:19295): El tam despues del recv es: 0
+[ERROR] 12:38:04:498 cpu/(19282:19295): Entre en el while de interrupcion
+[WARNING] 12:38:04:499 cpu/(19282:19295): Antes del sleep
+[WARNING] 12:38:09:501 cpu/(19282:19295): El program counter es: 0
+[WARNING] 12:38:09:501 cpu/(19282:19295): Termine NO_OP donde hago el execute
+[TRACE] 12:38:09:501 cpu/(19282:19295): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 12:38:09:501 cpu/(19282:19295): Entre en el while de interrupcion
+[TRACE] 12:38:09:501 cpu/(19282:19295): ENTRE EN EXIT
+[TRACE] 12:38:09:501 cpu/(19282:19295): Finalizo el proceso
+[TRACE] 12:38:09:501 cpu/(19282:19295): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 12:38:09:502 cpu/(19282:19295): el fd_cpu antes de send pc es: 4
+[WARNING] 12:38:09:502 cpu/(19282:19295): el fd_kernel antes de send pc es: 7
+[TRACE] 12:38:09:502 cpu/(19282:19295): Sali de los recv

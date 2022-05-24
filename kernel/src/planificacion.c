@@ -291,32 +291,31 @@ void hiloExecAExit(){
 	while(1){
 		log_trace(log_kernel,"Entre en hilo exec a exit");
 
-		   int a;
-				sem_getvalue(&hilo_sincro_cpu_kernel,&a);
 
-				log_warning(log_kernel,"el valor del semaforo es: %d",a);
-		//sem_wait(&contadorExe);
-			//sem_wait(&contadorProcesosEnMemoria);
-			sem_wait(&hilo_sincro_cpu_kernel);
+				sem_wait(&contadorExe);
+				sem_wait(&contadorProcesosEnMemoria);
+			//sem_wait(&hilo_sincro_cpu_kernel);
 
 			log_trace(log_kernel,"Pase los waits en exec a exit");
 
 
 
 			pcb_t* proceso = list_get(listaExe,0);
+			log_warning(log_kernel, "El pc del proceso de la lista exe(antes de modificar): %d",proceso->PC);
+
+			log_warning(log_kernel, "el fd_cpu antes de recv pc es: %d",fd_cpu);
+			log_warning(log_kernel, "el fd_kernel antes de recv pc es: %d",fd_kernel);
+
+			uint32_t pc;
+			if (!recv_PC(fd_cpu, &pc)) {
+				log_error(log_kernel, "Fallo recibiendo pc");
+			}
+			log_error(log_kernel,"El PC despues del recv es: %d",pc);
+
+			proceso->PC = pc;
 
 
-
-		//	uint32_t pc;
-		//	if (!recv_PC(fd_cpu, &pc)) {
-		//		log_error(log_kernel, "Fallo recibiendo pc");
-		//	}
-		//	log_error(log_kernel,"El PC despues del recv es: %d",pc);
-		//
-		//	proceso->PC = pc;
-		//
-		//
-		//	log_trace(log_kernel,"El pc del exit proceso de list_get es: %d",proceso->PC);
+			log_trace(log_kernel,"El pc del exit proceso de list_get es: %d",proceso->PC);
 
 
 			pthread_mutex_lock(&mutexExe);

@@ -14085,3 +14085,1485 @@
 [INFO] 18:25:49:988 kernel/(13739:13759): DISCONNECT!
 [TRACE] 18:25:49:988 kernel/(13739:13759): El socket de cpu despues de grar conexiones es: 7
 [WARNING] 18:25:49:988 kernel/(13739:13759): El cliente se desconecto de KERNEL server
+[INFO] 11:09:31:184 kernel/(6279:6279): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:09:31:184 kernel/(6279:6279): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:09:31:184 kernel/(6279:6279): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:09:31:184 kernel/(6279:6279): El socket : 4
+[INFO] 11:09:31:184 kernel/(6279:6279): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:09:31:184 kernel/(6279:6279): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:09:31:185 kernel/(6279:6279): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:09:31:185 kernel/(6279:6279): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:09:31:185 kernel/(6279:6284): Entre en hilo exec a exit
+[WARNING] 11:09:31:185 kernel/(6279:6284): el valor del semaforo es: 0
+[TRACE] 11:09:31:185 kernel/(6279:6284): Pase los waits en exec a exit
+[INFO] 11:10:25:372 kernel/(6487:6487): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:10:25:372 kernel/(6487:6487): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:10:25:372 kernel/(6487:6487): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:10:25:372 kernel/(6487:6487): El socket : 4
+[INFO] 11:10:25:372 kernel/(6487:6487): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:10:25:373 kernel/(6487:6487): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:10:25:373 kernel/(6487:6487): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:10:25:373 kernel/(6487:6487): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:10:25:373 kernel/(6487:6492): Entre en hilo exec a exit
+[WARNING] 11:10:25:373 kernel/(6487:6492): el valor del semaforo es: 0
+[TRACE] 11:10:25:373 kernel/(6487:6491): Entre en hilo ready exe
+[TRACE] 11:10:25:373 kernel/(6487:6491): Entre en obtener sig de ready
+[ERROR] 11:10:25:373 kernel/(6487:6490): Entre en hilo New Ready
+[TRACE] 11:10:25:373 kernel/(6487:6489): Entre en hilo bloq a suspension
+[TRACE] 11:10:25:373 kernel/(6487:6488): Entre en hilo suspencion a ready
+[TRACE] 11:10:25:374 kernel/(6487:6488): Entre en hilo suspencion a ready
+[INFO] 11:10:32:108 kernel/(6487:6487): Cliente conectado (a KERNEL)
+
+[WARNING] 11:10:32:109 kernel/(6487:6502): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:10:32:109 kernel/(6487:6502): Entre en EXIT
+[ERROR] 11:10:32:110 kernel/(6487:6502): El indice tabla de pagina es: 412
+[INFO] 11:10:32:110 kernel/(6487:6502): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:10:32:110 kernel/(6487:6502): Entre en agregar a NEW 
+[TRACE] 11:10:32:110 kernel/(6487:6489): Entre en hilo bloq a suspension
+[INFO] 11:10:32:110 kernel/(6487:6490): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:10:32:110 kernel/(6487:6490): Entre en agregar a ready
+[INFO] 11:10:32:110 kernel/(6487:6490): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:10:32:110 kernel/(6487:6490): Sali hilo new ready 
+[WARNING] 11:10:32:110 kernel/(6487:6491): Esto en obtenre siguiente fifo
+[ERROR] 11:10:32:110 kernel/(6487:6490): Entre en hilo New Ready
+[TRACE] 11:10:32:110 kernel/(6487:6491): Entre a enviar pcb a cpu
+[ERROR] 11:10:32:110 kernel/(6487:6491): El socket dentro de send instrcciones es : 7
+[WARNING] 11:10:32:110 kernel/(6487:6491): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:10:32:110 kernel/(6487:6491): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:10:32:111 kernel/(6487:6491): Sali de enviar pcb a cpu
+[INFO] 11:10:32:111 kernel/(6487:6491): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:10:32:111 kernel/(6487:6491): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:10:32:111 kernel/(6487:6492): Pase los waits en exec a exit
+[TRACE] 11:10:32:111 kernel/(6487:6489): Entre en hilo bloq a suspension
+[TRACE] 11:10:32:111 kernel/(6487:6491): Entre en hilo ready exe
+[TRACE] 11:10:32:111 kernel/(6487:6491): Entre en obtener sig de ready
+[WARNING] 11:10:32:111 kernel/(6487:6502): pase el agregar a NEW
+[TRACE] 11:10:32:111 kernel/(6487:6502): El PID ES: 1
+[INFO] 11:10:32:111 kernel/(6487:6502): DISCONNECT!
+[TRACE] 11:10:32:111 kernel/(6487:6502): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:10:32:111 kernel/(6487:6502): El cliente se desconecto de KERNEL server
+[ERROR] 11:10:37:116 kernel/(6487:6492): Fallo recibiendo pc
+[ERROR] 11:10:37:117 kernel/(6487:6492): El PC despues del recv es: -1217216496
+[TRACE] 11:10:37:117 kernel/(6487:6492): El pc del exit proceso de list_get es: -1217216496
+[TRACE] 11:10:37:117 kernel/(6487:6492): antes de terminar ejecucion
+[INFO] 11:10:37:117 kernel/(6487:6492): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:10:37:117 kernel/(6487:6492): Entre en hilo exec a exit
+[WARNING] 11:10:37:117 kernel/(6487:6492): el valor del semaforo es: 0
+[INFO] 11:15:00:336 kernel/(7011:7011): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:15:00:337 kernel/(7011:7011): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:15:00:337 kernel/(7011:7011): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:15:00:337 kernel/(7011:7011): El socket : 4
+[INFO] 11:15:00:337 kernel/(7011:7011): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:15:00:337 kernel/(7011:7011): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:15:00:338 kernel/(7011:7011): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:15:00:338 kernel/(7011:7011): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:15:00:338 kernel/(7011:7016): Entre en hilo exec a exit
+[TRACE] 11:15:00:338 kernel/(7011:7015): Entre en hilo ready exe
+[TRACE] 11:15:00:338 kernel/(7011:7015): Entre en obtener sig de ready
+[ERROR] 11:15:00:338 kernel/(7011:7014): Entre en hilo New Ready
+[TRACE] 11:15:00:338 kernel/(7011:7013): Entre en hilo bloq a suspension
+[TRACE] 11:15:00:338 kernel/(7011:7012): Entre en hilo suspencion a ready
+[TRACE] 11:15:00:338 kernel/(7011:7012): Entre en hilo suspencion a ready
+[INFO] 11:15:39:979 kernel/(7011:7011): Cliente conectado (a KERNEL)
+
+[WARNING] 11:15:39:981 kernel/(7011:7075): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:15:39:981 kernel/(7011:7075): Entre en EXIT
+[ERROR] 11:15:39:981 kernel/(7011:7075): El indice tabla de pagina es: 412
+[INFO] 11:15:39:981 kernel/(7011:7075): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:15:39:981 kernel/(7011:7075): Entre en agregar a NEW 
+[TRACE] 11:15:39:981 kernel/(7011:7013): Entre en hilo bloq a suspension
+[INFO] 11:15:39:981 kernel/(7011:7014): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:15:39:981 kernel/(7011:7014): Entre en agregar a ready
+[INFO] 11:15:39:981 kernel/(7011:7014): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:15:39:981 kernel/(7011:7014): Sali hilo new ready 
+[WARNING] 11:15:39:981 kernel/(7011:7015): Esto en obtenre siguiente fifo
+[ERROR] 11:15:39:981 kernel/(7011:7014): Entre en hilo New Ready
+[TRACE] 11:15:39:981 kernel/(7011:7015): Entre a enviar pcb a cpu
+[ERROR] 11:15:39:982 kernel/(7011:7015): El socket dentro de send instrcciones es : 7
+[WARNING] 11:15:39:982 kernel/(7011:7015): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:15:39:982 kernel/(7011:7015): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:15:39:982 kernel/(7011:7015): Sali de enviar pcb a cpu
+[INFO] 11:15:39:982 kernel/(7011:7015): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:15:39:982 kernel/(7011:7015): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:15:39:982 kernel/(7011:7016): Pase los waits en exec a exit
+[TRACE] 11:15:39:982 kernel/(7011:7013): Entre en hilo bloq a suspension
+[TRACE] 11:15:39:982 kernel/(7011:7015): Entre en hilo ready exe
+[TRACE] 11:15:39:982 kernel/(7011:7015): Entre en obtener sig de ready
+[WARNING] 11:15:39:982 kernel/(7011:7075): pase el agregar a NEW
+[TRACE] 11:15:39:983 kernel/(7011:7075): El PID ES: 1
+[INFO] 11:15:39:983 kernel/(7011:7075): DISCONNECT!
+[TRACE] 11:15:39:983 kernel/(7011:7075): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:15:39:983 kernel/(7011:7075): El cliente se desconecto de KERNEL server
+[ERROR] 11:15:44:984 kernel/(7011:7016): Fallo recibiendo pc
+[ERROR] 11:15:44:985 kernel/(7011:7016): El PC despues del recv es: -1217425392
+[TRACE] 11:15:44:985 kernel/(7011:7016): El pc del exit proceso de list_get es: -1217425392
+[TRACE] 11:15:44:985 kernel/(7011:7016): antes de terminar ejecucion
+[INFO] 11:15:44:985 kernel/(7011:7016): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:15:44:985 kernel/(7011:7016): Entre en hilo exec a exit
+[INFO] 11:17:17:684 kernel/(7347:7347): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:17:17:684 kernel/(7347:7347): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:17:17:684 kernel/(7347:7347): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:17:17:684 kernel/(7347:7347): El socket : 4
+[INFO] 11:17:17:685 kernel/(7347:7347): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:17:17:685 kernel/(7347:7347): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:17:17:685 kernel/(7347:7347): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:17:17:685 kernel/(7347:7347): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:17:17:685 kernel/(7347:7352): Entre en hilo exec a exit
+[TRACE] 11:17:17:685 kernel/(7347:7351): Entre en hilo ready exe
+[TRACE] 11:17:17:685 kernel/(7347:7351): Entre en obtener sig de ready
+[ERROR] 11:17:17:685 kernel/(7347:7350): Entre en hilo New Ready
+[TRACE] 11:17:17:686 kernel/(7347:7349): Entre en hilo bloq a suspension
+[TRACE] 11:17:17:686 kernel/(7347:7348): Entre en hilo suspencion a ready
+[TRACE] 11:17:17:686 kernel/(7347:7348): Entre en hilo suspencion a ready
+[INFO] 11:17:20:887 kernel/(7347:7347): Cliente conectado (a KERNEL)
+
+[WARNING] 11:17:20:888 kernel/(7347:7364): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:17:20:888 kernel/(7347:7364): Entre en EXIT
+[ERROR] 11:17:20:889 kernel/(7347:7364): El indice tabla de pagina es: 412
+[INFO] 11:17:20:889 kernel/(7347:7364): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:17:20:889 kernel/(7347:7364): Entre en agregar a NEW 
+[TRACE] 11:17:20:889 kernel/(7347:7349): Entre en hilo bloq a suspension
+[INFO] 11:17:20:889 kernel/(7347:7350): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:17:20:889 kernel/(7347:7350): Entre en agregar a ready
+[INFO] 11:17:20:889 kernel/(7347:7350): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:17:20:889 kernel/(7347:7350): Sali hilo new ready 
+[WARNING] 11:17:20:889 kernel/(7347:7351): Esto en obtenre siguiente fifo
+[ERROR] 11:17:20:889 kernel/(7347:7350): Entre en hilo New Ready
+[TRACE] 11:17:20:889 kernel/(7347:7351): Entre a enviar pcb a cpu
+[ERROR] 11:17:20:889 kernel/(7347:7351): El socket dentro de send instrcciones es : 7
+[WARNING] 11:17:20:889 kernel/(7347:7351): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:17:20:889 kernel/(7347:7351): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:17:20:889 kernel/(7347:7351): Sali de enviar pcb a cpu
+[INFO] 11:17:20:890 kernel/(7347:7351): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:17:20:890 kernel/(7347:7351): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:17:20:890 kernel/(7347:7352): Pase los waits en exec a exit
+[TRACE] 11:17:20:890 kernel/(7347:7349): Entre en hilo bloq a suspension
+[TRACE] 11:17:20:890 kernel/(7347:7351): Entre en hilo ready exe
+[TRACE] 11:17:20:890 kernel/(7347:7351): Entre en obtener sig de ready
+[WARNING] 11:17:20:890 kernel/(7347:7364): pase el agregar a NEW
+[TRACE] 11:17:20:890 kernel/(7347:7364): El PID ES: 1
+[INFO] 11:17:20:890 kernel/(7347:7364): DISCONNECT!
+[TRACE] 11:17:20:890 kernel/(7347:7364): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:17:20:890 kernel/(7347:7364): El cliente se desconecto de KERNEL server
+[ERROR] 11:17:40:538 kernel/(7347:7352): Fallo recibiendo pc
+[ERROR] 11:17:40:538 kernel/(7347:7352): El PC despues del recv es: -1216847856
+[TRACE] 11:17:40:538 kernel/(7347:7352): El pc del exit proceso de list_get es: -1216847856
+[TRACE] 11:17:40:539 kernel/(7347:7352): antes de terminar ejecucion
+[INFO] 11:17:40:539 kernel/(7347:7352): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:17:40:539 kernel/(7347:7352): Entre en hilo exec a exit
+[INFO] 11:20:05:165 kernel/(7744:7744): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:20:05:165 kernel/(7744:7744): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:20:05:165 kernel/(7744:7744): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:20:05:166 kernel/(7744:7744): El socket : 4
+[INFO] 11:20:05:166 kernel/(7744:7744): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:20:05:166 kernel/(7744:7744): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:20:05:166 kernel/(7744:7744): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:20:05:166 kernel/(7744:7744): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:20:05:166 kernel/(7744:7749): Entre en hilo exec a exit
+[TRACE] 11:20:05:166 kernel/(7744:7748): Entre en hilo ready exe
+[TRACE] 11:20:05:167 kernel/(7744:7748): Entre en obtener sig de ready
+[ERROR] 11:20:05:167 kernel/(7744:7747): Entre en hilo New Ready
+[TRACE] 11:20:05:167 kernel/(7744:7746): Entre en hilo bloq a suspension
+[TRACE] 11:20:05:167 kernel/(7744:7745): Entre en hilo suspencion a ready
+[TRACE] 11:20:05:167 kernel/(7744:7745): Entre en hilo suspencion a ready
+[INFO] 11:20:09:434 kernel/(7744:7744): Cliente conectado (a KERNEL)
+
+[WARNING] 11:20:09:436 kernel/(7744:7760): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:20:09:436 kernel/(7744:7760): Entre en EXIT
+[ERROR] 11:20:09:436 kernel/(7744:7760): El indice tabla de pagina es: 412
+[INFO] 11:20:09:436 kernel/(7744:7760): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:20:09:436 kernel/(7744:7760): Entre en agregar a NEW 
+[TRACE] 11:20:09:436 kernel/(7744:7746): Entre en hilo bloq a suspension
+[INFO] 11:20:09:436 kernel/(7744:7747): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:20:09:436 kernel/(7744:7747): Entre en agregar a ready
+[INFO] 11:20:09:436 kernel/(7744:7747): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:20:09:436 kernel/(7744:7747): Sali hilo new ready 
+[WARNING] 11:20:09:436 kernel/(7744:7748): Esto en obtenre siguiente fifo
+[ERROR] 11:20:09:436 kernel/(7744:7747): Entre en hilo New Ready
+[TRACE] 11:20:09:436 kernel/(7744:7748): Entre a enviar pcb a cpu
+[ERROR] 11:20:09:437 kernel/(7744:7748): El socket dentro de send instrcciones es : 7
+[WARNING] 11:20:09:437 kernel/(7744:7748): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:20:09:437 kernel/(7744:7748): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:20:09:437 kernel/(7744:7748): Sali de enviar pcb a cpu
+[INFO] 11:20:09:437 kernel/(7744:7748): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:20:09:437 kernel/(7744:7748): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:20:09:437 kernel/(7744:7749): Pase los waits en exec a exit
+[ERROR] 11:20:09:437 kernel/(7744:7749): Fallo recibiendo pc
+[TRACE] 11:20:09:437 kernel/(7744:7746): Entre en hilo bloq a suspension
+[ERROR] 11:20:09:437 kernel/(7744:7749): El PC despues del recv es: -1216737264
+[TRACE] 11:20:09:437 kernel/(7744:7749): El pc del exit proceso de list_get es: -1216737264
+[TRACE] 11:20:09:437 kernel/(7744:7749): antes de terminar ejecucion
+[INFO] 11:20:09:437 kernel/(7744:7749): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:20:09:437 kernel/(7744:7749): Entre en hilo exec a exit
+[TRACE] 11:20:09:438 kernel/(7744:7748): Entre en hilo ready exe
+[TRACE] 11:20:09:438 kernel/(7744:7748): Entre en obtener sig de ready
+[WARNING] 11:20:09:438 kernel/(7744:7760): pase el agregar a NEW
+[TRACE] 11:20:09:438 kernel/(7744:7760): El PID ES: 1
+[INFO] 11:20:09:438 kernel/(7744:7760): DISCONNECT!
+[TRACE] 11:20:09:438 kernel/(7744:7760): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:20:09:438 kernel/(7744:7760): El cliente se desconecto de KERNEL server
+[INFO] 11:22:26:323 kernel/(8101:8101): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:22:26:323 kernel/(8101:8101): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:22:26:323 kernel/(8101:8101): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:22:26:323 kernel/(8101:8101): El socket : 4
+[INFO] 11:22:26:324 kernel/(8101:8101): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:22:26:324 kernel/(8101:8101): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:22:26:324 kernel/(8101:8101): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:22:26:324 kernel/(8101:8101): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:22:26:324 kernel/(8101:8106): Entre en hilo exec a exit
+[TRACE] 11:22:26:324 kernel/(8101:8105): Entre en hilo ready exe
+[TRACE] 11:22:26:324 kernel/(8101:8105): Entre en obtener sig de ready
+[ERROR] 11:22:26:325 kernel/(8101:8104): Entre en hilo New Ready
+[TRACE] 11:22:26:325 kernel/(8101:8103): Entre en hilo bloq a suspension
+[TRACE] 11:22:26:325 kernel/(8101:8102): Entre en hilo suspencion a ready
+[TRACE] 11:22:26:325 kernel/(8101:8102): Entre en hilo suspencion a ready
+[INFO] 11:22:29:379 kernel/(8101:8101): Cliente conectado (a KERNEL)
+
+[WARNING] 11:22:29:380 kernel/(8101:8114): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:22:29:380 kernel/(8101:8114): Entre en EXIT
+[ERROR] 11:22:29:381 kernel/(8101:8114): El indice tabla de pagina es: 412
+[INFO] 11:22:29:381 kernel/(8101:8114): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:22:29:381 kernel/(8101:8114): Entre en agregar a NEW 
+[TRACE] 11:22:29:381 kernel/(8101:8103): Entre en hilo bloq a suspension
+[INFO] 11:22:29:381 kernel/(8101:8104): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:22:29:381 kernel/(8101:8104): Entre en agregar a ready
+[INFO] 11:22:29:381 kernel/(8101:8104): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:22:29:381 kernel/(8101:8104): Sali hilo new ready 
+[WARNING] 11:22:29:381 kernel/(8101:8105): Esto en obtenre siguiente fifo
+[ERROR] 11:22:29:381 kernel/(8101:8104): Entre en hilo New Ready
+[TRACE] 11:22:29:381 kernel/(8101:8105): Entre a enviar pcb a cpu
+[ERROR] 11:22:29:382 kernel/(8101:8105): El socket dentro de send instrcciones es : 7
+[WARNING] 11:22:29:382 kernel/(8101:8105): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:22:29:382 kernel/(8101:8105): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:22:29:382 kernel/(8101:8105): Sali de enviar pcb a cpu
+[INFO] 11:22:29:382 kernel/(8101:8105): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:22:29:382 kernel/(8101:8105): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:22:29:382 kernel/(8101:8106): Pase los waits en exec a exit
+[ERROR] 11:22:29:382 kernel/(8101:8106): Fallo recibiendo pc
+[TRACE] 11:22:29:382 kernel/(8101:8103): Entre en hilo bloq a suspension
+[ERROR] 11:22:29:382 kernel/(8101:8106): El PC despues del recv es: -1216987120
+[TRACE] 11:22:29:382 kernel/(8101:8106): El pc del exit proceso de list_get es: -1216987120
+[TRACE] 11:22:29:382 kernel/(8101:8106): antes de terminar ejecucion
+[INFO] 11:22:29:382 kernel/(8101:8106): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:22:29:382 kernel/(8101:8106): Entre en hilo exec a exit
+[TRACE] 11:22:29:382 kernel/(8101:8105): Entre en hilo ready exe
+[TRACE] 11:22:29:382 kernel/(8101:8105): Entre en obtener sig de ready
+[WARNING] 11:22:29:383 kernel/(8101:8114): pase el agregar a NEW
+[TRACE] 11:22:29:383 kernel/(8101:8114): El PID ES: 1
+[INFO] 11:22:29:383 kernel/(8101:8114): DISCONNECT!
+[TRACE] 11:22:29:383 kernel/(8101:8114): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:22:29:383 kernel/(8101:8114): El cliente se desconecto de KERNEL server
+[INFO] 11:24:57:881 kernel/(8312:8312): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:24:57:882 kernel/(8312:8312): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:24:57:882 kernel/(8312:8312): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:24:57:882 kernel/(8312:8312): El socket : 4
+[INFO] 11:24:57:882 kernel/(8312:8312): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:24:57:882 kernel/(8312:8312): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:24:57:882 kernel/(8312:8312): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:24:57:883 kernel/(8312:8312): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:24:57:883 kernel/(8312:8317): Entre en hilo exec a exit
+[TRACE] 11:24:57:883 kernel/(8312:8316): Entre en hilo ready exe
+[TRACE] 11:24:57:883 kernel/(8312:8316): Entre en obtener sig de ready
+[ERROR] 11:24:57:883 kernel/(8312:8315): Entre en hilo New Ready
+[TRACE] 11:24:57:883 kernel/(8312:8314): Entre en hilo bloq a suspension
+[TRACE] 11:24:57:883 kernel/(8312:8313): Entre en hilo suspencion a ready
+[TRACE] 11:24:57:883 kernel/(8312:8313): Entre en hilo suspencion a ready
+[INFO] 11:25:03:453 kernel/(8312:8312): Cliente conectado (a KERNEL)
+
+[WARNING] 11:25:03:454 kernel/(8312:8330): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:25:03:454 kernel/(8312:8330): Entre en EXIT
+[ERROR] 11:25:03:455 kernel/(8312:8330): El indice tabla de pagina es: 412
+[INFO] 11:25:03:455 kernel/(8312:8330): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:25:03:455 kernel/(8312:8330): Entre en agregar a NEW 
+[TRACE] 11:25:03:455 kernel/(8312:8314): Entre en hilo bloq a suspension
+[INFO] 11:25:03:455 kernel/(8312:8315): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:25:03:455 kernel/(8312:8315): Entre en agregar a ready
+[INFO] 11:25:03:455 kernel/(8312:8315): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:25:03:455 kernel/(8312:8315): Sali hilo new ready 
+[WARNING] 11:25:03:455 kernel/(8312:8316): Esto en obtenre siguiente fifo
+[ERROR] 11:25:03:455 kernel/(8312:8315): Entre en hilo New Ready
+[TRACE] 11:25:03:455 kernel/(8312:8316): Entre a enviar pcb a cpu
+[ERROR] 11:25:03:456 kernel/(8312:8316): El socket dentro de send instrcciones es : 7
+[WARNING] 11:25:03:456 kernel/(8312:8316): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:25:03:456 kernel/(8312:8316): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:25:03:456 kernel/(8312:8316): Sali de enviar pcb a cpu
+[INFO] 11:25:03:456 kernel/(8312:8316): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:25:03:456 kernel/(8312:8316): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:25:03:456 kernel/(8312:8317): Pase los waits en exec a exit
+[ERROR] 11:25:03:456 kernel/(8312:8317): Fallo recibiendo pc
+[TRACE] 11:25:03:456 kernel/(8312:8314): Entre en hilo bloq a suspension
+[ERROR] 11:25:03:456 kernel/(8312:8317): El PC despues del recv es: -1217081328
+[TRACE] 11:25:03:456 kernel/(8312:8317): El pc del exit proceso de list_get es: -1217081328
+[TRACE] 11:25:03:456 kernel/(8312:8317): antes de terminar ejecucion
+[INFO] 11:25:03:456 kernel/(8312:8317): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:25:03:456 kernel/(8312:8317): Entre en hilo exec a exit
+[TRACE] 11:25:03:456 kernel/(8312:8316): Entre en hilo ready exe
+[TRACE] 11:25:03:456 kernel/(8312:8316): Entre en obtener sig de ready
+[WARNING] 11:25:03:456 kernel/(8312:8330): pase el agregar a NEW
+[TRACE] 11:25:03:456 kernel/(8312:8330): El PID ES: 1
+[INFO] 11:25:03:457 kernel/(8312:8330): DISCONNECT!
+[TRACE] 11:25:03:457 kernel/(8312:8330): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:25:03:457 kernel/(8312:8330): El cliente se desconecto de KERNEL server
+[INFO] 11:29:18:443 kernel/(8951:8951): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:29:18:443 kernel/(8951:8951): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:29:18:443 kernel/(8951:8951): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:29:18:443 kernel/(8951:8951): El socket : 4
+[INFO] 11:29:18:443 kernel/(8951:8951): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:29:18:444 kernel/(8951:8951): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:29:18:444 kernel/(8951:8951): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:29:18:444 kernel/(8951:8951): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:29:18:444 kernel/(8951:8956): Entre en hilo exec a exit
+[TRACE] 11:29:18:444 kernel/(8951:8955): Entre en hilo ready exe
+[TRACE] 11:29:18:444 kernel/(8951:8955): Entre en obtener sig de ready
+[ERROR] 11:29:18:444 kernel/(8951:8954): Entre en hilo New Ready
+[TRACE] 11:29:18:444 kernel/(8951:8953): Entre en hilo bloq a suspension
+[TRACE] 11:29:18:444 kernel/(8951:8952): Entre en hilo suspencion a ready
+[TRACE] 11:29:18:445 kernel/(8951:8952): Entre en hilo suspencion a ready
+[INFO] 11:32:29:816 kernel/(9458:9458): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:32:29:816 kernel/(9458:9458): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:32:29:816 kernel/(9458:9458): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:32:29:817 kernel/(9458:9458): El socket : 4
+[INFO] 11:32:29:817 kernel/(9458:9458): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:32:29:817 kernel/(9458:9458): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:32:29:817 kernel/(9458:9458): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:32:29:817 kernel/(9458:9458): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:32:29:817 kernel/(9458:9463): Entre en hilo exec a exit
+[TRACE] 11:32:29:817 kernel/(9458:9462): Entre en hilo ready exe
+[TRACE] 11:32:29:818 kernel/(9458:9462): Entre en obtener sig de ready
+[ERROR] 11:32:29:818 kernel/(9458:9461): Entre en hilo New Ready
+[TRACE] 11:32:29:818 kernel/(9458:9460): Entre en hilo bloq a suspension
+[TRACE] 11:32:29:818 kernel/(9458:9459): Entre en hilo suspencion a ready
+[TRACE] 11:32:29:818 kernel/(9458:9459): Entre en hilo suspencion a ready
+[INFO] 11:32:33:289 kernel/(9458:9458): Cliente conectado (a KERNEL)
+
+[WARNING] 11:32:33:291 kernel/(9458:9470): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:32:33:291 kernel/(9458:9470): Entre en EXIT
+[ERROR] 11:32:33:291 kernel/(9458:9470): El indice tabla de pagina es: 412
+[INFO] 11:32:33:291 kernel/(9458:9470): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:32:33:291 kernel/(9458:9470): Entre en agregar a NEW 
+[TRACE] 11:32:33:291 kernel/(9458:9460): Entre en hilo bloq a suspension
+[INFO] 11:32:33:291 kernel/(9458:9461): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:32:33:291 kernel/(9458:9461): Entre en agregar a ready
+[INFO] 11:32:33:291 kernel/(9458:9461): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:32:33:291 kernel/(9458:9461): Sali hilo new ready 
+[WARNING] 11:32:33:291 kernel/(9458:9462): Esto en obtenre siguiente fifo
+[ERROR] 11:32:33:291 kernel/(9458:9461): Entre en hilo New Ready
+[TRACE] 11:32:33:292 kernel/(9458:9462): Entre a enviar pcb a cpu
+[ERROR] 11:32:33:292 kernel/(9458:9462): El socket dentro de send instrcciones es : 7
+[WARNING] 11:32:33:292 kernel/(9458:9462): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:32:33:292 kernel/(9458:9462): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:32:33:292 kernel/(9458:9462): Sali de enviar pcb a cpu
+[INFO] 11:32:33:292 kernel/(9458:9462): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:32:33:292 kernel/(9458:9462): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:32:33:292 kernel/(9458:9463): Pase los waits en exec a exit
+[WARNING] 11:32:33:292 kernel/(9458:9463): el fd_cpu antes de recv pc es: 7
+[TRACE] 11:32:33:292 kernel/(9458:9460): Entre en hilo bloq a suspension
+[WARNING] 11:32:33:292 kernel/(9458:9463): el fd_kernel antes de recv pc es: 4
+[TRACE] 11:32:33:292 kernel/(9458:9462): Entre en hilo ready exe
+[TRACE] 11:32:33:293 kernel/(9458:9462): Entre en obtener sig de ready
+[WARNING] 11:32:33:293 kernel/(9458:9470): pase el agregar a NEW
+[TRACE] 11:32:33:293 kernel/(9458:9470): El PID ES: 1
+[INFO] 11:32:33:293 kernel/(9458:9470): DISCONNECT!
+[TRACE] 11:32:33:293 kernel/(9458:9470): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:32:33:293 kernel/(9458:9470): El cliente se desconecto de KERNEL server
+[ERROR] 11:32:38:295 kernel/(9458:9463): Fallo recibiendo pc
+[ERROR] 11:32:38:296 kernel/(9458:9463): El PC despues del recv es: -1216618480
+[TRACE] 11:32:38:296 kernel/(9458:9463): El pc del exit proceso de list_get es: -1216618480
+[TRACE] 11:32:38:296 kernel/(9458:9463): antes de terminar ejecucion
+[INFO] 11:32:38:296 kernel/(9458:9463): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:32:38:296 kernel/(9458:9463): Entre en hilo exec a exit
+[INFO] 11:37:25:645 kernel/(10034:10034): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:37:25:645 kernel/(10034:10034): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:37:25:645 kernel/(10034:10034): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:37:25:645 kernel/(10034:10034): El socket : 4
+[INFO] 11:37:25:645 kernel/(10034:10034): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:37:25:645 kernel/(10034:10034): El fd_memoria despues de grar conexiones es: 5
+[ERROR] 11:37:25:646 kernel/(10034:10034): Error al conectar (a CPU)
+
+[INFO] 11:40:41:477 kernel/(10582:10582): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:40:41:477 kernel/(10582:10582): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:40:41:478 kernel/(10582:10582): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:40:41:478 kernel/(10582:10582): El socket : 4
+[INFO] 11:40:41:478 kernel/(10582:10582): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:40:41:478 kernel/(10582:10582): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:40:41:478 kernel/(10582:10582): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:40:41:479 kernel/(10582:10582): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:40:41:479 kernel/(10582:10587): Entre en hilo exec a exit
+[TRACE] 11:40:41:479 kernel/(10582:10586): Entre en hilo ready exe
+[TRACE] 11:40:41:479 kernel/(10582:10586): Entre en obtener sig de ready
+[ERROR] 11:40:41:479 kernel/(10582:10585): Entre en hilo New Ready
+[TRACE] 11:40:41:479 kernel/(10582:10584): Entre en hilo bloq a suspension
+[TRACE] 11:40:41:479 kernel/(10582:10583): Entre en hilo suspencion a ready
+[TRACE] 11:40:41:479 kernel/(10582:10583): Entre en hilo suspencion a ready
+[INFO] 11:40:43:901 kernel/(10582:10582): Cliente conectado (a KERNEL)
+
+[WARNING] 11:40:43:902 kernel/(10582:10594): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:40:43:902 kernel/(10582:10594): Entre en EXIT
+[ERROR] 11:40:43:902 kernel/(10582:10594): El indice tabla de pagina es: 412
+[INFO] 11:40:43:902 kernel/(10582:10594): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:40:43:902 kernel/(10582:10594): Entre en agregar a NEW 
+[TRACE] 11:40:43:903 kernel/(10582:10584): Entre en hilo bloq a suspension
+[INFO] 11:40:43:903 kernel/(10582:10585): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:40:43:903 kernel/(10582:10585): Entre en agregar a ready
+[INFO] 11:40:43:903 kernel/(10582:10585): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:40:43:903 kernel/(10582:10585): Sali hilo new ready 
+[ERROR] 11:40:43:903 kernel/(10582:10585): Entre en hilo New Ready
+[WARNING] 11:40:43:903 kernel/(10582:10586): Esto en obtenre siguiente fifo
+[TRACE] 11:40:43:903 kernel/(10582:10586): Entre a enviar pcb a cpu
+[ERROR] 11:40:43:903 kernel/(10582:10586): El socket dentro de send instrcciones es : 7
+[WARNING] 11:40:43:903 kernel/(10582:10586): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:40:43:903 kernel/(10582:10586): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:40:43:904 kernel/(10582:10586): Sali de enviar pcb a cpu
+[INFO] 11:40:43:904 kernel/(10582:10586): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:40:43:904 kernel/(10582:10586): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:40:43:904 kernel/(10582:10587): Pase los waits en exec a exit
+[WARNING] 11:40:43:904 kernel/(10582:10587): el fd_cpu antes de recv pc es: 7
+[TRACE] 11:40:43:904 kernel/(10582:10584): Entre en hilo bloq a suspension
+[WARNING] 11:40:43:904 kernel/(10582:10587): el fd_kernel antes de recv pc es: 4
+[TRACE] 11:40:43:904 kernel/(10582:10586): Entre en hilo ready exe
+[TRACE] 11:40:43:904 kernel/(10582:10586): Entre en obtener sig de ready
+[WARNING] 11:40:43:904 kernel/(10582:10594): pase el agregar a NEW
+[TRACE] 11:40:43:904 kernel/(10582:10594): El PID ES: 1
+[INFO] 11:40:43:904 kernel/(10582:10594): DISCONNECT!
+[TRACE] 11:40:43:904 kernel/(10582:10594): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:40:43:904 kernel/(10582:10594): El cliente se desconecto de KERNEL server
+[ERROR] 11:41:06:094 kernel/(10582:10587): Fallo recibiendo pc
+[ERROR] 11:41:06:094 kernel/(10582:10587): El PC despues del recv es: -1216892912
+[TRACE] 11:41:06:094 kernel/(10582:10587): El pc del exit proceso de list_get es: -1216892912
+[TRACE] 11:41:06:095 kernel/(10582:10587): antes de terminar ejecucion
+[INFO] 11:41:06:095 kernel/(10582:10587): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:41:06:095 kernel/(10582:10587): Entre en hilo exec a exit
+[INFO] 11:43:08:789 kernel/(10921:10921): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:43:08:790 kernel/(10921:10921): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:43:08:790 kernel/(10921:10921): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:43:08:790 kernel/(10921:10921): El socket : 4
+[INFO] 11:43:08:790 kernel/(10921:10921): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:43:08:790 kernel/(10921:10921): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:43:08:790 kernel/(10921:10921): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:43:08:791 kernel/(10921:10921): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:43:08:791 kernel/(10921:10926): Entre en hilo exec a exit
+[TRACE] 11:43:08:791 kernel/(10921:10925): Entre en hilo ready exe
+[TRACE] 11:43:08:791 kernel/(10921:10925): Entre en obtener sig de ready
+[ERROR] 11:43:08:791 kernel/(10921:10924): Entre en hilo New Ready
+[TRACE] 11:43:08:791 kernel/(10921:10923): Entre en hilo bloq a suspension
+[TRACE] 11:43:08:791 kernel/(10921:10922): Entre en hilo suspencion a ready
+[TRACE] 11:43:08:791 kernel/(10921:10922): Entre en hilo suspencion a ready
+[INFO] 11:43:11:247 kernel/(10921:10921): Cliente conectado (a KERNEL)
+
+[WARNING] 11:43:11:249 kernel/(10921:10933): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:43:11:249 kernel/(10921:10933): Entre en EXIT
+[ERROR] 11:43:11:249 kernel/(10921:10933): El indice tabla de pagina es: 412
+[INFO] 11:43:11:249 kernel/(10921:10933): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:43:11:249 kernel/(10921:10933): Entre en agregar a NEW 
+[TRACE] 11:43:11:249 kernel/(10921:10923): Entre en hilo bloq a suspension
+[INFO] 11:43:11:250 kernel/(10921:10924): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:43:11:250 kernel/(10921:10924): Entre en agregar a ready
+[INFO] 11:43:11:250 kernel/(10921:10924): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:43:11:250 kernel/(10921:10924): Sali hilo new ready 
+[WARNING] 11:43:11:250 kernel/(10921:10925): Esto en obtenre siguiente fifo
+[ERROR] 11:43:11:250 kernel/(10921:10924): Entre en hilo New Ready
+[TRACE] 11:43:11:250 kernel/(10921:10925): Entre a enviar pcb a cpu
+[ERROR] 11:43:11:250 kernel/(10921:10925): El socket dentro de send instrcciones es : 7
+[WARNING] 11:43:11:250 kernel/(10921:10925): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:43:11:250 kernel/(10921:10925): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:43:11:250 kernel/(10921:10925): Sali de enviar pcb a cpu
+[INFO] 11:43:11:250 kernel/(10921:10925): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:43:11:250 kernel/(10921:10925): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:43:11:250 kernel/(10921:10926): Pase los waits en exec a exit
+[WARNING] 11:43:11:250 kernel/(10921:10926): el fd_cpu antes de recv pc es: 7
+[WARNING] 11:43:11:251 kernel/(10921:10926): el fd_kernel antes de recv pc es: 4
+[TRACE] 11:43:11:251 kernel/(10921:10923): Entre en hilo bloq a suspension
+[ERROR] 11:43:11:251 kernel/(10921:10926): Fallo recibiendo pc
+[ERROR] 11:43:11:251 kernel/(10921:10926): El PC despues del recv es: -1216667632
+[TRACE] 11:43:11:251 kernel/(10921:10926): El pc del exit proceso de list_get es: -1216667632
+[TRACE] 11:43:11:251 kernel/(10921:10926): antes de terminar ejecucion
+[INFO] 11:43:11:251 kernel/(10921:10926): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:43:11:251 kernel/(10921:10926): Entre en hilo exec a exit
+[TRACE] 11:43:11:251 kernel/(10921:10925): Entre en hilo ready exe
+[TRACE] 11:43:11:251 kernel/(10921:10925): Entre en obtener sig de ready
+[WARNING] 11:43:11:251 kernel/(10921:10933): pase el agregar a NEW
+[TRACE] 11:43:11:251 kernel/(10921:10933): El PID ES: 1
+[INFO] 11:43:11:251 kernel/(10921:10933): DISCONNECT!
+[TRACE] 11:43:11:251 kernel/(10921:10933): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:43:11:251 kernel/(10921:10933): El cliente se desconecto de KERNEL server
+[INFO] 11:45:31:103 kernel/(11381:11381): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:45:31:103 kernel/(11381:11381): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:45:31:103 kernel/(11381:11381): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:45:31:103 kernel/(11381:11381): El socket : 4
+[INFO] 11:45:31:104 kernel/(11381:11381): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:45:31:104 kernel/(11381:11381): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:45:31:104 kernel/(11381:11381): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:45:31:104 kernel/(11381:11381): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:45:31:104 kernel/(11381:11386): Entre en hilo exec a exit
+[TRACE] 11:45:31:104 kernel/(11381:11385): Entre en hilo ready exe
+[TRACE] 11:45:31:104 kernel/(11381:11385): Entre en obtener sig de ready
+[ERROR] 11:45:31:105 kernel/(11381:11384): Entre en hilo New Ready
+[TRACE] 11:45:31:105 kernel/(11381:11383): Entre en hilo bloq a suspension
+[TRACE] 11:45:31:105 kernel/(11381:11382): Entre en hilo suspencion a ready
+[TRACE] 11:45:31:105 kernel/(11381:11382): Entre en hilo suspencion a ready
+[INFO] 11:45:37:308 kernel/(11381:11381): Cliente conectado (a KERNEL)
+
+[WARNING] 11:45:37:309 kernel/(11381:11399): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:45:37:310 kernel/(11381:11399): Entre en EXIT
+[ERROR] 11:45:37:310 kernel/(11381:11399): El indice tabla de pagina es: 412
+[INFO] 11:45:37:310 kernel/(11381:11399): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:45:37:310 kernel/(11381:11399): Entre en agregar a NEW 
+[TRACE] 11:45:37:310 kernel/(11381:11383): Entre en hilo bloq a suspension
+[INFO] 11:45:37:310 kernel/(11381:11384): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:45:37:310 kernel/(11381:11384): Entre en agregar a ready
+[INFO] 11:45:37:310 kernel/(11381:11384): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:45:37:310 kernel/(11381:11384): Sali hilo new ready 
+[WARNING] 11:45:37:310 kernel/(11381:11385): Esto en obtenre siguiente fifo
+[ERROR] 11:45:37:310 kernel/(11381:11384): Entre en hilo New Ready
+[TRACE] 11:45:37:310 kernel/(11381:11385): Entre a enviar pcb a cpu
+[ERROR] 11:45:37:311 kernel/(11381:11385): El socket dentro de send instrcciones es : 7
+[WARNING] 11:45:37:311 kernel/(11381:11385): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:45:37:311 kernel/(11381:11385): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:45:37:311 kernel/(11381:11385): Sali de enviar pcb a cpu
+[INFO] 11:45:37:311 kernel/(11381:11385): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:45:37:311 kernel/(11381:11385): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:45:37:311 kernel/(11381:11386): Pase los waits en exec a exit
+[WARNING] 11:45:37:311 kernel/(11381:11386): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 11:45:37:311 kernel/(11381:11383): Entre en hilo bloq a suspension
+[WARNING] 11:45:37:311 kernel/(11381:11386): el fd_cpu antes de recv pc es: 7
+[WARNING] 11:45:37:311 kernel/(11381:11386): el fd_kernel antes de recv pc es: 4
+[ERROR] 11:45:37:311 kernel/(11381:11386): Fallo recibiendo pc
+[ERROR] 11:45:37:311 kernel/(11381:11386): El PC despues del recv es: -1217392624
+[TRACE] 11:45:37:311 kernel/(11381:11386): El pc del exit proceso de list_get es: -1217392624
+[TRACE] 11:45:37:311 kernel/(11381:11386): antes de terminar ejecucion
+[INFO] 11:45:37:311 kernel/(11381:11386): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:45:37:311 kernel/(11381:11386): Entre en hilo exec a exit
+[TRACE] 11:45:37:311 kernel/(11381:11385): Entre en hilo ready exe
+[TRACE] 11:45:37:311 kernel/(11381:11385): Entre en obtener sig de ready
+[WARNING] 11:45:37:311 kernel/(11381:11399): pase el agregar a NEW
+[TRACE] 11:45:37:312 kernel/(11381:11399): El PID ES: 1
+[INFO] 11:45:37:312 kernel/(11381:11399): DISCONNECT!
+[TRACE] 11:45:37:312 kernel/(11381:11399): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:45:37:312 kernel/(11381:11399): El cliente se desconecto de KERNEL server
+[INFO] 11:48:54:941 kernel/(11811:11811): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:48:54:941 kernel/(11811:11811): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:48:54:941 kernel/(11811:11811): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:48:54:941 kernel/(11811:11811): El socket : 4
+[INFO] 11:48:54:941 kernel/(11811:11811): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:48:54:941 kernel/(11811:11811): El fd_memoria despues de grar conexiones es: 5
+[ERROR] 11:48:54:941 kernel/(11811:11811): Error al conectar (a CPU)
+
+[INFO] 11:49:05:318 kernel/(11831:11831): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:49:05:318 kernel/(11831:11831): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:49:05:318 kernel/(11831:11831): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:49:05:318 kernel/(11831:11831): El socket : 4
+[ERROR] 11:49:05:318 kernel/(11831:11831): Error al conectar (a KERNEL)
+
+[INFO] 11:49:11:503 kernel/(11848:11848): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:49:11:503 kernel/(11848:11848): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:49:11:504 kernel/(11848:11848): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:49:11:504 kernel/(11848:11848): El socket : 4
+[INFO] 11:49:11:504 kernel/(11848:11848): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:49:11:504 kernel/(11848:11848): El fd_memoria despues de grar conexiones es: 5
+[ERROR] 11:49:11:504 kernel/(11848:11848): Error al conectar (a CPU)
+
+[INFO] 11:50:44:112 kernel/(12134:12134): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:50:44:112 kernel/(12134:12134): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:50:44:112 kernel/(12134:12134): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:50:44:112 kernel/(12134:12134): El socket : 4
+[INFO] 11:50:44:113 kernel/(12134:12134): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:50:44:113 kernel/(12134:12134): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:50:44:113 kernel/(12134:12134): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:50:44:113 kernel/(12134:12134): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:50:44:113 kernel/(12134:12139): Entre en hilo exec a exit
+[TRACE] 11:50:44:113 kernel/(12134:12138): Entre en hilo ready exe
+[TRACE] 11:50:44:113 kernel/(12134:12138): Entre en obtener sig de ready
+[ERROR] 11:50:44:113 kernel/(12134:12137): Entre en hilo New Ready
+[TRACE] 11:50:44:114 kernel/(12134:12136): Entre en hilo bloq a suspension
+[TRACE] 11:50:44:114 kernel/(12134:12135): Entre en hilo suspencion a ready
+[TRACE] 11:50:44:114 kernel/(12134:12135): Entre en hilo suspencion a ready
+[INFO] 11:50:47:600 kernel/(12134:12134): Cliente conectado (a KERNEL)
+
+[WARNING] 11:50:47:601 kernel/(12134:12150): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:50:47:602 kernel/(12134:12150): Entre en EXIT
+[ERROR] 11:50:47:602 kernel/(12134:12150): El indice tabla de pagina es: 412
+[INFO] 11:50:47:602 kernel/(12134:12150): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:50:47:602 kernel/(12134:12150): Entre en agregar a NEW 
+[TRACE] 11:50:47:602 kernel/(12134:12136): Entre en hilo bloq a suspension
+[INFO] 11:50:47:602 kernel/(12134:12137): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:50:47:602 kernel/(12134:12137): Entre en agregar a ready
+[INFO] 11:50:47:602 kernel/(12134:12137): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:50:47:602 kernel/(12134:12137): Sali hilo new ready 
+[WARNING] 11:50:47:602 kernel/(12134:12138): Esto en obtenre siguiente fifo
+[ERROR] 11:50:47:602 kernel/(12134:12137): Entre en hilo New Ready
+[TRACE] 11:50:47:602 kernel/(12134:12138): Entre a enviar pcb a cpu
+[ERROR] 11:50:47:603 kernel/(12134:12138): El socket dentro de send instrcciones es : 7
+[WARNING] 11:50:47:603 kernel/(12134:12138): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:50:47:603 kernel/(12134:12138): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:50:47:603 kernel/(12134:12138): Sali de enviar pcb a cpu
+[INFO] 11:50:47:603 kernel/(12134:12138): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:50:47:603 kernel/(12134:12138): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:50:47:603 kernel/(12134:12139): Pase los waits en exec a exit
+[WARNING] 11:50:47:603 kernel/(12134:12139): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 11:50:47:603 kernel/(12134:12136): Entre en hilo bloq a suspension
+[WARNING] 11:50:47:603 kernel/(12134:12139): el fd_cpu antes de recv pc es: 7
+[WARNING] 11:50:47:603 kernel/(12134:12139): el fd_kernel antes de recv pc es: 4
+[ERROR] 11:50:47:603 kernel/(12134:12139): Fallo recibiendo pc
+[ERROR] 11:50:47:603 kernel/(12134:12139): El PC despues del recv es: -1217454064
+[TRACE] 11:50:47:603 kernel/(12134:12139): El pc del exit proceso de list_get es: -1217454064
+[TRACE] 11:50:47:603 kernel/(12134:12139): antes de terminar ejecucion
+[INFO] 11:50:47:603 kernel/(12134:12139): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:50:47:603 kernel/(12134:12139): Entre en hilo exec a exit
+[TRACE] 11:50:47:603 kernel/(12134:12138): Entre en hilo ready exe
+[TRACE] 11:50:47:603 kernel/(12134:12138): Entre en obtener sig de ready
+[WARNING] 11:50:47:603 kernel/(12134:12150): pase el agregar a NEW
+[TRACE] 11:50:47:604 kernel/(12134:12150): El PID ES: 1
+[INFO] 11:50:47:604 kernel/(12134:12150): DISCONNECT!
+[TRACE] 11:50:47:604 kernel/(12134:12150): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:50:47:604 kernel/(12134:12150): El cliente se desconecto de KERNEL server
+[INFO] 11:51:28:862 kernel/(12331:12331): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:51:28:862 kernel/(12331:12331): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:51:28:863 kernel/(12331:12331): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:51:28:863 kernel/(12331:12331): El socket : 4
+[INFO] 11:51:28:863 kernel/(12331:12331): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:51:28:863 kernel/(12331:12331): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:51:28:863 kernel/(12331:12331): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:51:28:863 kernel/(12331:12331): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:51:28:864 kernel/(12331:12336): Entre en hilo exec a exit
+[TRACE] 11:51:28:864 kernel/(12331:12335): Entre en hilo ready exe
+[TRACE] 11:51:28:864 kernel/(12331:12335): Entre en obtener sig de ready
+[ERROR] 11:51:28:864 kernel/(12331:12334): Entre en hilo New Ready
+[TRACE] 11:51:28:864 kernel/(12331:12333): Entre en hilo bloq a suspension
+[TRACE] 11:51:28:864 kernel/(12331:12332): Entre en hilo suspencion a ready
+[TRACE] 11:51:28:864 kernel/(12331:12332): Entre en hilo suspencion a ready
+[INFO] 11:51:32:433 kernel/(12331:12331): Cliente conectado (a KERNEL)
+
+[WARNING] 11:51:32:435 kernel/(12331:12347): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:51:32:435 kernel/(12331:12347): Entre en EXIT
+[ERROR] 11:51:32:435 kernel/(12331:12347): El indice tabla de pagina es: 412
+[INFO] 11:51:32:435 kernel/(12331:12347): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:51:32:435 kernel/(12331:12347): Entre en agregar a NEW 
+[TRACE] 11:51:32:435 kernel/(12331:12333): Entre en hilo bloq a suspension
+[INFO] 11:51:32:435 kernel/(12331:12334): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:51:32:436 kernel/(12331:12334): Entre en agregar a ready
+[INFO] 11:51:32:436 kernel/(12331:12334): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:51:32:436 kernel/(12331:12334): Sali hilo new ready 
+[WARNING] 11:51:32:436 kernel/(12331:12335): Esto en obtenre siguiente fifo
+[ERROR] 11:51:32:436 kernel/(12331:12334): Entre en hilo New Ready
+[TRACE] 11:51:32:436 kernel/(12331:12335): Entre a enviar pcb a cpu
+[ERROR] 11:51:32:436 kernel/(12331:12335): El socket dentro de send instrcciones es : 7
+[WARNING] 11:51:32:436 kernel/(12331:12335): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:51:32:436 kernel/(12331:12335): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:51:32:436 kernel/(12331:12335): Sali de enviar pcb a cpu
+[INFO] 11:51:32:436 kernel/(12331:12335): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:51:32:436 kernel/(12331:12335): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:51:32:436 kernel/(12331:12336): Pase los waits en exec a exit
+[WARNING] 11:51:32:436 kernel/(12331:12336): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 11:51:32:436 kernel/(12331:12333): Entre en hilo bloq a suspension
+[WARNING] 11:51:32:436 kernel/(12331:12336): el fd_cpu antes de recv pc es: 7
+[WARNING] 11:51:32:437 kernel/(12331:12336): el fd_kernel antes de recv pc es: 4
+[TRACE] 11:51:32:437 kernel/(12331:12335): Entre en hilo ready exe
+[TRACE] 11:51:32:437 kernel/(12331:12335): Entre en obtener sig de ready
+[WARNING] 11:51:32:437 kernel/(12331:12347): pase el agregar a NEW
+[TRACE] 11:51:32:437 kernel/(12331:12347): El PID ES: 1
+[INFO] 11:51:32:437 kernel/(12331:12347): DISCONNECT!
+[TRACE] 11:51:32:437 kernel/(12331:12347): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:51:32:437 kernel/(12331:12347): El cliente se desconecto de KERNEL server
+[ERROR] 11:52:06:185 kernel/(12331:12336): Fallo recibiendo pc
+[ERROR] 11:52:06:185 kernel/(12331:12336): El PC despues del recv es: -1216962544
+[TRACE] 11:52:06:185 kernel/(12331:12336): El pc del exit proceso de list_get es: -1216962544
+[TRACE] 11:52:06:185 kernel/(12331:12336): antes de terminar ejecucion
+[INFO] 11:52:06:185 kernel/(12331:12336): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:52:06:185 kernel/(12331:12336): Entre en hilo exec a exit
+[INFO] 11:53:16:157 kernel/(12613:12613): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:53:16:157 kernel/(12613:12613): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:53:16:157 kernel/(12613:12613): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:53:16:157 kernel/(12613:12613): El socket : 4
+[INFO] 11:53:16:157 kernel/(12613:12613): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:53:16:158 kernel/(12613:12613): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:53:16:158 kernel/(12613:12613): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:53:16:158 kernel/(12613:12613): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:53:16:158 kernel/(12613:12618): Entre en hilo exec a exit
+[TRACE] 11:53:16:158 kernel/(12613:12617): Entre en hilo ready exe
+[TRACE] 11:53:16:158 kernel/(12613:12617): Entre en obtener sig de ready
+[ERROR] 11:53:16:158 kernel/(12613:12616): Entre en hilo New Ready
+[TRACE] 11:53:16:158 kernel/(12613:12615): Entre en hilo bloq a suspension
+[TRACE] 11:53:16:158 kernel/(12613:12614): Entre en hilo suspencion a ready
+[TRACE] 11:53:16:159 kernel/(12613:12614): Entre en hilo suspencion a ready
+[INFO] 11:53:24:602 kernel/(12613:12613): Cliente conectado (a KERNEL)
+
+[WARNING] 11:53:24:604 kernel/(12613:12636): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:53:24:604 kernel/(12613:12636): Entre en EXIT
+[ERROR] 11:53:24:604 kernel/(12613:12636): El indice tabla de pagina es: 412
+[INFO] 11:53:24:604 kernel/(12613:12636): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:53:24:604 kernel/(12613:12636): Entre en agregar a NEW 
+[TRACE] 11:53:24:604 kernel/(12613:12615): Entre en hilo bloq a suspension
+[INFO] 11:53:24:604 kernel/(12613:12616): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:53:24:604 kernel/(12613:12616): Entre en agregar a ready
+[INFO] 11:53:24:604 kernel/(12613:12616): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:53:24:604 kernel/(12613:12616): Sali hilo new ready 
+[WARNING] 11:53:24:604 kernel/(12613:12617): Esto en obtenre siguiente fifo
+[ERROR] 11:53:24:604 kernel/(12613:12616): Entre en hilo New Ready
+[TRACE] 11:53:24:604 kernel/(12613:12617): Entre a enviar pcb a cpu
+[ERROR] 11:53:24:605 kernel/(12613:12617): El socket dentro de send instrcciones es : 7
+[WARNING] 11:53:24:605 kernel/(12613:12617): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:53:24:605 kernel/(12613:12617): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:53:24:605 kernel/(12613:12617): Sali de enviar pcb a cpu
+[INFO] 11:53:24:605 kernel/(12613:12617): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:53:24:605 kernel/(12613:12617): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:53:24:605 kernel/(12613:12618): Pase los waits en exec a exit
+[WARNING] 11:53:24:605 kernel/(12613:12618): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 11:53:24:605 kernel/(12613:12615): Entre en hilo bloq a suspension
+[WARNING] 11:53:24:605 kernel/(12613:12618): el fd_cpu antes de recv pc es: 7
+[WARNING] 11:53:24:605 kernel/(12613:12618): el fd_kernel antes de recv pc es: 4
+[TRACE] 11:53:24:605 kernel/(12613:12617): Entre en hilo ready exe
+[TRACE] 11:53:24:605 kernel/(12613:12617): Entre en obtener sig de ready
+[WARNING] 11:53:24:605 kernel/(12613:12636): pase el agregar a NEW
+[TRACE] 11:53:24:605 kernel/(12613:12636): El PID ES: 1
+[INFO] 11:53:24:606 kernel/(12613:12636): DISCONNECT!
+[TRACE] 11:53:24:606 kernel/(12613:12636): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:53:24:606 kernel/(12613:12636): El cliente se desconecto de KERNEL server
+[ERROR] 11:53:29:608 kernel/(12613:12618): Fallo recibiendo pc
+[ERROR] 11:53:29:609 kernel/(12613:12618): El PC despues del recv es: -1216905200
+[TRACE] 11:53:29:609 kernel/(12613:12618): El pc del exit proceso de list_get es: -1216905200
+[TRACE] 11:53:29:609 kernel/(12613:12618): antes de terminar ejecucion
+[INFO] 11:53:29:609 kernel/(12613:12618): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:53:29:609 kernel/(12613:12618): Entre en hilo exec a exit
+[INFO] 11:55:11:199 kernel/(12925:12925): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:55:11:199 kernel/(12925:12925): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:55:11:200 kernel/(12925:12925): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:55:11:200 kernel/(12925:12925): El socket : 4
+[INFO] 11:55:11:200 kernel/(12925:12925): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:55:11:200 kernel/(12925:12925): El fd_memoria despues de grar conexiones es: 5
+[ERROR] 11:55:11:200 kernel/(12925:12925): Error al conectar (a CPU)
+
+[INFO] 11:56:35:776 kernel/(13315:13315): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 11:56:35:776 kernel/(13315:13315): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 11:56:35:776 kernel/(13315:13315): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 11:56:35:776 kernel/(13315:13315): El socket : 4
+[INFO] 11:56:35:776 kernel/(13315:13315): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 11:56:35:777 kernel/(13315:13315): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:56:35:777 kernel/(13315:13315): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 11:56:35:777 kernel/(13315:13315): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 11:56:35:777 kernel/(13315:13320): Entre en hilo exec a exit
+[TRACE] 11:56:35:777 kernel/(13315:13319): Entre en hilo ready exe
+[TRACE] 11:56:35:777 kernel/(13315:13319): Entre en obtener sig de ready
+[ERROR] 11:56:35:777 kernel/(13315:13318): Entre en hilo New Ready
+[TRACE] 11:56:35:777 kernel/(13315:13317): Entre en hilo bloq a suspension
+[TRACE] 11:56:35:777 kernel/(13315:13316): Entre en hilo suspencion a ready
+[TRACE] 11:56:35:778 kernel/(13315:13316): Entre en hilo suspencion a ready
+[INFO] 11:56:37:599 kernel/(13315:13315): Cliente conectado (a KERNEL)
+
+[WARNING] 11:56:37:601 kernel/(13315:13327): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:56:37:601 kernel/(13315:13327): Entre en EXIT
+[ERROR] 11:56:37:601 kernel/(13315:13327): El indice tabla de pagina es: 412
+[INFO] 11:56:37:601 kernel/(13315:13327): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:56:37:601 kernel/(13315:13327): Entre en agregar a NEW 
+[TRACE] 11:56:37:601 kernel/(13315:13317): Entre en hilo bloq a suspension
+[INFO] 11:56:37:601 kernel/(13315:13318): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 11:56:37:601 kernel/(13315:13318): Entre en agregar a ready
+[INFO] 11:56:37:601 kernel/(13315:13318): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 11:56:37:601 kernel/(13315:13318): Sali hilo new ready 
+[WARNING] 11:56:37:601 kernel/(13315:13319): Esto en obtenre siguiente fifo
+[ERROR] 11:56:37:601 kernel/(13315:13318): Entre en hilo New Ready
+[TRACE] 11:56:37:601 kernel/(13315:13319): Entre a enviar pcb a cpu
+[ERROR] 11:56:37:602 kernel/(13315:13319): El socket dentro de send instrcciones es : 7
+[WARNING] 11:56:37:602 kernel/(13315:13319): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:56:37:602 kernel/(13315:13319): Entre en EXIT dentro de send_instrucciones
+[TRACE] 11:56:37:602 kernel/(13315:13319): Sali de enviar pcb a cpu
+[INFO] 11:56:37:602 kernel/(13315:13319): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 11:56:37:602 kernel/(13315:13319): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 11:56:37:602 kernel/(13315:13320): Pase los waits en exec a exit
+[WARNING] 11:56:37:602 kernel/(13315:13320): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 11:56:37:602 kernel/(13315:13317): Entre en hilo bloq a suspension
+[WARNING] 11:56:37:602 kernel/(13315:13320): el fd_cpu antes de recv pc es: 7
+[WARNING] 11:56:37:602 kernel/(13315:13320): el fd_kernel antes de recv pc es: 4
+[TRACE] 11:56:37:602 kernel/(13315:13319): Entre en hilo ready exe
+[TRACE] 11:56:37:602 kernel/(13315:13319): Entre en obtener sig de ready
+[WARNING] 11:56:37:602 kernel/(13315:13327): pase el agregar a NEW
+[TRACE] 11:56:37:602 kernel/(13315:13327): El PID ES: 1
+[INFO] 11:56:37:603 kernel/(13315:13327): DISCONNECT!
+[TRACE] 11:56:37:603 kernel/(13315:13327): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 11:56:37:603 kernel/(13315:13327): El cliente se desconecto de KERNEL server
+[ERROR] 11:56:56:713 kernel/(13315:13320): Fallo recibiendo pc
+[ERROR] 11:56:56:714 kernel/(13315:13320): El PC despues del recv es: -1216954352
+[TRACE] 11:56:56:714 kernel/(13315:13320): El pc del exit proceso de list_get es: -1216954352
+[TRACE] 11:56:56:714 kernel/(13315:13320): antes de terminar ejecucion
+[INFO] 11:56:56:714 kernel/(13315:13320): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 11:56:56:714 kernel/(13315:13320): Entre en hilo exec a exit
+[INFO] 12:03:10:720 kernel/(14020:14020): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:03:10:720 kernel/(14020:14020): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:03:10:720 kernel/(14020:14020): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:03:10:720 kernel/(14020:14020): El socket : 0
+[INFO] 12:03:10:720 kernel/(14020:14020): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:03:10:720 kernel/(14020:14020): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:03:10:721 kernel/(14020:14020): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:03:10:721 kernel/(14020:14020): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:03:10:721 kernel/(14020:14025): Entre en hilo exec a exit
+[TRACE] 12:03:10:721 kernel/(14020:14024): Entre en hilo ready exe
+[TRACE] 12:03:10:721 kernel/(14020:14024): Entre en obtener sig de ready
+[ERROR] 12:03:10:721 kernel/(14020:14023): Entre en hilo New Ready
+[TRACE] 12:03:10:721 kernel/(14020:14022): Entre en hilo bloq a suspension
+[TRACE] 12:03:10:721 kernel/(14020:14021): Entre en hilo suspencion a ready
+[TRACE] 12:03:10:721 kernel/(14020:14021): Entre en hilo suspencion a ready
+[INFO] 12:03:13:314 kernel/(14020:14020): Cliente conectado (a KERNEL)
+
+[WARNING] 12:03:13:315 kernel/(14020:14033): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:03:13:315 kernel/(14020:14033): Entre en EXIT
+[ERROR] 12:03:13:316 kernel/(14020:14033): El indice tabla de pagina es: 412
+[INFO] 12:03:13:316 kernel/(14020:14033): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:03:13:316 kernel/(14020:14033): Entre en agregar a NEW 
+[TRACE] 12:03:13:316 kernel/(14020:14022): Entre en hilo bloq a suspension
+[INFO] 12:03:13:316 kernel/(14020:14023): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:03:13:316 kernel/(14020:14023): Entre en agregar a ready
+[INFO] 12:03:13:316 kernel/(14020:14023): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:03:13:316 kernel/(14020:14023): Sali hilo new ready 
+[WARNING] 12:03:13:316 kernel/(14020:14024): Esto en obtenre siguiente fifo
+[ERROR] 12:03:13:316 kernel/(14020:14023): Entre en hilo New Ready
+[TRACE] 12:03:13:316 kernel/(14020:14024): Entre a enviar pcb a cpu
+[ERROR] 12:03:13:316 kernel/(14020:14024): El socket dentro de send instrcciones es : 7
+[WARNING] 12:03:13:317 kernel/(14020:14024): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:03:13:317 kernel/(14020:14024): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:03:13:317 kernel/(14020:14024): Sali de enviar pcb a cpu
+[INFO] 12:03:13:317 kernel/(14020:14024): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:03:13:317 kernel/(14020:14024): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:03:13:317 kernel/(14020:14025): Pase los waits en exec a exit
+[WARNING] 12:03:13:317 kernel/(14020:14025): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:03:13:317 kernel/(14020:14022): Entre en hilo bloq a suspension
+[WARNING] 12:03:13:317 kernel/(14020:14025): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:03:13:317 kernel/(14020:14025): el fd_kernel antes de recv pc es: 0
+[TRACE] 12:03:13:317 kernel/(14020:14024): Entre en hilo ready exe
+[TRACE] 12:03:13:317 kernel/(14020:14024): Entre en obtener sig de ready
+[WARNING] 12:03:13:317 kernel/(14020:14033): pase el agregar a NEW
+[TRACE] 12:03:13:317 kernel/(14020:14033): El PID ES: 1
+[INFO] 12:03:13:317 kernel/(14020:14033): DISCONNECT!
+[TRACE] 12:03:13:317 kernel/(14020:14033): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:03:13:318 kernel/(14020:14033): El cliente se desconecto de KERNEL server
+[ERROR] 12:03:42:529 kernel/(14020:14025): Fallo recibiendo pc
+[ERROR] 12:03:42:530 kernel/(14020:14025): El PC despues del recv es: -1216794608
+[TRACE] 12:03:42:530 kernel/(14020:14025): El pc del exit proceso de list_get es: -1216794608
+[TRACE] 12:03:42:530 kernel/(14020:14025): antes de terminar ejecucion
+[INFO] 12:03:42:530 kernel/(14020:14025): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:03:42:530 kernel/(14020:14025): Entre en hilo exec a exit
+[INFO] 12:05:49:670 kernel/(14384:14384): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:05:49:670 kernel/(14384:14384): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:05:49:670 kernel/(14384:14384): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:05:49:670 kernel/(14384:14384): El socket : 4
+[INFO] 12:05:49:670 kernel/(14384:14384): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:05:49:670 kernel/(14384:14384): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:05:49:671 kernel/(14384:14384): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:05:49:671 kernel/(14384:14384): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:05:49:671 kernel/(14384:14389): Entre en hilo exec a exit
+[TRACE] 12:05:49:671 kernel/(14384:14388): Entre en hilo ready exe
+[TRACE] 12:05:49:671 kernel/(14384:14388): Entre en obtener sig de ready
+[ERROR] 12:05:49:671 kernel/(14384:14387): Entre en hilo New Ready
+[TRACE] 12:05:49:671 kernel/(14384:14386): Entre en hilo bloq a suspension
+[TRACE] 12:05:49:671 kernel/(14384:14385): Entre en hilo suspencion a ready
+[TRACE] 12:05:49:671 kernel/(14384:14385): Entre en hilo suspencion a ready
+[INFO] 12:05:53:936 kernel/(14384:14384): Cliente conectado (a KERNEL)
+
+[WARNING] 12:05:53:938 kernel/(14384:14405): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:05:53:938 kernel/(14384:14405): Entre en EXIT
+[ERROR] 12:05:53:938 kernel/(14384:14405): El indice tabla de pagina es: 412
+[INFO] 12:05:53:938 kernel/(14384:14405): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:05:53:938 kernel/(14384:14405): Entre en agregar a NEW 
+[TRACE] 12:05:53:938 kernel/(14384:14386): Entre en hilo bloq a suspension
+[INFO] 12:05:53:938 kernel/(14384:14387): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:05:53:938 kernel/(14384:14387): Entre en agregar a ready
+[INFO] 12:05:53:938 kernel/(14384:14387): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:05:53:938 kernel/(14384:14387): Sali hilo new ready 
+[WARNING] 12:05:53:938 kernel/(14384:14388): Esto en obtenre siguiente fifo
+[ERROR] 12:05:53:938 kernel/(14384:14387): Entre en hilo New Ready
+[TRACE] 12:05:53:938 kernel/(14384:14388): Entre a enviar pcb a cpu
+[ERROR] 12:05:53:939 kernel/(14384:14388): El socket dentro de send instrcciones es : 7
+[WARNING] 12:05:53:939 kernel/(14384:14388): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:05:53:939 kernel/(14384:14388): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:05:53:939 kernel/(14384:14388): Sali de enviar pcb a cpu
+[INFO] 12:05:53:939 kernel/(14384:14388): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:05:53:939 kernel/(14384:14388): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:05:53:939 kernel/(14384:14389): Pase los waits en exec a exit
+[WARNING] 12:05:53:939 kernel/(14384:14389): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:05:53:939 kernel/(14384:14386): Entre en hilo bloq a suspension
+[WARNING] 12:05:53:939 kernel/(14384:14389): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:05:53:939 kernel/(14384:14389): el fd_kernel antes de recv pc es: 0
+[TRACE] 12:05:53:939 kernel/(14384:14388): Entre en hilo ready exe
+[TRACE] 12:05:53:940 kernel/(14384:14388): Entre en obtener sig de ready
+[WARNING] 12:05:53:940 kernel/(14384:14405): pase el agregar a NEW
+[TRACE] 12:05:53:940 kernel/(14384:14405): El PID ES: 1
+[INFO] 12:05:53:940 kernel/(14384:14405): DISCONNECT!
+[TRACE] 12:05:53:940 kernel/(14384:14405): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:05:53:940 kernel/(14384:14405): El cliente se desconecto de KERNEL server
+[ERROR] 12:07:40:071 kernel/(14384:14389): Fallo recibiendo pc
+[ERROR] 12:07:40:071 kernel/(14384:14389): El PC despues del recv es: -1216745456
+[TRACE] 12:07:40:071 kernel/(14384:14389): El pc del exit proceso de list_get es: -1216745456
+[TRACE] 12:07:40:071 kernel/(14384:14389): antes de terminar ejecucion
+[INFO] 12:07:40:071 kernel/(14384:14389): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:07:40:072 kernel/(14384:14389): Entre en hilo exec a exit
+[INFO] 12:10:38:520 kernel/(15382:15382): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:10:38:521 kernel/(15382:15382): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:10:38:521 kernel/(15382:15382): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:10:38:521 kernel/(15382:15382): El socket : 4
+[INFO] 12:10:38:521 kernel/(15382:15382): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:10:38:521 kernel/(15382:15382): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:10:38:521 kernel/(15382:15382): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:10:38:522 kernel/(15382:15382): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:10:38:522 kernel/(15382:15387): Entre en hilo exec a exit
+[TRACE] 12:10:38:522 kernel/(15382:15386): Entre en hilo ready exe
+[TRACE] 12:10:38:522 kernel/(15382:15386): Entre en obtener sig de ready
+[ERROR] 12:10:38:522 kernel/(15382:15385): Entre en hilo New Ready
+[TRACE] 12:10:38:522 kernel/(15382:15384): Entre en hilo bloq a suspension
+[TRACE] 12:10:38:522 kernel/(15382:15383): Entre en hilo suspencion a ready
+[TRACE] 12:10:38:522 kernel/(15382:15383): Entre en hilo suspencion a ready
+[INFO] 12:10:41:316 kernel/(15382:15382): Cliente conectado (a KERNEL)
+
+[WARNING] 12:10:41:318 kernel/(15382:15395): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:10:41:318 kernel/(15382:15395): Entre en EXIT
+[ERROR] 12:10:41:318 kernel/(15382:15395): El indice tabla de pagina es: 412
+[INFO] 12:10:41:318 kernel/(15382:15395): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:10:41:318 kernel/(15382:15395): Entre en agregar a NEW 
+[TRACE] 12:10:41:319 kernel/(15382:15384): Entre en hilo bloq a suspension
+[INFO] 12:10:41:319 kernel/(15382:15385): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:10:41:319 kernel/(15382:15385): Entre en agregar a ready
+[INFO] 12:10:41:319 kernel/(15382:15385): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:10:41:319 kernel/(15382:15385): Sali hilo new ready 
+[WARNING] 12:10:41:319 kernel/(15382:15386): Esto en obtenre siguiente fifo
+[ERROR] 12:10:41:319 kernel/(15382:15385): Entre en hilo New Ready
+[TRACE] 12:10:41:319 kernel/(15382:15386): Entre a enviar pcb a cpu
+[ERROR] 12:10:41:319 kernel/(15382:15386): El socket dentro de send instrcciones es : 7
+[WARNING] 12:10:41:319 kernel/(15382:15386): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:10:41:319 kernel/(15382:15386): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:10:41:319 kernel/(15382:15386): Sali de enviar pcb a cpu
+[INFO] 12:10:41:319 kernel/(15382:15386): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:10:41:319 kernel/(15382:15386): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:10:41:320 kernel/(15382:15387): Pase los waits en exec a exit
+[WARNING] 12:10:41:320 kernel/(15382:15387): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:10:41:320 kernel/(15382:15384): Entre en hilo bloq a suspension
+[WARNING] 12:10:41:320 kernel/(15382:15387): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:10:41:320 kernel/(15382:15387): el fd_kernel antes de recv pc es: 4
+[TRACE] 12:10:41:320 kernel/(15382:15386): Entre en hilo ready exe
+[TRACE] 12:10:41:320 kernel/(15382:15386): Entre en obtener sig de ready
+[WARNING] 12:10:41:320 kernel/(15382:15395): pase el agregar a NEW
+[TRACE] 12:10:41:320 kernel/(15382:15395): El PID ES: 1
+[INFO] 12:10:41:320 kernel/(15382:15395): DISCONNECT!
+[TRACE] 12:10:41:320 kernel/(15382:15395): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:10:41:320 kernel/(15382:15395): El cliente se desconecto de KERNEL server
+[ERROR] 12:15:21:350 kernel/(15382:15387): Fallo recibiendo pc
+[ERROR] 12:15:21:351 kernel/(15382:15387): El PC despues del recv es: -1216442352
+[TRACE] 12:15:21:351 kernel/(15382:15387): El pc del exit proceso de list_get es: -1216442352
+[TRACE] 12:15:21:351 kernel/(15382:15387): antes de terminar ejecucion
+[INFO] 12:15:21:351 kernel/(15382:15387): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:15:21:351 kernel/(15382:15387): Entre en hilo exec a exit
+[INFO] 12:16:39:203 kernel/(16368:16368): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:16:39:203 kernel/(16368:16368): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:16:39:203 kernel/(16368:16368): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:16:39:203 kernel/(16368:16368): El socket : 4
+[INFO] 12:16:39:204 kernel/(16368:16368): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:16:39:204 kernel/(16368:16368): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:16:39:204 kernel/(16368:16368): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:16:39:204 kernel/(16368:16368): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:16:39:204 kernel/(16368:16373): Entre en hilo exec a exit
+[TRACE] 12:16:39:204 kernel/(16368:16372): Entre en hilo ready exe
+[TRACE] 12:16:39:204 kernel/(16368:16372): Entre en obtener sig de ready
+[ERROR] 12:16:39:204 kernel/(16368:16371): Entre en hilo New Ready
+[TRACE] 12:16:39:204 kernel/(16368:16370): Entre en hilo bloq a suspension
+[TRACE] 12:16:39:204 kernel/(16368:16369): Entre en hilo suspencion a ready
+[TRACE] 12:16:39:205 kernel/(16368:16369): Entre en hilo suspencion a ready
+[INFO] 12:16:53:516 kernel/(16368:16368): Cliente conectado (a KERNEL)
+
+[WARNING] 12:16:53:518 kernel/(16368:16395): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:16:53:518 kernel/(16368:16395): Entre en EXIT
+[ERROR] 12:16:53:518 kernel/(16368:16395): El indice tabla de pagina es: 412
+[INFO] 12:16:53:519 kernel/(16368:16395): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:16:53:519 kernel/(16368:16395): Entre en agregar a NEW 
+[TRACE] 12:16:53:519 kernel/(16368:16370): Entre en hilo bloq a suspension
+[INFO] 12:16:53:519 kernel/(16368:16371): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:16:53:519 kernel/(16368:16371): Entre en agregar a ready
+[INFO] 12:16:53:519 kernel/(16368:16371): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:16:53:519 kernel/(16368:16371): Sali hilo new ready 
+[WARNING] 12:16:53:519 kernel/(16368:16372): Esto en obtenre siguiente fifo
+[ERROR] 12:16:53:519 kernel/(16368:16371): Entre en hilo New Ready
+[TRACE] 12:16:53:519 kernel/(16368:16372): Entre a enviar pcb a cpu
+[ERROR] 12:16:53:519 kernel/(16368:16372): El socket dentro de send instrcciones es : 7
+[WARNING] 12:16:53:519 kernel/(16368:16372): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:16:53:519 kernel/(16368:16372): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:16:53:520 kernel/(16368:16372): Sali de enviar pcb a cpu
+[INFO] 12:16:53:520 kernel/(16368:16372): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:16:53:520 kernel/(16368:16372): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:16:53:520 kernel/(16368:16373): Pase los waits en exec a exit
+[WARNING] 12:16:53:520 kernel/(16368:16373): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:16:53:520 kernel/(16368:16370): Entre en hilo bloq a suspension
+[WARNING] 12:16:53:520 kernel/(16368:16373): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:16:53:520 kernel/(16368:16373): el fd_kernel antes de recv pc es: 4
+[TRACE] 12:16:53:520 kernel/(16368:16372): Entre en hilo ready exe
+[TRACE] 12:16:53:520 kernel/(16368:16372): Entre en obtener sig de ready
+[WARNING] 12:16:53:520 kernel/(16368:16395): pase el agregar a NEW
+[TRACE] 12:16:53:520 kernel/(16368:16395): El PID ES: 1
+[INFO] 12:16:53:520 kernel/(16368:16395): DISCONNECT!
+[TRACE] 12:16:53:520 kernel/(16368:16395): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:16:53:520 kernel/(16368:16395): El cliente se desconecto de KERNEL server
+[ERROR] 12:17:19:570 kernel/(16368:16373): Fallo recibiendo pc
+[ERROR] 12:17:19:571 kernel/(16368:16373): El PC despues del recv es: -1217101808
+[TRACE] 12:17:19:571 kernel/(16368:16373): El pc del exit proceso de list_get es: -1217101808
+[TRACE] 12:17:19:571 kernel/(16368:16373): antes de terminar ejecucion
+[INFO] 12:17:19:571 kernel/(16368:16373): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:17:19:571 kernel/(16368:16373): Entre en hilo exec a exit
+[INFO] 12:18:27:869 kernel/(16656:16656): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:18:27:869 kernel/(16656:16656): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:18:27:869 kernel/(16656:16656): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:18:27:869 kernel/(16656:16656): El socket : 4
+[INFO] 12:18:27:870 kernel/(16656:16656): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:18:27:870 kernel/(16656:16656): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:18:27:870 kernel/(16656:16656): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:18:27:870 kernel/(16656:16656): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:18:27:870 kernel/(16656:16661): Entre en hilo exec a exit
+[TRACE] 12:18:27:870 kernel/(16656:16660): Entre en hilo ready exe
+[TRACE] 12:18:27:870 kernel/(16656:16660): Entre en obtener sig de ready
+[ERROR] 12:18:27:870 kernel/(16656:16659): Entre en hilo New Ready
+[TRACE] 12:18:27:871 kernel/(16656:16658): Entre en hilo bloq a suspension
+[TRACE] 12:18:27:871 kernel/(16656:16657): Entre en hilo suspencion a ready
+[TRACE] 12:18:27:871 kernel/(16656:16657): Entre en hilo suspencion a ready
+[INFO] 12:18:31:812 kernel/(16656:16656): Cliente conectado (a KERNEL)
+
+[WARNING] 12:18:31:813 kernel/(16656:16672): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:18:31:813 kernel/(16656:16672): Entre en EXIT
+[ERROR] 12:18:31:813 kernel/(16656:16672): El indice tabla de pagina es: 412
+[INFO] 12:18:31:813 kernel/(16656:16672): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:18:31:813 kernel/(16656:16672): Entre en agregar a NEW 
+[TRACE] 12:18:31:813 kernel/(16656:16658): Entre en hilo bloq a suspension
+[INFO] 12:18:31:813 kernel/(16656:16659): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:18:31:814 kernel/(16656:16659): Entre en agregar a ready
+[INFO] 12:18:31:814 kernel/(16656:16659): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:18:31:814 kernel/(16656:16659): Sali hilo new ready 
+[WARNING] 12:18:31:814 kernel/(16656:16660): Esto en obtenre siguiente fifo
+[ERROR] 12:18:31:814 kernel/(16656:16659): Entre en hilo New Ready
+[TRACE] 12:18:31:814 kernel/(16656:16660): Entre a enviar pcb a cpu
+[ERROR] 12:18:31:814 kernel/(16656:16660): El socket dentro de send instrcciones es : 7
+[WARNING] 12:18:31:814 kernel/(16656:16660): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:18:31:814 kernel/(16656:16660): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:18:31:814 kernel/(16656:16660): Sali de enviar pcb a cpu
+[INFO] 12:18:31:814 kernel/(16656:16660): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:18:31:814 kernel/(16656:16660): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:18:31:814 kernel/(16656:16661): Pase los waits en exec a exit
+[WARNING] 12:18:31:814 kernel/(16656:16661): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:18:31:814 kernel/(16656:16658): Entre en hilo bloq a suspension
+[WARNING] 12:18:31:814 kernel/(16656:16661): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:18:31:814 kernel/(16656:16661): el fd_kernel antes de recv pc es: 4
+[TRACE] 12:18:31:814 kernel/(16656:16660): Entre en hilo ready exe
+[TRACE] 12:18:31:814 kernel/(16656:16660): Entre en obtener sig de ready
+[WARNING] 12:18:31:815 kernel/(16656:16672): pase el agregar a NEW
+[TRACE] 12:18:31:815 kernel/(16656:16672): El PID ES: 1
+[INFO] 12:18:31:815 kernel/(16656:16672): DISCONNECT!
+[TRACE] 12:18:31:815 kernel/(16656:16672): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:18:31:815 kernel/(16656:16672): El cliente se desconecto de KERNEL server
+[ERROR] 12:18:36:816 kernel/(16656:16661): Fallo recibiendo pc
+[ERROR] 12:18:36:817 kernel/(16656:16661): El PC despues del recv es: -1216626672
+[TRACE] 12:18:36:817 kernel/(16656:16661): El pc del exit proceso de list_get es: -1216626672
+[TRACE] 12:18:36:817 kernel/(16656:16661): antes de terminar ejecucion
+[INFO] 12:18:36:817 kernel/(16656:16661): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:18:36:817 kernel/(16656:16661): Entre en hilo exec a exit
+[INFO] 12:22:52:045 kernel/(17186:17186): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:22:52:045 kernel/(17186:17186): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:22:52:045 kernel/(17186:17186): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:22:52:045 kernel/(17186:17186): El socket : 4
+[INFO] 12:22:52:046 kernel/(17186:17186): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:22:52:046 kernel/(17186:17186): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:22:52:046 kernel/(17186:17186): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:22:52:046 kernel/(17186:17186): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:22:52:046 kernel/(17186:17191): Entre en hilo exec a exit
+[TRACE] 12:22:52:046 kernel/(17186:17190): Entre en hilo ready exe
+[TRACE] 12:22:52:046 kernel/(17186:17190): Entre en obtener sig de ready
+[ERROR] 12:22:52:047 kernel/(17186:17189): Entre en hilo New Ready
+[TRACE] 12:22:52:047 kernel/(17186:17188): Entre en hilo bloq a suspension
+[TRACE] 12:22:52:047 kernel/(17186:17187): Entre en hilo suspencion a ready
+[TRACE] 12:22:52:047 kernel/(17186:17187): Entre en hilo suspencion a ready
+[INFO] 12:25:24:166 kernel/(17657:17657): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:25:24:166 kernel/(17657:17657): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:25:24:166 kernel/(17657:17657): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:25:24:166 kernel/(17657:17657): El socket : 4
+[INFO] 12:25:24:166 kernel/(17657:17657): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:25:24:166 kernel/(17657:17657): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:25:24:167 kernel/(17657:17657): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:25:24:167 kernel/(17657:17657): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:25:24:167 kernel/(17657:17662): Entre en hilo exec a exit
+[TRACE] 12:25:24:167 kernel/(17657:17661): Entre en hilo ready exe
+[TRACE] 12:25:24:167 kernel/(17657:17661): Entre en obtener sig de ready
+[ERROR] 12:25:24:167 kernel/(17657:17660): Entre en hilo New Ready
+[TRACE] 12:25:24:167 kernel/(17657:17659): Entre en hilo bloq a suspension
+[TRACE] 12:25:24:167 kernel/(17657:17658): Entre en hilo suspencion a ready
+[TRACE] 12:25:24:167 kernel/(17657:17658): Entre en hilo suspencion a ready
+[INFO] 12:25:53:925 kernel/(17657:17657): Cliente conectado (a KERNEL)
+
+[WARNING] 12:25:53:926 kernel/(17657:17707): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:25:53:926 kernel/(17657:17707): Entre en EXIT
+[ERROR] 12:25:53:927 kernel/(17657:17707): El indice tabla de pagina es: 412
+[INFO] 12:25:53:927 kernel/(17657:17707): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:25:53:927 kernel/(17657:17707): Entre en agregar a NEW 
+[TRACE] 12:25:53:927 kernel/(17657:17659): Entre en hilo bloq a suspension
+[INFO] 12:25:53:927 kernel/(17657:17660): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:25:53:927 kernel/(17657:17660): Entre en agregar a ready
+[INFO] 12:25:53:927 kernel/(17657:17660): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:25:53:927 kernel/(17657:17660): Sali hilo new ready 
+[WARNING] 12:25:53:927 kernel/(17657:17661): Esto en obtenre siguiente fifo
+[ERROR] 12:25:53:927 kernel/(17657:17660): Entre en hilo New Ready
+[TRACE] 12:25:53:927 kernel/(17657:17661): Entre a enviar pcb a cpu
+[ERROR] 12:25:53:927 kernel/(17657:17661): El socket dentro de send instrcciones es : 7
+[WARNING] 12:25:53:927 kernel/(17657:17661): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:25:53:927 kernel/(17657:17661): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:25:53:928 kernel/(17657:17661): Sali de enviar pcb a cpu
+[INFO] 12:25:53:928 kernel/(17657:17661): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:25:53:928 kernel/(17657:17661): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:25:53:928 kernel/(17657:17662): Pase los waits en exec a exit
+[WARNING] 12:25:53:928 kernel/(17657:17662): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:25:53:928 kernel/(17657:17659): Entre en hilo bloq a suspension
+[WARNING] 12:25:53:928 kernel/(17657:17662): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:25:53:928 kernel/(17657:17662): el fd_kernel antes de recv pc es: 4
+[TRACE] 12:25:53:928 kernel/(17657:17661): Entre en hilo ready exe
+[TRACE] 12:25:53:928 kernel/(17657:17661): Entre en obtener sig de ready
+[WARNING] 12:25:53:928 kernel/(17657:17707): pase el agregar a NEW
+[TRACE] 12:25:53:928 kernel/(17657:17707): El PID ES: 1
+[INFO] 12:25:53:928 kernel/(17657:17707): DISCONNECT!
+[TRACE] 12:25:53:928 kernel/(17657:17707): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:25:53:928 kernel/(17657:17707): El cliente se desconecto de KERNEL server
+[ERROR] 12:25:58:930 kernel/(17657:17662): Fallo recibiendo pc
+[ERROR] 12:25:58:931 kernel/(17657:17662): El PC despues del recv es: -1216630768
+[TRACE] 12:25:58:931 kernel/(17657:17662): El pc del exit proceso de list_get es: -1216630768
+[TRACE] 12:25:58:931 kernel/(17657:17662): antes de terminar ejecucion
+[INFO] 12:25:58:931 kernel/(17657:17662): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:25:58:931 kernel/(17657:17662): Entre en hilo exec a exit
+[INFO] 12:29:09:935 kernel/(18113:18113): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:29:09:936 kernel/(18113:18113): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:29:09:936 kernel/(18113:18113): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:29:09:936 kernel/(18113:18113): El socket : 4
+[INFO] 12:29:09:936 kernel/(18113:18113): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:29:09:936 kernel/(18113:18113): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:29:09:937 kernel/(18113:18113): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:29:09:937 kernel/(18113:18113): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:29:09:937 kernel/(18113:18118): Entre en hilo exec a exit
+[TRACE] 12:29:09:937 kernel/(18113:18117): Entre en hilo ready exe
+[TRACE] 12:29:09:937 kernel/(18113:18117): Entre en obtener sig de ready
+[ERROR] 12:29:09:937 kernel/(18113:18116): Entre en hilo New Ready
+[TRACE] 12:29:09:937 kernel/(18113:18115): Entre en hilo bloq a suspension
+[TRACE] 12:29:09:937 kernel/(18113:18114): Entre en hilo suspencion a ready
+[TRACE] 12:29:09:937 kernel/(18113:18114): Entre en hilo suspencion a ready
+[INFO] 12:29:57:745 kernel/(18113:18113): Cliente conectado (a KERNEL)
+
+[WARNING] 12:29:57:746 kernel/(18113:18192): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:29:57:746 kernel/(18113:18192): Entre en EXIT
+[ERROR] 12:29:57:747 kernel/(18113:18192): El indice tabla de pagina es: 412
+[INFO] 12:29:57:747 kernel/(18113:18192): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:29:57:747 kernel/(18113:18192): Entre en agregar a NEW 
+[TRACE] 12:29:57:747 kernel/(18113:18115): Entre en hilo bloq a suspension
+[INFO] 12:29:57:747 kernel/(18113:18116): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:29:57:747 kernel/(18113:18116): Entre en agregar a ready
+[INFO] 12:29:57:747 kernel/(18113:18116): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:29:57:747 kernel/(18113:18116): Sali hilo new ready 
+[WARNING] 12:29:57:747 kernel/(18113:18117): Esto en obtenre siguiente fifo
+[ERROR] 12:29:57:747 kernel/(18113:18116): Entre en hilo New Ready
+[TRACE] 12:29:57:747 kernel/(18113:18117): Entre a enviar pcb a cpu
+[ERROR] 12:29:57:747 kernel/(18113:18117): El socket dentro de send instrcciones es : 7
+[WARNING] 12:29:57:747 kernel/(18113:18117): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:29:57:747 kernel/(18113:18117): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:29:57:747 kernel/(18113:18117): Sali de enviar pcb a cpu
+[INFO] 12:29:57:748 kernel/(18113:18117): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:29:57:748 kernel/(18113:18117): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:29:57:748 kernel/(18113:18118): Pase los waits en exec a exit
+[WARNING] 12:29:57:748 kernel/(18113:18118): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:29:57:748 kernel/(18113:18115): Entre en hilo bloq a suspension
+[WARNING] 12:29:57:748 kernel/(18113:18118): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:29:57:748 kernel/(18113:18118): el fd_kernel antes de recv pc es: 4
+[TRACE] 12:29:57:748 kernel/(18113:18117): Entre en hilo ready exe
+[TRACE] 12:29:57:748 kernel/(18113:18117): Entre en obtener sig de ready
+[WARNING] 12:29:57:748 kernel/(18113:18192): pase el agregar a NEW
+[TRACE] 12:29:57:748 kernel/(18113:18192): El PID ES: 1
+[INFO] 12:29:57:748 kernel/(18113:18192): DISCONNECT!
+[TRACE] 12:29:57:748 kernel/(18113:18192): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:29:57:748 kernel/(18113:18192): El cliente se desconecto de KERNEL server
+[ERROR] 12:30:02:749 kernel/(18113:18118): Fallo recibiendo pc
+[ERROR] 12:30:02:749 kernel/(18113:18118): El PC despues del recv es: -1216491504
+[TRACE] 12:30:02:749 kernel/(18113:18118): El pc del exit proceso de list_get es: -1216491504
+[TRACE] 12:30:02:749 kernel/(18113:18118): antes de terminar ejecucion
+[INFO] 12:30:02:749 kernel/(18113:18118): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:30:02:749 kernel/(18113:18118): Entre en hilo exec a exit
+[INFO] 12:31:44:138 kernel/(18475:18475): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:31:44:138 kernel/(18475:18475): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:31:44:138 kernel/(18475:18475): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:31:44:139 kernel/(18475:18475): El socket : 4
+[INFO] 12:31:44:139 kernel/(18475:18475): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:31:44:139 kernel/(18475:18475): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:31:44:139 kernel/(18475:18475): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:31:44:139 kernel/(18475:18475): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:31:44:139 kernel/(18475:18480): Entre en hilo exec a exit
+[TRACE] 12:31:44:140 kernel/(18475:18479): Entre en hilo ready exe
+[TRACE] 12:31:44:140 kernel/(18475:18479): Entre en obtener sig de ready
+[ERROR] 12:31:44:140 kernel/(18475:18478): Entre en hilo New Ready
+[TRACE] 12:31:44:140 kernel/(18475:18477): Entre en hilo bloq a suspension
+[TRACE] 12:31:44:140 kernel/(18475:18476): Entre en hilo suspencion a ready
+[TRACE] 12:31:44:140 kernel/(18475:18476): Entre en hilo suspencion a ready
+[INFO] 12:33:05:488 kernel/(18475:18475): Cliente conectado (a KERNEL)
+
+[WARNING] 12:33:05:489 kernel/(18475:18594): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:33:05:489 kernel/(18475:18594): Entre en EXIT
+[ERROR] 12:33:05:489 kernel/(18475:18594): El indice tabla de pagina es: 412
+[INFO] 12:33:05:489 kernel/(18475:18594): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:33:05:490 kernel/(18475:18594): Entre en agregar a NEW 
+[TRACE] 12:33:05:490 kernel/(18475:18477): Entre en hilo bloq a suspension
+[INFO] 12:33:05:490 kernel/(18475:18478): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:33:05:490 kernel/(18475:18478): Entre en agregar a ready
+[INFO] 12:33:05:490 kernel/(18475:18478): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:33:05:490 kernel/(18475:18478): Sali hilo new ready 
+[WARNING] 12:33:05:490 kernel/(18475:18479): Esto en obtenre siguiente fifo
+[ERROR] 12:33:05:490 kernel/(18475:18478): Entre en hilo New Ready
+[TRACE] 12:33:05:490 kernel/(18475:18479): Entre a enviar pcb a cpu
+[ERROR] 12:33:05:490 kernel/(18475:18479): El socket dentro de send instrcciones es : 7
+[WARNING] 12:33:05:490 kernel/(18475:18479): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:33:05:490 kernel/(18475:18479): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:33:05:490 kernel/(18475:18479): Sali de enviar pcb a cpu
+[INFO] 12:33:05:491 kernel/(18475:18479): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:33:05:491 kernel/(18475:18479): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:33:05:491 kernel/(18475:18480): Pase los waits en exec a exit
+[WARNING] 12:33:05:491 kernel/(18475:18480): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:33:05:491 kernel/(18475:18477): Entre en hilo bloq a suspension
+[WARNING] 12:33:05:491 kernel/(18475:18480): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:33:05:491 kernel/(18475:18480): el fd_kernel antes de recv pc es: 4
+[TRACE] 12:33:05:491 kernel/(18475:18479): Entre en hilo ready exe
+[TRACE] 12:33:05:491 kernel/(18475:18479): Entre en obtener sig de ready
+[WARNING] 12:33:05:491 kernel/(18475:18594): pase el agregar a NEW
+[TRACE] 12:33:05:491 kernel/(18475:18594): El PID ES: 1
+[INFO] 12:33:05:491 kernel/(18475:18594): DISCONNECT!
+[TRACE] 12:33:05:491 kernel/(18475:18594): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:33:05:491 kernel/(18475:18594): El cliente se desconecto de KERNEL server
+[ERROR] 12:33:10:493 kernel/(18475:18480): Fallo recibiendo pc
+[ERROR] 12:33:10:493 kernel/(18475:18480): El PC despues del recv es: -1217441776
+[TRACE] 12:33:10:493 kernel/(18475:18480): El pc del exit proceso de list_get es: -1217441776
+[TRACE] 12:33:10:493 kernel/(18475:18480): antes de terminar ejecucion
+[INFO] 12:33:10:493 kernel/(18475:18480): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:33:10:494 kernel/(18475:18480): Entre en hilo exec a exit
+[INFO] 12:35:02:363 kernel/(18890:18890): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:35:02:363 kernel/(18890:18890): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:35:02:363 kernel/(18890:18890): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:35:02:363 kernel/(18890:18890): El socket : 4
+[INFO] 12:35:02:363 kernel/(18890:18890): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:35:02:364 kernel/(18890:18890): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:35:02:364 kernel/(18890:18890): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:35:02:364 kernel/(18890:18890): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:35:02:364 kernel/(18890:18895): Entre en hilo exec a exit
+[TRACE] 12:35:02:364 kernel/(18890:18894): Entre en hilo ready exe
+[TRACE] 12:35:02:364 kernel/(18890:18894): Entre en obtener sig de ready
+[ERROR] 12:35:02:364 kernel/(18890:18893): Entre en hilo New Ready
+[TRACE] 12:35:02:365 kernel/(18890:18892): Entre en hilo bloq a suspension
+[TRACE] 12:35:02:365 kernel/(18890:18891): Entre en hilo suspencion a ready
+[TRACE] 12:35:02:365 kernel/(18890:18891): Entre en hilo suspencion a ready
+[INFO] 12:35:05:460 kernel/(18890:18890): Cliente conectado (a KERNEL)
+
+[WARNING] 12:35:05:462 kernel/(18890:18902): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:35:05:462 kernel/(18890:18902): Entre en EXIT
+[ERROR] 12:35:05:462 kernel/(18890:18902): El indice tabla de pagina es: 412
+[INFO] 12:35:05:462 kernel/(18890:18902): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:35:05:462 kernel/(18890:18902): Entre en agregar a NEW 
+[TRACE] 12:35:05:463 kernel/(18890:18892): Entre en hilo bloq a suspension
+[INFO] 12:35:05:463 kernel/(18890:18893): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:35:05:463 kernel/(18890:18893): Entre en agregar a ready
+[INFO] 12:35:05:463 kernel/(18890:18893): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:35:05:463 kernel/(18890:18893): Sali hilo new ready 
+[WARNING] 12:35:05:463 kernel/(18890:18894): Esto en obtenre siguiente fifo
+[ERROR] 12:35:05:463 kernel/(18890:18893): Entre en hilo New Ready
+[TRACE] 12:35:05:463 kernel/(18890:18894): Entre a enviar pcb a cpu
+[ERROR] 12:35:05:463 kernel/(18890:18894): El socket dentro de send instrcciones es : 7
+[WARNING] 12:35:05:463 kernel/(18890:18894): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:35:05:463 kernel/(18890:18894): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:35:05:463 kernel/(18890:18894): Sali de enviar pcb a cpu
+[INFO] 12:35:05:463 kernel/(18890:18894): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:35:05:464 kernel/(18890:18894): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:35:05:464 kernel/(18890:18895): Pase los waits en exec a exit
+[WARNING] 12:35:05:464 kernel/(18890:18895): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:35:05:464 kernel/(18890:18892): Entre en hilo bloq a suspension
+[WARNING] 12:35:05:464 kernel/(18890:18895): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:35:05:464 kernel/(18890:18895): el fd_kernel antes de recv pc es: 4
+[TRACE] 12:35:05:464 kernel/(18890:18894): Entre en hilo ready exe
+[TRACE] 12:35:05:464 kernel/(18890:18894): Entre en obtener sig de ready
+[WARNING] 12:35:05:464 kernel/(18890:18902): pase el agregar a NEW
+[TRACE] 12:35:05:464 kernel/(18890:18902): El PID ES: 1
+[INFO] 12:35:05:464 kernel/(18890:18902): DISCONNECT!
+[TRACE] 12:35:05:464 kernel/(18890:18902): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:35:05:464 kernel/(18890:18902): El cliente se desconecto de KERNEL server
+[ERROR] 12:35:10:466 kernel/(18890:18895): El PC despues del recv es: 2
+[TRACE] 12:35:10:466 kernel/(18890:18895): El pc del exit proceso de list_get es: 2
+[TRACE] 12:35:10:466 kernel/(18890:18895): antes de terminar ejecucion
+[INFO] 12:35:10:466 kernel/(18890:18895): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:35:10:466 kernel/(18890:18895): Entre en hilo exec a exit
+[INFO] 12:35:30:594 kernel/(18890:18890): Cliente conectado (a KERNEL)
+
+[WARNING] 12:35:30:596 kernel/(18890:18936): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:35:30:596 kernel/(18890:18936): Entre en EXIT
+[ERROR] 12:35:30:596 kernel/(18890:18936): El indice tabla de pagina es: 412
+[INFO] 12:35:30:596 kernel/(18890:18936): [NEW] Entra el proceso de PID: 2 a la cola.
+[ERROR] 12:35:30:596 kernel/(18890:18936): Entre en agregar a NEW 
+[TRACE] 12:35:30:596 kernel/(18890:18892): Entre en hilo bloq a suspension
+[INFO] 12:35:30:596 kernel/(18890:18893): [NEW] Se saca el proceso de PID: 2 de la cola
+[TRACE] 12:35:30:596 kernel/(18890:18893): Entre en agregar a ready
+[INFO] 12:35:30:596 kernel/(18890:18893): [READY] Entra el proceso de PID: 2 a la cola.
+[ERROR] 12:35:30:596 kernel/(18890:18893): Sali hilo new ready 
+[WARNING] 12:35:30:596 kernel/(18890:18894): Esto en obtenre siguiente fifo
+[ERROR] 12:35:30:596 kernel/(18890:18893): Entre en hilo New Ready
+[TRACE] 12:35:30:596 kernel/(18890:18894): Entre a enviar pcb a cpu
+[ERROR] 12:35:30:597 kernel/(18890:18894): El socket dentro de send instrcciones es : 7
+[WARNING] 12:35:30:597 kernel/(18890:18894): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:35:30:597 kernel/(18890:18894): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:35:30:597 kernel/(18890:18894): Sali de enviar pcb a cpu
+[INFO] 12:35:30:597 kernel/(18890:18894): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:35:30:597 kernel/(18890:18894): [EXEC] Ingresa el proceso de PID: 2 , que era el primero que llego
+[TRACE] 12:35:30:597 kernel/(18890:18895): Pase los waits en exec a exit
+[WARNING] 12:35:30:597 kernel/(18890:18895): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:35:30:597 kernel/(18890:18892): Entre en hilo bloq a suspension
+[WARNING] 12:35:30:597 kernel/(18890:18895): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:35:30:597 kernel/(18890:18895): el fd_kernel antes de recv pc es: 4
+[TRACE] 12:35:30:597 kernel/(18890:18894): Entre en hilo ready exe
+[TRACE] 12:35:30:597 kernel/(18890:18894): Entre en obtener sig de ready
+[WARNING] 12:35:30:597 kernel/(18890:18936): pase el agregar a NEW
+[TRACE] 12:35:30:598 kernel/(18890:18936): El PID ES: 2
+[INFO] 12:35:30:598 kernel/(18890:18936): DISCONNECT!
+[TRACE] 12:35:30:598 kernel/(18890:18936): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:35:30:598 kernel/(18890:18936): El cliente se desconecto de KERNEL server
+[ERROR] 12:35:35:602 kernel/(18890:18895): El PC despues del recv es: 2
+[TRACE] 12:35:35:602 kernel/(18890:18895): El pc del exit proceso de list_get es: 2
+[TRACE] 12:35:35:602 kernel/(18890:18895): antes de terminar ejecucion
+[INFO] 12:35:35:602 kernel/(18890:18895): [EXIT] Finaliza el carpincho de PID: 2
+[TRACE] 12:35:35:602 kernel/(18890:18895): Entre en hilo exec a exit
+[INFO] 12:38:00:832 kernel/(19288:19288): El algoritmo de planificacion elegido es FIFO.
+[TRACE] 12:38:00:832 kernel/(19288:19288): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 12:38:00:832 kernel/(19288:19288): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:38:00:832 kernel/(19288:19288): El socket : 0
+[INFO] 12:38:00:833 kernel/(19288:19288): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:38:00:833 kernel/(19288:19288): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:38:00:833 kernel/(19288:19288): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:38:00:833 kernel/(19288:19288): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:38:00:833 kernel/(19288:19293): Entre en hilo exec a exit
+[TRACE] 12:38:00:833 kernel/(19288:19292): Entre en hilo ready exe
+[TRACE] 12:38:00:833 kernel/(19288:19292): Entre en obtener sig de ready
+[ERROR] 12:38:00:834 kernel/(19288:19291): Entre en hilo New Ready
+[TRACE] 12:38:00:834 kernel/(19288:19290): Entre en hilo bloq a suspension
+[TRACE] 12:38:00:834 kernel/(19288:19289): Entre en hilo suspencion a ready
+[TRACE] 12:38:00:834 kernel/(19288:19289): Entre en hilo suspencion a ready
+[INFO] 12:38:04:495 kernel/(19288:19288): Cliente conectado (a KERNEL)
+
+[WARNING] 12:38:04:497 kernel/(19288:19304): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:38:04:497 kernel/(19288:19304): Entre en EXIT
+[ERROR] 12:38:04:497 kernel/(19288:19304): El indice tabla de pagina es: 412
+[INFO] 12:38:04:497 kernel/(19288:19304): [NEW] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:38:04:498 kernel/(19288:19304): Entre en agregar a NEW 
+[TRACE] 12:38:04:498 kernel/(19288:19290): Entre en hilo bloq a suspension
+[INFO] 12:38:04:498 kernel/(19288:19291): [NEW] Se saca el proceso de PID: 1 de la cola
+[TRACE] 12:38:04:498 kernel/(19288:19291): Entre en agregar a ready
+[INFO] 12:38:04:498 kernel/(19288:19291): [READY] Entra el proceso de PID: 1 a la cola.
+[ERROR] 12:38:04:498 kernel/(19288:19291): Sali hilo new ready 
+[WARNING] 12:38:04:498 kernel/(19288:19292): Esto en obtenre siguiente fifo
+[ERROR] 12:38:04:498 kernel/(19288:19291): Entre en hilo New Ready
+[TRACE] 12:38:04:498 kernel/(19288:19292): Entre a enviar pcb a cpu
+[ERROR] 12:38:04:498 kernel/(19288:19292): El socket dentro de send instrcciones es : 7
+[WARNING] 12:38:04:498 kernel/(19288:19292): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:38:04:498 kernel/(19288:19292): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:38:04:498 kernel/(19288:19292): Sali de enviar pcb a cpu
+[INFO] 12:38:04:499 kernel/(19288:19292): Pase el hilo cpu, que tiene la funcion enviar pcb a cpu
+[INFO] 12:38:04:499 kernel/(19288:19292): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 12:38:04:499 kernel/(19288:19293): Pase los waits en exec a exit
+[WARNING] 12:38:04:499 kernel/(19288:19293): El pc del proceso de la lista exe(antes de modificar): 0
+[TRACE] 12:38:04:499 kernel/(19288:19290): Entre en hilo bloq a suspension
+[WARNING] 12:38:04:499 kernel/(19288:19293): el fd_cpu antes de recv pc es: 7
+[WARNING] 12:38:04:499 kernel/(19288:19293): el fd_kernel antes de recv pc es: 0
+[TRACE] 12:38:04:499 kernel/(19288:19292): Entre en hilo ready exe
+[TRACE] 12:38:04:499 kernel/(19288:19292): Entre en obtener sig de ready
+[WARNING] 12:38:04:499 kernel/(19288:19304): pase el agregar a NEW
+[TRACE] 12:38:04:499 kernel/(19288:19304): El PID ES: 1
+[INFO] 12:38:04:499 kernel/(19288:19304): DISCONNECT!
+[TRACE] 12:38:04:499 kernel/(19288:19304): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:38:04:499 kernel/(19288:19304): El cliente se desconecto de KERNEL server
+[ERROR] 12:38:09:502 kernel/(19288:19293): El PC despues del recv es: 2
+[TRACE] 12:38:09:502 kernel/(19288:19293): El pc del exit proceso de list_get es: 2
+[TRACE] 12:38:09:502 kernel/(19288:19293): antes de terminar ejecucion
+[INFO] 12:38:09:502 kernel/(19288:19293): [EXIT] Finaliza el carpincho de PID: 1
+[TRACE] 12:38:09:502 kernel/(19288:19293): Entre en hilo exec a exit
