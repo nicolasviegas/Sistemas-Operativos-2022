@@ -22,6 +22,8 @@
 
 void cargar_instruccion(int id, char* nombre, uint32_t parametro1, uint32_t parametro2);
 
+void cargar_instruccion2(int id, char* nombre, uint32_t parametro1, uint32_t parametro2,t_list* lista);
+
 void conexion_kernel_a_memoria();
 
 void pedir_tabla_a_memoria();

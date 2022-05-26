@@ -74,8 +74,8 @@ void inicializar_listas(){
 	listaBlockSuspended = list_create();
 	colaReadySuspended = queue_create();
 
-	  lista_instrucciones_kernel = list_create();
-	    lista_pcb_en_memoria = list_create();
+	lista_instrucciones_kernel = list_create();
+	lista_pcb_en_memoria = list_create();
 
 }
 
@@ -88,10 +88,10 @@ void inicializar_planificacion(){
 
 	pthread_create(&hiloNewReady, NULL, (void*)hiloNew_Ready, NULL);
 	pthread_create(&hiloReady_Exec, NULL, (void*)hiloReady_Exe, NULL);
-	pthread_create(&hiloExec_Exit,NULL, (void*)hiloExecAExit,NULL);
+	//pthread_create(&hiloExec_Exit,NULL, (void*)hiloExecAExit,NULL);
 	pthread_detach(hiloNewReady);
 	pthread_detach(hiloReady_Exec);
-	pthread_detach(hiloExec_Exit);
+//	pthread_detach(hiloExec_Exit);
 
 }
 

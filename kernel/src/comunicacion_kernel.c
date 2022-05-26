@@ -33,7 +33,10 @@ static void procesar_conexion_kernel(void* void_args) {
 
 
     op_code_instrucciones cop;
+    t_list* lista_intrucciones_1 = list_create();
     while (cliente_socket != -1) {
+
+
 
         if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
         	contador_cliente++;
@@ -62,7 +65,8 @@ static void procesar_conexion_kernel(void* void_args) {
 
         	pcb_proceso->PID = contador_cliente;
         	pcb_proceso->tamanio = tam;
-        	pcb_proceso->instrucciones = lista_instrucciones_kernel;
+        	//pcb_proceso->instrucciones = lista_instrucciones_kernel;
+        	pcb_proceso->instrucciones = lista_intrucciones_1;
         	pcb_proceso->PC = 0;//contador_instruccion;//arranca desde la instruccion 0
         	pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
         	pcb_proceso->estimacionRafaga = estimacion_inicial;
@@ -103,6 +107,7 @@ static void procesar_conexion_kernel(void* void_args) {
         	//lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
 
 
+        	//list_destroy(lista_intrucciones_1);
         	log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
 
@@ -126,13 +131,13 @@ static void procesar_conexion_kernel(void* void_args) {
             	      }
 
            log_warning(log_kernel, "Deserialice NO_OP el parametro es: %d",parametro1);
-            	 cargar_instruccion(NO_OP,"NO_OP",parametro1,NULL);
-
+           //cargar_instruccion(NO_OP,"NO_OP",parametro1,NULL);
+           cargar_instruccion2(NO_OP,"NO_OP",parametro1,NULL,lista_intrucciones_1);
 
                // log_info(log_kernel, "entre al case NO_OP");
                 break;
             }
-            case IO:
+            /*case IO:
             {
             	uint32_t parametro1;
 
@@ -187,10 +192,11 @@ static void procesar_conexion_kernel(void* void_args) {
             	log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
             	log_warning(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
             	break;
-			}
+			}*/
             case EXIT:
             {
-            	cargar_instruccion(EXIT,"EXIT",NULL,NULL);
+            	//cargar_instruccion(EXIT,"EXIT",NULL,NULL);
+            	cargar_instruccion2(EXIT,"EXIT",NULL,NULL,lista_intrucciones_1);
             	log_warning(log_kernel, "Entre en EXIT");
 
 				break;

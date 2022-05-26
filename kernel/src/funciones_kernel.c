@@ -13,6 +13,18 @@ void cargar_instruccion(int id, char* nombre, uint32_t parametro1, uint32_t para
 	//free(estructura_instrucciones);
 }
 
+void cargar_instruccion2(int id, char* nombre, uint32_t parametro1, uint32_t parametro2,t_list* lista){
+	instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
+
+	estructura_instrucciones->id = id;
+	estructura_instrucciones->nombre = nombre;
+	estructura_instrucciones->parametro1 = parametro1;
+	estructura_instrucciones->parametro2 = parametro2;
+
+	list_add(lista,estructura_instrucciones);
+	//free(estructura_instrucciones);
+}
+
 void cerrar_programa4(t_log* logger) {
     log_destroy(logger);
 }
@@ -44,18 +56,21 @@ void enviar_pcb_a_cpu(void* proceso){
 	log_trace(log_kernel,"Entre a enviar pcb a cpu");
 	pcb_t* pcb_proceso = (pcb_t *) proceso;
 
-	uint32_t a = list_size(lista_instrucciones_kernel);
+	//uint32_t a = list_size(lista_instrucciones_kernel);
+	uint32_t b = list_size(pcb_proceso->instrucciones);
 
 	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
 	send_TAM(fd_cpu,pcb_proceso->tamanio);
-	send_cant_instrucciones(fd_cpu,a);
+	//send_cant_instrucciones(fd_cpu,a);
+	send_cant_instrucciones(fd_cpu,b);
 	send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
 	send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
 	send_PC(fd_cpu,pcb_proceso->PC);
 
-	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
+	//lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
+	list_clean(lista_instrucciones_kernel);
 
-	log_trace(log_kernel, "[AAAAAAA] la cant de instrucciones en la lista: %d",a);
+	log_trace(log_kernel, "[AAAAAAA] la cant de instrucciones en la lista: %d",b);
 
 	log_trace(log_kernel,"El PC del proceso %d es: %d",pcb_proceso->PID,pcb_proceso->PC);
 

@@ -274,7 +274,23 @@ void hiloReady_Exe(){
 
 			}
 
-			sem_post(&contadorExe);
+			uint32_t pc;
+			if (!recv_PC(fd_cpu, &pc)) {
+				log_error(log_kernel, "Fallo recibiendo pc");
+			}
+			log_error(log_kernel,"El PC despues del recv es: %d",pc);
+
+			carpinchoAEjecutar->PC = pc;
+
+			terminarEjecucion(carpinchoAEjecutar);
+
+					//	pthread_mutex_unlock(&mutexExe);
+
+
+
+			sem_post(&multiprogramacion);//esto lo agg nosotros
+
+			//sem_post(&contadorExe);
 
 		//	sem_post(&analizarSuspension); // Despues de que un carpincho se va de Ready y hace su transicion, se analiza la suspension
 			//sem_wait(&suspensionFinalizada);
@@ -288,7 +304,7 @@ void hiloReady_Exe(){
 }
 
 //Hilo que maneja de EXE A EXIT
-void hiloExecAExit(){
+/*void hiloExecAExit(){
 	//log_trace(log_kernel,"Entre en hilo exec a exit");
 
 
@@ -297,8 +313,8 @@ void hiloExecAExit(){
 
 				//sem_wait(&multiprocesamiento); //agrego estO VER SI HAY QUE BORRAR
 
-				sem_wait(&contadorExe);
-				sem_wait(&contadorProcesosEnMemoria);
+				//sem_wait(&contadorExe);
+				//sem_wait(&contadorProcesosEnMemoria);
 
 		//	log_trace(log_kernel,"Pase los waits en exec a exit");
 
@@ -329,7 +345,7 @@ void hiloExecAExit(){
 		//	log_trace(log_kernel,"antes de terminar ejecucion");
 
 		//	pthread_mutex_lock(&mutexExe);
-
+lista_instrucciones_kernel
 			terminarEjecucion(proceso);
 
 		//	pthread_mutex_unlock(&mutexExe);
@@ -337,12 +353,13 @@ void hiloExecAExit(){
 
 
 			sem_post(&multiprogramacion);//esto lo agg nosotros
+			sem_post(&contadorProcesosEnMemoria);
 			//sem_post(&multiprocesamiento);
 
 
 
 	}
-	}
+	}*/
 
 // Hilo que maneja la suspension de procesos
 /*void hiloBlockASuspension(){
@@ -457,7 +474,7 @@ pcb_t* obtenerSiguienteDeReady(){
 
 pcb_t* obtenerSiguienteFIFO(){
 
-	log_warning(log_kernel,"Esto en obtenre siguiente fifo");
+	//log_warning(log_kernel,"Esto en obtenre siguiente fifo");
 	pcb_t* carpinchoPlanificado = NULL;
 
 	pthread_mutex_lock(&mutexReady);
@@ -509,6 +526,9 @@ pcb_t* obtenerSiguienteSJF(){
 
 void terminarEjecucion(pcb_t* pcb){
 
+
+
+
 	pthread_mutex_lock(&mutexExit);
 
 	list_add(listaExit, pcb);
@@ -531,5 +551,6 @@ void terminarEjecucion(pcb_t* pcb){
 //	send(fd_memoria, stream, size, 0);
 
 
+	sem_post(&contadorProcesosEnMemoria);
 	free(stream);
 }
