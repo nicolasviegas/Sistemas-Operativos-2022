@@ -29,6 +29,7 @@ void inicializar_semaforos(){
 	sem_init(&contadorExe, 0, 0); // Estado Exe
 	sem_init(&contadorProcesosEnMemoria, 0, 0);    // Memoria IMP HAY QUE VER COMO SE INICIALIZA PORQUE ESTO AFECTA LA DISPONIBILIDAD DE LA COLA READY
 	sem_init(&multiprogramacion, 0, grado_multiprogramacion); // Memoria
+	sem_init(&multiprocesamiento, 0, 1);
 	sem_init(&contadorBlock, 0, 0);
 	sem_init(&largoPlazo, 0, 1);
 	sem_init(&contadorReadySuspended, 0, 0);
@@ -56,7 +57,8 @@ void inicializar_config(){
 
 	  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
 	  grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
-	 // alfa = (float) config_get_double_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT
+	  log_warning(log_kernel,"El grado multi prog es: %d" ,grado_multiprogramacion);
+	  // alfa = (float) config_get_double_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT
 	  tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
 }
 
@@ -79,10 +81,10 @@ void inicializar_listas(){
 
 void inicializar_planificacion(){
 
-	pthread_create(&hiloQueDesuspende, NULL, (void*)hiloSuspensionAReady, NULL);
-	pthread_create(&hiloMedianoPlazo, NULL, (void*)hiloBlockASuspension, NULL);
-	pthread_detach(hiloQueDesuspende);
-	pthread_detach(hiloMedianoPlazo);
+	//pthread_create(&hiloQueDesuspende, NULL, (void*)hiloSuspensionAReady, NULL);
+//	pthread_create(&hiloMedianoPlazo, NULL, (void*)hiloBlockASuspension, NULL);
+//	pthread_detach(hiloQueDesuspende);
+//	pthread_detach(hiloMedianoPlazo);
 
 	pthread_create(&hiloNewReady, NULL, (void*)hiloNew_Ready, NULL);
 	pthread_create(&hiloReady_Exec, NULL, (void*)hiloReady_Exe, NULL);
@@ -116,8 +118,9 @@ int main() {
     //HACER TODAS LAS INICIALIZACIONES
     inicializar_config();
     inicializar_listas();
-    inicializar_planificacion();
     inicializar_semaforos();
+    inicializar_planificacion();
+
 
     ////////////////////
 	log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);

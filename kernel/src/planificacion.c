@@ -35,10 +35,12 @@ void agregarANew(pcb_t* proceso) {
 
 	pthread_mutex_unlock(&mutexNew);
 
-	log_error(log_kernel,"Entre en agregar a NEW ");
+	//log_error(log_kernel,"Entre en agregar a NEW ");
 
-	sem_post(&analizarSuspension); // Despierta al planificador de mediano plazo
-	sem_wait(&suspensionFinalizada); // Espera a que ya se haya hecho, o no, la suspension
+	//sem_post(&analizarSuspension); // Despierta al planificador de mediano plazo
+	//sem_wait(&suspensionFinalizada); // Espera a que ya se haya hecho, o no, la suspension
+
+	//log_error(log_kernel,"despues de suspension finalizada en agregar a NEW ");
 
 	sem_post(&contadorNew); // Despierta al planificador de largo plazo
 	sem_post(&largoPlazo);
@@ -60,7 +62,7 @@ pcb_t* sacarDeNew(){
 }
 
 void agregarAReady(pcb_t* proceso){
-	log_trace(log_kernel,"Entre en agregar a ready");
+	//log_trace(log_kernel,"Entre en agregar a ready");
 
 	time_t a = time(NULL);
 	//proceso->horaDeIngresoAReady = ((float) a)*1000;
@@ -81,7 +83,7 @@ void agregarAReady(pcb_t* proceso){
 }
 
 
-void agregarABlock(pcb_t* proceso){		//ver semaforos
+/*void agregarABlock(pcb_t* proceso){		//ver semaforos
 	log_trace(log_kernel,"Entre en agregar a block ");
 
 	sem_wait(&contadorExe);
@@ -102,15 +104,15 @@ void agregarABlock(pcb_t* proceso){		//ver semaforos
 	log_info(log_kernel, "[BLOCK] Entra el proceso de PID: %d a la cola.", proceso->PID);
 
 	pthread_mutex_unlock(&mutexBlock);
-	//sem_post(&multiprocesamiento);
-	sem_post(&contadorBlock);
+	sem_post(&multiprocesamiento);
+	//sem_post(&contadorBlock);
 
-	sem_post(&analizarSuspension);
+//	sem_post(&analizarSuspension);
 	// como funciona el analizar suspension?
-	sem_wait(&suspensionFinalizada);
-}
+	//sem_wait(&suspensionFinalizada);
+}*/
 
-void sacarDeBlock(pcb_t* proceso){
+/*void sacarDeBlock(pcb_t* proceso){
 
 	sem_wait(&contadorBlock);
 
@@ -129,8 +131,9 @@ void sacarDeBlock(pcb_t* proceso){
 
 	pthread_mutex_unlock(&mutexBlock);
 
-}
+}*/
 
+/*
 void agregarABlockSuspended(pcb_t* pcb){
 	log_trace(log_kernel,"Entre en agregar a block suspended");
 	pthread_mutex_lock(&mutexBlockSuspended);
@@ -155,7 +158,8 @@ void agregarABlockSuspended(pcb_t* pcb){
 
 	free(stream);
 }
-
+*/
+/*
 void sacarDeBlockSuspended(pcb_t* proceso){
 
 	bool tienenMismoPID(void* elemento){
@@ -201,7 +205,7 @@ pcb_t* sacarDeReadySuspended(){
 	pthread_mutex_unlock(&mutexReadySuspended);
 
 	return proceso;
-}
+}*/
 
 // ----------------------------------HILOS---------------------------------------------------//
 
@@ -211,13 +215,13 @@ pcb_t* sacarDeReadySuspended(){
 void hiloNew_Ready(){
 
 	while(1){
-		log_error(log_kernel,"Entre en hilo New Ready");
+		//log_error(log_kernel,"Entre en hilo New Ready");
 		sem_wait(&largoPlazo);
 
-		if(queue_size(colaReadySuspended) != 0){
+		/*if(queue_size(colaReadySuspended) != 0){
 
 			sem_post(&medianoPlazo);
-		}else{
+		}else{*/
 
 			pcb_t* proceso = sacarDeNew();
 
@@ -228,9 +232,9 @@ void hiloNew_Ready(){
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
 			sem_post(&contadorProcesosEnMemoria);
-		}
+		//}
 
-		log_error(log_kernel,"Sali hilo new ready ");
+		//log_error(log_kernel,"Sali hilo new ready ");
 	}
 }
 
@@ -238,14 +242,11 @@ void hiloNew_Ready(){
 void hiloReady_Exe(){
 
 	while(1){
-		log_trace(log_kernel,"Entre en hilo ready exe");
-		//sem_wait(&multiprocesamiento);
+		//log_trace(log_kernel,"Entre en hilo ready exe");
+
+		sem_wait(&multiprocesamiento);
 
 		pcb_t* carpinchoAEjecutar = obtenerSiguienteDeReady();
-
-	/*	int a = list_size(carpinchoAEjecutar->instrucciones);
-		//log_trace(log_kernel,"El tam de la lista de instruc del proceso es: %d",a);
-		printf("El tam de la lista de instruc del proceso a ejecutar es: %d",a);*/
 
 		// Aca se crea un hilo de cpu y se le pasa ese pcb, cuando el carpincho hace mate_close se pasa el pcb a EXIT y se mata el hilo
 
@@ -259,12 +260,14 @@ void hiloReady_Exe(){
 //			pthread_t hiloCPU;
 //			pthread_create(&hiloCPU, NULL, (void*) enviar_pcb_a_cpu, (void*) carpinchoAEjecutar); //Esta funcion ejecutar seria la que se hace en cpu
 //			pthread_detach(hiloCPU);
+
 			enviar_pcb_a_cpu(carpinchoAEjecutar);
 
-			log_info(log_kernel,"Pase el hilo cpu, que tiene la funcion enviar pcb a cpu");
+			//log_info(log_kernel,"Pase el hilo cpu, que tiene la funcion enviar pcb a cpu");
 
 
 			if(algoritmo_config == SRT){
+
 			}else{
 				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", carpinchoAEjecutar->PID);
 
@@ -272,12 +275,12 @@ void hiloReady_Exe(){
 
 			sem_post(&contadorExe);
 
-			sem_post(&analizarSuspension); // Despues de que un carpincho se va de Ready y hace su transicion, se analiza la suspension
-			sem_wait(&suspensionFinalizada);
-			//sem_post(&hilo_sincro_cpu_kernel);
+		//	sem_post(&analizarSuspension); // Despues de que un carpincho se va de Ready y hace su transicion, se analiza la suspension
+			//sem_wait(&suspensionFinalizada);
+
 
 		}else{
-			//sem_post(&multiprocesamiento);
+			sem_post(&multiprocesamiento);
 
 		}
 	}
@@ -289,22 +292,22 @@ void hiloExecAExit(){
 
 
 	while(1){
-		log_trace(log_kernel,"Entre en hilo exec a exit");
+		//log_trace(log_kernel,"Entre en hilo exec a exit");
 
+				//sem_wait(&multiprocesamiento); //agrego estO VER SI HAY QUE BORRAR
 
 				sem_wait(&contadorExe);
 				sem_wait(&contadorProcesosEnMemoria);
-			//sem_wait(&hilo_sincro_cpu_kernel);
 
-			log_trace(log_kernel,"Pase los waits en exec a exit");
+		//	log_trace(log_kernel,"Pase los waits en exec a exit");
 
 
 
 			pcb_t* proceso = list_get(listaExe,0);
-			log_warning(log_kernel, "El pc del proceso de la lista exe(antes de modificar): %d",proceso->PC);
+			//log_warning(log_kernel, "El pc del proceso de la lista exe(antes de modificar): %d",proceso->PC);
 
-			log_warning(log_kernel, "el fd_cpu antes de recv pc es: %d",fd_cpu);
-			log_warning(log_kernel, "el fd_kernel antes de recv pc es: %d",fd_kernel);
+			//log_warning(log_kernel, "el fd_cpu antes de recv pc es: %d",fd_cpu);
+			//log_warning(log_kernel, "el fd_kernel antes de recv pc es: %d",fd_kernel);
 
 			uint32_t pc;
 			if (!recv_PC(fd_cpu, &pc)) {
@@ -315,14 +318,14 @@ void hiloExecAExit(){
 			proceso->PC = pc;
 
 
-			log_trace(log_kernel,"El pc del exit proceso de list_get es: %d",proceso->PC);
+			//log_trace(log_kernel,"El pc del exit proceso de list_get es: %d",proceso->PC);
 
 
 			pthread_mutex_lock(&mutexExe);
 			list_remove(listaExe,0);
 			pthread_mutex_unlock(&mutexExe);
 
-			log_trace(log_kernel,"antes de terminar ejecucion");
+		//	log_trace(log_kernel,"antes de terminar ejecucion");
 
 		//	pthread_mutex_lock(&mutexExe);
 
@@ -332,14 +335,16 @@ void hiloExecAExit(){
 
 
 
-			sem_post(&multiprogramacion);
+			sem_post(&multiprogramacion);//esto lo agg nosotros
+			sem_post(&multiprocesamiento);
+
 
 
 	}
 	}
 
 // Hilo que maneja la suspension de procesos
-void hiloBlockASuspension(){
+/*void hiloBlockASuspension(){
 
 	while(true){
 		log_trace(log_kernel,"Entre en hilo bloq a suspension");
@@ -394,17 +399,17 @@ bool condiciones_de_suspension(){
 	pthread_mutex_lock(&mutexReady);
 	pthread_mutex_lock(&mutexNew);
 
-	bool respuesta = (list_size(listaBlock) != 0 &&
-			list_size(colaReady) == 0 &&
-			queue_size(colaNew) != 0 &&
-			cantidadDeProcesosEnMemoria == grado_multiprogramacion);
+	bool respuesta = (list_size(listaBlock) != 0 && //si hay algun bloqueado
+			list_size(colaReady) == 0 && //si no hay ninguno en ready
+			queue_size(colaNew) != 0 &&//si hay alguno en new
+			cantidadDeProcesosEnMemoria == grado_multiprogramacion); //si en memoria estan
 
 	pthread_mutex_unlock(&mutexNew);
 	pthread_mutex_unlock(&mutexReady);
 	pthread_mutex_unlock(&mutexBlock);
 
 	return respuesta;
-}
+}*/
 
 pcb_t* obtenerSiguienteDeReady(){
 
@@ -458,9 +463,8 @@ pcb_t* obtenerSiguienteFIFO(){
 	carpinchoPlanificado = list_remove(colaReady, 0);
     pthread_mutex_unlock(&mutexReady);
 
+    log_error(log_kernel,"En obtener siguiente fifo el tam de la lista es: %d",list_size(colaReady));
 	return carpinchoPlanificado;
-
-	//FREE??
 }
 
 

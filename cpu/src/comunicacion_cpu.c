@@ -20,7 +20,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 	 uint32_t pid;
 	 uint32_t tam;
-	 uint32_t cant_instrucciones;
+	 uint32_t cant_instrucciones = 0;
 	 uint32_t indice_tabla;
 	 op_code_instrucciones co_op;
 	 uint32_t pc;
@@ -32,6 +32,7 @@ static void procesar_conexion_cpu(void* void_args) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	 while (cliente_socket != -1) {
+
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
 		 		log_error(log_cpu, "Fallo recibiendo pid");
 		 		break;
@@ -172,7 +173,7 @@ static void procesar_conexion_cpu(void* void_args) {
 			 log_info(log_cpu, "DISCONNECT!");
 					return;
 			 }
-			 log_error(log_cpu,"El tam despues del recv es: %d",pc);
+			 log_error(log_cpu,"El PC despues del recv es: %d",pc);
 
 
 
@@ -189,6 +190,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		//log_trace(log_cpu,"El tamanio de la lista de intrucciones en cpu es: %d",list_size(lista_instrucciones_cpu));
 		lista_instrucciones_cpu = list_take_and_remove(lista_instrucciones_cpu,0);
+		//list_clean(lista_instrucciones_cpu);
 
 		/*------------------------------------ACA COMIENZA EL CICLO DE EJECUCION----------------------*/
 		instrucciones* proxima_a_ejecutar = malloc(sizeof(instrucciones)); //hacer un free al final
@@ -215,7 +217,7 @@ static void procesar_conexion_cpu(void* void_args) {
 			//else{}
 		}
 
-		printf("El pc despues de las intrucciones es: %d\n",pcb_proceso_cpu->PC);
+		//printf("El pc despues de las intrucciones es: %d\n",pcb_proceso_cpu->PC);
 
 
 		/*send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
@@ -228,8 +230,10 @@ static void procesar_conexion_cpu(void* void_args) {
 		log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
 		send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
+		log_trace(log_cpu,"Pase el send pc del PID: %d",pcb_proceso_cpu->PID );
 
-		//free(proxima_a_ejecutar);
+
+		free(proxima_a_ejecutar);
 
 		//printf("El tam de la lista pcb cpu una vez terminado un proceso: %d \n",list_size(lista_pcb_cpu));
 

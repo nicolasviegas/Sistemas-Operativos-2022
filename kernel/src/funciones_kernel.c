@@ -55,6 +55,8 @@ void enviar_pcb_a_cpu(void* proceso){
 
 	lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
 
+	log_trace(log_kernel,"El PC del proceso %d es: %d",pcb_proceso->PID,pcb_proceso->PC);
+
 	log_trace(log_kernel,"Sali de enviar pcb a cpu");
 }
 

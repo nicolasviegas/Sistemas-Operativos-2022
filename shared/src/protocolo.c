@@ -638,16 +638,15 @@ void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso
 		int cant_instrucciones = list_size(pcb_proceso->instrucciones);
 		int indice = 0;
 
-		log_error(logger,"El socket dentro de send instrcciones es : %d",fd_cpu);
+		//log_error(logger,"El socket dentro de send instrcciones es : %d",fd_cpu);
 		//log_error(logger,"El tam recibido por parametro a enviar es: %d",tam);
 
 
 
 
 		while(indice < cant_instrucciones){
-			a = list_get(pcb_proceso->instrucciones,indice);
-
 			//log_warning(logger,"El id de las intrucciones en send instrucciones es: %d",a->id);
+			a = list_get(pcb_proceso->instrucciones,indice);
 
 			if(a->id == NO_OP){
 				log_warning(logger,"entre en NO_OP dentro de send_instrucciones");
