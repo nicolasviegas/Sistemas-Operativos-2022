@@ -29,7 +29,7 @@ void inicializar_semaforos(){
 	sem_init(&contadorExe, 0, 0); // Estado Exe
 	sem_init(&contadorProcesosEnMemoria, 0, 0);    // Memoria IMP HAY QUE VER COMO SE INICIALIZA PORQUE ESTO AFECTA LA DISPONIBILIDAD DE LA COLA READY
 	sem_init(&multiprogramacion, 0, grado_multiprogramacion); // Memoria
-	sem_init(&multiprocesamiento, 0, 1);
+	pthread_mutex_init(&multiprocesamiento, NULL);
 	sem_init(&contadorBlock, 0, 0);
 	sem_init(&largoPlazo, 0, 1);
 	sem_init(&contadorReadySuspended, 0, 0);

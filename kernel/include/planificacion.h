@@ -113,7 +113,7 @@ sem_t contadorReady;
 sem_t contadorExe;
 sem_t contadorProcesosEnMemoria;
 sem_t multiprogramacion;
-sem_t multiprocesamiento;
+pthread_mutex_t multiprocesamiento;
 sem_t contadorBlock;
 sem_t analizarSuspension;
 sem_t suspensionFinalizada;

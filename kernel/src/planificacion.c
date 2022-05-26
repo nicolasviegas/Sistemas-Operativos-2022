@@ -244,7 +244,8 @@ void hiloReady_Exe(){
 	while(1){
 		//log_trace(log_kernel,"Entre en hilo ready exe");
 
-		sem_wait(&multiprocesamiento);
+		//sem_wait(&multiprocesamiento);//PONER UN MUTEX ACA
+		pthread_mutex_lock(&multiprocesamiento);
 
 		pcb_t* carpinchoAEjecutar = obtenerSiguienteDeReady();
 
@@ -277,10 +278,10 @@ void hiloReady_Exe(){
 
 		//	sem_post(&analizarSuspension); // Despues de que un carpincho se va de Ready y hace su transicion, se analiza la suspension
 			//sem_wait(&suspensionFinalizada);
-
+			pthread_mutex_unlock(&multiprocesamiento);
 
 		}else{
-			sem_post(&multiprocesamiento);
+			//sem_post(&multiprocesamiento);
 
 		}
 	}
@@ -336,7 +337,7 @@ void hiloExecAExit(){
 
 
 			sem_post(&multiprogramacion);//esto lo agg nosotros
-			sem_post(&multiprocesamiento);
+			//sem_post(&multiprocesamiento);
 
 
 
