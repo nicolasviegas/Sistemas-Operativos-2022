@@ -35,12 +35,14 @@ void agregarANew(pcb_t* proceso) {
 
 	pthread_mutex_unlock(&mutexNew);
 
-	//log_error(log_kernel,"Entre en agregar a NEW ");
+	log_error(log_kernel,"Antes de analizar suspension en agregar a NEW ");
 
-	//sem_post(&analizarSuspension); // Despierta al planificador de mediano plazo
-	//sem_wait(&suspensionFinalizada); // Espera a que ya se haya hecho, o no, la suspension
+	sem_post(&analizarSuspension); // Despierta al planificador de mediano plazo
+	log_error(log_kernel,"Despues del post de analizar suspension en agregar a NEW ");
 
-	//log_error(log_kernel,"despues de suspension finalizada en agregar a NEW ");
+	sem_wait(&suspensionFinalizada); // Espera a que ya se haya hecho, o no, la suspension
+
+	log_error(log_kernel,"despues de suspension finalizada en agregar a NEW ");
 
 	sem_post(&contadorNew); // Despierta al planificador de largo plazo
 	sem_post(&largoPlazo);
@@ -83,10 +85,10 @@ void agregarAReady(pcb_t* proceso){
 }
 
 
-/*void agregarABlock(pcb_t* proceso){		//ver semaforos
+void agregarABlock(pcb_t* proceso){		//ver semaforos
 	log_trace(log_kernel,"Entre en agregar a block ");
-
-	sem_wait(&contadorExe);
+	log_info(log_kernel, "ADSSSS el proceso %d tiene el PC en %d",proceso->PID,proceso->PC);
+	//sem_wait(&contadorExe);
 
 	bool tienenMismoPID(void* elemento){
 
@@ -96,7 +98,7 @@ void agregarAReady(pcb_t* proceso){
 			return false;
 	}
 
-	list_remove_by_condition(listaExe, tienenMismoPID);
+	//list_remove_by_condition(listaExe, tienenMismoPID);
 
 	pthread_mutex_lock(&mutexBlock);
 
@@ -104,15 +106,14 @@ void agregarAReady(pcb_t* proceso){
 	log_info(log_kernel, "[BLOCK] Entra el proceso de PID: %d a la cola.", proceso->PID);
 
 	pthread_mutex_unlock(&mutexBlock);
-	sem_post(&multiprocesamiento);
-	//sem_post(&contadorBlock);
+	sem_post(&contadorBlock);
 
-//	sem_post(&analizarSuspension);
+	sem_post(&analizarSuspension);
 	// como funciona el analizar suspension?
-	//sem_wait(&suspensionFinalizada);
-}*/
+	sem_wait(&suspensionFinalizada);
+}
 
-/*void sacarDeBlock(pcb_t* proceso){
+void sacarDeBlock(pcb_t* proceso){
 
 	sem_wait(&contadorBlock);
 
@@ -131,9 +132,9 @@ void agregarAReady(pcb_t* proceso){
 
 	pthread_mutex_unlock(&mutexBlock);
 
-}*/
+}
 
-/*
+
 void agregarABlockSuspended(pcb_t* pcb){
 	log_trace(log_kernel,"Entre en agregar a block suspended");
 	pthread_mutex_lock(&mutexBlockSuspended);
@@ -158,8 +159,8 @@ void agregarABlockSuspended(pcb_t* pcb){
 
 	free(stream);
 }
-*/
-/*
+
+
 void sacarDeBlockSuspended(pcb_t* proceso){
 
 	bool tienenMismoPID(void* elemento){
@@ -205,7 +206,7 @@ pcb_t* sacarDeReadySuspended(){
 	pthread_mutex_unlock(&mutexReadySuspended);
 
 	return proceso;
-}*/
+}
 
 // ----------------------------------HILOS---------------------------------------------------//
 
@@ -218,10 +219,10 @@ void hiloNew_Ready(){
 		//log_error(log_kernel,"Entre en hilo New Ready");
 		sem_wait(&largoPlazo);
 
-		/*if(queue_size(colaReadySuspended) != 0){
+		if(queue_size(colaReadySuspended) != 0){
 
 			sem_post(&medianoPlazo);
-		}else{*/
+		}else{
 
 			pcb_t* proceso = sacarDeNew();
 
@@ -232,7 +233,7 @@ void hiloNew_Ready(){
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
 			sem_post(&contadorProcesosEnMemoria);
-		//}
+		}
 
 		//log_error(log_kernel,"Sali hilo new ready ");
 	}
@@ -244,7 +245,6 @@ void hiloReady_Exe(){
 	while(1){
 		//log_trace(log_kernel,"Entre en hilo ready exe");
 
-		//sem_wait(&multiprocesamiento);//PONER UN MUTEX ACA
 		pthread_mutex_lock(&multiprocesamiento);
 
 		pcb_t* carpinchoAEjecutar = obtenerSiguienteDeReady();
@@ -253,18 +253,11 @@ void hiloReady_Exe(){
 
 		if(carpinchoAEjecutar != NULL) {
 
-			pthread_mutex_lock(&mutexExe);
+			/*pthread_mutex_lock(&mutexExe);
 			list_add(listaExe, carpinchoAEjecutar);
-			pthread_mutex_unlock(&mutexExe);
+			pthread_mutex_unlock(&mutexExe);*/
 
 			////////////////////////////// VER COMO HACER PARA QUE LO HAGA CPU Y NO KERNEL (HAY QUE ENVIAR A CPU Y QUE EL EJECUTE)
-//			pthread_t hiloCPU;
-//			pthread_create(&hiloCPU, NULL, (void*) enviar_pcb_a_cpu, (void*) carpinchoAEjecutar); //Esta funcion ejecutar seria la que se hace en cpu
-//			pthread_detach(hiloCPU);
-
-			enviar_pcb_a_cpu(carpinchoAEjecutar);
-
-			//log_info(log_kernel,"Pase el hilo cpu, que tiene la funcion enviar pcb a cpu");
 
 
 			if(algoritmo_config == SRT){
@@ -273,6 +266,7 @@ void hiloReady_Exe(){
 				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", carpinchoAEjecutar->PID);
 
 			}
+			enviar_pcb_a_cpu(carpinchoAEjecutar);
 
 			uint32_t pc;
 			if (!recv_PC(fd_cpu, &pc)) {
@@ -282,112 +276,75 @@ void hiloReady_Exe(){
 
 			carpinchoAEjecutar->PC = pc;
 
-			uint32_t tiempo_bloq;
-			if (!recv_PC(fd_cpu, &tiempo_bloq)) {
+			//uint32_t tiempo_bloq_kernel;
+			if (!recv_tiempo_bloqueante(fd_cpu, &tiempo_bloq_kernel)) {
 				log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
 			}
-			log_error(log_kernel,"El tiempo bloqueante despues del recv es: %d",tiempo_bloq);
+			log_error(log_kernel,"El tiempo bloqueante despues del recv es: %d",tiempo_bloq_kernel);
 
-			if(tiempo_bloq > 0){
+			carpinchoAEjecutar->tiempo_bloqueo = tiempo_bloq_kernel;
 
+			if(tiempo_bloq_kernel > 0){
+				agregarABlock(carpinchoAEjecutar);
+				sem_post(&analizarSuspension); // Despues de que un carpincho se va de Ready y hace su transicion, se analiza la suspension
+				sem_wait(&suspensionFinalizada);
 			}else{
+
 				terminarEjecucion(carpinchoAEjecutar);
-
 			}
-
-
 
 			sem_post(&multiprogramacion);//esto lo agg nosotros
 
-			//sem_post(&contadorExe);
-
-		//	sem_post(&analizarSuspension); // Despues de que un carpincho se va de Ready y hace su transicion, se analiza la suspension
-			//sem_wait(&suspensionFinalizada);
 			pthread_mutex_unlock(&multiprocesamiento);
 
 		}else{
-			//sem_post(&multiprocesamiento);
+
 
 		}
 	}
 }
 
-//Hilo que maneja de EXE A EXIT
-/*void hiloExecAExit(){
-	//log_trace(log_kernel,"Entre en hilo exec a exit");
-
-
-	while(1){
-		//log_trace(log_kernel,"Entre en hilo exec a exit");
-
-				//sem_wait(&multiprocesamiento); //agrego estO VER SI HAY QUE BORRAR
-
-				//sem_wait(&contadorExe);
-				//sem_wait(&contadorProcesosEnMemoria);
-
-		//	log_trace(log_kernel,"Pase los waits en exec a exit");
-
-
-
-			pcb_t* proceso = list_get(listaExe,0);
-			//log_warning(log_kernel, "El pc del proceso de la lista exe(antes de modificar): %d",proceso->PC);
-
-			//log_warning(log_kernel, "el fd_cpu antes de recv pc es: %d",fd_cpu);
-			//log_warning(log_kernel, "el fd_kernel antes de recv pc es: %d",fd_kernel);
-
-			uint32_t pc;
-			if (!recv_PC(fd_cpu, &pc)) {
-				log_error(log_kernel, "Fallo recibiendo pc");
-			}
-			log_error(log_kernel,"El PC despues del recv es: %d",pc);
-
-			proceso->PC = pc;
-
-
-			//log_trace(log_kernel,"El pc del exit proceso de list_get es: %d",proceso->PC);
-
-
-			pthread_mutex_lock(&mutexExe);
-			list_remove(listaExe,0);
-			pthread_mutex_unlock(&mutexExe);
-
-		//	log_trace(log_kernel,"antes de terminar ejecucion");
-
-		//	pthread_mutex_lock(&mutexExe);
-lista_instrucciones_kernel
-			terminarEjecucion(proceso);
-
-		//	pthread_mutex_unlock(&mutexExe);
-
-
-
-			sem_post(&multiprogramacion);//esto lo agg nosotros
-			sem_post(&contadorProcesosEnMemoria);
-			//sem_post(&multiprocesamiento);
-
-
-
-	}
-	}*/
 
 // Hilo que maneja la suspension de procesos
-/*void hiloBlockASuspension(){
+void hiloBlockASuspension(){
 
 	while(true){
-		log_trace(log_kernel,"Entre en hilo bloq a suspension");
+
 		sem_wait(&analizarSuspension);
 
-		if(condiciones_de_suspension()){  //ESTO EVALUA SI HAY QUE BLOQUEARLO O  NO DEPENDIENDO DEL GRADO DE MULTIPROGRAMACION
+		log_trace(log_kernel,"Entre en hilo bloq a suspension");
 
-			sem_wait(&contadorProcesosEnMemoria);
 
-			pcb_t* pcb = list_get(listaBlock, list_size(listaBlock) - 1);
+
+		//if(condiciones_de_suspension()){ // si el tiempo de bloqueo es > al del config hay que suspenderlo
+		if(list_size(listaBlock) != 0){
+
+			pcb_t* pcb = list_get(listaBlock,0);
 			sacarDeBlock(pcb);
 
-			agregarABlockSuspended(pcb);
+			if(pcb->tiempo_bloqueo <= tiempo_max_bloqueado){
 
-			sem_post(&multiprogramacion);
+						log_info(log_kernel,"[HILO BLOCK A SUSP] antes del usleep feliz, se va dormir %d milisegs, ",pcb->tiempo_bloqueo);
+
+						sleep(pcb->tiempo_bloqueo/1000); //CHEQUEAR EL USLEEP
+
+						//sem_post(&medianoPlazo); //esto para desbloquear el hilo suspension a ready
+
+						agregarAReady(pcb);
+
+
+						//sem_post(&multiprogramacion);
+					}else{//sino solo lo bloqueo y lo devuelvo a ready
+
+						//pcb_t* pcb = list_get(listaBlock, list_size(listaBlock) - 1);
+									//sacarDeBlock(pcb);
+
+						//sem_wait(&contadorProcesosEnMemoria);
+						//agregarABlockSuspended(pcb);
+					}
+
 		}
+
 
 		sem_post(&suspensionFinalizada);
 	}
@@ -426,17 +383,14 @@ bool condiciones_de_suspension(){
 	pthread_mutex_lock(&mutexReady);
 	pthread_mutex_lock(&mutexNew);
 
-	bool respuesta = (list_size(listaBlock) != 0 && //si hay algun bloqueado
-			list_size(colaReady) == 0 && //si no hay ninguno en ready
-			queue_size(colaNew) != 0 &&//si hay alguno en new
-			cantidadDeProcesosEnMemoria == grado_multiprogramacion); //si en memoria estan
+	bool respuesta = false; //si en memoria estan
 
 	pthread_mutex_unlock(&mutexNew);
 	pthread_mutex_unlock(&mutexReady);
 	pthread_mutex_unlock(&mutexBlock);
 
 	return respuesta;
-}*/
+}
 
 pcb_t* obtenerSiguienteDeReady(){
 

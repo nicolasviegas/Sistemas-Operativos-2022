@@ -81,17 +81,16 @@ void inicializar_listas(){
 
 void inicializar_planificacion(){
 
-	//pthread_create(&hiloQueDesuspende, NULL, (void*)hiloSuspensionAReady, NULL);
-//	pthread_create(&hiloMedianoPlazo, NULL, (void*)hiloBlockASuspension, NULL);
-//	pthread_detach(hiloQueDesuspende);
-//	pthread_detach(hiloMedianoPlazo);
+	pthread_create(&hiloQueDesuspende, NULL, (void*)hiloSuspensionAReady, NULL);
+	pthread_create(&hiloMedianoPlazo, NULL, (void*)hiloBlockASuspension, NULL);
+	pthread_detach(hiloQueDesuspende);
+	pthread_detach(hiloMedianoPlazo);
 
 	pthread_create(&hiloNewReady, NULL, (void*)hiloNew_Ready, NULL);
 	pthread_create(&hiloReady_Exec, NULL, (void*)hiloReady_Exe, NULL);
-	//pthread_create(&hiloExec_Exit,NULL, (void*)hiloExecAExit,NULL);
 	pthread_detach(hiloNewReady);
 	pthread_detach(hiloReady_Exec);
-//	pthread_detach(hiloExec_Exit);
+
 
 }
 

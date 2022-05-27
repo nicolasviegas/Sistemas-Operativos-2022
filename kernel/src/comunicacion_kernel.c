@@ -17,11 +17,6 @@ static void procesar_conexion_kernel(void* void_args) {
     char* server_name = args->server_name;
     free(args);
 
-  /*  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
-    grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
-    float alfa = (float) config_get_double_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT*/
-
-  //  uint32_t alfa = atoi(alfa_char); //////////////////////////////////CAMBIAR NO ES ASI HAY QUE SACARLO DE CONFIG, LO USO ASI AHORA PARA VER SI FUNCIONA ////////////////////////////////////////
 
     uint32_t tam;
     if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -34,6 +29,7 @@ static void procesar_conexion_kernel(void* void_args) {
 
     op_code_instrucciones cop;
     t_list* lista_intrucciones_1 = list_create();
+   // lista_intrucciones_1 = malloc(sizeof(t_list)); //LIBERAR ABAJO DEL TODO
     while (cliente_socket != -1) {
 
 
@@ -79,6 +75,7 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso->horaDeIngresoAExe;
         	pcb_proceso->tiempoEspera;
         	pcb_proceso-> suspendido = false;
+        	pcb_proceso->tiempo_bloqueo = 0;
 
         	//////////////////////////////////////////////////////////////////////////////////////////////////////
         /*	if(list_size(lista_pcb_en_memoria) <= grado_multiprogramacion ){

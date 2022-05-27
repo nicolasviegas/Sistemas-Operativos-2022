@@ -634,19 +634,20 @@ bool recv_PC(int fd, uint32_t* parametro1) {
 
 
 void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso){
-		instrucciones* a = malloc(sizeof(instrucciones));
+		printf("[SEND INSTRUCCIONES KERNEL A CPU] cantidad de instrucciones: %d \n",list_size(pcb_proceso->instrucciones));
+		//instrucciones* a = malloc(sizeof(instrucciones));
+		instrucciones* a;
 		int cant_instrucciones = list_size(pcb_proceso->instrucciones);
 		int indice = 0;
 
 		//log_error(logger,"El socket dentro de send instrcciones es : %d",fd_cpu);
 		//log_error(logger,"El tam recibido por parametro a enviar es: %d",tam);
 
-
-
-
 		while(indice < cant_instrucciones){
 			//log_warning(logger,"El id de las intrucciones en send instrucciones es: %d",a->id);
 			a = list_get(pcb_proceso->instrucciones,indice);
+
+			printf("[SEND INSTRUCCIONES KERNEL A CPU] la instruccion es: %s \n",a->nombre);
 
 			if(a->id == NO_OP){
 				log_warning(logger,"entre en NO_OP dentro de send_instrucciones");
@@ -671,7 +672,7 @@ void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso
 				log_warning(logger,"entre en WRITE dentro de send_instrucciones");
 				send_WRITE(fd_cpu,a->parametro1,a->parametro2);
 			}
-			else if(a->id == EXIT){
+			else if(a->id == EXIT || a->nombre == "EXIT" ){
 				log_warning(logger,"Entre en EXIT dentro de send_instrucciones");
 				send_EXIT(fd_cpu);
 			}

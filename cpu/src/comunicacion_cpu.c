@@ -86,7 +86,7 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	      }
 
 					            log_warning(log_cpu, "Deserialice NO_OP el parametro es: %d",parametro1);
-					             	 cargar_instruccion_cpu(NO_OP,"NO_OP",parametro1,NULL);
+					             	 cargar_instruccion_cpu(NO_OP,"NO_OP",parametro1,(uint32_t)NULL);
 
 
 					                // log_info(log_kernel, "entre al case NO_OP");
@@ -100,7 +100,7 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	     log_error(log_cpu, "Fallo recibiendo IO");
 					             	     break;
 					             	}
-					             	cargar_instruccion_cpu(IO,"I\O",parametro1,NULL);
+					             	cargar_instruccion_cpu(IO,"I\O",parametro1,(uint32_t)NULL);
 					             	log_warning(log_cpu, "Deserialice IO el parametro es: %d",parametro1);
 					             	//log_info(log_kernel, "entre a IO");
 
@@ -115,7 +115,7 @@ static void procesar_conexion_cpu(void* void_args) {
 					         	     log_error(log_cpu, "Fallo recibiendo READ");
 					         	     break;
 					         	}
-					             	cargar_instruccion_cpu(READ,"READ",parametro1,NULL);
+					             	cargar_instruccion_cpu(READ,"READ",parametro1,(uint32_t)NULL);
 					         	log_warning(log_cpu, "Deserialice READ el parametro es: %d",parametro1);
 					         	//log_info(log_kernel, "entre a IO");
 					         	break;
@@ -150,7 +150,7 @@ static void procesar_conexion_cpu(void* void_args) {
 					 			}
 					             case EXIT:
 					             {
-					            	 cargar_instruccion_cpu(EXIT,"EXIT",NULL,NULL);
+					            	 cargar_instruccion_cpu(EXIT,"EXIT",(uint32_t)NULL,(uint32_t)NULL);
 					             	log_warning(log_cpu, "Entre en EXIT");
 
 					 				break;
@@ -188,9 +188,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		list_add(lista_pcb_cpu,pcb_proceso_cpu);
 
-		//log_trace(log_cpu,"El tamanio de la lista de intrucciones en cpu es: %d",list_size(lista_instrucciones_cpu));
 		lista_instrucciones_cpu = list_take_and_remove(lista_instrucciones_cpu,0);
-		//list_clean(lista_instrucciones_cpu);
 
 		/*------------------------------------ACA COMIENZA EL CICLO DE EJECUCION----------------------*/
 		instrucciones* proxima_a_ejecutar = malloc(sizeof(instrucciones)); //hacer un free al final
@@ -206,7 +204,7 @@ static void procesar_conexion_cpu(void* void_args) {
 		//////////////////////////////////////////
 
 		/*-------------------------------------------------------------------------------------------------------*/
-
+		tiempo_bloqueante = 0;
 		while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones) && tiempo_bloqueante == 0){//la interrupcion verla segun el puerto interrupt
 		log_error(log_cpu,"Entre en el while de interrupcion");
 		proxima_a_ejecutar = fetch(pcb_proceso_cpu);
@@ -220,12 +218,6 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		//printf("El pc despues de las intrucciones es: %d\n",pcb_proceso_cpu->PC);
 
-
-		/*send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
-			send_TAM(fd_cpu,pcb_proceso->tamanio);
-			send_cant_instrucciones(fd_cpu,a);
-			send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
-			send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);*/
 
 		log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
 		log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);

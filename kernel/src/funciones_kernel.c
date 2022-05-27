@@ -51,10 +51,10 @@ void pedir_tabla_a_memoria(){
 }
 
 
-void enviar_pcb_a_cpu(void* proceso){
+void enviar_pcb_a_cpu(pcb_t* pcb_proceso){
 
 	log_trace(log_kernel,"Entre a enviar pcb a cpu");
-	pcb_t* pcb_proceso = (pcb_t *) proceso;
+	//pcb_t* pcb_proceso = (pcb_t *) proceso;
 
 	//uint32_t a = list_size(lista_instrucciones_kernel);
 	uint32_t b = list_size(pcb_proceso->instrucciones);

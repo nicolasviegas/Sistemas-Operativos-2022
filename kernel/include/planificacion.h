@@ -39,6 +39,7 @@ typedef struct{
 	clock_t horaDeIngresoAExe;
 	clock_t tiempoEspera;
 	bool suspendido;
+	uint32_t tiempo_bloqueo;
 }pcb_t;
 
 typedef enum{
@@ -46,7 +47,7 @@ typedef enum{
 	FIFO
 }t_algoritmo_planificacion;
 
-
+uint32_t tiempo_bloq_kernel;
 
 t_list* lista_pcb_en_memoria;
 t_list* lista_pcb_totales;
@@ -121,7 +122,8 @@ sem_t largoPlazo;
 sem_t contadorReadySuspended;
 sem_t medianoPlazo;
 
-void enviar_pcb_a_cpu(void* pcb_proceso);
+//void enviar_pcb_a_cpu(void* pcb_proceso);
+void enviar_pcb_a_cpu(pcb_t* pcb_proceso);
 
 
 #endif /* KERNEL_INCLUDE_PLANIFICACION_H_ */
