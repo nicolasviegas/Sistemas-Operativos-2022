@@ -295,9 +295,10 @@ void hiloReady_Exe(){
 			}else{
 
 				terminarEjecucion(carpinchoAEjecutar);
+				sem_post(&multiprogramacion);//esto lo agg nosotros
 			}
 
-			sem_post(&multiprogramacion);//esto lo agg nosotros
+
 
 			pthread_mutex_unlock(&multiprocesamiento);
 
