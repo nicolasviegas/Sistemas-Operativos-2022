@@ -28,7 +28,7 @@ static void procesar_conexion_cpu(void* void_args) {
 	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	 log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
 	 printf("El cliente socket en cpu.c es : %d\n",cliente_socket);
-	 fd_kernel = cliente_socket;/////////////////////////////////////////////HARDCODEADO, PREGUNTAR
+	 fd_kernel = cliente_socket;/////////////////////////////////////////////todo HARDCODEADO, PREGUNTAR
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	 while (cliente_socket != -1) {
@@ -37,26 +37,26 @@ static void procesar_conexion_cpu(void* void_args) {
 		 		log_error(log_cpu, "Fallo recibiendo pid");
 		 		break;
 		 }
-		 log_error(log_cpu,"El pid despues del recv es: %d",pid);
+		 log_trace(log_cpu,"El pid despues del recv es: %d",pid);
 
 
 		 if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
 		 log_info(log_kernel, "DISCONNECT!");
 		 		return;
 		 }
-		 log_error(log_cpu,"El tam despues del recv es: %d",tam);
+		 log_trace(log_cpu,"El tam despues del recv es: %d",tam);
 
 		 if (!recv_cant_instrucciones(cliente_socket, &cant_instrucciones)) {
 		 	 	log_error(log_cpu, "Fallo recibiendo cant_instrucciones");
 
 		 	 }
-		 log_error(log_cpu,"cant_instrucciones despues del recv es: %d",cant_instrucciones);
+		 log_trace(log_cpu,"cant_instrucciones despues del recv es: %d",cant_instrucciones);
 
 		 if (!recv_indice_tabla_paginas_a_cpu(cliente_socket, &indice_tabla)) {//FALTA HACER LA PARTE DE MEMORIA
 				 log_error(log_cpu, "Fallo recibiendo indice tabla paginas");
 
 			}
-		log_error(log_cpu,"indice tabla pags despues del recv es: %d",indice_tabla);
+		 log_trace(log_cpu,"indice tabla pags despues del recv es: %d",indice_tabla);
 
 
 		for(int i = 0; i<cant_instrucciones;i++){
@@ -173,7 +173,7 @@ static void procesar_conexion_cpu(void* void_args) {
 			 log_info(log_cpu, "DISCONNECT!");
 					return;
 			 }
-			 log_error(log_cpu,"El PC despues del recv es: %d",pc);
+		 log_trace(log_cpu,"El PC despues del recv es: %d",pc);
 
 
 
@@ -206,7 +206,7 @@ static void procesar_conexion_cpu(void* void_args) {
 		/*-------------------------------------------------------------------------------------------------------*/
 		tiempo_bloqueante = 0;
 		while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones) && tiempo_bloqueante == 0){//la interrupcion verla segun el puerto interrupt
-		log_error(log_cpu,"Entre en el while de interrupcion");
+		log_trace(log_cpu,"Entre en el while de interrupcion");
 		proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);//VER SI VA CON & O NO
 		log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
@@ -222,7 +222,7 @@ static void procesar_conexion_cpu(void* void_args) {
 		log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
 		log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
 		send_PC(fd_kernel,pcb_proceso_cpu->PC);
-		log_info(log_cpu,"[ASSSSSS] el tiempo bloqueante antes de mandarlo es: %d ",tiempo_bloqueante);
+		log_debug(log_cpu,"El tiempo bloqueante antes de mandarlo es: %d ",tiempo_bloqueante);
 		send_tiempo_bloqueante(fd_kernel,tiempo_bloqueante);
 
 		log_trace(log_cpu,"Pase el send pc del PID: %d",pcb_proceso_cpu->PID );

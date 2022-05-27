@@ -35,14 +35,14 @@ void agregarANew(pcb_t* proceso) {
 
 	pthread_mutex_unlock(&mutexNew);
 
-	log_error(log_kernel,"Antes de analizar suspension en agregar a NEW ");
+	log_trace(log_kernel,"Antes de analizar suspension en agregar a NEW ");
 
 	sem_post(&analizarSuspension); // Despierta al planificador de mediano plazo
-	log_error(log_kernel,"Despues del post de analizar suspension en agregar a NEW ");
+	log_trace(log_kernel,"Despues del post de analizar suspension en agregar a NEW ");
 
 	sem_wait(&suspensionFinalizada); // Espera a que ya se haya hecho, o no, la suspension
 
-	log_error(log_kernel,"despues de suspension finalizada en agregar a NEW ");
+	log_trace(log_kernel,"despues de suspension finalizada en agregar a NEW ");
 
 	sem_post(&contadorNew); // Despierta al planificador de largo plazo
 	sem_post(&largoPlazo);
@@ -77,7 +77,8 @@ void agregarAReady(pcb_t* proceso){
 
 	log_info(log_kernel, "[READY] Entra el proceso de PID: %d a la cola.", proceso->PID);
 
-	printf("PROCESOS EN READY: %d \n", list_size(colaReady));
+	//printf("PROCESOS EN READY: %d \n", list_size(colaReady));
+	log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
 
 	pthread_mutex_unlock(&mutexReady);
 	sem_post(&contadorReady);
@@ -251,14 +252,14 @@ void hiloReady_Exe(){
 
 		pthread_mutex_lock(&multiprocesamiento);
 
-		pcb_t* carpinchoAEjecutar = obtenerSiguienteDeReady();
+		pcb_t* procesoAEjecutar = obtenerSiguienteDeReady();
 
-		// Aca se crea un hilo de cpu y se le pasa ese pcb, cuando el carpincho hace mate_close se pasa el pcb a EXIT y se mata el hilo
+		// Aca se crea un hilo de cpu y se le pasa ese pcb, cuando el proceso hace mate_close se pasa el pcb a EXIT y se mata el hilo
 
-		if(carpinchoAEjecutar != NULL) {
+		if(procesoAEjecutar != NULL) {
 
 			/*pthread_mutex_lock(&mutexExe);
-			list_add(listaExe, carpinchoAEjecutar);
+			list_add(listaExe, procesoAEjecutar);
 			pthread_mutex_unlock(&mutexExe);*/
 
 			////////////////////////////// VER COMO HACER PARA QUE LO HAGA CPU Y NO KERNEL (HAY QUE ENVIAR A CPU Y QUE EL EJECUTE)
@@ -267,34 +268,34 @@ void hiloReady_Exe(){
 			if(algoritmo_config == SRT){
 
 			}else{
-				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", carpinchoAEjecutar->PID);
+				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", procesoAEjecutar->PID);
 
 			}
-			enviar_pcb_a_cpu(carpinchoAEjecutar);
+			enviar_pcb_a_cpu(procesoAEjecutar);
 
 			uint32_t pc;
 			if (!recv_PC(fd_cpu, &pc)) {
 				log_error(log_kernel, "Fallo recibiendo pc");
 			}
-			log_error(log_kernel,"El PC despues del recv es: %d",pc);
+			log_trace(log_kernel,"El PC despues del recv es: %d",pc);
 
-			carpinchoAEjecutar->PC = pc;
+			procesoAEjecutar->PC = pc;
 
 			//uint32_t tiempo_bloq_kernel;
 			if (!recv_tiempo_bloqueante(fd_cpu, &tiempo_bloq_kernel)) {
 				log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
 			}
-			log_error(log_kernel,"El tiempo bloqueante despues del recv es: %d",tiempo_bloq_kernel);
+			log_trace(log_kernel,"El tiempo bloqueante despues del recv es: %d",tiempo_bloq_kernel);
 
-			carpinchoAEjecutar->tiempo_bloqueo = tiempo_bloq_kernel;
+			procesoAEjecutar->tiempo_bloqueo = tiempo_bloq_kernel;
 
 			if(tiempo_bloq_kernel > 0){
-				agregarABlock(carpinchoAEjecutar);
-				sem_post(&analizarSuspension); // Despues de que un carpincho se va de Ready y hace su transicion, se analiza la suspension
+				agregarABlock(procesoAEjecutar);
+				sem_post(&analizarSuspension); // Despues de que un proceso se va de Ready y hace su transicion, se analiza la suspension
 				sem_wait(&suspensionFinalizada);
 			}else{
 
-				terminarEjecucion(carpinchoAEjecutar);
+				terminarEjecucion(procesoAEjecutar);
 				sem_post(&multiprogramacion);//esto lo agg nosotros
 			}
 
@@ -404,7 +405,7 @@ pcb_t* obtenerSiguienteDeReady(){
 	log_trace(log_kernel,"Entre en obtener sig de ready");
 	sem_wait(&contadorReady);
 
-	pcb_t* carpinchoPlanificado = NULL;
+	pcb_t* procesoPlanificado = NULL;
 
 	int tamanioDeColaReady(){
 
@@ -426,12 +427,12 @@ pcb_t* obtenerSiguienteDeReady(){
 			//	log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
 				//CASO FIFO
 				case FIFO:
-					carpinchoPlanificado = obtenerSiguienteFIFO();
+					procesoPlanificado = obtenerSiguienteFIFO();
 				break;
 
 				//CASO SJF sin desalojo
 				case SRT:
-					carpinchoPlanificado = obtenerSiguienteSJF();
+					procesoPlanificado = obtenerSiguienteSJF();
 				break;
 
 			  }
@@ -439,59 +440,61 @@ pcb_t* obtenerSiguienteDeReady(){
 
 	// Devuelve NULL si no hay nada en ready
 	// Caso contrario devuelve el que tiene mas prioridad segun el algoritmo que se este empleando
-	return carpinchoPlanificado;
+	return procesoPlanificado;
 }
 
 pcb_t* obtenerSiguienteFIFO(){
 
 	//log_warning(log_kernel,"Esto en obtenre siguiente fifo");
-	pcb_t* carpinchoPlanificado = NULL;
+	pcb_t* procesoPlanificado = NULL;
 
 	pthread_mutex_lock(&mutexReady);
-	carpinchoPlanificado = list_remove(colaReady, 0);
+	procesoPlanificado = list_remove(colaReady, 0);
     pthread_mutex_unlock(&mutexReady);
 
-    log_error(log_kernel,"En obtener siguiente fifo el tam de la lista es: %d",list_size(colaReady));
-	return carpinchoPlanificado;
+    //log_trace(log_kernel,"En obtener siguiente fifo el tam de la lista es: %d",list_size(colaReady));
+	return procesoPlanificado;
 }
 
 
 pcb_t* obtenerSiguienteSJF(){
 
-	pcb_t* carpinchoPlanificado = NULL;
-	pcb_t* carpinchoAux = NULL;
+	pcb_t* procesoPlanificado = NULL;
+	pcb_t* procesoAux = NULL;
     int i;
 	int indexARemover;
 	float shortestJob;
 
 	pthread_mutex_lock(&mutexReady);
-	carpinchoAux = list_get(colaReady,0);
+	procesoAux = list_get(colaReady,0);
 	pthread_mutex_unlock(&mutexReady);
 
 	indexARemover = 0;
-	shortestJob = carpinchoAux->estimacionActual;
+	shortestJob = procesoAux->estimacionActual;
 
 	//itero por la lista de Ready
 	//sem_wait(&contadorReady);
 	pthread_mutex_lock(&mutexReady);
 
-	printf("PROCESOS EN READY: %d \n", list_size(colaReady));
+	//printf("[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
+
+	log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
 
     for(i=1;i<list_size(colaReady);i++){
-    	carpinchoAux = list_get(colaReady,i);
+    	procesoAux = list_get(colaReady,i);
 
-    	if(shortestJob > carpinchoAux->estimacionActual){
-    		shortestJob = carpinchoAux->estimacionActual;
+    	if(shortestJob > procesoAux->estimacionActual){
+    		shortestJob = procesoAux->estimacionActual;
     		indexARemover = i;
     	}
 
     }
 
-    carpinchoPlanificado = list_remove(colaReady, indexARemover);
+    procesoPlanificado = list_remove(colaReady, indexARemover);
 
     pthread_mutex_unlock(&mutexReady);
 
-	return carpinchoPlanificado;
+	return procesoPlanificado;
 }
 
 void terminarEjecucion(pcb_t* pcb){
@@ -502,7 +505,7 @@ void terminarEjecucion(pcb_t* pcb){
 	pthread_mutex_lock(&mutexExit);
 
 	list_add(listaExit, pcb);
-	log_info(log_kernel, "[EXIT] Finaliza el carpincho de PID: %d", pcb->PID);
+	log_info(log_kernel, "[EXIT] Finaliza el proceso de PID: %d", pcb->PID);
 
 	pthread_mutex_unlock(&mutexExit);
 

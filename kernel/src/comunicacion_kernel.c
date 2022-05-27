@@ -49,7 +49,7 @@ static void procesar_conexion_kernel(void* void_args) {
         	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
         	            	     break;
         	}
-        	log_error(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
+        	log_trace(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
