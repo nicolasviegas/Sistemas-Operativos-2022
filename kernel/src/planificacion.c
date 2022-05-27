@@ -282,9 +282,18 @@ void hiloReady_Exe(){
 
 			carpinchoAEjecutar->PC = pc;
 
-			terminarEjecucion(carpinchoAEjecutar);
+			uint32_t tiempo_bloq;
+			if (!recv_PC(fd_cpu, &tiempo_bloq)) {
+				log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+			}
+			log_error(log_kernel,"El tiempo bloqueante despues del recv es: %d",tiempo_bloq);
 
-					//	pthread_mutex_unlock(&mutexExe);
+			if(tiempo_bloq > 0){
+
+			}else{
+				terminarEjecucion(carpinchoAEjecutar);
+
+			}
 
 
 

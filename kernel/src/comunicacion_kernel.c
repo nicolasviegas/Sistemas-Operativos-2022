@@ -137,7 +137,7 @@ static void procesar_conexion_kernel(void* void_args) {
                // log_info(log_kernel, "entre al case NO_OP");
                 break;
             }
-            /*case IO:
+            case IO:
             {
             	uint32_t parametro1;
 
@@ -145,14 +145,15 @@ static void procesar_conexion_kernel(void* void_args) {
             	     log_error(log_kernel, "Fallo recibiendo IO");
             	     break;
             	}
-            	cargar_instruccion(IO,"I\O",parametro1,NULL);
+            	//cargar_instruccion(IO,"I\O",parametro1,NULL);
+            	cargar_instruccion2(IO,"I\O",parametro1,NULL,lista_intrucciones_1);
             	log_warning(log_kernel, "Deserialice IO el parametro es: %d",parametro1);
             	//log_info(log_kernel, "entre a IO");
 
 
             	break;
             }
-            case READ:
+           /* case READ:
             {
             	uint32_t parametro1;
 

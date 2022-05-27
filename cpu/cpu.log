@@ -36679,3 +36679,753 @@
 [TRACE] 20:11:59:673 cpu/(2443:2468): Sali de los recv
 [ERROR] 20:12:11:980 cpu/(2443:2468): Fallo recibiendo pid
 [WARNING] 20:12:11:981 cpu/(2443:2468): El cliente se desconecto de CPU server 
+[INFO] 20:13:53:499 cpu/(2902:2902): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 20:13:53:499 cpu/(2902:2902): El socket en cpu.c es : 4
+[INFO] 20:13:53:500 cpu/(2902:2902): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 20:13:53:500 cpu/(2902:2902): El fd_memoria despues de grar conexiones es: 5
+[INFO] 20:13:57:122 cpu/(2902:2902): Cliente conectado (a CPU)
+
+[TRACE] 20:13:57:122 cpu/(2902:2914): El socket de kernel en cpu.c es : 0
+[ERROR] 20:14:03:455 cpu/(2902:2914): El pid despues del recv es: 1
+[ERROR] 20:14:03:455 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:03:455 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:03:455 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:03:455 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:03:455 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:03:455 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:03:455 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:03:455 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:08:457 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:08:457 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:08:457 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:08:457 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:08:457 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:08:457 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:08:457 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:08:457 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:08:457 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:08:458 cpu/(2902:2914): Pase el send pc del PID: 1
+[TRACE] 20:14:08:458 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:08:458 cpu/(2902:2914): El pid despues del recv es: 2
+[ERROR] 20:14:08:458 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:08:458 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:08:458 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:08:458 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:08:458 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:08:458 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:08:458 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:08:458 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:13:461 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:13:461 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:13:461 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:13:461 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:13:461 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:13:461 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:13:461 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:13:461 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:13:461 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:13:461 cpu/(2902:2914): Pase el send pc del PID: 2
+[TRACE] 20:14:13:462 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:13:462 cpu/(2902:2914): El pid despues del recv es: 3
+[ERROR] 20:14:13:462 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:13:462 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:13:462 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:13:462 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:13:462 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:13:462 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:13:462 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:13:462 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:18:464 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:18:464 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:18:464 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:18:464 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:18:464 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:18:464 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:18:464 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:18:464 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:18:464 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:18:464 cpu/(2902:2914): Pase el send pc del PID: 3
+[TRACE] 20:14:18:464 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:18:464 cpu/(2902:2914): El pid despues del recv es: 4
+[ERROR] 20:14:18:465 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:18:465 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:18:465 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:18:465 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:18:465 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:18:465 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:18:465 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:18:465 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:23:468 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:23:468 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:23:468 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:23:468 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:23:468 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:23:469 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:23:469 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:23:469 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:23:469 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:23:469 cpu/(2902:2914): Pase el send pc del PID: 4
+[TRACE] 20:14:23:469 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:23:469 cpu/(2902:2914): El pid despues del recv es: 5
+[ERROR] 20:14:23:469 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:23:469 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:23:469 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:23:469 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:23:469 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:23:469 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:23:469 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:23:469 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:28:470 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:28:470 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:28:471 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:28:471 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:28:471 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:28:471 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:28:471 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:28:471 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:28:471 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:28:471 cpu/(2902:2914): Pase el send pc del PID: 5
+[TRACE] 20:14:28:471 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:28:471 cpu/(2902:2914): El pid despues del recv es: 6
+[ERROR] 20:14:28:471 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:28:471 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:28:471 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:28:471 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:28:471 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:28:471 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:28:472 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:28:472 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:33:473 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:33:473 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:33:473 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:33:473 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:33:473 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:33:473 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:33:473 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:33:473 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:33:473 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:33:473 cpu/(2902:2914): Pase el send pc del PID: 6
+[TRACE] 20:14:33:474 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:33:474 cpu/(2902:2914): El pid despues del recv es: 7
+[ERROR] 20:14:33:474 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:33:474 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:33:474 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:33:474 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:33:474 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:33:474 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:33:474 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:33:474 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:38:476 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:38:476 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:38:476 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:38:476 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:38:476 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:38:476 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:38:476 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:38:476 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:38:476 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:38:476 cpu/(2902:2914): Pase el send pc del PID: 7
+[TRACE] 20:14:38:477 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:38:477 cpu/(2902:2914): El pid despues del recv es: 8
+[ERROR] 20:14:38:477 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:38:477 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:38:477 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:38:477 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:38:477 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:38:477 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:38:477 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:38:477 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:43:479 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:43:479 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:43:479 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:43:479 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:43:479 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:43:480 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:43:480 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:43:480 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:43:480 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:43:480 cpu/(2902:2914): Pase el send pc del PID: 8
+[TRACE] 20:14:43:480 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:43:480 cpu/(2902:2914): El pid despues del recv es: 9
+[ERROR] 20:14:43:480 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:43:480 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:43:480 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:43:480 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:43:480 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:43:480 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:43:480 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:43:480 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:48:482 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:48:482 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:48:482 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:48:482 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:48:483 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:48:483 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:48:483 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:48:483 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:48:483 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:48:483 cpu/(2902:2914): Pase el send pc del PID: 9
+[TRACE] 20:14:48:483 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:48:483 cpu/(2902:2914): El pid despues del recv es: 10
+[ERROR] 20:14:48:483 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:48:483 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:48:483 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:48:483 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:48:483 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:48:483 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:48:483 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:48:483 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:53:485 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:53:485 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:53:485 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:53:485 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:53:485 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:53:485 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:53:485 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:53:485 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:53:485 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:53:485 cpu/(2902:2914): Pase el send pc del PID: 10
+[TRACE] 20:14:53:485 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:14:53:485 cpu/(2902:2914): El pid despues del recv es: 11
+[ERROR] 20:14:53:485 cpu/(2902:2914): El tam despues del recv es: 123
+[ERROR] 20:14:53:485 cpu/(2902:2914): cant_instrucciones despues del recv es: 2
+[ERROR] 20:14:53:485 cpu/(2902:2914): indice tabla pags despues del recv es: 412
+[WARNING] 20:14:53:485 cpu/(2902:2914): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:14:53:486 cpu/(2902:2914): Entre en EXIT
+[ERROR] 20:14:53:486 cpu/(2902:2914): El PC despues del recv es: 0
+[ERROR] 20:14:53:486 cpu/(2902:2914): Entre en el while de interrupcion
+[WARNING] 20:14:53:486 cpu/(2902:2914): Antes del sleep
+[WARNING] 20:14:58:487 cpu/(2902:2914): El program counter es: 0
+[WARNING] 20:14:58:487 cpu/(2902:2914): Termine NO_OP donde hago el execute
+[TRACE] 20:14:58:487 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:14:58:487 cpu/(2902:2914): Entre en el while de interrupcion
+[TRACE] 20:14:58:487 cpu/(2902:2914): ENTRE EN EXIT
+[TRACE] 20:14:58:487 cpu/(2902:2914): Finalizo el proceso
+[TRACE] 20:14:58:487 cpu/(2902:2914): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:14:58:487 cpu/(2902:2914): el fd_cpu antes de send pc es: 4
+[WARNING] 20:14:58:487 cpu/(2902:2914): el fd_kernel antes de send pc es: 7
+[TRACE] 20:14:58:488 cpu/(2902:2914): Pase el send pc del PID: 11
+[TRACE] 20:14:58:488 cpu/(2902:2914): Sali de los recv
+[ERROR] 20:16:42:945 cpu/(2902:2914): Fallo recibiendo pid
+[WARNING] 20:16:42:945 cpu/(2902:2914): El cliente se desconecto de CPU server 
+[INFO] 20:17:26:259 cpu/(3414:3414): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 20:17:26:259 cpu/(3414:3414): El socket en cpu.c es : 4
+[INFO] 20:17:26:260 cpu/(3414:3414): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 20:17:26:260 cpu/(3414:3414): El fd_memoria despues de grar conexiones es: 5
+[INFO] 20:17:36:668 cpu/(3414:3414): Cliente conectado (a CPU)
+
+[TRACE] 20:17:36:669 cpu/(3414:3542): El socket de kernel en cpu.c es : 0
+[ERROR] 20:18:18:060 cpu/(3414:3542): El pid despues del recv es: 1
+[ERROR] 20:18:18:060 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:18:060 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:18:060 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:18:060 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:18:060 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:18:060 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:18:061 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:18:061 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:18:23:063 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:18:23:063 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:18:23:063 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:18:23:063 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:18:23:063 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:18:23:063 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:18:23:063 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:18:23:063 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:18:23:064 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:18:23:064 cpu/(3414:3542): Pase el send pc del PID: 1
+[TRACE] 20:18:23:064 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:18:23:064 cpu/(3414:3542): El pid despues del recv es: 2
+[ERROR] 20:18:23:064 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:23:064 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:23:064 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:23:064 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:23:064 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:23:064 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:23:064 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:23:064 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:18:28:065 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:18:28:065 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:18:28:065 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:18:28:066 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:18:28:066 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:18:28:066 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:18:28:066 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:18:28:066 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:18:28:066 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:18:28:066 cpu/(3414:3542): Pase el send pc del PID: 2
+[TRACE] 20:18:28:066 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:18:28:066 cpu/(3414:3542): El pid despues del recv es: 3
+[ERROR] 20:18:28:066 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:28:066 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:28:066 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:28:066 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:28:066 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:28:066 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:28:066 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:28:066 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:18:33:069 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:18:33:069 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:18:33:069 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:18:33:069 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:18:33:069 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:18:33:069 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:18:33:069 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:18:33:069 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:18:33:069 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:18:33:070 cpu/(3414:3542): Pase el send pc del PID: 3
+[TRACE] 20:18:33:070 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:18:33:070 cpu/(3414:3542): El pid despues del recv es: 4
+[ERROR] 20:18:33:070 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:33:070 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:33:070 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:33:070 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:33:070 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:33:070 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:33:070 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:33:070 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:18:38:072 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:18:38:072 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:18:38:073 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:18:38:073 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:18:38:073 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:18:38:073 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:18:38:073 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:18:38:073 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:18:38:073 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:18:38:073 cpu/(3414:3542): Pase el send pc del PID: 4
+[TRACE] 20:18:38:073 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:18:38:073 cpu/(3414:3542): El pid despues del recv es: 5
+[ERROR] 20:18:38:073 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:38:073 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:38:073 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:38:073 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:38:073 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:38:073 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:38:073 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:38:073 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:18:43:074 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:18:43:074 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:18:43:074 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:18:43:074 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:18:43:074 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:18:43:074 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:18:43:074 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:18:43:074 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:18:43:074 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:18:43:074 cpu/(3414:3542): Pase el send pc del PID: 5
+[TRACE] 20:18:43:074 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:18:43:075 cpu/(3414:3542): El pid despues del recv es: 6
+[ERROR] 20:18:43:075 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:43:075 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:43:075 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:43:075 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:43:075 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:43:075 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:43:075 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:43:075 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:18:48:075 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:18:48:075 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:18:48:075 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:18:48:075 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:18:48:075 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:18:48:075 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:18:48:075 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:18:48:075 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:18:48:075 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:18:48:075 cpu/(3414:3542): Pase el send pc del PID: 6
+[TRACE] 20:18:48:075 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:18:48:075 cpu/(3414:3542): El pid despues del recv es: 7
+[ERROR] 20:18:48:075 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:48:075 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:48:075 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:48:075 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:48:075 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:48:075 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:48:075 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:48:075 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:18:53:079 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:18:53:079 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:18:53:079 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:18:53:079 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:18:53:079 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:18:53:079 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:18:53:079 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:18:53:079 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:18:53:079 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:18:53:079 cpu/(3414:3542): Pase el send pc del PID: 7
+[TRACE] 20:18:53:079 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:18:53:079 cpu/(3414:3542): El pid despues del recv es: 8
+[ERROR] 20:18:53:079 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:53:079 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:53:079 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:53:079 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:53:079 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:53:079 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:53:079 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:53:079 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:18:58:081 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:18:58:081 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:18:58:081 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:18:58:081 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:18:58:081 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:18:58:081 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:18:58:081 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:18:58:081 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:18:58:081 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:18:58:082 cpu/(3414:3542): Pase el send pc del PID: 8
+[TRACE] 20:18:58:082 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:18:58:082 cpu/(3414:3542): El pid despues del recv es: 9
+[ERROR] 20:18:58:082 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:18:58:082 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:18:58:082 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:18:58:082 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:18:58:082 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:18:58:082 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:18:58:082 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:18:58:082 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:19:03:084 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:19:03:084 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:19:03:084 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:19:03:084 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:19:03:084 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:19:03:084 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:19:03:084 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:19:03:084 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:19:03:084 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:19:03:084 cpu/(3414:3542): Pase el send pc del PID: 9
+[TRACE] 20:19:03:085 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:19:03:085 cpu/(3414:3542): El pid despues del recv es: 10
+[ERROR] 20:19:03:085 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:19:03:085 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:19:03:085 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:19:03:085 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:19:03:085 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:19:03:085 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:19:03:085 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:19:03:085 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:19:08:086 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:19:08:086 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:19:08:086 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:19:08:086 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:19:08:086 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:19:08:086 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:19:08:086 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:19:08:086 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:19:08:086 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:19:08:086 cpu/(3414:3542): Pase el send pc del PID: 10
+[TRACE] 20:19:08:087 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:19:08:087 cpu/(3414:3542): El pid despues del recv es: 11
+[ERROR] 20:19:08:087 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:19:08:087 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:19:08:087 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:19:08:087 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:19:08:087 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:19:08:087 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:19:08:087 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:19:08:087 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:19:13:089 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:19:13:089 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:19:13:089 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:19:13:089 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:19:13:089 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:19:13:090 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:19:13:090 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:19:13:090 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:19:13:090 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:19:13:090 cpu/(3414:3542): Pase el send pc del PID: 11
+[TRACE] 20:19:13:090 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:19:13:090 cpu/(3414:3542): El pid despues del recv es: 12
+[ERROR] 20:19:13:090 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:19:13:090 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:19:13:090 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:19:13:090 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:19:13:090 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:19:13:090 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:19:13:090 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:19:13:091 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:19:18:092 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:19:18:092 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:19:18:092 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:19:18:092 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:19:18:092 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:19:18:092 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:19:18:092 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:19:18:092 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:19:18:092 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:19:18:093 cpu/(3414:3542): Pase el send pc del PID: 12
+[TRACE] 20:19:18:093 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:19:18:093 cpu/(3414:3542): El pid despues del recv es: 13
+[ERROR] 20:19:18:093 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:19:18:093 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:19:18:093 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:19:18:093 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:19:18:093 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:19:18:093 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:19:18:093 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:19:18:093 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:19:23:096 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:19:23:096 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:19:23:096 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:19:23:096 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:19:23:096 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:19:23:096 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:19:23:096 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:19:23:096 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:19:23:096 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:19:23:096 cpu/(3414:3542): Pase el send pc del PID: 13
+[TRACE] 20:19:23:097 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:19:23:097 cpu/(3414:3542): El pid despues del recv es: 14
+[ERROR] 20:19:23:097 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:19:23:097 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:19:23:097 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:19:23:097 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:19:23:097 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:19:23:097 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:19:23:097 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:19:23:097 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:19:28:099 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:19:28:099 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:19:28:099 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:19:28:099 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:19:28:099 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:19:28:099 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:19:28:099 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:19:28:099 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:19:28:099 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:19:28:100 cpu/(3414:3542): Pase el send pc del PID: 14
+[TRACE] 20:19:28:100 cpu/(3414:3542): Sali de los recv
+[ERROR] 20:19:28:100 cpu/(3414:3542): El pid despues del recv es: 15
+[ERROR] 20:19:28:100 cpu/(3414:3542): El tam despues del recv es: 123
+[ERROR] 20:19:28:100 cpu/(3414:3542): cant_instrucciones despues del recv es: 2
+[ERROR] 20:19:28:100 cpu/(3414:3542): indice tabla pags despues del recv es: 412
+[WARNING] 20:19:28:100 cpu/(3414:3542): Deserialice NO_OP el parametro es: 5
+[WARNING] 20:19:28:100 cpu/(3414:3542): Entre en EXIT
+[ERROR] 20:19:28:100 cpu/(3414:3542): El PC despues del recv es: 0
+[ERROR] 20:19:28:100 cpu/(3414:3542): Entre en el while de interrupcion
+[WARNING] 20:19:28:100 cpu/(3414:3542): Antes del sleep
+[WARNING] 20:19:33:102 cpu/(3414:3542): El program counter es: 0
+[WARNING] 20:19:33:103 cpu/(3414:3542): Termine NO_OP donde hago el execute
+[TRACE] 20:19:33:103 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 20:19:33:103 cpu/(3414:3542): Entre en el while de interrupcion
+[TRACE] 20:19:33:103 cpu/(3414:3542): ENTRE EN EXIT
+[TRACE] 20:19:33:103 cpu/(3414:3542): Finalizo el proceso
+[TRACE] 20:19:33:103 cpu/(3414:3542): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 20:19:33:103 cpu/(3414:3542): el fd_cpu antes de send pc es: 4
+[WARNING] 20:19:33:103 cpu/(3414:3542): el fd_kernel antes de send pc es: 7
+[TRACE] 20:19:33:103 cpu/(3414:3542): Pase el send pc del PID: 15
+[TRACE] 20:19:33:103 cpu/(3414:3542): Sali de los recv
+[INFO] 10:49:07:993 cpu/(5178:5178): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 10:49:07:993 cpu/(5178:5178): El socket en cpu.c es : 4
+[INFO] 10:49:07:994 cpu/(5178:5178): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 10:49:07:994 cpu/(5178:5178): El fd_memoria despues de grar conexiones es: 5
+[INFO] 10:49:22:349 cpu/(5178:5178): Cliente conectado (a CPU)
+
+[TRACE] 10:49:22:349 cpu/(5178:5216): El socket de kernel en cpu.c es : 0
+[INFO] 10:52:20:446 cpu/(5670:5670): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 10:52:20:446 cpu/(5670:5670): El socket en cpu.c es : 4
+[INFO] 10:52:20:447 cpu/(5670:5670): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 10:52:20:447 cpu/(5670:5670): El fd_memoria despues de grar conexiones es: 5
+[INFO] 10:52:23:284 cpu/(5670:5670): Cliente conectado (a CPU)
+
+[TRACE] 10:52:23:284 cpu/(5670:5682): El socket de kernel en cpu.c es : 0
+[ERROR] 10:52:25:541 cpu/(5670:5682): El pid despues del recv es: 1
+[ERROR] 10:52:25:542 cpu/(5670:5682): El tam despues del recv es: 123
+[ERROR] 10:52:25:542 cpu/(5670:5682): cant_instrucciones despues del recv es: 2
+[ERROR] 10:52:25:542 cpu/(5670:5682): indice tabla pags despues del recv es: 412
+[WARNING] 10:52:25:542 cpu/(5670:5682): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:52:25:542 cpu/(5670:5682): Entre en EXIT
+[ERROR] 10:52:25:542 cpu/(5670:5682): El PC despues del recv es: 0
+[ERROR] 10:52:25:542 cpu/(5670:5682): Entre en el while de interrupcion
+[WARNING] 10:52:25:542 cpu/(5670:5682): Antes del sleep
+[WARNING] 10:52:30:546 cpu/(5670:5682): El program counter es: 0
+[WARNING] 10:52:30:546 cpu/(5670:5682): Termine NO_OP donde hago el execute
+[TRACE] 10:52:30:546 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 10:52:30:546 cpu/(5670:5682): Entre en el while de interrupcion
+[TRACE] 10:52:30:546 cpu/(5670:5682): ENTRE EN EXIT
+[TRACE] 10:52:30:546 cpu/(5670:5682): Finalizo el proceso
+[TRACE] 10:52:30:546 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 10:52:30:546 cpu/(5670:5682): el fd_cpu antes de send pc es: 4
+[WARNING] 10:52:30:546 cpu/(5670:5682): el fd_kernel antes de send pc es: 7
+[TRACE] 10:52:30:546 cpu/(5670:5682): Pase el send pc del PID: 1
+[TRACE] 10:52:30:547 cpu/(5670:5682): Sali de los recv
+[ERROR] 10:52:30:547 cpu/(5670:5682): El pid despues del recv es: 2
+[ERROR] 10:52:30:547 cpu/(5670:5682): El tam despues del recv es: 123
+[ERROR] 10:52:30:547 cpu/(5670:5682): cant_instrucciones despues del recv es: 2
+[ERROR] 10:52:30:547 cpu/(5670:5682): indice tabla pags despues del recv es: 412
+[WARNING] 10:52:30:547 cpu/(5670:5682): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:52:30:547 cpu/(5670:5682): Entre en EXIT
+[ERROR] 10:52:30:547 cpu/(5670:5682): El PC despues del recv es: 0
+[ERROR] 10:52:30:547 cpu/(5670:5682): Entre en el while de interrupcion
+[WARNING] 10:52:30:547 cpu/(5670:5682): Antes del sleep
+[WARNING] 10:52:35:549 cpu/(5670:5682): El program counter es: 0
+[WARNING] 10:52:35:549 cpu/(5670:5682): Termine NO_OP donde hago el execute
+[TRACE] 10:52:35:549 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 10:52:35:549 cpu/(5670:5682): Entre en el while de interrupcion
+[TRACE] 10:52:35:550 cpu/(5670:5682): ENTRE EN EXIT
+[TRACE] 10:52:35:550 cpu/(5670:5682): Finalizo el proceso
+[TRACE] 10:52:35:550 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 10:52:35:550 cpu/(5670:5682): el fd_cpu antes de send pc es: 4
+[WARNING] 10:52:35:550 cpu/(5670:5682): el fd_kernel antes de send pc es: 7
+[TRACE] 10:52:35:550 cpu/(5670:5682): Pase el send pc del PID: 2
+[TRACE] 10:52:35:550 cpu/(5670:5682): Sali de los recv
+[ERROR] 10:52:35:550 cpu/(5670:5682): El pid despues del recv es: 3
+[ERROR] 10:52:35:550 cpu/(5670:5682): El tam despues del recv es: 123
+[ERROR] 10:52:35:550 cpu/(5670:5682): cant_instrucciones despues del recv es: 2
+[ERROR] 10:52:35:550 cpu/(5670:5682): indice tabla pags despues del recv es: 412
+[WARNING] 10:52:35:551 cpu/(5670:5682): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:52:35:551 cpu/(5670:5682): Entre en EXIT
+[ERROR] 10:52:35:551 cpu/(5670:5682): El PC despues del recv es: 0
+[ERROR] 10:52:35:551 cpu/(5670:5682): Entre en el while de interrupcion
+[WARNING] 10:52:35:551 cpu/(5670:5682): Antes del sleep
+[WARNING] 10:52:40:553 cpu/(5670:5682): El program counter es: 0
+[WARNING] 10:52:40:553 cpu/(5670:5682): Termine NO_OP donde hago el execute
+[TRACE] 10:52:40:553 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 10:52:40:553 cpu/(5670:5682): Entre en el while de interrupcion
+[TRACE] 10:52:40:553 cpu/(5670:5682): ENTRE EN EXIT
+[TRACE] 10:52:40:553 cpu/(5670:5682): Finalizo el proceso
+[TRACE] 10:52:40:553 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 10:52:40:553 cpu/(5670:5682): el fd_cpu antes de send pc es: 4
+[WARNING] 10:52:40:553 cpu/(5670:5682): el fd_kernel antes de send pc es: 7
+[TRACE] 10:52:40:553 cpu/(5670:5682): Pase el send pc del PID: 3
+[TRACE] 10:52:40:554 cpu/(5670:5682): Sali de los recv
+[ERROR] 10:52:40:554 cpu/(5670:5682): El pid despues del recv es: 4
+[ERROR] 10:52:40:554 cpu/(5670:5682): El tam despues del recv es: 123
+[ERROR] 10:52:40:554 cpu/(5670:5682): cant_instrucciones despues del recv es: 2
+[ERROR] 10:52:40:554 cpu/(5670:5682): indice tabla pags despues del recv es: 412
+[WARNING] 10:52:40:554 cpu/(5670:5682): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:52:40:554 cpu/(5670:5682): Entre en EXIT
+[ERROR] 10:52:40:554 cpu/(5670:5682): El PC despues del recv es: 0
+[ERROR] 10:52:40:554 cpu/(5670:5682): Entre en el while de interrupcion
+[WARNING] 10:52:40:555 cpu/(5670:5682): Antes del sleep
+[WARNING] 10:52:45:557 cpu/(5670:5682): El program counter es: 0
+[WARNING] 10:52:45:557 cpu/(5670:5682): Termine NO_OP donde hago el execute
+[TRACE] 10:52:45:557 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 10:52:45:557 cpu/(5670:5682): Entre en el while de interrupcion
+[TRACE] 10:52:45:557 cpu/(5670:5682): ENTRE EN EXIT
+[TRACE] 10:52:45:557 cpu/(5670:5682): Finalizo el proceso
+[TRACE] 10:52:45:557 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 10:52:45:557 cpu/(5670:5682): el fd_cpu antes de send pc es: 4
+[WARNING] 10:52:45:557 cpu/(5670:5682): el fd_kernel antes de send pc es: 7
+[TRACE] 10:52:45:557 cpu/(5670:5682): Pase el send pc del PID: 4
+[TRACE] 10:52:45:558 cpu/(5670:5682): Sali de los recv
+[ERROR] 10:52:45:558 cpu/(5670:5682): El pid despues del recv es: 5
+[ERROR] 10:52:45:558 cpu/(5670:5682): El tam despues del recv es: 123
+[ERROR] 10:52:45:558 cpu/(5670:5682): cant_instrucciones despues del recv es: 2
+[ERROR] 10:52:45:558 cpu/(5670:5682): indice tabla pags despues del recv es: 412
+[WARNING] 10:52:45:558 cpu/(5670:5682): Deserialice NO_OP el parametro es: 5
+[WARNING] 10:52:45:558 cpu/(5670:5682): Entre en EXIT
+[ERROR] 10:52:45:558 cpu/(5670:5682): El PC despues del recv es: 0
+[ERROR] 10:52:45:558 cpu/(5670:5682): Entre en el while de interrupcion
+[WARNING] 10:52:45:558 cpu/(5670:5682): Antes del sleep
+[WARNING] 10:52:50:562 cpu/(5670:5682): El program counter es: 0
+[WARNING] 10:52:50:562 cpu/(5670:5682): Termine NO_OP donde hago el execute
+[TRACE] 10:52:50:562 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 10:52:50:562 cpu/(5670:5682): Entre en el while de interrupcion
+[TRACE] 10:52:50:562 cpu/(5670:5682): ENTRE EN EXIT
+[TRACE] 10:52:50:562 cpu/(5670:5682): Finalizo el proceso
+[TRACE] 10:52:50:562 cpu/(5670:5682): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 10:52:50:562 cpu/(5670:5682): el fd_cpu antes de send pc es: 4
+[WARNING] 10:52:50:562 cpu/(5670:5682): el fd_kernel antes de send pc es: 7
+[TRACE] 10:52:50:562 cpu/(5670:5682): Pase el send pc del PID: 5
+[TRACE] 10:52:50:563 cpu/(5670:5682): Sali de los recv
+[INFO] 11:16:03:664 cpu/(9157:9157): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:16:03:664 cpu/(9157:9157): El socket en cpu.c es : 4
+[INFO] 11:16:03:665 cpu/(9157:9157): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 11:16:03:665 cpu/(9157:9157): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:16:18:747 cpu/(9157:9157): Cliente conectado (a CPU)
+
+[TRACE] 11:16:18:747 cpu/(9157:9193): El socket de kernel en cpu.c es : 0
+[ERROR] 11:16:22:770 cpu/(9157:9193): El pid despues del recv es: 1
+[ERROR] 11:16:22:770 cpu/(9157:9193): El tam despues del recv es: 123
+[ERROR] 11:16:22:770 cpu/(9157:9193): cant_instrucciones despues del recv es: 3
+[ERROR] 11:16:22:770 cpu/(9157:9193): indice tabla pags despues del recv es: 412
+[WARNING] 11:16:22:770 cpu/(9157:9193): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:16:22:770 cpu/(9157:9193): Deserialice IO el parametro es: 3000
+[WARNING] 11:16:22:770 cpu/(9157:9193): Entre en EXIT
+[ERROR] 11:16:22:770 cpu/(9157:9193): El PC despues del recv es: 0
+[ERROR] 11:16:22:770 cpu/(9157:9193): Entre en el while de interrupcion
+[WARNING] 11:16:22:771 cpu/(9157:9193): Antes del sleep
+[WARNING] 11:16:27:773 cpu/(9157:9193): El program counter es: 0
+[WARNING] 11:16:27:773 cpu/(9157:9193): Termine NO_OP donde hago el execute
+[TRACE] 11:16:27:773 cpu/(9157:9193): El pc despues de ejecutar una instruccion es: 1
+[ERROR] 11:16:27:773 cpu/(9157:9193): Entre en el while de interrupcion
+[WARNING] 11:16:27:773 cpu/(9157:9193): Entre en IO
+[WARNING] 11:16:27:773 cpu/(9157:9193): El tiempo bloqueante es: 3000
+[TRACE] 11:16:27:773 cpu/(9157:9193): El pc despues de ejecutar una instruccion es: 2
+[ERROR] 11:16:27:773 cpu/(9157:9193): Entre en el while de interrupcion
+[TRACE] 11:16:27:773 cpu/(9157:9193): ENTRE EN EXIT
+[TRACE] 11:16:27:773 cpu/(9157:9193): Finalizo el proceso
+[TRACE] 11:16:27:773 cpu/(9157:9193): El pc despues de ejecutar una instruccion es: 3
+[WARNING] 11:16:27:773 cpu/(9157:9193): el fd_cpu antes de send pc es: 4
+[WARNING] 11:16:27:773 cpu/(9157:9193): el fd_kernel antes de send pc es: 7
+[INFO] 11:16:27:773 cpu/(9157:9193): [ASSSSSS] el tiempo bloqueante antes de mandarlo es: 0 
+[TRACE] 11:16:27:774 cpu/(9157:9193): Pase el send pc del PID: 1
+[TRACE] 11:16:27:774 cpu/(9157:9193): Sali de los recv
+[ERROR] 11:16:44:353 cpu/(9157:9193): Fallo recibiendo pid
+[WARNING] 11:16:44:354 cpu/(9157:9193): El cliente se desconecto de CPU server 
+[INFO] 11:21:34:581 cpu/(10116:10116): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:21:34:581 cpu/(10116:10116): El socket en cpu.c es : 4
+[INFO] 11:21:34:582 cpu/(10116:10116): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 11:21:34:582 cpu/(10116:10116): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:21:37:079 cpu/(10116:10116): Cliente conectado (a CPU)
+
+[TRACE] 11:21:37:079 cpu/(10116:10126): El socket de kernel en cpu.c es : 0
+[ERROR] 11:22:11:072 cpu/(10116:10126): El pid despues del recv es: 1
+[ERROR] 11:22:11:072 cpu/(10116:10126): El tam despues del recv es: 123
+[ERROR] 11:22:11:072 cpu/(10116:10126): cant_instrucciones despues del recv es: 3
+[ERROR] 11:22:11:073 cpu/(10116:10126): indice tabla pags despues del recv es: 412
+[WARNING] 11:22:11:073 cpu/(10116:10126): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:22:11:073 cpu/(10116:10126): Deserialice IO el parametro es: 3000
+[WARNING] 11:22:11:073 cpu/(10116:10126): Entre en EXIT
+[ERROR] 11:22:11:073 cpu/(10116:10126): El PC despues del recv es: 0
+[WARNING] 11:22:11:073 cpu/(10116:10126): el fd_cpu antes de send pc es: 4
+[WARNING] 11:22:11:073 cpu/(10116:10126): el fd_kernel antes de send pc es: 7
+[INFO] 11:22:11:073 cpu/(10116:10126): [ASSSSSS] el tiempo bloqueante antes de mandarlo es: 0 
+[TRACE] 11:22:11:073 cpu/(10116:10126): Pase el send pc del PID: 1
+[TRACE] 11:22:11:073 cpu/(10116:10126): Sali de los recv
+[INFO] 11:26:56:781 cpu/(10863:10863): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 11:26:56:781 cpu/(10863:10863): El socket en cpu.c es : 4
+[INFO] 11:26:56:782 cpu/(10863:10863): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 11:26:56:782 cpu/(10863:10863): El fd_memoria despues de grar conexiones es: 5
+[INFO] 11:26:59:322 cpu/(10863:10863): Cliente conectado (a CPU)
+
+[TRACE] 11:26:59:322 cpu/(10863:10876): El socket de kernel en cpu.c es : 0
+[ERROR] 11:27:02:641 cpu/(10863:10876): El pid despues del recv es: 1
+[ERROR] 11:27:02:641 cpu/(10863:10876): El tam despues del recv es: 123
+[ERROR] 11:27:02:641 cpu/(10863:10876): cant_instrucciones despues del recv es: 3
+[ERROR] 11:27:02:641 cpu/(10863:10876): indice tabla pags despues del recv es: 412
+[WARNING] 11:27:02:641 cpu/(10863:10876): Deserialice NO_OP el parametro es: 5
+[WARNING] 11:27:02:641 cpu/(10863:10876): Deserialice IO el parametro es: 3000
+[WARNING] 11:27:02:641 cpu/(10863:10876): Entre en EXIT
+[ERROR] 11:27:02:641 cpu/(10863:10876): El PC despues del recv es: 0
+[ERROR] 11:27:02:641 cpu/(10863:10876): Entre en el while de interrupcion
+[WARNING] 11:27:02:641 cpu/(10863:10876): Antes del sleep
+[WARNING] 11:27:07:645 cpu/(10863:10876): El program counter es: 0
+[WARNING] 11:27:07:645 cpu/(10863:10876): Termine NO_OP donde hago el execute
+[TRACE] 11:27:07:645 cpu/(10863:10876): El pc despues de ejecutar una instruccion es: 1
+[WARNING] 11:27:07:645 cpu/(10863:10876): El tiempo bloqueante en el while de ejecucion es: 0
+[ERROR] 11:27:07:645 cpu/(10863:10876): Entre en el while de interrupcion
+[WARNING] 11:27:07:645 cpu/(10863:10876): Entre en IO
+[WARNING] 11:27:07:645 cpu/(10863:10876): El tiempo bloqueante es: 3000
+[TRACE] 11:27:07:645 cpu/(10863:10876): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 11:27:07:645 cpu/(10863:10876): El tiempo bloqueante en el while de ejecucion es: 3000
+[WARNING] 11:27:07:645 cpu/(10863:10876): el fd_cpu antes de send pc es: 4
+[WARNING] 11:27:07:645 cpu/(10863:10876): el fd_kernel antes de send pc es: 7
+[INFO] 11:27:07:645 cpu/(10863:10876): [ASSSSSS] el tiempo bloqueante antes de mandarlo es: 3000 
+[TRACE] 11:27:07:645 cpu/(10863:10876): Pase el send pc del PID: 1
+[TRACE] 11:27:07:646 cpu/(10863:10876): Sali de los recv

@@ -39,6 +39,8 @@ t_config* config_cpu;
 
 t_log* log_cpu;
 
+uint32_t tiempo_bloqueante;
+
 //t_paquete* paquete_consola_kernel;
 
 //agregas colas_new, colas_ready, etc

@@ -22,10 +22,11 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 	int co_op = instruccion_a_decodificar->id;
-	uint32_t tiempo_bloqueante = 0;
+
 
 	switch (co_op) {
 			case NO_OP:{
+				tiempo_bloqueante = 0;
 				log_warning(log_cpu,"Antes del sleep");
 				//log_warning(log_cpu,"EL PARAMETRO 1 ES: %d",instruccion_a_decodificar->parametro1);
 				int retardo_NO_OP = config_get_int_value(config_cpu,"RETARDO_NOOP");
@@ -42,6 +43,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 			break;
 			}
 			case IO:{
+
 				log_warning(log_cpu,"Entre en IO");
 				tiempo_bloqueante = instruccion_a_decodificar->parametro1;
 				log_warning(log_cpu,"El tiempo bloqueante es: %d",tiempo_bloqueante);
@@ -50,23 +52,26 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				break;
 			 }
 			 case READ:{
-
+				 tiempo_bloqueante = 0;
 				 log_warning(log_cpu,"Entre en READ");
 				 pcb->PC += 1;
 				 break;
 			}
 			 case COPY:{
+				 tiempo_bloqueante = 0;
 				 log_warning(log_cpu,"Entre en COPY");
 				 pcb->PC += 1;
 				 break;
 			}
 			 case WRITE:{
+				 tiempo_bloqueante = 0;
 				 log_warning(log_cpu,"Entre en WRITE");
 				 pcb->PC += 1;
 				 break;
 			}
 			 case EXIT:
 			 {
+				 tiempo_bloqueante = 0;
 				 log_trace(log_cpu,"ENTRE EN EXIT");
 				 log_trace(log_cpu,"Finalizo el proceso");
 				 pcb->PC += 1;

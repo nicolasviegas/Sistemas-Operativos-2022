@@ -77,6 +77,9 @@ bool recv_indice_tabla_paginas_a_cpu(int fd,uint32_t* parametro1);
 bool send_PC(int fd, uint32_t parametro1);
 bool recv_PC(int fd, uint32_t* parametro1);
 
+bool send_tiempo_bloqueante(int fd, uint32_t parametro1);
+bool recv_tiempo_bloqueante(int fd, uint32_t* parametro1);
+
 bool send_debug(int fd);
 
 
