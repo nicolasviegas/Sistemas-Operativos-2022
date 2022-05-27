@@ -29,7 +29,6 @@ static void procesar_conexion_kernel(void* void_args) {
 
     op_code_instrucciones cop;
     t_list* lista_intrucciones_1 = list_create();
-   // lista_intrucciones_1 = malloc(sizeof(t_list)); //LIBERAR ABAJO DEL TODO
     while (cliente_socket != -1) {
 
 
@@ -42,7 +41,7 @@ static void procesar_conexion_kernel(void* void_args) {
         	//Una vez que la consola nos da todas las instrucciones, aca abajo cargamos estas instrucciones en el pcb y se lo enviamos a cpu
 
         	//ACA HAY QUE HACER UNA FUNCION QUE LE PIDA LA TABLA DE PAGINAS A MEMORIA
-
+        	//TODO
         	pedir_tabla_a_memoria();
 
         	uint32_t indice_tabla;

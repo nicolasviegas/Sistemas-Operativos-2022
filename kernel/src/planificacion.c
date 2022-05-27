@@ -154,8 +154,12 @@ void agregarABlockSuspended(pcb_t* pcb){
 
 	memcpy(stream, &opCode, sizeof(op_estados));
 	memcpy(stream + sizeof(op_estados), &(pcb->PID), sizeof(uint32_t));
-
+	log_trace(log_kernel,"Le avise a memoria que libere los recursos");
+	//todo
 	//send(fd_memoria, stream, size, 0); HAY QUE DESCOMENTAR Y HACER EL RECV
+
+
+	agregarAReadySuspended(pcb); //ESTO LO COMENTAMOS NOSOTROS
 
 	free(stream);
 }
@@ -335,12 +339,14 @@ void hiloBlockASuspension(){
 
 						//sem_post(&multiprogramacion);
 					}else{//sino solo lo bloqueo y lo devuelvo a ready
+						log_info(log_kernel,"[HILO BLOCK A SUSP] antes del usleep triste, se va dormir %d milisegs, ",pcb->tiempo_bloqueo);
+						sleep(tiempo_max_bloqueado/1000);
 
-						//pcb_t* pcb = list_get(listaBlock, list_size(listaBlock) - 1);
-									//sacarDeBlock(pcb);
+						sem_wait(&contadorProcesosEnMemoria);
 
-						//sem_wait(&contadorProcesosEnMemoria);
-						//agregarABlockSuspended(pcb);
+						agregarABlockSuspended(pcb);
+
+						sem_post(&multiprogramacion);
 					}
 
 		}
