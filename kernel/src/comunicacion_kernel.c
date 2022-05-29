@@ -72,7 +72,6 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso->estimacionActual;
         	pcb_proceso->estimacionAnterior;
         	pcb_proceso->horaDeIngresoAExe;
-        	pcb_proceso->tiempoEspera;
         	pcb_proceso-> suspendido = false;
         	pcb_proceso->tiempo_bloqueo = 0;
 

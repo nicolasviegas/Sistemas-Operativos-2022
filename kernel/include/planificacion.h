@@ -33,11 +33,10 @@ typedef struct{
 	uint32_t alpha;
 	uint32_t estado;
 
-	clock_t rafagaAnterior;
-	int estimacionActual;
+	float rafagaAnterior;
+	float estimacionActual;
 	int estimacionAnterior;
-	clock_t horaDeIngresoAExe;
-	clock_t tiempoEspera;
+	float horaDeIngresoAExe;
 	bool suspendido;
 	uint32_t tiempo_bloqueo;
 }pcb_t;

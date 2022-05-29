@@ -39,6 +39,18 @@ void inicializar_semaforos(){
 	sem_init(&hilo_sincro_cpu_kernel, 0, 0);
 }
 
+float obtener_float_de_config(t_config* config, char* key){
+
+	double valor;
+
+	if((valor = config_get_double_value(config, key)) < 0){
+
+		perror("No se pudo obtener el valor del archivo de configuraciones!\n");
+		abort();
+	}
+
+	return (float) valor;
+}
 
 void inicializar_config(){
 	  ip = config_get_string_value(config_kernel,"IP_MEMORIA");// esto no se si va
@@ -58,8 +70,9 @@ void inicializar_config(){
 	  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
 	  grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
 	  log_warning(log_kernel,"El grado multi prog es: %d" ,grado_multiprogramacion);
-	  // alfa = (float) config_get_double_value(config_kernel,"ALFA"); // HAY QUE VER COMO HACER ESTE QUE ES UN FLOAT
-	  tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
+	  alfa = obtener_float_de_config(config_kernel,"ALFA");
+	  log_error(log_kernel,"El alfa es: %f",alfa);
+	   tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
 }
 
 void inicializar_listas(){

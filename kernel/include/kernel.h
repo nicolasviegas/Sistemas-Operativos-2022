@@ -49,7 +49,7 @@ char* puerto_memoria;
 char* puerto_cpu_dispatch;
 char* puerto_cpu_interrupt;
 int algoritmo_config;
-int estimacion_inicial;
+uint32_t estimacion_inicial;
 float alfa;
 uint32_t grado_multiprogramacion;
 uint32_t tiempo_max_bloqueado;
@@ -74,6 +74,8 @@ void inicializar_semaforos();
 void inicializar_planificacion();
 
 int obtener_algoritmo(char* algoritmo_char);
+
+float diferencia_de_tiempo(float tiempoInicial, float tiempoFinal);
 
 int server_escuchar_kernel(t_log* logger, char* server_name, int server_socket);
 

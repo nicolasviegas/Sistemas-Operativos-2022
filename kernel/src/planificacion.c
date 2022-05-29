@@ -22,6 +22,10 @@ int obtener_algoritmo(char* algoritmo_char){
 	    return switcher;
 }
 
+float diferencia_de_tiempo(float tiempoInicial, float tiempoFinal){
+
+	return tiempoFinal - tiempoInicial;
+}
 
 
 //////////////////////////////////////////////// COLAS ////////////////////////////////////////////////
@@ -68,7 +72,6 @@ void agregarAReady(pcb_t* proceso){
 
 	time_t a = time(NULL);
 	//proceso->horaDeIngresoAReady = ((float) a)*1000;
-	proceso->tiempoEspera = 0;
 
 	pthread_mutex_lock(&mutexReady);
 
@@ -233,7 +236,6 @@ void hiloNew_Ready(){
 
 			proceso->estimacionAnterior = estimacion_inicial;
 			proceso->estimacionActual = estimacion_inicial;	//"estimacio_inicial" va a ser una variable que vamos a obtener del cfg
-			proceso->tiempoEspera = 0;
 
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
@@ -266,11 +268,16 @@ void hiloReady_Exe(){
 
 
 			if(algoritmo_config == SRT){
-
+				log_info(log_kernel, "[EXEC] Ingresa el carpincho de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", procesoAEjecutar->PID, procesoAEjecutar->estimacionActual);
+				time_t a = time(NULL);
+				procesoAEjecutar->horaDeIngresoAExe = ((float) a)*1000;
 			}else{
 				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", procesoAEjecutar->PID);
 
 			}
+
+
+
 			enviar_pcb_a_cpu(procesoAEjecutar);
 
 			uint32_t pc;
@@ -282,12 +289,25 @@ void hiloReady_Exe(){
 			procesoAEjecutar->PC = pc;
 
 			//uint32_t tiempo_bloq_kernel;
+			//EL CPU ME DEVUELVE EL TIEMPO QUE SE VA A BLOQUEAR EL PROCESO POR E/S
 			if (!recv_tiempo_bloqueante(fd_cpu, &tiempo_bloq_kernel)) {
 				log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
 			}
 			log_trace(log_kernel,"El tiempo bloqueante despues del recv es: %d",tiempo_bloq_kernel);
 
 			procesoAEjecutar->tiempo_bloqueo = tiempo_bloq_kernel;
+
+			time_t b = time(NULL);
+			float tiempoDeFin = ((float) b)*1000;
+			procesoAEjecutar->rafagaAnterior = diferencia_de_tiempo(procesoAEjecutar->horaDeIngresoAExe, tiempoDeFin);
+
+			/*log_error(log_kernel,"La hora de ingreso del proceso %d a exe es: %f",procesoAEjecutar->PID,procesoAEjecutar->horaDeIngresoAExe);
+			log_error(log_kernel,"La tiempo que estuvo el proceso %d en cpu (rafaga anterior) es: %f",procesoAEjecutar->PID,procesoAEjecutar->rafagaAnterior);
+			log_error(log_kernel,"La estimacion anterior el proceso %d es: %d",procesoAEjecutar->PID,procesoAEjecutar->estimacionAnterior);*/
+
+			procesoAEjecutar->estimacionActual = alfa*(procesoAEjecutar->rafagaAnterior) + (1-alfa)*(procesoAEjecutar->estimacionAnterior);
+			procesoAEjecutar->estimacionAnterior = procesoAEjecutar->estimacionActual;
+
 
 			if(tiempo_bloq_kernel > 0){
 				agregarABlock(procesoAEjecutar);
@@ -330,19 +350,19 @@ void hiloBlockASuspension(){
 
 			if(pcb->tiempo_bloqueo <= tiempo_max_bloqueado){
 
-						log_info(log_kernel,"[HILO BLOCK A SUSP] antes del usleep feliz, se va dormir %d milisegs, ",pcb->tiempo_bloqueo);
+						log_info(log_kernel,"[HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso %d milisegs, ",pcb->tiempo_bloqueo);
 
-						sleep(pcb->tiempo_bloqueo/1000); //CHEQUEAR EL USLEEP
+						usleep(pcb->tiempo_bloqueo*1000);
 
 						//sem_post(&medianoPlazo); //esto para desbloquear el hilo suspension a ready
 
 						agregarAReady(pcb);
 
-
 						//sem_post(&multiprogramacion);
 					}else{//sino solo lo bloqueo y lo devuelvo a ready
-						log_info(log_kernel,"[HILO BLOCK A SUSP] antes del usleep triste, se va dormir %d milisegs, ",pcb->tiempo_bloqueo);
-						sleep(tiempo_max_bloqueado/1000);
+						log_info(log_kernel,"[HILO BLOCK A SUSP] antes del usleep triste, se suspende %d milisegs, ",pcb->tiempo_bloqueo);
+
+						usleep(tiempo_max_bloqueado*1000);
 
 						sem_wait(&contadorProcesosEnMemoria);
 
@@ -445,14 +465,12 @@ pcb_t* obtenerSiguienteDeReady(){
 
 pcb_t* obtenerSiguienteFIFO(){
 
-	//log_warning(log_kernel,"Esto en obtenre siguiente fifo");
 	pcb_t* procesoPlanificado = NULL;
 
 	pthread_mutex_lock(&mutexReady);
 	procesoPlanificado = list_remove(colaReady, 0);
     pthread_mutex_unlock(&mutexReady);
 
-    //log_trace(log_kernel,"En obtener siguiente fifo el tam de la lista es: %d",list_size(colaReady));
 	return procesoPlanificado;
 }
 
@@ -476,13 +494,13 @@ pcb_t* obtenerSiguienteSJF(){
 	//sem_wait(&contadorReady);
 	pthread_mutex_lock(&mutexReady);
 
-	//printf("[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
+//	printf("[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
 
-	log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
+	//log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
 
     for(i=1;i<list_size(colaReady);i++){
     	procesoAux = list_get(colaReady,i);
-
+    	log_error(log_kernel,"El proceso %d, tiene una estimacion actual de: %f",procesoAux->PID,procesoAux->estimacionActual);
     	if(shortestJob > procesoAux->estimacionActual){
     		shortestJob = procesoAux->estimacionActual;
     		indexARemover = i;
@@ -492,7 +510,11 @@ pcb_t* obtenerSiguienteSJF(){
 
     procesoPlanificado = list_remove(colaReady, indexARemover);
 
+
+
     pthread_mutex_unlock(&mutexReady);
+
+	log_error(log_kernel,"El proceso %d fue elegido",procesoAux->PID);
 
 	return procesoPlanificado;
 }
