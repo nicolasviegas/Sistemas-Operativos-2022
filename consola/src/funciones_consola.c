@@ -4,7 +4,7 @@
 void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config){
 	log_destroy(log);
 	list_destroy(lista);
-	liberar_conexion(conexion);
+	//liberar_conexion(conexion);
 	config_destroy(config);
 }
 

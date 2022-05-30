@@ -85,10 +85,9 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				 break;
 		 }
 
-
-
 	log_warning("Se aumento el program counter, la sig instruccion es: %d",pcb->PC);
+}
 
-
+bool check_interrupt(){
 
 }

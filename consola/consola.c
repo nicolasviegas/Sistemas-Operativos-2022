@@ -1,5 +1,4 @@
 #include "include/consola.h"
-//#include "../../include/consola.h"
 
 //ASI SE CORRE POR CONSOLA
 //./consola.out /home/utnso/tp-2022-1c-yaguarethreads-/consola/lista_instrucciones.txt 100
@@ -10,13 +9,6 @@ int main(int argc, char** argv){
 		printf("Cantidad de parametros incorrecta");
 		return EXIT_FAILURE;
 	}
-
-	bool success = false;
-
-	char* path;
-	uint32_t tam;
-	char* ip;
-	char* puerto;
 
 	log_consola = log_create("consola.log","consola",1,LOG_LEVEL_TRACE);
 
@@ -37,8 +29,6 @@ int main(int argc, char** argv){
 
 	puerto = config_get_string_value(config_consola,"PUERTO_KERNEL");
 
-	paquete_consola_kernel = malloc(sizeof(t_paquete));
-
 	int cant_instrucciones = list_size(lista_instrucciones);
 
 	fd_kernel=0;
@@ -46,23 +36,18 @@ int main(int argc, char** argv){
 		cerrar_programa(log_consola);
 		return EXIT_FAILURE;
 	}
-	log_trace(log_consola,"El fd_kernel despues de grar conexiones es: %d",fd_kernel);
+	//log_trace(log_consola,"El fd_kernel despues de grar conexiones es: %d",fd_kernel);
 
 	send_TAM(fd_kernel,tam);
-
-	log_error(log_consola,"Pase el send TAM ");
+//
+	//log_error(log_consola,"Pase el send TAM ");
 
 	send_instrucciones(lista_instrucciones,fd_kernel);
 
-	log_error(log_consola,"Pase el send instrucciones ");
+	//log_error(log_consola,"Pase el send instrucciones ");
 
-
-/*
-	success = recibir_confirmacion(fd_mod2); //Implementar, reveer esto creo q esta demas
-	if(success){
-	// terminar_consola(log_consola,lista_instrucciones, conexion,config_consola);
-	}
-*/
+	log_info(log_consola,"[INFO] La consola finalizo correctamente.");
+	terminar_consola(log_consola, lista_instrucciones, fd_kernel, config_consola);
 
 	return EXIT_SUCCESS;
 }

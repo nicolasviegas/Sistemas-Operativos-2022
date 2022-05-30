@@ -21,7 +21,10 @@
 #include "../include/comunicacion_consola.h"
 
 
-
+char* path;
+uint32_t tam;
+char* ip;
+char* puerto;
 
 t_list* lista_instrucciones;
 

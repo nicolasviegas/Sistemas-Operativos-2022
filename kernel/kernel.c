@@ -62,6 +62,8 @@ void inicializar_config(){
 	  ip_cpu = config_get_string_value(config_kernel,"IP_CPU");
 	  puerto_cpu_dispatch = config_get_string_value(config_kernel,"PUERTO_CPU_DISPATCH");
 
+	  puerto_cpu_interrupt = config_get_string_value(config_kernel,"PUERTO_CPU_INTERRUPT");
+
 	  char* algoritmo_char = config_get_string_value(config_kernel,"ALGORITMO_PLANIFICACION");
 	  algoritmo_config = obtener_algoritmo(algoritmo_char);
 
@@ -164,6 +166,14 @@ int main() {
     }
     log_trace(log_kernel,"El fd_cpu despues de grar conexiones es: %d",fd_cpu);
 
+
+  /*  int fd_cpu_1 = 0;
+    if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_interrupt, &fd_cpu_1)) {
+      		cerrar_programa2(log_kernel);
+      		return EXIT_FAILURE;
+     }*/
+
+    log_trace(log_kernel,"El fd_cpu despues de grar conexiones puerto interrupt es: %d",fd_cpu);
 
     //conexion entre Kernel (Servidor) y consola(cliente)
    // while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));

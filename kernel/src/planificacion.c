@@ -240,9 +240,14 @@ void hiloNew_Ready(){
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
 			sem_post(&contadorProcesosEnMemoria);
-		}
 
-		//log_error(log_kernel,"Sali hilo new ready ");
+			//TODO ACA IRIA LA INTERRUPCION AVISANDO QUE LLEGO UN PROCESO A READY, IF ALGORITMO == SRT'
+
+			/*if(algoritmo_config == SRT){
+				send_interrupcion_a_cpu(fd_cpu,777); ///777 es que hay una interrupcion
+			}*/
+
+		}
 	}
 }
 
@@ -264,9 +269,6 @@ void hiloReady_Exe(){
 			list_add(listaExe, procesoAEjecutar);
 			pthread_mutex_unlock(&mutexExe);*/
 
-			////////////////////////////// VER COMO HACER PARA QUE LO HAGA CPU Y NO KERNEL (HAY QUE ENVIAR A CPU Y QUE EL EJECUTE)
-
-
 			if(algoritmo_config == SRT){
 				log_info(log_kernel, "[EXEC] Ingresa el carpincho de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", procesoAEjecutar->PID, procesoAEjecutar->estimacionActual);
 				time_t a = time(NULL);
@@ -275,8 +277,6 @@ void hiloReady_Exe(){
 				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d , que era el primero que llego", procesoAEjecutar->PID);
 
 			}
-
-
 
 			enviar_pcb_a_cpu(procesoAEjecutar);
 
@@ -309,24 +309,26 @@ void hiloReady_Exe(){
 			procesoAEjecutar->estimacionAnterior = procesoAEjecutar->estimacionActual;
 
 
-			if(tiempo_bloq_kernel > 0){
+			if(procesoAEjecutar->tiempo_bloqueo > 0){
 				agregarABlock(procesoAEjecutar);
 				sem_post(&analizarSuspension); // Despues de que un proceso se va de Ready y hace su transicion, se analiza la suspension
 				sem_wait(&suspensionFinalizada);
 			}else{
+				if(procesoAEjecutar->PC < list_size(procesoAEjecutar->instrucciones)){
+					agregarAReady(procesoAEjecutar);
+				}else{
+					terminarEjecucion(procesoAEjecutar);
+					sem_post(&multiprogramacion);//esto lo agg nosotros
+				}
 
-				terminarEjecucion(procesoAEjecutar);
-				sem_post(&multiprogramacion);//esto lo agg nosotros
 			}
-
-
 
 			pthread_mutex_unlock(&multiprocesamiento);
 
-		}else{
+		}/*else{
 
 
-		}
+		}*/
 	}
 }
 

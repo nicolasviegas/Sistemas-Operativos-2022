@@ -193,46 +193,42 @@ static void procesar_conexion_cpu(void* void_args) {
 		/*------------------------------------ACA COMIENZA EL CICLO DE EJECUCION----------------------*/
 		instrucciones* proxima_a_ejecutar = malloc(sizeof(instrucciones)); //hacer un free al final
 
-
-
-		////////////////////////////////////////CAMBIAR DESPUES
-		//if (recv(cliente_socket, &interrupcion, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-		//			 log_info(log_cpu, "DISCONNECT!");
-			//				return;
-		//}
-		//log_error(log_cpu,"El tam despues del recv es: %d",pc);
-		//////////////////////////////////////////
-
-		/*-------------------------------------------------------------------------------------------------------*/
 		tiempo_bloqueante = 0;
+
+
 		while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones) && tiempo_bloqueante == 0){//la interrupcion verla segun el puerto interrupt
+
 		log_trace(log_cpu,"Entre en el while de interrupcion");
+
 		proxima_a_ejecutar = fetch(pcb_proceso_cpu);
-		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);//VER SI VA CON & O NO
+
+		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
+
+		//interrupcion = check_interrupt(cliente_socket);
+
 		log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
+
 		log_warning(log_cpu,"El tiempo bloqueante en el while de ejecucion es: %d",tiempo_bloqueante);
 		//bool interrupcion check interrupciones, un rcv que se
 			//if(interrupcion) break;
 			//else{}
 		}
 
-		//printf("El pc despues de las intrucciones es: %d\n",pcb_proceso_cpu->PC);
-
-
 		log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
 		log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
+
 		send_PC(fd_kernel,pcb_proceso_cpu->PC);
-		log_debug(log_cpu,"El tiempo bloqueante antes de mandarlo es: %d ",tiempo_bloqueante);
+
+		//log_debug(log_cpu,"El tiempo bloqueante antes de mandarlo es: %d ",tiempo_bloqueante);
+
 		send_tiempo_bloqueante(fd_kernel,tiempo_bloqueante);
 
-		log_trace(log_cpu,"Pase el send pc del PID: %d",pcb_proceso_cpu->PID );
+		//log_trace(log_cpu,"Pase el send pc del PID: %d",pcb_proceso_cpu->PID );
 
 
 		free(proxima_a_ejecutar);
 
-		//printf("El tam de la lista pcb cpu una vez terminado un proceso: %d \n",list_size(lista_pcb_cpu));
-
-		log_trace(log_cpu,"Sali de los recv");
+		log_trace(log_cpu,"Finalizo la ejecucion del proceso: %d ",pcb_proceso_cpu->PID);
 
 		free(pcb_proceso_cpu);
 

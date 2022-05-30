@@ -35336,3 +35336,995 @@
 [TRACE] 00:47:04:417 kernel/(9463:9467): El tiempo bloqueante despues del recv es: 0
 [INFO] 00:47:04:417 kernel/(9463:9467): [EXIT] Finaliza el proceso de PID: 1
 [TRACE] 00:47:04:417 kernel/(9463:9467): Entre en obtener sig de ready
+[INFO] 00:52:52:637 kernel/(10081:10081): El algoritmo de planificacion elegido es SRT.
+[WARNING] 00:52:52:692 kernel/(10081:10081): El grado multi prog es: 4
+[ERROR] 00:52:52:711 kernel/(10081:10081): El alfa es: 0.500000
+[TRACE] 00:52:52:725 kernel/(10081:10082): Entre en hilo suspencion a ready
+[TRACE] 00:52:52:728 kernel/(10081:10081): EL ALGORITMO DE PLANIF ES: 0
+[TRACE] 00:52:52:733 kernel/(10081:10085): Entre en obtener sig de ready
+[TRACE] 00:52:52:741 kernel/(10081:10082): Entre en hilo suspencion a ready
+[INFO] 00:52:52:743 kernel/(10081:10081): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 00:52:52:744 kernel/(10081:10081): El socket : 0
+[INFO] 00:52:52:748 kernel/(10081:10081): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 00:52:52:749 kernel/(10081:10081): El fd_memoria despues de grar conexiones es: 5
+[INFO] 00:52:52:756 kernel/(10081:10081): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 00:52:52:756 kernel/(10081:10081): El fd_cpu despues de grar conexiones es: 7
+[INFO] 00:53:16:793 kernel/(10081:10081): Cliente conectado (a KERNEL)
+
+[WARNING] 00:53:16:868 kernel/(10081:10151): Deserialice NO_OP el parametro es: 9
+[WARNING] 00:53:16:874 kernel/(10081:10151): Deserialice IO el parametro es: 12000
+[WARNING] 00:53:16:876 kernel/(10081:10151): Deserialice NO_OP el parametro es: 7
+[WARNING] 00:53:16:877 kernel/(10081:10151): Deserialice NO_OP el parametro es: 3
+[WARNING] 00:53:16:879 kernel/(10081:10151): Deserialice IO el parametro es: 5000
+[WARNING] 00:53:16:880 kernel/(10081:10151): Entre en EXIT
+[TRACE] 00:53:16:921 kernel/(10081:10151): El indice tabla de pagina es: 412
+[INFO] 00:53:16:923 kernel/(10081:10151): [NEW] Entra el proceso de PID: 1 a la cola.
+[TRACE] 00:53:16:924 kernel/(10081:10151): Antes de analizar suspension en agregar a NEW 
+[TRACE] 00:53:16:925 kernel/(10081:10083): Entre en hilo bloq a suspension
+[TRACE] 00:53:16:926 kernel/(10081:10151): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 00:53:16:926 kernel/(10081:10151): despues de suspension finalizada en agregar a NEW 
+[INFO] 00:53:16:928 kernel/(10081:10084): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 00:53:16:933 kernel/(10081:10084): [READY] Entra el proceso de PID: 1 a la cola.
+[WARNING] 00:53:16:934 kernel/(10081:10151): pase el agregar a NEW
+[DEBUG] 00:53:16:935 kernel/(10081:10084): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 00:53:16:935 kernel/(10081:10151): El PID ES: 1
+[INFO] 00:53:16:936 kernel/(10081:10151): DISCONNECT!
+[TRACE] 00:53:16:937 kernel/(10081:10151): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 00:53:16:937 kernel/(10081:10151): El cliente se desconecto de KERNEL server
+[ERROR] 00:53:16:944 kernel/(10081:10085): El proceso 1 fue elegido
+[INFO] 00:53:16:959 kernel/(10081:10085): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 00:53:16:962 kernel/(10081:10085): Entre a enviar pcb a cpu
+[WARNING] 00:53:16:972 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:16:979 kernel/(10081:10085): entre en I/O dentro de send_instrucciones
+[WARNING] 00:53:16:983 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:16:985 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:16:986 kernel/(10081:10085): entre en I/O dentro de send_instrucciones
+[WARNING] 00:53:16:987 kernel/(10081:10085): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:53:16:997 kernel/(10081:10085): La cant de instrucciones en la lista: 6
+[TRACE] 00:53:17:000 kernel/(10081:10085): El PC del proceso 1 es: 0
+[TRACE] 00:53:17:001 kernel/(10081:10085): Sali de enviar pcb a cpu
+[TRACE] 00:53:26:031 kernel/(10081:10085): El PC despues del recv es: 2
+[TRACE] 00:53:26:034 kernel/(10081:10085): El tiempo bloqueante despues del recv es: 12000
+[TRACE] 00:53:26:035 kernel/(10081:10085): Entre en agregar a block 
+[INFO] 00:53:26:036 kernel/(10081:10085): ADSSSS el proceso 1 tiene el PC en 2
+[INFO] 00:53:26:036 kernel/(10081:10085): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[TRACE] 00:53:26:046 kernel/(10081:10083): Entre en hilo bloq a suspension
+[INFO] 00:53:26:048 kernel/(10081:10083): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 00:53:26:049 kernel/(10081:10083): [HILO BLOCK A SUSP] antes del usleep triste, se suspende 12000 milisegs, 
+[TRACE] 00:53:36:050 kernel/(10081:10083): Entre en agregar a block suspended
+[INFO] 00:53:36:051 kernel/(10081:10083): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 00:53:36:051 kernel/(10081:10083): Le avise a memoria que libere los recursos
+[TRACE] 00:53:36:052 kernel/(10081:10083): Entre en agregar a ready suspended
+[INFO] 00:53:36:052 kernel/(10081:10083): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[TRACE] 00:53:36:053 kernel/(10081:10082): Entre en sacar de ready suspended
+[INFO] 00:53:36:053 kernel/(10081:10082): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 00:53:36:054 kernel/(10081:10082): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 00:53:36:054 kernel/(10081:10082): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 00:53:36:055 kernel/(10081:10082): Entre en hilo suspencion a ready
+[TRACE] 00:53:36:056 kernel/(10081:10083): Entre en hilo bloq a suspension
+[TRACE] 00:53:36:056 kernel/(10081:10085): Entre en obtener sig de ready
+[ERROR] 00:53:36:056 kernel/(10081:10085): El proceso 1 fue elegido
+[INFO] 00:53:36:058 kernel/(10081:10085): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 00:53:36:058 kernel/(10081:10085): Entre a enviar pcb a cpu
+[WARNING] 00:53:36:060 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:36:067 kernel/(10081:10085): entre en I/O dentro de send_instrucciones
+[WARNING] 00:53:36:068 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:36:070 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:36:071 kernel/(10081:10085): entre en I/O dentro de send_instrucciones
+[WARNING] 00:53:36:072 kernel/(10081:10085): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:53:36:073 kernel/(10081:10085): La cant de instrucciones en la lista: 6
+[TRACE] 00:53:36:074 kernel/(10081:10085): El PC del proceso 1 es: 2
+[TRACE] 00:53:36:074 kernel/(10081:10085): Sali de enviar pcb a cpu
+[TRACE] 00:53:46:086 kernel/(10081:10085): El PC despues del recv es: 5
+[TRACE] 00:53:46:086 kernel/(10081:10085): El tiempo bloqueante despues del recv es: 5000
+[TRACE] 00:53:46:087 kernel/(10081:10085): Entre en agregar a block 
+[INFO] 00:53:46:087 kernel/(10081:10085): ADSSSS el proceso 1 tiene el PC en 5
+[INFO] 00:53:46:088 kernel/(10081:10085): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[TRACE] 00:53:46:088 kernel/(10081:10083): Entre en hilo bloq a suspension
+[INFO] 00:53:46:088 kernel/(10081:10083): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 00:53:46:089 kernel/(10081:10083): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 5000 milisegs, 
+[INFO] 00:53:51:090 kernel/(10081:10083): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 00:53:51:090 kernel/(10081:10083): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 00:53:51:091 kernel/(10081:10083): Entre en hilo bloq a suspension
+[TRACE] 00:53:51:091 kernel/(10081:10085): Entre en obtener sig de ready
+[ERROR] 00:53:51:091 kernel/(10081:10085): El proceso 1 fue elegido
+[INFO] 00:53:51:092 kernel/(10081:10085): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
+[TRACE] 00:53:51:092 kernel/(10081:10085): Entre a enviar pcb a cpu
+[WARNING] 00:53:51:094 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:51:095 kernel/(10081:10085): entre en I/O dentro de send_instrucciones
+[WARNING] 00:53:51:096 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:51:097 kernel/(10081:10085): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:53:51:098 kernel/(10081:10085): entre en I/O dentro de send_instrucciones
+[WARNING] 00:53:51:099 kernel/(10081:10085): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:53:51:103 kernel/(10081:10085): La cant de instrucciones en la lista: 6
+[TRACE] 00:53:51:103 kernel/(10081:10085): El PC del proceso 1 es: 5
+[TRACE] 00:53:51:105 kernel/(10081:10085): Sali de enviar pcb a cpu
+[TRACE] 00:53:51:106 kernel/(10081:10085): El PC despues del recv es: 6
+[TRACE] 00:53:51:107 kernel/(10081:10085): El tiempo bloqueante despues del recv es: 0
+[INFO] 00:53:51:107 kernel/(10081:10085): [EXIT] Finaliza el proceso de PID: 1
+[TRACE] 00:53:51:108 kernel/(10081:10085): Entre en obtener sig de ready
+[INFO] 00:57:50:190 kernel/(11084:11084): El algoritmo de planificacion elegido es SRT.
+[WARNING] 00:57:50:190 kernel/(11084:11084): El grado multi prog es: 4
+[ERROR] 00:57:50:191 kernel/(11084:11084): El alfa es: 0.500000
+[TRACE] 00:57:50:191 kernel/(11084:11084): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 00:57:50:191 kernel/(11084:11084): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 00:57:50:191 kernel/(11084:11084): El socket : 0
+[INFO] 00:57:50:191 kernel/(11084:11084): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 00:57:50:191 kernel/(11084:11084): El fd_memoria despues de grar conexiones es: 5
+[INFO] 00:57:50:192 kernel/(11084:11084): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 00:57:50:192 kernel/(11084:11084): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 00:57:50:192 kernel/(11084:11088): Entre en obtener sig de ready
+[TRACE] 00:57:50:193 kernel/(11084:11085): Entre en hilo suspencion a ready
+[TRACE] 00:57:50:193 kernel/(11084:11085): Entre en hilo suspencion a ready
+[INFO] 00:57:57:320 kernel/(11084:11084): Cliente conectado (a KERNEL)
+
+[WARNING] 00:57:57:321 kernel/(11084:11107): Deserialice NO_OP el parametro es: 5
+[WARNING] 00:57:57:321 kernel/(11084:11107): Deserialice NO_OP el parametro es: 5
+[WARNING] 00:57:57:321 kernel/(11084:11107): Deserialice IO el parametro es: 3000
+[WARNING] 00:57:57:321 kernel/(11084:11107): Entre en EXIT
+[TRACE] 00:57:57:451 kernel/(11084:11107): El indice tabla de pagina es: 412
+[INFO] 00:57:57:451 kernel/(11084:11107): [NEW] Entra el proceso de PID: 1 a la cola.
+[TRACE] 00:57:57:451 kernel/(11084:11107): Antes de analizar suspension en agregar a NEW 
+[TRACE] 00:57:57:451 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 00:57:57:451 kernel/(11084:11107): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 00:57:57:451 kernel/(11084:11107): despues de suspension finalizada en agregar a NEW 
+[INFO] 00:57:57:451 kernel/(11084:11087): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 00:57:57:451 kernel/(11084:11087): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 00:57:57:451 kernel/(11084:11087): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 00:57:57:451 kernel/(11084:11088): El proceso 1 fue elegido
+[INFO] 00:57:57:451 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 00:57:57:451 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 00:57:57:451 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:57:57:451 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:57:57:451 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:57:57:451 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:57:57:451 kernel/(11084:11088): La cant de instrucciones en la lista: 4
+[TRACE] 00:57:57:451 kernel/(11084:11088): El PC del proceso 1 es: 0
+[TRACE] 00:57:57:451 kernel/(11084:11088): Sali de enviar pcb a cpu
+[WARNING] 00:57:57:452 kernel/(11084:11107): pase el agregar a NEW
+[TRACE] 00:57:57:452 kernel/(11084:11107): El PID ES: 1
+[INFO] 00:57:57:452 kernel/(11084:11107): DISCONNECT!
+[TRACE] 00:57:57:452 kernel/(11084:11107): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 00:57:57:452 kernel/(11084:11107): El cliente se desconecto de KERNEL server
+[TRACE] 00:58:07:455 kernel/(11084:11088): El PC despues del recv es: 3
+[TRACE] 00:58:07:456 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 3000
+[TRACE] 00:58:07:456 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 00:58:07:456 kernel/(11084:11088): ADSSSS el proceso 1 tiene el PC en 3
+[INFO] 00:58:07:456 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[TRACE] 00:58:07:456 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 00:58:07:456 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 00:58:07:456 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 3000 milisegs, 
+[INFO] 00:58:10:456 kernel/(11084:11086): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 00:58:10:456 kernel/(11084:11086): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 00:58:10:456 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 00:58:10:456 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 00:58:10:456 kernel/(11084:11088): El proceso 1 fue elegido
+[INFO] 00:58:10:456 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 00:58:10:456 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 00:58:10:457 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:58:10:457 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:58:10:457 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:58:10:457 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:58:10:457 kernel/(11084:11088): La cant de instrucciones en la lista: 4
+[TRACE] 00:58:10:458 kernel/(11084:11088): El PC del proceso 1 es: 3
+[TRACE] 00:58:10:458 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 00:58:10:458 kernel/(11084:11088): El PC despues del recv es: 4
+[TRACE] 00:58:10:458 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 0
+[INFO] 00:58:10:458 kernel/(11084:11088): [EXIT] Finaliza el proceso de PID: 1
+[TRACE] 00:58:10:458 kernel/(11084:11088): Entre en obtener sig de ready
+[INFO] 00:58:46:895 kernel/(11084:11084): Cliente conectado (a KERNEL)
+
+[WARNING] 00:58:46:970 kernel/(11084:11182): Deserialice NO_OP el parametro es: 9
+[WARNING] 00:58:46:972 kernel/(11084:11182): Deserialice IO el parametro es: 12000
+[WARNING] 00:58:46:977 kernel/(11084:11182): Deserialice NO_OP el parametro es: 7
+[WARNING] 00:58:46:978 kernel/(11084:11182): Deserialice NO_OP el parametro es: 3
+[WARNING] 00:58:46:978 kernel/(11084:11182): Deserialice IO el parametro es: 5000
+[WARNING] 00:58:46:980 kernel/(11084:11182): Entre en EXIT
+[TRACE] 00:58:48:466 kernel/(11084:11182): El indice tabla de pagina es: 412
+[INFO] 00:58:48:466 kernel/(11084:11182): [NEW] Entra el proceso de PID: 2 a la cola.
+[TRACE] 00:58:48:466 kernel/(11084:11182): Antes de analizar suspension en agregar a NEW 
+[TRACE] 00:58:48:466 kernel/(11084:11182): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 00:58:48:466 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 00:58:48:466 kernel/(11084:11182): despues de suspension finalizada en agregar a NEW 
+[WARNING] 00:58:48:466 kernel/(11084:11182): pase el agregar a NEW
+[TRACE] 00:58:48:466 kernel/(11084:11182): El PID ES: 2
+[INFO] 00:58:48:466 kernel/(11084:11182): DISCONNECT!
+[TRACE] 00:58:48:466 kernel/(11084:11182): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 00:58:48:466 kernel/(11084:11182): El cliente se desconecto de KERNEL server
+[INFO] 00:58:48:466 kernel/(11084:11087): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 00:58:48:466 kernel/(11084:11087): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 00:58:48:466 kernel/(11084:11087): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 00:58:48:466 kernel/(11084:11088): El proceso 2 fue elegido
+[INFO] 00:58:48:466 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 00:58:48:466 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 00:58:48:466 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:58:48:466 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:58:48:466 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:58:48:466 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:58:48:466 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:58:48:466 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:58:48:467 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 00:58:48:467 kernel/(11084:11088): El PC del proceso 2 es: 0
+[TRACE] 00:58:48:467 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 00:58:57:508 kernel/(11084:11088): El PC despues del recv es: 2
+[TRACE] 00:58:57:508 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 12000
+[TRACE] 00:58:57:508 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 00:58:57:508 kernel/(11084:11088): ADSSSS el proceso 2 tiene el PC en 2
+[INFO] 00:58:57:508 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[TRACE] 00:58:57:508 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 00:58:57:508 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 00:58:57:508 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep triste, se suspende 12000 milisegs, 
+[TRACE] 00:59:07:509 kernel/(11084:11086): Entre en agregar a block suspended
+[INFO] 00:59:07:509 kernel/(11084:11086): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 2 a la cola.
+[TRACE] 00:59:07:510 kernel/(11084:11086): Le avise a memoria que libere los recursos
+[TRACE] 00:59:07:510 kernel/(11084:11086): Entre en agregar a ready suspended
+[INFO] 00:59:07:510 kernel/(11084:11086): [READY-SUSPENDED] Ingresa el proceso de PID: 2 de la cola.
+[TRACE] 00:59:07:510 kernel/(11084:11085): Entre en sacar de ready suspended
+[INFO] 00:59:07:510 kernel/(11084:11085): [READY-SUSPENDED] Sale el proceso de PID: 2 de la cola.
+[INFO] 00:59:07:510 kernel/(11084:11085): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 00:59:07:510 kernel/(11084:11085): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 00:59:07:510 kernel/(11084:11085): Entre en hilo suspencion a ready
+[TRACE] 00:59:07:510 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 00:59:07:510 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 00:59:07:510 kernel/(11084:11088): El proceso 2 fue elegido
+[INFO] 00:59:07:510 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 00:59:07:510 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 00:59:07:510 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:07:510 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:59:07:510 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:07:511 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:07:511 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:59:07:511 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:59:07:511 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 00:59:07:511 kernel/(11084:11088): El PC del proceso 2 es: 2
+[TRACE] 00:59:07:511 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 00:59:17:529 kernel/(11084:11088): El PC despues del recv es: 5
+[TRACE] 00:59:17:529 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 5000
+[TRACE] 00:59:17:529 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 00:59:17:529 kernel/(11084:11088): ADSSSS el proceso 2 tiene el PC en 5
+[INFO] 00:59:17:529 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[TRACE] 00:59:17:529 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 00:59:17:529 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 00:59:17:529 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 5000 milisegs, 
+[INFO] 00:59:22:530 kernel/(11084:11086): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 00:59:22:530 kernel/(11084:11086): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 00:59:22:530 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 00:59:22:530 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 00:59:22:530 kernel/(11084:11088): El proceso 2 fue elegido
+[INFO] 00:59:22:530 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
+[TRACE] 00:59:22:530 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 00:59:22:530 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:22:531 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:59:22:531 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:22:531 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:22:531 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:59:22:531 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:59:22:531 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 00:59:22:532 kernel/(11084:11088): El PC del proceso 2 es: 5
+[TRACE] 00:59:22:532 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 00:59:22:532 kernel/(11084:11088): El PC despues del recv es: 6
+[TRACE] 00:59:22:532 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 0
+[INFO] 00:59:22:532 kernel/(11084:11088): [EXIT] Finaliza el proceso de PID: 2
+[TRACE] 00:59:22:532 kernel/(11084:11088): Entre en obtener sig de ready
+[INFO] 00:59:37:303 kernel/(11084:11084): Cliente conectado (a KERNEL)
+
+[WARNING] 00:59:37:304 kernel/(11084:11395): Deserialice NO_OP el parametro es: 5
+[WARNING] 00:59:37:305 kernel/(11084:11395): Deserialice NO_OP el parametro es: 5
+[WARNING] 00:59:37:305 kernel/(11084:11395): Deserialice IO el parametro es: 3000
+[WARNING] 00:59:37:305 kernel/(11084:11395): Entre en EXIT
+[TRACE] 00:59:37:305 kernel/(11084:11395): El indice tabla de pagina es: 412
+[INFO] 00:59:37:305 kernel/(11084:11395): [NEW] Entra el proceso de PID: 3 a la cola.
+[TRACE] 00:59:37:305 kernel/(11084:11395): Antes de analizar suspension en agregar a NEW 
+[TRACE] 00:59:37:305 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 00:59:37:305 kernel/(11084:11395): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 00:59:37:305 kernel/(11084:11395): despues de suspension finalizada en agregar a NEW 
+[INFO] 00:59:37:305 kernel/(11084:11087): [NEW] Se saca el proceso de PID: 3 de la cola
+[INFO] 00:59:37:305 kernel/(11084:11087): [READY] Entra el proceso de PID: 3 a la cola.
+[DEBUG] 00:59:37:305 kernel/(11084:11087): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 00:59:37:305 kernel/(11084:11088): El proceso 3 fue elegido
+[INFO] 00:59:37:305 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 3 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 00:59:37:305 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 00:59:37:306 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:37:306 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:37:306 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:59:37:306 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:59:37:306 kernel/(11084:11088): La cant de instrucciones en la lista: 4
+[TRACE] 00:59:37:306 kernel/(11084:11088): El PC del proceso 3 es: 0
+[TRACE] 00:59:37:306 kernel/(11084:11088): Sali de enviar pcb a cpu
+[WARNING] 00:59:37:306 kernel/(11084:11395): pase el agregar a NEW
+[TRACE] 00:59:37:306 kernel/(11084:11395): El PID ES: 3
+[INFO] 00:59:37:306 kernel/(11084:11395): DISCONNECT!
+[TRACE] 00:59:37:306 kernel/(11084:11395): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 00:59:37:306 kernel/(11084:11395): El cliente se desconecto de KERNEL server
+[TRACE] 00:59:47:344 kernel/(11084:11088): El PC despues del recv es: 3
+[TRACE] 00:59:47:344 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 3000
+[TRACE] 00:59:47:344 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 00:59:47:344 kernel/(11084:11088): ADSSSS el proceso 3 tiene el PC en 3
+[INFO] 00:59:47:344 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 3 a la cola.
+[TRACE] 00:59:47:344 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 00:59:47:344 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 3 de la cola.
+[INFO] 00:59:47:344 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 3000 milisegs, 
+[INFO] 00:59:50:344 kernel/(11084:11086): [READY] Entra el proceso de PID: 3 a la cola.
+[DEBUG] 00:59:50:345 kernel/(11084:11086): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 00:59:50:345 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 00:59:50:345 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 00:59:50:345 kernel/(11084:11088): El proceso 3 fue elegido
+[INFO] 00:59:50:345 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 3 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 00:59:50:345 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 00:59:50:345 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:50:345 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:59:50:345 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 00:59:50:346 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 00:59:50:346 kernel/(11084:11088): La cant de instrucciones en la lista: 4
+[TRACE] 00:59:50:346 kernel/(11084:11088): El PC del proceso 3 es: 3
+[TRACE] 00:59:50:346 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 00:59:50:346 kernel/(11084:11088): El PC despues del recv es: 4
+[TRACE] 00:59:50:346 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 0
+[INFO] 00:59:50:346 kernel/(11084:11088): [EXIT] Finaliza el proceso de PID: 3
+[TRACE] 00:59:50:346 kernel/(11084:11088): Entre en obtener sig de ready
+[INFO] 01:00:39:360 kernel/(11084:11084): Cliente conectado (a KERNEL)
+
+[WARNING] 01:00:39:429 kernel/(11084:11490): Deserialice NO_OP el parametro es: 9
+[WARNING] 01:00:39:432 kernel/(11084:11490): Deserialice IO el parametro es: 12000
+[WARNING] 01:00:39:433 kernel/(11084:11490): Deserialice NO_OP el parametro es: 7
+[WARNING] 01:00:39:436 kernel/(11084:11490): Deserialice NO_OP el parametro es: 3
+[WARNING] 01:00:39:437 kernel/(11084:11490): Deserialice IO el parametro es: 5000
+[WARNING] 01:00:39:439 kernel/(11084:11490): Entre en EXIT
+[TRACE] 01:00:39:477 kernel/(11084:11490): El indice tabla de pagina es: 412
+[INFO] 01:00:39:477 kernel/(11084:11490): [NEW] Entra el proceso de PID: 4 a la cola.
+[TRACE] 01:00:39:477 kernel/(11084:11490): Antes de analizar suspension en agregar a NEW 
+[TRACE] 01:00:39:477 kernel/(11084:11490): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 01:00:39:477 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 01:00:39:477 kernel/(11084:11490): despues de suspension finalizada en agregar a NEW 
+[WARNING] 01:00:39:477 kernel/(11084:11490): pase el agregar a NEW
+[INFO] 01:00:39:477 kernel/(11084:11087): [NEW] Se saca el proceso de PID: 4 de la cola
+[TRACE] 01:00:39:477 kernel/(11084:11490): El PID ES: 4
+[INFO] 01:00:39:477 kernel/(11084:11490): DISCONNECT!
+[TRACE] 01:00:39:477 kernel/(11084:11490): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 01:00:39:477 kernel/(11084:11490): El cliente se desconecto de KERNEL server
+[INFO] 01:00:39:477 kernel/(11084:11087): [READY] Entra el proceso de PID: 4 a la cola.
+[DEBUG] 01:00:39:477 kernel/(11084:11087): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 01:00:39:477 kernel/(11084:11088): El proceso 4 fue elegido
+[INFO] 01:00:39:477 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 4 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 01:00:39:477 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 01:00:39:477 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:00:39:477 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:00:39:477 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:00:39:477 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:00:39:477 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:00:39:477 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 01:00:39:478 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 01:00:39:478 kernel/(11084:11088): El PC del proceso 4 es: 0
+[TRACE] 01:00:39:478 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 01:00:48:510 kernel/(11084:11088): El PC despues del recv es: 2
+[TRACE] 01:00:48:511 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 12000
+[TRACE] 01:00:48:511 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 01:00:48:511 kernel/(11084:11088): ADSSSS el proceso 4 tiene el PC en 2
+[INFO] 01:00:48:511 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[TRACE] 01:00:48:511 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 01:00:48:511 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 01:00:48:511 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep triste, se suspende 12000 milisegs, 
+[TRACE] 01:00:58:511 kernel/(11084:11086): Entre en agregar a block suspended
+[INFO] 01:00:58:511 kernel/(11084:11086): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 4 a la cola.
+[TRACE] 01:00:58:511 kernel/(11084:11086): Le avise a memoria que libere los recursos
+[TRACE] 01:00:58:511 kernel/(11084:11086): Entre en agregar a ready suspended
+[INFO] 01:00:58:511 kernel/(11084:11086): [READY-SUSPENDED] Ingresa el proceso de PID: 4 de la cola.
+[TRACE] 01:00:58:511 kernel/(11084:11085): Entre en sacar de ready suspended
+[INFO] 01:00:58:511 kernel/(11084:11085): [READY-SUSPENDED] Sale el proceso de PID: 4 de la cola.
+[INFO] 01:00:58:512 kernel/(11084:11085): [READY] Entra el proceso de PID: 4 a la cola.
+[DEBUG] 01:00:58:512 kernel/(11084:11085): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 01:00:58:512 kernel/(11084:11085): Entre en hilo suspencion a ready
+[TRACE] 01:00:58:512 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 01:00:58:512 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 01:00:58:512 kernel/(11084:11088): El proceso 4 fue elegido
+[INFO] 01:00:58:512 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 4 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 01:00:58:512 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 01:00:58:512 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:00:58:512 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:00:58:512 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:00:58:513 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:00:58:513 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:00:58:513 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 01:00:58:513 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 01:00:58:513 kernel/(11084:11088): El PC del proceso 4 es: 2
+[TRACE] 01:00:58:513 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 01:01:08:517 kernel/(11084:11088): El PC despues del recv es: 5
+[TRACE] 01:01:08:517 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 5000
+[TRACE] 01:01:08:517 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 01:01:08:517 kernel/(11084:11088): ADSSSS el proceso 4 tiene el PC en 5
+[INFO] 01:01:08:517 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[TRACE] 01:01:08:517 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 01:01:08:517 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 01:01:08:517 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 5000 milisegs, 
+[INFO] 01:01:13:517 kernel/(11084:11086): [READY] Entra el proceso de PID: 4 a la cola.
+[DEBUG] 01:01:13:518 kernel/(11084:11086): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 01:01:13:518 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 01:01:13:518 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 01:01:13:518 kernel/(11084:11088): El proceso 4 fue elegido
+[INFO] 01:01:13:518 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 4 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
+[TRACE] 01:01:13:518 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 01:01:13:518 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:01:13:518 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:01:13:519 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:01:13:519 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:01:13:519 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:01:13:519 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 01:01:13:519 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 01:01:13:519 kernel/(11084:11088): El PC del proceso 4 es: 5
+[TRACE] 01:01:13:520 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 01:01:13:520 kernel/(11084:11088): El PC despues del recv es: 6
+[TRACE] 01:01:13:520 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 0
+[INFO] 01:01:13:520 kernel/(11084:11088): [EXIT] Finaliza el proceso de PID: 4
+[TRACE] 01:01:13:520 kernel/(11084:11088): Entre en obtener sig de ready
+[INFO] 01:03:09:412 kernel/(11084:11084): Cliente conectado (a KERNEL)
+
+[WARNING] 01:03:09:486 kernel/(11084:11818): Deserialice NO_OP el parametro es: 9
+[WARNING] 01:03:09:489 kernel/(11084:11818): Deserialice IO el parametro es: 12000
+[WARNING] 01:03:09:490 kernel/(11084:11818): Deserialice NO_OP el parametro es: 7
+[WARNING] 01:03:09:490 kernel/(11084:11818): Deserialice NO_OP el parametro es: 3
+[WARNING] 01:03:09:491 kernel/(11084:11818): Deserialice IO el parametro es: 5000
+[WARNING] 01:03:09:492 kernel/(11084:11818): Entre en EXIT
+[TRACE] 01:03:09:528 kernel/(11084:11818): El indice tabla de pagina es: 412
+[INFO] 01:03:09:528 kernel/(11084:11818): [NEW] Entra el proceso de PID: 5 a la cola.
+[TRACE] 01:03:09:529 kernel/(11084:11818): Antes de analizar suspension en agregar a NEW 
+[TRACE] 01:03:09:529 kernel/(11084:11818): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 01:03:09:529 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 01:03:09:529 kernel/(11084:11818): despues de suspension finalizada en agregar a NEW 
+[WARNING] 01:03:09:529 kernel/(11084:11818): pase el agregar a NEW
+[INFO] 01:03:09:529 kernel/(11084:11087): [NEW] Se saca el proceso de PID: 5 de la cola
+[TRACE] 01:03:09:529 kernel/(11084:11818): El PID ES: 5
+[INFO] 01:03:09:529 kernel/(11084:11818): DISCONNECT!
+[TRACE] 01:03:09:529 kernel/(11084:11818): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 01:03:09:529 kernel/(11084:11818): El cliente se desconecto de KERNEL server
+[INFO] 01:03:09:529 kernel/(11084:11087): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 01:03:09:529 kernel/(11084:11087): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 01:03:09:529 kernel/(11084:11088): El proceso 5 fue elegido
+[INFO] 01:03:09:529 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 5 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 01:03:09:529 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 01:03:09:529 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:09:529 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:03:09:529 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:09:529 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:09:529 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:03:09:529 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 01:03:09:529 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 01:03:09:529 kernel/(11084:11088): El PC del proceso 5 es: 0
+[TRACE] 01:03:09:529 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 01:03:18:571 kernel/(11084:11088): El PC despues del recv es: 2
+[TRACE] 01:03:18:572 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 12000
+[TRACE] 01:03:18:572 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 01:03:18:572 kernel/(11084:11088): ADSSSS el proceso 5 tiene el PC en 2
+[INFO] 01:03:18:572 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[TRACE] 01:03:18:572 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 01:03:18:572 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 01:03:18:572 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep triste, se suspende 12000 milisegs, 
+[TRACE] 01:03:28:572 kernel/(11084:11086): Entre en agregar a block suspended
+[INFO] 01:03:28:572 kernel/(11084:11086): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 5 a la cola.
+[TRACE] 01:03:28:572 kernel/(11084:11086): Le avise a memoria que libere los recursos
+[TRACE] 01:03:28:572 kernel/(11084:11086): Entre en agregar a ready suspended
+[INFO] 01:03:28:572 kernel/(11084:11086): [READY-SUSPENDED] Ingresa el proceso de PID: 5 de la cola.
+[TRACE] 01:03:28:572 kernel/(11084:11085): Entre en sacar de ready suspended
+[INFO] 01:03:28:572 kernel/(11084:11085): [READY-SUSPENDED] Sale el proceso de PID: 5 de la cola.
+[INFO] 01:03:28:572 kernel/(11084:11085): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 01:03:28:572 kernel/(11084:11085): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 01:03:28:573 kernel/(11084:11085): Entre en hilo suspencion a ready
+[TRACE] 01:03:28:573 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 01:03:28:573 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 01:03:28:573 kernel/(11084:11088): El proceso 5 fue elegido
+[INFO] 01:03:28:573 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 5 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 01:03:28:573 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 01:03:28:573 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:28:573 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:03:28:573 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:28:574 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:28:574 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:03:28:574 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 01:03:28:574 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 01:03:28:574 kernel/(11084:11088): El PC del proceso 5 es: 2
+[TRACE] 01:03:28:574 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 01:03:38:579 kernel/(11084:11088): El PC despues del recv es: 5
+[TRACE] 01:03:38:579 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 5000
+[TRACE] 01:03:38:579 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 01:03:38:579 kernel/(11084:11088): ADSSSS el proceso 5 tiene el PC en 5
+[INFO] 01:03:38:579 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[TRACE] 01:03:38:579 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 01:03:38:579 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 01:03:38:579 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 5000 milisegs, 
+[INFO] 01:03:43:579 kernel/(11084:11086): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 01:03:43:580 kernel/(11084:11086): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 01:03:43:580 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 01:03:43:580 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 01:03:43:580 kernel/(11084:11088): El proceso 5 fue elegido
+[INFO] 01:03:43:580 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 5 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
+[TRACE] 01:03:43:580 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 01:03:43:580 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:43:580 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:03:43:580 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:43:581 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:03:43:581 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:03:43:581 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 01:03:43:581 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 01:03:43:581 kernel/(11084:11088): El PC del proceso 5 es: 5
+[TRACE] 01:03:43:581 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 01:03:43:582 kernel/(11084:11088): El PC despues del recv es: 6
+[TRACE] 01:03:43:582 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 0
+[INFO] 01:03:43:582 kernel/(11084:11088): [EXIT] Finaliza el proceso de PID: 5
+[TRACE] 01:03:43:582 kernel/(11084:11088): Entre en obtener sig de ready
+[INFO] 01:04:42:586 kernel/(11084:11084): Cliente conectado (a KERNEL)
+
+[WARNING] 01:04:42:655 kernel/(11084:11965): Deserialice NO_OP el parametro es: 9
+[WARNING] 01:04:42:657 kernel/(11084:11965): Deserialice IO el parametro es: 12000
+[WARNING] 01:04:42:659 kernel/(11084:11965): Deserialice NO_OP el parametro es: 7
+[WARNING] 01:04:42:660 kernel/(11084:11965): Deserialice NO_OP el parametro es: 3
+[WARNING] 01:04:42:660 kernel/(11084:11965): Deserialice IO el parametro es: 5000
+[WARNING] 01:04:42:661 kernel/(11084:11965): Entre en EXIT
+[TRACE] 01:04:42:701 kernel/(11084:11965): El indice tabla de pagina es: 412
+[INFO] 01:04:42:701 kernel/(11084:11965): [NEW] Entra el proceso de PID: 6 a la cola.
+[TRACE] 01:04:42:701 kernel/(11084:11965): Antes de analizar suspension en agregar a NEW 
+[TRACE] 01:04:42:701 kernel/(11084:11965): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 01:04:42:701 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 01:04:42:701 kernel/(11084:11965): despues de suspension finalizada en agregar a NEW 
+[WARNING] 01:04:42:701 kernel/(11084:11965): pase el agregar a NEW
+[INFO] 01:04:42:701 kernel/(11084:11087): [NEW] Se saca el proceso de PID: 6 de la cola
+[TRACE] 01:04:42:701 kernel/(11084:11965): El PID ES: 6
+[INFO] 01:04:42:701 kernel/(11084:11965): DISCONNECT!
+[TRACE] 01:04:42:701 kernel/(11084:11965): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 01:04:42:701 kernel/(11084:11965): El cliente se desconecto de KERNEL server
+[INFO] 01:04:42:702 kernel/(11084:11087): [READY] Entra el proceso de PID: 6 a la cola.
+[DEBUG] 01:04:42:702 kernel/(11084:11087): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 01:04:42:702 kernel/(11084:11088): El proceso 6 fue elegido
+[INFO] 01:04:42:702 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 6 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 01:04:42:702 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 01:04:42:702 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:04:42:702 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:04:42:702 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:04:42:702 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:04:42:702 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:04:42:702 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 01:04:42:702 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 01:04:42:702 kernel/(11084:11088): El PC del proceso 6 es: 0
+[TRACE] 01:04:42:702 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 01:04:51:743 kernel/(11084:11088): El PC despues del recv es: 2
+[TRACE] 01:04:51:744 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 12000
+[TRACE] 01:04:51:744 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 01:04:51:744 kernel/(11084:11088): ADSSSS el proceso 6 tiene el PC en 2
+[INFO] 01:04:51:744 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 6 a la cola.
+[TRACE] 01:04:51:744 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 01:04:51:744 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 6 de la cola.
+[INFO] 01:04:51:744 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep triste, se suspende 12000 milisegs, 
+[TRACE] 01:05:01:744 kernel/(11084:11086): Entre en agregar a block suspended
+[INFO] 01:05:01:744 kernel/(11084:11086): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 6 a la cola.
+[TRACE] 01:05:01:744 kernel/(11084:11086): Le avise a memoria que libere los recursos
+[TRACE] 01:05:01:744 kernel/(11084:11086): Entre en agregar a ready suspended
+[INFO] 01:05:01:744 kernel/(11084:11086): [READY-SUSPENDED] Ingresa el proceso de PID: 6 de la cola.
+[TRACE] 01:05:01:744 kernel/(11084:11085): Entre en sacar de ready suspended
+[INFO] 01:05:01:744 kernel/(11084:11085): [READY-SUSPENDED] Sale el proceso de PID: 6 de la cola.
+[INFO] 01:05:01:744 kernel/(11084:11085): [READY] Entra el proceso de PID: 6 a la cola.
+[DEBUG] 01:05:01:745 kernel/(11084:11085): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 01:05:01:745 kernel/(11084:11085): Entre en hilo suspencion a ready
+[TRACE] 01:05:01:745 kernel/(11084:11086): Entre en hilo bloq a suspension
+[TRACE] 01:05:01:745 kernel/(11084:11088): Entre en obtener sig de ready
+[ERROR] 01:05:01:745 kernel/(11084:11088): El proceso 6 fue elegido
+[INFO] 01:05:01:745 kernel/(11084:11088): [EXEC] Ingresa el carpincho de PID: 6 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 01:05:01:745 kernel/(11084:11088): Entre a enviar pcb a cpu
+[WARNING] 01:05:01:745 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:05:01:745 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:05:01:745 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:05:01:746 kernel/(11084:11088): entre en NO_OP dentro de send_instrucciones
+[WARNING] 01:05:01:746 kernel/(11084:11088): entre en I/O dentro de send_instrucciones
+[WARNING] 01:05:01:746 kernel/(11084:11088): Entre en EXIT dentro de send_instrucciones
+[TRACE] 01:05:01:746 kernel/(11084:11088): La cant de instrucciones en la lista: 6
+[TRACE] 01:05:01:746 kernel/(11084:11088): El PC del proceso 6 es: 2
+[TRACE] 01:05:01:746 kernel/(11084:11088): Sali de enviar pcb a cpu
+[TRACE] 01:05:11:749 kernel/(11084:11088): El PC despues del recv es: 5
+[TRACE] 01:05:11:749 kernel/(11084:11088): El tiempo bloqueante despues del recv es: 5000
+[TRACE] 01:05:11:749 kernel/(11084:11088): Entre en agregar a block 
+[INFO] 01:05:11:749 kernel/(11084:11088): ADSSSS el proceso 6 tiene el PC en 5
+[INFO] 01:05:11:749 kernel/(11084:11088): [BLOCK] Entra el proceso de PID: 6 a la cola.
+[TRACE] 01:05:11:749 kernel/(11084:11086): Entre en hilo bloq a suspension
+[INFO] 01:05:11:749 kernel/(11084:11086): [BLOCK] Sale el proceso de PID: 6 de la cola.
+[INFO] 01:05:11:749 kernel/(11084:11086): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 5000 milisegs, 
+[INFO] 12:09:24:708 kernel/(5253:5253): El algoritmo de planificacion elegido es SRT.
+[WARNING] 12:09:24:710 kernel/(5253:5253): El grado multi prog es: 4
+[ERROR] 12:09:24:710 kernel/(5253:5253): El alfa es: 0.500000
+[TRACE] 12:09:24:710 kernel/(5253:5253): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 12:09:24:710 kernel/(5253:5253): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:09:24:710 kernel/(5253:5253): El socket : 0
+[INFO] 12:09:24:710 kernel/(5253:5253): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 12:09:24:711 kernel/(5253:5253): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:09:24:711 kernel/(5253:5253): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 12:09:24:711 kernel/(5253:5253): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 12:09:24:711 kernel/(5253:5257): Entre en obtener sig de ready
+[TRACE] 12:09:24:711 kernel/(5253:5254): Entre en hilo suspencion a ready
+[TRACE] 12:09:24:711 kernel/(5253:5254): Entre en hilo suspencion a ready
+[INFO] 12:09:35:255 kernel/(5253:5253): Cliente conectado (a KERNEL)
+
+[WARNING] 12:09:35:257 kernel/(5253:5279): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:09:35:257 kernel/(5253:5279): Deserialice NO_OP el parametro es: 5
+[WARNING] 12:09:35:257 kernel/(5253:5279): Deserialice IO el parametro es: 3000
+[WARNING] 12:09:35:257 kernel/(5253:5279): Entre en EXIT
+[TRACE] 12:09:35:257 kernel/(5253:5279): El indice tabla de pagina es: 412
+[INFO] 12:09:35:257 kernel/(5253:5279): [NEW] Entra el proceso de PID: 1 a la cola.
+[TRACE] 12:09:35:257 kernel/(5253:5279): Antes de analizar suspension en agregar a NEW 
+[TRACE] 12:09:35:257 kernel/(5253:5255): Entre en hilo bloq a suspension
+[TRACE] 12:09:35:258 kernel/(5253:5279): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 12:09:35:258 kernel/(5253:5279): despues de suspension finalizada en agregar a NEW 
+[INFO] 12:09:35:258 kernel/(5253:5256): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 12:09:35:258 kernel/(5253:5256): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 12:09:35:258 kernel/(5253:5256): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 12:09:35:258 kernel/(5253:5257): El proceso 1 fue elegido
+[INFO] 12:09:35:258 kernel/(5253:5257): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 12:09:35:258 kernel/(5253:5257): Entre a enviar pcb a cpu
+[WARNING] 12:09:35:258 kernel/(5253:5257): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:09:35:258 kernel/(5253:5257): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:09:35:258 kernel/(5253:5257): entre en I/O dentro de send_instrucciones
+[WARNING] 12:09:35:259 kernel/(5253:5257): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:09:35:259 kernel/(5253:5257): La cant de instrucciones en la lista: 4
+[TRACE] 12:09:35:259 kernel/(5253:5257): El PC del proceso 1 es: 0
+[TRACE] 12:09:35:259 kernel/(5253:5257): Sali de enviar pcb a cpu
+[WARNING] 12:09:35:259 kernel/(5253:5279): pase el agregar a NEW
+[TRACE] 12:09:35:259 kernel/(5253:5279): El PID ES: 1
+[INFO] 12:09:35:259 kernel/(5253:5279): DISCONNECT!
+[TRACE] 12:09:35:259 kernel/(5253:5279): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 12:09:35:259 kernel/(5253:5279): El cliente se desconecto de KERNEL server
+[TRACE] 12:09:45:263 kernel/(5253:5257): El PC despues del recv es: 3
+[TRACE] 12:09:45:263 kernel/(5253:5257): El tiempo bloqueante despues del recv es: 3000
+[TRACE] 12:09:45:263 kernel/(5253:5257): Entre en agregar a block 
+[INFO] 12:09:45:263 kernel/(5253:5257): ADSSSS el proceso 1 tiene el PC en 3
+[INFO] 12:09:45:263 kernel/(5253:5257): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[TRACE] 12:09:45:263 kernel/(5253:5255): Entre en hilo bloq a suspension
+[INFO] 12:09:45:263 kernel/(5253:5255): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 12:09:45:263 kernel/(5253:5255): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 3000 milisegs, 
+[INFO] 12:09:48:264 kernel/(5253:5255): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 12:09:48:264 kernel/(5253:5255): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 12:09:48:264 kernel/(5253:5255): Entre en hilo bloq a suspension
+[TRACE] 12:09:48:264 kernel/(5253:5257): Entre en obtener sig de ready
+[ERROR] 12:09:48:264 kernel/(5253:5257): El proceso 1 fue elegido
+[INFO] 12:09:48:264 kernel/(5253:5257): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 12:09:48:264 kernel/(5253:5257): Entre a enviar pcb a cpu
+[WARNING] 12:09:48:265 kernel/(5253:5257): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:09:48:265 kernel/(5253:5257): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:09:48:265 kernel/(5253:5257): entre en I/O dentro de send_instrucciones
+[WARNING] 12:09:48:265 kernel/(5253:5257): Entre en EXIT dentro de send_instrucciones
+[TRACE] 12:09:48:265 kernel/(5253:5257): La cant de instrucciones en la lista: 4
+[TRACE] 12:09:48:266 kernel/(5253:5257): El PC del proceso 1 es: 3
+[TRACE] 12:09:48:266 kernel/(5253:5257): Sali de enviar pcb a cpu
+[TRACE] 12:09:48:266 kernel/(5253:5257): El PC despues del recv es: 4
+[TRACE] 12:09:48:266 kernel/(5253:5257): El tiempo bloqueante despues del recv es: 0
+[INFO] 12:09:48:266 kernel/(5253:5257): [EXIT] Finaliza el proceso de PID: 1
+[TRACE] 12:09:48:266 kernel/(5253:5257): Entre en obtener sig de ready
+[INFO] 13:08:11:765 kernel/(10271:10271): El algoritmo de planificacion elegido es SRT.
+[WARNING] 13:08:11:765 kernel/(10271:10271): El grado multi prog es: 4
+[ERROR] 13:08:11:765 kernel/(10271:10271): El alfa es: 0.500000
+[TRACE] 13:08:11:765 kernel/(10271:10271): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 13:08:11:765 kernel/(10271:10271): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:08:11:765 kernel/(10271:10271): El socket : 0
+[INFO] 13:08:11:765 kernel/(10271:10271): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 13:08:11:766 kernel/(10271:10271): El fd_memoria despues de grar conexiones es: 5
+[INFO] 13:08:11:766 kernel/(10271:10271): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 13:08:11:766 kernel/(10271:10271): El fd_cpu despues de grar conexiones es: 7
+[ERROR] 13:08:11:766 kernel/(10271:10271): Error al conectar (a CPU)
+
+[INFO] 13:08:40:677 kernel/(10313:10313): El algoritmo de planificacion elegido es SRT.
+[WARNING] 13:08:40:677 kernel/(10313:10313): El grado multi prog es: 4
+[ERROR] 13:08:40:677 kernel/(10313:10313): El alfa es: 0.500000
+[TRACE] 13:08:40:677 kernel/(10313:10313): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 13:08:40:678 kernel/(10313:10313): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:08:40:678 kernel/(10313:10313): El socket : 0
+[INFO] 13:08:40:678 kernel/(10313:10313): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 13:08:40:686 kernel/(10313:10313): El fd_memoria despues de grar conexiones es: 5
+[INFO] 13:08:40:686 kernel/(10313:10313): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 13:08:40:686 kernel/(10313:10313): El fd_cpu despues de grar conexiones es: 7
+[ERROR] 13:08:40:687 kernel/(10313:10313): Error al conectar (a CPU)
+
+[INFO] 13:25:44:030 kernel/(12161:12161): El algoritmo de planificacion elegido es SRT.
+[WARNING] 13:25:44:030 kernel/(12161:12161): El grado multi prog es: 4
+[ERROR] 13:25:44:030 kernel/(12161:12161): El alfa es: 0.500000
+[TRACE] 13:25:44:030 kernel/(12161:12161): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 13:25:44:030 kernel/(12161:12161): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:25:44:031 kernel/(12161:12161): El socket : 0
+[INFO] 13:25:44:031 kernel/(12161:12161): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 13:25:44:031 kernel/(12161:12161): El fd_memoria despues de grar conexiones es: 5
+[INFO] 13:25:44:031 kernel/(12161:12161): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 13:25:44:031 kernel/(12161:12161): El fd_cpu despues de grar conexiones es: 7
+[ERROR] 13:25:44:031 kernel/(12161:12161): Error al conectar (a CPU)
+
+[INFO] 13:26:44:225 kernel/(12246:12246): El algoritmo de planificacion elegido es SRT.
+[WARNING] 13:26:44:225 kernel/(12246:12246): El grado multi prog es: 4
+[ERROR] 13:26:44:225 kernel/(12246:12246): El alfa es: 0.500000
+[TRACE] 13:26:44:225 kernel/(12246:12246): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 13:26:44:225 kernel/(12246:12246): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:26:44:225 kernel/(12246:12246): El socket : 0
+[INFO] 13:26:44:225 kernel/(12246:12246): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 13:26:44:225 kernel/(12246:12246): El fd_memoria despues de grar conexiones es: 5
+[INFO] 13:26:44:226 kernel/(12246:12246): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 13:26:44:226 kernel/(12246:12246): El fd_cpu despues de grar conexiones es: 7
+[ERROR] 13:26:44:226 kernel/(12246:12246): Error al conectar (a CPU)
+
+[INFO] 13:27:07:852 kernel/(12398:12398): El algoritmo de planificacion elegido es SRT.
+[WARNING] 13:27:07:852 kernel/(12398:12398): El grado multi prog es: 4
+[ERROR] 13:27:07:852 kernel/(12398:12398): El alfa es: 0.500000
+[TRACE] 13:27:07:852 kernel/(12398:12398): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 13:27:07:852 kernel/(12398:12398): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:27:07:852 kernel/(12398:12398): El socket : 0
+[INFO] 13:27:07:852 kernel/(12398:12398): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 13:27:07:853 kernel/(12398:12398): El fd_memoria despues de grar conexiones es: 5
+[INFO] 13:27:07:853 kernel/(12398:12398): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 13:27:07:853 kernel/(12398:12398): El fd_cpu despues de grar conexiones es: 7
+[ERROR] 13:27:07:853 kernel/(12398:12398): Error al conectar (a CPU)
+
+[INFO] 13:27:09:670 kernel/(12408:12408): El algoritmo de planificacion elegido es SRT.
+[WARNING] 13:27:09:670 kernel/(12408:12408): El grado multi prog es: 4
+[ERROR] 13:27:09:670 kernel/(12408:12408): El alfa es: 0.500000
+[TRACE] 13:27:09:670 kernel/(12408:12408): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 13:27:09:670 kernel/(12408:12408): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:27:09:671 kernel/(12408:12408): El socket : 0
+[INFO] 13:27:09:671 kernel/(12408:12408): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 13:27:09:671 kernel/(12408:12408): El fd_memoria despues de grar conexiones es: 5
+[INFO] 13:27:09:671 kernel/(12408:12408): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 13:27:09:671 kernel/(12408:12408): El fd_cpu despues de grar conexiones es: 7
+[ERROR] 13:27:09:671 kernel/(12408:12408): Error al conectar (a CPU)
+
+[INFO] 13:27:25:935 kernel/(12556:12556): El algoritmo de planificacion elegido es SRT.
+[WARNING] 13:27:25:935 kernel/(12556:12556): El grado multi prog es: 4
+[ERROR] 13:27:25:935 kernel/(12556:12556): El alfa es: 0.500000
+[TRACE] 13:27:25:935 kernel/(12556:12556): EL ALGORITMO DE PLANIF ES: 0
+[INFO] 13:27:25:935 kernel/(12556:12556): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:27:25:935 kernel/(12556:12556): El socket : 0
+[INFO] 13:27:25:936 kernel/(12556:12556): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 13:27:25:936 kernel/(12556:12556): El fd_memoria despues de grar conexiones es: 5
+[INFO] 13:27:25:936 kernel/(12556:12556): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 13:27:25:936 kernel/(12556:12556): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 13:27:25:936 kernel/(12556:12556): El fd_cpu despues de grar conexiones puerto interrupt es: 7
+[TRACE] 13:27:25:936 kernel/(12556:12560): Entre en obtener sig de ready
+[TRACE] 13:27:25:937 kernel/(12556:12557): Entre en hilo suspencion a ready
+[TRACE] 13:27:25:937 kernel/(12556:12557): Entre en hilo suspencion a ready
+[INFO] 13:27:30:572 kernel/(12556:12556): Cliente conectado (a KERNEL)
+
+[WARNING] 13:27:30:573 kernel/(12556:12570): Deserialice NO_OP el parametro es: 5
+[WARNING] 13:27:30:574 kernel/(12556:12570): Deserialice NO_OP el parametro es: 5
+[WARNING] 13:27:30:574 kernel/(12556:12570): Deserialice IO el parametro es: 3000
+[WARNING] 13:27:30:574 kernel/(12556:12570): Entre en EXIT
+[TRACE] 13:27:30:574 kernel/(12556:12570): El indice tabla de pagina es: 412
+[INFO] 13:27:30:574 kernel/(12556:12570): [NEW] Entra el proceso de PID: 1 a la cola.
+[TRACE] 13:27:30:574 kernel/(12556:12570): Antes de analizar suspension en agregar a NEW 
+[TRACE] 13:27:30:574 kernel/(12556:12558): Entre en hilo bloq a suspension
+[TRACE] 13:27:30:574 kernel/(12556:12570): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 13:27:30:574 kernel/(12556:12570): despues de suspension finalizada en agregar a NEW 
+[INFO] 13:27:30:575 kernel/(12556:12559): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 13:27:30:575 kernel/(12556:12559): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:27:30:575 kernel/(12556:12559): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 13:27:30:575 kernel/(12556:12560): El proceso 1 fue elegido
+[INFO] 13:27:30:575 kernel/(12556:12560): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:27:30:575 kernel/(12556:12560): Entre a enviar pcb a cpu
+[WARNING] 13:27:30:575 kernel/(12556:12560): entre en NO_OP dentro de send_instrucciones
+[WARNING] 13:27:30:575 kernel/(12556:12560): entre en NO_OP dentro de send_instrucciones
+[WARNING] 13:27:30:575 kernel/(12556:12560): entre en I/O dentro de send_instrucciones
+[WARNING] 13:27:30:575 kernel/(12556:12560): Entre en EXIT dentro de send_instrucciones
+[TRACE] 13:27:30:576 kernel/(12556:12560): La cant de instrucciones en la lista: 4
+[TRACE] 13:27:30:576 kernel/(12556:12560): El PC del proceso 1 es: 0
+[TRACE] 13:27:30:576 kernel/(12556:12560): Sali de enviar pcb a cpu
+[WARNING] 13:27:30:576 kernel/(12556:12570): pase el agregar a NEW
+[TRACE] 13:27:30:576 kernel/(12556:12570): El PID ES: 1
+[INFO] 13:27:30:576 kernel/(12556:12570): DISCONNECT!
+[TRACE] 13:27:30:576 kernel/(12556:12570): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 13:27:30:576 kernel/(12556:12570): El cliente se desconecto de KERNEL server
+[TRACE] 13:27:40:580 kernel/(12556:12560): El PC despues del recv es: 3
+[TRACE] 13:27:40:580 kernel/(12556:12560): El tiempo bloqueante despues del recv es: 3000
+[TRACE] 13:27:40:580 kernel/(12556:12560): Entre en agregar a block 
+[INFO] 13:27:40:580 kernel/(12556:12560): ADSSSS el proceso 1 tiene el PC en 3
+[INFO] 13:27:40:580 kernel/(12556:12560): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[TRACE] 13:27:40:580 kernel/(12556:12558): Entre en hilo bloq a suspension
+[INFO] 13:27:40:580 kernel/(12556:12558): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:27:40:580 kernel/(12556:12558): [HILO BLOCK A SUSP] antes del usleep feliz, bloquea el proceso 3000 milisegs, 
+[INFO] 13:27:43:582 kernel/(12556:12558): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:27:43:582 kernel/(12556:12558): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 13:27:43:582 kernel/(12556:12558): Entre en hilo bloq a suspension
+[TRACE] 13:27:43:582 kernel/(12556:12560): Entre en obtener sig de ready
+[ERROR] 13:27:43:582 kernel/(12556:12560): El proceso 1 fue elegido
+[INFO] 13:27:43:582 kernel/(12556:12560): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 13:27:43:582 kernel/(12556:12560): Entre a enviar pcb a cpu
+[WARNING] 13:27:43:582 kernel/(12556:12560): entre en NO_OP dentro de send_instrucciones
+[WARNING] 13:27:43:583 kernel/(12556:12560): entre en NO_OP dentro de send_instrucciones
+[WARNING] 13:27:43:583 kernel/(12556:12560): entre en I/O dentro de send_instrucciones
+[WARNING] 13:27:43:583 kernel/(12556:12560): Entre en EXIT dentro de send_instrucciones
+[TRACE] 13:27:43:583 kernel/(12556:12560): La cant de instrucciones en la lista: 4
+[TRACE] 13:27:43:583 kernel/(12556:12560): El PC del proceso 1 es: 3
+[TRACE] 13:27:43:583 kernel/(12556:12560): Sali de enviar pcb a cpu
+[TRACE] 13:27:43:584 kernel/(12556:12560): El PC despues del recv es: 4
+[TRACE] 13:27:43:584 kernel/(12556:12560): El tiempo bloqueante despues del recv es: 0
+[INFO] 13:27:43:584 kernel/(12556:12560): [EXIT] Finaliza el proceso de PID: 1
+[TRACE] 13:27:43:584 kernel/(12556:12560): Entre en obtener sig de ready
+[INFO] 13:28:15:446 kernel/(12556:12556): Cliente conectado (a KERNEL)
+
+[WARNING] 13:28:15:448 kernel/(12556:12631): Deserialice NO_OP el parametro es: 9
+[WARNING] 13:28:15:448 kernel/(12556:12631): Deserialice IO el parametro es: 13000
+[WARNING] 13:28:15:448 kernel/(12556:12631): Entre en EXIT
+[TRACE] 13:28:15:448 kernel/(12556:12631): El indice tabla de pagina es: 412
+[INFO] 13:28:15:448 kernel/(12556:12631): [NEW] Entra el proceso de PID: 2 a la cola.
+[TRACE] 13:28:15:448 kernel/(12556:12631): Antes de analizar suspension en agregar a NEW 
+[TRACE] 13:28:15:448 kernel/(12556:12558): Entre en hilo bloq a suspension
+[TRACE] 13:28:15:448 kernel/(12556:12631): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 13:28:15:448 kernel/(12556:12631): despues de suspension finalizada en agregar a NEW 
+[INFO] 13:28:15:449 kernel/(12556:12559): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 13:28:15:449 kernel/(12556:12559): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 13:28:15:449 kernel/(12556:12559): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 13:28:15:449 kernel/(12556:12560): El proceso 2 fue elegido
+[INFO] 13:28:15:449 kernel/(12556:12560): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:28:15:449 kernel/(12556:12560): Entre a enviar pcb a cpu
+[WARNING] 13:28:15:449 kernel/(12556:12560): entre en NO_OP dentro de send_instrucciones
+[WARNING] 13:28:15:449 kernel/(12556:12560): entre en I/O dentro de send_instrucciones
+[WARNING] 13:28:15:449 kernel/(12556:12560): Entre en EXIT dentro de send_instrucciones
+[TRACE] 13:28:15:449 kernel/(12556:12560): La cant de instrucciones en la lista: 3
+[TRACE] 13:28:15:449 kernel/(12556:12560): El PC del proceso 2 es: 0
+[TRACE] 13:28:15:449 kernel/(12556:12560): Sali de enviar pcb a cpu
+[WARNING] 13:28:15:449 kernel/(12556:12631): pase el agregar a NEW
+[TRACE] 13:28:15:449 kernel/(12556:12631): El PID ES: 2
+[INFO] 13:28:15:449 kernel/(12556:12631): DISCONNECT!
+[TRACE] 13:28:15:449 kernel/(12556:12631): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 13:28:15:449 kernel/(12556:12631): El cliente se desconecto de KERNEL server
+[TRACE] 13:28:24:492 kernel/(12556:12560): El PC despues del recv es: 2
+[TRACE] 13:28:24:492 kernel/(12556:12560): El tiempo bloqueante despues del recv es: 13000
+[TRACE] 13:28:24:492 kernel/(12556:12560): Entre en agregar a block 
+[INFO] 13:28:24:492 kernel/(12556:12560): ADSSSS el proceso 2 tiene el PC en 2
+[INFO] 13:28:24:492 kernel/(12556:12560): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[TRACE] 13:28:24:492 kernel/(12556:12558): Entre en hilo bloq a suspension
+[INFO] 13:28:24:492 kernel/(12556:12558): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 13:28:24:492 kernel/(12556:12558): [HILO BLOCK A SUSP] antes del usleep triste, se suspende 13000 milisegs, 
+[TRACE] 13:28:34:492 kernel/(12556:12558): Entre en agregar a block suspended
+[INFO] 13:28:34:493 kernel/(12556:12558): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 2 a la cola.
+[TRACE] 13:28:34:493 kernel/(12556:12558): Le avise a memoria que libere los recursos
+[TRACE] 13:28:34:493 kernel/(12556:12558): Entre en agregar a ready suspended
+[INFO] 13:28:34:493 kernel/(12556:12558): [READY-SUSPENDED] Ingresa el proceso de PID: 2 de la cola.
+[TRACE] 13:28:34:493 kernel/(12556:12557): Entre en sacar de ready suspended
+[INFO] 13:28:34:493 kernel/(12556:12557): [READY-SUSPENDED] Sale el proceso de PID: 2 de la cola.
+[INFO] 13:28:34:493 kernel/(12556:12557): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 13:28:34:493 kernel/(12556:12557): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 13:28:34:493 kernel/(12556:12557): Entre en hilo suspencion a ready
+[TRACE] 13:28:34:493 kernel/(12556:12558): Entre en hilo bloq a suspension
+[TRACE] 13:28:34:493 kernel/(12556:12560): Entre en obtener sig de ready
+[ERROR] 13:28:34:493 kernel/(12556:12560): El proceso 2 fue elegido
+[INFO] 13:28:34:493 kernel/(12556:12560): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 13:28:34:493 kernel/(12556:12560): Entre a enviar pcb a cpu
+[WARNING] 13:28:34:493 kernel/(12556:12560): entre en NO_OP dentro de send_instrucciones
+[WARNING] 13:28:34:493 kernel/(12556:12560): entre en I/O dentro de send_instrucciones
+[WARNING] 13:28:34:494 kernel/(12556:12560): Entre en EXIT dentro de send_instrucciones
+[TRACE] 13:28:34:494 kernel/(12556:12560): La cant de instrucciones en la lista: 3
+[TRACE] 13:28:34:494 kernel/(12556:12560): El PC del proceso 2 es: 2
+[TRACE] 13:28:34:494 kernel/(12556:12560): Sali de enviar pcb a cpu
+[TRACE] 13:28:34:495 kernel/(12556:12560): El PC despues del recv es: 3
+[TRACE] 13:28:34:495 kernel/(12556:12560): El tiempo bloqueante despues del recv es: 0
+[INFO] 13:28:34:495 kernel/(12556:12560): [EXIT] Finaliza el proceso de PID: 2
+[TRACE] 13:28:34:495 kernel/(12556:12560): Entre en obtener sig de ready
+[INFO] 13:54:53:343 kernel/(14900:14900): El algoritmo de planificacion elegido es FIFO.
+[WARNING] 13:54:53:343 kernel/(14900:14900): El grado multi prog es: 4
+[ERROR] 13:54:53:343 kernel/(14900:14900): El alfa es: 0.500000
+[TRACE] 13:54:53:343 kernel/(14900:14900): EL ALGORITMO DE PLANIF ES: 1
+[INFO] 13:54:53:344 kernel/(14900:14900): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:54:53:344 kernel/(14900:14900): El socket : 0
+[INFO] 13:54:53:344 kernel/(14900:14900): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[TRACE] 13:54:53:344 kernel/(14900:14900): El fd_memoria despues de grar conexiones es: 5
+[INFO] 13:54:53:344 kernel/(14900:14900): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[TRACE] 13:54:53:344 kernel/(14900:14900): El fd_cpu despues de grar conexiones es: 7
+[TRACE] 13:54:53:344 kernel/(14900:14900): El fd_cpu despues de grar conexiones puerto interrupt es: 7
+[TRACE] 13:54:53:345 kernel/(14900:14904): Entre en obtener sig de ready
+[TRACE] 13:54:53:345 kernel/(14900:14901): Entre en hilo suspencion a ready
+[TRACE] 13:54:53:345 kernel/(14900:14901): Entre en hilo suspencion a ready
+[INFO] 13:54:57:143 kernel/(14900:14900): Cliente conectado (a KERNEL)
+
+[WARNING] 13:54:57:144 kernel/(14900:14911): Deserialice NO_OP el parametro es: 9
+[WARNING] 13:54:57:145 kernel/(14900:14911): Deserialice IO el parametro es: 13000
+[WARNING] 13:54:57:145 kernel/(14900:14911): Entre en EXIT
+[TRACE] 13:54:57:145 kernel/(14900:14911): El indice tabla de pagina es: 412
+[INFO] 13:54:57:145 kernel/(14900:14911): [NEW] Entra el proceso de PID: 1 a la cola.
+[TRACE] 13:54:57:145 kernel/(14900:14911): Antes de analizar suspension en agregar a NEW 
+[TRACE] 13:54:57:145 kernel/(14900:14902): Entre en hilo bloq a suspension
+[TRACE] 13:54:57:145 kernel/(14900:14911): Despues del post de analizar suspension en agregar a NEW 
+[TRACE] 13:54:57:145 kernel/(14900:14911): despues de suspension finalizada en agregar a NEW 
+[INFO] 13:54:57:145 kernel/(14900:14903): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 13:54:57:145 kernel/(14900:14903): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:54:57:145 kernel/(14900:14903): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 13:54:57:145 kernel/(14900:14904): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 13:54:57:145 kernel/(14900:14904): Entre a enviar pcb a cpu
+[WARNING] 13:54:57:146 kernel/(14900:14904): entre en NO_OP dentro de send_instrucciones
+[WARNING] 13:54:57:146 kernel/(14900:14904): entre en I/O dentro de send_instrucciones
+[WARNING] 13:54:57:146 kernel/(14900:14904): Entre en EXIT dentro de send_instrucciones
+[TRACE] 13:54:57:146 kernel/(14900:14904): La cant de instrucciones en la lista: 3
+[TRACE] 13:54:57:146 kernel/(14900:14904): El PC del proceso 1 es: 0
+[TRACE] 13:54:57:146 kernel/(14900:14904): Sali de enviar pcb a cpu
+[WARNING] 13:54:57:146 kernel/(14900:14911): pase el agregar a NEW
+[TRACE] 13:54:57:146 kernel/(14900:14911): El PID ES: 1
+[INFO] 13:54:57:147 kernel/(14900:14911): DISCONNECT!
+[TRACE] 13:54:57:147 kernel/(14900:14911): El socket de cpu despues de grar conexiones es: 7
+[WARNING] 13:54:57:147 kernel/(14900:14911): El cliente se desconecto de KERNEL server
+[TRACE] 13:55:06:152 kernel/(14900:14904): El PC despues del recv es: 2
+[TRACE] 13:55:06:152 kernel/(14900:14904): El tiempo bloqueante despues del recv es: 13000
+[TRACE] 13:55:06:152 kernel/(14900:14904): Entre en agregar a block 
+[INFO] 13:55:06:152 kernel/(14900:14904): ADSSSS el proceso 1 tiene el PC en 2
+[INFO] 13:55:06:152 kernel/(14900:14904): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[TRACE] 13:55:06:152 kernel/(14900:14902): Entre en hilo bloq a suspension
+[INFO] 13:55:06:153 kernel/(14900:14902): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:55:06:153 kernel/(14900:14902): [HILO BLOCK A SUSP] antes del usleep triste, se suspende 13000 milisegs, 
+[TRACE] 13:55:16:153 kernel/(14900:14902): Entre en agregar a block suspended
+[INFO] 13:55:16:153 kernel/(14900:14902): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 13:55:16:153 kernel/(14900:14902): Le avise a memoria que libere los recursos
+[TRACE] 13:55:16:153 kernel/(14900:14902): Entre en agregar a ready suspended
+[INFO] 13:55:16:153 kernel/(14900:14902): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[TRACE] 13:55:16:153 kernel/(14900:14901): Entre en sacar de ready suspended
+[INFO] 13:55:16:153 kernel/(14900:14901): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:55:16:153 kernel/(14900:14901): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:55:16:153 kernel/(14900:14901): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 13:55:16:153 kernel/(14900:14901): Entre en hilo suspencion a ready
+[TRACE] 13:55:16:153 kernel/(14900:14902): Entre en hilo bloq a suspension
+[TRACE] 13:55:16:153 kernel/(14900:14904): Entre en obtener sig de ready
+[INFO] 13:55:16:153 kernel/(14900:14904): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 13:55:16:153 kernel/(14900:14904): Entre a enviar pcb a cpu
+[WARNING] 13:55:16:153 kernel/(14900:14904): entre en NO_OP dentro de send_instrucciones
+[WARNING] 13:55:16:154 kernel/(14900:14904): entre en I/O dentro de send_instrucciones
+[WARNING] 13:55:16:154 kernel/(14900:14904): Entre en EXIT dentro de send_instrucciones
+[TRACE] 13:55:16:154 kernel/(14900:14904): La cant de instrucciones en la lista: 3
+[TRACE] 13:55:16:154 kernel/(14900:14904): El PC del proceso 1 es: 2
+[TRACE] 13:55:16:154 kernel/(14900:14904): Sali de enviar pcb a cpu
+[TRACE] 13:55:16:154 kernel/(14900:14904): El PC despues del recv es: 3
+[TRACE] 13:55:16:154 kernel/(14900:14904): El tiempo bloqueante despues del recv es: 0
+[INFO] 13:55:16:154 kernel/(14900:14904): [EXIT] Finaliza el proceso de PID: 1
+[TRACE] 13:55:16:154 kernel/(14900:14904): Entre en obtener sig de ready

@@ -13,7 +13,7 @@
 
 void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 
-	instrucciones* a = malloc(sizeof(instrucciones));
+	instrucciones* a ;
 	int cant_instrucciones = list_size(lista_instrucciones);
 	int indice = 0;
 
@@ -58,6 +58,6 @@ void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 		indice++;
 	}
 
-	free(a);
+	//free(a);
 
 }
