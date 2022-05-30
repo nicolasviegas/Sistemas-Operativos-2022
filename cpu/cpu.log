@@ -44161,3 +44161,52 @@
 [DEBUG] 19:22:06:778 cpu/(7966:13341): El tiempo bloqueante antes de mandarlo es: 0 
 [TRACE] 19:22:06:778 cpu/(7966:13341): Pase el send pc del PID: 2
 [TRACE] 19:22:06:778 cpu/(7966:13341): Sali de los recv
+[INFO] 22:01:21:013 cpu/(4926:4926): Escuchando en 127.0.0.1:8001 (CPU)
+
+[TRACE] 22:01:21:021 cpu/(4926:4926): El socket en cpu.c es : 4
+[INFO] 22:01:21:022 cpu/(4926:4926): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 22:01:21:022 cpu/(4926:4926): El fd_memoria despues de grar conexiones es: 5
+[INFO] 22:01:23:676 cpu/(4926:4926): Cliente conectado (a CPU)
+
+[TRACE] 22:01:23:676 cpu/(4926:4934): El socket de kernel en cpu.c es : 0
+[TRACE] 22:01:41:326 cpu/(4926:4934): El pid despues del recv es: 1
+[TRACE] 22:01:41:327 cpu/(4926:4934): El tam despues del recv es: 101
+[TRACE] 22:01:41:327 cpu/(4926:4934): cant_instrucciones despues del recv es: 6
+[TRACE] 22:01:41:327 cpu/(4926:4934): indice tabla pags despues del recv es: 412
+[WARNING] 22:01:41:327 cpu/(4926:4934): Deserialice NO_OP el parametro es: 9
+[WARNING] 22:01:41:327 cpu/(4926:4934): Deserialice IO el parametro es: 12000
+[WARNING] 22:01:41:328 cpu/(4926:4934): Deserialice NO_OP el parametro es: 7
+[WARNING] 22:01:41:328 cpu/(4926:4934): Deserialice NO_OP el parametro es: 3
+[WARNING] 22:01:41:328 cpu/(4926:4934): Deserialice IO el parametro es: 5000
+[WARNING] 22:01:41:328 cpu/(4926:4934): Entre en EXIT
+[TRACE] 22:01:41:328 cpu/(4926:4934): El PC despues del recv es: 0
+[TRACE] 22:01:41:328 cpu/(4926:4934): Entre en el while de interrupcion
+[WARNING] 22:01:41:328 cpu/(4926:4934): Antes del sleep
+[WARNING] 22:01:50:331 cpu/(4926:4934): El program counter es: 0
+[WARNING] 22:01:50:334 cpu/(4926:4934): Termine NO_OP donde hago el execute
+[TRACE] 22:01:50:334 cpu/(4926:4934): El pc despues de ejecutar una instruccion es: 1
+[WARNING] 22:01:50:334 cpu/(4926:4934): El tiempo bloqueante en el while de ejecucion es: 0
+[TRACE] 22:01:50:334 cpu/(4926:4934): Entre en el while de interrupcion
+[WARNING] 22:01:50:335 cpu/(4926:4934): Entre en IO
+[WARNING] 22:01:50:335 cpu/(4926:4934): El tiempo bloqueante es: 12000
+[TRACE] 22:01:50:335 cpu/(4926:4934): El pc despues de ejecutar una instruccion es: 2
+[WARNING] 22:01:50:335 cpu/(4926:4934): El tiempo bloqueante en el while de ejecucion es: 12000
+[WARNING] 22:01:50:336 cpu/(4926:4934): el fd_cpu antes de send pc es: 4
+[WARNING] 22:01:50:336 cpu/(4926:4934): el fd_kernel antes de send pc es: 7
+[DEBUG] 22:01:50:337 cpu/(4926:4934): El tiempo bloqueante antes de mandarlo es: 12000 
+[TRACE] 22:01:50:339 cpu/(4926:4934): Pase el send pc del PID: 1
+[TRACE] 22:01:50:339 cpu/(4926:4934): Sali de los recv
+[TRACE] 22:02:00:342 cpu/(4926:4934): El pid despues del recv es: 1
+[TRACE] 22:02:00:343 cpu/(4926:4934): El tam despues del recv es: 101
+[TRACE] 22:02:00:343 cpu/(4926:4934): cant_instrucciones despues del recv es: 6
+[TRACE] 22:02:00:343 cpu/(4926:4934): indice tabla pags despues del recv es: 412
+[WARNING] 22:02:00:344 cpu/(4926:4934): Deserialice NO_OP el parametro es: 9
+[WARNING] 22:02:00:345 cpu/(4926:4934): Deserialice IO el parametro es: 12000
+[WARNING] 22:02:00:346 cpu/(4926:4934): Deserialice NO_OP el parametro es: 7
+[WARNING] 22:02:00:346 cpu/(4926:4934): Deserialice NO_OP el parametro es: 3
+[WARNING] 22:02:00:348 cpu/(4926:4934): Deserialice IO el parametro es: 5000
+[TRACE] 22:02:01:135 cpu/(4926:4934): El PID ES: 0
+[INFO] 22:02:01:135 cpu/(4926:4934): DISCONNECT!
+[TRACE] 22:02:01:135 cpu/(4926:4934): El socket de cpu despues de grar conexiones es: 4
+[INFO] 22:02:01:135 cpu/(4926:4934): DISCONNECT!

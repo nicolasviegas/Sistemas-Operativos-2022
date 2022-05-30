@@ -13414,3 +13414,15 @@
 [WARNING] 19:21:21:832 consola/(13364:13364): entre en I/O dentro de send_instrucciones
 [WARNING] 19:21:21:832 consola/(13364:13364): Entre en EXIT dentro de send_instrucciones
 [ERROR] 19:21:21:832 consola/(13364:13364): Pase el send instrucciones 
+[INFO] 22:01:41:305 consola/(4935:4935): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[TRACE] 22:01:41:306 consola/(4935:4935): El fd_kernel despues de grar conexiones es: 4
+[ERROR] 22:01:41:306 consola/(4935:4935): Pase el send TAM 
+[ERROR] 22:01:41:306 consola/(4935:4935): El socket dentro de send instrcciones es : 4
+[WARNING] 22:01:41:306 consola/(4935:4935): entre en NO_OP dentro de send_instrucciones
+[WARNING] 22:01:41:307 consola/(4935:4935): entre en I/O dentro de send_instrucciones
+[WARNING] 22:01:41:307 consola/(4935:4935): entre en NO_OP dentro de send_instrucciones
+[WARNING] 22:01:41:307 consola/(4935:4935): entre en NO_OP dentro de send_instrucciones
+[WARNING] 22:01:41:308 consola/(4935:4935): entre en I/O dentro de send_instrucciones
+[WARNING] 22:01:41:308 consola/(4935:4935): Entre en EXIT dentro de send_instrucciones
+[ERROR] 22:01:41:309 consola/(4935:4935): Pase el send instrucciones 
