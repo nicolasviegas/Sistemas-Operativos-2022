@@ -28,7 +28,6 @@ void conexion_kernel_a_memoria();
 
 void pedir_tabla_a_memoria();
 
-void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso);
 
 
 #endif /* KERNEL_INCLUDE_FUNCIONES_KERNEL_H_ */

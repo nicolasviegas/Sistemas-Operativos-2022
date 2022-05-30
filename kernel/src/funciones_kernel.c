@@ -124,8 +124,6 @@ void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso
 			indice++;
 		}
 
-		free(a);
-
 }
 
 

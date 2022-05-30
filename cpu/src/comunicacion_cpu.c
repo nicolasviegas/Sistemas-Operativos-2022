@@ -41,7 +41,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 
 		 if (recv(cliente_socket, &tam, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-		 log_info(log_kernel, "DISCONNECT!");
+		 log_info(log_cpu, "DISCONNECT!");
 		 		return;
 		 }
 		 log_trace(log_cpu,"El tam despues del recv es: %d",tam);
@@ -64,7 +64,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 
 
-					     log_trace(log_cpu,"El PID ES: %d",contador_cliente);
+					     //log_trace(log_cpu,"El PID ES: %d",contador_cliente);
 					     log_info(log_cpu, "DISCONNECT!");
 
 					     log_trace(log_cpu,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
@@ -81,7 +81,7 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	 uint32_t parametro1;
 
 					             	 if (!recv_NO_OP_2(cliente_socket, &parametro1)) {
-					             	          log_error(log_kernel, "Fallo recibiendo NO_OP");
+					             	          log_error(log_cpu, "Fallo recibiendo NO_OP");
 					             	         break;
 					             	      }
 

@@ -57,6 +57,8 @@ void cargar_PCB_kernel(int contador_cliente, uint32_t tam, t_list* lista_nueva_k
 
 void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* lista_instrucciones);
 
+
+
 ///////////////////////////////////////////////////////// COLAS /////////////////////////////////////////////////////////
 
 t_queue* colaNew;
