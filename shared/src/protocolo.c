@@ -686,6 +686,57 @@ bool recv_tiempo_bloqueante(int fd, uint32_t* parametro1) {
     free(stream);
     return true;
 }
+///////////////////////////////////////////
+static void* serializar_interrupcion(uint32_t parametro1) {
+   void* stream = malloc(sizeof(uint32_t));
+   // op_code_instrucciones cop = READ;
+    //memcpy(stream, &cop, sizeof(op_code_instrucciones));
+    memcpy(stream, &parametro1, sizeof(uint32_t));
 
+   // printf("El cop en serializar READ es: %d\n",cop);
+   // printf("El tam a enviar es: %d\n",parametro1);
+   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+    return stream;
+}
+
+
+void deserializar_interrupcion(void* stream, uint32_t* parametro1) {
+
+    memcpy(parametro1, stream ,sizeof(uint32_t));
+//  printf("El PC en deserializar PC es: %d \n", parametro1);
+
+}
+
+bool send_interrupcion(int fd,uint32_t tiempo_bloqueante) {
+	//printf("Entre en send_PC \n");
+   size_t size = sizeof(uint32_t);
+
+    void* stream = serializar_interrupcion(tiempo_bloqueante);
+
+
+    if (send(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    free(stream);
+    return true;
+}
+
+
+bool recv_interrupcion(int fd, uint32_t* parametro1) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_interrupcion(stream, parametro1);
+
+    free(stream);
+    return true;
+}
 
 

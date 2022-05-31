@@ -167,11 +167,13 @@ int main() {
     log_trace(log_kernel,"El fd_cpu despues de grar conexiones es: %d",fd_cpu);
 
 
-  /*  int fd_cpu_1 = 0;
-    if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_interrupt, &fd_cpu_1)) {
+    //send_tam(fd_cpu,algoritmo_config);
+
+    fd_cpu_interrupt = 0;
+    if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_interrupt, &fd_cpu_interrupt)) {
       		cerrar_programa2(log_kernel);
       		return EXIT_FAILURE;
-     }*/
+     }
 
     log_trace(log_kernel,"El fd_cpu despues de grar conexiones puerto interrupt es: %d",fd_cpu);
 

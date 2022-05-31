@@ -79,6 +79,9 @@ bool recv_PC(int fd, uint32_t* parametro1);
 bool send_tiempo_bloqueante(int fd, uint32_t parametro1);
 bool recv_tiempo_bloqueante(int fd, uint32_t* parametro1);
 
+bool send_interrupcion(int fd, uint32_t parametro1);
+bool recv_interrupcion(int fd, uint32_t* parametro1);
+
 bool send_debug(int fd);
 
 

@@ -6,6 +6,7 @@
 typedef struct {
     t_log* log;
     int fd;
+    int fd_interrupt;
     char* server_name;
 } t_procesar_conexion_args;
 
@@ -14,6 +15,7 @@ static void procesar_conexion_cpu(void* void_args) {
     t_procesar_conexion_args* args = (t_procesar_conexion_args*) void_args;
     t_log* log_cpu = args->log;
     int cliente_socket = args->fd;
+    int cliente_socket_interrupcion = args->fd_interrupt;
     char* server_name = args->server_name;
     free(args);
 
@@ -26,12 +28,14 @@ static void procesar_conexion_cpu(void* void_args) {
 	 uint32_t pc;
 
 	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	 log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
-	 printf("El cliente socket en cpu.c es : %d\n",cliente_socket);
+	// log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
+	 printf("El cliente socket en cpu.c procesar conexion es : %d\n",cliente_socket);
 	 fd_kernel = cliente_socket;/////////////////////////////////////////////todo HARDCODEADO, PREGUNTAR
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	 while (cliente_socket != -1) {
+
+
+	 while (cliente_socket != -1 && cliente_socket_interrupcion != -1) {
 
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
 		 		log_error(log_cpu, "Fallo recibiendo pid");
@@ -195,24 +199,25 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		tiempo_bloqueante = 0;
 
+		interrupcion = false;
 
-		while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones) && tiempo_bloqueante == 0){//la interrupcion verla segun el puerto interrupt
+			while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones) && tiempo_bloqueante == 0){//la interrupcion verla segun el puerto interrupt
 
-		log_trace(log_cpu,"Entre en el while de interrupcion");
+			log_trace(log_cpu,"Entre en el while de interrupcion");
 
-		proxima_a_ejecutar = fetch(pcb_proceso_cpu);
+			proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 
-		decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
+			decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
 
-		//interrupcion = check_interrupt(cliente_socket);
+			interrupcion = check_interrupt(cliente_socket_interrupcion);
 
-		log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
+			log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
 
-		log_warning(log_cpu,"El tiempo bloqueante en el while de ejecucion es: %d",tiempo_bloqueante);
-		//bool interrupcion check interrupciones, un rcv que se
-			//if(interrupcion) break;
-			//else{}
-		}
+			log_warning(log_cpu,"El tiempo bloqueante en el while de ejecucion es: %d",tiempo_bloqueante);
+			//bool interrupcion check interrupciones, un rcv que se
+				//if(interrupcion) break;
+				//else{}
+			}
 
 		log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
 		log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
@@ -240,19 +245,25 @@ static void procesar_conexion_cpu(void* void_args) {
 
 }
 
-int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket) {
+
+int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket,int server_socket_1) {
     int cliente_socket = esperar_cliente(logger, server_name, server_socket);
+    int cliente_socket_1 = esperar_cliente(logger, server_name, server_socket_1);
    // log_warning(logger,"El socket en sv escuchar cpu es: %d",server_socket);
-    if (cliente_socket != -1) {
+    if (cliente_socket != -1 && cliente_socket_1 != -1) {
+    	/////////////////////////////////
         pthread_t hilo;
         t_procesar_conexion_args* args = malloc(sizeof(t_procesar_conexion_args));
         args->log = logger;
         args->fd = cliente_socket;
+        args->fd_interrupt = cliente_socket_1;
         args->server_name = server_name;
+
        // log_error(log_cpu,"Estoy en sv escuchar antes de procesar conexion");
         pthread_create(&hilo, NULL, (void*) procesar_conexion_cpu, (void*) args);
         pthread_detach(hilo);
      //  log_error(log_cpu,"Estoy en sv escuchar despues de procesar conexion");
+
         return 1;
     }
     return 0;

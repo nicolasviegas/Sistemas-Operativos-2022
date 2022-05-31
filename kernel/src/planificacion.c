@@ -239,14 +239,14 @@ void hiloNew_Ready(){
 
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
+			if(algoritmo_config == SRT){
+						  log_debug(log_kernel,"Entre en send interrupcion");
+							send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
+						}else{
+							log_debug(log_kernel,"Entre en send interrupcion");
+							send_interrupcion(fd_cpu_interrupt,1);
+						}
 			sem_post(&contadorProcesosEnMemoria);
-
-			//TODO ACA IRIA LA INTERRUPCION AVISANDO QUE LLEGO UN PROCESO A READY, IF ALGORITMO == SRT'
-
-			/*if(algoritmo_config == SRT){
-				send_interrupcion_a_cpu(fd_cpu,777); ///777 es que hay una interrupcion
-			}*/
-
 		}
 	}
 }
@@ -279,6 +279,8 @@ void hiloReady_Exe(){
 			}
 
 			enviar_pcb_a_cpu(procesoAEjecutar);
+
+			send_interrupcion(fd_cpu_interrupt,1);
 
 			uint32_t pc;
 			if (!recv_PC(fd_cpu, &pc)) {
@@ -359,6 +361,16 @@ void hiloBlockASuspension(){
 						//sem_post(&medianoPlazo); //esto para desbloquear el hilo suspension a ready
 
 						agregarAReady(pcb);
+////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
+						if(algoritmo_config == SRT){
+							log_debug(log_kernel,"Entre en el send interrupcion");
+							send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
+						}else{
+							log_debug(log_kernel,"Entre en el send interrupcion");
+							send_interrupcion(fd_cpu_interrupt,1);
+						}
+
+////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
 
 						//sem_post(&multiprogramacion);
 					}else{//sino solo lo bloqueo y lo devuelvo a ready
@@ -396,6 +408,15 @@ void hiloSuspensionAReady(){
 		sem_wait(&multiprogramacion);
 
 		agregarAReady(proceso);
+
+		if(algoritmo_config == SRT){
+									log_debug(log_kernel,"Entre en el send interrupcion");
+									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
+								}else{
+									log_debug(log_kernel,"Entre en el send interrupcion");
+
+									send_interrupcion(fd_cpu_interrupt,1);
+								}
 
 		sem_post(&contadorProcesosEnMemoria);
 		}

@@ -88,6 +88,17 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 	log_warning("Se aumento el program counter, la sig instruccion es: %d",pcb->PC);
 }
 
-bool check_interrupt(){
+bool check_interrupt(int cliente_socket){
+	uint32_t cod_interrup;
+	if (!recv_interrupcion(cliente_socket, &cod_interrup)) {
+			log_error(log_cpu, "fallo recibiendo la interrupcion");
 
+	}
+	if(cod_interrup == 777){
+		interrupcion = true;
+		return interrupcion;
+	}else{
+		log_error(log_cpu,"fallo recibiendo la interrupcion: %d",cod_interrup);
+		return false;
+	}
 }

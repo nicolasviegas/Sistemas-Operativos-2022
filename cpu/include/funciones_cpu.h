@@ -22,6 +22,7 @@ void cargar_instruccion_cpu(int id, char* nombre, uint32_t parametro1, uint32_t 
 instrucciones* fetch(pcb_cpu* pcb);
 void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar);
 
+bool check_interrupt(cliente_socket_interrupcion);
 
 
 #endif /* CPU_INCLUDE_FUNCIONES_CPU_H_ */

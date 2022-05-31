@@ -29,6 +29,8 @@ typedef struct{
 
 }pcb_cpu;
 
+bool interrupcion;
+
 t_list* lista_instrucciones_cpu;
 
 t_list* lista_pcb_cpu;
@@ -45,7 +47,8 @@ uint32_t tiempo_bloqueante;
 
 //agregas colas_new, colas_ready, etc
 
-int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket);
+//int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket);
+int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket,int server_socket_1);
 
 void cerrar_programa(t_log* logger);
 
