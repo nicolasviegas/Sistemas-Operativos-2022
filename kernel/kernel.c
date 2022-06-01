@@ -137,7 +137,7 @@ int main() {
 
 
     ////////////////////
-	log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
+	//log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
 
     ///
 

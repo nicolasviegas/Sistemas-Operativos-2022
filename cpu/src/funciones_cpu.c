@@ -99,7 +99,7 @@ bool check_interrupt(int cliente_socket){
 		log_debug(log_cpu,"Entre en generar interrupcion debug");
 		return interrupcion;
 	}else{
-		log_error(log_cpu,"fallo recibiendo la interrupcion: %d",cod_interrup);
+		log_error(log_cpu,"No recibi ninguna interrupcion: %d",cod_interrup);
 		return false;
 	}
 }

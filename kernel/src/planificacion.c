@@ -239,15 +239,21 @@ void hiloNew_Ready(){
 
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
+
+
+			if(hay_alguien_exe){
 			if(algoritmo_config == SRT){
 
 						log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
-						  log_debug(log_kernel,"Entre en send interrupcion");
+						  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
 							send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 						}else{
 							log_debug(log_kernel,"Entre en send interrupcion");
 							send_interrupcion(fd_cpu_interrupt,1);
 						}
+			}else{
+				send_interrupcion(fd_cpu_interrupt,1);
+			}
 			sem_post(&contadorProcesosEnMemoria);
 		}
 	}
@@ -281,6 +287,8 @@ void hiloReady_Exe(){
 			}
 
 			enviar_pcb_a_cpu(procesoAEjecutar);
+
+			hay_alguien_exe = true;
 
 			send_interrupcion(fd_cpu_interrupt,1);
 
@@ -329,6 +337,9 @@ void hiloReady_Exe(){
 
 			pthread_mutex_unlock(&multiprocesamiento);
 
+			hay_alguien_exe = false;
+
+
 		}/*else{
 
 
@@ -363,10 +374,10 @@ void hiloBlockASuspension(){
 						//sem_post(&medianoPlazo); //esto para desbloquear el hilo suspension a ready
 
 						agregarAReady(pcb);
-						log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
+						log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion, en block a suspension");
 ////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
 						if(algoritmo_config == SRT){
-							log_debug(log_kernel,"Entre en el send interrupcion");
+							log_debug(log_kernel,"Entre en el send interrupcion 777");
 							send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 						}else{
 							log_debug(log_kernel,"Entre en el send interrupcion");
@@ -412,15 +423,19 @@ void hiloSuspensionAReady(){
 
 		agregarAReady(proceso);
 
-		if(algoritmo_config == SRT){
+		if(hay_alguien_exe){
+					if(algoritmo_config == SRT){
+
 								log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
-									log_debug(log_kernel,"Entre en el send interrupcion");
+								  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
-									log_debug(log_kernel,"Entre en el send interrupcion");
-
+									log_debug(log_kernel,"Entre en send interrupcion");
 									send_interrupcion(fd_cpu_interrupt,1);
 								}
+					}else{
+						send_interrupcion(fd_cpu_interrupt,1);
+					}
 
 		sem_post(&contadorProcesosEnMemoria);
 		}

@@ -214,13 +214,11 @@ static void procesar_conexion_cpu(void* void_args) {
 			log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
 
 			log_warning(log_cpu,"El tiempo bloqueante en el while de ejecucion es: %d",tiempo_bloqueante);
-			//bool interrupcion check interrupciones, un rcv que se
-				//if(interrupcion) break;
-				//else{}
+
 			}
 
-		log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
-		log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
+		//log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
+		//log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
 
 		send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
