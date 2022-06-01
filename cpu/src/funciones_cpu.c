@@ -96,6 +96,7 @@ bool check_interrupt(int cliente_socket){
 	}
 	if(cod_interrup == 777){
 		interrupcion = true;
+		log_debug(log_cpu,"Entre en generar interrupcion debug");
 		return interrupcion;
 	}else{
 		log_error(log_cpu,"fallo recibiendo la interrupcion: %d",cod_interrup);

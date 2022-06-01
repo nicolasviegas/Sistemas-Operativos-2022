@@ -240,6 +240,8 @@ void hiloNew_Ready(){
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
 			if(algoritmo_config == SRT){
+
+						log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 						  log_debug(log_kernel,"Entre en send interrupcion");
 							send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 						}else{
@@ -361,6 +363,7 @@ void hiloBlockASuspension(){
 						//sem_post(&medianoPlazo); //esto para desbloquear el hilo suspension a ready
 
 						agregarAReady(pcb);
+						log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 ////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
 						if(algoritmo_config == SRT){
 							log_debug(log_kernel,"Entre en el send interrupcion");
@@ -410,6 +413,7 @@ void hiloSuspensionAReady(){
 		agregarAReady(proceso);
 
 		if(algoritmo_config == SRT){
+								log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 									log_debug(log_kernel,"Entre en el send interrupcion");
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
