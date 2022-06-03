@@ -8,9 +8,9 @@ static void* serializar_NO_OP(uint32_t parametro1) {
     memcpy(stream, &cop, sizeof(op_code_instrucciones));
     memcpy(stream+sizeof(op_code_instrucciones), &parametro1, sizeof(uint32_t));
 
-    printf("El cop en serializar NO_OP es: %d\n",cop);
-    printf("El parametro 1 es: %d\n",parametro1);
-    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+    //printf("El cop en serializar NO_OP es: %d\n",cop);
+   // printf("El parametro 1 es: %d\n",parametro1);
+   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
 
@@ -63,9 +63,9 @@ static void* serializar_IO(uint32_t parametro1) {
     memcpy(stream, &cop, sizeof(op_code_instrucciones));
     memcpy(stream+sizeof(op_code_instrucciones), &parametro1, sizeof(uint32_t));
 
-    printf("El cop en serializar IO es: %d\n",cop);
-    printf("El parametro 1 es: %d\n",parametro1);
-    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+   // printf("El cop en serializar IO es: %d\n",cop);
+  //  printf("El parametro 1 es: %d\n",parametro1);
+  //  printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
 
@@ -118,8 +118,8 @@ static void* serializar_READ(uint32_t parametro1) {
     memcpy(stream, &cop, sizeof(op_code_instrucciones));
     memcpy(stream+sizeof(op_code_instrucciones), &parametro1, sizeof(uint32_t));
 
-    printf("El cop en serializar READ es: %d\n",cop);
-    printf("El parametro 1 es: %d\n",parametro1);
+   // printf("El cop en serializar READ es: %d\n",cop);
+  //  printf("El parametro 1 es: %d\n",parametro1);
     //printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
@@ -177,7 +177,7 @@ static void* serializar_WRITE(uint32_t parametro1, uint32_t parametro2) {
     printf("El cop en serializar WRITE es: %d\n",cop);
     printf("El parametro 1 es: %d\n",parametro1);
     printf("El parametro 2 es: %d\n",parametro2);
-   // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
+    printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
 
     return stream;
 }
@@ -273,7 +273,7 @@ static void* serializar_EXIT() {
     memcpy(stream, &cop, sizeof(op_code_instrucciones));
 
 
-    printf("El cop en serializar EXIT es: %d\n",cop);
+    //printf("El cop en serializar EXIT es: %d\n",cop);
 
   //  printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
@@ -340,7 +340,7 @@ void deserializar_cant_instrucciones(void* stream, uint32_t* cantidad) {
 
 
 bool send_cant_instrucciones(int fd,uint32_t cantidad){
-	printf("Entre en send_cant instrucciones \n");
+	//printf("Entre en send_cant instrucciones \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_cant_instrucciones(cantidad);
@@ -380,7 +380,7 @@ static void* serializar_TAM(uint32_t parametro1) {
     memcpy(stream, &parametro1, sizeof(uint32_t));
 
    // printf("El cop en serializar READ es: %d\n",cop);
-    printf("El tam a enviar es: %d\n",parametro1);
+   // printf("El tam a enviar es: %d\n",parametro1);
    // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
@@ -534,7 +534,7 @@ static void* serializar_indice_tabla_paginas_a_cpu(uint32_t parametro1) {
     memcpy(stream, &parametro1, sizeof(uint32_t));
 
    // printf("El cop en serializar READ es: %d\n",cop);
-    printf("El tam a enviar es: %d\n",parametro1);
+  //  printf("El tam a enviar es: %d\n",parametro1);
    // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
@@ -601,7 +601,7 @@ void deserializar_PC(void* stream, uint32_t* parametro1) {
 }
 
 bool send_PC(int fd, uint32_t parametro1) {
-	printf("Entre en send_PC \n");
+	//printf("Entre en send_PC \n");
    size_t size = sizeof(uint32_t);
 
     void* stream = serializar_PC(parametro1);
@@ -656,7 +656,7 @@ void deserializar_tiempo_bloqueante(void* stream, uint32_t* parametro1) {
 }
 
 bool send_tiempo_bloqueante(int fd,uint32_t tiempo_bloqueante) {
-	printf("Entre en send_PC \n");
+//	printf("Entre en send_tiempo bloqueante \n");
    size_t size = sizeof(uint32_t);
 
     void* stream = serializar_tiempo_bloqueante(tiempo_bloqueante);

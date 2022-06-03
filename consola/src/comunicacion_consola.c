@@ -17,7 +17,7 @@ void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 	int cant_instrucciones = list_size(lista_instrucciones);
 	int indice = 0;
 
-	log_error(log_consola,"El socket dentro de send instrcciones es : %d",fd_mod2);
+	//log_error(log_consola,"El socket dentro de send instrcciones es : %d",fd_mod2);
 	//log_error(log_consola,"El tam recibido por parametro a enviar es: %d",tam);
 
 

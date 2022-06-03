@@ -41,7 +41,7 @@ int main() {
 
 
 
-    log_trace(log_cpu,"El socket en cpu.c es : %d",fd_cpu);
+    //log_trace(log_cpu,"El socket en cpu.c es : %d",fd_cpu);
 
 
     char* ip_memoria = config_get_string_value(config_cpu,"IP_MEMORIA");
@@ -52,7 +52,7 @@ int main() {
        			cerrar_programa3(log_cpu);
        			return EXIT_FAILURE;
        		}
-   log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+   //log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
 
     //conexion entre cpu (Servidor) y kernel(cliente)

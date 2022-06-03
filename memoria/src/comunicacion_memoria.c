@@ -27,7 +27,7 @@ static void procesar_conexion_memoria(void* void_args) {
 
     	     send_indice_a_kernel(cliente_socket,indice_tabla);
 
-    	     log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
+    	     log_info(log_memoria,"envie el indice a kernel %d", indice_tabla);
 
 
     	 // break; //borrar despues esto es solo para que no me itere ahora

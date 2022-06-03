@@ -53,7 +53,7 @@ void pedir_tabla_a_memoria(){
 
 void enviar_pcb_a_cpu(pcb_t* pcb_proceso){
 
-	log_trace(log_kernel,"Entre a enviar pcb a cpu");
+	//log_trace(log_kernel,"Entre a enviar pcb a cpu");
 	//pcb_t* pcb_proceso = (pcb_t *) proceso;
 
 	//uint32_t a = list_size(lista_instrucciones_kernel);
@@ -70,15 +70,15 @@ void enviar_pcb_a_cpu(pcb_t* pcb_proceso){
 	//lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
 	list_clean(lista_instrucciones_kernel);
 
-	log_trace(log_kernel, "La cant de instrucciones en la lista: %d",b);
+	//log_trace(log_kernel, "La cant de instrucciones en la lista: %d",b);
 
-	log_trace(log_kernel,"El PC del proceso %d es: %d",pcb_proceso->PID,pcb_proceso->PC);
+	//log_trace(log_kernel,"El PC del proceso %d es: %d",pcb_proceso->PID,pcb_proceso->PC);
 
-	log_trace(log_kernel,"Sali de enviar pcb a cpu");
+	//log_trace(log_kernel,"Sali de enviar pcb a cpu");
 }
 
 void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso){
-		printf("[SEND INSTRUCCIONES KERNEL A CPU] cantidad de instrucciones: %d \n",list_size(pcb_proceso->instrucciones));
+		//printf("[SEND INSTRUCCIONES KERNEL A CPU] cantidad de instrucciones: %d \n",list_size(pcb_proceso->instrucciones));
 		//instrucciones* a = malloc(sizeof(instrucciones));
 		instrucciones* a;
 		int cant_instrucciones = list_size(pcb_proceso->instrucciones);
@@ -94,30 +94,30 @@ void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso
 			printf("[SEND INSTRUCCIONES KERNEL A CPU] la instruccion es: %s \n",a->nombre);
 
 			if(a->id == NO_OP){
-				log_warning(logger,"entre en NO_OP dentro de send_instrucciones");
+				//log_warning(logger,"entre en NO_OP dentro de send_instrucciones");
 				send_NO_OP(fd_cpu,a->parametro1);
 
 			}
 			else if(a->id == IO){
-				log_warning(logger,"entre en I/O dentro de send_instrucciones");
+				//log_warning(logger,"entre en I/O dentro de send_instrucciones");
 				//printf( "el parametro 1  de IO es: %d\n",a->parametro1);
 				send_IO(fd_cpu,a->parametro1);
 			}
 			else if(a->id == READ){
-				log_warning(logger,"entre en READ dentro de send_instrucciones");
+				//log_warning(logger,"entre en READ dentro de send_instrucciones");
 				send_READ(fd_cpu,a->parametro1);
 			}
 			else if(a->id == COPY){
-				log_warning(logger,"entre en COPY dentro de send_instrucciones");
+				//log_warning(logger,"entre en COPY dentro de send_instrucciones");
 				send_COPY(fd_cpu,a->parametro1,a->parametro2);
 
 			}
 			else if(a->id == WRITE){
-				log_warning(logger,"entre en WRITE dentro de send_instrucciones");
+				//log_warning(logger,"entre en WRITE dentro de send_instrucciones");
 				send_WRITE(fd_cpu,a->parametro1,a->parametro2);
 			}
 			else if(a->id == EXIT || a->nombre == "EXIT" ){
-				log_warning(logger,"Entre en EXIT dentro de send_instrucciones");
+				//log_warning(logger,"Entre en EXIT dentro de send_instrucciones");
 				send_EXIT(fd_cpu);
 			}
 
