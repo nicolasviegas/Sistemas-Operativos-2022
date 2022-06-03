@@ -11,8 +11,8 @@
 
 //int server_escuchar(t_log* logger, char* server_name, int server_socket);
 
-bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2);
+//bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2);
 
-void send_instrucciones(t_list* lista_instrucciones,int fd_mod2);
+void send_instrucciones(t_list* lista_instrucciones, int fd_mod2);
 
 #endif

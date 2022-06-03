@@ -9,6 +9,7 @@
 #include "../../shared/include/utils.h"
 #include "../../shared/include/socket.h"
 #include "../../shared/include/protocolo.h"
+#include "../../shared/include/consola-kernel.h"
 
 /*
  * void deserializar_sem_init(void* stream, mate_sem_name* nombre, unsigned int* valor);
@@ -18,6 +19,10 @@
  * void deserializar_call_io(void* stream, mate_io_resource* io, char** msg);
 
 */
+
+int contador_cliente;
+
+
 
 
 #endif /* KERNEL_INCLUDE_COMUNICACION_KERNEL_H_ */

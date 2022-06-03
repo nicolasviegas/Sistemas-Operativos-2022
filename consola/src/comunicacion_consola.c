@@ -2,22 +2,25 @@
 
 //////////////////////
 //NUEVA EN CONSOLA, ESTABA EN KERNEL ANTES
-bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2) {
-    // No hardcodear, levantar de config
-
-
-    *fd_mod2 = crear_conexion(logger,"KERNEL", ip, puerto );
-
-    return *fd_mod2 != 0;
-}
+//bool generar_conexiones(t_log* logger, char* ip, char* puerto, int* fd_mod2) {
+//    // No hardcodear, levantar de config
+//
+//
+//    *fd_mod2 = crear_conexion(logger,"KERNEL", ip, puerto );
+//
+//    return *fd_mod2 != 0;
+//}
 
 void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 
-	instrucciones* a = malloc(sizeof(instrucciones));
+	instrucciones* a ;
 	int cant_instrucciones = list_size(lista_instrucciones);
 	int indice = 0;
 
-	log_error(log_consola,"El socket dentro de send instrcciones es : %d",fd_mod2);
+	//log_error(log_consola,"El socket dentro de send instrcciones es : %d",fd_mod2);
+	//log_error(log_consola,"El tam recibido por parametro a enviar es: %d",tam);
+
+
 
 	while(indice < cant_instrucciones){
 		a = list_get(lista_instrucciones,indice);
@@ -55,7 +58,6 @@ void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 		indice++;
 	}
 
-	free(a);
-
+	//free(a);
 
 }

@@ -4,7 +4,7 @@
 void terminar_consola(t_log* log, t_list* lista, int conexion, t_config* config){
 	log_destroy(log);
 	list_destroy(lista);
-	liberar_conexion(conexion);
+	//liberar_conexion(conexion);
 	config_destroy(config);
 }
 
@@ -12,7 +12,7 @@ void obtener_instrucciones(char* path){ //1era idea: LO QUE PODRIA HACER SERIA E
 										//ASI EN UNA LISTA DIVIDIDA CON COMAS Y QUE CPU LUEGO LO DIVIDA,
 										//2da idea: DENTRO DE NO_OP PONER LA FUNCION SEND_INSTRUCCION(int socket, int NO_OP)
 	char buffer[100];
-	char* linea_instrucciones = string_new();
+	//char* linea_instrucciones = string_new();
 
 	FILE* f;
 	f = fopen(path,"r");
@@ -178,7 +178,3 @@ void empaquetar(int socket){
 void mostrar_lista_instrucciones(t_list* lista){
 
 }
-
-
-
-

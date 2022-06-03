@@ -1,5 +1,5 @@
-#ifndef PROTOCOLO_H_
-#define PROTOCOLO_H_
+#ifndef PROTOCOLOH
+#define PROTOCOLOH
 
 #include <inttypes.h>
 #include <sys/socket.h>
@@ -11,13 +11,20 @@
 #include <stdlib.h>
 
 typedef enum{ //tipos de identificadores a parsear
-	NO_OP = 13, //0
-	IO = 14, //1
-	READ = 15, //2
-	COPY = 16,//3 LO AGREGO YO
-	WRITE = 17, //4
-	EXIT = 18, //5
+    NO_OP = 13, //0
+    IO = 14, //1
+    READ = 15, //2
+    COPY = 16,//3 LO AGREGO YO
+    WRITE = 17, //4
+    EXIT = 18, //5
 }op_code_instrucciones;
+
+typedef struct{
+	int id;
+	char* nombre;
+	uint32_t parametro1;
+	uint32_t parametro2;
+}instrucciones;
 
 #define BACKLOG 20
 
@@ -42,8 +49,40 @@ bool recv_WRITE(int fd,uint32_t* parametro1,uint32_t* parametro2);
 bool send_EXIT(int fd);
 bool recv_EXIT(int fd);
 
+bool send_TAM(int fd,uint32_t parametro1);
+bool recv_TAM(int fd,uint32_t* parametro1);
+
+void recv_TAM2(int fd,uint32_t* parametro1);
+
 static void* serializar_NO_OP(uint32_t parametro1);
 
+//bool send_PCB(int fd_cpu,pcb_t* pcb_proceso);
+
+bool send_pid_to_cpu(int fd,uint32_t parametro1);
+bool recv_pid_to_cpu(int fd, uint32_t* parametro1);
+
+bool send_indice_a_kernel(int fd_memoria,uint32_t parametro1);
+bool recv_indice_a_kernel(int fd_memoria,uint32_t* parametro1);
+
+//bool send_instrucciones_to_cpu(int fd,t_list* parametro1);
+//bool recv_instrucciones_to_cpu(int fd, t_list** parametro1,int tam);
+
+bool send_cant_instrucciones(int fd,uint32_t cantidad);
+bool recv_cant_instrucciones(int fd, uint32_t* cantidad);
+
+bool send_indice_tabla_paginas_a_cpu(int fd,uint32_t parametro1);
+bool recv_indice_tabla_paginas_a_cpu(int fd,uint32_t* parametro1);
+
+bool send_PC(int fd, uint32_t parametro1);
+bool recv_PC(int fd, uint32_t* parametro1);
+
+bool send_tiempo_bloqueante(int fd, uint32_t parametro1);
+bool recv_tiempo_bloqueante(int fd, uint32_t* parametro1);
+
+bool send_interrupcion(int fd, uint32_t parametro1);
+bool recv_interrupcion(int fd, uint32_t* parametro1);
+
 bool send_debug(int fd);
+
 
 #endif

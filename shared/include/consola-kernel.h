@@ -20,12 +20,7 @@
 #include "../../shared/include/protocolo.h"
 #include "../../shared/include/socket.h"
 
-typedef struct{
-	int id;
-	char* nombre;
-	uint32_t parametro1;
-	uint32_t parametro2;
-}instrucciones;
+
 
 /*typedef enum{ //tipos de identificadores a parsear
 	NO_OP, //0

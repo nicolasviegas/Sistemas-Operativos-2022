@@ -11,6 +11,8 @@
 #include<commons/log.h>
 #include<commons/config.h>
 
+#include <semaphore.h>
+
 typedef enum
 {
 	MENSAJE,
@@ -38,6 +40,9 @@ void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio);
 void enviar_paquete(t_paquete* paquete, int socket_cliente);
 //void liberar_conexion(int socket_cliente);
 void eliminar_paquete(t_paquete* paquete);
+
+
+sem_t hilo_sincro_cpu_kernel;
 
 
 int crear_conexion(t_log* logger, const char* server_name, char* ip, char* puerto);
