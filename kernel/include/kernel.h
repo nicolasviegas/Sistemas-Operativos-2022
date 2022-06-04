@@ -16,11 +16,15 @@
 #include<commons/collections/queue.h>
 #include<commons/string.h>
 #include<assert.h>
-#include "../../shared/include/utils.h"
-#include "../../shared/include/consola-kernel.h"
+//#include "../../shared/include/utils.h"
+//#include "../../shared/include/consola-kernel.h"
+#include "utils.h"
+#include "protocolo.h"
+#include "consola-kernel.h"
 #include "../include/comunicacion_kernel.h"
 #include "../include/funciones_kernel.h"
 #include "../include/planificacion.h"
+
 
 typedef enum{ //tipos de identificadores a parsear
     NEW = 25, //0

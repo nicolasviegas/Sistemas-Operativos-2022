@@ -3,7 +3,6 @@
 
 
 
-
 void cerrar_programa5(t_log* logger) {
     log_destroy(logger);
 }
@@ -33,7 +32,7 @@ int main() {
     fd_memoria = iniciar_servidor(log_memoria,"MEMORIA",ip,puerto_escucha);
 
 
-    log_trace(log_memoria,"El socket de memoria es : %d",fd_memoria);
+    //log_trace(log_memoria,"El socket de memoria es : %d",fd_memoria);
 
     //ACA HAY QUE RESERVAR MEMORIA Y OTRAS YERBAS?
     //O SE HACE CUANDO SE CONECTA KERNEL?

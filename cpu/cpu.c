@@ -28,6 +28,7 @@ int main() {
 
     ip = config_get_string_value(config_cpu,"IP_MEMORIA");
     puerto_escucha = config_get_string_value(config_cpu,"PUERTO_ESCUCHA_DISPATCH");
+    char* puerto_interrupt =  config_get_string_value(config_cpu,"PUERTO_ESCUCHA_INTERRUPT");
 
 
     lista_instrucciones_cpu = list_create();
@@ -36,9 +37,11 @@ int main() {
     //fd_kernel = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
     fd_cpu = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
 
+    fd_cpu_interrupt = iniciar_servidor(log_cpu,"CPU",ip,puerto_interrupt);
 
 
-    log_trace(log_cpu,"El socket en cpu.c es : %d",fd_cpu);
+
+    //log_trace(log_cpu,"El socket en cpu.c es : %d",fd_cpu);
 
 
     char* ip_memoria = config_get_string_value(config_cpu,"IP_MEMORIA");
@@ -49,13 +52,13 @@ int main() {
        			cerrar_programa3(log_cpu);
        			return EXIT_FAILURE;
        		}
-   log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+   //log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
 
     //conexion entre cpu (Servidor) y kernel(cliente)
 
     //  while(server_escuchar_cpu(log_cpu,"CPU",fd_kernel));
-    while(server_escuchar_cpu(log_cpu,"CPU",fd_cpu));
+    while(server_escuchar_cpu(log_cpu,"CPU",fd_cpu,fd_cpu_interrupt));
 
   //  log_warning(log_cpu,"Despues de server escuchar");
 

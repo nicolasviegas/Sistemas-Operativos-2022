@@ -16,8 +16,10 @@
 #include<commons/collections/queue.h>
 #include<commons/string.h>
 #include<assert.h>
-#include "../../shared/include/utils.h"
-#include "../../shared/include/protocolo.h"
+//#include "../../shared/include/utils.h"
+//#include "../../shared/include/protocolo.h"
+#include "utils.h"
+#include "protocolo.h"
 #include "../include/comunicacion_cpu.h"
 
 typedef struct{
@@ -28,6 +30,8 @@ typedef struct{
 	uint32_t indice_tabla_paginas;
 
 }pcb_cpu;
+
+bool interrupcion;
 
 t_list* lista_instrucciones_cpu;
 
@@ -45,7 +49,8 @@ uint32_t tiempo_bloqueante;
 
 //agregas colas_new, colas_ready, etc
 
-int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket);
+//int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket);
+int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket,int server_socket_1);
 
 void cerrar_programa(t_log* logger);
 

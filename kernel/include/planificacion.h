@@ -11,8 +11,7 @@
 #include <semaphore.h>
 #include <time.h>
 #include "../include/kernel.h"
-#include "../../shared/include/utils.h"
-
+#include "utils.h"
 typedef struct{
 	uint32_t pid;
 	uint32_t nro_frame;
@@ -122,6 +121,8 @@ sem_t suspensionFinalizada;
 sem_t largoPlazo;
 sem_t contadorReadySuspended;
 sem_t medianoPlazo;
+
+bool hay_alguien_exe;
 
 //void enviar_pcb_a_cpu(void* pcb_proceso);
 void enviar_pcb_a_cpu(pcb_t* pcb_proceso);

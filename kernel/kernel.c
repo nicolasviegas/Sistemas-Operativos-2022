@@ -71,10 +71,8 @@ void inicializar_config(){
 
 	  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
 	  grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
-	  log_warning(log_kernel,"El grado multi prog es: %d" ,grado_multiprogramacion);
 	  alfa = obtener_float_de_config(config_kernel,"ALFA");
-	  log_error(log_kernel,"El alfa es: %f",alfa);
-	   tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
+	  tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
 }
 
 void inicializar_listas(){
@@ -137,7 +135,7 @@ int main() {
 
 
     ////////////////////
-	log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
+	//log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
 
     ///
 
@@ -145,7 +143,7 @@ int main() {
 	int fd_kernel_1 = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 
 
-    log_trace(log_kernel,"El socket : %d",fd_kernel);
+    //log_trace(log_kernel,"El socket : %d",fd_kernel);
 
     /////////////////////////////////////////////////////////
 
@@ -154,7 +152,7 @@ int main() {
     			cerrar_programa2(log_kernel);
     			return EXIT_FAILURE;
     }
-    log_trace(log_kernel,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+   // log_trace(log_kernel,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
 
     ////////////////////////////////////////////////////////////
@@ -164,23 +162,25 @@ int main() {
     		cerrar_programa2(log_kernel);
     		return EXIT_FAILURE;
     }
-    log_trace(log_kernel,"El fd_cpu despues de grar conexiones es: %d",fd_cpu);
+    //log_trace(log_kernel,"El fd_cpu despues de grar conexiones es: %d",fd_cpu);
 
 
-  /*  int fd_cpu_1 = 0;
-    if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_interrupt, &fd_cpu_1)) {
+    //send_tam(fd_cpu,algoritmo_config);
+
+    fd_cpu_interrupt = 0;
+    if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_interrupt, &fd_cpu_interrupt)) {
       		cerrar_programa2(log_kernel);
       		return EXIT_FAILURE;
-     }*/
+     }
 
-    log_trace(log_kernel,"El fd_cpu despues de grar conexiones puerto interrupt es: %d",fd_cpu);
+   // log_trace(log_kernel,"El fd_cpu despues de grar conexiones puerto interrupt es: %d",fd_cpu);
 
     //conexion entre Kernel (Servidor) y consola(cliente)
    // while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
     while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel_1));
 
 
-    log_warning(log_kernel,"Despues de server escuchar");
+    log_info(log_kernel,"Finalizo kernel");
 
     cerrar_programa2(log_kernel);
 

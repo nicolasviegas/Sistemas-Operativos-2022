@@ -6,10 +6,14 @@
 #include <string.h>
 #include <commons/log.h>
 #include <commons/config.h>
-#include "../../shared/include/utils.h"
-#include "../../shared/include/socket.h"
-#include "../../shared/include/protocolo.h"
-#include "../../shared/include/consola-kernel.h"
+//#include "../../shared/include/utils.h"
+//#include "../../shared/include/socket.h"
+//#include "../../shared/include/protocolo.h"
+//#include "../../shared/include/consola-kernel.h"
+#include "utils.h"
+#include "socket.h"
+#include "protocolo.h"
+#include "consola-kernel.h"
 #include "../include/memoria.h"
 
 /*
@@ -18,7 +22,6 @@
  * void deserializar_sem_post(void* stream, mate_sem_name* nombre);
  * void deserializar_sem_destroy(void* stream, mate_sem_name* nombre);
  * void deserializar_call_io(void* stream, mate_io_resource* io, char** msg);
-
 */
 
 typedef struct {
@@ -29,5 +32,3 @@ typedef struct {
 
 
 #endif /* KERNEL_INCLUDE_COMUNICACION_KERNEL_H_ */
-
-

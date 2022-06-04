@@ -16,9 +16,12 @@
 #include<commons/collections/queue.h>
 #include<commons/string.h>
 #include<assert.h>
-#include "../../shared/include/utils.h"
-#include "../../shared/include/protocolo.h"
-#include "../../shared/include/socket.h"
+//#include "../../shared/include/utils.h"
+//#include "../../shared/include/protocolo.h"
+//#include "../../shared/include/socket.h"
+#include "utils.h"
+#include "protocolo.h"
+#include "socket.h"
 
 
 t_config* config_memoria;

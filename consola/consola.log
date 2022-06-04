@@ -13426,107 +13426,185 @@
 [WARNING] 22:01:41:308 consola/(4935:4935): entre en I/O dentro de send_instrucciones
 [WARNING] 22:01:41:308 consola/(4935:4935): Entre en EXIT dentro de send_instrucciones
 [ERROR] 22:01:41:309 consola/(4935:4935): Pase el send instrucciones 
-[INFO] 00:46:51:406 consola/(9514:9514): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[INFO] 00:00:17:304 consola/(11911:11911): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[TRACE] 00:46:51:406 consola/(9514:9514): El fd_kernel despues de grar conexiones es: 4
-[ERROR] 00:46:51:407 consola/(9514:9514): Pase el send TAM 
-[ERROR] 00:46:51:407 consola/(9514:9514): El socket dentro de send instrcciones es : 4
-[WARNING] 00:46:51:407 consola/(9514:9514): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:46:51:407 consola/(9514:9514): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:46:51:407 consola/(9514:9514): entre en I/O dentro de send_instrucciones
-[WARNING] 00:46:51:408 consola/(9514:9514): Entre en EXIT dentro de send_instrucciones
-[ERROR] 00:46:51:408 consola/(9514:9514): Pase el send instrucciones 
-[INFO] 00:53:16:807 consola/(10150:10150): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[TRACE] 00:00:17:304 consola/(11911:11911): El fd_kernel despues de grar conexiones es: 4
+[ERROR] 00:00:17:305 consola/(11911:11911): Pase el send TAM 
+[ERROR] 00:00:17:305 consola/(11911:11911): El socket dentro de send instrcciones es : 4
+[WARNING] 00:00:17:306 consola/(11911:11911): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:00:17:306 consola/(11911:11911): entre en I/O dentro de send_instrucciones
+[WARNING] 00:00:17:308 consola/(11911:11911): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:00:17:309 consola/(11911:11911): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:00:17:310 consola/(11911:11911): entre en I/O dentro de send_instrucciones
+[WARNING] 00:00:17:310 consola/(11911:11911): Entre en EXIT dentro de send_instrucciones
+[ERROR] 00:00:17:311 consola/(11911:11911): Pase el send instrucciones 
+[INFO] 00:11:09:765 consola/(12547:12547): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[TRACE] 00:53:16:860 consola/(10150:10150): El fd_kernel despues de grar conexiones es: 4
-[ERROR] 00:53:16:863 consola/(10150:10150): Pase el send TAM 
-[ERROR] 00:53:16:864 consola/(10150:10150): El socket dentro de send instrcciones es : 4
-[WARNING] 00:53:16:866 consola/(10150:10150): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:53:16:871 consola/(10150:10150): entre en I/O dentro de send_instrucciones
-[WARNING] 00:53:16:875 consola/(10150:10150): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:53:16:876 consola/(10150:10150): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:53:16:877 consola/(10150:10150): entre en I/O dentro de send_instrucciones
-[WARNING] 00:53:16:878 consola/(10150:10150): Entre en EXIT dentro de send_instrucciones
-[ERROR] 00:53:16:880 consola/(10150:10150): Pase el send instrucciones 
-[INFO] 00:57:57:320 consola/(11106:11106): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[TRACE] 00:11:09:765 consola/(12547:12547): El fd_kernel despues de grar conexiones es: 4
+[ERROR] 00:11:09:765 consola/(12547:12547): Pase el send TAM 
+[ERROR] 00:11:09:765 consola/(12547:12547): El socket dentro de send instrcciones es : 4
+[WARNING] 00:11:09:766 consola/(12547:12547): entre en NO_OP dentro de send_instrucciones
+[WARNING] 00:11:09:766 consola/(12547:12547): entre en I/O dentro de send_instrucciones
+[WARNING] 00:11:09:766 consola/(12547:12547): Entre en EXIT dentro de send_instrucciones
+[ERROR] 00:11:09:766 consola/(12547:12547): Pase el send instrucciones 
+[INFO] 16:41:05:870 consola/(3683:3683): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 00:57:57:320 consola/(11106:11106): El socket dentro de send instrcciones es : 4
-[WARNING] 00:57:57:320 consola/(11106:11106): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:57:57:321 consola/(11106:11106): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:57:57:321 consola/(11106:11106): entre en I/O dentro de send_instrucciones
-[WARNING] 00:57:57:321 consola/(11106:11106): Entre en EXIT dentro de send_instrucciones
-[INFO] 00:58:46:906 consola/(11178:11178): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[TRACE] 16:41:05:877 consola/(3683:3683): El fd_kernel despues de grar conexiones es: 4
+[ERROR] 16:41:05:877 consola/(3683:3683): Pase el send TAM 
+[ERROR] 16:41:05:877 consola/(3683:3683): El socket dentro de send instrcciones es : 4
+[WARNING] 16:41:05:878 consola/(3683:3683): entre en NO_OP dentro de send_instrucciones
+[WARNING] 16:41:05:878 consola/(3683:3683): entre en I/O dentro de send_instrucciones
+[WARNING] 16:41:05:878 consola/(3683:3683): Entre en EXIT dentro de send_instrucciones
+[ERROR] 16:41:05:878 consola/(3683:3683): Pase el send instrucciones 
+[INFO] 19:50:01:425 consola/(6917:6917): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 00:58:46:964 consola/(11178:11178): El socket dentro de send instrcciones es : 4
-[WARNING] 00:58:46:967 consola/(11178:11178): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:58:46:971 consola/(11178:11178): entre en I/O dentro de send_instrucciones
-[WARNING] 00:58:46:976 consola/(11178:11178): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:58:46:977 consola/(11178:11178): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:58:46:978 consola/(11178:11178): entre en I/O dentro de send_instrucciones
-[WARNING] 00:58:46:979 consola/(11178:11178): Entre en EXIT dentro de send_instrucciones
-[INFO] 00:59:37:303 consola/(11394:11394): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[WARNING] 19:50:01:440 consola/(6917:6917): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:50:01:440 consola/(6917:6917): entre en I/O dentro de send_instrucciones
+[WARNING] 19:50:01:440 consola/(6917:6917): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:50:01:440 consola/(6917:6917): [INFO] La consola finalizo correctamente.
+[INFO] 19:54:54:454 consola/(7041:7041): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 00:59:37:303 consola/(11394:11394): El socket dentro de send instrcciones es : 4
-[WARNING] 00:59:37:303 consola/(11394:11394): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:59:37:303 consola/(11394:11394): entre en NO_OP dentro de send_instrucciones
-[WARNING] 00:59:37:304 consola/(11394:11394): entre en I/O dentro de send_instrucciones
-[WARNING] 00:59:37:304 consola/(11394:11394): Entre en EXIT dentro de send_instrucciones
-[INFO] 01:00:39:371 consola/(11489:11489): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[WARNING] 19:54:54:454 consola/(7041:7041): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:54:54:454 consola/(7041:7041): entre en I/O dentro de send_instrucciones
+[WARNING] 19:54:54:455 consola/(7041:7041): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:54:54:455 consola/(7041:7041): [INFO] La consola finalizo correctamente.
+[INFO] 19:55:24:211 consola/(7046:7046): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 01:00:39:426 consola/(11489:11489): El socket dentro de send instrcciones es : 4
-[WARNING] 01:00:39:428 consola/(11489:11489): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:00:39:430 consola/(11489:11489): entre en I/O dentro de send_instrucciones
-[WARNING] 01:00:39:433 consola/(11489:11489): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:00:39:435 consola/(11489:11489): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:00:39:436 consola/(11489:11489): entre en I/O dentro de send_instrucciones
-[WARNING] 01:00:39:438 consola/(11489:11489): Entre en EXIT dentro de send_instrucciones
-[INFO] 01:03:09:429 consola/(11817:11817): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[WARNING] 19:55:24:212 consola/(7046:7046): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:55:24:212 consola/(7046:7046): entre en I/O dentro de send_instrucciones
+[WARNING] 19:55:24:212 consola/(7046:7046): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:55:24:212 consola/(7046:7046): [INFO] La consola finalizo correctamente.
+[INFO] 19:55:24:639 consola/(7048:7048): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 01:03:09:482 consola/(11817:11817): El socket dentro de send instrcciones es : 4
-[WARNING] 01:03:09:484 consola/(11817:11817): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:03:09:487 consola/(11817:11817): entre en I/O dentro de send_instrucciones
-[WARNING] 01:03:09:489 consola/(11817:11817): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:03:09:490 consola/(11817:11817): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:03:09:490 consola/(11817:11817): entre en I/O dentro de send_instrucciones
-[WARNING] 01:03:09:491 consola/(11817:11817): Entre en EXIT dentro de send_instrucciones
-[INFO] 01:03:09:492 consola/(11817:11817): [INFO] La consola finalizo correctamente.
-[INFO] 01:04:42:598 consola/(11964:11964): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[WARNING] 19:55:24:640 consola/(7048:7048): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:55:24:640 consola/(7048:7048): entre en I/O dentro de send_instrucciones
+[WARNING] 19:55:24:641 consola/(7048:7048): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:55:24:641 consola/(7048:7048): [INFO] La consola finalizo correctamente.
+[INFO] 19:55:25:144 consola/(7050:7050): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 01:04:42:652 consola/(11964:11964): El socket dentro de send instrcciones es : 4
-[WARNING] 01:04:42:654 consola/(11964:11964): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:04:42:656 consola/(11964:11964): entre en I/O dentro de send_instrucciones
-[WARNING] 01:04:42:658 consola/(11964:11964): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:04:42:659 consola/(11964:11964): entre en NO_OP dentro de send_instrucciones
-[WARNING] 01:04:42:660 consola/(11964:11964): entre en I/O dentro de send_instrucciones
-[WARNING] 01:04:42:661 consola/(11964:11964): Entre en EXIT dentro de send_instrucciones
-[INFO] 01:04:42:662 consola/(11964:11964): [INFO] La consola finalizo correctamente.
-[INFO] 12:09:35:255 consola/(5278:5278): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[WARNING] 19:55:25:144 consola/(7050:7050): entre en NO_OP dentro de send_instrucciones
+[WARNING] 19:55:25:145 consola/(7050:7050): entre en I/O dentro de send_instrucciones
+[WARNING] 19:55:25:145 consola/(7050:7050): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:55:25:145 consola/(7050:7050): [INFO] La consola finalizo correctamente.
+[INFO] 10:38:23:045 consola/(3550:3550): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 12:09:35:255 consola/(5278:5278): El socket dentro de send instrcciones es : 4
-[WARNING] 12:09:35:255 consola/(5278:5278): entre en NO_OP dentro de send_instrucciones
-[WARNING] 12:09:35:256 consola/(5278:5278): entre en NO_OP dentro de send_instrucciones
-[WARNING] 12:09:35:256 consola/(5278:5278): entre en I/O dentro de send_instrucciones
-[WARNING] 12:09:35:256 consola/(5278:5278): Entre en EXIT dentro de send_instrucciones
-[INFO] 12:09:35:256 consola/(5278:5278): [INFO] La consola finalizo correctamente.
-[INFO] 13:27:30:572 consola/(12569:12569): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[WARNING] 10:38:23:329 consola/(3550:3550): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:38:23:330 consola/(3550:3550): entre en I/O dentro de send_instrucciones
+[WARNING] 10:38:23:330 consola/(3550:3550): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:38:23:330 consola/(3550:3550): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:38:23:331 consola/(3550:3550): [INFO] La consola finalizo correctamente.
+[INFO] 10:38:42:527 consola/(3555:3555): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 13:27:30:572 consola/(12569:12569): El socket dentro de send instrcciones es : 4
-[WARNING] 13:27:30:572 consola/(12569:12569): entre en NO_OP dentro de send_instrucciones
-[WARNING] 13:27:30:572 consola/(12569:12569): entre en NO_OP dentro de send_instrucciones
-[WARNING] 13:27:30:573 consola/(12569:12569): entre en I/O dentro de send_instrucciones
-[WARNING] 13:27:30:573 consola/(12569:12569): Entre en EXIT dentro de send_instrucciones
-[INFO] 13:27:30:573 consola/(12569:12569): [INFO] La consola finalizo correctamente.
-[INFO] 13:28:15:446 consola/(12630:12630): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[WARNING] 10:38:42:527 consola/(3555:3555): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:38:42:527 consola/(3555:3555): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:38:42:528 consola/(3555:3555): [INFO] La consola finalizo correctamente.
+[INFO] 10:39:02:857 consola/(3557:3557): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 13:28:15:447 consola/(12630:12630): El socket dentro de send instrcciones es : 4
-[WARNING] 13:28:15:447 consola/(12630:12630): entre en NO_OP dentro de send_instrucciones
-[WARNING] 13:28:15:447 consola/(12630:12630): entre en I/O dentro de send_instrucciones
-[WARNING] 13:28:15:447 consola/(12630:12630): Entre en EXIT dentro de send_instrucciones
-[INFO] 13:28:15:447 consola/(12630:12630): [INFO] La consola finalizo correctamente.
-[INFO] 13:54:57:143 consola/(14910:14910): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+[WARNING] 10:39:02:857 consola/(3557:3557): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:39:02:858 consola/(3557:3557): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:39:02:858 consola/(3557:3557): [INFO] La consola finalizo correctamente.
+[INFO] 10:39:44:862 consola/(3565:3565): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
 
-[ERROR] 13:54:57:143 consola/(14910:14910): El socket dentro de send instrcciones es : 4
-[WARNING] 13:54:57:143 consola/(14910:14910): entre en NO_OP dentro de send_instrucciones
-[WARNING] 13:54:57:143 consola/(14910:14910): entre en I/O dentro de send_instrucciones
-[WARNING] 13:54:57:144 consola/(14910:14910): Entre en EXIT dentro de send_instrucciones
-[INFO] 13:54:57:144 consola/(14910:14910): [INFO] La consola finalizo correctamente.
+[WARNING] 10:39:44:862 consola/(3565:3565): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:39:44:862 consola/(3565:3565): entre en I/O dentro de send_instrucciones
+[WARNING] 10:39:44:863 consola/(3565:3565): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:39:44:863 consola/(3565:3565): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:39:44:863 consola/(3565:3565): [INFO] La consola finalizo correctamente.
+[INFO] 10:44:12:494 consola/(4028:4028): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:44:12:494 consola/(4028:4028): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:44:12:495 consola/(4028:4028): entre en I/O dentro de send_instrucciones
+[WARNING] 10:44:12:495 consola/(4028:4028): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:44:12:495 consola/(4028:4028): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:44:12:495 consola/(4028:4028): [INFO] La consola finalizo correctamente.
+[INFO] 10:44:15:625 consola/(4030:4030): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:44:15:626 consola/(4030:4030): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:44:15:626 consola/(4030:4030): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:44:15:626 consola/(4030:4030): [INFO] La consola finalizo correctamente.
+[INFO] 10:44:16:866 consola/(4032:4032): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:44:16:866 consola/(4032:4032): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:44:16:866 consola/(4032:4032): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:44:16:867 consola/(4032:4032): [INFO] La consola finalizo correctamente.
+[INFO] 10:47:21:914 consola/(4228:4228): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:47:21:914 consola/(4228:4228): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:47:21:915 consola/(4228:4228): entre en I/O dentro de send_instrucciones
+[WARNING] 10:47:21:915 consola/(4228:4228): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:47:21:915 consola/(4228:4228): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:47:21:916 consola/(4228:4228): [INFO] La consola finalizo correctamente.
+[INFO] 10:47:24:277 consola/(4230:4230): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:47:24:277 consola/(4230:4230): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:47:24:277 consola/(4230:4230): entre en I/O dentro de send_instrucciones
+[WARNING] 10:47:24:278 consola/(4230:4230): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:47:24:278 consola/(4230:4230): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:47:24:278 consola/(4230:4230): [INFO] La consola finalizo correctamente.
+[INFO] 10:47:27:377 consola/(4232:4232): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:47:27:378 consola/(4232:4232): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:47:27:378 consola/(4232:4232): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:47:27:378 consola/(4232:4232): [INFO] La consola finalizo correctamente.
+[INFO] 10:49:40:599 consola/(4260:4260): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:49:40:599 consola/(4260:4260): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:49:40:599 consola/(4260:4260): entre en I/O dentro de send_instrucciones
+[WARNING] 10:49:40:599 consola/(4260:4260): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:49:40:599 consola/(4260:4260): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:49:40:600 consola/(4260:4260): [INFO] La consola finalizo correctamente.
+[INFO] 10:49:43:411 consola/(4262:4262): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:49:43:411 consola/(4262:4262): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:49:43:411 consola/(4262:4262): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:49:43:411 consola/(4262:4262): [INFO] La consola finalizo correctamente.
+[INFO] 10:49:44:525 consola/(4264:4264): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:49:44:526 consola/(4264:4264): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:49:44:526 consola/(4264:4264): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:49:44:526 consola/(4264:4264): [INFO] La consola finalizo correctamente.
+[INFO] 10:50:19:202 consola/(4268:4268): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:50:19:203 consola/(4268:4268): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:50:19:203 consola/(4268:4268): entre en I/O dentro de send_instrucciones
+[WARNING] 10:50:19:203 consola/(4268:4268): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:50:19:203 consola/(4268:4268): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:50:19:203 consola/(4268:4268): [INFO] La consola finalizo correctamente.
+[INFO] 10:50:20:322 consola/(4270:4270): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:50:20:322 consola/(4270:4270): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:50:20:323 consola/(4270:4270): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:50:20:323 consola/(4270:4270): [INFO] La consola finalizo correctamente.
+[INFO] 10:50:21:717 consola/(4272:4272): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 10:50:21:717 consola/(4272:4272): entre en NO_OP dentro de send_instrucciones
+[WARNING] 10:50:21:717 consola/(4272:4272): Entre en EXIT dentro de send_instrucciones
+[INFO] 10:50:21:717 consola/(4272:4272): [INFO] La consola finalizo correctamente.
+[INFO] 11:31:43:631 consola/(4822:4822): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 11:31:43:631 consola/(4822:4822): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:31:43:631 consola/(4822:4822): entre en I/O dentro de send_instrucciones
+[WARNING] 11:31:43:631 consola/(4822:4822): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:31:43:632 consola/(4822:4822): Entre en EXIT dentro de send_instrucciones
+[INFO] 11:31:43:632 consola/(4822:4822): [INFO] La consola finalizo correctamente.
+[INFO] 11:33:37:284 consola/(4834:4834): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 11:33:37:285 consola/(4834:4834): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:33:37:285 consola/(4834:4834): entre en I/O dentro de send_instrucciones
+[WARNING] 11:33:37:285 consola/(4834:4834): entre en NO_OP dentro de send_instrucciones
+[WARNING] 11:33:37:285 consola/(4834:4834): Entre en EXIT dentro de send_instrucciones
+[INFO] 11:33:37:285 consola/(4834:4834): [INFO] La consola finalizo correctamente.
+[INFO] 12:26:41:545 consola/(6069:6069): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:26:41:545 consola/(6069:6069): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:26:41:545 consola/(6069:6069): entre en I/O dentro de send_instrucciones
+[WARNING] 12:26:41:545 consola/(6069:6069): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:26:41:545 consola/(6069:6069): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:26:41:546 consola/(6069:6069): [INFO] La consola finalizo correctamente.
+[INFO] 12:35:53:318 consola/(6249:6249): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:35:53:318 consola/(6249:6249): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:35:53:318 consola/(6249:6249): entre en I/O dentro de send_instrucciones
+[WARNING] 12:35:53:318 consola/(6249:6249): entre en NO_OP dentro de send_instrucciones
+[WARNING] 12:35:53:319 consola/(6249:6249): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:35:53:319 consola/(6249:6249): [INFO] La consola finalizo correctamente.
