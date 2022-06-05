@@ -44798,3 +44798,227 @@
 [TRACE] 12:36:04:334 cpu/(6240:6248): El pid recibido es: 1
 [INFO] 12:36:04:336 cpu/(6240:6248): [EXE] ejecuto EXIT
 [TRACE] 12:36:04:336 cpu/(6240:6248): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 19:03:38:703 cpu/(8262:8262): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:03:38:727 cpu/(8262:8262): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 19:03:38:730 cpu/(8262:8262): Error al conectar (a CPU)
+
+[INFO] 19:04:59:991 cpu/(8277:8277): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:04:59:991 cpu/(8277:8277): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 19:04:59:992 cpu/(8277:8277): Error al conectar (a CPU)
+
+[INFO] 19:09:38:024 cpu/(8543:8543): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:09:38:024 cpu/(8543:8543): Escuchando en 127.0.0.1:8005 (CPU)
+
+[TRACE] 19:09:38:024 cpu/(8543:8543): Antes de generar conexiones
+[ERROR] 19:09:38:024 cpu/(8543:8543): Error al conectar (a CPU)
+
+[INFO] 19:12:37:784 cpu/(8681:8681): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:12:37:789 cpu/(8681:8681): Escuchando en 127.0.0.1:8005 (CPU)
+
+[TRACE] 19:12:37:789 cpu/(8681:8681): Antes de generar conexiones
+[INFO] 19:12:37:790 cpu/(8681:8681): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:22:50:325 cpu/(9418:9418): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:22:50:326 cpu/(9418:9418): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 19:22:50:326 cpu/(9418:9418): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:22:54:051 cpu/(9418:9418): Cliente conectado (a CPU)
+
+[INFO] 19:22:54:051 cpu/(9418:9418): Cliente conectado (a CPU)
+
+[TRACE] 19:22:56:603 cpu/(9418:9426): El pid recibido es: 1
+[INFO] 19:22:56:603 cpu/(9418:9426): [EXE] ejecuto NO_OP
+[WARNING] 19:23:01:618 cpu/(9418:9426): Termine NO_OP
+[INFO] 19:23:01:618 cpu/(9418:9426): [EXE] ejecuto IO
+[WARNING] 19:23:01:618 cpu/(9418:9426): El tiempo bloqueante es: 3000
+[TRACE] 19:23:01:618 cpu/(9418:9426): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 19:23:04:622 cpu/(9418:9426): El pid recibido es: 1
+[INFO] 19:23:04:627 cpu/(9418:9426): [EXE] ejecuto NO_OP
+[WARNING] 19:23:07:628 cpu/(9418:9426): Termine NO_OP
+[DEBUG] 19:23:07:628 cpu/(9418:9426): Recibi una interrupcion
+[TRACE] 19:23:07:629 cpu/(9418:9426): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 19:23:07:629 cpu/(9418:9426): El pid recibido es: 1
+[INFO] 19:23:07:630 cpu/(9418:9426): [EXE] ejecuto EXIT
+[TRACE] 19:23:07:630 cpu/(9418:9426): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 19:25:12:858 cpu/(9535:9535): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 19:25:12:858 cpu/(9535:9535): Error al conectar (a CPU)
+
+[INFO] 19:26:38:009 cpu/(9556:9556): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:26:38:009 cpu/(9556:9556): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 19:26:38:010 cpu/(9556:9556): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[ERROR] 19:27:04:631 cpu/(9556:9556): Fallo recibiendo cant_paginas
+[INFO] 19:27:04:637 cpu/(9556:9556): Cliente conectado (a CPU)
+
+[INFO] 19:27:04:638 cpu/(9556:9556): Cliente conectado (a CPU)
+
+[TRACE] 19:27:04:640 cpu/(9556:9570): El pid recibido es: 1
+[INFO] 19:27:04:645 cpu/(9556:9570): [EXE] ejecuto NO_OP
+[INFO] 19:28:39:217 cpu/(9675:9675): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:28:39:218 cpu/(9675:9675): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 19:28:39:219 cpu/(9675:9675): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:28:41:209 cpu/(9675:9675): Cliente conectado (a CPU)
+
+[INFO] 19:28:41:218 cpu/(9675:9675): Cliente conectado (a CPU)
+
+[INFO] 19:31:36:177 cpu/(9845:9845): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:31:36:178 cpu/(9845:9845): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 19:31:36:178 cpu/(9845:9845): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:31:38:665 cpu/(9845:9845): Cliente conectado (a CPU)
+
+[INFO] 19:31:38:666 cpu/(9845:9845): Cliente conectado (a CPU)
+
+[ERROR] 19:32:36:773 cpu/(9845:9854): Fallo recibiendo cant_paginas
+[TRACE] 19:32:36:773 cpu/(9845:9854): El pid recibido es: 1
+[INFO] 19:32:36:773 cpu/(9845:9854): [EXE] ejecuto NO_OP
+[INFO] 19:32:44:546 cpu/(9954:9954): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:32:44:546 cpu/(9954:9954): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 19:32:44:546 cpu/(9954:9954): Error al conectar (a CPU)
+
+[INFO] 19:33:53:220 cpu/(9980:9980): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:33:53:220 cpu/(9980:9980): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 19:33:53:221 cpu/(9980:9980): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:33:56:001 cpu/(9980:9980): Cliente conectado (a CPU)
+
+[INFO] 19:33:56:002 cpu/(9980:9980): Cliente conectado (a CPU)
+
+[INFO] 19:34:34:418 cpu/(9980:9980): Cliente conectado (a CPU)
+
+[INFO] 19:34:34:425 cpu/(9980:9980): Cliente conectado (a CPU)
+
+[INFO] 19:34:44:594 cpu/(10086:10086): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:34:44:594 cpu/(10086:10086): Cliente conectado (a CPU)
+
+[INFO] 19:34:44:594 cpu/(10086:10086): Cliente conectado (a CPU)
+
+[INFO] 19:35:16:098 cpu/(10097:10097): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:35:16:098 cpu/(10097:10097): Cliente conectado (a CPU)
+
+[INFO] 19:35:16:098 cpu/(10097:10097): Cliente conectado (a CPU)
+
+[INFO] 19:35:24:659 cpu/(10104:10104): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:35:24:659 cpu/(10104:10104): Cliente conectado (a CPU)
+
+[INFO] 19:35:24:659 cpu/(10104:10104): Cliente conectado (a CPU)
+
+[INFO] 19:35:40:147 cpu/(10109:10109): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:35:40:150 cpu/(10109:10109): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 19:35:40:151 cpu/(10109:10109): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 19:35:43:833 cpu/(10109:10109): Cliente conectado (a CPU)
+
+[INFO] 19:35:43:835 cpu/(10109:10109): Cliente conectado (a CPU)
+
+[TRACE] 19:35:47:038 cpu/(10109:10117): El pid recibido es: 1
+[INFO] 19:35:47:039 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:35:52:040 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:35:52:040 cpu/(10109:10117): [EXE] ejecuto IO
+[WARNING] 19:35:52:040 cpu/(10109:10117): El tiempo bloqueante es: 3000
+[TRACE] 19:35:52:041 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 19:35:55:044 cpu/(10109:10117): El pid recibido es: 1
+[INFO] 19:35:55:045 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:35:58:046 cpu/(10109:10117): Termine NO_OP
+[DEBUG] 19:35:58:047 cpu/(10109:10117): Recibi una interrupcion
+[TRACE] 19:35:58:047 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 19:35:58:048 cpu/(10109:10117): El pid recibido es: 1
+[INFO] 19:35:58:049 cpu/(10109:10117): [EXE] ejecuto EXIT
+[TRACE] 19:35:58:050 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 19:36:25:446 cpu/(10109:10117): El pid recibido es: 2
+[INFO] 19:36:25:486 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:36:30:488 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:36:30:488 cpu/(10109:10117): [EXE] ejecuto IO
+[WARNING] 19:36:30:489 cpu/(10109:10117): El tiempo bloqueante es: 3000
+[TRACE] 19:36:30:489 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 2 
+[TRACE] 19:36:33:493 cpu/(10109:10117): El pid recibido es: 2
+[INFO] 19:36:33:497 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:36:36:498 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:36:36:499 cpu/(10109:10117): [EXE] ejecuto EXIT
+[DEBUG] 19:36:36:499 cpu/(10109:10117): Recibi una interrupcion
+[TRACE] 19:36:36:499 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 2 
+[TRACE] 19:36:36:501 cpu/(10109:10117): El pid recibido es: 3
+[INFO] 19:36:36:502 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:36:41:504 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:36:41:504 cpu/(10109:10117): [EXE] ejecuto EXIT
+[DEBUG] 19:36:41:504 cpu/(10109:10117): Recibi una interrupcion
+[TRACE] 19:36:41:504 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 3 
+[TRACE] 19:36:41:542 cpu/(10109:10117): El pid recibido es: 4
+[INFO] 19:36:41:542 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:36:46:544 cpu/(10109:10117): Termine NO_OP
+[DEBUG] 19:36:46:545 cpu/(10109:10117): Recibi una interrupcion
+[TRACE] 19:36:46:546 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 4 
+[TRACE] 19:36:46:583 cpu/(10109:10117): El pid recibido es: 4
+[INFO] 19:36:46:583 cpu/(10109:10117): [EXE] ejecuto EXIT
+[TRACE] 19:36:46:583 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 4 
+[TRACE] 19:36:49:209 cpu/(10109:10117): El pid recibido es: 5
+[INFO] 19:36:49:246 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:36:52:247 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:36:52:247 cpu/(10109:10117): [EXE] ejecuto IO
+[WARNING] 19:36:52:248 cpu/(10109:10117): El tiempo bloqueante es: 5000
+[TRACE] 19:36:52:248 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 5 
+[TRACE] 19:36:57:251 cpu/(10109:10117): El pid recibido es: 5
+[INFO] 19:36:57:253 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:37:00:254 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:37:00:254 cpu/(10109:10117): [EXE] ejecuto EXIT
+[TRACE] 19:37:00:254 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 5 
+[TRACE] 19:37:20:680 cpu/(10109:10117): El pid recibido es: 6
+[INFO] 19:37:20:680 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:37:23:681 cpu/(10109:10117): Termine NO_OP
+[DEBUG] 19:37:23:681 cpu/(10109:10117): Recibi una interrupcion
+[TRACE] 19:37:23:681 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 6 
+[TRACE] 19:37:23:682 cpu/(10109:10117): El pid recibido es: 6
+[INFO] 19:37:23:683 cpu/(10109:10117): [EXE] ejecuto IO
+[WARNING] 19:37:23:683 cpu/(10109:10117): El tiempo bloqueante es: 5000
+[TRACE] 19:37:23:683 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 6 
+[TRACE] 19:37:28:724 cpu/(10109:10117): El pid recibido es: 6
+[INFO] 19:37:28:762 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:37:31:763 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:37:31:763 cpu/(10109:10117): [EXE] ejecuto EXIT
+[TRACE] 19:37:31:763 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 6 
+[TRACE] 19:37:31:765 cpu/(10109:10117): El pid recibido es: 7
+[INFO] 19:37:31:766 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:37:41:769 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:37:41:770 cpu/(10109:10117): [EXE] ejecuto EXIT
+[DEBUG] 19:37:41:770 cpu/(10109:10117): Recibi una interrupcion
+[TRACE] 19:37:41:770 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 7 
+[TRACE] 19:37:41:808 cpu/(10109:10117): El pid recibido es: 8
+[INFO] 19:37:41:809 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:37:44:811 cpu/(10109:10117): Termine NO_OP
+[INFO] 19:37:44:811 cpu/(10109:10117): [EXE] ejecuto IO
+[WARNING] 19:37:44:811 cpu/(10109:10117): El tiempo bloqueante es: 13000
+[DEBUG] 19:37:44:812 cpu/(10109:10117): Recibi una interrupcion
+[TRACE] 19:37:44:812 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 8 
+[TRACE] 19:37:54:851 cpu/(10109:10117): El pid recibido es: 8
+[INFO] 19:37:54:851 cpu/(10109:10117): [EXE] ejecuto NO_OP
+[WARNING] 19:37:57:852 cpu/(10109:10117): Termine NO_OP
+[DEBUG] 19:37:57:853 cpu/(10109:10117): Recibi una interrupcion
+[TRACE] 19:37:57:853 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 8 
+[TRACE] 19:37:57:855 cpu/(10109:10117): El pid recibido es: 8
+[INFO] 19:37:57:857 cpu/(10109:10117): [EXE] ejecuto EXIT
+[TRACE] 19:37:57:857 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 8 

@@ -36307,3 +36307,356 @@
 [WARNING] 12:36:04:334 kernel/(6242:6246): El proceso 1 fue elegido mediante el algoritmo SRT: 
 [INFO] 12:36:04:334 kernel/(6242:6246): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
 [INFO] 12:36:04:376 kernel/(6242:6246): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 19:12:59:232 kernel/(8683:8683): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:12:59:240 kernel/(8683:8683): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:12:59:241 kernel/(8683:8683): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:12:59:242 kernel/(8683:8683): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:12:59:242 kernel/(8683:8683): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:15:31:705 kernel/(8683:8683): Cliente conectado (a KERNEL)
+
+[INFO] 19:15:31:722 kernel/(8683:8716): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:15:31:722 kernel/(8683:8686): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 19:15:31:722 kernel/(8683:8686): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:15:31:722 kernel/(8683:8686): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:15:31:722 kernel/(8683:8687): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:15:31:722 kernel/(8683:8687): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:15:31:723 kernel/(8683:8716): DISCONNECT!
+[WARNING] 19:15:31:723 kernel/(8683:8716): El cliente se desconecto de KERNEL server
+[ERROR] 19:18:00:800 kernel/(8683:8687): Fallo recibiendo pc
+[ERROR] 19:18:00:801 kernel/(8683:8687): Fallo recibiendo el tiempo bloqueante
+[INFO] 19:18:00:802 kernel/(8683:8687): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:18:00:802 kernel/(8683:8687): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:18:00:802 kernel/(8683:8687): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:18:00:802 kernel/(8683:8687): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 70536.000000 milisegundos.
+[INFO] 19:22:54:032 kernel/(9420:9420): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:22:54:044 kernel/(9420:9420): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:22:54:051 kernel/(9420:9420): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:22:54:051 kernel/(9420:9420): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:22:54:051 kernel/(9420:9420): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:22:56:598 kernel/(9420:9420): Cliente conectado (a KERNEL)
+
+[INFO] 19:22:56:602 kernel/(9420:9428): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:22:56:602 kernel/(9420:9423): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 19:22:56:602 kernel/(9420:9423): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:22:56:602 kernel/(9420:9423): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:22:56:603 kernel/(9420:9424): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:22:56:603 kernel/(9420:9424): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:22:56:604 kernel/(9420:9428): DISCONNECT!
+[WARNING] 19:22:56:604 kernel/(9420:9428): El cliente se desconecto de KERNEL server
+[INFO] 19:23:01:618 kernel/(9420:9424): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:23:01:619 kernel/(9420:9422): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 19:23:01:619 kernel/(9420:9422): [BLOCK] Se bloquea el proceso 3000 milisegs, 
+[INFO] 19:23:04:619 kernel/(9420:9422): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:23:04:620 kernel/(9420:9422): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 19:23:04:620 kernel/(9420:9422): Envio una interrupcion
+[WARNING] 19:23:04:621 kernel/(9420:9424): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:23:04:621 kernel/(9420:9424): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[INFO] 19:23:07:629 kernel/(9420:9424): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:23:07:629 kernel/(9420:9424): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:23:07:629 kernel/(9420:9424): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:23:07:629 kernel/(9420:9424): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
+[INFO] 19:23:07:670 kernel/(9420:9424): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 19:26:42:031 kernel/(9559:9559): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:26:42:031 kernel/(9559:9559): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:26:42:033 kernel/(9559:9559): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:26:42:033 kernel/(9559:9559): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:26:42:034 kernel/(9559:9559): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:26:45:020 kernel/(9559:9559): Cliente conectado (a KERNEL)
+
+[INFO] 19:26:45:029 kernel/(9559:9566): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:26:45:029 kernel/(9559:9562): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 19:26:45:029 kernel/(9559:9562): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:26:45:029 kernel/(9559:9562): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:26:45:029 kernel/(9559:9563): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:26:45:029 kernel/(9559:9563): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:26:45:029 kernel/(9559:9566): DISCONNECT!
+[WARNING] 19:26:45:030 kernel/(9559:9566): El cliente se desconecto de KERNEL server
+[ERROR] 19:27:05:824 kernel/(9559:9563): Fallo recibiendo pc
+[ERROR] 19:27:05:830 kernel/(9559:9563): Fallo recibiendo el tiempo bloqueante
+[INFO] 19:27:05:830 kernel/(9559:9563): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:27:05:830 kernel/(9559:9563): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:27:05:830 kernel/(9559:9563): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:27:05:830 kernel/(9559:9563): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[INFO] 19:28:41:208 kernel/(9677:9677): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:28:41:209 kernel/(9677:9677): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:28:41:209 kernel/(9677:9677): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:28:41:218 kernel/(9677:9677): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:28:41:226 kernel/(9677:9677): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:28:43:281 kernel/(9677:9677): Cliente conectado (a KERNEL)
+
+[INFO] 19:28:43:286 kernel/(9677:9685): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:28:43:286 kernel/(9677:9680): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 19:28:43:286 kernel/(9677:9680): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:28:43:286 kernel/(9677:9680): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:28:43:287 kernel/(9677:9681): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:28:43:287 kernel/(9677:9681): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:28:43:287 kernel/(9677:9685): DISCONNECT!
+[WARNING] 19:28:43:287 kernel/(9677:9685): El cliente se desconecto de KERNEL server
+[INFO] 19:31:38:664 kernel/(9848:9848): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:31:38:665 kernel/(9848:9848): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:31:38:665 kernel/(9848:9848): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:31:38:666 kernel/(9848:9848): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:31:38:666 kernel/(9848:9848): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:31:41:226 kernel/(9848:9848): Cliente conectado (a KERNEL)
+
+[INFO] 19:31:41:230 kernel/(9848:9857): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:31:41:230 kernel/(9848:9851): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 19:31:41:230 kernel/(9848:9851): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:31:41:230 kernel/(9848:9851): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:31:41:230 kernel/(9848:9852): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:31:41:230 kernel/(9848:9852): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:31:41:231 kernel/(9848:9857): DISCONNECT!
+[WARNING] 19:31:41:231 kernel/(9848:9857): El cliente se desconecto de KERNEL server
+[ERROR] 19:32:38:030 kernel/(9848:9852): Fallo recibiendo pc
+[ERROR] 19:32:38:035 kernel/(9848:9852): Fallo recibiendo el tiempo bloqueante
+[INFO] 19:32:38:035 kernel/(9848:9852): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:32:38:035 kernel/(9848:9852): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:32:38:035 kernel/(9848:9852): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:32:38:035 kernel/(9848:9852): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 70536.000000 milisegundos.
+[INFO] 19:33:56:000 kernel/(9982:9982): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:33:56:001 kernel/(9982:9982): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:33:56:001 kernel/(9982:9982): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:33:56:001 kernel/(9982:9982): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:33:56:002 kernel/(9982:9982): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:33:58:386 kernel/(9982:9982): Cliente conectado (a KERNEL)
+
+[INFO] 19:33:58:391 kernel/(9982:9990): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:33:58:391 kernel/(9982:9985): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 19:33:58:391 kernel/(9982:9985): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:33:58:391 kernel/(9982:9985): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:33:58:391 kernel/(9982:9986): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:33:58:391 kernel/(9982:9986): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:33:58:392 kernel/(9982:9990): DISCONNECT!
+[WARNING] 19:33:58:392 kernel/(9982:9990): El cliente se desconecto de KERNEL server
+[INFO] 19:34:34:417 kernel/(10078:10078): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:34:34:417 kernel/(10078:10078): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:34:34:418 kernel/(10078:10078): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:34:34:418 kernel/(10078:10078): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:34:34:425 kernel/(10078:10078): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:34:46:752 kernel/(10088:10088): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:34:46:753 kernel/(10088:10088): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:34:46:754 kernel/(10088:10088): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 19:34:46:754 kernel/(10088:10088): Error al conectar (a CPU)
+
+[INFO] 19:35:43:832 kernel/(10111:10111): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:35:43:832 kernel/(10111:10111): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 19:35:43:832 kernel/(10111:10111): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:35:43:833 kernel/(10111:10111): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:35:43:835 kernel/(10111:10111): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:35:47:021 kernel/(10111:10111): Cliente conectado (a KERNEL)
+
+[INFO] 19:35:47:034 kernel/(10111:10119): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:35:47:035 kernel/(10111:10114): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 19:35:47:035 kernel/(10111:10114): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:35:47:035 kernel/(10111:10114): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:35:47:035 kernel/(10111:10115): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:35:47:035 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:35:47:059 kernel/(10111:10119): DISCONNECT!
+[WARNING] 19:35:47:059 kernel/(10111:10119): El cliente se desconecto de KERNEL server
+[INFO] 19:35:52:041 kernel/(10111:10115): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:35:52:041 kernel/(10111:10113): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 19:35:52:041 kernel/(10111:10113): [BLOCK] Se bloquea el proceso 3000 milisegs, 
+[INFO] 19:35:55:042 kernel/(10111:10113): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:35:55:043 kernel/(10111:10113): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 19:35:55:043 kernel/(10111:10113): Envio una interrupcion
+[WARNING] 19:35:55:043 kernel/(10111:10115): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:35:55:043 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[INFO] 19:35:58:047 kernel/(10111:10115): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 19:35:58:047 kernel/(10111:10115): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:35:58:048 kernel/(10111:10115): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:35:58:048 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
+[INFO] 19:35:58:086 kernel/(10111:10115): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 19:36:25:441 kernel/(10111:10111): Cliente conectado (a KERNEL)
+
+[INFO] 19:36:25:445 kernel/(10111:10224): [NEW] Entra el proceso de PID: 2 a la cola.
+[INFO] 19:36:25:446 kernel/(10111:10114): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 19:36:25:446 kernel/(10111:10114): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 19:36:25:446 kernel/(10111:10114): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:36:25:446 kernel/(10111:10115): El proceso 2 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:36:25:446 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:36:25:446 kernel/(10111:10224): DISCONNECT!
+[WARNING] 19:36:25:446 kernel/(10111:10224): El cliente se desconecto de KERNEL server
+[INFO] 19:36:30:489 kernel/(10111:10115): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[INFO] 19:36:30:490 kernel/(10111:10113): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 19:36:30:490 kernel/(10111:10113): [BLOCK] Se bloquea el proceso 3000 milisegs, 
+[INFO] 19:36:30:895 kernel/(10111:10111): Cliente conectado (a KERNEL)
+
+[INFO] 19:36:30:899 kernel/(10111:10228): [NEW] Entra el proceso de PID: 3 a la cola.
+[INFO] 19:36:31:425 kernel/(10111:10111): Cliente conectado (a KERNEL)
+
+[INFO] 19:36:31:430 kernel/(10111:10230): [NEW] Entra el proceso de PID: 4 a la cola.
+[INFO] 19:36:33:491 kernel/(10111:10113): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 19:36:33:492 kernel/(10111:10113): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 19:36:33:492 kernel/(10111:10113): Envio una interrupcion
+[WARNING] 19:36:33:492 kernel/(10111:10115): El proceso 2 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:36:33:493 kernel/(10111:10228): DISCONNECT!
+[INFO] 19:36:33:493 kernel/(10111:10114): [NEW] Se saca el proceso de PID: 3 de la cola
+[INFO] 19:36:33:493 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[INFO] 19:36:33:495 kernel/(10111:10230): DISCONNECT!
+[WARNING] 19:36:33:496 kernel/(10111:10228): El cliente se desconecto de KERNEL server
+[INFO] 19:36:33:496 kernel/(10111:10114): [READY] Entra el proceso de PID: 3 a la cola.
+[DEBUG] 19:36:33:496 kernel/(10111:10114): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 19:36:33:497 kernel/(10111:10114): Envio una interrupcion
+[INFO] 19:36:33:497 kernel/(10111:10114): [NEW] Se saca el proceso de PID: 4 de la cola
+[INFO] 19:36:33:498 kernel/(10111:10114): [READY] Entra el proceso de PID: 4 a la cola.
+[DEBUG] 19:36:33:498 kernel/(10111:10114): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 19:36:33:499 kernel/(10111:10114): Envio una interrupcion
+[WARNING] 19:36:33:499 kernel/(10111:10230): El cliente se desconecto de KERNEL server
+[INFO] 19:36:36:500 kernel/(10111:10115): [EXIT] Finaliza el proceso de PID: 2
+[ERROR] 19:36:36:500 kernel/(10111:10115): El proceso 4, tiene una estimacion actual de: 10000.000000
+[WARNING] 19:36:36:500 kernel/(10111:10115): El proceso 4 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:36:36:501 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 3 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:36:41:542 kernel/(10111:10115): [EXIT] Finaliza el proceso de PID: 3
+[WARNING] 19:36:41:542 kernel/(10111:10115): El proceso 4 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:36:41:542 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 4 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:36:46:582 kernel/(10111:10115): [READY] Entra el proceso de PID: 4 a la cola.
+[DEBUG] 19:36:46:582 kernel/(10111:10115): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:36:46:582 kernel/(10111:10115): El proceso 4 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:36:46:582 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 4 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[INFO] 19:36:46:622 kernel/(10111:10115): [EXIT] Finaliza el proceso de PID: 4
+[INFO] 19:36:49:192 kernel/(10111:10111): Cliente conectado (a KERNEL)
+
+[INFO] 19:36:49:208 kernel/(10111:10242): [NEW] Entra el proceso de PID: 5 a la cola.
+[INFO] 19:36:49:209 kernel/(10111:10114): [NEW] Se saca el proceso de PID: 5 de la cola
+[INFO] 19:36:49:209 kernel/(10111:10114): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 19:36:49:209 kernel/(10111:10114): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:36:49:209 kernel/(10111:10115): El proceso 5 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:36:49:209 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 5 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:36:49:210 kernel/(10111:10242): DISCONNECT!
+[WARNING] 19:36:49:210 kernel/(10111:10242): El cliente se desconecto de KERNEL server
+[INFO] 19:36:52:248 kernel/(10111:10115): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 19:36:52:249 kernel/(10111:10113): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 19:36:52:249 kernel/(10111:10113): [BLOCK] Se bloquea el proceso 5000 milisegs, 
+[INFO] 19:36:57:250 kernel/(10111:10113): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 19:36:57:250 kernel/(10111:10113): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 19:36:57:251 kernel/(10111:10113): Envio una interrupcion
+[WARNING] 19:36:57:251 kernel/(10111:10115): El proceso 5 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:36:57:251 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 5 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[INFO] 19:37:00:254 kernel/(10111:10115): [EXIT] Finaliza el proceso de PID: 5
+[INFO] 19:37:20:675 kernel/(10111:10111): Cliente conectado (a KERNEL)
+
+[INFO] 19:37:20:679 kernel/(10111:10245): [NEW] Entra el proceso de PID: 6 a la cola.
+[INFO] 19:37:20:679 kernel/(10111:10114): [NEW] Se saca el proceso de PID: 6 de la cola
+[INFO] 19:37:20:679 kernel/(10111:10114): [READY] Entra el proceso de PID: 6 a la cola.
+[DEBUG] 19:37:20:679 kernel/(10111:10114): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:37:20:679 kernel/(10111:10115): El proceso 6 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:37:20:679 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 6 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:37:20:680 kernel/(10111:10245): DISCONNECT!
+[WARNING] 19:37:20:680 kernel/(10111:10245): El cliente se desconecto de KERNEL server
+[INFO] 19:37:23:681 kernel/(10111:10115): [READY] Entra el proceso de PID: 6 a la cola.
+[DEBUG] 19:37:23:681 kernel/(10111:10115): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:37:23:682 kernel/(10111:10115): El proceso 6 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:37:23:682 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 6 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[INFO] 19:37:23:722 kernel/(10111:10115): [BLOCK] Entra el proceso de PID: 6 a la cola.
+[INFO] 19:37:23:722 kernel/(10111:10113): [BLOCK] Sale el proceso de PID: 6 de la cola.
+[INFO] 19:37:23:722 kernel/(10111:10113): [BLOCK] Se bloquea el proceso 5000 milisegs, 
+[INFO] 19:37:24:498 kernel/(10111:10111): Cliente conectado (a KERNEL)
+
+[INFO] 19:37:24:502 kernel/(10111:10247): [NEW] Entra el proceso de PID: 7 a la cola.
+[INFO] 19:37:28:722 kernel/(10111:10113): [READY] Entra el proceso de PID: 6 a la cola.
+[DEBUG] 19:37:28:723 kernel/(10111:10113): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 19:37:28:723 kernel/(10111:10113): Envio una interrupcion
+[WARNING] 19:37:28:724 kernel/(10111:10115): El proceso 6 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:37:28:724 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 6 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
+[INFO] 19:37:28:725 kernel/(10111:10247): DISCONNECT!
+[INFO] 19:37:28:726 kernel/(10111:10114): [NEW] Se saca el proceso de PID: 7 de la cola
+[WARNING] 19:37:28:726 kernel/(10111:10247): El cliente se desconecto de KERNEL server
+[INFO] 19:37:28:726 kernel/(10111:10114): [READY] Entra el proceso de PID: 7 a la cola.
+[DEBUG] 19:37:28:726 kernel/(10111:10114): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 19:37:28:727 kernel/(10111:10114): Envio una interrupcion
+[INFO] 19:37:29:386 kernel/(10111:10111): Cliente conectado (a KERNEL)
+
+[INFO] 19:37:29:390 kernel/(10111:10250): [NEW] Entra el proceso de PID: 8 a la cola.
+[INFO] 19:37:29:390 kernel/(10111:10114): [NEW] Se saca el proceso de PID: 8 de la cola
+[INFO] 19:37:29:391 kernel/(10111:10114): [READY] Entra el proceso de PID: 8 a la cola.
+[DEBUG] 19:37:29:391 kernel/(10111:10114): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 19:37:29:391 kernel/(10111:10114): Envio una interrupcion
+[INFO] 19:37:29:391 kernel/(10111:10250): DISCONNECT!
+[WARNING] 19:37:29:391 kernel/(10111:10250): El cliente se desconecto de KERNEL server
+[INFO] 19:37:31:764 kernel/(10111:10115): [EXIT] Finaliza el proceso de PID: 6
+[ERROR] 19:37:31:764 kernel/(10111:10115): El proceso 8, tiene una estimacion actual de: 10000.000000
+[WARNING] 19:37:31:764 kernel/(10111:10115): El proceso 8 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:37:31:765 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 7 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:37:41:807 kernel/(10111:10115): [EXIT] Finaliza el proceso de PID: 7
+[WARNING] 19:37:41:807 kernel/(10111:10115): El proceso 8 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:37:41:807 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 8 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[INFO] 19:37:44:850 kernel/(10111:10115): [BLOCK] Entra el proceso de PID: 8 a la cola.
+[INFO] 19:37:44:850 kernel/(10111:10113): [BLOCK] Sale el proceso de PID: 8 de la cola.
+[INFO] 19:37:44:850 kernel/(10111:10113): [SUSPENDED] Se suspende 13000 milisegs, 
+[TRACE] 19:37:54:850 kernel/(10111:10113): Entre en agregar a block suspended
+[INFO] 19:37:54:850 kernel/(10111:10113): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 8 a la cola.
+[TRACE] 19:37:54:850 kernel/(10111:10113): Le avise a memoria que libere los recursos
+[INFO] 19:37:54:850 kernel/(10111:10113): [READY-SUSPENDED] Ingresa el proceso de PID: 8 de la cola.
+[INFO] 19:37:54:850 kernel/(10111:10112): [READY-SUSPENDED] Sale el proceso de PID: 8 de la cola.
+[INFO] 19:37:54:850 kernel/(10111:10112): [READY] Entra el proceso de PID: 8 a la cola.
+[DEBUG] 19:37:54:850 kernel/(10111:10112): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 19:37:54:850 kernel/(10111:10112): Envio una interrupcion
+[WARNING] 19:37:54:851 kernel/(10111:10115): El proceso 8 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:37:54:851 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 8 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[INFO] 19:37:57:853 kernel/(10111:10115): [READY] Entra el proceso de PID: 8 a la cola.
+[DEBUG] 19:37:57:854 kernel/(10111:10115): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:37:57:854 kernel/(10111:10115): El proceso 8 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:37:57:854 kernel/(10111:10115): [EXEC] Ingresa el carpincho de PID: 8 con una rafaga de ejecucion estimada de 2500.000000 milisegundos.
+[INFO] 19:37:57:894 kernel/(10111:10115): [EXIT] Finaliza el proceso de PID: 8

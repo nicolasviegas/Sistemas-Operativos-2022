@@ -1,5 +1,6 @@
 #include "../include/cpu.h"
 #include "../include/funciones_cpu.h"
+#include <math.h>
 
 
 void cargar_instruccion_cpu(int id, char* nombre, uint32_t parametro1, uint32_t parametro2){
@@ -13,12 +14,28 @@ void cargar_instruccion_cpu(int id, char* nombre, uint32_t parametro1, uint32_t 
 	list_add(lista_instrucciones_cpu,estructura_instrucciones);
 	//free(estructura_instrucciones);
 }
-
 instrucciones* fetch(pcb_cpu* pcb){
 	instrucciones* a = malloc(sizeof(instrucciones));
 	a = list_get(pcb->instrucciones,pcb->PC);
 	return a;
 }
+
+///////////MMU/////////
+
+int obtener_numero_pagina(int direccion_logica){
+	//return (int) floor(direccion_logica / tamanio_paginas);
+}
+
+
+
+
+
+
+//////////TLB//////////
+
+
+
+//////////Instrucciones///////
 
 void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 	int co_op = instruccion_a_decodificar->id;

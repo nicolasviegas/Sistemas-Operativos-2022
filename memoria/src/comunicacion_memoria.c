@@ -11,6 +11,8 @@ static void procesar_conexion_memoria(void* void_args) {
     char* server_name = args->server_name;
     free(args);
 
+//    send_TAM(fd_cpu,tamanio_paginas);
+
 
 
 
@@ -24,10 +26,12 @@ static void procesar_conexion_memoria(void* void_args) {
     		return;
     	    }
 
-
     	     send_indice_a_kernel(cliente_socket,indice_tabla);
 
     	     log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
+
+
+
 
 
     	 // break; //borrar despues esto es solo para que no me itere ahora

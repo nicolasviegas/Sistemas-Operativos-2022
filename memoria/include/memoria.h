@@ -24,8 +24,24 @@
 #include "socket.h"
 
 
+
+typedef enum{
+	CLOCK,
+	CLOCK_M
+}t_algoritmo_memoria;
+
+
 t_config* config_memoria;
 
+char* puerto_escucha;
+uint32_t tamanio_memoria;
+uint32_t tamanio_paginas;
+uint32_t entradas_por_tabla;
+uint32_t retardo_memoria;
+uint32_t retardo_swap;
+char* algoritmo_config;
+uint32_t marcos_por_proceso;
+char* path_swap;
 
 t_log* log_memoria;
 
@@ -36,6 +52,8 @@ uint32_t indice_tabla;
 //agregas colas_new, colas_ready, etc
 
 int server_escuchar_memoria(t_log* logger, char* server_name, int server_socket);
+
+void inicializar_config();
 
 void cerrar_programa(t_log* logger);
 

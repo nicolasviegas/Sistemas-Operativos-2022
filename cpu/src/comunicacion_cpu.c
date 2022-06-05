@@ -36,7 +36,6 @@ static void procesar_conexion_cpu(void* void_args) {
 
 
 	 while (cliente_socket != -1 && cliente_socket_interrupcion != -1) {
-
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
 		 		log_error(log_cpu, "Fallo recibiendo pid");
 		 		break;

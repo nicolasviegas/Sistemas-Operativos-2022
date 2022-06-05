@@ -740,3 +740,57 @@ bool recv_interrupcion(int fd, uint32_t* parametro1) {
     free(stream);
     return true;
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+static void* serializar_tam_paginas(uint32_t cantidad){
+	void* stream = malloc(sizeof(uint32_t));
+
+
+	    memcpy(stream, &cantidad, sizeof(uint32_t));
+
+
+	    //printf("El tam a enviar es: %d\n",parametro1);
+
+	    return stream;
+}
+
+void deserializar_tam_paginas(void* stream, uint32_t* cantidad) {
+
+    memcpy(cantidad, stream ,sizeof(uint32_t));
+//  printf("El tam en deserializar tam es: %d \n", parametro1);
+
+}
+
+
+bool send_tam_paginas(int fd,uint32_t cantidad){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(cantidad);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_tam_paginas(int fd, uint32_t* cantidad) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, cantidad);
+
+    free(stream);
+    return true;
+}

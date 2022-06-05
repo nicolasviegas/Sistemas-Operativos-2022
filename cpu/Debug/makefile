@@ -27,13 +27,13 @@ endif
 all: cpu
 
 dependents:
-	-cd /home/utnso/workspace/shared/Debug && $(MAKE) clean all
+	-cd /home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug && $(MAKE) all
 
 # Tool invocations
-cpu: $(OBJS) $(USER_OBJS) /home/utnso/workspace/shared/Debug/libshared.so
+cpu: $(OBJS) $(USER_OBJS) /home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug/libshared.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L"/home/utnso/workspace/shared/Debug" -L"/home/utnso/workspace/shared/src" -o "cpu" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L"/home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug" -L"/home/utnso/tp-2022-1c-yaguarethreads-/shared/src" -o "cpu" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -43,6 +43,6 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
-/home/utnso/workspace/shared/Debug/libshared.so:
+/home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug/libshared.so:
 
 -include ../makefile.targets

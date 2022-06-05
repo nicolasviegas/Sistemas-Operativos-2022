@@ -43,6 +43,17 @@ t_config* config_cpu;
 
 t_log* log_cpu;
 
+char* ip;
+uint32_t entradas_tlb;
+char* reemplazo_tlb;
+uint32_t retardo_noop;
+char* puerto_escucha_dispatch;
+char* puerto_interrupt;
+char* ip_memoria;
+char* puerto_memoria;
+uint32_t numero_pagina;
+uint32_t tam_paginas;
+
 uint32_t tiempo_bloqueante;
 
 //t_paquete* paquete_consola_kernel;
@@ -50,6 +61,7 @@ uint32_t tiempo_bloqueante;
 //agregas colas_new, colas_ready, etc
 
 //int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket);
+void inicializar_config();
 int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket,int server_socket_1);
 
 void cerrar_programa(t_log* logger);
