@@ -2,6 +2,7 @@
 #include "../include/cpu.h"
 #include "../include/funciones_cpu.h"
 #include "protocolo.h"
+#include <math.h>
 
 typedef struct {
     t_log* log;
@@ -32,32 +33,6 @@ static void procesar_conexion_cpu(void* void_args) {
 	// printf("El cliente socket en cpu.c procesar conexion es : %d\n",cliente_socket);
 	 fd_kernel = cliente_socket;/////////////////////////////////////////////todo HARDCODEADO, PREGUNTAR
 
-
-////////////////////////////////////////////MMU///////////////////////////////////////////////////////////////////////
-
-	 uint32_t obtener_numero_pagina(uint32_t direccion_logica){
-		 return (uint32_t) floor(direccion_logica / tam_paginas);
-	 }
-
-	 uint32_t obtener_entrada_1er_nivel(uint32_t numero_pagina){
-		 return (uint32_t) floor(numero_pagina/cant_entradas_por_tabla);
-	 }
-
-	 uint32_t obtener_entrada_2do_nivel(uint32_t numero_pagina){
-		 return mod(numero_pagina,cant_entradas_por_tabla); //// consultar
-	 }
-
-	 uint32_t obtener_desplazamiento(uint32_t direccion_logica,uint32_t numero_pagina){
-		 return direccion_logica - numero_pagina * tam_paginas;
-	 }
-
-
-/////////////////////////////////////////////TLB/////////////////////////////////////////////////////////////////////
-
-
-
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	 while (cliente_socket != -1 && cliente_socket_interrupcion != -1) {
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
@@ -214,12 +189,12 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	log_info(log_cpu,"Me llego la instruccion WRITE");
 
 					             	uint32_t numero_pagina_write = obtener_numero_pagina(parametro1); // numero de pagina a donde voy a escribir
-									uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
-									uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
-									uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
-									log_warning(log_cpu,"Le mando a memoria a escribir a la pag %d", numero_pagina);
+									uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina_write);
+									uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina_write);
+									uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina_write);
+									log_warning(log_cpu,"Le mando a memoria a escribir a la pag %d", numero_pagina_write);
 
-									send_numero_pagina(fd_memoria,numero_pagina);
+									send_numero_pagina(fd_memoria,numero_pagina_write);
 									send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
 									send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
 									send_desplazamiento(fd_memoria,desplazamiento);

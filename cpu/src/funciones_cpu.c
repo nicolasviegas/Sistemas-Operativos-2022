@@ -20,20 +20,34 @@ instrucciones* fetch(pcb_cpu* pcb){
 	return a;
 }
 
-///////////MMU/////////
+////////////////////////////////////////////MMU///////////////////////////////////////////////////////////////////////
 
-int obtener_numero_pagina(int direccion_logica){
-	//return (int) floor(direccion_logica / tamanio_paginas);
-}
+	 uint32_t obtener_numero_pagina(uint32_t direccion_logica){
+		 uint32_t dir_logica = floor(direccion_logica / tam_paginas);
+		 return dir_logica;
+	 }
+
+	 uint32_t obtener_entrada_1er_nivel(uint32_t numero_pagina){
+		 uint32_t entrada1 = floor(numero_pagina/cant_entradas_por_tabla);
+		 return entrada1;
+	 }
+
+	 uint32_t obtener_entrada_2do_nivel(uint32_t numero_pagina){
+		 //return mod(numero_pagina,cant_entradas_por_tabla);
+		 return numero_pagina % cant_entradas_por_tabla;  //// consultar
+	 }
+
+	 uint32_t obtener_desplazamiento(uint32_t direccion_logica,uint32_t numero_pagina){
+		 return direccion_logica - numero_pagina * tam_paginas;
+	 }
+
+
+/////////////////////////////////////////////TLB/////////////////////////////////////////////////////////////////////
 
 
 
 
-
-
-//////////TLB//////////
-
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //////////Instrucciones///////
 
