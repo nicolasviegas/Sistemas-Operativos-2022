@@ -44,8 +44,95 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 /////////////////////////////////////////////TLB/////////////////////////////////////////////////////////////////////
 
+	 bool existe_entrada(void* elem){
+		 return ((tlb*) elem)->numero_pag == numero_pagina;
+	 }
 
+	 void correr_tlb_read(uint32_t numero_pagina,uint32_t parametro1){
+		 tlb* entrada = list_find(lista_tlb, &existe_entrada);
+		 if(entrada != NULL){
+		 uint32_t marco = entrada->frame;
+		 //send condicion a memoria para que sepa que le voy a pasar el marco TODO
+		 //send marco
 
+		 }
+		 else{
+		 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
+		 uint32_t marco = -1;
+		 uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
+		 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
+		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
+		 send_numero_pagina(fd_memoria,numero_pagina);
+		 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
+		 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+		 send_desplazamiento(fd_memoria,desplazamiento);
+
+		 /// recv marco, para ponerlo en la tlb
+		 //correr algoritmo reemplazo TODO para ver donde lo ubico
+		 // poner el marco en tlb
+		}
+	 }
+
+	 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t parametro1,uint32_t parametro2){
+			 tlb* entrada = list_find(lista_tlb, &existe_entrada);
+			 if(entrada != NULL){
+			 uint32_t marco = entrada->frame;
+			 //send condicion a memoria para que sepa que le voy a pasar el marco
+			 //send marco
+
+			 }
+			 else{
+			 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
+			 uint32_t entrada_1er_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
+			 uint32_t entrada_2do_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
+			 uint32_t desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
+
+			 uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
+			 uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
+			 uint32_t entrada_2do_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
+			 uint32_t desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
+			 log_warning(log_cpu,"Le mando a memoria a copiar a la pag %d", numero_pagina_destino);
+
+			 send_numero_pagina(fd_memoria,numero_pagina_origen);
+			 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_origen);
+			 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_origen);
+			 send_desplazamiento(fd_memoria,desplazamiento_origen);
+
+			 send_numero_pagina(fd_memoria,numero_pagina_destino);
+			 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_destino);
+			 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_destino);
+			 send_desplazamiento(fd_memoria,desplazamiento_destino);
+
+			 /// recv marco, para ponerlo en la tlb
+			 //correr algoritmo reemplazo TODO para ver donde lo ubico
+			 // poner el marco en tlb
+			}
+		 }
+
+	 void correr_tlb_write(uint32_t numero_pagina,uint32_t parametro1,uint32_t parametro2){
+	 		 tlb* entrada = list_find(lista_tlb, &existe_entrada);
+	 		 if(entrada != NULL){
+	 		 uint32_t marco = entrada->frame;
+	 		 //send condicion a memoria para que sepa que le voy a pasar el marco
+	 		 //send marco
+	 		 }
+	 		 else{
+	 		 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
+	 		 uint32_t marco = -1;
+	 		 uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
+	 		 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
+	 		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
+	 		 send_numero_pagina(fd_memoria,numero_pagina);
+	 		 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
+	 		 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+	 		 send_desplazamiento(fd_memoria,desplazamiento);
+	 		 send_valor(fd_memoria,parametro2);
+
+	 		 /// recv marco, para ponerlo en la tlb
+	 		 //correr algoritmo reemplazo TODO para ver donde lo ubico
+	 		 // poner el marco en tlb
+	 		}
+	 	 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

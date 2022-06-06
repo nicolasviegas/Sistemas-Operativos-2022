@@ -122,16 +122,13 @@ static void procesar_conexion_cpu(void* void_args) {
 					         	//log_warning(log_cpu, "Deserialice READ el parametro es: %d",parametro1);
 					             	log_info(log_cpu,"Me llego la instruccion READ");
 
-					             	uint32_t numero_pagina = obtener_numero_pagina(parametro1);
-					             	uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
-					             	uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
-					             	uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
-					             	log_warning(log_cpu,"Le mando a memoria a leer a la pag %d", numero_pagina);
 
-					             	send_numero_pagina(fd_memoria,numero_pagina);
-					             	send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
-					             	send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
-					             	send_desplazamiento(fd_memoria,desplazamiento);
+
+					             	uint32_t numero_pagina = obtener_numero_pagina(parametro1);
+
+					             	correr_tlb_read(numero_pagina,parametro1);
+
+					             	log_warning(log_cpu,"Le mando a memoria a leer a la pag %d", numero_pagina);
 
 					         	break;
 					 			}
@@ -150,25 +147,8 @@ static void procesar_conexion_cpu(void* void_args) {
 					 				log_info(log_cpu,"Me llego la instruccion COPY");
 
 					 				uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
-									uint32_t entrada_1er_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
-									uint32_t entrada_2do_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
-									uint32_t desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
 
-									uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
-									uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
-									uint32_t entrada_2do_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
-									uint32_t desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
-									log_warning(log_cpu,"Le mando a memoria a copiar a la pag %d", numero_pagina_destino);
-
-									send_numero_pagina(fd_memoria,numero_pagina_origen);
-									send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_origen);
-									send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_origen);
-									send_desplazamiento(fd_memoria,desplazamiento_origen);
-
-									send_numero_pagina(fd_memoria,numero_pagina_destino);
-									send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_destino);
-									send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_destino);
-									send_desplazamiento(fd_memoria,desplazamiento_destino);
+					 				correr_tlb_copy(numero_pagina_origen,parametro1,parametro2);
 
 									//TODO como obtengo el valor que acabo de escribir en el write anterior???
 
@@ -189,16 +169,8 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	log_info(log_cpu,"Me llego la instruccion WRITE");
 
 					             	uint32_t numero_pagina_write = obtener_numero_pagina(parametro1); // numero de pagina a donde voy a escribir
-									uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina_write);
-									uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina_write);
-									uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina_write);
-									log_warning(log_cpu,"Le mando a memoria a escribir a la pag %d", numero_pagina_write);
 
-									send_numero_pagina(fd_memoria,numero_pagina_write);
-									send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
-									send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
-									send_desplazamiento(fd_memoria,desplazamiento);
-									send_valor(fd_memoria,parametro2);
+					             	correr_tlb_write(numero_pagina_write,parametro1,parametro2);
 
 					             	break;
 					 			}

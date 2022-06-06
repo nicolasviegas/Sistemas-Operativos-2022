@@ -31,6 +31,12 @@ typedef struct{
 
 }pcb_cpu;
 
+typedef struct{
+	uint32_t numero_pag;
+	uint32_t frame;
+	// uint32_t tiempo_uso;
+}tlb;
+
 bool interrupcion;
 
 t_list* lista_instrucciones_cpu;
@@ -42,6 +48,8 @@ t_list* lista_pcb_cpu;
 t_config* config_cpu;
 
 t_log* log_cpu;
+
+t_list* lista_tlb;
 
 char* ip;
 uint32_t entradas_tlb;
@@ -64,6 +72,15 @@ uint32_t tiempo_bloqueante;
 //int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket);
 void inicializar_config();
 int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket,int server_socket_1);
+
+uint32_t obtener_numero_pagina(uint32_t direccion_logica);
+uint32_t obtener_entrada_1er_nivel(uint32_t numero_pagina);
+uint32_t obtener_entrada_2do_nivel(uint32_t numero_pagina);
+uint32_t obtener_desplazamiento(uint32_t direccion_logica,uint32_t numero_pagina);
+bool existe_entrada(void* elem);
+void correr_tlb_read(uint32_t numero_pagina_origen,uint32_t parametro1);
+void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t parametro1,uint32_t parametro2);
+void correr_tlb_write(uint32_t numero_pagina_origen,uint32_t parametro1,uint32_t parametro2);
 
 void cerrar_programa(t_log* logger);
 
