@@ -85,6 +85,21 @@ bool recv_interrupcion(int fd, uint32_t* parametro1);
 bool send_tam_paginas(int fd,uint32_t cantidad);
 bool recv_tam_paginas(int fd,uint32_t* cantidad);
 
+bool send_numero_pagina(int fd,uint32_t numero_pagina);
+bool recv_numero_pagina(int fd,uint32_t* numero_pagina);
+
+bool send_entrada_1er_nivel(int fd,uint32_t entrada_1er_nivel);
+bool recv_entrada_1er_nivel(int fd,uint32_t* entrada_1er_nivel);
+
+bool send_entrada_2do_nivel(int fd,uint32_t entrada_2do_nivel);
+bool recv_entrada_2do_nivel(int fd,uint32_t* entrada_2do_nivel);
+
+bool send_desplazamiento(int fd,uint32_t desplazamiento);
+bool recv_desplazamiento(int fd,uint32_t* desplazamiento);
+
+bool send_valor(int fd,uint32_t valor);
+bool recv_valor(int fd,uint32_t* valor);
+
 bool send_debug(int fd);
 
 

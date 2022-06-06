@@ -52,7 +52,8 @@ char* puerto_interrupt;
 char* ip_memoria;
 char* puerto_memoria;
 uint32_t numero_pagina;
-uint32_t tam_paginas;
+uint32_t tam_paginas; // falta recibirlo
+uint32_t cant_entradas_por_tabla; // falta recibirlo
 
 uint32_t tiempo_bloqueante;
 

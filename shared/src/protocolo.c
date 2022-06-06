@@ -794,3 +794,160 @@ bool recv_tam_paginas(int fd, uint32_t* cantidad) {
     free(stream);
     return true;
 }
+
+bool send_numero_pagina(int fd,uint32_t numero_pagina){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(numero_pagina);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_numero_pagina(int fd, uint32_t* numero_pagina) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, numero_pagina);
+
+    free(stream);
+    return true;
+}
+
+bool send_entrada_1er_nivel(int fd,uint32_t entrada_1er_nivel){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(entrada_1er_nivel);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_entrada_1er_nivel(int fd, uint32_t* entrada_1er_nivel) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, entrada_1er_nivel);
+
+    free(stream);
+    return true;
+}
+
+
+bool send_entrada_2do_nivel(int fd,uint32_t entrada_2do_nivel){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(entrada_2do_nivel);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_entrada_2do_nivel(int fd, uint32_t* entrada_2do_nivel) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, entrada_2do_nivel);
+
+    free(stream);
+    return true;
+}
+
+
+bool send_desplazamiento(int fd,uint32_t desplazamiento){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(desplazamiento);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_desplazamiento(int fd, uint32_t* desplazamiento) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, desplazamiento);
+
+    free(stream);
+    return true;
+}
+
+bool send_valor(int fd,uint32_t valor){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(valor);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_valor(int fd, uint32_t* valor) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, valor);
+
+    free(stream);
+    return true;
+}

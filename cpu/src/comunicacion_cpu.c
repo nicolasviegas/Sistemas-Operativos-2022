@@ -31,9 +31,33 @@ static void procesar_conexion_cpu(void* void_args) {
 	// log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
 	// printf("El cliente socket en cpu.c procesar conexion es : %d\n",cliente_socket);
 	 fd_kernel = cliente_socket;/////////////////////////////////////////////todo HARDCODEADO, PREGUNTAR
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+////////////////////////////////////////////MMU///////////////////////////////////////////////////////////////////////
+
+	 uint32_t obtener_numero_pagina(uint32_t direccion_logica){
+		 return (uint32_t) floor(direccion_logica / tam_paginas);
+	 }
+
+	 uint32_t obtener_entrada_1er_nivel(uint32_t numero_pagina){
+		 return (uint32_t) floor(numero_pagina/cant_entradas_por_tabla);
+	 }
+
+	 uint32_t obtener_entrada_2do_nivel(uint32_t numero_pagina){
+		 return mod(numero_pagina,cant_entradas_por_tabla); //// consultar
+	 }
+
+	 uint32_t obtener_desplazamiento(uint32_t direccion_logica,uint32_t numero_pagina){
+		 return direccion_logica - numero_pagina * tam_paginas;
+	 }
+
+
+/////////////////////////////////////////////TLB/////////////////////////////////////////////////////////////////////
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	 while (cliente_socket != -1 && cliente_socket_interrupcion != -1) {
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
@@ -122,7 +146,18 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	cargar_instruccion_cpu(READ,"READ",parametro1,(uint32_t)NULL);
 					         	//log_warning(log_cpu, "Deserialice READ el parametro es: %d",parametro1);
 					             	log_info(log_cpu,"Me llego la instruccion READ");
-					         	//log_info(log_kernel, "entre a IO");
+
+					             	uint32_t numero_pagina = obtener_numero_pagina(parametro1);
+					             	uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
+					             	uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
+					             	uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
+					             	log_warning(log_cpu,"Le mando a memoria a leer a la pag %d", numero_pagina);
+
+					             	send_numero_pagina(fd_memoria,numero_pagina);
+					             	send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
+					             	send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+					             	send_desplazamiento(fd_memoria,desplazamiento);
+
 					         	break;
 					 			}
 					             case COPY:
@@ -138,6 +173,30 @@ static void procesar_conexion_cpu(void* void_args) {
 					 				//log_warning(log_cpu, "Deserialice COPY el parametro1 es: %d",parametro1);
 					 				//log_warning(log_cpu, "Deserialice COPY el parametro2 es: %d",parametro2);
 					 				log_info(log_cpu,"Me llego la instruccion COPY");
+
+					 				uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
+									uint32_t entrada_1er_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
+									uint32_t entrada_2do_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
+									uint32_t desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
+
+									uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
+									uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
+									uint32_t entrada_2do_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
+									uint32_t desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
+									log_warning(log_cpu,"Le mando a memoria a copiar a la pag %d", numero_pagina_destino);
+
+									send_numero_pagina(fd_memoria,numero_pagina_origen);
+									send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_origen);
+									send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_origen);
+									send_desplazamiento(fd_memoria,desplazamiento_origen);
+
+									send_numero_pagina(fd_memoria,numero_pagina_destino);
+									send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_destino);
+									send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_destino);
+									send_desplazamiento(fd_memoria,desplazamiento_destino);
+
+									//TODO como obtengo el valor que acabo de escribir en el write anterior???
+
 					 				break;
 					            	}
 					             case WRITE:
@@ -153,6 +212,19 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	//log_warning(log_cpu, "Deserialice WRITE el parametro1 es: %d",parametro1);
 					             	//log_warning(log_cpu, "Deserialice WRITE el parametro2 es: %d",parametro2);
 					             	log_info(log_cpu,"Me llego la instruccion WRITE");
+
+					             	uint32_t numero_pagina_write = obtener_numero_pagina(parametro1); // numero de pagina a donde voy a escribir
+									uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
+									uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
+									uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
+									log_warning(log_cpu,"Le mando a memoria a escribir a la pag %d", numero_pagina);
+
+									send_numero_pagina(fd_memoria,numero_pagina);
+									send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
+									send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+									send_desplazamiento(fd_memoria,desplazamiento);
+									send_valor(fd_memoria,parametro2);
+
 					             	break;
 					 			}
 					             case EXIT:
