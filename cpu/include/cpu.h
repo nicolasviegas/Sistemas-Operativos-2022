@@ -34,8 +34,13 @@ typedef struct{
 typedef struct{
 	uint32_t numero_pag;
 	uint32_t frame;
-	// uint32_t tiempo_uso;
+	uint32_t tiempo_uso;
 }tlb;
+
+typedef enum{
+	FIFO,
+	LRU
+}t_algoritmo_reemplazo_tlb;
 
 bool interrupcion;
 
@@ -81,6 +86,7 @@ bool existe_entrada(void* elem);
 void correr_tlb_read(uint32_t numero_pagina_origen,uint32_t parametro1);
 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t parametro1,uint32_t parametro2);
 void correr_tlb_write(uint32_t numero_pagina_origen,uint32_t parametro1,uint32_t parametro2);
+void correr_algoritmo_reemplazo(numero_pagina,marco);
 
 void cerrar_programa(t_log* logger);
 

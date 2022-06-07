@@ -126,6 +126,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 					             	uint32_t numero_pagina = obtener_numero_pagina(parametro1);
 
+
 					             	correr_tlb_read(numero_pagina,parametro1);
 
 					             	log_warning(log_cpu,"Le mando a memoria a leer a la pag %d", numero_pagina);
@@ -148,7 +149,11 @@ static void procesar_conexion_cpu(void* void_args) {
 
 					 				uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
 
+
+
 					 				correr_tlb_copy(numero_pagina_origen,parametro1,parametro2);
+
+					 				 log_warning(log_cpu,"Le mando a memoria a copiar de la pag %d", numero_pagina_origen);
 
 									//TODO como obtengo el valor que acabo de escribir en el write anterior???
 
@@ -171,6 +176,8 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	uint32_t numero_pagina_write = obtener_numero_pagina(parametro1); // numero de pagina a donde voy a escribir
 
 					             	correr_tlb_write(numero_pagina_write,parametro1,parametro2);
+
+					             	 log_warning(log_cpu,"Le mando a memoria a escribir a la pag %d", numero_pagina_write);
 
 					             	break;
 					 			}
