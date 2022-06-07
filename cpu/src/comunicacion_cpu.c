@@ -148,10 +148,11 @@ static void procesar_conexion_cpu(void* void_args) {
 					 				log_info(log_cpu,"Me llego la instruccion COPY");
 
 					 				uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
+					 				uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
 
 
 
-					 				correr_tlb_copy(numero_pagina_origen,parametro1,parametro2);
+					 				correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2);
 
 					 				 log_warning(log_cpu,"Le mando a memoria a copiar de la pag %d", numero_pagina_origen);
 

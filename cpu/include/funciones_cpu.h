@@ -28,6 +28,7 @@ instrucciones* fetch(pcb_cpu* pcb);
 void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar);
 
 bool check_interrupt(cliente_socket_interrupcion);
+void traer_pag_de_tlb(tlb* entrada,uint32_t parametro1);
 
 
 #endif /* CPU_INCLUDE_FUNCIONES_CPU_H_ */
