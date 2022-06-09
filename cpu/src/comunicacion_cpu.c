@@ -240,6 +240,8 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		log_trace(log_cpu,"Finalizo el ciclo de ejecucion del proceso: %d ",pcb_proceso_cpu->PID);
 
+		tlb_flush();
+
 		free(pcb_proceso_cpu);
 
 	 }
