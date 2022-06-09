@@ -39,10 +39,6 @@ clean:
 	-$(RM) $(LIBRARIES)$(OBJS)$(C_DEPS) libshared.so
 	-@echo ' '
 
-install: all
-	sudo cp -u libshared.so /usr/lib
-	sudo cp -u $(H_SRCS) /usr/include
-
 .PHONY: all clean dependents
 
 -include ../makefile.targets

@@ -142,7 +142,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 
-	 void correr_tlb_read(uint32_t numero_pagina,uint32_t parametro1){
+	 void correr_tlb_read(uint32_t numero_pagina,uint32_t parametro1,uint32_t tabla_1er_nivel){
 
 		 bool existe_entrada(void* elem){
 		 		 return ((tlb*) elem)->numero_pag == numero_pagina;
@@ -160,7 +160,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
 		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
 		 send_numero_pagina(fd_memoria,numero_pagina);
-		 send_tabla_primer_nivel_pcb();
+		 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
 		 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
 
 		 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel);
@@ -181,7 +181,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 	 }
 }
 
-	 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t numero_pagina_destino,uint32_t parametro1,uint32_t parametro2){
+	 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t numero_pagina_destino,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel){
 
 		 	 bool existe_entrada_origen(void* elem){
 		 		 return ((tlb*) elem)->numero_pag == numero_pagina_origen;
@@ -207,7 +207,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 			 send_numero_pagina(fd_memoria,numero_pagina);
-			 send_tabla_primer_nivel_pcb();
+			 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
 			 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_origen);
 
 			 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel_origen);
@@ -237,7 +237,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 				 uint32_t desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
 
 				 send_numero_pagina(fd_memoria,numero_pagina);
-				 send_tabla_primer_nivel_pcb();
+				 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
 				 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_destino);
 
 				 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel_destino);
@@ -257,7 +257,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 		}
 	}
 
-	 void correr_tlb_write(uint32_t numero_pagina,uint32_t parametro1,uint32_t parametro2){
+	 void correr_tlb_write(uint32_t numero_pagina,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel){
 
 		 	 bool existe_entrada(void* elem){
 		 		 return ((tlb*) elem)->numero_pag == numero_pagina;
@@ -278,7 +278,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 	 		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
 
 	 		send_numero_pagina(fd_memoria,numero_pagina);
-			send_tabla_primer_nivel_pcb();
+	 		send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
 			send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
 
 			recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel);
@@ -342,7 +342,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				// log_warning(log_cpu,"Entre en READ");
 				 uint32_t parametro1 = instruccion_a_decodificar->parametro1;
 	             uint32_t numero_pagina = obtener_numero_pagina(parametro1);
-	             correr_tlb_read(numero_pagina,parametro1);
+	             correr_tlb_read(numero_pagina,parametro1,pcb->indice_tabla_paginas);
 				 pcb->PC += 1;
 				 break;
 			}
@@ -354,7 +354,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 					uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 					uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
 					uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
-					correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2);
+					correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2,pcb->indice_tabla_paginas);
 				 pcb->PC += 1;
 				 break;
 			}
@@ -365,7 +365,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 					uint32_t parametro1 = instruccion_a_decodificar->parametro1;
 					uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 	             	uint32_t numero_pagina_write = obtener_numero_pagina(parametro1);
-	             	correr_tlb_write(numero_pagina_write,parametro1,parametro2);
+	             	correr_tlb_write(numero_pagina_write,parametro1,parametro2,pcb->indice_tabla_paginas);
 				 pcb->PC += 1;
 				 break;
 			}
