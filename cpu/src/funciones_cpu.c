@@ -34,7 +34,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 	 uint32_t obtener_entrada_2do_nivel(uint32_t numero_pagina){
 		 //return mod(numero_pagina,cant_entradas_por_tabla);
-		 return numero_pagina % cant_entradas_por_tabla;  //// consultar
+		 return numero_pagina % cant_entradas_por_tabla;
 	 }
 
 	 uint32_t obtener_desplazamiento(uint32_t direccion_logica,uint32_t numero_pagina){
@@ -43,6 +43,12 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 /////////////////////////////////////////////TLB/////////////////////////////////////////////////////////////////////
+
+
+	 void tlb_flush(){
+		 list_clean_and_destroy_elements(lista_tlb,&free);
+	 }
+
 
 
 	 void correr_algoritmo_reemplazo(uint32_t numero_pagina,uint32_t marco){
@@ -70,7 +76,6 @@ instrucciones* fetch(pcb_cpu* pcb){
 				 tlb* elementoAux = list_get(lista_tlb,0);
 				 uint32_t tiempo_mas_grande;
 				 tiempo_mas_grande = elementoAux->tiempo_uso;
-
 				 int indexARemover;
 
 
@@ -155,15 +160,23 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
 		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
 		 send_numero_pagina(fd_memoria,numero_pagina);
+		 send_tabla_primer_nivel_pcb();
 		 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
+
+		 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel);
+
 		 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+
+		 recv_marco(fd_memoria,&marco);
 		 send_desplazamiento(fd_memoria,desplazamiento);
 
-		 /// recv marco, para ponerlo en la tlb
-		 //recv(fd_memoria,marco);
-		 //correr algoritmo reemplazo TODO para ver donde lo ubico
-		 correr_algoritmo_reemplazo(numero_pagina,marco);
-		 // poner el marco en tlb
+		 uint32_t rta_mem;
+		 recv_rta_memoria(fd_memoria,&rta_mem);
+		 if(rta_mem == 0){
+			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
+		}
+		 else{
+			 correr_algoritmo_reemplazo(numero_pagina,marco);
 		}
 	 }
 
@@ -192,17 +205,24 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 
-			 send_numero_pagina(fd_memoria,numero_pagina_origen);
+			 send_numero_pagina(fd_memoria,numero_pagina);
+			 send_tabla_primer_nivel_pcb();
 			 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_origen);
+
+			 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel_origen);
+
 			 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_origen);
+
+			 recv_marco(fd_memoria,&marco_origen);
 			 send_desplazamiento(fd_memoria,desplazamiento_origen);
-
-
-			 /// recv marco, para ponerlo en la tlb
-			 //recv(fd_memoria,marco);
-			 //correr algoritmo reemplazo TODO para ver donde lo ubico
-			 correr_algoritmo_reemplazo(numero_pagina_origen,marco_origen);
-			 // poner el marco en tlb
+			 uint32_t rta_mem;
+			 recv_rta_memoria(fd_memoria,&rta_mem);
+			 if(rta_mem == 0){
+				 log_error(log_cpu, "La direccion donde se quiso copiar no es valida");
+			 }
+			 else{
+				 correr_algoritmo_reemplazo(numero_pagina,marco_origen);
+			 }
 			}
 			if(entrada_destino != NULL){
 				 traer_pag_de_tlb(entrada_destino,parametro1);
@@ -215,17 +235,25 @@ instrucciones* fetch(pcb_cpu* pcb){
 				 uint32_t entrada_2do_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
 				 uint32_t desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
 
-				 send_numero_pagina(fd_memoria,numero_pagina_destino);
+				 send_numero_pagina(fd_memoria,numero_pagina);
+				 send_tabla_primer_nivel_pcb();
 				 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_destino);
-				 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_destino);
-				 send_desplazamiento(fd_memoria,desplazamiento_destino);
 
-				 /// recv marco, para ponerlo en la tlb
-				 //recv(fd_memoria,marco);
-				 //correr algoritmo reemplazo TODO para ver donde lo ubico
-				 correr_algoritmo_reemplazo(numero_pagina_destino,marco_destino);
-				 // poner el marco en tlb
+				 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel_destino);
+
+				 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_destino);
+
+				 recv_marco(fd_memoria,&marco_destino);
+				 send_desplazamiento(fd_memoria,desplazamiento_destino);
+				 uint32_t rta_mem;
+				 recv_rta_memoria(fd_memoria,&rta_mem);
+				 if(rta_mem == 0){
+					 log_error(log_cpu, "La direccion donde se quiso copiar no es valida");
+				}
+				 else{
+					 correr_algoritmo_reemplazo(numero_pagina,marco_destino);
 			}
+		}
 	}
 
 	 void correr_tlb_write(uint32_t numero_pagina,uint32_t parametro1,uint32_t parametro2){
@@ -248,19 +276,28 @@ instrucciones* fetch(pcb_cpu* pcb){
 	 		 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
 	 		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
 
-	 		 send_numero_pagina(fd_memoria,numero_pagina);
-	 		 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
-	 		 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
-	 		 send_desplazamiento(fd_memoria,desplazamiento);
-	 		 send_valor(fd_memoria,parametro2);
+	 		send_numero_pagina(fd_memoria,numero_pagina);
+			send_tabla_primer_nivel_pcb();
+			send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
 
-	 		/// recv marco, para ponerlo en la tlb
-	 		//recv(fd_memoria,marco);
-			//correr algoritmo reemplazo TODO para ver donde lo ubico
-	 		correr_algoritmo_reemplazo(numero_pagina,marco);
-	 		 // poner el marco en tlb
-	 		}
+			recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel);
+
+			send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+
+			recv_marco(fd_memoria,&marco);
+			send_desplazamiento(fd_memoria,desplazamiento);
+			send_valor(fd_memoria,parametro2);
+
+			uint32_t rta_mem;
+			 recv_rta_memoria(fd_memoria,&rta_mem);
+			 if(rta_mem == 0){
+				 log_error(log_cpu, "La direccion donde se quiso escribir no es valida");
+			}
+			 else{
+				 correr_algoritmo_reemplazo(numero_pagina,marco);
+		  }
 	 	 }
+	 	}
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

@@ -951,3 +951,99 @@ bool recv_valor(int fd, uint32_t* valor) {
     free(stream);
     return true;
 }
+
+bool send_tabla_primer_nivel_pcb(int fd,uint32_t valor){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(valor);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_tabla_primer_nivel_pcb(int fd, uint32_t* valor) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, valor);
+
+    free(stream);
+    return true;
+}
+
+bool send_tabla_2do_nivel(int fd,uint32_t valor){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(valor);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_tabla_2do_nivel(int fd, uint32_t* valor) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, valor);
+
+    free(stream);
+    return true;
+}
+
+bool send_marco(int fd,uint32_t valor){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
+
+	    void* stream = serializar_tam_paginas(valor);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_marco(int fd, uint32_t* valor) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, valor);
+
+    free(stream);
+    return true;
+}
+
+
+

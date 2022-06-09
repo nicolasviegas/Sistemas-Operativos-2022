@@ -100,6 +100,16 @@ bool recv_desplazamiento(int fd,uint32_t* desplazamiento);
 bool send_valor(int fd,uint32_t valor);
 bool recv_valor(int fd,uint32_t* valor);
 
+bool send_tabla_primer_nivel_pcb(int fd,uint32_t valor);
+bool recv_tabla_primer_nivel_pcb(int fd,uint32_t* valor);
+
+bool send_tabla_2do_nivel(int fd,uint32_t valor);
+bool recv_tabla_2do_nivel(int fd,uint32_t* valor);
+
+bool send_marco(int fd,uint32_t valor);
+bool recv_marco(int fd,uint32_t* valor);
+
+
 bool send_debug(int fd);
 
 
