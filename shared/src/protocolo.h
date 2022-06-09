@@ -109,6 +109,9 @@ bool recv_tabla_2do_nivel(int fd,uint32_t* valor);
 bool send_marco(int fd,uint32_t valor);
 bool recv_marco(int fd,uint32_t* valor);
 
+bool send_rta_memoria(int fd,uint32_t valor);
+bool recv_rta_memoria(int fd,uint32_t* valor);
+
 
 bool send_debug(int fd);
 

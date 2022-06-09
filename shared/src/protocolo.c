@@ -1045,5 +1045,34 @@ bool recv_marco(int fd, uint32_t* valor) {
     return true;
 }
 
+bool send_rta_memoria(int fd,uint32_t valor){
+	printf("Entre en send_cant instrucciones \n");
+	   size_t size = sizeof(uint32_t);
 
+	    void* stream = serializar_tam_paginas(valor);
+
+
+	    if (send(fd, stream, size, 0) != size) {
+	        free(stream);
+	        return false;
+	    }
+
+	    free(stream);
+	    return true;
+}
+
+bool recv_rta_memoria(int fd, uint32_t* valor) {
+    size_t size = sizeof(uint32_t);
+    void* stream = malloc(size);
+
+    if (recv(fd, stream, size, 0) != size) {
+        free(stream);
+        return false;
+    }
+
+    deserializar_tam_paginas(stream, valor);
+
+    free(stream);
+    return true;
+}
 

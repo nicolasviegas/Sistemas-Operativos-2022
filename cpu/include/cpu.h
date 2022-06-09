@@ -64,6 +64,7 @@ char* puerto_escucha_dispatch;
 char* puerto_interrupt;
 char* ip_memoria;
 char* puerto_memoria;
+int algoritmo_config;
 uint32_t numero_pagina;
 uint32_t tam_paginas; // falta recibirlo
 uint32_t cant_entradas_por_tabla; // falta recibirlo
@@ -83,6 +84,7 @@ uint32_t obtener_entrada_1er_nivel(uint32_t numero_pagina);
 uint32_t obtener_entrada_2do_nivel(uint32_t numero_pagina);
 uint32_t obtener_desplazamiento(uint32_t direccion_logica,uint32_t numero_pagina);
 bool existe_entrada(void* elem);
+int obtener_algoritmo(char* algoritmo_char);
 void correr_tlb_read(uint32_t numero_pagina_origen,uint32_t parametro1);
 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t numero_pagina_destino,uint32_t parametro1,uint32_t parametro2);
 void correr_tlb_write(uint32_t numero_pagina_origen,uint32_t parametro1,uint32_t parametro2);

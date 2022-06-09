@@ -39,7 +39,7 @@ uint32_t tamanio_paginas;
 uint32_t entradas_por_tabla;
 uint32_t retardo_memoria;
 uint32_t retardo_swap;
-char* algoritmo_config;
+int algoritmo_config;
 uint32_t marcos_por_proceso;
 char* path_swap;
 

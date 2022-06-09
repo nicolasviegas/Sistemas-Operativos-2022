@@ -1,6 +1,29 @@
 #include "../cpu/include/cpu.h"
 
 
+
+int obtener_algoritmo(char* algoritmo_char){
+
+	 t_algoritmo_reemplazo_tlb switcher;
+
+
+
+	    if (strcmp(algoritmo_char,"FIFO") == 0)
+	    {
+	        switcher = FIFO;
+	        log_info(log_cpu, "El algoritmo de reemplazo elegido es FIFO.");
+	    }
+
+
+	    if (strcmp(algoritmo_char,"LRU") == 0)
+	    {
+	        switcher = LRU;
+	        log_info(log_cpu, "El algoritmo de reemplazo elegido es LRU.");
+	    }
+	    return switcher;
+}
+
+
 void inicializar_config(){
 	  ip = config_get_string_value(config_cpu,"IP_MEMORIA");// esto no se si va
 	  puerto_escucha_dispatch = config_get_string_value(config_cpu,"PUERTO_ESCUCHA_DISPATCH");
@@ -10,9 +33,12 @@ void inicializar_config(){
 
 	  entradas_tlb = config_get_int_value(config_cpu,"ENTRADAS_TLB");
 	  reemplazo_tlb = config_get_string_value(config_cpu,"REEMPLAZO_TLB");
+	  char* reemplazo_tlb = config_get_string_value(config_cpu,"REEMPLAZO_TLB");
+	  algoritmo_config = obtener_algoritmo(reemplazo_tlb);
 	  retardo_noop = config_get_int_value(config_cpu,"RETARDO_NOOP");
 
 }
+
 
 
 

@@ -179,6 +179,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 			 correr_algoritmo_reemplazo(numero_pagina,marco);
 		}
 	 }
+}
 
 	 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t numero_pagina_destino,uint32_t parametro1,uint32_t parametro2){
 
@@ -337,8 +338,11 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 			 }
 			 case READ:{
 				 tiempo_bloqueante = 0;
-					log_info(log_cpu,"[EXE] ejecuto READ");
+				log_info(log_cpu,"[EXE] ejecuto READ");
 				// log_warning(log_cpu,"Entre en READ");
+				 uint32_t parametro1 = instruccion_a_decodificar->parametro1;
+	             uint32_t numero_pagina = obtener_numero_pagina(parametro1);
+	             correr_tlb_read(numero_pagina,parametro1);
 				 pcb->PC += 1;
 				 break;
 			}
@@ -346,6 +350,11 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				 tiempo_bloqueante = 0;
 					log_info(log_cpu,"[EXE] ejecuto COPY");
 				// log_warning(log_cpu,"Entre en COPY");
+					uint32_t parametro1 = instruccion_a_decodificar->parametro1;
+					uint32_t parametro2 = instruccion_a_decodificar->parametro2;
+					uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
+					uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
+					correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2);
 				 pcb->PC += 1;
 				 break;
 			}
@@ -353,6 +362,10 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				 tiempo_bloqueante = 0;
 					log_info(log_cpu,"[EXE] ejecuto WRITE");
 				// log_warning(log_cpu,"Entre en WRITE");
+					uint32_t parametro1 = instruccion_a_decodificar->parametro1;
+					uint32_t parametro2 = instruccion_a_decodificar->parametro2;
+	             	uint32_t numero_pagina_write = obtener_numero_pagina(parametro1);
+	             	correr_tlb_write(numero_pagina_write,parametro1,parametro2);
 				 pcb->PC += 1;
 				 break;
 			}
