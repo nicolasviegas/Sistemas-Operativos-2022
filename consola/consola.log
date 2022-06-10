@@ -13700,3 +13700,49 @@
 [WARNING] 19:37:29:387 consola/(10249:10249): entre en NO_OP dentro de send_instrucciones
 [WARNING] 19:37:29:387 consola/(10249:10249): Entre en EXIT dentro de send_instrucciones
 [INFO] 19:37:29:388 consola/(10249:10249): [INFO] La consola finalizo correctamente.
+[INFO] 16:18:25:573 consola/(5155:5155): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:18:25:583 consola/(5155:5155): entre en READ dentro de send_instrucciones
+[INFO] 16:18:25:583 consola/(5155:5155): [INFO] La consola finalizo correctamente.
+[INFO] 16:20:55:159 consola/(5402:5402): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:20:55:160 consola/(5402:5402): entre en READ dentro de send_instrucciones
+[INFO] 16:20:55:160 consola/(5402:5402): [INFO] La consola finalizo correctamente.
+[ERROR] 16:26:22:716 consola/(5721:5721): Error al conectar (a KERNEL)
+
+[ERROR] 16:26:33:918 consola/(5724:5724): Error al conectar (a KERNEL)
+
+[INFO] 16:26:48:529 consola/(5735:5735): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:26:48:530 consola/(5735:5735): entre en READ dentro de send_instrucciones
+[INFO] 16:26:48:531 consola/(5735:5735): [INFO] La consola finalizo correctamente.
+[ERROR] 16:27:52:877 consola/(5852:5852): Error al conectar (a KERNEL)
+
+[INFO] 16:29:21:147 consola/(5899:5899): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:29:21:148 consola/(5899:5899): entre en READ dentro de send_instrucciones
+[INFO] 16:29:21:148 consola/(5899:5899): [INFO] La consola finalizo correctamente.
+[INFO] 16:31:10:761 consola/(6023:6023): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:31:10:762 consola/(6023:6023): entre en READ dentro de send_instrucciones
+[INFO] 16:31:10:762 consola/(6023:6023): [INFO] La consola finalizo correctamente.
+[INFO] 16:35:16:031 consola/(6169:6169): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:35:16:031 consola/(6169:6169): entre en READ dentro de send_instrucciones
+[INFO] 16:35:16:032 consola/(6169:6169): [INFO] La consola finalizo correctamente.
+[INFO] 16:42:41:493 consola/(6566:6566): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:42:41:493 consola/(6566:6566): entre en READ dentro de send_instrucciones
+[INFO] 16:42:41:494 consola/(6566:6566): [INFO] La consola finalizo correctamente.
+[INFO] 16:47:21:582 consola/(6858:6858): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:47:21:583 consola/(6858:6858): entre en READ dentro de send_instrucciones
+[INFO] 16:47:21:583 consola/(6858:6858): [INFO] La consola finalizo correctamente.
+[INFO] 17:02:53:383 consola/(7350:7350): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:02:53:386 consola/(7350:7350): entre en READ dentro de send_instrucciones
+[INFO] 17:02:53:387 consola/(7350:7350): [INFO] La consola finalizo correctamente.
+[INFO] 17:10:52:060 consola/(7832:7832): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:10:52:060 consola/(7832:7832): entre en READ dentro de send_instrucciones
+[INFO] 17:10:52:060 consola/(7832:7832): [INFO] La consola finalizo correctamente.

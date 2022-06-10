@@ -44,13 +44,13 @@ static void procesar_conexion_kernel(void* void_args) {
 
         	//ACA HAY QUE HACER UNA FUNCION QUE LE PIDA LA TABLA DE PAGINAS A MEMORIA
         	//TODO
-        	pedir_tabla_a_memoria();
+        	//pedir_tabla_a_memoria();
 
-        	uint32_t indice_tabla;
-        	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {//puede ser fd_memoria en vez de cliente socket
-        	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
-        	            	     break;
-        	}
+        	//uint32_t indice_tabla;
+//        	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {//puede ser fd_memoria en vez de cliente socket
+//        	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
+//        	            	     break;
+//        	}
         	//log_trace(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
@@ -65,7 +65,7 @@ static void procesar_conexion_kernel(void* void_args) {
         	//pcb_proceso->instrucciones = lista_instrucciones_kernel;
         	pcb_proceso->instrucciones = lista_intrucciones_1;
         	pcb_proceso->PC = 0;//contador_instruccion;//arranca desde la instruccion 0
-        	pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
+        	//pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
         	pcb_proceso->estimacionRafaga = estimacion_inicial;
         	pcb_proceso->alpha = alfa;
         	pcb_proceso->estado = NEW;
@@ -135,7 +135,7 @@ static void procesar_conexion_kernel(void* void_args) {
 
             	break;
             }
-           /* case READ:
+            case READ:
             {
             	uint32_t parametro1;
             	if (!recv_READ(cliente_socket, &parametro1)) {
@@ -170,7 +170,7 @@ static void procesar_conexion_kernel(void* void_args) {
             	log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
             	log_warning(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
             	break;
-			}*/
+			}
             case EXIT:
             {
             	//cargar_instruccion(EXIT,"EXIT",NULL,NULL);

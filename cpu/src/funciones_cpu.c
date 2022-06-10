@@ -22,285 +22,304 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 ////////////////////////////////////////////MMU///////////////////////////////////////////////////////////////////////
 
-	 uint32_t obtener_numero_pagina(uint32_t direccion_logica){
-		 uint32_t dir_logica = floor(direccion_logica / tam_paginas);
-		 return dir_logica;
-	 }
+		 uint32_t obtener_numero_pagina(uint32_t direccion_logica){
+			 uint32_t numero_pag = (uint32_t) floor(direccion_logica / tam_paginas);
+			 return numero_pag;
+		 }
 
-	 uint32_t obtener_entrada_1er_nivel(uint32_t numero_pagina){
-		 uint32_t entrada1 = floor(numero_pagina/cant_entradas_por_tabla);
-		 return entrada1;
-	 }
+		 uint32_t obtener_entrada_1er_nivel(uint32_t numero_pagina){
+			 uint32_t entrada1 = (uint32_t)floor(numero_pagina/cant_entradas_por_tabla);
+			 return entrada1;
+		 }
 
-	 uint32_t obtener_entrada_2do_nivel(uint32_t numero_pagina){
-		 //return mod(numero_pagina,cant_entradas_por_tabla);
-		 return numero_pagina % cant_entradas_por_tabla;
-	 }
+		 uint32_t obtener_entrada_2do_nivel(uint32_t numero_pagina){
+			 //return mod(numero_pagina,cant_entradas_por_tabla);
+			 return numero_pagina % cant_entradas_por_tabla;
+		 }
 
-	 uint32_t obtener_desplazamiento(uint32_t direccion_logica,uint32_t numero_pagina){
-		 return direccion_logica - numero_pagina * tam_paginas;
-	 }
-
-
-/////////////////////////////////////////////TLB/////////////////////////////////////////////////////////////////////
+		 uint32_t obtener_desplazamiento(uint32_t direccion_logica,uint32_t numero_pagina){
+			 return direccion_logica - (numero_pagina * tam_paginas);
+		 }
 
 
-	 void tlb_flush(){
-		 list_clean_and_destroy_elements(lista_tlb,&free);
-	 }
+	/////////////////////////////////////////////TLB/////////////////////////////////////////////////////////////////////
+
+
+		 void tlb_flush(){
+			 list_clean_and_destroy_elements(lista_tlb,&free);
+//			 log_trace(log_cpu,"Se limpio la TLB");
+		 }
+
+		 void aumentar_tiempo(){
+			 tlb* a;
+			 for(int i=0; i < list_size(lista_tlb); i++){
+			 		 a = list_get(lista_tlb,i);
+			 		 a->tiempo_uso++;
+
+			 }
+		 }
 
 
 
-	 void correr_algoritmo_reemplazo(uint32_t numero_pagina,uint32_t marco){
-		 if(reemplazo_tlb == FIFO){
-			 if(list_size(lista_tlb) >= entradas_tlb){
-				 tlb* elemento;
-				 elemento->frame = marco;
-				 elemento->numero_pag = numero_pagina;
-				 list_remove_and_destroy_element(lista_tlb,0,free);
-				 list_add(lista_tlb,elemento);
+		 void correr_algoritmo_reemplazo(uint32_t numero_pagina,uint32_t marco){
+			 if(reemplazo_tlb == FIFO){
+				 if(list_size(lista_tlb) >= entradas_tlb){
+					 tlb* elemento = malloc(sizeof(tlb));
+					 elemento->frame = marco;
+					 elemento->numero_pag = numero_pagina;
+					 list_remove_and_destroy_element(lista_tlb,0,free);
+					 list_add(lista_tlb,elemento);
+				 }
+				 else{
+					 tlb* elemento = malloc(sizeof(tlb));
+					 elemento->frame = marco;
+					 elemento->numero_pag = numero_pagina;
+					 list_add(lista_tlb,elemento);
+				 }
 			 }
 			 else{
-				 tlb* elemento;
-				 elemento->frame = marco;
-				 elemento->numero_pag = numero_pagina;
-				 list_add(lista_tlb,elemento);
-			 }
-		 }
-		 else{
-			 if(list_size(lista_tlb) >= entradas_tlb){
-				 tlb* elemento;
-				 elemento->frame = marco;
-				 elemento->numero_pag = numero_pagina;
-				 elemento->tiempo_uso = 0;/////
-				 tlb* elementoAux = list_get(lista_tlb,0);
-				 uint32_t tiempo_mas_grande;
-				 tiempo_mas_grande = elementoAux->tiempo_uso;
-				 int indexARemover;
+				 if(list_size(lista_tlb) >= entradas_tlb){
+					 tlb* elemento = malloc(sizeof(tlb));
+					 elemento->frame = marco;
+					 elemento->numero_pag = numero_pagina;
+					 elemento->tiempo_uso = 0;/////
+					 tlb* elementoAux = list_get(lista_tlb,0);
+					 uint32_t tiempo_mas_grande;
+					 tiempo_mas_grande = elementoAux->tiempo_uso;
+					 int indexARemover;
 
 
-				 for(int i=0;i<list_size(lista_tlb);i++){
-				 elementoAux = list_get(lista_tlb,i);
+					 for(int i=0;i<list_size(lista_tlb);i++){
+					 elementoAux = list_get(lista_tlb,i);
 
-				 if(tiempo_mas_grande < elementoAux->tiempo_uso){
-				 tiempo_mas_grande = elementoAux->tiempo_uso;
-				 indexARemover = i;
+					 if(tiempo_mas_grande < elementoAux->tiempo_uso){
+					 tiempo_mas_grande = elementoAux->tiempo_uso;
+					 indexARemover = i;
 
-			     }
+				     }
 
-			    }
-				 list_remove_and_destroy_element(lista_tlb,indexARemover,free);
-				 list_add(lista_tlb,elemento);
-			 }
-			 else{
-				 tlb* elemento;
-				 elemento->frame = marco;
-				 elemento->numero_pag = numero_pagina;
-				 elemento->tiempo_uso = 0;/////
-				 list_add(lista_tlb,elemento);
-
-			 }
-		 }
-	 }
-
-
-
-
-
-	 void traer_pag_de_tlb(tlb* entrada,uint32_t parametro1){
-		 uint32_t marco = entrada->frame;
-
-				 ////////Funciones auxiliares /////
-
-
-				 void actualizar_tiempo_tlb(tlb* entrada){
-				 	entrada->tiempo_uso = entrada->tiempo_uso++;
+				    }
+					 aumentar_tiempo();
+					 list_remove_and_destroy_element(lista_tlb,indexARemover,free);
+					 list_add(lista_tlb,elemento);
 				 }
+				 else{
+					 aumentar_tiempo();
+					 tlb* elemento = malloc(sizeof(tlb));
+					 elemento->frame = marco;
+					 elemento->numero_pag = numero_pagina;
+					 elemento->tiempo_uso = 0;/////
+					 list_add(lista_tlb,elemento);
 
-				 bool tienen_misma_pagina(void* elemento){
-				 	if(entrada->numero_pag == ((tlb*) elemento)->numero_pag){
-				 		return true;
-				 	}
-				 	else{
-				 		return false;
-				 	}
 				 }
-
-				 //////////////////////////////
-
-				 list_iterate(lista_tlb, (void*) actualizar_tiempo_tlb);
-				 list_remove_by_condition(lista_tlb,(void*) tienen_misma_pagina);
-				 entrada->tiempo_uso = 0;
-				 list_add(lista_tlb,entrada);
-
-				 //send condicion a memoria para que sepa que le voy a pasar el marco TODO
-				 //send marco
-				 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
-				 send_desplazamiento(fd_memoria,desplazamiento);
-
-	 }
-
-
-
-	 void correr_tlb_read(uint32_t numero_pagina,uint32_t parametro1,uint32_t tabla_1er_nivel){
-
-		 bool existe_entrada(void* elem){
-		 		 return ((tlb*) elem)->numero_pag == numero_pagina;
+			 }
 		 }
 
 
-		 tlb* entrada = list_find(lista_tlb, &existe_entrada);
-		 if(entrada != NULL){
-			 traer_pag_de_tlb(entrada,parametro1);
+
+
+
+		 void traer_pag_de_tlb(tlb* entrada,uint32_t parametro1){
+			 uint32_t marco = entrada->frame;
+
+					 ////////Funciones auxiliares /////
+
+
+
+					 bool tienen_misma_pagina(void* elemento){
+					 	if(entrada->numero_pag == ((tlb*) elemento)->numero_pag){
+					 		return true;
+					 	}
+					 	else{
+					 		return false;
+					 	}
+					 }
+
+					 //////////////////////////////
+					 if(reemplazo_tlb == LRU){
+						 aumentar_tiempo();
+						 list_remove_by_condition(lista_tlb,(void*) tienen_misma_pagina);
+						 entrada->tiempo_uso = 0;
+						 list_add(lista_tlb,entrada);
+					 }
+
+
+
+					 //send condicion a memoria para que sepa que le voy a pasar el marco TODO
+					 //send marco
+					 uint32_t desplazamiento = obtener_desplazamiento(parametro1,entrada->numero_pag);
+					 //send_desplazamiento(fd_memoria,desplazamiento);
+
 		 }
-		 else{
-		 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-		 uint32_t marco = -1;
-		 uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
-		 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
-		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
-		 send_numero_pagina(fd_memoria,numero_pagina);
-		 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
-		 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
 
-		 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel);
 
-		 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
 
-		 recv_marco(fd_memoria,&marco);
-		 send_desplazamiento(fd_memoria,desplazamiento);
+		 void correr_tlb_read(uint32_t numero_pagina,uint32_t parametro1,uint32_t tabla_1er_nivel){
 
-		 uint32_t rta_mem;
-		 recv_rta_memoria(fd_memoria,&rta_mem);
-		 if(rta_mem == 0){
-			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
-		}
-		 else{
-			 correr_algoritmo_reemplazo(numero_pagina,marco);
-		}
-	 }
-}
+			 bool existe_entrada(tlb* elem){
+			 		 return elem->numero_pag == numero_pagina;
+			 }
 
-	 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t numero_pagina_destino,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel){
 
-		 	 bool existe_entrada_origen(void* elem){
-		 		 return ((tlb*) elem)->numero_pag == numero_pagina_origen;
-		 	 }
-
-		 	bool existe_entrada_destino(void* elem){
-				 return ((tlb*) elem)->numero_pag == numero_pagina_destino;
-		 	}
-
-			 tlb* entrada_origen = list_find(lista_tlb, &existe_entrada_origen);
-			 tlb* entrada_destino = list_find(lista_tlb, &existe_entrada_destino);
-			 if(entrada_origen != NULL){
-			 traer_pag_de_tlb(entrada_origen,parametro2);
+			 	 tlb* entrada = list_find(lista_tlb, &existe_entrada);
+			 if(entrada != NULL){
+				 traer_pag_de_tlb(entrada,parametro1);
 			 }
 			 else{
 			 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-			 uint32_t marco_origen = -1;
-			 uint32_t entrada_1er_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
-			 uint32_t entrada_2do_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
-			 uint32_t desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
+			 uint32_t marco = -1;
+			 //log_debug(log_cpu,"El valor de la pagina es %d:",numero_pagina);
+			 uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
+			 //log_debug(log_cpu,"El valor de la etrada de 1er nivel es %d:",entrada_1er_nivel);
+			 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
+			 //log_debug(log_cpu,"El valor de la entrada de 2do nivel es %d:",entrada_2do_nivel);
+			 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
+			 //send_numero_pagina(fd_memoria,numero_pagina);
 
+	//		 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
+	//		 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
+	//
+	//		 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel);
+	//
+	//		 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+	//
+	//		 recv_marco(fd_memoria,&marco);
+	//		 send_desplazamiento(fd_memoria,desplazamiento);
 
-
-
-			 send_numero_pagina(fd_memoria,numero_pagina);
-			 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
-			 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_origen);
-
-			 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel_origen);
-
-			 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_origen);
-
-			 recv_marco(fd_memoria,&marco_origen);
-			 send_desplazamiento(fd_memoria,desplazamiento_origen);
-			 uint32_t rta_mem;
-			 recv_rta_memoria(fd_memoria,&rta_mem);
-			 if(rta_mem == 0){
-				 log_error(log_cpu, "La direccion donde se quiso copiar no es valida");
-			 }
-			 else{
-				 correr_algoritmo_reemplazo(numero_pagina,marco_origen);
-			 }
-			}
-			if(entrada_destino != NULL){
-				 traer_pag_de_tlb(entrada_destino,parametro1);
-			}
-			else{
-				 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-				 uint32_t marco_destino = -1;
-//				 uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
-				 uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
-				 uint32_t entrada_2do_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
-				 uint32_t desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
-
-				 send_numero_pagina(fd_memoria,numero_pagina);
-				 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
-				 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_destino);
-
-				 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel_destino);
-
-				 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_destino);
-
-				 recv_marco(fd_memoria,&marco_destino);
-				 send_desplazamiento(fd_memoria,desplazamiento_destino);
-				 uint32_t rta_mem;
-				 recv_rta_memoria(fd_memoria,&rta_mem);
-				 if(rta_mem == 0){
-					 log_error(log_cpu, "La direccion donde se quiso copiar no es valida");
-				}
-				 else{
-					 correr_algoritmo_reemplazo(numero_pagina,marco_destino);
-			}
-		}
+	//		 uint32_t rta_mem;
+	//		 recv_rta_memoria(fd_memoria,&rta_mem);
+	//		 if(rta_mem == 0){
+	//			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
+	//		}
+	//		 else{
+				 correr_algoritmo_reemplazo(numero_pagina,marco);
+	//		}
+		 }
 	}
 
-	 void correr_tlb_write(uint32_t numero_pagina,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel){
-
-		 	 bool existe_entrada(void* elem){
-		 		 return ((tlb*) elem)->numero_pag == numero_pagina;
-		 	 }
 
 
-	 		 tlb* entrada = list_find(lista_tlb, &existe_entrada);
-	 		 if(entrada != NULL){
-	 		 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-	 		 traer_pag_de_tlb(entrada,parametro1);
-	 		 send_valor(fd_memoria,parametro2);
-	 		 }
-	 		 else{
-	 		 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-	 		 uint32_t marco = -1;
-	 		 uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
-	 		 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
-	 		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
+		 	 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t numero_pagina_destino,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel){
 
-	 		send_numero_pagina(fd_memoria,numero_pagina);
-	 		send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
-			send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
+		 		 	 bool existe_entrada_origen(void* elem){
+		 		 		 return ((tlb*) elem)->numero_pag == numero_pagina_origen;
+		 		 	 }
 
-			recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel);
+		 		 	bool existe_entrada_destino(void* elem){
+		 				 return ((tlb*) elem)->numero_pag == numero_pagina_destino;
+		 		 	}
 
-			send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+		 			 tlb* entrada_origen = list_find(lista_tlb, &existe_entrada_origen);
+		 			 tlb* entrada_destino = list_find(lista_tlb, &existe_entrada_destino);
+		 			 if(entrada_origen != NULL){
+		 			 traer_pag_de_tlb(entrada_origen,parametro2);
+		 			 }
+		 			 else{
+		 			 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
+		 			 uint32_t marco_origen = -1;
+		 			 uint32_t entrada_1er_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
+		 			 uint32_t entrada_2do_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
+		 			 uint32_t desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
 
-			recv_marco(fd_memoria,&marco);
-			send_desplazamiento(fd_memoria,desplazamiento);
-			send_valor(fd_memoria,parametro2);
 
-			uint32_t rta_mem;
-			 recv_rta_memoria(fd_memoria,&rta_mem);
-			 if(rta_mem == 0){
-				 log_error(log_cpu, "La direccion donde se quiso escribir no es valida");
-			}
-			 else{
-				 correr_algoritmo_reemplazo(numero_pagina,marco);
-		  }
-	 	 }
-	 	}
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//		 			 send_numero_pagina(fd_memoria,numero_pagina);
+//		 			 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
+//		 			 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_origen);
+//
+//		 			 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel_origen);
+//
+//		 			 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_origen);
+//
+//		 			 recv_marco(fd_memoria,&marco_origen);
+//		 			 send_desplazamiento(fd_memoria,desplazamiento_origen);
+//		 			 uint32_t rta_mem;
+//		 			 recv_rta_memoria(fd_memoria,&rta_mem);
+//		 			 if(rta_mem == 0){
+//		 				 log_error(log_cpu, "La direccion donde se quiso copiar no es valida");
+//		 			 }
+//		 			 else{
+		 				 correr_algoritmo_reemplazo(numero_pagina_origen,marco_origen);
+//		 			 }
+		 			}
+		 			if(entrada_destino != NULL){
+		 				 traer_pag_de_tlb(entrada_destino,parametro1);
+		 			}
+		 			else{
+		 				 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
+		 				 uint32_t marco_destino = -1;
+		 //				 uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
+		 				 uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
+		 				 uint32_t entrada_2do_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
+		 				 uint32_t desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
+//
+//		 				 send_numero_pagina(fd_memoria,numero_pagina);
+//		 				 send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
+//		 				 send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel_destino);
+//
+//		 				 recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel_destino);
+//
+//		 				 send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel_destino);
+//
+//		 				 recv_marco(fd_memoria,&marco_destino);
+//		 				 send_desplazamiento(fd_memoria,desplazamiento_destino);
+//		 				 uint32_t rta_mem;
+//		 				 recv_rta_memoria(fd_memoria,&rta_mem);
+//		 				 if(rta_mem == 0){
+//		 					 log_error(log_cpu, "La direccion donde se quiso copiar no es valida");
+//		 				}
+//		 				 else{
+		 					 correr_algoritmo_reemplazo(numero_pagina_destino,marco_destino);
+//		 			}
+		 		}
+		 	}
+
+
+		 		 void correr_tlb_write(uint32_t numero_pagina,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel){
+
+		 			 	 bool existe_entrada(void* elem){
+		 			 		 return ((tlb*) elem)->numero_pag == numero_pagina;
+		 			 	 }
+
+
+		 		 		 tlb* entrada = list_find(lista_tlb, &existe_entrada);
+		 		 		 if(entrada != NULL){
+		 		 		 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
+		 		 		 traer_pag_de_tlb(entrada,parametro1);
+//		 		 		 send_valor(fd_memoria,parametro2);
+		 		 		 }
+		 		 		 else{
+		 		 		 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
+		 		 		 uint32_t marco = -1;
+		 		 		 uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
+		 		 		 uint32_t entrada_2do_nivel = obtener_entrada_1er_nivel(numero_pagina);
+		 		 		 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
+
+//		 		 		send_numero_pagina(fd_memoria,numero_pagina);
+//		 		 		send_tabla_primer_nivel_pcb(fd_memoria,tabla_1er_nivel);
+//		 				send_entrada_1er_nivel(fd_memoria,entrada_1er_nivel);
+//
+//		 				recv_tabla_2do_nivel(fd_memoria,&entrada_1er_nivel);
+//
+//		 				send_entrada_2do_nivel(fd_memoria,entrada_2do_nivel);
+//
+//		 				recv_marco(fd_memoria,&marco);
+//		 				send_desplazamiento(fd_memoria,desplazamiento);
+//		 				send_valor(fd_memoria,parametro2);
+//
+//		 				uint32_t rta_mem;
+//		 				 recv_rta_memoria(fd_memoria,&rta_mem);
+//		 				 if(rta_mem == 0){
+//		 					 log_error(log_cpu, "La direccion donde se quiso escribir no es valida");
+//		 				}
+//		 				 else{
+		 					 correr_algoritmo_reemplazo(numero_pagina,marco);
+//		 			  }
+		 		 	 }
+		 		 	}
+
+
 
 //////////Instrucciones///////
 
@@ -341,7 +360,8 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				log_info(log_cpu,"[EXE] ejecuto READ");
 				// log_warning(log_cpu,"Entre en READ");
 				 uint32_t parametro1 = instruccion_a_decodificar->parametro1;
-	             uint32_t numero_pagina = obtener_numero_pagina(parametro1);
+				 uint32_t dir_logica = 296;
+	             uint32_t numero_pagina = obtener_numero_pagina(dir_logica);
 	             correr_tlb_read(numero_pagina,parametro1,pcb->indice_tabla_paginas);
 				 pcb->PC += 1;
 				 break;
@@ -354,7 +374,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 					uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 					uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
 					uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
-					correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2,pcb->indice_tabla_paginas);
+					//correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2,pcb->indice_tabla_paginas);
 				 pcb->PC += 1;
 				 break;
 			}
@@ -365,7 +385,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 					uint32_t parametro1 = instruccion_a_decodificar->parametro1;
 					uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 	             	uint32_t numero_pagina_write = obtener_numero_pagina(parametro1);
-	             	correr_tlb_write(numero_pagina_write,parametro1,parametro2,pcb->indice_tabla_paginas);
+	             	//correr_tlb_write(numero_pagina_write,parametro1,parametro2,pcb->indice_tabla_paginas);
 				 pcb->PC += 1;
 				 break;
 			}

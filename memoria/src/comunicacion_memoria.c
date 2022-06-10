@@ -20,15 +20,23 @@ static void procesar_conexion_memoria(void* void_args) {
 
     	//log_trace(log_memoria,"Estoy dentro del while cliente socket");
 
-    		uint32_t condicion;
-    	    if (recv(cliente_socket, &condicion, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-    		log_info(log_kernel, "DISCONNECT!");
-    		return;
-    	    }
-
-    	     send_indice_a_kernel(cliente_socket,indice_tabla);
-
-    	     log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
+//    		uint32_t condicion;
+//    	    if (recv(cliente_socket, &condicion, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+//    		log_info(log_kernel, "DISCONNECT!");
+//    		return;
+//    	    }
+//
+//    	     send_indice_a_kernel(cliente_socket,indice_tabla);
+//
+//    	     log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
+    		uint32_t numero_pagina;
+//    		uint32_t tabla_pagina_1er_nivel;
+//    		log_warning(log_kernel,"antes del recv");
+//    		if(!recv_numero_pagina(cliente_socket,numero_pagina)){
+//				 log_error(log_kernel, "Fallo recibiendo el numero de pag");
+//				break;
+//           }
+//    		recv_tabla_primer_nivel_pcb(fd_cpu,tabla_pagina_1er_nivel);
 
 
 

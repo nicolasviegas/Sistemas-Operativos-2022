@@ -45022,3 +45022,171 @@
 [TRACE] 19:37:57:855 cpu/(10109:10117): El pid recibido es: 8
 [INFO] 19:37:57:857 cpu/(10109:10117): [EXE] ejecuto EXIT
 [TRACE] 19:37:57:857 cpu/(10109:10117): Finalizo el ciclo de ejecucion del proceso: 8 
+[INFO] 16:17:04:869 cpu/(5105:5105): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:17:04:885 cpu/(5105:5105): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:17:04:885 cpu/(5105:5105): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:17:04:886 cpu/(5105:5105): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:17:20:170 cpu/(5105:5105): Cliente conectado (a CPU)
+
+[INFO] 16:17:20:171 cpu/(5105:5105): Cliente conectado (a CPU)
+
+[ERROR] 16:20:33:228 cpu/(5105:5125): Fallo recibiendo pid
+[WARNING] 16:20:33:230 cpu/(5105:5125): El cliente se desconecto de CPU server 
+[INFO] 16:20:49:734 cpu/(5393:5393): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:20:49:734 cpu/(5393:5393): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:20:49:734 cpu/(5393:5393): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:20:49:735 cpu/(5393:5393): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:20:51:813 cpu/(5393:5393): Cliente conectado (a CPU)
+
+[INFO] 16:20:51:813 cpu/(5393:5393): Cliente conectado (a CPU)
+
+[TRACE] 16:20:55:164 cpu/(5393:5401): El pid recibido es: 1
+[TRACE] 16:20:55:164 cpu/(5393:5401): Finalizo el ciclo de ejecucion del proceso: 1 
+[ERROR] 16:23:29:017 cpu/(5393:5401): Fallo recibiendo pid
+[WARNING] 16:23:29:018 cpu/(5393:5401): El cliente se desconecto de CPU server 
+[INFO] 16:23:36:353 cpu/(5565:5565): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:23:36:353 cpu/(5565:5565): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:23:36:353 cpu/(5565:5565): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:23:36:354 cpu/(5565:5565): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:26:43:892 cpu/(5726:5726): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:26:43:892 cpu/(5726:5726): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:26:43:892 cpu/(5726:5726): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:26:43:893 cpu/(5726:5726): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:26:46:141 cpu/(5726:5726): Cliente conectado (a CPU)
+
+[INFO] 16:26:46:151 cpu/(5726:5726): Cliente conectado (a CPU)
+
+[TRACE] 16:26:48:548 cpu/(5726:5734): El pid recibido es: 1
+[TRACE] 16:26:48:548 cpu/(5726:5734): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 16:27:59:500 cpu/(5854:5854): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:27:59:500 cpu/(5854:5854): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 16:27:59:500 cpu/(5854:5854): Error al conectar (a CPU)
+
+[INFO] 16:28:58:189 cpu/(5875:5875): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:28:58:190 cpu/(5875:5875): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:28:58:190 cpu/(5875:5875): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 16:28:58:190 cpu/(5875:5875): Error al conectar (a CPU)
+
+[INFO] 16:29:15:430 cpu/(5890:5890): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:29:15:434 cpu/(5890:5890): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:29:15:434 cpu/(5890:5890): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:29:15:435 cpu/(5890:5890): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:29:18:207 cpu/(5890:5890): Cliente conectado (a CPU)
+
+[INFO] 16:29:18:208 cpu/(5890:5890): Cliente conectado (a CPU)
+
+[TRACE] 16:29:21:155 cpu/(5890:5898): El pid recibido es: 1
+[TRACE] 16:29:21:156 cpu/(5890:5898): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 16:31:06:791 cpu/(6014:6014): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:31:06:791 cpu/(6014:6014): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:31:06:791 cpu/(6014:6014): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:31:06:792 cpu/(6014:6014): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:31:09:153 cpu/(6014:6014): Cliente conectado (a CPU)
+
+[INFO] 16:31:09:153 cpu/(6014:6014): Cliente conectado (a CPU)
+
+[TRACE] 16:31:10:765 cpu/(6014:6022): El pid recibido es: 1
+[TRACE] 16:31:10:765 cpu/(6014:6022): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 16:35:09:906 cpu/(6159:6159): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:35:09:906 cpu/(6159:6159): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:35:09:906 cpu/(6159:6159): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:35:09:907 cpu/(6159:6159): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:35:12:444 cpu/(6159:6159): Cliente conectado (a CPU)
+
+[INFO] 16:35:12:445 cpu/(6159:6159): Cliente conectado (a CPU)
+
+[TRACE] 16:35:16:067 cpu/(6159:6167): El pid recibido es: 1
+[TRACE] 16:35:16:067 cpu/(6159:6167): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 16:39:25:828 cpu/(6472:6472): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:39:25:828 cpu/(6472:6472): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:39:25:829 cpu/(6472:6472): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:39:25:829 cpu/(6472:6472): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:42:29:285 cpu/(6557:6557): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:42:29:285 cpu/(6557:6557): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:42:29:285 cpu/(6557:6557): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:42:29:285 cpu/(6557:6557): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:42:33:654 cpu/(6557:6557): Cliente conectado (a CPU)
+
+[INFO] 16:42:33:654 cpu/(6557:6557): Cliente conectado (a CPU)
+
+[TRACE] 16:42:41:497 cpu/(6557:6565): El pid recibido es: 1
+[TRACE] 16:42:41:497 cpu/(6557:6565): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 16:42:41:497 cpu/(6557:6565): Se limpio la TLB
+[INFO] 16:47:04:222 cpu/(6849:6849): El algoritmo de reemplazo elegido es LRU.
+[INFO] 16:47:04:222 cpu/(6849:6849): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 16:47:04:223 cpu/(6849:6849): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 16:47:04:223 cpu/(6849:6849): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 16:47:06:583 cpu/(6849:6849): Cliente conectado (a CPU)
+
+[INFO] 16:47:06:583 cpu/(6849:6849): Cliente conectado (a CPU)
+
+[TRACE] 16:47:21:586 cpu/(6849:6857): El pid recibido es: 1
+[TRACE] 16:47:21:586 cpu/(6849:6857): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 16:47:21:587 cpu/(6849:6857): Se limpio la TLB
+[ERROR] 16:47:39:252 cpu/(6849:6857): Fallo recibiendo pid
+[WARNING] 16:47:39:255 cpu/(6849:6857): El cliente se desconecto de CPU server 
+[INFO] 17:02:49:719 cpu/(7341:7341): El algoritmo de reemplazo elegido es LRU.
+[INFO] 17:02:49:719 cpu/(7341:7341): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:02:49:720 cpu/(7341:7341): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 17:02:49:720 cpu/(7341:7341): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:02:51:705 cpu/(7341:7341): Cliente conectado (a CPU)
+
+[INFO] 17:02:51:705 cpu/(7341:7341): Cliente conectado (a CPU)
+
+[TRACE] 17:02:53:407 cpu/(7341:7349): El pid recibido es: 1
+[TRACE] 17:02:53:407 cpu/(7341:7349): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 17:02:53:407 cpu/(7341:7349): Se limpio la TLB
+[ERROR] 17:02:59:615 cpu/(7341:7349): Fallo recibiendo pid
+[WARNING] 17:02:59:617 cpu/(7341:7349): El cliente se desconecto de CPU server 
+[INFO] 17:10:45:971 cpu/(7823:7823): El algoritmo de reemplazo elegido es LRU.
+[INFO] 17:10:45:972 cpu/(7823:7823): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 17:10:45:972 cpu/(7823:7823): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 17:10:45:972 cpu/(7823:7823): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[INFO] 17:10:49:142 cpu/(7823:7823): Cliente conectado (a CPU)
+
+[INFO] 17:10:49:146 cpu/(7823:7823): Cliente conectado (a CPU)
+
+[TRACE] 17:10:52:090 cpu/(7823:7831): El pid recibido es: 1
+[TRACE] 17:10:52:091 cpu/(7823:7831): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 17:10:52:091 cpu/(7823:7831): Se limpio la TLB
+[ERROR] 17:11:17:617 cpu/(7823:7831): Fallo recibiendo pid
+[WARNING] 17:11:17:618 cpu/(7823:7831): El cliente se desconecto de CPU server 
