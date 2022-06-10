@@ -214,7 +214,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 			proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 
-			decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
+			decode_and_execute(pcb_proceso_cpu,proxima_a_ejecutar);
 
 			interrupcion = check_interrupt(cliente_socket_interrupcion);
 
