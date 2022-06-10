@@ -33,17 +33,10 @@ uint32_t obtener_nro_tabla_2do_nivel(uint32_t numero_tabla_1er_nivel,uint32_t en
 }
 
 
-pagina* buscar_pagina_en_tabla_2do_nivel(uint32_t nro_tabla_2do_nivel,uint32_t nro_pagina){ // Busca la pagina en la tabla de 2do nivel, si no esta, devuelve null
-	pagina* pagina_buscada = NULL;
-	pagina* pagina_aux;
+pagina* buscar_pagina_en_tabla_2do_nivel(uint32_t nro_tabla_2do_nivel,uint32_t nro_entrada){ // Busca la pagina en la tabla de 2do nivel, si no esta, devuelve null
 	t_list* tabla_2do_nivel_buscada = list_create();
 	tabla_2do_nivel_buscada = list_get(lista_tablas_2do_nivel,nro_tabla_2do_nivel);
-	for(int i = 0;i < list_size(tabla_2do_nivel_buscada);i++){
-		pagina_aux = list_get(tabla_2do_nivel_buscada,i);
-		if(pagina_aux->nro_pagina == nro_pagina){
-			pagina_buscada = pagina_aux;
-		}
-	}
+	pagina* pagina_buscada = list_get(tabla_2do_nivel_buscada,nro_entrada);
 	return pagina_buscada;
 }
 
