@@ -53,7 +53,6 @@ typedef struct{
 	uint32_t bit_uso;
 	uint32_t bit_modificado;
 	uint32_t tiempo_uso;
-	//info; ?
 }pagina;
 
 typedef struct{
