@@ -291,13 +291,17 @@ void hiloReady_Exe(){
 
 			hay_alguien_exe = true;
 
+			log_debug(log_kernel,"Antes del send interrupcion");
 			send_interrupcion(fd_cpu_interrupt,1);
+			log_debug(log_kernel,"Despues del send interrupcion");
 
 			uint32_t pc;
 			if (!recv_PC(fd_cpu, &pc)) {
 				log_error(log_kernel, "Fallo recibiendo pc");
 			}
-			//log_trace(log_kernel,"El PC despues del recv es: %d",pc);
+
+			log_trace(log_kernel,"El PC despues del recv es: %d",pc);
+
 			procesoAEjecutar->PC = pc;
 
 			//uint32_t tiempo_bloq_kernel;

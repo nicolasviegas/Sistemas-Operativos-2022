@@ -29,7 +29,7 @@ void inicializar_config(){
 
 	  tamanio_memoria = config_get_int_value(config_memoria,"TAM_MEMORIA");
 	  tamanio_paginas = config_get_int_value(config_memoria,"TAM_PAGINA");
-	  entradas_por_tabla = config_get_int_value(config_memoria,"ENTRADAS_POR_TABLA");
+	  cant_entradas_por_tabla = config_get_int_value(config_memoria,"ENTRADAS_POR_TABLA");
 	  retardo_memoria = config_get_int_value(config_memoria,"RETARDO_MEMORIA");
 	  retardo_swap = config_get_int_value(config_memoria,"RETARDO_SWAP");
 	  char* algoritmo_char = config_get_string_value(config_memoria,"ALGORITMO_REEMPLAZO");
@@ -37,6 +37,11 @@ void inicializar_config(){
 	  marcos_por_proceso = config_get_int_value(config_memoria,"MARCOS_POR_PROCESO");
 	  path_swap = config_get_string_value(config_memoria,"PATH_SWAP");
 
+}
+
+void inicializar_listas(){
+	lista_tablas_1er_nivel = list_create();
+	lista_tablas_2do_nivel = list_create();
 }
 
 
@@ -65,18 +70,13 @@ int main() {
 
     ip = "127.0.0.1"; //config_get_string_value(config_memoria,"IP_MEMORIA"); /////////////////////////BORRAR
     inicializar_config();
-
+    inicializar_listas();
 
 
     fd_memoria = iniciar_servidor(log_memoria,"MEMORIA",ip,puerto_escucha);
 
 
     //log_trace(log_memoria,"El socket de memoria es : %d",fd_memoria);
-
-    //ACA HAY QUE RESERVAR MEMORIA Y OTRAS YERBAS?
-    //O SE HACE CUANDO SE CONECTA KERNEL?
-    ///
-    indice_tabla = 412; //ES UN EJEMPLO PARA PROBAR LAS CONEXIONES
 
 
     //

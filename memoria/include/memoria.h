@@ -36,15 +36,14 @@ t_config* config_memoria;
 char* puerto_escucha;
 uint32_t tamanio_memoria;
 uint32_t tamanio_paginas;
-uint32_t entradas_por_tabla;
+uint32_t cant_entradas_por_tabla;
 uint32_t retardo_memoria;
 uint32_t retardo_swap;
-int algoritmo_config;
+char* algoritmo_config;
 uint32_t marcos_por_proceso;
 char* path_swap;
 
 t_log* log_memoria;
-
 
 typedef struct{
 	uint32_t nro_pagina;
@@ -59,28 +58,14 @@ typedef struct{
 	uint32_t nro_tabla_2do_nivel;
 }entrada_1er_nivel;
 
-
-
-
-
-
-
-
 void* memoria_principal;
 
 t_list* lista_tablas_1er_nivel; // lista de tablas de 1er nivel (una sola, adentro tiene una tabla por proceso)
 
 t_list* lista_tablas_2do_nivel; // lista de tablas de 2do nivel
 
-
-
-
-
-
-uint32_t indice_tabla; // ya no hace falta por que lo obtengo con la funcion nueva todo
-//t_paquete* paquete_consola_kernel;
-
-//agregas colas_new, colas_ready, etc
+//uint32_t indice_tabla;
+int obtener_algoritmo(char* algoritmo_char);
 
 int server_escuchar_memoria(t_log* logger, char* server_name, int server_socket);
 
@@ -92,6 +77,9 @@ uint32_t obtener_nro_tabla_2do_nivel(uint32_t numero_tabla_1er_nivel,uint32_t en
 
 pagina* buscar_pagina_en_tabla_2do_nivel(uint32_t nro_tabla_2do_nivel,uint32_t nro_pagina);
 
+t_list* dividir_proceso_en_paginas(uint32_t tam_proceso);
+
+t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso);
 
 void cerrar_programa(t_log* logger);
 

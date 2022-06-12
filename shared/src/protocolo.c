@@ -224,7 +224,7 @@ static void* serializar_COPY(uint32_t parametro1, uint32_t parametro2) {
     memcpy(stream+sizeof(op_code_instrucciones), &parametro1, sizeof(uint32_t));
     memcpy(stream+sizeof(op_code_instrucciones)+sizeof(uint32_t), &parametro2, sizeof(uint32_t));
 
-    printf("El cop en serializar WRITE es: %d\n",cop);
+    printf("El cop en serializar COPY es: %d\n",cop);
     printf("El parametro 1 es: %d\n",parametro1);
     printf("El parametro 2 es: %d\n",parametro2);
   //  printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
@@ -380,7 +380,7 @@ static void* serializar_TAM(uint32_t parametro1) {
     memcpy(stream, &parametro1, sizeof(uint32_t));
 
    // printf("El cop en serializar READ es: %d\n",cop);
-    printf("El tam a enviar es: %d\n",parametro1);
+  //  printf("El tam a enviar es: %d\n",parametro1);
    // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
@@ -400,7 +400,7 @@ bool send_TAM(int fd, uint32_t parametro1) {
     void* stream = serializar_TAM(parametro1);
 
 
-    if (send(fd, stream, size, 0) != size) {
+    if (send(fd, stream, size, MSG_WAITALL) != size) {
         free(stream);
         return false;
     }
@@ -515,7 +515,7 @@ bool recv_indice_a_kernel(int fd, uint32_t* parametro1) {
     size_t size = sizeof(uint32_t);
     void* stream = malloc(size);
 
-    if (recv(fd, stream, size, 0) != size) {
+    if (recv(fd, stream, size, MSG_WAITALL) != size) {
         free(stream);
         return false;
     }
@@ -951,128 +951,3 @@ bool recv_valor(int fd, uint32_t* valor) {
     free(stream);
     return true;
 }
-
-bool send_tabla_primer_nivel_pcb(int fd,uint32_t valor){
-	printf("Entre en send_cant instrucciones \n");
-	   size_t size = sizeof(uint32_t);
-
-	    void* stream = serializar_tam_paginas(valor);
-
-
-	    if (send(fd, stream, size, 0) != size) {
-	        free(stream);
-	        return false;
-	    }
-
-	    free(stream);
-	    return true;
-}
-
-bool recv_tabla_primer_nivel_pcb(int fd, uint32_t* valor) {
-    size_t size = sizeof(uint32_t);
-    void* stream = malloc(size);
-
-    if (recv(fd, stream, size, 0) != size) {
-        free(stream);
-        return false;
-    }
-
-    deserializar_tam_paginas(stream, valor);
-
-    free(stream);
-    return true;
-}
-
-bool send_tabla_2do_nivel(int fd,uint32_t valor){
-	printf("Entre en send_cant instrucciones \n");
-	   size_t size = sizeof(uint32_t);
-
-	    void* stream = serializar_tam_paginas(valor);
-
-
-	    if (send(fd, stream, size, 0) != size) {
-	        free(stream);
-	        return false;
-	    }
-
-	    free(stream);
-	    return true;
-}
-
-bool recv_tabla_2do_nivel(int fd, uint32_t* valor) {
-    size_t size = sizeof(uint32_t);
-    void* stream = malloc(size);
-
-    if (recv(fd, stream, size, 0) != size) {
-        free(stream);
-        return false;
-    }
-
-    deserializar_tam_paginas(stream, valor);
-
-    free(stream);
-    return true;
-}
-
-bool send_marco(int fd,uint32_t valor){
-	printf("Entre en send_cant instrucciones \n");
-	   size_t size = sizeof(uint32_t);
-
-	    void* stream = serializar_tam_paginas(valor);
-
-
-	    if (send(fd, stream, size, 0) != size) {
-	        free(stream);
-	        return false;
-	    }
-
-	    free(stream);
-	    return true;
-}
-
-bool recv_marco(int fd, uint32_t* valor) {
-    size_t size = sizeof(uint32_t);
-    void* stream = malloc(size);
-
-    if (recv(fd, stream, size, 0) != size) {
-        free(stream);
-        return false;
-    }
-
-    deserializar_tam_paginas(stream, valor);
-
-    free(stream);
-    return true;
-}
-
-bool send_rta_memoria(int fd,uint32_t valor){
-	printf("Entre en send_cant instrucciones \n");
-	   size_t size = sizeof(uint32_t);
-
-	    void* stream = serializar_tam_paginas(valor);
-
-
-	    if (send(fd, stream, size, 0) != size) {
-	        free(stream);
-	        return false;
-	    }
-
-	    free(stream);
-	    return true;
-}
-
-bool recv_rta_memoria(int fd, uint32_t* valor) {
-    size_t size = sizeof(uint32_t);
-    void* stream = malloc(size);
-
-    if (recv(fd, stream, size, 0) != size) {
-        free(stream);
-        return false;
-    }
-
-    deserializar_tam_paginas(stream, valor);
-
-    free(stream);
-    return true;
-}
-

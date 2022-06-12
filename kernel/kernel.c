@@ -139,11 +139,11 @@ int main() {
 
     ///
 
-   // fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
-	int fd_kernel_1 = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
+    fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
+	//int fd_kernel_1 = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 
 
-    //log_trace(log_kernel,"El socket : %d",fd_kernel);
+    log_trace(log_kernel,"El socket fd_kernel : %d",fd_kernel);
 
     /////////////////////////////////////////////////////////
 
@@ -165,8 +165,6 @@ int main() {
     //log_trace(log_kernel,"El fd_cpu despues de grar conexiones es: %d",fd_cpu);
 
 
-    //send_tam(fd_cpu,algoritmo_config);
-
     fd_cpu_interrupt = 0;
     if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_interrupt, &fd_cpu_interrupt)) {
       		cerrar_programa2(log_kernel);
@@ -176,8 +174,8 @@ int main() {
    // log_trace(log_kernel,"El fd_cpu despues de grar conexiones puerto interrupt es: %d",fd_cpu);
 
     //conexion entre Kernel (Servidor) y consola(cliente)
-   // while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
-    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel_1));
+    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
+  //  while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel_1));
 
 
     log_info(log_kernel,"Finalizo kernel");

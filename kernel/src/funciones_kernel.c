@@ -70,7 +70,7 @@ void enviar_pcb_a_cpu(pcb_t* pcb_proceso){
 	//lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
 	list_clean(lista_instrucciones_kernel);
 
-	//log_trace(log_kernel, "La cant de instrucciones en la lista: %d",b);
+	log_trace(log_kernel, "La cant de instrucciones en la lista: %d",b);
 
 	//log_trace(log_kernel,"El PC del proceso %d es: %d",pcb_proceso->PID,pcb_proceso->PC);
 

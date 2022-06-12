@@ -26,6 +26,12 @@ typedef struct{
 	uint32_t parametro2;
 }instrucciones;
 
+typedef enum{
+	TLB_CPY = 25,
+	TLB_RD = 26,
+	TLB_WR = 27
+}t_algoritmo_reemplazo_tlb;
+
 #define BACKLOG 20
 
 bool send_NO_OP(int fd, uint32_t parametro1);
@@ -100,20 +106,9 @@ bool recv_desplazamiento(int fd,uint32_t* desplazamiento);
 bool send_valor(int fd,uint32_t valor);
 bool recv_valor(int fd,uint32_t* valor);
 
-bool send_tabla_primer_nivel_pcb(int fd,uint32_t valor);
-bool recv_tabla_primer_nivel_pcb(int fd,uint32_t* valor);
-
-bool send_tabla_2do_nivel(int fd,uint32_t valor);
-bool recv_tabla_2do_nivel(int fd,uint32_t* valor);
-
-bool send_marco(int fd,uint32_t valor);
-bool recv_marco(int fd,uint32_t* valor);
-
-bool send_rta_memoria(int fd,uint32_t valor);
-bool recv_rta_memoria(int fd,uint32_t* valor);
-
-
 bool send_debug(int fd);
+
+//aaaa
 
 
 #endif

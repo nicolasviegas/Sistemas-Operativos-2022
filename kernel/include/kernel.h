@@ -59,7 +59,7 @@ uint32_t grado_multiprogramacion;
 uint32_t tiempo_max_bloqueado;
 
 
-
+uint32_t tam_proceso;
 
 t_list* lista_instrucciones_kernel;
 

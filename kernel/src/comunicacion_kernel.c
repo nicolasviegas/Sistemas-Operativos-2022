@@ -28,12 +28,14 @@ static void procesar_conexion_kernel(void* void_args) {
 	return;
     }
 
+    tam_proceso = tam;
+
 
     op_code_instrucciones cop;
     t_list* lista_intrucciones_1 = list_create();
     while (cliente_socket != -1) {
 
-
+    	log_error(log_kernel,"El cliente socket es: %d",cliente_socket);
 
         if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
         	contador_cliente++;
@@ -44,14 +46,16 @@ static void procesar_conexion_kernel(void* void_args) {
 
         	//ACA HAY QUE HACER UNA FUNCION QUE LE PIDA LA TABLA DE PAGINAS A MEMORIA
         	//TODO
-        	//pedir_tabla_a_memoria();
+        	pedir_tabla_a_memoria();
 
-        	//uint32_t indice_tabla;
-//        	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {//puede ser fd_memoria en vez de cliente socket
-//        	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
-//        	            	     break;
-//        	}
-        	//log_trace(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
+        	send_TAM(fd_memoria,tam_proceso);
+
+        	uint32_t indice_tabla;
+        	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {//puede ser fd_memoria en vez de cliente socket
+        	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
+        	            	     break;
+        	}
+        	log_trace(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -65,7 +69,7 @@ static void procesar_conexion_kernel(void* void_args) {
         	//pcb_proceso->instrucciones = lista_instrucciones_kernel;
         	pcb_proceso->instrucciones = lista_intrucciones_1;
         	pcb_proceso->PC = 0;//contador_instruccion;//arranca desde la instruccion 0
-        	//pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
+        	pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
         	pcb_proceso->estimacionRafaga = estimacion_inicial;
         	pcb_proceso->alpha = alfa;
         	pcb_proceso->estado = NEW;
@@ -142,8 +146,8 @@ static void procesar_conexion_kernel(void* void_args) {
         	     log_error(log_kernel, "Fallo recibiendo READ");
         	     break;
             	}
-            cargar_instruccion(READ,"READ",parametro1,NULL);
-        	log_warning(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
+            	cargar_instruccion2(READ,"READ",parametro1,NULL,lista_intrucciones_1);
+        //	log_warning(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
         	//log_info(log_kernel, "entre a IO");
         	break;
 			}
@@ -154,9 +158,9 @@ static void procesar_conexion_kernel(void* void_args) {
 				   log_error(logger, "Fallo recibiendo COPY");
 				   break;
 				}
-				 cargar_instruccion(COPY,"COPY",parametro1,parametro2);
-				log_warning(log_kernel, "Deserialice COPY el parametro1 es: %d",parametro1);
-				log_warning(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
+				cargar_instruccion2(COPY,"COPY",parametro1,parametro2,lista_intrucciones_1);
+				//log_warning(log_kernel, "Deserialice COPY el parametro1 es: %d",parametro1);
+				//log_warning(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
 				break;
            	}
             case WRITE:
@@ -166,9 +170,9 @@ static void procesar_conexion_kernel(void* void_args) {
             	   log_error(logger, "Fallo recibiendo WRITE");
             	   break;
             	}
-            	cargar_instruccion(READ,"READ",parametro1,parametro2);
-            	log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
-            	log_warning(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
+            	cargar_instruccion2(WRITE,"WRITE",parametro1,parametro2,lista_intrucciones_1);
+            	//log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
+            	//log_warning(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
             	break;
 			}
             case EXIT:

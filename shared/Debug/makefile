@@ -5,11 +5,11 @@
 -include ../makefile.init
 
 RM := rm -rf
+H_SRCS =$(shell find ../src -iname "*.h" | tr '\n' ' ')
 
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/subdir.mk
--include obj/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -38,6 +38,10 @@ libshared.so: $(OBJS) $(USER_OBJS)
 clean:
 	-$(RM) $(LIBRARIES)$(OBJS)$(C_DEPS) libshared.so
 	-@echo ' '
+
+install: all
+	sudo cp -u libshared.so /usr/lib
+	sudo cp -u $(H_SRCS) /usr/include
 
 .PHONY: all clean dependents
 

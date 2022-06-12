@@ -1,7 +1,4 @@
 #include "../include/memoria.h"
-
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include<commons/collections/list.h>
@@ -12,17 +9,17 @@
 
 
 
-uint32_t asignar_tabla_1er_nivel_a_proceso(){ // Devuelve el numero de tabla que se le asiga al proceso, o -1 si no hay mas lugar para entradas
-	t_list* nueva_entrada = list_create();
+uint32_t asignar_tabla_1er_nivel_a_proceso(t_list* tabla_1er_nivel){ // Devuelve el numero de tabla que se le asiga al proceso, o -1 si no hay mas lugar para entradas
+	//t_list* nueva_entrada = list_create();
 	uint32_t a;
-	if(entradas_por_tabla >= list_size(lista_tablas_1er_nivel)){
-		 a = list_add(lista_tablas_1er_nivel,nueva_entrada);
+	if(cant_entradas_por_tabla >= list_size(lista_tablas_1er_nivel)){
+		 a = list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
 	}
 	else{
 		a = -1;
 	}
-	list_clean_and_destroy_elements(nueva_entrada,free);
-	list_destroy(nueva_entrada);
+	//list_clean_and_destroy_elements(nueva_entrada,free);
+	//list_destroy(nueva_entrada);
 	return a;
 }
 
@@ -48,5 +45,63 @@ pagina* buscar_pagina_en_tabla_2do_nivel(uint32_t nro_tabla_2do_nivel,uint32_t n
 	return pagina_buscada;
 }
 
+t_list* dividir_proceso_en_paginas(uint32_t tam_proceso){
+	float a = (float)tam_proceso/(float)tamanio_paginas;
+	uint32_t cant_pags = ceil(a);
+
+	log_debug(log_memoria,"El float es: %f",a);
+	t_list* lista_con_todas_las_paginas = list_create();
 
 
+	for(int i=0; i< cant_pags;i++){
+		pagina* pagina_nueva = malloc(sizeof(pagina));
+		pagina_nueva->nro_pagina = i;
+		pagina_nueva->bit_modificado = 0;
+		pagina_nueva->bit_presencia = 0;
+		pagina_nueva->bit_uso = 0;
+		pagina_nueva->frame = 0;
+		pagina_nueva->tiempo_uso = 0;
+
+		list_add(lista_con_todas_las_paginas,pagina_nueva);
+	}
+
+	return lista_con_todas_las_paginas;
+}
+
+t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta funcion carga la tabla de primer nivel con numeritos y la de seg nivel con lista de paginas
+	t_list* tabla_de_1er_nivel = list_create();
+	t_list* lista_aux = list_create();
+	t_list* lista_aux2 = list_create();
+
+	while(list_size(lista_paginas_del_proceso) != 0){
+		//log_warning(log_memoria,"El size de la lista dentro del for en antes del if es: %d",list_size(lista_paginas_del_proceso));
+
+		if(list_size(lista_paginas_del_proceso) >= cant_entradas_por_tabla){
+
+			lista_aux = list_take_and_remove(lista_paginas_del_proceso,cant_entradas_por_tabla);
+
+		//	log_warning(log_memoria,"El size de la lista dentro del for en el if es: %d",list_size(lista_paginas_del_proceso));
+
+			uint32_t indice = list_add(lista_tablas_2do_nivel,lista_aux);
+
+			list_add(tabla_de_1er_nivel,indice);
+
+		}else{
+			lista_aux2 = list_take_and_remove(lista_paginas_del_proceso,list_size(lista_paginas_del_proceso));
+
+			// log_warning(log_memoria,"El size de la lista dentro del for en el else es: %d",list_size(lista_paginas_del_proceso));
+
+			uint32_t indice = list_add(lista_tablas_2do_nivel,lista_aux2);
+
+			list_add(tabla_de_1er_nivel,indice);
+		}
+	}
+
+
+	list_clean_and_destroy_elements(lista_aux,free);
+	list_destroy(lista_aux);
+	list_clean_and_destroy_elements(lista_aux2,free);
+	list_destroy(lista_aux2);
+
+	return tabla_de_1er_nivel;
+}

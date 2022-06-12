@@ -28,13 +28,57 @@ static void procesar_conexion_cpu(void* void_args) {
 	 op_code_instrucciones co_op;
 	 uint32_t pc;
 
+	 uint32_t aux1;
+	 uint32_t aux2;
+
 	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
 	// printf("El cliente socket en cpu.c procesar conexion es : %d\n",cliente_socket);
-	 fd_kernel = cliente_socket;/////////////////////////////////////////////todo HARDCODEADO, PREGUNTAR
+	// fd_kernel = cliente_socket;/////////////////////////////////////////////todo HARDCODEADO, PREGUNTAR
+	 //fd_kernel = 8;
 
+	 /*if(!recv_TAM(fd_memoria,&tam_paginas)){
+		 log_error(log_cpu, "Fallo recibiendo pid");
+		 return;
+	 }
+
+	 log_warning(log_cpu,"El tam de pags es %d",tam_paginas);*/
+
+	if(!recv_TAM(fd_memoria,&tam_paginas)){
+		log_error(log_cpu, "Fallo recibiendo pid");
+		return;
+	}
+
+	log_warning(log_cpu,"El tam de pags es %d",tam_paginas);
+
+	if(!recv_TAM(fd_memoria,&cant_entradas_por_tabla)){
+		 log_error(log_cpu, "Fallo recibiendo pid");
+		 return;
+	 }
+
+	 log_warning(log_cpu,"La cant de entradas por tabla es %d",cant_entradas_por_tabla);
+
+
+	 if(!recv_TAM(fd_memoria,&aux1)){
+	 		log_error(log_cpu, "Fallo recibiendo pid");
+	 		return;
+	 	}
+
+	// 	log_warning(log_cpu,"El tam de pags es %d",tam_paginas);
+
+	 	if(!recv_TAM(fd_memoria,&aux2)){
+	 		 log_error(log_cpu, "Fallo recibiendo pid");
+	 		 return;
+	 	 }
+
+	 	// log_warning(log_cpu,"La cant de entradas por tabla es %d",cant_entradas_por_tabla);
 
 	 while (cliente_socket != -1 && cliente_socket_interrupcion != -1) {
+		 fd_kernel = cliente_socket;//todo ojo con esto preguntar
+
+
+		 //log_error(log_cpu,"El fd kernel es: %d",fd_kernel);
+		// log_error(log_cpu,"El cliente socket es: %d",cliente_socket);
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
 		 		log_error(log_cpu, "Fallo recibiendo pid");
 		 		break;
@@ -112,8 +156,7 @@ static void procesar_conexion_cpu(void* void_args) {
 					             }
 					             case READ:
 					             {
-					             	uint32_t parametro1;
-
+					            	 uint32_t parametro1;
 					             	if (!recv_READ(cliente_socket, &parametro1)) {
 					         	     log_error(log_cpu, "Fallo recibiendo READ");
 					         	     break;
@@ -126,8 +169,8 @@ static void procesar_conexion_cpu(void* void_args) {
 					 			}
 					             case COPY:
 					             {
-					             	uint32_t parametro1, parametro2;
-
+					            	 uint32_t parametro1;
+					            	 uint32_t parametro2;
 					 				if (!recv_COPY(cliente_socket, &parametro1, &parametro2)) {
 					 				   log_error(log_cpu, "Fallo recibiendo COPY");
 					 				   break;
@@ -138,24 +181,23 @@ static void procesar_conexion_cpu(void* void_args) {
 					 				//log_warning(log_cpu, "Deserialice COPY el parametro2 es: %d",parametro2);
 					 				log_info(log_cpu,"Me llego la instruccion COPY");
 
-
-									//TODO como obtengo el valor que acabo de escribir en el write anterior???
-
 					 				break;
 					            	}
 					             case WRITE:
 					             {
-					             	uint32_t parametro1, parametro2;
 
+					            	uint32_t parametro1;
+					            	 uint32_t parametro2;
 					             	if (!recv_WRITE(cliente_socket, &parametro1, &parametro2)) {
 					             	   log_error(log_cpu, "Fallo recibiendo WRITE");
 					             	   break;
 					             	}
 
-					             	cargar_instruccion_cpu(READ,"READ",parametro1,parametro2);
+					             	cargar_instruccion_cpu(WRITE,"WRITE",parametro1,parametro2);
 					             	//log_warning(log_cpu, "Deserialice WRITE el parametro1 es: %d",parametro1);
 					             	//log_warning(log_cpu, "Deserialice WRITE el parametro2 es: %d",parametro2);
 					             	log_info(log_cpu,"Me llego la instruccion WRITE");
+
 					             	break;
 					 			}
 					             case EXIT:
@@ -208,15 +250,17 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		interrupcion = false;
 
+		log_debug(log_cpu,"la cantidad de instrucciones que me mando kernel: %d",list_size(pcb_proceso_cpu->instrucciones));
+
 			while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones) && tiempo_bloqueante == 0){//la interrupcion verla segun el puerto interrupt
 
-			//log_trace(log_cpu,"Entre en el while de interrupcion");
+			log_trace(log_cpu,"Entre en el while de interrupcion");
 
 			proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 
-			decode_and_execute(pcb_proceso_cpu,proxima_a_ejecutar);
+			decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
 
-			interrupcion = check_interrupt(cliente_socket_interrupcion);
+			//interrupcion = check_interrupt(cliente_socket_interrupcion);
 
 			//log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
 
@@ -227,6 +271,7 @@ static void procesar_conexion_cpu(void* void_args) {
 		//log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
 		//log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
 
+		log_debug(log_cpu,"El pc antes de send a kernel es: %d",pcb_proceso_cpu->PC);
 		send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
 		//log_debug(log_cpu,"El tiempo bloqueante antes de mandarlo es: %d ",tiempo_bloqueante);

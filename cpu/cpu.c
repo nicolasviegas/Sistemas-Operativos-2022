@@ -1,12 +1,9 @@
 #include "../cpu/include/cpu.h"
 
 
-
 int obtener_algoritmo(char* algoritmo_char){
 
 	 t_algoritmo_reemplazo_tlb switcher;
-
-
 
 	    if (strcmp(algoritmo_char,"FIFO") == 0)
 	    {
@@ -23,7 +20,6 @@ int obtener_algoritmo(char* algoritmo_char){
 	    return switcher;
 }
 
-
 void inicializar_config(){
 	  ip = config_get_string_value(config_cpu,"IP_MEMORIA");// esto no se si va
 	  puerto_escucha_dispatch = config_get_string_value(config_cpu,"PUERTO_ESCUCHA_DISPATCH");
@@ -38,7 +34,6 @@ void inicializar_config(){
 	  retardo_noop = config_get_int_value(config_cpu,"RETARDO_NOOP");
 
 }
-
 
 
 
@@ -87,10 +82,8 @@ int main() {
        		}
 
 
-
-
 //	log_trace(log_cpu,"El tamaño de las paginas es %d", tam_paginas);
-   //log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+   log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
 
     //conexion entre cpu (Servidor) y kernel(cliente)
