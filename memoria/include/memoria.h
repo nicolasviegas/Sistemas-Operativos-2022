@@ -22,7 +22,7 @@
 #include "utils.h"
 #include "protocolo.h"
 #include "socket.h"
-
+#include "math.h"
 
 
 typedef enum{
@@ -80,6 +80,8 @@ pagina* buscar_pagina_en_tabla_2do_nivel(uint32_t nro_tabla_2do_nivel,uint32_t n
 t_list* dividir_proceso_en_paginas(uint32_t tam_proceso);
 
 t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso);
+
+void liberar_memoria(uint32_t frame);
 
 void cerrar_programa(t_log* logger);
 

@@ -1,7 +1,7 @@
 #include "include/consola.h"
 
 //ASI SE CORRE POR CONSOLA
-//./consola.out /home/utnso/tp-2022-1c-yaguarethreads-/consola/lista_instrucciones.txt 100
+//./consola.out /home/utnso/tp-2022-1c-yaguarethreads-/consola/BASE_1.txt 296
 
 int main(int argc, char** argv){
 

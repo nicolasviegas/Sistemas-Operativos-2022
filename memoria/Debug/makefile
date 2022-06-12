@@ -27,7 +27,7 @@ endif
 all: memoria
 
 dependents:
-	-cd /home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug && $(MAKE) all
+	-cd /home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug && $(MAKE) clean all
 
 # Tool invocations
 memoria: $(OBJS) $(USER_OBJS) /home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug/libshared.so

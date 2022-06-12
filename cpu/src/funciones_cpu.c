@@ -168,7 +168,6 @@ instrucciones* fetch(pcb_cpu* pcb){
 					 }
 
 
-					 //send marco
 					 uint32_t desplazamiento = obtener_desplazamiento(parametro1,entrada->numero_pag);
 					 send_TAM(fd_memoria,marco);
 					 send_TAM(fd_memoria,desplazamiento);
@@ -499,7 +498,8 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				log_info(log_cpu,"[EXE] ejecuto READ");
 				 uint32_t parametro1 = instruccion_a_decodificar->parametro1;
 				 uint32_t numero_pagina = obtener_numero_pagina(parametro1);
-				 log_trace(log_cpu,"Antes de correr tlb read");
+
+				log_debug(log_cpu,"El numero de paginas es %d",numero_pagina);
 
 				 correr_tlb_read(numero_pagina,parametro1,pcb->indice_tabla_paginas);
 				 pcb->PC += 1;
@@ -514,7 +514,10 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 				uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
 				uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
-				 log_trace(log_cpu,"Antes de correr tlb copy");
+				 //log_trace(log_cpu,"Antes de correr tlb copy");
+				log_debug(log_cpu,"El numero de paginas origen es %d",numero_pagina_origen);
+				log_debug(log_cpu,"El numero de paginas destino es %d",numero_pagina_destino);
+
 
 				correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2,pcb->indice_tabla_paginas);
 				pcb->PC += 1;
@@ -527,6 +530,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				uint32_t parametro1 = instruccion_a_decodificar->parametro1;
 				uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 				uint32_t numero_pagina_write = obtener_numero_pagina(parametro1);
+				log_debug(log_cpu,"El numero de paginas es %d",numero_pagina_write);
 				correr_tlb_write(numero_pagina_write,parametro1,parametro2,pcb->indice_tabla_paginas);
 				pcb->PC += 1;
 				break;

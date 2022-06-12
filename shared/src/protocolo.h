@@ -32,6 +32,12 @@ typedef enum{
 	TLB_WR = 27
 }t_algoritmo_reemplazo_tlb;
 
+typedef enum{
+	METER_A_SWAP = 1000,
+	SACAR_DE_SWAP = 1001,
+	METER_EN_MEM_PRINCIPAL = 1002
+}condicion_if;
+
 #define BACKLOG 20
 
 bool send_NO_OP(int fd, uint32_t parametro1);

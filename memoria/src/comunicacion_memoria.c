@@ -66,6 +66,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				 send_indice_a_kernel(fd_kernel,indice_tabla);
 				 log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
 			 }
+
+			 //todo crear archivo de swap
+			 crear_archivo_swap(indice_tabla);
     	    }
 
     		if(condicion == TLB_RD){
@@ -113,7 +116,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									}
 									log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
 
-									send_TAM(cliente_socket,2);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+									uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
+									send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+									log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
 									uint32_t entrada_2do_nivel;
 									if (recv(cliente_socket, &entrada_2do_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -124,10 +129,11 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 									//todo funcion que hizo tomi
 
-									//uint32_t marco_x = 7;//todo funcion_que devuelve marco(); ya esat hecha
-
-									send_TAM(cliente_socket,7);//aca hay que pasar el marco en vez del 7
-									log_trace(log_memoria,"el marco es: %d",7);
+									pagina* pagina_buscada = malloc(sizeof(pagina));
+									pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
+									send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+									log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+									free(pagina_buscada);
 
 									uint32_t desplazamiento;
 									if (recv(cliente_socket, &desplazamiento, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -185,7 +191,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					}
 					log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
 
-					send_TAM(cliente_socket,2);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+					uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
+					send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+					log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
 					uint32_t entrada_2do_nivel;
 					if (recv(cliente_socket, &entrada_2do_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -197,9 +205,11 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					//todo funcion que hizo tomi
 
 					//uint32_t marco_x = 7;//todo funcion_que devuelve marco(); ya esat hecha
-
-					send_TAM(cliente_socket,7);//aca hay que pasar el marco en vez del 7
-					log_trace(log_memoria,"el marco es: %d",7);
+					pagina* pagina_buscada = malloc(sizeof(pagina));
+					pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
+					send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+					log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+					free(pagina_buscada);
 
 					uint32_t desplazamiento;
 					if (recv(cliente_socket, &desplazamiento, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -262,7 +272,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							}
 							log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
 
-							send_TAM(cliente_socket,2);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+							uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
+							send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+							log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
 							uint32_t entrada_2do_nivel;
 							if (recv(cliente_socket, &entrada_2do_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -271,10 +283,11 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							}
 							log_trace(log_memoria,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
 
-							//uint32_t marco_x = 7;//todo funcion_que devuelve marco(); ya esat hecha
-
-							send_TAM(cliente_socket,7);//aca hay que pasar el marco en vez del 7
-							log_trace(log_memoria,"el marco es: %d",7);
+							pagina* pagina_buscada = malloc(sizeof(pagina));
+							pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
+							send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+							log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+							free(pagina_buscada);
 
 							uint32_t desplazamiento;
 							if (recv(cliente_socket, &desplazamiento, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -292,8 +305,35 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					}
 	/////
 				}
+    		if(condicion == METER_A_SWAP){
+    			uint32_t indice_proceso;
+				if (recv(cliente_socket, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+				log_info(log_memoria, "fallo al recibir nro de pagina!");
+				return;
+				}
+				log_trace(log_memoria,"Meto a swap al proceso es: %d",indice_proceso);
 
-    	 // break; //borrar despues esto es solo para que no me itere ahora
+//todo a partir de aca memoria va a trabajar con swap
+
+    		}
+
+    		if(condicion == METER_EN_MEM_PRINCIPAL){
+			uint32_t indice_proceso;
+			if (recv(cliente_socket, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+			log_info(log_memoria, "fallo al recibir nro de pagina!");
+			return;
+			}
+
+			log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso);
+			//todo meter el proceso a la mem principal y poner el bit de presencia en 1
+			//(usar la logica de funcion de meter en swap para tener todas en una sola lista y poner en 1
+
+
+			}
+
+
+
+
     }
 
     log_warning(log_memoria, "El cliente se desconecto de %s server", server_name);

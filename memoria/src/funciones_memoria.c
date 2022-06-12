@@ -25,22 +25,28 @@ uint32_t asignar_tabla_1er_nivel_a_proceso(t_list* tabla_1er_nivel){ // Devuelve
 
 uint32_t obtener_nro_tabla_2do_nivel(uint32_t numero_tabla_1er_nivel,uint32_t entrada_primer_nivel){
 	t_list* tabla_1er_nivel_buscada = list_create();
+
 	tabla_1er_nivel_buscada = list_get(lista_tablas_1er_nivel,numero_tabla_1er_nivel);
-	entrada_1er_nivel* entrada_buscada = malloc(sizeof(entrada_primer_nivel));
+	uint32_t entrada_buscada;
+	//log_debug(log_memoria,"Pase el list get de la tabla de primer nivel");
 	entrada_buscada = list_get(tabla_1er_nivel_buscada,entrada_primer_nivel);
-	uint32_t resultado = entrada_buscada->nro_tabla_2do_nivel;
-	free(entrada_buscada);
-	list_clean_and_destroy_elements(tabla_1er_nivel_buscada,free);
+	log_debug(log_memoria,"LA entrada buscada es: %d",entrada_buscada);
+	//list_clean_and_destroy_elements(tabla_1er_nivel_buscada,&free);todo VER COMO HACER ESTE LIST AND DESTROY
 	list_destroy(tabla_1er_nivel_buscada);
-	return resultado;
+	//log_debug(log_memoria,"Pase el list destroy en obtener nro tabla 2do nivel");
+
+	return entrada_buscada;
+
 }
 
 
 pagina* buscar_pagina_en_tabla_2do_nivel(uint32_t nro_tabla_2do_nivel,uint32_t nro_entrada){ // Busca la pagina en la tabla de 2do nivel, si no esta, devuelve null
 	t_list* tabla_2do_nivel_buscada = list_create();
 	tabla_2do_nivel_buscada = list_get(lista_tablas_2do_nivel,nro_tabla_2do_nivel);
+	log_debug(log_memoria,"El indice de la tabla de paginas de segundo nivel en la global es: %d",nro_tabla_2do_nivel);
+	log_debug(log_memoria,"El indice de la tabla de paginas de segundo nivel en la global es: %d",nro_entrada);
 	pagina* pagina_buscada = list_get(tabla_2do_nivel_buscada,nro_entrada);
-	list_clean_and_destroy_elements(tabla_2do_nivel_buscada,free);
+	//list_clean_and_destroy_elements(tabla_2do_nivel_buscada,free);
 	list_destroy(tabla_2do_nivel_buscada);
 	return pagina_buscada;
 }
@@ -95,13 +101,20 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta func
 
 			list_add(tabla_de_1er_nivel,indice);
 		}
+
 	}
 
+	log_debug(log_memoria,"El size de la lista de tablas de 2do nivel es %d",list_size(lista_tablas_2do_nivel));
 
-	list_clean_and_destroy_elements(lista_aux,free);
-	list_destroy(lista_aux);
-	list_clean_and_destroy_elements(lista_aux2,free);
-	list_destroy(lista_aux2);
 
+//	list_clean_and_destroy_elements(lista_aux,free);
+//	list_destroy(lista_aux);
+//	list_clean_and_destroy_elements(lista_aux2,free);
+//	list_destroy(lista_aux2);
+	log_debug(log_memoria,"El size de la lista de tablas de 2do nivel despues de liberar es %d",list_size(lista_tablas_2do_nivel));
 	return tabla_de_1er_nivel;
+}
+
+void liberar_memoria(uint32_t frame){
+	//liberar desde el (frame * tam_paginas) hasta (frame + 1 * tam_paginas)
 }

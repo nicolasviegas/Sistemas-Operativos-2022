@@ -79,7 +79,8 @@ void agregarAReady(pcb_t* proceso){
 	list_add(colaReady, proceso);
 
 	log_info(log_kernel, "[READY] Entra el proceso de PID: %d a la cola.", proceso->PID);
-
+	send_TAM(fd_memoria,METER_EN_MEM_PRINCIPAL);
+	send_TAM(fd_memoria,proceso->indice_tabla_paginas);
 	//printf("PROCESOS EN READY: %d \n", list_size(colaReady));
 	log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
 
@@ -150,22 +151,11 @@ void agregarABlockSuspended(pcb_t* pcb){
 
 	pthread_mutex_unlock(&mutexBlockSuspended);
 
-	size_t size = sizeof(op_estados)+sizeof(uint32_t);
-
-	void* stream = malloc(size);
-
-	op_estados opCode = SUSPENDED_BLOCKED;
-
-	memcpy(stream, &opCode, sizeof(op_estados));
-	memcpy(stream + sizeof(op_estados), &(pcb->PID), sizeof(uint32_t));
-	log_trace(log_kernel,"Le avise a memoria que libere los recursos");
-	//todo
-	//send(fd_memoria, stream, size, 0); HAY QUE DESCOMENTAR Y HACER EL RECV
-
+	send_TAM(fd_memoria,METER_A_SWAP); //HAY QUE DESCOMENTAR Y HACER EL RECV
+	send_TAM(fd_memoria,pcb->indice_tabla_paginas);
 
 	agregarAReadySuspended(pcb); //ESTO LO COMENTAMOS NOSOTROS
 
-	free(stream);
 }
 
 
@@ -431,6 +421,8 @@ void hiloSuspensionAReady(){
 		pcb_t* proceso = sacarDeReadySuspended();
 
 		sem_wait(&multiprogramacion);
+
+		//todo Mandar el mensaje a memoria para que saque el proceso de swap y lo ponga en mp
 
 		agregarAReady(proceso);
 
