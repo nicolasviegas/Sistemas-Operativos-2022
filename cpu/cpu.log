@@ -56328,3 +56328,61 @@
 [INFO] 18:59:36:796 cpu/(5014:5023): [EXE] ejecuto EXIT
 [DEBUG] 18:59:36:796 cpu/(5014:5023): El pc antes de send a kernel es: 3
 [TRACE] 18:59:36:798 cpu/(5014:5023): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 19:17:46:815 cpu/(5760:5760): El algoritmo de reemplazo elegido es LRU.
+[INFO] 19:17:46:815 cpu/(5760:5760): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:17:46:816 cpu/(5760:5760): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 19:17:46:816 cpu/(5760:5760): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 19:17:46:816 cpu/(5760:5760): El fd_memoria despues de grar conexiones es: 7
+[INFO] 19:17:49:830 cpu/(5760:5760): Cliente conectado (a CPU)
+
+[INFO] 19:17:49:831 cpu/(5760:5760): Cliente conectado (a CPU)
+
+[WARNING] 19:17:49:832 cpu/(5760:5768): El tam de pags es 64
+[WARNING] 19:17:49:832 cpu/(5760:5768): La cant de entradas por tabla es 4
+[TRACE] 19:17:56:069 cpu/(5760:5768): El pid recibido es: 1
+[DEBUG] 19:17:56:069 cpu/(5760:5768): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:17:56:069 cpu/(5760:5768): Entre en el while de interrupcion
+[DEBUG] 19:17:56:069 cpu/(5760:5768): El pc es en fetch 0
+[INFO] 19:17:56:070 cpu/(5760:5768): [EXE] ejecuto IO
+[WARNING] 19:17:56:070 cpu/(5760:5768): El tiempo bloqueante es: 11000
+[DEBUG] 19:17:56:070 cpu/(5760:5768): El pc antes de send a kernel es: 1
+[TRACE] 19:17:56:070 cpu/(5760:5768): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 19:18:24:088 cpu/(5760:5768): El pid recibido es: 1
+[DEBUG] 19:18:24:125 cpu/(5760:5768): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:18:24:126 cpu/(5760:5768): Entre en el while de interrupcion
+[DEBUG] 19:18:24:126 cpu/(5760:5768): El pc es en fetch 1
+[INFO] 19:18:24:126 cpu/(5760:5768): [EXE] ejecuto EXIT
+[DEBUG] 19:18:24:126 cpu/(5760:5768): El pc antes de send a kernel es: 2
+[TRACE] 19:18:24:127 cpu/(5760:5768): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 19:53:19:785 cpu/(7147:7147): El algoritmo de reemplazo elegido es LRU.
+[INFO] 19:53:19:786 cpu/(7147:7147): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 19:53:19:786 cpu/(7147:7147): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 19:53:19:786 cpu/(7147:7147): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 19:53:19:787 cpu/(7147:7147): El fd_memoria despues de grar conexiones es: 7
+[INFO] 19:53:22:989 cpu/(7147:7147): Cliente conectado (a CPU)
+
+[INFO] 19:53:22:990 cpu/(7147:7147): Cliente conectado (a CPU)
+
+[WARNING] 19:53:22:990 cpu/(7147:7155): El tam de pags es 64
+[WARNING] 19:53:22:991 cpu/(7147:7155): La cant de entradas por tabla es 4
+[TRACE] 19:53:25:799 cpu/(7147:7155): El pid recibido es: 1
+[DEBUG] 19:53:25:800 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:53:25:800 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:53:25:800 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 19:53:25:800 cpu/(7147:7155): [EXE] ejecuto IO
+[WARNING] 19:53:25:800 cpu/(7147:7155): El tiempo bloqueante es: 11000
+[DEBUG] 19:53:25:801 cpu/(7147:7155): El pc antes de send a kernel es: 1
+[TRACE] 19:53:25:801 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 19:53:59:822 cpu/(7147:7155): El pid recibido es: 1
+[DEBUG] 19:53:59:862 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:53:59:862 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:53:59:862 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 19:53:59:862 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 19:53:59:862 cpu/(7147:7155): El pc antes de send a kernel es: 2
+[TRACE] 19:53:59:863 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 1 

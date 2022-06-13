@@ -15949,3 +15949,13 @@
 [WARNING] 18:59:31:767 consola/(5024:5024): entre en READ dentro de send_instrucciones
 [WARNING] 18:59:31:767 consola/(5024:5024): Entre en EXIT dentro de send_instrucciones
 [INFO] 18:59:31:767 consola/(5024:5024): [INFO] La consola finalizo correctamente.
+[INFO] 19:17:56:064 consola/(5769:5769): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 19:17:56:064 consola/(5769:5769): entre en I/O dentro de send_instrucciones
+[WARNING] 19:17:56:064 consola/(5769:5769): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:17:56:064 consola/(5769:5769): [INFO] La consola finalizo correctamente.
+[INFO] 19:53:25:794 consola/(7156:7156): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 19:53:25:795 consola/(7156:7156): entre en I/O dentro de send_instrucciones
+[WARNING] 19:53:25:795 consola/(7156:7156): Entre en EXIT dentro de send_instrucciones
+[INFO] 19:53:25:795 consola/(7156:7156): [INFO] La consola finalizo correctamente.

@@ -9,15 +9,41 @@ void crear_archivo_swap(uint32_t indice_tabla){ //TODO
 //fp = fopen(a,"r+w");
 }
 
-
 void escribir_en_swap(uint32_t indice_archivo_swap,uint32_t frame){
 	usleep(retardo_swap * 1000);
 	log_debug(log_memoria,"Escribiendo en swap...");
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
 }
 
-void traer_de_swap(uint32_t indice_archivo_swap,uint32_t frame){
+
+uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
 	usleep(retardo_swap * 1000);
+	log_debug(log_memoria,"Trayendo pagina de swap...");
+	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
+	return 1; // todo ir a leer a swap y devolver lo leido en vez de un 1
+}
+
+void traer_proceso_de_swap(uint32_t indice_archivo_swap){
+	t_list * tabla_primer_nivel_buscada = list_get(lista_tablas_1er_nivel,indice_archivo_swap);
+		uint32_t entrada_primer_nivel_aux;
+		t_list * tabla_segundo_nivel_aux = list_create();
+		t_list * paginas_del_proceso = list_create();
+		pagina* pagina_aux = malloc(sizeof(pagina));
+		uint32_t dataAux;
+		for(int i = 0;i < list_size(tabla_primer_nivel_buscada);i++){
+			entrada_primer_nivel_aux = list_get(tabla_primer_nivel_buscada,i);
+			tabla_segundo_nivel_aux = list_get(lista_tablas_2do_nivel,entrada_primer_nivel_aux);
+			for(int j = 0;j < list_size(tabla_segundo_nivel_aux);j++){
+				pagina_aux = list_get(tabla_segundo_nivel_aux,j);
+				//pagina_aux->bit_presencia = 0;//
+				list_add(paginas_del_proceso,pagina_aux);
+			}
+		}
+		for(int k=0;k < marcos_por_proceso;k++){
+			pagina_aux = list_get(paginas_del_proceso,k);
+			dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina);
+			escribir_en_memoria(dataAux,pagina_aux);
+		}
 	// ir a swap y hacer fread y memcpy en mem principal
 }
 

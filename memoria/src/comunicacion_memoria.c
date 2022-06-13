@@ -335,6 +335,21 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 			}
 
+      		if(condicion == SACAR_DE_SWAP){
+        			uint32_t indice_proceso;
+    				if (recv(cliente_socket, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+    				log_info(log_memoria, "fallo al recibir nro de pagina!");
+    				return;
+    				}
+    				log_trace(log_memoria,"Saco de swap el proceso: %d",indice_proceso + 1);
+
+    //todo a partir de aca memoria va a trabajar con swap
+
+    				traer_proceso_de_swap(indice_proceso);
+
+    				send_TAM(cliente_socket,1773);//esto lo mando a kernel para avisarle que ya lo meti a swap
+        		}
+
 
 
 

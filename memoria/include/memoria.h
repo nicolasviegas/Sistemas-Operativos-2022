@@ -87,6 +87,8 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso);
 
 void liberar_memoria(uint32_t frame);
 
+void escribir_en_memoria(uint32_t valor,pagina* pagina);
+
 void cerrar_programa(t_log* logger);
 
 #endif /*CPUH*/

@@ -113,3 +113,10 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta func
 void liberar_memoria(uint32_t frame){
 	//liberar desde el (frame * tam_paginas) hasta (frame + 1 * tam_paginas)
 }
+
+
+void escribir_en_memoria(uint32_t valor,pagina* pagina){
+	//correr algoritmo reemplazo
+	//escribe en memoria la data y pone en 1 el bit de presencia de la pagina
+}
+

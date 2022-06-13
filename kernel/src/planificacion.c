@@ -432,6 +432,19 @@ void hiloSuspensionAReady(){
 
 		//todo Mandar el mensaje a memoria para que saque el proceso de swap y lo ponga en mp
 
+		send_TAM(fd_memoria,SACAR_DE_SWAP);
+		send_TAM(fd_memoria,proceso->indice_tabla_paginas);
+
+		uint32_t indice_proceso; //ESTE RECV ES PARA SABER SI MEMORIA YA TERMINO DE PASAR A SWAP AL PROCESO SUSPENDIDO
+		if (recv(fd_memoria, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+		log_info(log_kernel, "fallo al recibir nro de pagina!");
+		return;
+		}if(indice_proceso == 1773){
+			log_trace(log_kernel,"Memoria termino de sacar de swap al proceso");
+		}
+
+
+
 		agregarAReady(proceso);
 
 		if(hay_alguien_exe){
