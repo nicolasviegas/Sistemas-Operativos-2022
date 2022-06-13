@@ -31,6 +31,10 @@ typedef enum{
 }t_algoritmo_memoria;
 
 
+
+pthread_mutex_t mutexSwap;
+
+
 t_config* config_memoria;
 
 char* puerto_escucha;

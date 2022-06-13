@@ -311,12 +311,14 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				log_info(log_memoria, "fallo al recibir nro de pagina!");
 				return;
 				}
-				log_trace(log_memoria,"Meto a swap al proceso es: %d",indice_proceso);
+				log_trace(log_memoria,"Meto a swap al proceso es: %d",indice_proceso + 1);
 
 
 //todo a partir de aca memoria va a trabajar con swap
+
 				pasar_proceso_a_swap(indice_proceso);
 
+				send_TAM(cliente_socket,1773);//esto lo mando a kernel para avisarle que ya lo meti a swap
     		}
 
     		if(condicion == METER_EN_MEM_PRINCIPAL){
@@ -326,7 +328,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			return;
 			}
 
-			log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso);
+			log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso + 1);
 			//todo meter el proceso a la mem principal y poner el bit de presencia en 1
 			//(usar la logica de funcion de meter en swap para tener todas en una sola lista y poner en 1
 

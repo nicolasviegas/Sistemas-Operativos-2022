@@ -47094,3 +47094,638 @@
 [DEBUG] 12:40:43:601 kernel/(11628:11632): Despues del send interrupcion
 [TRACE] 12:40:43:646 kernel/(11628:11632): El PC despues del recv es: 2
 [INFO] 12:40:43:646 kernel/(11628:11632): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 18:36:01:922 kernel/(4178:4178): El algoritmo de planificacion elegido es FIFO.
+[INFO] 18:36:01:923 kernel/(4178:4178): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:36:01:923 kernel/(4178:4178): El socket fd_kernel : 4
+[INFO] 18:36:01:924 kernel/(4178:4178): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 18:36:01:924 kernel/(4178:4178): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:36:01:925 kernel/(4178:4178): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 18:37:37:854 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:37:37:871 kernel/(4178:4222): El cliente socket es: 9
+[ERROR] 18:37:37:871 kernel/(4178:4222): El cliente socket es: 9
+[ERROR] 18:37:37:871 kernel/(4178:4222): El cliente socket es: 9
+[TRACE] 18:37:37:873 kernel/(4178:4222): El indice tabla de pagina es: 0
+[INFO] 18:37:37:873 kernel/(4178:4222): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 18:37:37:873 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 18:37:37:873 kernel/(4178:4181): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 18:37:37:873 kernel/(4178:4181): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:37:37:873 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 18:37:37:874 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:37:37:874 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:37:37:874 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:37:37:875 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:37:37:875 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 18:37:37:875 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 18:37:37:875 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 18:37:37:875 kernel/(4178:4222): DISCONNECT!
+[WARNING] 18:37:37:875 kernel/(4178:4222): El cliente se desconecto de KERNEL server
+[TRACE] 18:37:47:875 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:37:47:876 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 18:37:57:882 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:37:57:883 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 18:37:57:883 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 18:37:57:883 kernel/(4178:4179): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 18:37:57:883 kernel/(4178:4179): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:37:57:883 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 18:37:57:883 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:37:57:883 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:37:57:883 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:37:57:922 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:37:57:922 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 18:38:14:914 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:38:14:918 kernel/(4178:4231): El cliente socket es: 10
+[ERROR] 18:38:14:918 kernel/(4178:4231): El cliente socket es: 10
+[ERROR] 18:38:14:918 kernel/(4178:4231): El cliente socket es: 10
+[TRACE] 18:38:14:919 kernel/(4178:4231): El indice tabla de pagina es: 1
+[INFO] 18:38:14:919 kernel/(4178:4231): [NEW] Entra el proceso de PID: 2 a la cola.
+[INFO] 18:38:14:919 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 18:38:14:919 kernel/(4178:4181): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 18:38:14:920 kernel/(4178:4181): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:38:14:920 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 2 , que era el primero que llego
+[TRACE] 18:38:14:920 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:38:14:920 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:38:14:920 kernel/(4178:4182): Despues del send interrupcion
+[INFO] 18:38:14:920 kernel/(4178:4231): DISCONNECT!
+[WARNING] 18:38:14:920 kernel/(4178:4231): El cliente se desconecto de KERNEL server
+[TRACE] 18:38:14:958 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:38:14:958 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[INFO] 18:38:14:959 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 18:38:14:959 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:38:24:959 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:38:24:960 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 2 a la cola.
+[TRACE] 18:38:34:966 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:38:34:966 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 2 de la cola.
+[INFO] 18:38:34:967 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 2 de la cola.
+[INFO] 18:38:34:967 kernel/(4178:4179): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 18:38:34:967 kernel/(4178:4179): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:38:34:968 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 2 , que era el primero que llego
+[TRACE] 18:38:34:971 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:38:34:971 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:38:34:972 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:38:35:010 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:38:35:010 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 2
+[INFO] 18:38:49:490 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:38:49:494 kernel/(4178:4243): El cliente socket es: 11
+[ERROR] 18:38:49:494 kernel/(4178:4243): El cliente socket es: 11
+[ERROR] 18:38:49:494 kernel/(4178:4243): El cliente socket es: 11
+[TRACE] 18:38:49:495 kernel/(4178:4243): El indice tabla de pagina es: 2
+[INFO] 18:38:49:495 kernel/(4178:4243): [NEW] Entra el proceso de PID: 3 a la cola.
+[INFO] 18:38:49:495 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 3 de la cola
+[INFO] 18:38:49:495 kernel/(4178:4181): [READY] Entra el proceso de PID: 3 a la cola.
+[DEBUG] 18:38:49:495 kernel/(4178:4181): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:38:49:496 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 3 , que era el primero que llego
+[TRACE] 18:38:49:496 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:38:49:496 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:38:49:496 kernel/(4178:4182): Despues del send interrupcion
+[INFO] 18:38:49:496 kernel/(4178:4243): DISCONNECT!
+[WARNING] 18:38:49:496 kernel/(4178:4243): El cliente se desconecto de KERNEL server
+[TRACE] 18:38:49:534 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:38:49:534 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 3 a la cola.
+[INFO] 18:38:49:534 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 3 de la cola.
+[INFO] 18:38:49:534 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 18:38:49:890 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:38:49:894 kernel/(4178:4245): El cliente socket es: 12
+[ERROR] 18:38:49:894 kernel/(4178:4245): El cliente socket es: 12
+[ERROR] 18:38:49:894 kernel/(4178:4245): El cliente socket es: 12
+[TRACE] 18:38:49:895 kernel/(4178:4245): El indice tabla de pagina es: 3
+[INFO] 18:38:49:895 kernel/(4178:4245): [NEW] Entra el proceso de PID: 4 a la cola.
+[TRACE] 18:38:59:535 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:38:59:536 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 3 a la cola.
+[TRACE] 18:39:09:579 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:39:09:580 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 3 de la cola.
+[INFO] 18:39:09:580 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 3 de la cola.
+[INFO] 18:39:09:581 kernel/(4178:4179): [READY] Entra el proceso de PID: 3 a la cola.
+[DEBUG] 18:39:09:581 kernel/(4178:4179): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:39:09:582 kernel/(4178:4245): DISCONNECT!
+[INFO] 18:39:09:582 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 4 de la cola
+[INFO] 18:39:09:582 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 3 , que era el primero que llego
+[TRACE] 18:39:09:584 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:39:09:584 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:39:09:585 kernel/(4178:4182): Despues del send interrupcion
+[WARNING] 18:39:09:586 kernel/(4178:4245): El cliente se desconecto de KERNEL server
+[INFO] 18:39:09:586 kernel/(4178:4181): [READY] Entra el proceso de PID: 4 a la cola.
+[DEBUG] 18:39:09:587 kernel/(4178:4181): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 18:39:09:626 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:39:09:626 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 3
+[INFO] 18:39:09:626 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 4 , que era el primero que llego
+[TRACE] 18:39:09:627 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:39:09:627 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:39:09:627 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:39:09:666 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:39:09:706 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 18:39:09:706 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 18:39:09:706 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:39:19:706 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:39:19:707 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 4 a la cola.
+[TRACE] 18:39:29:713 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:39:29:713 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 4 de la cola.
+[INFO] 18:39:29:714 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 4 de la cola.
+[INFO] 18:39:29:715 kernel/(4178:4179): [READY] Entra el proceso de PID: 4 a la cola.
+[DEBUG] 18:39:29:715 kernel/(4178:4179): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:39:29:716 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 4 , que era el primero que llego
+[TRACE] 18:39:29:717 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:39:29:718 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:39:29:719 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:39:29:754 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:39:29:754 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 4
+[INFO] 18:39:36:025 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:39:36:028 kernel/(4178:4262): El cliente socket es: 13
+[ERROR] 18:39:36:028 kernel/(4178:4262): El cliente socket es: 13
+[ERROR] 18:39:36:028 kernel/(4178:4262): El cliente socket es: 13
+[TRACE] 18:39:36:029 kernel/(4178:4262): El indice tabla de pagina es: 4
+[INFO] 18:39:36:029 kernel/(4178:4262): [NEW] Entra el proceso de PID: 5 a la cola.
+[INFO] 18:39:36:030 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 5 de la cola
+[INFO] 18:39:36:030 kernel/(4178:4181): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 18:39:36:030 kernel/(4178:4181): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:39:36:030 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 5 , que era el primero que llego
+[TRACE] 18:39:36:030 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:39:36:030 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:39:36:030 kernel/(4178:4182): Despues del send interrupcion
+[INFO] 18:39:36:030 kernel/(4178:4262): DISCONNECT!
+[WARNING] 18:39:36:030 kernel/(4178:4262): El cliente se desconecto de KERNEL server
+[TRACE] 18:39:36:070 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:39:36:070 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 18:39:36:071 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 18:39:36:071 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 18:39:36:435 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:39:36:438 kernel/(4178:4264): El cliente socket es: 14
+[ERROR] 18:39:36:438 kernel/(4178:4264): El cliente socket es: 14
+[ERROR] 18:39:36:438 kernel/(4178:4264): El cliente socket es: 14
+[TRACE] 18:39:36:439 kernel/(4178:4264): El indice tabla de pagina es: 5
+[INFO] 18:39:36:440 kernel/(4178:4264): [NEW] Entra el proceso de PID: 6 a la cola.
+[INFO] 18:39:36:810 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:39:36:814 kernel/(4178:4266): El cliente socket es: 15
+[ERROR] 18:39:36:814 kernel/(4178:4266): El cliente socket es: 15
+[ERROR] 18:39:36:814 kernel/(4178:4266): El cliente socket es: 15
+[TRACE] 18:39:36:854 kernel/(4178:4266): El indice tabla de pagina es: 6
+[INFO] 18:39:36:854 kernel/(4178:4266): [NEW] Entra el proceso de PID: 7 a la cola.
+[INFO] 18:39:37:178 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:39:37:181 kernel/(4178:4268): El cliente socket es: 16
+[ERROR] 18:39:37:182 kernel/(4178:4268): El cliente socket es: 16
+[ERROR] 18:39:37:182 kernel/(4178:4268): El cliente socket es: 16
+[TRACE] 18:39:37:223 kernel/(4178:4268): El indice tabla de pagina es: 7
+[INFO] 18:39:37:223 kernel/(4178:4268): [NEW] Entra el proceso de PID: 8 a la cola.
+[INFO] 18:39:37:507 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:39:37:510 kernel/(4178:4270): El cliente socket es: 17
+[ERROR] 18:39:37:510 kernel/(4178:4270): El cliente socket es: 17
+[ERROR] 18:39:37:510 kernel/(4178:4270): El cliente socket es: 17
+[TRACE] 18:39:37:550 kernel/(4178:4270): El indice tabla de pagina es: 8
+[INFO] 18:39:37:550 kernel/(4178:4270): [NEW] Entra el proceso de PID: 9 a la cola.
+[INFO] 18:39:37:762 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:39:37:766 kernel/(4178:4272): El cliente socket es: 18
+[ERROR] 18:39:37:766 kernel/(4178:4272): El cliente socket es: 18
+[ERROR] 18:39:37:766 kernel/(4178:4272): El cliente socket es: 18
+[TRACE] 18:39:37:807 kernel/(4178:4272): El indice tabla de pagina es: 9
+[INFO] 18:39:37:807 kernel/(4178:4272): [NEW] Entra el proceso de PID: 10 a la cola.
+[INFO] 18:39:37:938 kernel/(4178:4178): Cliente conectado (a KERNEL)
+
+[ERROR] 18:39:37:941 kernel/(4178:4274): El cliente socket es: 19
+[ERROR] 18:39:37:942 kernel/(4178:4274): El cliente socket es: 19
+[ERROR] 18:39:37:942 kernel/(4178:4274): El cliente socket es: 19
+[TRACE] 18:39:37:982 kernel/(4178:4274): El indice tabla de pagina es: 10
+[INFO] 18:39:37:985 kernel/(4178:4274): [NEW] Entra el proceso de PID: 11 a la cola.
+[TRACE] 18:39:46:071 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:39:46:071 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 5 a la cola.
+[TRACE] 18:39:56:119 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:39:56:120 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 5 de la cola.
+[INFO] 18:39:56:121 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 5 de la cola.
+[INFO] 18:39:56:121 kernel/(4178:4264): DISCONNECT!
+[INFO] 18:39:56:121 kernel/(4178:4266): DISCONNECT!
+[INFO] 18:39:56:121 kernel/(4178:4268): DISCONNECT!
+[INFO] 18:39:56:121 kernel/(4178:4270): DISCONNECT!
+[INFO] 18:39:56:122 kernel/(4178:4272): DISCONNECT!
+[INFO] 18:39:56:122 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 6 de la cola
+[INFO] 18:39:56:122 kernel/(4178:4179): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 18:39:56:122 kernel/(4178:4179): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:39:56:123 kernel/(4178:4274): DISCONNECT!
+[INFO] 18:39:56:124 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 5 , que era el primero que llego
+[TRACE] 18:39:56:125 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:39:56:125 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:39:56:126 kernel/(4178:4182): Despues del send interrupcion
+[WARNING] 18:39:56:130 kernel/(4178:4274): El cliente se desconecto de KERNEL server
+[WARNING] 18:39:56:130 kernel/(4178:4266): El cliente se desconecto de KERNEL server
+[WARNING] 18:39:56:132 kernel/(4178:4272): El cliente se desconecto de KERNEL server
+[WARNING] 18:39:56:132 kernel/(4178:4270): El cliente se desconecto de KERNEL server
+[INFO] 18:39:56:133 kernel/(4178:4181): [READY] Entra el proceso de PID: 6 a la cola.
+[DEBUG] 18:39:56:133 kernel/(4178:4181): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 18:39:56:134 kernel/(4178:4268): El cliente se desconecto de KERNEL server
+[WARNING] 18:39:56:134 kernel/(4178:4264): El cliente se desconecto de KERNEL server
+[INFO] 18:39:56:134 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 7 de la cola
+[INFO] 18:39:56:137 kernel/(4178:4181): [READY] Entra el proceso de PID: 7 a la cola.
+[DEBUG] 18:39:56:142 kernel/(4178:4181): [----------------PROCESOS EN READY: 2 --------------------]
+
+[INFO] 18:39:56:143 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 8 de la cola
+[INFO] 18:39:56:143 kernel/(4178:4181): [READY] Entra el proceso de PID: 8 a la cola.
+[DEBUG] 18:39:56:143 kernel/(4178:4181): [----------------PROCESOS EN READY: 3 --------------------]
+
+[INFO] 18:39:56:144 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 9 de la cola
+[TRACE] 18:39:56:163 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:39:56:163 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 5
+[INFO] 18:39:56:163 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 6 , que era el primero que llego
+[INFO] 18:39:56:164 kernel/(4178:4181): [READY] Entra el proceso de PID: 9 a la cola.
+[TRACE] 18:39:56:164 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:39:56:164 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:39:56:164 kernel/(4178:4182): Despues del send interrupcion
+[DEBUG] 18:39:56:164 kernel/(4178:4181): [----------------PROCESOS EN READY: 3 --------------------]
+
+[INFO] 18:39:56:165 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 10 de la cola
+[TRACE] 18:39:56:202 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:39:56:242 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 6 a la cola.
+[INFO] 18:39:56:242 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 6 de la cola.
+[INFO] 18:39:56:242 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:40:06:242 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:40:06:243 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 6 a la cola.
+[TRACE] 18:40:16:249 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:40:16:250 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 6 de la cola.
+[INFO] 18:40:16:250 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 6 de la cola.
+[INFO] 18:40:16:250 kernel/(4178:4181): [READY] Entra el proceso de PID: 10 a la cola.
+[DEBUG] 18:40:16:251 kernel/(4178:4181): [----------------PROCESOS EN READY: 4 --------------------]
+
+[INFO] 18:40:16:251 kernel/(4178:4181): [NEW] Se saca el proceso de PID: 11 de la cola
+[INFO] 18:40:16:252 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 7 , que era el primero que llego
+[TRACE] 18:40:16:254 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:40:16:255 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:40:16:255 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:40:16:299 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:40:16:302 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 7 a la cola.
+[INFO] 18:40:16:302 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 7 de la cola.
+[INFO] 18:40:16:302 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:40:26:303 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:40:26:303 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 7 a la cola.
+[TRACE] 18:40:36:310 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:40:36:310 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 7 de la cola.
+[INFO] 18:40:36:310 kernel/(4178:4179): [READY] Entra el proceso de PID: 6 a la cola.
+[DEBUG] 18:40:36:310 kernel/(4178:4179): [----------------PROCESOS EN READY: 4 --------------------]
+
+[INFO] 18:40:36:311 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 7 de la cola.
+[INFO] 18:40:36:311 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 8 , que era el primero que llego
+[TRACE] 18:40:36:312 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:40:36:312 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:40:36:313 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:40:36:354 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:40:36:354 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 8 a la cola.
+[INFO] 18:40:36:354 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 8 de la cola.
+[INFO] 18:40:36:354 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:40:46:355 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:40:46:356 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 8 a la cola.
+[TRACE] 18:40:56:362 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:40:56:362 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 8 de la cola.
+[INFO] 18:40:56:363 kernel/(4178:4181): [READY] Entra el proceso de PID: 11 a la cola.
+[DEBUG] 18:40:56:363 kernel/(4178:4181): [----------------PROCESOS EN READY: 4 --------------------]
+
+[INFO] 18:40:56:364 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 9 , que era el primero que llego
+[TRACE] 18:40:56:365 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:40:56:366 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:40:56:367 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:40:56:407 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:40:56:407 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 9 a la cola.
+[INFO] 18:40:56:407 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 9 de la cola.
+[INFO] 18:40:56:407 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:41:06:407 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:41:06:408 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 9 a la cola.
+[TRACE] 18:41:16:415 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:41:16:415 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 9 de la cola.
+[INFO] 18:41:16:416 kernel/(4178:4179): [READY] Entra el proceso de PID: 7 a la cola.
+[DEBUG] 18:41:16:416 kernel/(4178:4179): [----------------PROCESOS EN READY: 4 --------------------]
+
+[INFO] 18:41:16:417 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 8 de la cola.
+[INFO] 18:41:16:417 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 10 , que era el primero que llego
+[TRACE] 18:41:16:419 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:41:16:419 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:41:16:420 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:41:16:462 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:41:16:462 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 10 a la cola.
+[INFO] 18:41:16:462 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 10 de la cola.
+[INFO] 18:41:16:462 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:41:26:462 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:41:26:462 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 10 a la cola.
+[TRACE] 18:41:36:466 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:41:36:466 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 10 de la cola.
+[INFO] 18:41:36:467 kernel/(4178:4179): [READY] Entra el proceso de PID: 8 a la cola.
+[DEBUG] 18:41:36:467 kernel/(4178:4179): [----------------PROCESOS EN READY: 4 --------------------]
+
+[INFO] 18:41:36:467 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 9 de la cola.
+[INFO] 18:41:36:467 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 6 , que era el primero que llego
+[TRACE] 18:41:36:468 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:41:36:468 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:41:36:469 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:41:36:508 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:41:36:508 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 6
+[INFO] 18:41:36:508 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 11 , que era el primero que llego
+[INFO] 18:41:36:509 kernel/(4178:4179): [READY] Entra el proceso de PID: 9 a la cola.
+[TRACE] 18:41:36:509 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:41:36:509 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:41:36:509 kernel/(4178:4182): Despues del send interrupcion
+[DEBUG] 18:41:36:509 kernel/(4178:4179): [----------------PROCESOS EN READY: 3 --------------------]
+
+[INFO] 18:41:36:510 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 10 de la cola.
+[TRACE] 18:41:36:546 kernel/(4178:4182): El PC despues del recv es: 1
+[INFO] 18:41:36:585 kernel/(4178:4182): [BLOCK] Entra el proceso de PID: 11 a la cola.
+[INFO] 18:41:36:585 kernel/(4178:4180): [BLOCK] Sale el proceso de PID: 11 de la cola.
+[INFO] 18:41:36:585 kernel/(4178:4180): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:41:46:586 kernel/(4178:4180): Entre en agregar a block suspended
+[INFO] 18:41:46:587 kernel/(4178:4180): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 11 a la cola.
+[TRACE] 18:41:56:593 kernel/(4178:4180): Memoria termino de meter a swap al proceso
+[INFO] 18:41:56:593 kernel/(4178:4180): [READY-SUSPENDED] Ingresa el proceso de PID: 11 de la cola.
+[INFO] 18:41:56:594 kernel/(4178:4179): [READY] Entra el proceso de PID: 10 a la cola.
+[DEBUG] 18:41:56:594 kernel/(4178:4179): [----------------PROCESOS EN READY: 4 --------------------]
+
+[INFO] 18:41:56:595 kernel/(4178:4179): [READY-SUSPENDED] Sale el proceso de PID: 11 de la cola.
+[INFO] 18:41:56:595 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 7 , que era el primero que llego
+[TRACE] 18:41:56:597 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:41:56:597 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:41:56:597 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:41:56:641 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:41:56:641 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 7
+[INFO] 18:41:56:641 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 8 , que era el primero que llego
+[INFO] 18:41:56:641 kernel/(4178:4179): [READY] Entra el proceso de PID: 11 a la cola.
+[DEBUG] 18:41:56:641 kernel/(4178:4179): [----------------PROCESOS EN READY: 3 --------------------]
+
+[TRACE] 18:41:56:642 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:41:56:642 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:41:56:642 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:41:56:682 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:41:56:721 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 8
+[INFO] 18:41:56:722 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 9 , que era el primero que llego
+[TRACE] 18:41:56:722 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:41:56:722 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:41:56:722 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:41:56:762 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:41:56:802 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 9
+[INFO] 18:41:56:802 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 10 , que era el primero que llego
+[TRACE] 18:41:56:802 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:41:56:802 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:41:56:802 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:41:56:842 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:41:56:882 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 10
+[INFO] 18:41:56:882 kernel/(4178:4182): [EXEC] Ingresa el proceso de PID: 11 , que era el primero que llego
+[TRACE] 18:41:56:882 kernel/(4178:4182): La cant de instrucciones en la lista: 2
+[DEBUG] 18:41:56:882 kernel/(4178:4182): Antes del send interrupcion
+[DEBUG] 18:41:56:882 kernel/(4178:4182): Despues del send interrupcion
+[TRACE] 18:41:56:922 kernel/(4178:4182): El PC despues del recv es: 2
+[INFO] 18:41:56:962 kernel/(4178:4182): [EXIT] Finaliza el proceso de PID: 11
+[INFO] 18:44:44:798 kernel/(4441:4441): El algoritmo de planificacion elegido es FIFO.
+[INFO] 18:44:44:814 kernel/(4441:4441): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:44:44:814 kernel/(4441:4441): El socket fd_kernel : 4
+[INFO] 18:44:44:815 kernel/(4441:4441): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 18:44:44:815 kernel/(4441:4441): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:44:44:815 kernel/(4441:4441): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 18:44:55:844 kernel/(4441:4441): Cliente conectado (a KERNEL)
+
+[ERROR] 18:44:55:847 kernel/(4441:4454): El cliente socket es: 9
+[ERROR] 18:44:55:848 kernel/(4441:4454): El cliente socket es: 9
+[ERROR] 18:44:55:848 kernel/(4441:4454): El cliente socket es: 9
+[TRACE] 18:44:55:849 kernel/(4441:4454): El indice tabla de pagina es: 0
+[INFO] 18:44:55:849 kernel/(4441:4454): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 18:44:55:849 kernel/(4441:4444): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 18:44:55:849 kernel/(4441:4444): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 18:44:55:849 kernel/(4441:4444): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:44:55:849 kernel/(4441:4445): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 18:44:55:850 kernel/(4441:4445): La cant de instrucciones en la lista: 2
+[DEBUG] 18:44:55:850 kernel/(4441:4445): Antes del send interrupcion
+[DEBUG] 18:44:55:850 kernel/(4441:4445): Despues del send interrupcion
+[TRACE] 18:44:55:851 kernel/(4441:4445): El PC despues del recv es: 1
+[INFO] 18:44:55:851 kernel/(4441:4445): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 18:44:55:851 kernel/(4441:4443): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 18:44:55:851 kernel/(4441:4443): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 18:44:55:851 kernel/(4441:4454): DISCONNECT!
+[WARNING] 18:44:55:851 kernel/(4441:4454): El cliente se desconecto de KERNEL server
+[INFO] 18:45:00:291 kernel/(4441:4441): Cliente conectado (a KERNEL)
+
+[ERROR] 18:45:00:294 kernel/(4441:4456): El cliente socket es: 10
+[ERROR] 18:45:00:294 kernel/(4441:4456): El cliente socket es: 10
+[ERROR] 18:45:00:295 kernel/(4441:4456): El cliente socket es: 10
+[ERROR] 18:45:00:295 kernel/(4441:4456): El cliente socket es: 10
+[TRACE] 18:45:00:296 kernel/(4441:4456): El indice tabla de pagina es: 1
+[INFO] 18:45:00:296 kernel/(4441:4456): [NEW] Entra el proceso de PID: 2 a la cola.
+[TRACE] 18:45:05:851 kernel/(4441:4443): Entre en agregar a block suspended
+[INFO] 18:45:05:851 kernel/(4441:4443): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 18:45:21:895 kernel/(4441:4443): Memoria termino de meter a swap al proceso
+[INFO] 18:45:21:896 kernel/(4441:4443): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 18:45:21:897 kernel/(4441:4442): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 18:45:21:897 kernel/(4441:4442): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 18:45:21:898 kernel/(4441:4442): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:45:21:898 kernel/(4441:4456): DISCONNECT!
+[INFO] 18:45:21:898 kernel/(4441:4444): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 18:45:21:899 kernel/(4441:4445): [EXEC] Ingresa el proceso de PID: 1 , que era el primero que llego
+[TRACE] 18:45:21:901 kernel/(4441:4445): La cant de instrucciones en la lista: 2
+[DEBUG] 18:45:21:901 kernel/(4441:4445): Antes del send interrupcion
+[DEBUG] 18:45:21:901 kernel/(4441:4445): Despues del send interrupcion
+[WARNING] 18:45:21:902 kernel/(4441:4456): El cliente se desconecto de KERNEL server
+[INFO] 18:45:21:903 kernel/(4441:4444): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 18:45:21:903 kernel/(4441:4444): [----------------PROCESOS EN READY: 1 --------------------]
+
+[TRACE] 18:45:21:942 kernel/(4441:4445): El PC despues del recv es: 2
+[INFO] 18:45:21:943 kernel/(4441:4445): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 18:45:21:943 kernel/(4441:4445): [EXEC] Ingresa el proceso de PID: 2 , que era el primero que llego
+[TRACE] 18:45:21:943 kernel/(4441:4445): La cant de instrucciones en la lista: 3
+[DEBUG] 18:45:21:943 kernel/(4441:4445): Antes del send interrupcion
+[DEBUG] 18:45:21:943 kernel/(4441:4445): Despues del send interrupcion
+[TRACE] 18:45:27:010 kernel/(4441:4445): El PC despues del recv es: 3
+[INFO] 18:45:27:049 kernel/(4441:4445): [EXIT] Finaliza el proceso de PID: 2
+[INFO] 18:49:13:157 kernel/(4441:4441): Cliente conectado (a KERNEL)
+
+[ERROR] 18:49:13:160 kernel/(4441:4557): El cliente socket es: 11
+[ERROR] 18:49:13:160 kernel/(4441:4557): El cliente socket es: 11
+[ERROR] 18:49:13:161 kernel/(4441:4557): El cliente socket es: 11
+[ERROR] 18:49:13:161 kernel/(4441:4557): El cliente socket es: 11
+[TRACE] 18:49:13:162 kernel/(4441:4557): El indice tabla de pagina es: 2
+[INFO] 18:49:13:162 kernel/(4441:4557): [NEW] Entra el proceso de PID: 3 a la cola.
+[INFO] 18:49:13:162 kernel/(4441:4444): [NEW] Se saca el proceso de PID: 3 de la cola
+[INFO] 18:49:13:162 kernel/(4441:4444): [READY] Entra el proceso de PID: 3 a la cola.
+[DEBUG] 18:49:13:162 kernel/(4441:4444): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:49:13:162 kernel/(4441:4445): [EXEC] Ingresa el proceso de PID: 3 , que era el primero que llego
+[TRACE] 18:49:13:163 kernel/(4441:4445): La cant de instrucciones en la lista: 3
+[DEBUG] 18:49:13:163 kernel/(4441:4445): Antes del send interrupcion
+[DEBUG] 18:49:13:163 kernel/(4441:4445): Despues del send interrupcion
+[INFO] 18:49:13:163 kernel/(4441:4557): DISCONNECT!
+[WARNING] 18:49:13:164 kernel/(4441:4557): El cliente se desconecto de KERNEL server
+[INFO] 18:49:14:773 kernel/(4441:4441): Cliente conectado (a KERNEL)
+
+[ERROR] 18:49:14:776 kernel/(4441:4559): El cliente socket es: 12
+[ERROR] 18:49:14:776 kernel/(4441:4559): El cliente socket es: 12
+[ERROR] 18:49:14:777 kernel/(4441:4559): El cliente socket es: 12
+[ERROR] 18:49:14:777 kernel/(4441:4559): El cliente socket es: 12
+[TRACE] 18:49:14:778 kernel/(4441:4559): El indice tabla de pagina es: 3
+[INFO] 18:49:14:778 kernel/(4441:4559): [NEW] Entra el proceso de PID: 4 a la cola.
+[INFO] 18:49:14:778 kernel/(4441:4444): [NEW] Se saca el proceso de PID: 4 de la cola
+[INFO] 18:49:14:778 kernel/(4441:4444): [READY] Entra el proceso de PID: 4 a la cola.
+[DEBUG] 18:49:14:778 kernel/(4441:4444): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:49:14:778 kernel/(4441:4559): DISCONNECT!
+[WARNING] 18:49:14:778 kernel/(4441:4559): El cliente se desconecto de KERNEL server
+[INFO] 18:49:16:430 kernel/(4441:4441): Cliente conectado (a KERNEL)
+
+[ERROR] 18:49:16:433 kernel/(4441:4562): El cliente socket es: 13
+[ERROR] 18:49:16:433 kernel/(4441:4562): El cliente socket es: 13
+[ERROR] 18:49:16:434 kernel/(4441:4562): El cliente socket es: 13
+[TRACE] 18:49:16:435 kernel/(4441:4562): El indice tabla de pagina es: 4
+[INFO] 18:49:16:435 kernel/(4441:4562): [NEW] Entra el proceso de PID: 5 a la cola.
+[INFO] 18:49:16:435 kernel/(4441:4444): [NEW] Se saca el proceso de PID: 5 de la cola
+[INFO] 18:49:16:435 kernel/(4441:4444): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 18:49:16:435 kernel/(4441:4444): [----------------PROCESOS EN READY: 2 --------------------]
+
+[INFO] 18:49:16:435 kernel/(4441:4562): DISCONNECT!
+[WARNING] 18:49:16:435 kernel/(4441:4562): El cliente se desconecto de KERNEL server
+[TRACE] 18:49:18:188 kernel/(4441:4445): El PC despues del recv es: 3
+[INFO] 18:49:18:190 kernel/(4441:4445): [EXIT] Finaliza el proceso de PID: 3
+[INFO] 18:49:18:190 kernel/(4441:4445): [EXEC] Ingresa el proceso de PID: 4 , que era el primero que llego
+[TRACE] 18:49:18:194 kernel/(4441:4445): La cant de instrucciones en la lista: 3
+[DEBUG] 18:49:18:195 kernel/(4441:4445): Antes del send interrupcion
+[DEBUG] 18:49:18:195 kernel/(4441:4445): Despues del send interrupcion
+[TRACE] 18:49:23:222 kernel/(4441:4445): El PC despues del recv es: 3
+[INFO] 18:49:23:262 kernel/(4441:4445): [EXIT] Finaliza el proceso de PID: 4
+[INFO] 18:49:23:262 kernel/(4441:4445): [EXEC] Ingresa el proceso de PID: 5 , que era el primero que llego
+[TRACE] 18:49:23:262 kernel/(4441:4445): La cant de instrucciones en la lista: 2
+[DEBUG] 18:49:23:263 kernel/(4441:4445): Antes del send interrupcion
+[DEBUG] 18:49:23:263 kernel/(4441:4445): Despues del send interrupcion
+[TRACE] 18:49:23:263 kernel/(4441:4445): El PC despues del recv es: 1
+[INFO] 18:49:23:301 kernel/(4441:4445): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 18:49:23:301 kernel/(4441:4443): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 18:49:23:302 kernel/(4441:4443): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 18:49:33:302 kernel/(4441:4443): Entre en agregar a block suspended
+[INFO] 18:49:33:302 kernel/(4441:4443): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 5 a la cola.
+[TRACE] 18:49:49:314 kernel/(4441:4443): Memoria termino de meter a swap al proceso
+[INFO] 18:49:49:314 kernel/(4441:4443): [READY-SUSPENDED] Ingresa el proceso de PID: 5 de la cola.
+[INFO] 18:49:49:315 kernel/(4441:4442): [READY-SUSPENDED] Sale el proceso de PID: 5 de la cola.
+[INFO] 18:49:49:315 kernel/(4441:4442): [READY] Entra el proceso de PID: 5 a la cola.
+[DEBUG] 18:49:49:316 kernel/(4441:4442): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:49:49:316 kernel/(4441:4445): [EXEC] Ingresa el proceso de PID: 5 , que era el primero que llego
+[TRACE] 18:49:49:320 kernel/(4441:4445): La cant de instrucciones en la lista: 2
+[DEBUG] 18:49:49:320 kernel/(4441:4445): Antes del send interrupcion
+[DEBUG] 18:49:49:321 kernel/(4441:4445): Despues del send interrupcion
+[TRACE] 18:49:49:354 kernel/(4441:4445): El PC despues del recv es: 2
+[INFO] 18:49:49:354 kernel/(4441:4445): [EXIT] Finaliza el proceso de PID: 5
+[INFO] 18:54:02:445 kernel/(4944:4944): El algoritmo de planificacion elegido es SRT.
+[INFO] 18:54:02:445 kernel/(4944:4944): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:54:02:445 kernel/(4944:4944): El socket fd_kernel : 4
+[INFO] 18:54:02:446 kernel/(4944:4944): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 18:54:02:447 kernel/(4944:4944): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:54:02:447 kernel/(4944:4944): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 18:54:05:677 kernel/(4944:4944): Cliente conectado (a KERNEL)
+
+[ERROR] 18:54:05:680 kernel/(4944:4952): El cliente socket es: 9
+[ERROR] 18:54:05:680 kernel/(4944:4952): El cliente socket es: 9
+[ERROR] 18:54:05:680 kernel/(4944:4952): El cliente socket es: 9
+[TRACE] 18:54:05:682 kernel/(4944:4952): El indice tabla de pagina es: 0
+[INFO] 18:54:05:682 kernel/(4944:4952): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 18:54:05:682 kernel/(4944:4947): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 18:54:05:682 kernel/(4944:4947): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 18:54:05:682 kernel/(4944:4947): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 18:54:05:682 kernel/(4944:4948): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 18:54:05:682 kernel/(4944:4948): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 18:54:05:683 kernel/(4944:4948): La cant de instrucciones en la lista: 2
+[DEBUG] 18:54:05:683 kernel/(4944:4948): Antes del send interrupcion
+[DEBUG] 18:54:05:683 kernel/(4944:4948): Despues del send interrupcion
+[TRACE] 18:54:05:683 kernel/(4944:4948): El PC despues del recv es: 1
+[INFO] 18:54:05:683 kernel/(4944:4948): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 18:54:05:684 kernel/(4944:4946): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 18:54:05:684 kernel/(4944:4946): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 18:54:05:684 kernel/(4944:4952): DISCONNECT!
+[WARNING] 18:54:05:684 kernel/(4944:4952): El cliente se desconecto de KERNEL server
+[INFO] 18:54:14:757 kernel/(4944:4944): Cliente conectado (a KERNEL)
+
+[ERROR] 18:54:14:761 kernel/(4944:4956): El cliente socket es: 10
+[ERROR] 18:54:14:761 kernel/(4944:4956): El cliente socket es: 10
+[ERROR] 18:54:14:761 kernel/(4944:4956): El cliente socket es: 10
+[ERROR] 18:54:14:761 kernel/(4944:4956): El cliente socket es: 10
+[TRACE] 18:54:14:762 kernel/(4944:4956): El indice tabla de pagina es: 1
+[INFO] 18:54:14:763 kernel/(4944:4956): [NEW] Entra el proceso de PID: 2 a la cola.
+[TRACE] 18:54:15:684 kernel/(4944:4946): Entre en agregar a block suspended
+[INFO] 18:54:15:685 kernel/(4944:4946): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 18:54:31:734 kernel/(4944:4946): Memoria termino de meter a swap al proceso
+[INFO] 18:54:31:735 kernel/(4944:4946): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 18:54:31:735 kernel/(4944:4945): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 18:54:31:735 kernel/(4944:4945): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 18:54:31:736 kernel/(4944:4945): [----------------PROCESOS EN READY: 1 --------------------]
+
+[INFO] 18:54:31:736 kernel/(4944:4956): DISCONNECT!
+[INFO] 18:54:31:736 kernel/(4944:4947): [NEW] Se saca el proceso de PID: 2 de la cola
+[WARNING] 18:54:31:737 kernel/(4944:4948): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 18:54:31:738 kernel/(4944:4948): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 18:54:31:740 kernel/(4944:4948): La cant de instrucciones en la lista: 2
+[DEBUG] 18:54:31:740 kernel/(4944:4948): Antes del send interrupcion
+[INFO] 18:54:31:741 kernel/(4944:4947): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 18:54:31:741 kernel/(4944:4947): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 18:54:31:741 kernel/(4944:4947): Envio una interrupcion
+[WARNING] 18:54:31:742 kernel/(4944:4956): El cliente se desconecto de KERNEL server
+[DEBUG] 18:54:31:743 kernel/(4944:4948): Despues del send interrupcion
+[TRACE] 18:54:31:782 kernel/(4944:4948): El PC despues del recv es: 2
+[INFO] 18:54:31:783 kernel/(4944:4948): [EXIT] Finaliza el proceso de PID: 1
+[WARNING] 18:54:31:783 kernel/(4944:4948): El proceso 2 fue elegido mediante el algoritmo SRT: 
+[INFO] 18:54:31:783 kernel/(4944:4948): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 18:54:31:783 kernel/(4944:4948): La cant de instrucciones en la lista: 3
+[DEBUG] 18:54:31:783 kernel/(4944:4948): Antes del send interrupcion
+[DEBUG] 18:54:31:783 kernel/(4944:4948): Despues del send interrupcion
+[TRACE] 18:54:36:844 kernel/(4944:4948): El PC despues del recv es: 3
+[INFO] 18:54:36:881 kernel/(4944:4948): [EXIT] Finaliza el proceso de PID: 2
+[INFO] 18:59:17:253 kernel/(5017:5017): El algoritmo de planificacion elegido es SRT.
+[INFO] 18:59:17:254 kernel/(5017:5017): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 18:59:17:254 kernel/(5017:5017): El socket fd_kernel : 4
+[INFO] 18:59:17:255 kernel/(5017:5017): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 18:59:17:255 kernel/(5017:5017): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 18:59:17:256 kernel/(5017:5017): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 18:59:31:766 kernel/(5017:5017): Cliente conectado (a KERNEL)
+
+[ERROR] 18:59:31:770 kernel/(5017:5025): El cliente socket es: 9
+[ERROR] 18:59:31:770 kernel/(5017:5025): El cliente socket es: 9
+[ERROR] 18:59:31:770 kernel/(5017:5025): El cliente socket es: 9
+[ERROR] 18:59:31:771 kernel/(5017:5025): El cliente socket es: 9
+[TRACE] 18:59:31:772 kernel/(5017:5025): El indice tabla de pagina es: 0
+[INFO] 18:59:31:772 kernel/(5017:5025): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 18:59:31:772 kernel/(5017:5020): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 18:59:31:772 kernel/(5017:5020): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 18:59:31:772 kernel/(5017:5020): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 18:59:31:772 kernel/(5017:5021): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 18:59:31:772 kernel/(5017:5021): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 18:59:31:773 kernel/(5017:5021): La cant de instrucciones en la lista: 3
+[DEBUG] 18:59:31:773 kernel/(5017:5021): Antes del send interrupcion
+[DEBUG] 18:59:31:773 kernel/(5017:5021): Despues del send interrupcion
+[INFO] 18:59:31:773 kernel/(5017:5025): DISCONNECT!
+[WARNING] 18:59:31:774 kernel/(5017:5025): El cliente se desconecto de KERNEL server
+[TRACE] 18:59:36:796 kernel/(5017:5021): El PC despues del recv es: 3
+[INFO] 18:59:36:798 kernel/(5017:5021): [EXIT] Finaliza el proceso de PID: 1
