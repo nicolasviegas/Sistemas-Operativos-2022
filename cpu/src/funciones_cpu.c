@@ -542,6 +542,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 					log_info(log_cpu,"[EXE] ejecuto EXIT");
 				 //log_trace(log_cpu,"Finalizo el proceso");
 				 pcb->PC += 1;
+				 //remover proceso de mem principal
 				break;
 			}
 

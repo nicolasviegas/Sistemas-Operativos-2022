@@ -12,6 +12,7 @@ void crear_archivo_swap(uint32_t indice_tabla){ //TODO
 
 void escribir_en_swap(uint32_t indice_archivo_swap,uint32_t frame){
 	usleep(retardo_swap * 1000);
+	log_debug(log_memoria,"Escribiendo en swap...");
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
 }
 
@@ -21,7 +22,7 @@ void traer_de_swap(uint32_t indice_archivo_swap,uint32_t frame){
 }
 
 
-void pasar_proceso_a_swap(uint32_t indice_tabla){ // chequear en entorno controlado
+void pasar_proceso_a_swap(uint32_t indice_tabla){
 	t_list * tabla_primer_nivel_buscada = list_get(lista_tablas_1er_nivel,indice_tabla);
 	uint32_t entrada_primer_nivel_aux;
 	t_list * tabla_segundo_nivel_aux = list_create();
@@ -39,6 +40,6 @@ void pasar_proceso_a_swap(uint32_t indice_tabla){ // chequear en entorno control
 	for(int k=0;k < list_size(paginas_del_proceso);k++){
 		pagina_aux = list_get(paginas_del_proceso,k);
 		escribir_en_swap(indice_tabla,pagina_aux->frame);
-		liberar_memoria(pagina_aux->frame); // todo falta hacer
+		liberar_memoria(pagina_aux->frame);
 	}
 }

@@ -12,12 +12,7 @@
 uint32_t asignar_tabla_1er_nivel_a_proceso(t_list* tabla_1er_nivel){ // Devuelve el numero de tabla que se le asiga al proceso, o -1 si no hay mas lugar para entradas
 	//t_list* nueva_entrada = list_create();
 	uint32_t a;
-	if(cant_entradas_por_tabla >= list_size(lista_tablas_1er_nivel)){
-		 a = list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
-	}
-	else{
-		a = -1;
-	}
+	a = list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
 	//list_clean_and_destroy_elements(nueva_entrada,free);
 	//list_destroy(nueva_entrada);
 	return a;

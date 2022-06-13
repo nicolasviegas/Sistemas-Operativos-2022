@@ -313,7 +313,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				}
 				log_trace(log_memoria,"Meto a swap al proceso es: %d",indice_proceso);
 
+
 //todo a partir de aca memoria va a trabajar con swap
+				pasar_proceso_a_swap(indice_proceso);
 
     		}
 
@@ -330,6 +332,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 
 			}
+
 
 
 
