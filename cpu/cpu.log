@@ -56386,3 +56386,260 @@
 [INFO] 19:53:59:862 cpu/(7147:7155): [EXE] ejecuto EXIT
 [DEBUG] 19:53:59:862 cpu/(7147:7155): El pc antes de send a kernel es: 2
 [TRACE] 19:53:59:863 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 19:56:31:767 cpu/(7147:7155): El pid recibido es: 2
+[DEBUG] 19:56:31:806 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:56:31:806 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:56:31:806 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 19:56:31:806 cpu/(7147:7155): [EXE] ejecuto IO
+[WARNING] 19:56:31:806 cpu/(7147:7155): El tiempo bloqueante es: 11000
+[DEBUG] 19:56:31:806 cpu/(7147:7155): El pc antes de send a kernel es: 1
+[TRACE] 19:56:31:806 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 2 
+[TRACE] 19:56:57:863 cpu/(7147:7155): El pid recibido es: 3
+[DEBUG] 19:56:57:902 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:56:57:902 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:56:57:902 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 19:56:57:902 cpu/(7147:7155): [EXE] ejecuto IO
+[WARNING] 19:56:57:903 cpu/(7147:7155): El tiempo bloqueante es: 11000
+[DEBUG] 19:56:57:903 cpu/(7147:7155): El pc antes de send a kernel es: 1
+[TRACE] 19:56:57:903 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 3 
+[TRACE] 19:57:23:915 cpu/(7147:7155): El pid recibido es: 2
+[DEBUG] 19:57:23:954 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:57:23:954 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:57:23:954 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 19:57:23:954 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 19:57:23:954 cpu/(7147:7155): El pc antes de send a kernel es: 2
+[TRACE] 19:57:23:955 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 2 
+[TRACE] 19:57:23:959 cpu/(7147:7155): El pid recibido es: 4
+[DEBUG] 19:57:23:998 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:57:23:998 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:57:23:998 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 19:57:23:998 cpu/(7147:7155): [EXE] ejecuto IO
+[WARNING] 19:57:23:998 cpu/(7147:7155): El tiempo bloqueante es: 11000
+[DEBUG] 19:57:23:998 cpu/(7147:7155): El pc antes de send a kernel es: 1
+[TRACE] 19:57:23:998 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 4 
+[TRACE] 19:57:50:051 cpu/(7147:7155): El pid recibido es: 3
+[DEBUG] 19:57:50:090 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:57:50:090 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:57:50:090 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 19:57:50:090 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 19:57:50:090 cpu/(7147:7155): El pc antes de send a kernel es: 2
+[TRACE] 19:57:50:091 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 3 
+[TRACE] 19:57:50:094 cpu/(7147:7155): El pid recibido es: 5
+[DEBUG] 19:57:50:134 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:57:50:134 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:57:50:134 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 19:57:50:134 cpu/(7147:7155): [EXE] ejecuto IO
+[WARNING] 19:57:50:134 cpu/(7147:7155): El tiempo bloqueante es: 11000
+[DEBUG] 19:57:50:134 cpu/(7147:7155): El pc antes de send a kernel es: 1
+[TRACE] 19:57:50:134 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 5 
+[TRACE] 19:58:16:190 cpu/(7147:7155): El pid recibido es: 4
+[DEBUG] 19:58:16:234 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:58:16:234 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:58:16:234 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 19:58:16:234 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 19:58:16:234 cpu/(7147:7155): El pc antes de send a kernel es: 2
+[TRACE] 19:58:16:235 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 4 
+[TRACE] 19:58:24:202 cpu/(7147:7155): El pid recibido es: 5
+[DEBUG] 19:58:24:245 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:58:24:246 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:58:24:246 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 19:58:24:246 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 19:58:24:246 cpu/(7147:7155): El pc antes de send a kernel es: 2
+[TRACE] 19:58:24:246 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 5 
+[TRACE] 19:59:06:879 cpu/(7147:7155): El pid recibido es: 6
+[DEBUG] 19:59:06:918 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:59:06:918 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:59:06:918 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 19:59:06:918 cpu/(7147:7155): [EXE] ejecuto IO
+[WARNING] 19:59:06:919 cpu/(7147:7155): El tiempo bloqueante es: 11000
+[DEBUG] 19:59:06:919 cpu/(7147:7155): El pc antes de send a kernel es: 1
+[TRACE] 19:59:06:919 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 6 
+[TRACE] 19:59:32:974 cpu/(7147:7155): El pid recibido es: 7
+[DEBUG] 19:59:33:013 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:59:33:014 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:59:33:014 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 19:59:33:014 cpu/(7147:7155): [EXE] ejecuto IO
+[WARNING] 19:59:33:014 cpu/(7147:7155): El tiempo bloqueante es: 11000
+[DEBUG] 19:59:33:014 cpu/(7147:7155): El pc antes de send a kernel es: 1
+[TRACE] 19:59:33:014 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 7 
+[TRACE] 19:59:59:034 cpu/(7147:7155): El pid recibido es: 6
+[DEBUG] 19:59:59:078 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 19:59:59:078 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:59:59:078 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 19:59:59:078 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 19:59:59:078 cpu/(7147:7155): El pc antes de send a kernel es: 2
+[TRACE] 19:59:59:078 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 6 
+[TRACE] 19:59:59:079 cpu/(7147:7155): El pid recibido es: 8
+[INFO] 19:59:59:122 cpu/(7147:7155): Me llego la instruccion READ
+[DEBUG] 19:59:59:122 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 3
+[TRACE] 19:59:59:122 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 19:59:59:122 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 19:59:59:122 cpu/(7147:7155): [EXE] ejecuto NO_OP
+[WARNING] 20:00:04:124 cpu/(7147:7155): Termine NO_OP
+[TRACE] 20:00:04:125 cpu/(7147:7155): El PC es: 1
+[TRACE] 20:00:04:126 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:00:04:126 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 20:00:04:127 cpu/(7147:7155): [EXE] ejecuto READ
+[DEBUG] 20:00:04:127 cpu/(7147:7155): El numero de paginas es 4
+[WARNING] 20:00:04:128 cpu/(7147:7155): pase el list find
+[TRACE] 20:00:04:129 cpu/(7147:7155): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 20:00:04:131 cpu/(7147:7155): El indice tabla pagina 7
+[ERROR] 20:00:04:133 cpu/(7147:7155): La entrada de 1er nivel es: 1
+[ERROR] 20:00:04:134 cpu/(7147:7155): el numero_tabla_segundo_nivel es: 15
+[ERROR] 20:00:04:136 cpu/(7147:7155): La entrada de 2do nivel es: 0
+[ERROR] 20:00:04:141 cpu/(7147:7155): el marco es: 0
+[ERROR] 20:00:04:142 cpu/(7147:7155): El desplazamiento es: 40
+[WARNING] 20:00:04:143 cpu/(7147:7155): Amtes de correr algoritmo reemplzo
+[WARNING] 20:00:04:143 cpu/(7147:7155): Entre en correr algoritmo reemplazo
+[WARNING] 20:00:04:143 cpu/(7147:7155): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 20:00:04:143 cpu/(7147:7155): El size de la lista tlb es: 1
+[TRACE] 20:00:04:143 cpu/(7147:7155): El PC es: 2
+[TRACE] 20:00:04:143 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:00:04:153 cpu/(7147:7155): El pc es en fetch 2
+[INFO] 20:00:04:154 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 20:00:04:154 cpu/(7147:7155): El pc antes de send a kernel es: 3
+[TRACE] 20:00:04:155 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 8 
+[TRACE] 20:00:04:194 cpu/(7147:7155): El pid recibido es: 9
+[INFO] 20:00:04:194 cpu/(7147:7155): Me llego la instruccion READ
+[DEBUG] 20:00:04:194 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 3
+[TRACE] 20:00:04:194 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:00:04:194 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 20:00:04:194 cpu/(7147:7155): [EXE] ejecuto NO_OP
+[WARNING] 20:00:09:196 cpu/(7147:7155): Termine NO_OP
+[TRACE] 20:00:09:197 cpu/(7147:7155): El PC es: 1
+[TRACE] 20:00:09:198 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:00:09:199 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 20:00:09:200 cpu/(7147:7155): [EXE] ejecuto READ
+[DEBUG] 20:00:09:200 cpu/(7147:7155): El numero de paginas es 4
+[WARNING] 20:00:09:201 cpu/(7147:7155): pase el list find
+[TRACE] 20:00:09:202 cpu/(7147:7155): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 20:00:09:204 cpu/(7147:7155): El indice tabla pagina 8
+[ERROR] 20:00:09:206 cpu/(7147:7155): La entrada de 1er nivel es: 1
+[ERROR] 20:00:09:221 cpu/(7147:7155): el numero_tabla_segundo_nivel es: 17
+[ERROR] 20:00:09:225 cpu/(7147:7155): La entrada de 2do nivel es: 0
+[ERROR] 20:00:09:225 cpu/(7147:7155): el marco es: 0
+[ERROR] 20:00:09:234 cpu/(7147:7155): El desplazamiento es: 40
+[WARNING] 20:00:09:234 cpu/(7147:7155): Amtes de correr algoritmo reemplzo
+[WARNING] 20:00:09:234 cpu/(7147:7155): Entre en correr algoritmo reemplazo
+[WARNING] 20:00:09:235 cpu/(7147:7155): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 20:00:09:235 cpu/(7147:7155): El size de la lista tlb es: 1
+[TRACE] 20:00:09:235 cpu/(7147:7155): El PC es: 2
+[TRACE] 20:00:09:235 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:00:09:236 cpu/(7147:7155): El pc es en fetch 2
+[INFO] 20:00:09:236 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 20:00:09:236 cpu/(7147:7155): El pc antes de send a kernel es: 3
+[TRACE] 20:00:09:237 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 9 
+[TRACE] 20:00:09:274 cpu/(7147:7155): El pid recibido es: 7
+[DEBUG] 20:00:09:274 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 20:00:09:275 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:00:09:275 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 20:00:09:275 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 20:00:09:275 cpu/(7147:7155): El pc antes de send a kernel es: 2
+[TRACE] 20:00:09:275 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 7 
+[TRACE] 20:01:34:952 cpu/(7147:7155): El pid recibido es: 10
+[INFO] 20:01:34:990 cpu/(7147:7155): Me llego la instruccion READ
+[INFO] 20:01:34:990 cpu/(7147:7155): Me llego la instruccion READ
+[DEBUG] 20:01:34:990 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 4
+[TRACE] 20:01:34:990 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:34:990 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 20:01:34:990 cpu/(7147:7155): [EXE] ejecuto NO_OP
+[WARNING] 20:01:39:992 cpu/(7147:7155): Termine NO_OP
+[TRACE] 20:01:39:994 cpu/(7147:7155): El PC es: 1
+[TRACE] 20:01:39:994 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:39:994 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 20:01:39:995 cpu/(7147:7155): [EXE] ejecuto READ
+[DEBUG] 20:01:39:995 cpu/(7147:7155): El numero de paginas es 4
+[WARNING] 20:01:39:995 cpu/(7147:7155): pase el list find
+[TRACE] 20:01:39:997 cpu/(7147:7155): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 20:01:39:998 cpu/(7147:7155): El indice tabla pagina 9
+[ERROR] 20:01:40:000 cpu/(7147:7155): La entrada de 1er nivel es: 1
+[ERROR] 20:01:40:000 cpu/(7147:7155): el numero_tabla_segundo_nivel es: 19
+[ERROR] 20:01:40:003 cpu/(7147:7155): La entrada de 2do nivel es: 0
+[ERROR] 20:01:40:004 cpu/(7147:7155): el marco es: 0
+[ERROR] 20:01:40:005 cpu/(7147:7155): El desplazamiento es: 40
+[WARNING] 20:01:40:006 cpu/(7147:7155): Amtes de correr algoritmo reemplzo
+[WARNING] 20:01:40:006 cpu/(7147:7155): Entre en correr algoritmo reemplazo
+[WARNING] 20:01:40:007 cpu/(7147:7155): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 20:01:40:007 cpu/(7147:7155): El size de la lista tlb es: 1
+[TRACE] 20:01:40:013 cpu/(7147:7155): El PC es: 2
+[TRACE] 20:01:40:014 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:40:014 cpu/(7147:7155): El pc es en fetch 2
+[INFO] 20:01:40:014 cpu/(7147:7155): [EXE] ejecuto READ
+[DEBUG] 20:01:40:014 cpu/(7147:7155): El numero de paginas es 4
+[WARNING] 20:01:40:014 cpu/(7147:7155): pase el list find
+[DEBUG] 20:01:40:014 cpu/(7147:7155): Entre en traer pag de tlb
+[WARNING] 20:01:40:014 cpu/(7147:7155): El size de la lista tlb es: 1
+[TRACE] 20:01:40:014 cpu/(7147:7155): El PC es: 3
+[TRACE] 20:01:40:014 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:40:014 cpu/(7147:7155): El pc es en fetch 3
+[INFO] 20:01:40:014 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 20:01:40:015 cpu/(7147:7155): El pc antes de send a kernel es: 4
+[TRACE] 20:01:40:018 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 10 
+[TRACE] 20:01:40:018 cpu/(7147:7155): El pid recibido es: 11
+[INFO] 20:01:40:018 cpu/(7147:7155): Me llego la instruccion READ
+[INFO] 20:01:40:018 cpu/(7147:7155): Me llego la instruccion READ
+[DEBUG] 20:01:40:018 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 4
+[TRACE] 20:01:40:018 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:40:021 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 20:01:40:021 cpu/(7147:7155): [EXE] ejecuto NO_OP
+[WARNING] 20:01:45:022 cpu/(7147:7155): Termine NO_OP
+[TRACE] 20:01:45:024 cpu/(7147:7155): El PC es: 1
+[TRACE] 20:01:45:024 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:45:026 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 20:01:45:026 cpu/(7147:7155): [EXE] ejecuto READ
+[DEBUG] 20:01:45:026 cpu/(7147:7155): El numero de paginas es 4
+[WARNING] 20:01:45:027 cpu/(7147:7155): pase el list find
+[TRACE] 20:01:45:028 cpu/(7147:7155): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 20:01:45:029 cpu/(7147:7155): El indice tabla pagina 10
+[ERROR] 20:01:45:031 cpu/(7147:7155): La entrada de 1er nivel es: 1
+[ERROR] 20:01:45:032 cpu/(7147:7155): el numero_tabla_segundo_nivel es: 21
+[ERROR] 20:01:45:035 cpu/(7147:7155): La entrada de 2do nivel es: 0
+[ERROR] 20:01:45:038 cpu/(7147:7155): el marco es: 0
+[ERROR] 20:01:45:038 cpu/(7147:7155): El desplazamiento es: 40
+[WARNING] 20:01:45:042 cpu/(7147:7155): Amtes de correr algoritmo reemplzo
+[WARNING] 20:01:45:042 cpu/(7147:7155): Entre en correr algoritmo reemplazo
+[WARNING] 20:01:45:042 cpu/(7147:7155): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 20:01:45:043 cpu/(7147:7155): El size de la lista tlb es: 1
+[TRACE] 20:01:45:043 cpu/(7147:7155): El PC es: 2
+[TRACE] 20:01:45:043 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:45:043 cpu/(7147:7155): El pc es en fetch 2
+[INFO] 20:01:45:043 cpu/(7147:7155): [EXE] ejecuto READ
+[DEBUG] 20:01:45:043 cpu/(7147:7155): El numero de paginas es 4
+[WARNING] 20:01:45:044 cpu/(7147:7155): pase el list find
+[DEBUG] 20:01:45:044 cpu/(7147:7155): Entre en traer pag de tlb
+[WARNING] 20:01:45:044 cpu/(7147:7155): El size de la lista tlb es: 1
+[TRACE] 20:01:45:044 cpu/(7147:7155): El PC es: 3
+[TRACE] 20:01:45:048 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:45:049 cpu/(7147:7155): El pc es en fetch 3
+[INFO] 20:01:45:049 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 20:01:45:051 cpu/(7147:7155): El pc antes de send a kernel es: 4
+[TRACE] 20:01:45:052 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 11 
+[TRACE] 20:01:45:090 cpu/(7147:7155): El pid recibido es: 12
+[DEBUG] 20:01:45:090 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 20:01:45:090 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:01:45:090 cpu/(7147:7155): El pc es en fetch 0
+[INFO] 20:01:45:090 cpu/(7147:7155): [EXE] ejecuto IO
+[WARNING] 20:01:45:090 cpu/(7147:7155): El tiempo bloqueante es: 11000
+[DEBUG] 20:01:45:090 cpu/(7147:7155): El pc antes de send a kernel es: 1
+[TRACE] 20:01:45:090 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 12 
+[TRACE] 20:02:19:151 cpu/(7147:7155): El pid recibido es: 12
+[DEBUG] 20:02:19:190 cpu/(7147:7155): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 20:02:19:190 cpu/(7147:7155): Entre en el while de interrupcion
+[DEBUG] 20:02:19:190 cpu/(7147:7155): El pc es en fetch 1
+[INFO] 20:02:19:190 cpu/(7147:7155): [EXE] ejecuto EXIT
+[DEBUG] 20:02:19:191 cpu/(7147:7155): El pc antes de send a kernel es: 2
+[TRACE] 20:02:19:192 cpu/(7147:7155): Finalizo el ciclo de ejecucion del proceso: 12 
+[INFO] 14:50:28:250 cpu/(5885:5885): El algoritmo de reemplazo elegido es LRU.
+[INFO] 14:50:28:272 cpu/(5885:5885): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 14:50:28:273 cpu/(5885:5885): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 14:50:28:273 cpu/(5885:5885): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 14:50:28:274 cpu/(5885:5885): El fd_memoria despues de grar conexiones es: 7
+[INFO] 14:50:31:668 cpu/(5885:5885): Cliente conectado (a CPU)
+
+[INFO] 14:50:31:669 cpu/(5885:5885): Cliente conectado (a CPU)
+
+[WARNING] 14:50:31:669 cpu/(5885:5893): El tam de pags es 64
+[WARNING] 14:50:31:669 cpu/(5885:5893): La cant de entradas por tabla es 4

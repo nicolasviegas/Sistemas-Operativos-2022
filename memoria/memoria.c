@@ -42,6 +42,8 @@ void inicializar_config(){
 void inicializar_listas(){
 	lista_tablas_1er_nivel = list_create();
 	lista_tablas_2do_nivel = list_create();
+	lista_frames = list_create();
+	cargar_lista_frames();
 
 	pthread_mutex_init(&mutexSwap, NULL);
 

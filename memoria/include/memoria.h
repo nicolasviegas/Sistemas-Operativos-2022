@@ -47,6 +47,8 @@ char* algoritmo_config;
 uint32_t marcos_por_proceso;
 char* path_swap;
 
+int punteroClock;
+
 t_log* log_memoria;
 
 typedef struct{
@@ -55,8 +57,17 @@ typedef struct{
 	uint32_t bit_presencia;
 	uint32_t bit_uso;
 	uint32_t bit_modificado;
-	uint32_t tiempo_uso;
+	//uint32_t tiempo_uso;
 }pagina;
+
+
+typedef struct{
+	bool ocupado;
+	uint32_t nro_pagina;
+//	uint32_t bit_uso;
+//	uint32_t bit_modificado;
+}frame;
+
 
 typedef struct{
 	uint32_t nro_tabla_2do_nivel;
@@ -67,6 +78,10 @@ void* memoria_principal;
 t_list* lista_tablas_1er_nivel; // lista de tablas de 1er nivel (una sola, adentro tiene una tabla por proceso)
 
 t_list* lista_tablas_2do_nivel; // lista de tablas de 2do nivel
+
+t_list* lista_frames;
+
+
 
 //uint32_t indice_tabla;
 int obtener_algoritmo(char* algoritmo_char);
@@ -87,7 +102,7 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso);
 
 void liberar_memoria(uint32_t frame);
 
-void escribir_en_memoria(uint32_t valor,pagina* pagina);
+void escribir_en_memoria(uint32_t valor,pagina* pagina,uint32_t indice_tabla_1er_nivel);
 
 void cerrar_programa(t_log* logger);
 

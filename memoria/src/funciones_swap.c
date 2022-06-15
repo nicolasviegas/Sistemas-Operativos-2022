@@ -42,7 +42,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 		for(int k=0;k < marcos_por_proceso;k++){
 			pagina_aux = list_get(paginas_del_proceso,k);
 			dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina);
-			escribir_en_memoria(dataAux,pagina_aux);
+			escribir_en_memoria(dataAux,pagina_aux,indice_archivo_swap);
 		}
 	// ir a swap y hacer fread y memcpy en mem principal
 }
@@ -65,7 +65,10 @@ void pasar_proceso_a_swap(uint32_t indice_tabla){
 	}
 	for(int k=0;k < list_size(paginas_del_proceso);k++){
 		pagina_aux = list_get(paginas_del_proceso,k);
+		if(pagina_aux->bit_presencia == 1){ //todo controlar si se modifica el bit cuando liberamos memoria
 		escribir_en_swap(indice_tabla,pagina_aux->frame);
 		liberar_memoria(pagina_aux->frame);
+		}
+
 	}
 }
