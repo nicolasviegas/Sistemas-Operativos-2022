@@ -133,6 +133,7 @@ t_list* buscar_paginas_proceso(uint32_t indice_tabla_1er_nivel){
 }
 
 
+
 t_list* buscar_paginas_proceso_en_mem_ppal(t_list* paginas_proceso) {
 	t_list* paginas_del_proceso_en_mem_ppal = list_create();
 	pagina* pagina_aux = malloc(sizeof(pagina));
@@ -254,13 +255,98 @@ void cargar_lista_frames(){
 }
 
 
+
+
 void liberar_memoria(uint32_t frame){
 	//liberar desde el (frame * tam_paginas) hasta (frame + 1 * tam_paginas)
 }
 
 
-void escribir_en_memoria(uint32_t valor,pagina* pagina,uint32_t indice_tabla_1er_nivel){
-	//ejecu
+void escribir_pagina(uint32_t valor,uint32_t frame,uint32_t indice_tabla_1er_nivel, uint32_t desplazamiento){// TODO VER COMO SE ESCIBE EN MEMORIA
+	uint32_t posicion_marco = frame * tamanio_paginas;
+	//memcpy(memoria_principal+posicion_marco+desplazamiento,valor,tamanio_paginas);
 	//escribe en memoria la data y pone en 1 el bit de presencia de la pagina
 }
+
+uint32_t leer_de_memoria(uint32_t frame){ // TODO LEER DE MEMORIA
+	return 0;
+}
+
+uint32_t buscar_frame_libre(){
+	frame* frameAux;
+	frame* frame_libre;
+	for(int i=0;i < list_size(lista_frames);i++){
+		frameAux = list_get(lista_frames,i);
+		if(!frameAux->ocupado){
+			return i;
+		}
+	}
+	return -1;
+}
+
+
+
+void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagina_1er_nivel) {
+
+    pagina* info_paginaAReemplazar =  pagina_a_reemplazar(indice_pagina_1er_nivel);
+
+
+    uint32_t frame = info_paginaAReemplazar->frame;
+    uint32_t  biteme = info_paginaAReemplazar->bit_modificado;
+    info_paginaAReemplazar->bit_presencia = 0;
+//
+//    if(!send_pag_swamp(socketSwamp,info_paginaAReemplazar, carpincho->pid)){
+//        return false;
+//    }
+//
+//    if(biteme != 0){
+//        MEM_SWAP_MESSAGE respuesta;
+//        recv(socketSwamp, &respuesta, sizeof(MEM_SWAP_MESSAGE), 0);
+//
+//        if(respuesta != PAGE_ADDED){
+//            return false;
+//        }
+//    }
+
+    escribir_en_swap(indice_pagina_1er_nivel,info_paginaAReemplazar->frame);
+
+    //GUARDAMOS EN RAM LO QUE SE QUIERE USAR
+    info_pagina->frame = frame;
+    info_pagina->bit_presencia = 1;
+    info_pagina->bit_uso = 1;
+    //info_pagina->tiempo_uso = obtener_tiempo();
+
+
+    escribir_pagina(valor,info_pagina,indice_pagina_1er_nivel,0);
+
+}
+
+
+
+bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel){
+	t_list* paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
+	t_list* paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
+	if(list_size(paginas_del_proceso_en_mem) > 0 ){
+		return true;
+	}
+	return false;
+}
+
+bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel){
+	t_list* paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
+	t_list* paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
+	if(list_size(paginas_del_proceso_en_mem) < marcos_por_proceso){
+		return true;
+	}
+	return false;
+}
+
+void poner_pagina_en_marco(uint32_t marco,pagina* pagina){
+	frame* frame_buscado = list_get(lista_frames,marco);
+	frame_buscado->nro_pagina = pagina->nro_pagina;
+	frame_buscado->ocupado = true;
+	pagina->frame = marco;
+	pagina->bit_presencia = 1;
+}
+
 

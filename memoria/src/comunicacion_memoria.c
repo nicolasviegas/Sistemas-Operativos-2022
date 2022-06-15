@@ -99,8 +99,13 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					}
 					log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
 
+					uint32_t valor_leido = leer_de_memoria(marco_aux,desplazamiento);
 
-					//todo ir a buscar a memoria(marco,desplazamiento)   . con nro de marco * tam de pag + desplazamiento
+					//todo send_TAM(cliente_socket,valor_leido);
+
+
+
+
 				}else{
 					uint32_t indice_tabla;
 									if (recv(cliente_socket, &indice_tabla, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -141,6 +146,32 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										return;
 									}
 									log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
+
+									uint32_t valor_leido;
+									if(pagina_buscada->bit_presencia == 1){
+										valor_leido = leer_de_memoria(pagina_buscada->frame);
+										//todo sendTAM(cliente_socket,valor_leido);
+									}
+									else{
+										uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+										uint32_t frame_a_utilizar = buscar_frame_libre();
+										if(frame_a_utilizar != -1){
+											if(al_proceso_le_quedan_frames(indice_tabla)){
+												poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+												valor_leido = leer_de_memoria(pagina_buscada->frame); // todo pasar desp
+												//todo sendTAM(cliente_socket,valor_leido);
+											}
+											else{
+												if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
+													ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+													valor_leido = leer_de_memoria(pagina_buscada->frame);
+													//todo sendTAM(cliente_socket,valor_leido);
+										    }
+									   }
+							       }
+
+						    }
+							//todo MANDARLE EL MARCO A CPU y agregar RECV
 				}
 
 /////
@@ -175,7 +206,12 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
 
 
-					//todo ir a buscar a memoria(marco,desplazamiento)   . con nro de marco * tam de pag + desplazamiento
+					//todo uint32_t valor_leido = copiar_de_memoria(marco_aux,desplazamiento,marco_aux,desplazamiento);
+
+					// todo send_TAM(cliente_socket,valor_leido);
+
+
+
 					}else{
 					uint32_t indice_tabla;
 					if (recv(cliente_socket, &indice_tabla, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -217,7 +253,38 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						return;
 					}
 					log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
-				}
+
+//					uint32_t valor_leido;
+					if(pagina_buscada->bit_presencia == 1){
+//						valor_leido = leer_de_memoria(pagina_buscada->frame);
+						//todo sendTAM(cliente_socket,valor_leido);
+					}
+					else{
+						uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+						uint32_t frame_a_utilizar = buscar_frame_libre();
+						if(frame_a_utilizar != -1){
+							if(al_proceso_le_quedan_frames(indice_tabla)){
+								poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+//								valor_leido = leer_de_memoria(pagina_buscada->frame);
+								//todo sendTAM(cliente_socket,valor_leido);
+							}
+							else{
+								if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
+									ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+//									valor_leido = leer_de_memoria(pagina_buscada->frame);
+									//todo sendTAM(cliente_socket,valor_leido);
+							}
+					   }
+				   }
+						//todo MANDARLE EL MARCO A CPU y agregar RECV
+
+			}
+
+
+	}
+
+
+
 
     		}
     		if(condicion == TLB_WR){
@@ -302,9 +369,34 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							return;
 							}
 							log_trace(log_memoria,"El valor es: %d",valor);
-					}
-	/////
+
+
+							if(pagina_buscada->bit_presencia == 1){
+								escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
+								//todo sendTAM(cliente_socket,valor_leido);
+							}
+							uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+							uint32_t frame_a_utilizar = buscar_frame_libre();
+							if(frame_a_utilizar != -1){
+								if(al_proceso_le_quedan_frames(indice_tabla)){
+									poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+									escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
+									//todo sendTAM(cliente_socket,valor_leido);
+								}
+								else{
+									if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
+										ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+										escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
+										//todo sendTAM(cliente_socket,valor_leido);
+								}
+						   }
+					   }
+
 				}
+				//todo MANDARLE EL MARCO A CPU y agregar RECV
+		}
+	/////
+
     		if(condicion == METER_A_SWAP){
     			uint32_t indice_proceso;
 				if (recv(cliente_socket, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {

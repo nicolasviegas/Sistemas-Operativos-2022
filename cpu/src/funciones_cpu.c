@@ -188,6 +188,11 @@ instrucciones* fetch(pcb_cpu* pcb){
 				 send_TAM(fd_memoria,TLB_RD);//le aviso que tlb read le va a mandar cosas
 				 send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
 				 traer_pag_de_tlb(entrada,parametro1);
+//				 uint32_t valor_leido;
+//				 if(recv(fd_memoria,&valor_leido,sizeof(uint32_t),0) != sizeof(uint32_t)){
+//					 log_error(log_cpu,"Fallo recibiendo el valor leido");
+//				 }
+//				 log_debug(log_cpu,"El valor leido es: %d", valor_leido);
 			 }
 			 else{ //caso en que no este en la tlb
 
@@ -227,6 +232,8 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 			 send_TAM(fd_memoria,desplazamiento);//enviamos el desplazamiento
 			 log_error(log_cpu,"El desplazamiento es: %d",desplazamiento);
+
+
 
 	//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
 	//		 recv_rta_memoria(fd_memoria,&rta_mem);

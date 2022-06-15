@@ -23,6 +23,13 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
 	return 1; // todo ir a leer a swap y devolver lo leido en vez de un 1
 }
 
+
+uint32_t traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
+	uint32_t contenido_de_pagina = leer_de_swap(indice_archivo_swap,nro_pagina);
+	return contenido_de_pagina;
+}
+
+
 void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 	t_list * tabla_primer_nivel_buscada = list_get(lista_tablas_1er_nivel,indice_archivo_swap);
 		uint32_t entrada_primer_nivel_aux;
@@ -42,7 +49,14 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 		for(int k=0;k < marcos_por_proceso;k++){
 			pagina_aux = list_get(paginas_del_proceso,k);
 			dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina);
-			escribir_en_memoria(dataAux,pagina_aux,indice_archivo_swap);
+			uint32_t frame_a_escribir = buscar_frame_disponible();
+			if(frame_a_escribir != -1){
+				escribir_pagina(dataAux,frame_a_escribir,indice_archivo_swap,0);
+			}
+			else{
+				ejecutar_reemplazo(dataAux,pagina_aux,indice_archivo_swap);
+			}
+
 		}
 	// ir a swap y hacer fread y memcpy en mem principal
 }

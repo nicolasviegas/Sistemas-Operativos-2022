@@ -78,6 +78,7 @@ int main() {
     ip = "127.0.0.1"; //config_get_string_value(config_memoria,"IP_MEMORIA"); /////////////////////////BORRAR
     inicializar_config();
     inicializar_listas();
+    memoria_principal = malloc(tamanio_memoria);
 
 
     fd_memoria = iniciar_servidor(log_memoria,"MEMORIA",ip,puerto_escucha);
