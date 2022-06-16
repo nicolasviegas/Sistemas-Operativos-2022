@@ -414,10 +414,18 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 							 send_TAM(fd_memoria,parametro2);//enviamos el valor a escribir
 
+							 uint32_t valor_leido;
+							 if(recv(fd_memoria,&valor_leido,sizeof(uint32_t),0) != sizeof(uint32_t)){
+								 log_error(log_cpu,"Fallo escribiendo en memoria");
+							 }
+							 if(valor_leido == parametro2){
+								 log_debug(log_cpu,"Escribi en memoria el valor: %d",valor_leido);
+							 }
+
 						 }
 						 else{ //caso en que no este en la tlb
 
-						 uint32_t marco = -1;
+						// uint32_t marco = -1;
 						 uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
 						 uint32_t entrada_2do_nivel = obtener_entrada_2do_nivel(numero_pagina);
 						 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
@@ -442,6 +450,20 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 						 send_TAM(fd_memoria,entrada_2do_nivel);//enviamos a memoria la entrada de segundo nivel
 						 log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
+//ESTE HAY QUE PONERLO ANTES DEL EJECUTAR ALGOREEMPLAZO
+//						 uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
+//						 if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+//							log_info(log_cpu, "fallo al recibir marcoaux");
+//							return;
+//						 }
+//						 log_error(log_cpu,"el marco es: %d",marcoaux);
+
+
+						 send_TAM(fd_memoria,desplazamiento);//enviamos el desplazamiento
+						 log_error(log_cpu,"El desplazamiento es: %d",desplazamiento);
+
+						 send_TAM(fd_memoria,parametro2);//enviamos el valor a escribir
+						 log_error(log_cpu,"El valor a escribir es: %d",parametro2);
 
 						 uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
 						 if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -450,12 +472,14 @@ instrucciones* fetch(pcb_cpu* pcb){
 						 }
 						 log_error(log_cpu,"el marco es: %d",marcoaux);
 
+						 uint32_t valor_leido;
+						 if(recv(fd_memoria,&valor_leido,sizeof(uint32_t),0) != sizeof(uint32_t)){
+							 log_error(log_cpu,"Fallo escribiendo en memoria");
+						 }
+						 if(valor_leido == parametro2){
+							 log_debug(log_cpu,"Escribi en memoria el valor: %d",valor_leido);
+						 }
 
-						 send_TAM(fd_memoria,desplazamiento);//enviamos el desplazamiento
-						 log_error(log_cpu,"El desplazamiento es: %d",desplazamiento);
-
-						 send_TAM(fd_memoria,parametro2);//enviamos el valor a escribir
-						 log_error(log_cpu,"El valor a escribir es: %d",parametro2);
 
 				//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
 				//		 recv_rta_memoria(fd_memoria,&rta_mem);

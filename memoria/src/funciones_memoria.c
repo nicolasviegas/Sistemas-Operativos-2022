@@ -374,17 +374,20 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 		paginas_del_proceso_para_mem = list_take(paginas_del_proceso,list_size(paginas_del_proceso));
 	}
 
-	log_debug(log_memoria,"El size de LA LISTA EN PONER PROCESO EN MEM PRICNCIPAL ES %d", list_size(paginas_del_proceso_para_mem));
+	//log_debug(log_memoria,"El size de LA LISTA EN PONER PROCESO EN MEM PRICNCIPAL ES %d", list_size(paginas_del_proceso_para_mem));
 
 	for(int i=0;i<list_size(paginas_del_proceso_para_mem);i++){
 		paginaAux = list_get(paginas_del_proceso_para_mem,i);
 		marcoAux = buscar_frame_libre();
 		poner_pagina_en_marco(marcoAux,paginaAux);
-		log_debug(log_memoria,"bit de presencia es en poner proceso en mem ppal:  %d",paginaAux->bit_presencia);
+		//log_debug(log_memoria,"bit de presencia es en poner proceso en mem ppal:  %d",paginaAux->bit_presencia);
 	}
 
 
 
 }
 
-
+///////////////////////////WRITE
+void escribir_memoria_vino_de_tlb(uint32_t marco_aux,uint32_t desplazamiento,uint32_t valor){
+	log_info(log_memoria,"Escribi en la memoria con los datos uqe me paso la tlb");
+}

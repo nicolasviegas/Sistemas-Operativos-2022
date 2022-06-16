@@ -145,12 +145,15 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								return;
 							}
 							log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
-
+//a partir de aca copiar par aweite
 							uint32_t valor_leido;
 							if(pagina_buscada->bit_presencia == 1){
+
 								valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
+
 								send_TAM(cliente_socket,valor_leido);
 								log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
+
 								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
@@ -332,7 +335,12 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							log_info(log_memoria, "fallo al recibir nro de pagina!");
 							return;
 						}
-						log_trace(log_memoria,"El desplazamienmto es: %d",valor);
+						log_trace(log_memoria,"El valor es: %d",valor);
+
+						escribir_memoria_vino_de_tlb(marco_aux,desplazamiento,valor);
+
+						send_TAM(cliente_socket,valor);
+						//log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
 
 
 						//todo ir a buscar a memoria(marco,desplazamiento)   . con nro de marco * tam de pag + desplazamiento
@@ -364,9 +372,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 							pagina* pagina_buscada = malloc(sizeof(pagina));
 							pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
-							send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
-							log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
-							free(pagina_buscada);
+//							send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+//							log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+							//free(pagina_buscada);
 
 							uint32_t desplazamiento;
 							if (recv(cliente_socket, &desplazamiento, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -384,8 +392,11 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 
 							if(pagina_buscada->bit_presencia == 1){
+
 								escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
-								//todo sendTAM(cliente_socket,valor_leido);
+								send_TAM(cliente_socket,pagina_buscada->frame);
+								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+								send_TAM(cliente_socket,valor);
 							}
 							uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
 							uint32_t frame_a_utilizar = buscar_frame_libre();
@@ -393,13 +404,17 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								if(al_proceso_le_quedan_frames(indice_tabla)){
 									poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
 									escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
-									//todo sendTAM(cliente_socket,valor_leido);
+									send_TAM(cliente_socket,pagina_buscada->frame);
+									log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+									send_TAM(cliente_socket,valor);
 								}
 								else{
 									if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 										ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 										escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
-										//todo sendTAM(cliente_socket,valor_leido);
+										send_TAM(cliente_socket,pagina_buscada->frame);
+										log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+										send_TAM(cliente_socket,valor);
 								}
 						   }
 					   }

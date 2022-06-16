@@ -49945,3 +49945,36 @@
 [DEBUG] 16:36:11:729 kernel/(11666:11670): Despues del send interrupcion
 [TRACE] 16:36:18:810 kernel/(11666:11670): El PC despues del recv es: 4
 [INFO] 16:36:18:810 kernel/(11666:11670): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 19:29:29:174 kernel/(6247:6247): El algoritmo de planificacion elegido es SRT.
+[INFO] 19:29:29:189 kernel/(6247:6247): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 19:29:29:189 kernel/(6247:6247): El socket fd_kernel : 4
+[INFO] 19:29:29:190 kernel/(6247:6247): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 19:29:29:190 kernel/(6247:6247): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 19:29:29:190 kernel/(6247:6247): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 19:29:31:662 kernel/(6247:6247): Cliente conectado (a KERNEL)
+
+[ERROR] 19:29:31:671 kernel/(6247:6255): El cliente socket es: 9
+[ERROR] 19:29:31:671 kernel/(6247:6255): El cliente socket es: 9
+[ERROR] 19:29:31:672 kernel/(6247:6255): El cliente socket es: 9
+[ERROR] 19:29:31:672 kernel/(6247:6255): El cliente socket es: 9
+[ERROR] 19:29:31:672 kernel/(6247:6255): El cliente socket es: 9
+[TRACE] 19:29:31:672 kernel/(6247:6255): El indice tabla de pagina es: 0
+[INFO] 19:29:31:672 kernel/(6247:6255): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:29:31:678 kernel/(6247:6250): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 19:29:31:678 kernel/(6247:6250): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 19:29:31:678 kernel/(6247:6255): DISCONNECT!
+[WARNING] 19:29:31:678 kernel/(6247:6255): El cliente se desconecto de KERNEL server
+[TRACE] 19:29:31:715 kernel/(6247:6250): Memoria termino de meter al proceso
+[DEBUG] 19:29:31:715 kernel/(6247:6250): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 19:29:31:715 kernel/(6247:6251): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 19:29:31:715 kernel/(6247:6251): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 19:29:31:716 kernel/(6247:6251): La cant de instrucciones en la lista: 4
+[DEBUG] 19:29:31:716 kernel/(6247:6251): Antes del send interrupcion
+[DEBUG] 19:29:31:716 kernel/(6247:6251): Despues del send interrupcion
+[TRACE] 19:29:38:798 kernel/(6247:6251): El PC despues del recv es: 4
+[INFO] 19:29:38:798 kernel/(6247:6251): [EXIT] Finaliza el proceso de PID: 1
