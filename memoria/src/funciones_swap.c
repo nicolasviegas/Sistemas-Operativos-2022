@@ -49,8 +49,10 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 		for(int k=0;k < marcos_por_proceso;k++){
 			pagina_aux = list_get(paginas_del_proceso,k);
 			dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina);
-			uint32_t frame_a_escribir = buscar_frame_disponible();
+			uint32_t frame_a_escribir = buscar_frame_libre();
 			if(frame_a_escribir != -1){
+				pagina_aux->bit_presencia = 1;
+				pagina_aux->bit_uso = 1;
 				escribir_pagina(dataAux,frame_a_escribir,indice_archivo_swap,0);
 			}
 			else{

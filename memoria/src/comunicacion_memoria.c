@@ -101,7 +101,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 					uint32_t valor_leido = leer_de_memoria(marco_aux,desplazamiento);
 
-					//todo send_TAM(cliente_socket,valor_leido);
+					send_TAM(cliente_socket,valor_leido);
+					log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
 
 
 
@@ -138,7 +139,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
 									send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 									log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
-									free(pagina_buscada);
+									//free(pagina_buscada);
 
 									uint32_t desplazamiento;
 									if (recv(cliente_socket, &desplazamiento, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -149,8 +150,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 									uint32_t valor_leido;
 									if(pagina_buscada->bit_presencia == 1){
-										valor_leido = leer_de_memoria(pagina_buscada->frame);
-										//todo sendTAM(cliente_socket,valor_leido);
+										valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
+										send_TAM(cliente_socket,valor_leido);
+										log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
 									}
 									else{
 										uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
@@ -158,14 +160,16 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										if(frame_a_utilizar != -1){
 											if(al_proceso_le_quedan_frames(indice_tabla)){
 												poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
-												valor_leido = leer_de_memoria(pagina_buscada->frame); // todo pasar desp
-												//todo sendTAM(cliente_socket,valor_leido);
+												valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento); // todo pasar desp
+												send_TAM(cliente_socket,valor_leido);
+												log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
 											}
 											else{
 												if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 													ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
-													valor_leido = leer_de_memoria(pagina_buscada->frame);
-													//todo sendTAM(cliente_socket,valor_leido);
+													valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
+													send_TAM(cliente_socket,valor_leido);
+													log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
 										    }
 									   }
 							       }
@@ -423,6 +427,13 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso + 1);
 			//todo meter el proceso a la mem principal y poner el bit de presencia en 1
 			//(usar la logica de funcion de meter en swap para tener todas en una sola lista y poner en 1
+
+			if(!el_proceso_tiene_almenos_una_pag_en_mem(indice_proceso)){
+				poner_proceso_en_mem_ppal(indice_proceso);
+				log_error(log_memoria,"El proceso es nuevo asi que lo meto de una a mem ppal");
+			}else{
+				log_error(log_memoria,"El proceso no es nuevo asi que ya lo trajo swap");
+			}
 
 
 			}

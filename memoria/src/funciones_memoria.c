@@ -245,13 +245,15 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 
 void cargar_lista_frames(){
 	int cantidad_marcos = tamanio_memoria / tamanio_paginas;
-	frame* marco;
+	log_trace(log_memoria,"Cant marcos seran %d",cantidad_marcos);
 	for(int i=0;i < cantidad_marcos;i++){
+		frame* marco = malloc(sizeof(frame));
 		marco->nro_pagina = 0;
-		marco->ocupado = 0;
+		marco->ocupado = false;
 		list_add(lista_frames,marco);
 	}
-	log_trace(log_memoria,"Se genero la lista de marcos");
+	log_trace(log_memoria,"Se genero la lista de marcos, con %d marcos",list_size(lista_frames));
+
 }
 
 
@@ -268,11 +270,12 @@ void escribir_pagina(uint32_t valor,uint32_t frame,uint32_t indice_tabla_1er_niv
 	//escribe en memoria la data y pone en 1 el bit de presencia de la pagina
 }
 
-uint32_t leer_de_memoria(uint32_t frame){ // TODO LEER DE MEMORIA
-	return 0;
+uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){ // TODO LEER DE MEMORIA
+	return 18;
 }
 
 uint32_t buscar_frame_libre(){
+	//log_error(log_memoria,"Entre a buscar frame libre");
 	frame* frameAux;
 	frame* frame_libre;
 	for(int i=0;i < list_size(lista_frames);i++){
@@ -324,8 +327,10 @@ void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagi
 
 
 bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel){
-	t_list* paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
-	t_list* paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
+	t_list* paginas_del_proceso = list_create();
+	paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
+	t_list* paginas_del_proceso_en_mem = list_create();
+	paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
 	if(list_size(paginas_del_proceso_en_mem) > 0 ){
 		return true;
 	}
@@ -333,8 +338,10 @@ bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel){
 }
 
 bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel){
-	t_list* paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
-	t_list* paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
+	t_list* paginas_del_proceso = list_create();
+	paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
+	t_list* paginas_del_proceso_en_mem = list_create();
+	paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
 	if(list_size(paginas_del_proceso_en_mem) < marcos_por_proceso){
 		return true;
 	}
@@ -347,6 +354,26 @@ void poner_pagina_en_marco(uint32_t marco,pagina* pagina){
 	frame_buscado->ocupado = true;
 	pagina->frame = marco;
 	pagina->bit_presencia = 1;
+}
+
+void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
+	pagina* paginaAux = malloc(sizeof(pagina));
+	frame* marcoAux = malloc(sizeof(frame));
+	t_list* paginas_del_proceso = list_create();
+	paginas_del_proceso = buscar_paginas_proceso(indice_proceso);
+	t_list* paginas_del_proceso_para_mem = list_create();
+	if(list_size(paginas_del_proceso) > marcos_por_proceso){
+		paginas_del_proceso_para_mem = list_take(paginas_del_proceso,marcos_por_proceso);
+	}
+	else{
+		paginas_del_proceso_para_mem = list_take(paginas_del_proceso,list_size(paginas_del_proceso));
+	}
+
+	for(int i=0;i<list_size(paginas_del_proceso_para_mem);i++){
+		paginaAux = list_get(paginas_del_proceso_para_mem,i);
+		marcoAux = buscar_frame_libre();
+		poner_pagina_en_marco(marcoAux,paginaAux);
+	}
 }
 
 

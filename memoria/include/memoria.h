@@ -102,13 +102,15 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso);
 
 void liberar_memoria(uint32_t frame);
 
-void escribir_pagina(uint32_t valor,pagina* pagina,uint32_t indice_tabla_1er_nivel);
+void escribir_pagina(uint32_t valor,uint32_t frame,uint32_t indice_tabla_1er_nivel, uint32_t desplazamiento);
 
 uint32_t leer_de_memoria(uint32_t frame, uint32_t desp);
 
 bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel);
 
 bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel);
+
+uint32_t buscar_frame_libre();
 
 void cerrar_programa(t_log* logger);
 
