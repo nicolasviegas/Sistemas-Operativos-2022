@@ -110,7 +110,13 @@ bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel);
 
 bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel);
 
+void traer_proceso_de_swap(uint32_t indice_archivo_swap);
+
 uint32_t buscar_frame_libre();
+
+void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagina_1er_nivel);
+
+void poner_pagina_en_marco(uint32_t marco,pagina* pagina);
 
 void cerrar_programa(t_log* logger);
 

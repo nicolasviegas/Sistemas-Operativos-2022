@@ -196,8 +196,8 @@ instrucciones* fetch(pcb_cpu* pcb){
 				 log_debug(log_cpu,"El valor leido es: %d", valor_leido);
 			 }
 			 else{ //caso en que no este en la tlb
-
-			 uint32_t marco = -1;
+			log_debug(log_cpu,"El nro de pagina en el esle de la tlb es: %d",numero_pagina);
+			// uint32_t marco = -1;
 			 uint32_t entrada_1er_nivel = obtener_entrada_1er_nivel(numero_pagina);
 			 uint32_t entrada_2do_nivel = obtener_entrada_2do_nivel(numero_pagina);
 			 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
@@ -223,13 +223,8 @@ instrucciones* fetch(pcb_cpu* pcb){
 			 send_TAM(fd_memoria,entrada_2do_nivel);//enviamos a memoria la entrada de segundo nivel
 			 log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
 
-			 uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
-			 if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-				log_info(log_cpu, "fallo al recibir marcoaux");
-				return;
-			 }
-			 log_error(log_cpu,"el marco es: %d",marcoaux);
 
+//aca estaba el recv marco aux
 
 			 send_TAM(fd_memoria,desplazamiento);//enviamos el desplazamiento
 			 log_error(log_cpu,"El desplazamiento es: %d",desplazamiento);
@@ -241,6 +236,13 @@ instrucciones* fetch(pcb_cpu* pcb){
 			 }
 			 log_debug(log_cpu,"Me llego el valor leido: %d",valor_leido);
 
+
+			 uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
+						 if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+							log_info(log_cpu, "fallo al recibir marcoaux");
+							return;
+						 }
+						 log_error(log_cpu,"el marco es: %d",marcoaux);
 
 	//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
 	//		 recv_rta_memoria(fd_memoria,&rta_mem);

@@ -19,15 +19,13 @@ uint32_t asignar_tabla_1er_nivel_a_proceso(t_list* tabla_1er_nivel){ // Devuelve
 }
 
 uint32_t obtener_nro_tabla_2do_nivel(uint32_t numero_tabla_1er_nivel,uint32_t entrada_primer_nivel){
-	t_list* tabla_1er_nivel_buscada = list_create();
-
-	tabla_1er_nivel_buscada = list_get(lista_tablas_1er_nivel,numero_tabla_1er_nivel);
+	t_list* tabla_1er_nivel_buscada = list_get(lista_tablas_1er_nivel,numero_tabla_1er_nivel);
 	uint32_t entrada_buscada;
 	//log_debug(log_memoria,"Pase el list get de la tabla de primer nivel");
 	entrada_buscada = list_get(tabla_1er_nivel_buscada,entrada_primer_nivel);
-	log_debug(log_memoria,"LA entrada buscada es: %d",entrada_buscada);
+	//log_debug(log_memoria,"LA entrada buscada es: %d",entrada_buscada);
 	//list_clean_and_destroy_elements(tabla_1er_nivel_buscada,&free);todo VER COMO HACER ESTE LIST AND DESTROY
-	list_destroy(tabla_1er_nivel_buscada);
+	//list_destroy(tabla_1er_nivel_buscada);///////////////////////////////////////////////////////////TODO ESTE DESTROY HACE CAGADA
 	//log_debug(log_memoria,"Pase el list destroy en obtener nro tabla 2do nivel");
 
 	return entrada_buscada;
@@ -36,13 +34,12 @@ uint32_t obtener_nro_tabla_2do_nivel(uint32_t numero_tabla_1er_nivel,uint32_t en
 
 
 pagina* buscar_pagina_en_tabla_2do_nivel(uint32_t nro_tabla_2do_nivel,uint32_t nro_entrada){ // Busca la pagina en la tabla de 2do nivel, si no esta, devuelve null
-	t_list* tabla_2do_nivel_buscada = list_create();
-	tabla_2do_nivel_buscada = list_get(lista_tablas_2do_nivel,nro_tabla_2do_nivel);
-	log_debug(log_memoria,"El indice de la tabla de paginas de segundo nivel en la global es: %d",nro_tabla_2do_nivel);
-	log_debug(log_memoria,"El indice de la tabla de paginas de segundo nivel en la global es: %d",nro_entrada);
+	t_list* tabla_2do_nivel_buscada = list_get(lista_tablas_2do_nivel,nro_tabla_2do_nivel);
+	//log_debug(log_memoria,"El indice de la tabla de paginas de segundo nivel en la global es: %d",nro_tabla_2do_nivel);
+	//log_debug(log_memoria,"El indice de la tabla de paginas de segundo nivel en la global es: %d",nro_entrada);
 	pagina* pagina_buscada = list_get(tabla_2do_nivel_buscada,nro_entrada);
 	//list_clean_and_destroy_elements(tabla_2do_nivel_buscada,free);
-	list_destroy(tabla_2do_nivel_buscada);
+	//list_destroy(tabla_2do_nivel_buscada);
 	return pagina_buscada;
 }
 
@@ -106,7 +103,7 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta func
 //	list_destroy(lista_aux);
 //	list_clean_and_destroy_elements(lista_aux2,free);
 //	list_destroy(lista_aux2);
-	log_debug(log_memoria,"El size de la lista de tablas de 2do nivel despues de liberar es %d",list_size(lista_tablas_2do_nivel));
+	//log_debug(log_memoria,"El size de la lista de tablas de 2do nivel despues de liberar es %d",list_size(lista_tablas_2do_nivel));
 	return tabla_de_1er_nivel;
 }
 
@@ -114,12 +111,15 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta func
 
 
 t_list* buscar_paginas_proceso(uint32_t indice_tabla_1er_nivel){
-	t_list * tabla_primer_nivel_buscada = list_get(lista_tablas_1er_nivel,indice_tabla_1er_nivel);
+			t_list * tabla_primer_nivel_buscada = list_create();
+			tabla_primer_nivel_buscada = list_get(lista_tablas_1er_nivel,indice_tabla_1er_nivel);
 			uint32_t entrada_primer_nivel_aux;
 			t_list * tabla_segundo_nivel_aux = list_create();
 			t_list * paginas_del_proceso = list_create();
 			pagina* pagina_aux = malloc(sizeof(pagina));
 			uint32_t dataAux;
+
+			log_debug(log_memoria,"EL SIZE DE LA LISTA  TABLA PRIMER NIVEL EN  BUSCAR PAGINAS PROCESO ES: %d",list_size(tabla_primer_nivel_buscada));
 			for(int i = 0;i < list_size(tabla_primer_nivel_buscada);i++){
 				entrada_primer_nivel_aux = list_get(tabla_primer_nivel_buscada,i);
 				tabla_segundo_nivel_aux = list_get(lista_tablas_2do_nivel,entrada_primer_nivel_aux);
@@ -259,8 +259,11 @@ void cargar_lista_frames(){
 
 
 
-void liberar_memoria(uint32_t frame){
+void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el marco ocmo desocupado
 	//liberar desde el (frame * tam_paginas) hasta (frame + 1 * tam_paginas)
+	frame* frame_aux = list_get(lista_frames,marco1);
+	frame_aux->ocupado = false;
+	//todo liberar memoria posta
 }
 
 
@@ -331,6 +334,7 @@ bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel){
 	paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
 	t_list* paginas_del_proceso_en_mem = list_create();
 	paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
+	log_error(log_memoria,"El proceso tiene %d paginas en memoria",list_size(paginas_del_proceso_en_mem));
 	if(list_size(paginas_del_proceso_en_mem) > 0 ){
 		return true;
 	}
@@ -349,6 +353,7 @@ bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel){
 }
 
 void poner_pagina_en_marco(uint32_t marco,pagina* pagina){
+	//log_error(log_memoria,"Entre en poner pagina en marco la re concha de tu madre");
 	frame* frame_buscado = list_get(lista_frames,marco);
 	frame_buscado->nro_pagina = pagina->nro_pagina;
 	frame_buscado->ocupado = true;
@@ -369,11 +374,17 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 		paginas_del_proceso_para_mem = list_take(paginas_del_proceso,list_size(paginas_del_proceso));
 	}
 
+	log_debug(log_memoria,"El size de LA LISTA EN PONER PROCESO EN MEM PRICNCIPAL ES %d", list_size(paginas_del_proceso_para_mem));
+
 	for(int i=0;i<list_size(paginas_del_proceso_para_mem);i++){
 		paginaAux = list_get(paginas_del_proceso_para_mem,i);
 		marcoAux = buscar_frame_libre();
 		poner_pagina_en_marco(marcoAux,paginaAux);
+		log_debug(log_memoria,"bit de presencia es en poner proceso en mem ppal:  %d",paginaAux->bit_presencia);
 	}
+
+
+
 }
 
 

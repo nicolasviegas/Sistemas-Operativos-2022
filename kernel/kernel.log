@@ -48598,3 +48598,1350 @@
 [WARNING] 12:20:47:835 kernel/(5492:5500): El cliente se desconecto de KERNEL server
 [TRACE] 12:20:49:800 kernel/(5492:5496): El PC despues del recv es: 3
 [INFO] 12:20:49:800 kernel/(5492:5496): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 13:26:11:655 kernel/(3895:3895): El algoritmo de planificacion elegido es SRT.
+[INFO] 13:26:11:655 kernel/(3895:3895): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:26:11:655 kernel/(3895:3895): El socket fd_kernel : 4
+[INFO] 13:26:11:656 kernel/(3895:3895): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 13:26:11:656 kernel/(3895:3895): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 13:26:11:657 kernel/(3895:3895): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 13:27:31:847 kernel/(3895:3895): Cliente conectado (a KERNEL)
+
+[ERROR] 13:27:31:855 kernel/(3895:3913): El cliente socket es: 9
+[ERROR] 13:27:31:855 kernel/(3895:3913): El cliente socket es: 9
+[ERROR] 13:27:31:855 kernel/(3895:3913): El cliente socket es: 9
+[TRACE] 13:27:31:856 kernel/(3895:3913): El indice tabla de pagina es: 0
+[INFO] 13:27:31:856 kernel/(3895:3913): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:27:31:857 kernel/(3895:3898): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 13:27:31:857 kernel/(3895:3898): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:27:31:857 kernel/(3895:3898): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 13:27:31:857 kernel/(3895:3899): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 13:27:31:857 kernel/(3895:3899): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:27:31:857 kernel/(3895:3899): La cant de instrucciones en la lista: 2
+[DEBUG] 13:27:31:857 kernel/(3895:3899): Antes del send interrupcion
+[DEBUG] 13:27:31:857 kernel/(3895:3899): Despues del send interrupcion
+[INFO] 13:27:31:857 kernel/(3895:3913): DISCONNECT!
+[WARNING] 13:27:31:858 kernel/(3895:3913): El cliente se desconecto de KERNEL server
+[TRACE] 13:27:36:859 kernel/(3895:3899): El PC despues del recv es: 2
+[INFO] 13:27:36:859 kernel/(3895:3899): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 13:28:41:139 kernel/(3895:3895): Cliente conectado (a KERNEL)
+
+[ERROR] 13:28:41:183 kernel/(3895:3933): El cliente socket es: 10
+[ERROR] 13:28:41:183 kernel/(3895:3933): El cliente socket es: 10
+[ERROR] 13:28:41:183 kernel/(3895:3933): El cliente socket es: 10
+[TRACE] 13:28:41:184 kernel/(3895:3933): El indice tabla de pagina es: 1
+[INFO] 13:28:41:184 kernel/(3895:3933): [NEW] Entra el proceso de PID: 2 a la cola.
+[INFO] 13:28:41:184 kernel/(3895:3898): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 13:28:41:184 kernel/(3895:3898): [READY] Entra el proceso de PID: 2 a la cola.
+[DEBUG] 13:28:41:185 kernel/(3895:3898): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 13:28:41:185 kernel/(3895:3899): El proceso 2 fue elegido mediante el algoritmo SRT: 
+[INFO] 13:28:41:185 kernel/(3895:3899): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:28:41:185 kernel/(3895:3899): La cant de instrucciones en la lista: 2
+[DEBUG] 13:28:41:185 kernel/(3895:3899): Antes del send interrupcion
+[DEBUG] 13:28:41:185 kernel/(3895:3899): Despues del send interrupcion
+[INFO] 13:28:41:185 kernel/(3895:3933): DISCONNECT!
+[WARNING] 13:28:41:186 kernel/(3895:3933): El cliente se desconecto de KERNEL server
+[TRACE] 13:28:46:188 kernel/(3895:3899): El PC despues del recv es: 2
+[INFO] 13:28:46:188 kernel/(3895:3899): [EXIT] Finaliza el proceso de PID: 2
+[INFO] 13:29:10:127 kernel/(3895:3895): Cliente conectado (a KERNEL)
+
+[ERROR] 13:29:10:130 kernel/(3895:3951): El cliente socket es: 11
+[ERROR] 13:29:10:131 kernel/(3895:3951): El cliente socket es: 11
+[ERROR] 13:29:10:131 kernel/(3895:3951): El cliente socket es: 11
+[ERROR] 13:29:10:131 kernel/(3895:3951): El cliente socket es: 11
+[TRACE] 13:29:10:132 kernel/(3895:3951): El indice tabla de pagina es: 2
+[INFO] 13:29:10:132 kernel/(3895:3951): [NEW] Entra el proceso de PID: 3 a la cola.
+[INFO] 13:29:10:132 kernel/(3895:3898): [NEW] Se saca el proceso de PID: 3 de la cola
+[INFO] 13:29:10:132 kernel/(3895:3898): [READY] Entra el proceso de PID: 3 a la cola.
+[DEBUG] 13:29:10:132 kernel/(3895:3898): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 13:29:10:132 kernel/(3895:3899): El proceso 3 fue elegido mediante el algoritmo SRT: 
+[INFO] 13:29:10:132 kernel/(3895:3899): [EXEC] Ingresa el carpincho de PID: 3 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:29:10:133 kernel/(3895:3899): La cant de instrucciones en la lista: 3
+[DEBUG] 13:29:10:133 kernel/(3895:3899): Antes del send interrupcion
+[DEBUG] 13:29:10:133 kernel/(3895:3899): Despues del send interrupcion
+[INFO] 13:29:10:135 kernel/(3895:3951): DISCONNECT!
+[WARNING] 13:29:10:135 kernel/(3895:3951): El cliente se desconecto de KERNEL server
+[TRACE] 13:29:12:138 kernel/(3895:3899): El PC despues del recv es: 3
+[INFO] 13:29:12:138 kernel/(3895:3899): [EXIT] Finaliza el proceso de PID: 3
+[INFO] 13:35:42:604 kernel/(4329:4329): El algoritmo de planificacion elegido es SRT.
+[INFO] 13:35:42:604 kernel/(4329:4329): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:35:42:605 kernel/(4329:4329): El socket fd_kernel : 4
+[INFO] 13:35:42:606 kernel/(4329:4329): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 13:35:42:607 kernel/(4329:4329): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 13:35:42:607 kernel/(4329:4329): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 13:35:52:978 kernel/(4329:4329): Cliente conectado (a KERNEL)
+
+[ERROR] 13:35:52:980 kernel/(4329:4342): El cliente socket es: 9
+[ERROR] 13:35:52:981 kernel/(4329:4342): El cliente socket es: 9
+[ERROR] 13:35:52:981 kernel/(4329:4342): El cliente socket es: 9
+[ERROR] 13:35:52:981 kernel/(4329:4342): El cliente socket es: 9
+[TRACE] 13:35:52:982 kernel/(4329:4342): El indice tabla de pagina es: 0
+[INFO] 13:35:52:982 kernel/(4329:4342): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:35:52:982 kernel/(4329:4332): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 13:35:52:982 kernel/(4329:4332): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:35:52:982 kernel/(4329:4332): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 13:35:52:982 kernel/(4329:4333): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 13:35:52:982 kernel/(4329:4333): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:35:52:983 kernel/(4329:4333): La cant de instrucciones en la lista: 3
+[DEBUG] 13:35:52:983 kernel/(4329:4333): Antes del send interrupcion
+[DEBUG] 13:35:52:984 kernel/(4329:4333): Despues del send interrupcion
+[INFO] 13:35:52:988 kernel/(4329:4342): DISCONNECT!
+[WARNING] 13:35:52:988 kernel/(4329:4342): El cliente se desconecto de KERNEL server
+[TRACE] 13:35:53:027 kernel/(4329:4333): El PC despues del recv es: 3
+[INFO] 13:35:53:027 kernel/(4329:4333): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 13:42:11:717 kernel/(4518:4518): El algoritmo de planificacion elegido es SRT.
+[INFO] 13:42:11:717 kernel/(4518:4518): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:42:11:717 kernel/(4518:4518): El socket fd_kernel : 4
+[INFO] 13:42:11:718 kernel/(4518:4518): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 13:42:11:718 kernel/(4518:4518): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 13:42:11:718 kernel/(4518:4518): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 13:42:35:070 kernel/(4518:4518): Cliente conectado (a KERNEL)
+
+[ERROR] 13:42:35:072 kernel/(4518:4531): El cliente socket es: 9
+[ERROR] 13:42:35:072 kernel/(4518:4531): El cliente socket es: 9
+[ERROR] 13:42:35:072 kernel/(4518:4531): El cliente socket es: 9
+[ERROR] 13:42:35:072 kernel/(4518:4531): El cliente socket es: 9
+[ERROR] 13:42:35:072 kernel/(4518:4531): El cliente socket es: 9
+[TRACE] 13:42:35:073 kernel/(4518:4531): El indice tabla de pagina es: 0
+[INFO] 13:42:35:073 kernel/(4518:4531): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:42:35:073 kernel/(4518:4521): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 13:42:35:073 kernel/(4518:4521): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:42:35:073 kernel/(4518:4521): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 13:42:35:073 kernel/(4518:4522): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 13:42:35:073 kernel/(4518:4522): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:42:35:074 kernel/(4518:4522): La cant de instrucciones en la lista: 4
+[DEBUG] 13:42:35:074 kernel/(4518:4522): Antes del send interrupcion
+[DEBUG] 13:42:35:074 kernel/(4518:4522): Despues del send interrupcion
+[TRACE] 13:42:35:076 kernel/(4518:4522): El PC despues del recv es: 2
+[INFO] 13:42:35:076 kernel/(4518:4522): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:42:35:076 kernel/(4518:4520): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:42:35:076 kernel/(4518:4520): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 13:42:35:076 kernel/(4518:4531): DISCONNECT!
+[WARNING] 13:42:35:077 kernel/(4518:4531): El cliente se desconecto de KERNEL server
+[TRACE] 13:42:45:077 kernel/(4518:4520): Entre en agregar a block suspended
+[INFO] 13:42:45:077 kernel/(4518:4520): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 13:42:45:077 kernel/(4518:4520): Memoria termino de meter a swap al proceso
+[INFO] 13:42:45:077 kernel/(4518:4520): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 13:42:45:077 kernel/(4518:4519): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:42:45:667 kernel/(4518:4519): fallo al recibir nro de pagina!
+[INFO] 13:54:29:282 kernel/(5238:5238): El algoritmo de planificacion elegido es SRT.
+[INFO] 13:54:29:282 kernel/(5238:5238): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:54:29:282 kernel/(5238:5238): El socket fd_kernel : 4
+[INFO] 13:54:29:283 kernel/(5238:5238): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 13:54:29:283 kernel/(5238:5238): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 13:54:29:283 kernel/(5238:5238): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 13:54:33:420 kernel/(5238:5238): Cliente conectado (a KERNEL)
+
+[ERROR] 13:54:33:423 kernel/(5238:5247): El cliente socket es: 9
+[ERROR] 13:54:33:423 kernel/(5238:5247): El cliente socket es: 9
+[ERROR] 13:54:33:423 kernel/(5238:5247): El cliente socket es: 9
+[ERROR] 13:54:33:423 kernel/(5238:5247): El cliente socket es: 9
+[ERROR] 13:54:33:423 kernel/(5238:5247): El cliente socket es: 9
+[TRACE] 13:54:33:424 kernel/(5238:5247): El indice tabla de pagina es: 0
+[INFO] 13:54:33:424 kernel/(5238:5247): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:54:33:424 kernel/(5238:5241): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 13:54:33:424 kernel/(5238:5241): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:54:33:424 kernel/(5238:5241): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 13:54:33:424 kernel/(5238:5242): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 13:54:33:424 kernel/(5238:5242): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:54:33:425 kernel/(5238:5242): La cant de instrucciones en la lista: 4
+[DEBUG] 13:54:33:425 kernel/(5238:5242): Antes del send interrupcion
+[DEBUG] 13:54:33:425 kernel/(5238:5242): Despues del send interrupcion
+[TRACE] 13:54:33:427 kernel/(5238:5242): El PC despues del recv es: 2
+[INFO] 13:54:33:427 kernel/(5238:5242): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:54:33:428 kernel/(5238:5240): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:54:33:428 kernel/(5238:5240): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 13:54:33:428 kernel/(5238:5247): DISCONNECT!
+[WARNING] 13:54:33:428 kernel/(5238:5247): El cliente se desconecto de KERNEL server
+[TRACE] 13:54:43:428 kernel/(5238:5240): Entre en agregar a block suspended
+[INFO] 13:54:43:428 kernel/(5238:5240): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 13:54:43:429 kernel/(5238:5240): Memoria termino de meter a swap al proceso
+[INFO] 13:54:43:429 kernel/(5238:5240): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 13:54:43:429 kernel/(5238:5239): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:54:43:707 kernel/(5238:5239): fallo al recibir nro de pagina!
+[INFO] 13:56:47:568 kernel/(5412:5412): El algoritmo de planificacion elegido es SRT.
+[INFO] 13:56:47:569 kernel/(5412:5412): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:56:47:569 kernel/(5412:5412): El socket fd_kernel : 4
+[INFO] 13:56:47:569 kernel/(5412:5412): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 13:56:47:569 kernel/(5412:5412): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 13:56:47:570 kernel/(5412:5412): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 13:56:49:847 kernel/(5412:5412): Cliente conectado (a KERNEL)
+
+[ERROR] 13:56:49:850 kernel/(5412:5420): El cliente socket es: 9
+[ERROR] 13:56:49:850 kernel/(5412:5420): El cliente socket es: 9
+[ERROR] 13:56:49:850 kernel/(5412:5420): El cliente socket es: 9
+[ERROR] 13:56:49:850 kernel/(5412:5420): El cliente socket es: 9
+[ERROR] 13:56:49:850 kernel/(5412:5420): El cliente socket es: 9
+[TRACE] 13:56:49:851 kernel/(5412:5420): El indice tabla de pagina es: 0
+[INFO] 13:56:49:851 kernel/(5412:5420): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:56:49:851 kernel/(5412:5415): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 13:56:49:851 kernel/(5412:5415): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:56:49:851 kernel/(5412:5415): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 13:56:49:851 kernel/(5412:5416): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 13:56:49:851 kernel/(5412:5416): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:56:49:852 kernel/(5412:5416): La cant de instrucciones en la lista: 4
+[DEBUG] 13:56:49:852 kernel/(5412:5416): Antes del send interrupcion
+[DEBUG] 13:56:49:852 kernel/(5412:5416): Despues del send interrupcion
+[TRACE] 13:56:49:854 kernel/(5412:5416): El PC despues del recv es: 2
+[INFO] 13:56:49:854 kernel/(5412:5416): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:56:49:854 kernel/(5412:5414): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:56:49:854 kernel/(5412:5414): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 13:56:49:854 kernel/(5412:5420): DISCONNECT!
+[WARNING] 13:56:49:854 kernel/(5412:5420): El cliente se desconecto de KERNEL server
+[TRACE] 13:56:59:854 kernel/(5412:5414): Entre en agregar a block suspended
+[INFO] 13:56:59:854 kernel/(5412:5414): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 13:56:59:854 kernel/(5412:5414): Memoria termino de meter a swap al proceso
+[INFO] 13:56:59:855 kernel/(5412:5414): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 13:56:59:855 kernel/(5412:5413): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:57:00:129 kernel/(5412:5413): fallo al recibir nro de pagina!
+[INFO] 13:58:44:083 kernel/(5645:5645): El algoritmo de planificacion elegido es SRT.
+[INFO] 13:58:44:083 kernel/(5645:5645): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 13:58:44:083 kernel/(5645:5645): El socket fd_kernel : 4
+[INFO] 13:58:44:083 kernel/(5645:5645): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 13:58:44:083 kernel/(5645:5645): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 13:58:44:084 kernel/(5645:5645): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 13:58:46:306 kernel/(5645:5645): Cliente conectado (a KERNEL)
+
+[ERROR] 13:58:46:308 kernel/(5645:5653): El cliente socket es: 9
+[ERROR] 13:58:46:308 kernel/(5645:5653): El cliente socket es: 9
+[ERROR] 13:58:46:308 kernel/(5645:5653): El cliente socket es: 9
+[ERROR] 13:58:46:308 kernel/(5645:5653): El cliente socket es: 9
+[ERROR] 13:58:46:308 kernel/(5645:5653): El cliente socket es: 9
+[TRACE] 13:58:46:309 kernel/(5645:5653): El indice tabla de pagina es: 0
+[INFO] 13:58:46:309 kernel/(5645:5653): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:58:46:309 kernel/(5645:5648): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 13:58:46:309 kernel/(5645:5648): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 13:58:46:309 kernel/(5645:5648): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 13:58:46:309 kernel/(5645:5649): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 13:58:46:309 kernel/(5645:5649): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 13:58:46:310 kernel/(5645:5649): La cant de instrucciones en la lista: 4
+[DEBUG] 13:58:46:310 kernel/(5645:5649): Antes del send interrupcion
+[DEBUG] 13:58:46:310 kernel/(5645:5649): Despues del send interrupcion
+[TRACE] 13:58:46:313 kernel/(5645:5649): El PC despues del recv es: 2
+[INFO] 13:58:46:313 kernel/(5645:5649): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 13:58:46:313 kernel/(5645:5647): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:58:46:313 kernel/(5645:5647): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 13:58:46:313 kernel/(5645:5653): DISCONNECT!
+[WARNING] 13:58:46:313 kernel/(5645:5653): El cliente se desconecto de KERNEL server
+[TRACE] 13:58:56:313 kernel/(5645:5647): Entre en agregar a block suspended
+[INFO] 13:58:56:313 kernel/(5645:5647): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 13:58:56:313 kernel/(5645:5647): Memoria termino de meter a swap al proceso
+[INFO] 13:58:56:313 kernel/(5645:5647): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 13:58:56:313 kernel/(5645:5646): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 13:58:56:608 kernel/(5645:5646): fallo al recibir nro de pagina!
+[INFO] 14:00:37:399 kernel/(5790:5790): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:00:37:399 kernel/(5790:5790): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:00:37:399 kernel/(5790:5790): El socket fd_kernel : 4
+[INFO] 14:00:37:400 kernel/(5790:5790): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:00:37:400 kernel/(5790:5790): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:00:37:400 kernel/(5790:5790): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:00:39:790 kernel/(5790:5790): Cliente conectado (a KERNEL)
+
+[ERROR] 14:00:39:792 kernel/(5790:5799): El cliente socket es: 9
+[ERROR] 14:00:39:792 kernel/(5790:5799): El cliente socket es: 9
+[ERROR] 14:00:39:792 kernel/(5790:5799): El cliente socket es: 9
+[ERROR] 14:00:39:792 kernel/(5790:5799): El cliente socket es: 9
+[ERROR] 14:00:39:793 kernel/(5790:5799): El cliente socket es: 9
+[TRACE] 14:00:39:793 kernel/(5790:5799): El indice tabla de pagina es: 0
+[INFO] 14:00:39:793 kernel/(5790:5799): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:00:39:793 kernel/(5790:5793): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:00:39:793 kernel/(5790:5793): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:00:39:793 kernel/(5790:5793): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:00:39:794 kernel/(5790:5794): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:00:39:794 kernel/(5790:5794): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:00:39:794 kernel/(5790:5794): La cant de instrucciones en la lista: 4
+[DEBUG] 14:00:39:794 kernel/(5790:5794): Antes del send interrupcion
+[DEBUG] 14:00:39:795 kernel/(5790:5794): Despues del send interrupcion
+[TRACE] 14:00:39:797 kernel/(5790:5794): El PC despues del recv es: 2
+[INFO] 14:00:39:797 kernel/(5790:5794): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:00:39:797 kernel/(5790:5792): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:00:39:797 kernel/(5790:5792): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:00:39:797 kernel/(5790:5799): DISCONNECT!
+[WARNING] 14:00:39:797 kernel/(5790:5799): El cliente se desconecto de KERNEL server
+[TRACE] 14:00:49:797 kernel/(5790:5792): Entre en agregar a block suspended
+[INFO] 14:00:49:798 kernel/(5790:5792): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:00:49:798 kernel/(5790:5792): Memoria termino de meter a swap al proceso
+[INFO] 14:00:49:798 kernel/(5790:5792): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:00:49:798 kernel/(5790:5791): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:00:50:072 kernel/(5790:5791): fallo al recibir nro de pagina!
+[INFO] 14:03:21:933 kernel/(6049:6049): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:03:21:933 kernel/(6049:6049): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:03:21:933 kernel/(6049:6049): El socket fd_kernel : 4
+[INFO] 14:03:21:934 kernel/(6049:6049): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:03:21:934 kernel/(6049:6049): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:03:21:934 kernel/(6049:6049): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:03:24:923 kernel/(6049:6049): Cliente conectado (a KERNEL)
+
+[ERROR] 14:03:24:925 kernel/(6049:6057): El cliente socket es: 9
+[ERROR] 14:03:24:925 kernel/(6049:6057): El cliente socket es: 9
+[ERROR] 14:03:24:925 kernel/(6049:6057): El cliente socket es: 9
+[ERROR] 14:03:24:925 kernel/(6049:6057): El cliente socket es: 9
+[ERROR] 14:03:24:925 kernel/(6049:6057): El cliente socket es: 9
+[TRACE] 14:03:24:926 kernel/(6049:6057): El indice tabla de pagina es: 0
+[INFO] 14:03:24:926 kernel/(6049:6057): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:03:24:927 kernel/(6049:6052): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:03:24:927 kernel/(6049:6052): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:03:24:927 kernel/(6049:6052): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:03:24:927 kernel/(6049:6053): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:03:24:927 kernel/(6049:6053): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:03:24:927 kernel/(6049:6053): La cant de instrucciones en la lista: 4
+[DEBUG] 14:03:24:927 kernel/(6049:6053): Antes del send interrupcion
+[DEBUG] 14:03:24:927 kernel/(6049:6053): Despues del send interrupcion
+[TRACE] 14:03:24:929 kernel/(6049:6053): El PC despues del recv es: 2
+[INFO] 14:03:24:929 kernel/(6049:6053): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:03:24:929 kernel/(6049:6051): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:03:24:929 kernel/(6049:6051): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:03:24:930 kernel/(6049:6057): DISCONNECT!
+[WARNING] 14:03:24:930 kernel/(6049:6057): El cliente se desconecto de KERNEL server
+[TRACE] 14:03:34:930 kernel/(6049:6051): Entre en agregar a block suspended
+[INFO] 14:03:34:932 kernel/(6049:6051): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:03:34:933 kernel/(6049:6051): Memoria termino de meter a swap al proceso
+[INFO] 14:03:34:933 kernel/(6049:6051): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:03:34:933 kernel/(6049:6050): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:03:35:208 kernel/(6049:6050): fallo al recibir nro de pagina!
+[INFO] 14:11:56:665 kernel/(6342:6342): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:11:56:665 kernel/(6342:6342): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:11:56:665 kernel/(6342:6342): El socket fd_kernel : 4
+[INFO] 14:11:56:666 kernel/(6342:6342): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:11:56:666 kernel/(6342:6342): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:11:56:666 kernel/(6342:6342): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:11:59:210 kernel/(6342:6342): Cliente conectado (a KERNEL)
+
+[ERROR] 14:11:59:212 kernel/(6342:6351): El cliente socket es: 9
+[ERROR] 14:11:59:212 kernel/(6342:6351): El cliente socket es: 9
+[ERROR] 14:11:59:212 kernel/(6342:6351): El cliente socket es: 9
+[ERROR] 14:11:59:212 kernel/(6342:6351): El cliente socket es: 9
+[ERROR] 14:11:59:212 kernel/(6342:6351): El cliente socket es: 9
+[TRACE] 14:11:59:213 kernel/(6342:6351): El indice tabla de pagina es: 0
+[INFO] 14:11:59:213 kernel/(6342:6351): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:11:59:213 kernel/(6342:6345): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:11:59:213 kernel/(6342:6345): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:11:59:213 kernel/(6342:6345): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:11:59:213 kernel/(6342:6346): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:11:59:213 kernel/(6342:6346): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:11:59:214 kernel/(6342:6346): La cant de instrucciones en la lista: 4
+[DEBUG] 14:11:59:214 kernel/(6342:6346): Antes del send interrupcion
+[DEBUG] 14:11:59:214 kernel/(6342:6346): Despues del send interrupcion
+[TRACE] 14:11:59:216 kernel/(6342:6346): El PC despues del recv es: 2
+[INFO] 14:11:59:216 kernel/(6342:6346): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:11:59:216 kernel/(6342:6344): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:11:59:216 kernel/(6342:6344): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:11:59:216 kernel/(6342:6351): DISCONNECT!
+[WARNING] 14:11:59:217 kernel/(6342:6351): El cliente se desconecto de KERNEL server
+[TRACE] 14:12:09:216 kernel/(6342:6344): Entre en agregar a block suspended
+[INFO] 14:12:09:217 kernel/(6342:6344): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:12:09:217 kernel/(6342:6344): Memoria termino de meter a swap al proceso
+[INFO] 14:12:09:217 kernel/(6342:6344): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:12:09:217 kernel/(6342:6343): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:12:09:488 kernel/(6342:6343): fallo al recibir nro de pagina!
+[INFO] 14:16:46:611 kernel/(6638:6638): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:16:46:611 kernel/(6638:6638): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:16:46:612 kernel/(6638:6638): El socket fd_kernel : 4
+[INFO] 14:16:46:612 kernel/(6638:6638): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:16:46:612 kernel/(6638:6638): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:16:46:613 kernel/(6638:6638): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:16:50:626 kernel/(6638:6638): Cliente conectado (a KERNEL)
+
+[ERROR] 14:16:50:629 kernel/(6638:6647): El cliente socket es: 9
+[ERROR] 14:16:50:629 kernel/(6638:6647): El cliente socket es: 9
+[ERROR] 14:16:50:629 kernel/(6638:6647): El cliente socket es: 9
+[ERROR] 14:16:50:629 kernel/(6638:6647): El cliente socket es: 9
+[ERROR] 14:16:50:629 kernel/(6638:6647): El cliente socket es: 9
+[TRACE] 14:16:50:630 kernel/(6638:6647): El indice tabla de pagina es: 0
+[INFO] 14:16:50:630 kernel/(6638:6647): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:16:50:630 kernel/(6638:6641): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:16:50:630 kernel/(6638:6641): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:16:50:630 kernel/(6638:6641): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:16:50:630 kernel/(6638:6642): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:16:50:630 kernel/(6638:6642): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:16:50:631 kernel/(6638:6642): La cant de instrucciones en la lista: 4
+[DEBUG] 14:16:50:631 kernel/(6638:6642): Antes del send interrupcion
+[DEBUG] 14:16:50:631 kernel/(6638:6642): Despues del send interrupcion
+[TRACE] 14:16:50:636 kernel/(6638:6642): El PC despues del recv es: 2
+[INFO] 14:16:50:636 kernel/(6638:6642): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:16:50:636 kernel/(6638:6640): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:16:50:636 kernel/(6638:6640): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:16:50:648 kernel/(6638:6647): DISCONNECT!
+[WARNING] 14:16:50:648 kernel/(6638:6647): El cliente se desconecto de KERNEL server
+[TRACE] 14:17:00:637 kernel/(6638:6640): Entre en agregar a block suspended
+[INFO] 14:17:00:637 kernel/(6638:6640): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:17:00:637 kernel/(6638:6640): Memoria termino de meter a swap al proceso
+[INFO] 14:17:00:637 kernel/(6638:6640): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:17:00:638 kernel/(6638:6639): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:17:00:916 kernel/(6638:6639): fallo al recibir nro de pagina!
+[INFO] 14:21:28:351 kernel/(6853:6853): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:21:28:352 kernel/(6853:6853): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:21:28:352 kernel/(6853:6853): El socket fd_kernel : 4
+[INFO] 14:21:28:352 kernel/(6853:6853): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:21:28:353 kernel/(6853:6853): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:21:28:353 kernel/(6853:6853): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:21:31:851 kernel/(6853:6853): Cliente conectado (a KERNEL)
+
+[ERROR] 14:21:31:854 kernel/(6853:6862): El cliente socket es: 9
+[ERROR] 14:21:31:854 kernel/(6853:6862): El cliente socket es: 9
+[ERROR] 14:21:31:854 kernel/(6853:6862): El cliente socket es: 9
+[ERROR] 14:21:31:854 kernel/(6853:6862): El cliente socket es: 9
+[ERROR] 14:21:31:854 kernel/(6853:6862): El cliente socket es: 9
+[TRACE] 14:21:31:855 kernel/(6853:6862): El indice tabla de pagina es: 0
+[INFO] 14:21:31:855 kernel/(6853:6862): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:21:31:855 kernel/(6853:6856): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:21:31:855 kernel/(6853:6856): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:21:31:855 kernel/(6853:6856): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:21:31:856 kernel/(6853:6857): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:21:31:856 kernel/(6853:6857): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:21:31:856 kernel/(6853:6857): La cant de instrucciones en la lista: 4
+[DEBUG] 14:21:31:856 kernel/(6853:6857): Antes del send interrupcion
+[DEBUG] 14:21:31:856 kernel/(6853:6857): Despues del send interrupcion
+[TRACE] 14:21:31:858 kernel/(6853:6857): El PC despues del recv es: 2
+[INFO] 14:21:31:858 kernel/(6853:6857): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:21:31:858 kernel/(6853:6855): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:21:31:858 kernel/(6853:6855): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:21:31:859 kernel/(6853:6862): DISCONNECT!
+[WARNING] 14:21:31:859 kernel/(6853:6862): El cliente se desconecto de KERNEL server
+[TRACE] 14:21:41:859 kernel/(6853:6855): Entre en agregar a block suspended
+[INFO] 14:21:41:859 kernel/(6853:6855): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:21:41:860 kernel/(6853:6855): Memoria termino de meter a swap al proceso
+[INFO] 14:21:41:860 kernel/(6853:6855): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:21:41:860 kernel/(6853:6854): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:21:42:132 kernel/(6853:6854): fallo al recibir nro de pagina!
+[INFO] 14:27:08:769 kernel/(7079:7079): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:27:08:769 kernel/(7079:7079): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:27:08:769 kernel/(7079:7079): El socket fd_kernel : 4
+[INFO] 14:27:08:770 kernel/(7079:7079): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:27:08:770 kernel/(7079:7079): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:27:08:770 kernel/(7079:7079): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:27:11:173 kernel/(7079:7079): Cliente conectado (a KERNEL)
+
+[ERROR] 14:27:11:176 kernel/(7079:7087): El cliente socket es: 9
+[ERROR] 14:27:11:176 kernel/(7079:7087): El cliente socket es: 9
+[ERROR] 14:27:11:176 kernel/(7079:7087): El cliente socket es: 9
+[ERROR] 14:27:11:176 kernel/(7079:7087): El cliente socket es: 9
+[ERROR] 14:27:11:176 kernel/(7079:7087): El cliente socket es: 9
+[TRACE] 14:27:11:177 kernel/(7079:7087): El indice tabla de pagina es: 0
+[INFO] 14:27:11:177 kernel/(7079:7087): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:27:11:177 kernel/(7079:7082): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:27:11:177 kernel/(7079:7082): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:27:11:177 kernel/(7079:7082): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:27:11:177 kernel/(7079:7083): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:27:11:177 kernel/(7079:7083): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:27:11:178 kernel/(7079:7083): La cant de instrucciones en la lista: 4
+[DEBUG] 14:27:11:178 kernel/(7079:7083): Antes del send interrupcion
+[DEBUG] 14:27:11:178 kernel/(7079:7083): Despues del send interrupcion
+[TRACE] 14:27:11:180 kernel/(7079:7083): El PC despues del recv es: 2
+[INFO] 14:27:11:180 kernel/(7079:7083): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:27:11:180 kernel/(7079:7081): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:27:11:180 kernel/(7079:7081): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:27:11:180 kernel/(7079:7087): DISCONNECT!
+[WARNING] 14:27:11:180 kernel/(7079:7087): El cliente se desconecto de KERNEL server
+[TRACE] 14:27:21:180 kernel/(7079:7081): Entre en agregar a block suspended
+[INFO] 14:27:21:181 kernel/(7079:7081): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:27:21:181 kernel/(7079:7081): Memoria termino de meter a swap al proceso
+[INFO] 14:27:21:181 kernel/(7079:7081): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:27:21:181 kernel/(7079:7080): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:27:21:465 kernel/(7079:7080): fallo al recibir nro de pagina!
+[INFO] 14:34:14:732 kernel/(7308:7308): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:34:14:732 kernel/(7308:7308): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:34:14:732 kernel/(7308:7308): El socket fd_kernel : 4
+[INFO] 14:34:14:732 kernel/(7308:7308): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:34:14:733 kernel/(7308:7308): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:34:14:733 kernel/(7308:7308): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:34:17:417 kernel/(7308:7308): Cliente conectado (a KERNEL)
+
+[ERROR] 14:34:17:420 kernel/(7308:7317): El cliente socket es: 9
+[ERROR] 14:34:17:420 kernel/(7308:7317): El cliente socket es: 9
+[ERROR] 14:34:17:420 kernel/(7308:7317): El cliente socket es: 9
+[ERROR] 14:34:17:420 kernel/(7308:7317): El cliente socket es: 9
+[ERROR] 14:34:17:420 kernel/(7308:7317): El cliente socket es: 9
+[TRACE] 14:34:17:421 kernel/(7308:7317): El indice tabla de pagina es: 0
+[INFO] 14:34:17:421 kernel/(7308:7317): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:34:17:421 kernel/(7308:7311): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:34:17:421 kernel/(7308:7311): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:34:17:421 kernel/(7308:7311): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:34:17:421 kernel/(7308:7312): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:34:17:421 kernel/(7308:7312): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:34:17:422 kernel/(7308:7312): La cant de instrucciones en la lista: 4
+[DEBUG] 14:34:17:422 kernel/(7308:7312): Antes del send interrupcion
+[DEBUG] 14:34:17:422 kernel/(7308:7312): Despues del send interrupcion
+[TRACE] 14:34:17:424 kernel/(7308:7312): El PC despues del recv es: 2
+[INFO] 14:34:17:424 kernel/(7308:7312): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:34:17:424 kernel/(7308:7310): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:34:17:424 kernel/(7308:7310): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:34:17:424 kernel/(7308:7317): DISCONNECT!
+[WARNING] 14:34:17:424 kernel/(7308:7317): El cliente se desconecto de KERNEL server
+[TRACE] 14:34:27:424 kernel/(7308:7310): Entre en agregar a block suspended
+[INFO] 14:34:27:425 kernel/(7308:7310): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:34:27:425 kernel/(7308:7310): Memoria termino de meter a swap al proceso
+[INFO] 14:34:27:425 kernel/(7308:7310): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:34:27:425 kernel/(7308:7309): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:34:27:700 kernel/(7308:7309): fallo al recibir nro de pagina!
+[INFO] 14:36:56:309 kernel/(7465:7465): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:36:56:310 kernel/(7465:7465): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:36:56:310 kernel/(7465:7465): El socket fd_kernel : 4
+[INFO] 14:36:56:310 kernel/(7465:7465): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:36:56:311 kernel/(7465:7465): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:36:56:311 kernel/(7465:7465): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:36:58:830 kernel/(7465:7465): Cliente conectado (a KERNEL)
+
+[ERROR] 14:36:58:832 kernel/(7465:7479): El cliente socket es: 9
+[ERROR] 14:36:58:832 kernel/(7465:7479): El cliente socket es: 9
+[ERROR] 14:36:58:832 kernel/(7465:7479): El cliente socket es: 9
+[ERROR] 14:36:58:832 kernel/(7465:7479): El cliente socket es: 9
+[ERROR] 14:36:58:833 kernel/(7465:7479): El cliente socket es: 9
+[TRACE] 14:36:58:833 kernel/(7465:7479): El indice tabla de pagina es: 0
+[INFO] 14:36:58:834 kernel/(7465:7479): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:36:58:834 kernel/(7465:7468): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:36:58:834 kernel/(7465:7468): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:36:58:834 kernel/(7465:7468): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:36:58:834 kernel/(7465:7469): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:36:58:834 kernel/(7465:7469): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:36:58:835 kernel/(7465:7469): La cant de instrucciones en la lista: 4
+[DEBUG] 14:36:58:836 kernel/(7465:7469): Antes del send interrupcion
+[DEBUG] 14:36:58:836 kernel/(7465:7469): Despues del send interrupcion
+[TRACE] 14:36:58:837 kernel/(7465:7469): El PC despues del recv es: 2
+[INFO] 14:36:58:837 kernel/(7465:7469): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:36:58:837 kernel/(7465:7467): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:36:58:837 kernel/(7465:7467): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:36:58:837 kernel/(7465:7479): DISCONNECT!
+[WARNING] 14:36:58:838 kernel/(7465:7479): El cliente se desconecto de KERNEL server
+[TRACE] 14:37:08:837 kernel/(7465:7467): Entre en agregar a block suspended
+[INFO] 14:37:08:837 kernel/(7465:7467): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:37:08:838 kernel/(7465:7467): Memoria termino de meter a swap al proceso
+[INFO] 14:37:08:838 kernel/(7465:7467): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:37:08:838 kernel/(7465:7466): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:37:09:109 kernel/(7465:7466): fallo al recibir nro de pagina!
+[INFO] 14:42:58:829 kernel/(7783:7783): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:42:58:830 kernel/(7783:7783): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:42:58:830 kernel/(7783:7783): El socket fd_kernel : 4
+[INFO] 14:42:58:830 kernel/(7783:7783): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:42:58:830 kernel/(7783:7783): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:42:58:831 kernel/(7783:7783): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:43:02:068 kernel/(7783:7783): Cliente conectado (a KERNEL)
+
+[ERROR] 14:43:02:070 kernel/(7783:7792): El cliente socket es: 9
+[ERROR] 14:43:02:070 kernel/(7783:7792): El cliente socket es: 9
+[ERROR] 14:43:02:071 kernel/(7783:7792): El cliente socket es: 9
+[ERROR] 14:43:02:071 kernel/(7783:7792): El cliente socket es: 9
+[ERROR] 14:43:02:071 kernel/(7783:7792): El cliente socket es: 9
+[TRACE] 14:43:02:071 kernel/(7783:7792): El indice tabla de pagina es: 0
+[INFO] 14:43:02:072 kernel/(7783:7792): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:43:02:072 kernel/(7783:7786): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:43:02:072 kernel/(7783:7786): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:43:02:072 kernel/(7783:7786): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:43:02:072 kernel/(7783:7787): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:43:02:072 kernel/(7783:7787): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:43:02:072 kernel/(7783:7787): La cant de instrucciones en la lista: 4
+[DEBUG] 14:43:02:072 kernel/(7783:7787): Antes del send interrupcion
+[DEBUG] 14:43:02:072 kernel/(7783:7787): Despues del send interrupcion
+[TRACE] 14:43:02:075 kernel/(7783:7787): El PC despues del recv es: 2
+[INFO] 14:43:02:075 kernel/(7783:7787): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:43:02:075 kernel/(7783:7785): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:43:02:075 kernel/(7783:7785): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:43:02:075 kernel/(7783:7792): DISCONNECT!
+[WARNING] 14:43:02:075 kernel/(7783:7792): El cliente se desconecto de KERNEL server
+[TRACE] 14:43:12:075 kernel/(7783:7785): Entre en agregar a block suspended
+[INFO] 14:43:12:075 kernel/(7783:7785): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:43:12:075 kernel/(7783:7785): Memoria termino de meter a swap al proceso
+[INFO] 14:43:12:075 kernel/(7783:7785): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:43:12:075 kernel/(7783:7784): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 14:43:20:118 kernel/(7783:7784): Memoria termino de sacar de swap al proceso
+[INFO] 14:43:20:118 kernel/(7783:7784): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:43:20:118 kernel/(7783:7784): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:43:20:118 kernel/(7783:7787): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:43:20:118 kernel/(7783:7787): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 14:43:20:119 kernel/(7783:7787): La cant de instrucciones en la lista: 4
+[DEBUG] 14:43:20:119 kernel/(7783:7787): Antes del send interrupcion
+[DEBUG] 14:43:20:119 kernel/(7783:7787): Despues del send interrupcion
+[TRACE] 14:43:20:437 kernel/(7783:7787): El PC despues del recv es: 4
+[INFO] 14:43:20:437 kernel/(7783:7787): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 14:45:54:427 kernel/(7953:7953): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:45:54:427 kernel/(7953:7953): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:45:54:427 kernel/(7953:7953): El socket fd_kernel : 4
+[INFO] 14:45:54:427 kernel/(7953:7953): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 14:45:54:428 kernel/(7953:7953): Error al conectar (a CPU)
+
+[INFO] 14:46:27:125 kernel/(7964:7964): El algoritmo de planificacion elegido es SRT.
+[INFO] 14:46:27:125 kernel/(7964:7964): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 14:46:27:125 kernel/(7964:7964): El socket fd_kernel : 4
+[INFO] 14:46:27:127 kernel/(7964:7964): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 14:46:27:127 kernel/(7964:7964): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 14:46:27:128 kernel/(7964:7964): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 14:46:33:630 kernel/(7964:7964): Cliente conectado (a KERNEL)
+
+[ERROR] 14:46:33:650 kernel/(7964:7972): El cliente socket es: 9
+[ERROR] 14:46:33:650 kernel/(7964:7972): El cliente socket es: 9
+[ERROR] 14:46:33:650 kernel/(7964:7972): El cliente socket es: 9
+[ERROR] 14:46:33:650 kernel/(7964:7972): El cliente socket es: 9
+[ERROR] 14:46:33:650 kernel/(7964:7972): El cliente socket es: 9
+[TRACE] 14:46:33:651 kernel/(7964:7972): El indice tabla de pagina es: 0
+[INFO] 14:46:33:651 kernel/(7964:7972): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:46:33:651 kernel/(7964:7967): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 14:46:33:651 kernel/(7964:7967): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:46:33:651 kernel/(7964:7967): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:46:33:652 kernel/(7964:7968): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:46:33:652 kernel/(7964:7968): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 14:46:33:652 kernel/(7964:7968): La cant de instrucciones en la lista: 4
+[DEBUG] 14:46:33:652 kernel/(7964:7968): Antes del send interrupcion
+[DEBUG] 14:46:33:652 kernel/(7964:7968): Despues del send interrupcion
+[TRACE] 14:46:33:654 kernel/(7964:7968): El PC despues del recv es: 2
+[INFO] 14:46:33:654 kernel/(7964:7968): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 14:46:33:654 kernel/(7964:7966): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 14:46:33:654 kernel/(7964:7966): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 14:46:33:654 kernel/(7964:7972): DISCONNECT!
+[WARNING] 14:46:33:654 kernel/(7964:7972): El cliente se desconecto de KERNEL server
+[TRACE] 14:46:43:655 kernel/(7964:7966): Entre en agregar a block suspended
+[INFO] 14:46:43:655 kernel/(7964:7966): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 14:46:43:656 kernel/(7964:7966): Memoria termino de meter a swap al proceso
+[INFO] 14:46:43:656 kernel/(7964:7966): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 14:46:43:656 kernel/(7964:7965): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 14:46:51:697 kernel/(7964:7965): Memoria termino de sacar de swap al proceso
+[INFO] 14:46:51:697 kernel/(7964:7965): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 14:46:51:697 kernel/(7964:7965): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 14:46:51:697 kernel/(7964:7968): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 14:46:51:697 kernel/(7964:7968): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 14:46:51:698 kernel/(7964:7968): La cant de instrucciones en la lista: 4
+[DEBUG] 14:46:51:698 kernel/(7964:7968): Antes del send interrupcion
+[DEBUG] 14:46:51:698 kernel/(7964:7968): Despues del send interrupcion
+[TRACE] 14:46:52:020 kernel/(7964:7968): El PC despues del recv es: 4
+[INFO] 14:46:52:020 kernel/(7964:7968): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 15:01:48:336 kernel/(8356:8356): El algoritmo de planificacion elegido es SRT.
+[INFO] 15:01:48:341 kernel/(8356:8356): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:01:48:341 kernel/(8356:8356): El socket fd_kernel : 4
+[INFO] 15:01:48:346 kernel/(8356:8356): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 15:01:48:346 kernel/(8356:8356): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:01:48:347 kernel/(8356:8356): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 15:01:53:757 kernel/(8356:8356): Cliente conectado (a KERNEL)
+
+[ERROR] 15:01:53:759 kernel/(8356:8365): El cliente socket es: 9
+[ERROR] 15:01:53:759 kernel/(8356:8365): El cliente socket es: 9
+[ERROR] 15:01:53:759 kernel/(8356:8365): El cliente socket es: 9
+[ERROR] 15:01:53:759 kernel/(8356:8365): El cliente socket es: 9
+[ERROR] 15:01:53:759 kernel/(8356:8365): El cliente socket es: 9
+[TRACE] 15:01:53:760 kernel/(8356:8365): El indice tabla de pagina es: 0
+[INFO] 15:01:53:760 kernel/(8356:8365): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:01:53:760 kernel/(8356:8359): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 15:01:53:760 kernel/(8356:8359): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:01:53:760 kernel/(8356:8359): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:01:53:760 kernel/(8356:8360): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:01:53:760 kernel/(8356:8360): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 15:01:53:761 kernel/(8356:8360): La cant de instrucciones en la lista: 4
+[DEBUG] 15:01:53:761 kernel/(8356:8360): Antes del send interrupcion
+[DEBUG] 15:01:53:761 kernel/(8356:8360): Despues del send interrupcion
+[TRACE] 15:01:53:763 kernel/(8356:8360): El PC despues del recv es: 2
+[INFO] 15:01:53:764 kernel/(8356:8360): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:01:53:764 kernel/(8356:8358): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 15:01:53:764 kernel/(8356:8358): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 15:01:53:764 kernel/(8356:8365): DISCONNECT!
+[WARNING] 15:01:53:764 kernel/(8356:8365): El cliente se desconecto de KERNEL server
+[TRACE] 15:02:03:764 kernel/(8356:8358): Entre en agregar a block suspended
+[INFO] 15:02:03:764 kernel/(8356:8358): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 15:02:03:765 kernel/(8356:8358): Memoria termino de meter a swap al proceso
+[INFO] 15:02:03:765 kernel/(8356:8358): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 15:02:03:765 kernel/(8356:8357): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 15:02:11:805 kernel/(8356:8357): Memoria termino de sacar de swap al proceso
+[INFO] 15:02:11:806 kernel/(8356:8357): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:02:11:806 kernel/(8356:8357): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:02:11:806 kernel/(8356:8360): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:02:11:806 kernel/(8356:8360): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 15:02:11:806 kernel/(8356:8360): La cant de instrucciones en la lista: 4
+[DEBUG] 15:02:11:806 kernel/(8356:8360): Antes del send interrupcion
+[DEBUG] 15:02:11:806 kernel/(8356:8360): Despues del send interrupcion
+[TRACE] 15:02:15:885 kernel/(8356:8360): El PC despues del recv es: 4
+[INFO] 15:02:15:885 kernel/(8356:8360): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 15:12:36:236 kernel/(8763:8763): El algoritmo de planificacion elegido es SRT.
+[INFO] 15:12:36:236 kernel/(8763:8763): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:12:36:237 kernel/(8763:8763): El socket fd_kernel : 4
+[INFO] 15:12:36:237 kernel/(8763:8763): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 15:12:36:237 kernel/(8763:8763): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:12:36:238 kernel/(8763:8763): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 15:12:49:135 kernel/(8763:8763): Cliente conectado (a KERNEL)
+
+[ERROR] 15:12:49:137 kernel/(8763:8771): El cliente socket es: 9
+[ERROR] 15:12:49:137 kernel/(8763:8771): El cliente socket es: 9
+[ERROR] 15:12:49:137 kernel/(8763:8771): El cliente socket es: 9
+[ERROR] 15:12:49:137 kernel/(8763:8771): El cliente socket es: 9
+[ERROR] 15:12:49:137 kernel/(8763:8771): El cliente socket es: 9
+[TRACE] 15:12:49:138 kernel/(8763:8771): El indice tabla de pagina es: 0
+[INFO] 15:12:49:138 kernel/(8763:8771): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:12:49:138 kernel/(8763:8766): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 15:12:49:138 kernel/(8763:8766): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:12:49:138 kernel/(8763:8766): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:12:49:138 kernel/(8763:8767): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:12:49:138 kernel/(8763:8767): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 15:12:49:139 kernel/(8763:8767): La cant de instrucciones en la lista: 4
+[DEBUG] 15:12:49:139 kernel/(8763:8767): Antes del send interrupcion
+[DEBUG] 15:12:49:139 kernel/(8763:8767): Despues del send interrupcion
+[TRACE] 15:12:49:141 kernel/(8763:8767): El PC despues del recv es: 2
+[INFO] 15:12:49:141 kernel/(8763:8767): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:12:49:141 kernel/(8763:8765): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 15:12:49:141 kernel/(8763:8765): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 15:12:49:142 kernel/(8763:8771): DISCONNECT!
+[WARNING] 15:12:49:142 kernel/(8763:8771): El cliente se desconecto de KERNEL server
+[TRACE] 15:12:59:142 kernel/(8763:8765): Entre en agregar a block suspended
+[INFO] 15:12:59:142 kernel/(8763:8765): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 15:13:01:143 kernel/(8763:8765): Memoria termino de meter a swap al proceso
+[INFO] 15:13:01:143 kernel/(8763:8765): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 15:13:01:143 kernel/(8763:8764): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 15:13:09:145 kernel/(8763:8764): Memoria termino de sacar de swap al proceso
+[INFO] 15:13:09:145 kernel/(8763:8764): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:13:09:145 kernel/(8763:8764): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:13:09:146 kernel/(8763:8767): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:13:09:146 kernel/(8763:8767): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 15:13:09:146 kernel/(8763:8767): La cant de instrucciones en la lista: 4
+[DEBUG] 15:13:09:146 kernel/(8763:8767): Antes del send interrupcion
+[DEBUG] 15:13:09:146 kernel/(8763:8767): Despues del send interrupcion
+[TRACE] 15:13:13:225 kernel/(8763:8767): El PC despues del recv es: 4
+[INFO] 15:13:13:225 kernel/(8763:8767): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 15:20:43:879 kernel/(9106:9106): El algoritmo de planificacion elegido es SRT.
+[INFO] 15:20:43:880 kernel/(9106:9106): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:20:43:880 kernel/(9106:9106): El socket fd_kernel : 4
+[INFO] 15:20:43:880 kernel/(9106:9106): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 15:20:43:880 kernel/(9106:9106): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:20:43:881 kernel/(9106:9106): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 15:20:48:228 kernel/(9106:9106): Cliente conectado (a KERNEL)
+
+[ERROR] 15:20:48:231 kernel/(9106:9115): El cliente socket es: 9
+[ERROR] 15:20:48:231 kernel/(9106:9115): El cliente socket es: 9
+[ERROR] 15:20:48:231 kernel/(9106:9115): El cliente socket es: 9
+[ERROR] 15:20:48:231 kernel/(9106:9115): El cliente socket es: 9
+[ERROR] 15:20:48:231 kernel/(9106:9115): El cliente socket es: 9
+[TRACE] 15:20:48:232 kernel/(9106:9115): El indice tabla de pagina es: 0
+[INFO] 15:20:48:232 kernel/(9106:9115): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:20:48:232 kernel/(9106:9109): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 15:20:48:232 kernel/(9106:9109): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:20:48:232 kernel/(9106:9109): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:20:48:232 kernel/(9106:9110): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:20:48:232 kernel/(9106:9110): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 15:20:48:233 kernel/(9106:9110): La cant de instrucciones en la lista: 4
+[DEBUG] 15:20:48:233 kernel/(9106:9110): Antes del send interrupcion
+[DEBUG] 15:20:48:234 kernel/(9106:9110): Despues del send interrupcion
+[TRACE] 15:20:48:235 kernel/(9106:9110): El PC despues del recv es: 2
+[INFO] 15:20:48:235 kernel/(9106:9110): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:20:48:235 kernel/(9106:9108): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 15:20:48:235 kernel/(9106:9108): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 15:20:48:235 kernel/(9106:9115): DISCONNECT!
+[WARNING] 15:20:48:236 kernel/(9106:9115): El cliente se desconecto de KERNEL server
+[TRACE] 15:20:58:236 kernel/(9106:9108): Entre en agregar a block suspended
+[INFO] 15:20:58:236 kernel/(9106:9108): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 15:21:00:237 kernel/(9106:9108): Memoria termino de meter a swap al proceso
+[INFO] 15:21:00:237 kernel/(9106:9108): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 15:21:00:237 kernel/(9106:9107): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 15:21:08:239 kernel/(9106:9107): Memoria termino de sacar de swap al proceso
+[INFO] 15:21:08:240 kernel/(9106:9107): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:21:08:240 kernel/(9106:9107): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:21:08:240 kernel/(9106:9110): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:21:08:240 kernel/(9106:9110): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 15:21:08:240 kernel/(9106:9110): La cant de instrucciones en la lista: 4
+[DEBUG] 15:21:08:240 kernel/(9106:9110): Antes del send interrupcion
+[DEBUG] 15:21:08:240 kernel/(9106:9110): Despues del send interrupcion
+[TRACE] 15:21:12:321 kernel/(9106:9110): El PC despues del recv es: 4
+[INFO] 15:21:12:321 kernel/(9106:9110): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 15:33:17:834 kernel/(9546:9546): El algoritmo de planificacion elegido es SRT.
+[INFO] 15:33:17:837 kernel/(9546:9546): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:33:17:837 kernel/(9546:9546): El socket fd_kernel : 4
+[INFO] 15:33:17:837 kernel/(9546:9546): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 15:33:17:839 kernel/(9546:9546): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:33:17:841 kernel/(9546:9546): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 15:33:19:836 kernel/(9546:9546): Cliente conectado (a KERNEL)
+
+[ERROR] 15:33:19:841 kernel/(9546:9554): El cliente socket es: 9
+[ERROR] 15:33:19:841 kernel/(9546:9554): El cliente socket es: 9
+[ERROR] 15:33:19:841 kernel/(9546:9554): El cliente socket es: 9
+[ERROR] 15:33:19:841 kernel/(9546:9554): El cliente socket es: 9
+[ERROR] 15:33:19:841 kernel/(9546:9554): El cliente socket es: 9
+[TRACE] 15:33:19:842 kernel/(9546:9554): El indice tabla de pagina es: 0
+[INFO] 15:33:19:842 kernel/(9546:9554): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:33:19:842 kernel/(9546:9549): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 15:33:19:842 kernel/(9546:9549): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:33:19:842 kernel/(9546:9549): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:33:19:842 kernel/(9546:9550): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:33:19:842 kernel/(9546:9550): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 15:33:19:842 kernel/(9546:9550): La cant de instrucciones en la lista: 4
+[DEBUG] 15:33:19:842 kernel/(9546:9550): Antes del send interrupcion
+[DEBUG] 15:33:19:843 kernel/(9546:9550): Despues del send interrupcion
+[TRACE] 15:33:19:851 kernel/(9546:9550): El PC despues del recv es: 2
+[INFO] 15:33:19:851 kernel/(9546:9550): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:33:19:851 kernel/(9546:9548): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 15:33:19:851 kernel/(9546:9548): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 15:33:19:868 kernel/(9546:9554): DISCONNECT!
+[WARNING] 15:33:19:874 kernel/(9546:9554): El cliente se desconecto de KERNEL server
+[TRACE] 15:33:29:851 kernel/(9546:9548): Entre en agregar a block suspended
+[INFO] 15:33:29:851 kernel/(9546:9548): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 15:33:31:852 kernel/(9546:9548): Memoria termino de meter a swap al proceso
+[INFO] 15:33:31:852 kernel/(9546:9548): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 15:33:31:852 kernel/(9546:9547): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 15:33:39:858 kernel/(9546:9547): Memoria termino de sacar de swap al proceso
+[INFO] 15:33:39:858 kernel/(9546:9547): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:33:39:858 kernel/(9546:9547): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:33:39:858 kernel/(9546:9550): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:33:39:858 kernel/(9546:9550): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 15:33:39:859 kernel/(9546:9550): La cant de instrucciones en la lista: 4
+[DEBUG] 15:33:39:859 kernel/(9546:9550): Antes del send interrupcion
+[DEBUG] 15:33:39:859 kernel/(9546:9550): Despues del send interrupcion
+[TRACE] 15:33:43:937 kernel/(9546:9550): El PC despues del recv es: 4
+[INFO] 15:33:43:937 kernel/(9546:9550): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 15:38:45:854 kernel/(10008:10008): El algoritmo de planificacion elegido es SRT.
+[INFO] 15:38:45:854 kernel/(10008:10008): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:38:45:855 kernel/(10008:10008): El socket fd_kernel : 4
+[INFO] 15:38:45:855 kernel/(10008:10008): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 15:38:45:856 kernel/(10008:10008): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:38:45:856 kernel/(10008:10008): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 15:38:48:387 kernel/(10008:10008): Cliente conectado (a KERNEL)
+
+[ERROR] 15:38:48:390 kernel/(10008:10016): El cliente socket es: 9
+[ERROR] 15:38:48:390 kernel/(10008:10016): El cliente socket es: 9
+[ERROR] 15:38:48:390 kernel/(10008:10016): El cliente socket es: 9
+[ERROR] 15:38:48:390 kernel/(10008:10016): El cliente socket es: 9
+[ERROR] 15:38:48:390 kernel/(10008:10016): El cliente socket es: 9
+[TRACE] 15:38:48:391 kernel/(10008:10016): El indice tabla de pagina es: 0
+[INFO] 15:38:48:391 kernel/(10008:10016): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:38:48:391 kernel/(10008:10011): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 15:38:48:391 kernel/(10008:10011): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:38:48:391 kernel/(10008:10011): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:38:48:391 kernel/(10008:10012): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:38:48:391 kernel/(10008:10012): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 15:38:48:392 kernel/(10008:10012): La cant de instrucciones en la lista: 4
+[DEBUG] 15:38:48:392 kernel/(10008:10012): Antes del send interrupcion
+[DEBUG] 15:38:48:392 kernel/(10008:10012): Despues del send interrupcion
+[TRACE] 15:38:48:394 kernel/(10008:10012): El PC despues del recv es: 2
+[INFO] 15:38:48:395 kernel/(10008:10012): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:38:48:395 kernel/(10008:10010): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 15:38:48:395 kernel/(10008:10010): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 15:38:48:395 kernel/(10008:10016): DISCONNECT!
+[WARNING] 15:38:48:395 kernel/(10008:10016): El cliente se desconecto de KERNEL server
+[TRACE] 15:38:58:395 kernel/(10008:10010): Entre en agregar a block suspended
+[INFO] 15:38:58:395 kernel/(10008:10010): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 15:39:00:397 kernel/(10008:10010): Memoria termino de meter a swap al proceso
+[INFO] 15:39:00:397 kernel/(10008:10010): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 15:39:00:397 kernel/(10008:10009): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 15:39:08:402 kernel/(10008:10009): Memoria termino de sacar de swap al proceso
+[INFO] 15:39:08:402 kernel/(10008:10009): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:39:08:402 kernel/(10008:10009): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:39:08:402 kernel/(10008:10012): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:39:08:402 kernel/(10008:10012): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 15:39:08:403 kernel/(10008:10012): La cant de instrucciones en la lista: 4
+[DEBUG] 15:39:08:403 kernel/(10008:10012): Antes del send interrupcion
+[DEBUG] 15:39:08:403 kernel/(10008:10012): Despues del send interrupcion
+[TRACE] 15:39:12:481 kernel/(10008:10012): El PC despues del recv es: 4
+[INFO] 15:39:12:481 kernel/(10008:10012): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 15:46:21:741 kernel/(10159:10159): El algoritmo de planificacion elegido es SRT.
+[INFO] 15:46:21:741 kernel/(10159:10159): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:46:21:741 kernel/(10159:10159): El socket fd_kernel : 4
+[INFO] 15:46:21:742 kernel/(10159:10159): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 15:46:21:742 kernel/(10159:10159): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:46:21:742 kernel/(10159:10159): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 15:46:23:906 kernel/(10159:10159): Cliente conectado (a KERNEL)
+
+[ERROR] 15:46:23:909 kernel/(10159:10167): El cliente socket es: 9
+[ERROR] 15:46:23:909 kernel/(10159:10167): El cliente socket es: 9
+[ERROR] 15:46:23:909 kernel/(10159:10167): El cliente socket es: 9
+[ERROR] 15:46:23:909 kernel/(10159:10167): El cliente socket es: 9
+[ERROR] 15:46:23:909 kernel/(10159:10167): El cliente socket es: 9
+[TRACE] 15:46:23:910 kernel/(10159:10167): El indice tabla de pagina es: 0
+[INFO] 15:46:23:910 kernel/(10159:10167): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:46:23:910 kernel/(10159:10162): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 15:46:23:910 kernel/(10159:10162): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:46:23:910 kernel/(10159:10162): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:46:23:910 kernel/(10159:10163): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:46:23:910 kernel/(10159:10163): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 15:46:23:911 kernel/(10159:10163): La cant de instrucciones en la lista: 4
+[DEBUG] 15:46:23:912 kernel/(10159:10163): Antes del send interrupcion
+[DEBUG] 15:46:23:912 kernel/(10159:10163): Despues del send interrupcion
+[TRACE] 15:46:23:913 kernel/(10159:10163): El PC despues del recv es: 2
+[INFO] 15:46:23:914 kernel/(10159:10163): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:46:23:914 kernel/(10159:10161): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 15:46:23:914 kernel/(10159:10161): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 15:46:23:914 kernel/(10159:10167): DISCONNECT!
+[WARNING] 15:46:23:914 kernel/(10159:10167): El cliente se desconecto de KERNEL server
+[TRACE] 15:46:33:914 kernel/(10159:10161): Entre en agregar a block suspended
+[INFO] 15:46:33:915 kernel/(10159:10161): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 15:46:35:917 kernel/(10159:10161): Memoria termino de meter a swap al proceso
+[INFO] 15:46:35:917 kernel/(10159:10161): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 15:46:35:917 kernel/(10159:10160): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 15:46:43:921 kernel/(10159:10160): Memoria termino de sacar de swap al proceso
+[INFO] 15:46:43:921 kernel/(10159:10160): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:46:43:921 kernel/(10159:10160): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:46:43:922 kernel/(10159:10163): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:46:43:922 kernel/(10159:10163): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 15:46:43:922 kernel/(10159:10163): La cant de instrucciones en la lista: 4
+[DEBUG] 15:46:43:922 kernel/(10159:10163): Antes del send interrupcion
+[DEBUG] 15:46:43:922 kernel/(10159:10163): Despues del send interrupcion
+[TRACE] 15:46:48:001 kernel/(10159:10163): El PC despues del recv es: 4
+[INFO] 15:46:48:001 kernel/(10159:10163): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 15:49:47:873 kernel/(10255:10255): El algoritmo de planificacion elegido es SRT.
+[INFO] 15:49:47:873 kernel/(10255:10255): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:49:47:874 kernel/(10255:10255): El socket fd_kernel : 4
+[INFO] 15:49:47:874 kernel/(10255:10255): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 15:49:47:874 kernel/(10255:10255): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:49:47:875 kernel/(10255:10255): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 15:49:50:626 kernel/(10255:10255): Cliente conectado (a KERNEL)
+
+[ERROR] 15:49:50:628 kernel/(10255:10263): El cliente socket es: 9
+[ERROR] 15:49:50:629 kernel/(10255:10263): El cliente socket es: 9
+[ERROR] 15:49:50:629 kernel/(10255:10263): El cliente socket es: 9
+[ERROR] 15:49:50:629 kernel/(10255:10263): El cliente socket es: 9
+[ERROR] 15:49:50:629 kernel/(10255:10263): El cliente socket es: 9
+[TRACE] 15:49:50:629 kernel/(10255:10263): El indice tabla de pagina es: 0
+[INFO] 15:49:50:630 kernel/(10255:10263): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:49:50:630 kernel/(10255:10258): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 15:49:50:630 kernel/(10255:10258): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:49:50:630 kernel/(10255:10258): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:49:50:630 kernel/(10255:10259): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:49:50:630 kernel/(10255:10259): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 15:49:50:630 kernel/(10255:10259): La cant de instrucciones en la lista: 4
+[DEBUG] 15:49:50:631 kernel/(10255:10259): Antes del send interrupcion
+[DEBUG] 15:49:50:631 kernel/(10255:10259): Despues del send interrupcion
+[TRACE] 15:49:50:633 kernel/(10255:10259): El PC despues del recv es: 2
+[INFO] 15:49:50:633 kernel/(10255:10259): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:49:50:633 kernel/(10255:10257): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 15:49:50:633 kernel/(10255:10257): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 15:49:50:633 kernel/(10255:10263): DISCONNECT!
+[WARNING] 15:49:50:633 kernel/(10255:10263): El cliente se desconecto de KERNEL server
+[TRACE] 15:50:00:633 kernel/(10255:10257): Entre en agregar a block suspended
+[INFO] 15:50:00:633 kernel/(10255:10257): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 15:50:02:635 kernel/(10255:10257): Memoria termino de meter a swap al proceso
+[INFO] 15:50:02:635 kernel/(10255:10257): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 15:50:02:635 kernel/(10255:10256): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 15:50:10:639 kernel/(10255:10256): Memoria termino de sacar de swap al proceso
+[INFO] 15:50:10:639 kernel/(10255:10256): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:50:10:639 kernel/(10255:10256): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:50:10:639 kernel/(10255:10259): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:50:10:639 kernel/(10255:10259): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 15:50:10:639 kernel/(10255:10259): La cant de instrucciones en la lista: 4
+[DEBUG] 15:50:10:639 kernel/(10255:10259): Antes del send interrupcion
+[DEBUG] 15:50:10:640 kernel/(10255:10259): Despues del send interrupcion
+[TRACE] 15:50:14:722 kernel/(10255:10259): El PC despues del recv es: 4
+[INFO] 15:50:14:723 kernel/(10255:10259): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 15:51:55:241 kernel/(10379:10379): El algoritmo de planificacion elegido es SRT.
+[INFO] 15:51:55:241 kernel/(10379:10379): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 15:51:55:241 kernel/(10379:10379): El socket fd_kernel : 4
+[INFO] 15:51:55:241 kernel/(10379:10379): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 15:51:55:242 kernel/(10379:10379): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 15:51:55:242 kernel/(10379:10379): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 15:51:58:113 kernel/(10379:10379): Cliente conectado (a KERNEL)
+
+[ERROR] 15:51:58:116 kernel/(10379:10387): El cliente socket es: 9
+[ERROR] 15:51:58:116 kernel/(10379:10387): El cliente socket es: 9
+[ERROR] 15:51:58:116 kernel/(10379:10387): El cliente socket es: 9
+[ERROR] 15:51:58:116 kernel/(10379:10387): El cliente socket es: 9
+[ERROR] 15:51:58:116 kernel/(10379:10387): El cliente socket es: 9
+[TRACE] 15:51:58:117 kernel/(10379:10387): El indice tabla de pagina es: 0
+[INFO] 15:51:58:117 kernel/(10379:10387): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:51:58:117 kernel/(10379:10382): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 15:51:58:118 kernel/(10379:10382): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:51:58:118 kernel/(10379:10382): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:51:58:119 kernel/(10379:10383): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:51:58:119 kernel/(10379:10383): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 15:51:58:120 kernel/(10379:10383): La cant de instrucciones en la lista: 4
+[DEBUG] 15:51:58:122 kernel/(10379:10383): Antes del send interrupcion
+[DEBUG] 15:51:58:122 kernel/(10379:10383): Despues del send interrupcion
+[TRACE] 15:51:58:134 kernel/(10379:10383): El PC despues del recv es: 2
+[INFO] 15:51:58:134 kernel/(10379:10383): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 15:51:58:134 kernel/(10379:10381): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 15:51:58:134 kernel/(10379:10381): [SUSPENDED] Se suspende 11000 milisegs, 
+[INFO] 15:51:58:136 kernel/(10379:10387): DISCONNECT!
+[WARNING] 15:51:58:136 kernel/(10379:10387): El cliente se desconecto de KERNEL server
+[TRACE] 15:52:08:134 kernel/(10379:10381): Entre en agregar a block suspended
+[INFO] 15:52:08:134 kernel/(10379:10381): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 15:52:10:136 kernel/(10379:10381): Memoria termino de meter a swap al proceso
+[INFO] 15:52:10:136 kernel/(10379:10381): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 15:52:10:137 kernel/(10379:10380): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 15:52:18:140 kernel/(10379:10380): Memoria termino de sacar de swap al proceso
+[INFO] 15:52:18:140 kernel/(10379:10380): [READY] Entra el proceso de PID: 1 a la cola.
+[DEBUG] 15:52:18:140 kernel/(10379:10380): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 15:52:18:140 kernel/(10379:10383): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 15:52:18:140 kernel/(10379:10383): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 15:52:18:140 kernel/(10379:10383): La cant de instrucciones en la lista: 4
+[DEBUG] 15:52:18:140 kernel/(10379:10383): Antes del send interrupcion
+[DEBUG] 15:52:18:140 kernel/(10379:10383): Despues del send interrupcion
+[TRACE] 15:52:22:221 kernel/(10379:10383): El PC despues del recv es: 4
+[INFO] 15:52:22:221 kernel/(10379:10383): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 16:03:59:918 kernel/(10672:10672): El algoritmo de planificacion elegido es SRT.
+[INFO] 16:03:59:919 kernel/(10672:10672): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:03:59:919 kernel/(10672:10672): El socket fd_kernel : 4
+[INFO] 16:03:59:920 kernel/(10672:10672): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 16:03:59:920 kernel/(10672:10672): Error al conectar (a CPU)
+
+[INFO] 16:04:31:366 kernel/(10686:10686): El algoritmo de planificacion elegido es SRT.
+[INFO] 16:04:31:366 kernel/(10686:10686): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:04:31:366 kernel/(10686:10686): El socket fd_kernel : 4
+[INFO] 16:04:31:366 kernel/(10686:10686): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 16:04:31:367 kernel/(10686:10686): Error al conectar (a CPU)
+
+[INFO] 16:05:52:080 kernel/(10787:10787): El algoritmo de planificacion elegido es SRT.
+[INFO] 16:05:52:080 kernel/(10787:10787): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:05:52:080 kernel/(10787:10787): El socket fd_kernel : 4
+[INFO] 16:05:52:081 kernel/(10787:10787): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 16:05:52:081 kernel/(10787:10787): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:05:52:081 kernel/(10787:10787): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 16:05:59:573 kernel/(10787:10787): Cliente conectado (a KERNEL)
+
+[ERROR] 16:05:59:576 kernel/(10787:10796): El cliente socket es: 9
+[ERROR] 16:05:59:576 kernel/(10787:10796): El cliente socket es: 9
+[ERROR] 16:05:59:576 kernel/(10787:10796): El cliente socket es: 9
+[ERROR] 16:05:59:576 kernel/(10787:10796): El cliente socket es: 9
+[ERROR] 16:05:59:576 kernel/(10787:10796): El cliente socket es: 9
+[TRACE] 16:05:59:577 kernel/(10787:10796): El indice tabla de pagina es: 0
+[INFO] 16:05:59:577 kernel/(10787:10796): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:05:59:577 kernel/(10787:10790): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 16:05:59:577 kernel/(10787:10790): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:05:59:577 kernel/(10787:10796): DISCONNECT!
+[WARNING] 16:05:59:577 kernel/(10787:10796): El cliente se desconecto de KERNEL server
+[TRACE] 16:05:59:616 kernel/(10787:10790): Memoria termino de meter al proceso
+[DEBUG] 16:05:59:616 kernel/(10787:10790): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:05:59:616 kernel/(10787:10791): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:05:59:616 kernel/(10787:10791): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 16:05:59:618 kernel/(10787:10791): La cant de instrucciones en la lista: 4
+[DEBUG] 16:05:59:619 kernel/(10787:10791): Antes del send interrupcion
+[DEBUG] 16:05:59:620 kernel/(10787:10791): Despues del send interrupcion
+[TRACE] 16:06:03:622 kernel/(10787:10791): El PC despues del recv es: 2
+[INFO] 16:06:03:622 kernel/(10787:10791): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:06:03:622 kernel/(10787:10789): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 16:06:03:622 kernel/(10787:10789): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 16:06:13:623 kernel/(10787:10789): Entre en agregar a block suspended
+[INFO] 16:06:13:623 kernel/(10787:10789): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 16:06:21:665 kernel/(10787:10789): Memoria termino de meter a swap al proceso
+[INFO] 16:06:21:666 kernel/(10787:10789): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 16:06:21:666 kernel/(10787:10788): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 16:06:29:668 kernel/(10787:10788): Memoria termino de sacar de swap al proceso
+[INFO] 16:06:29:668 kernel/(10787:10788): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 16:06:29:668 kernel/(10787:10788): Memoria termino de meter al proceso
+[DEBUG] 16:06:29:669 kernel/(10787:10788): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:06:29:669 kernel/(10787:10791): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:06:29:669 kernel/(10787:10791): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 16:06:29:669 kernel/(10787:10791): La cant de instrucciones en la lista: 4
+[DEBUG] 16:06:29:669 kernel/(10787:10791): Antes del send interrupcion
+[DEBUG] 16:06:29:669 kernel/(10787:10791): Despues del send interrupcion
+[TRACE] 16:06:33:673 kernel/(10787:10791): El PC despues del recv es: 4
+[INFO] 16:06:33:673 kernel/(10787:10791): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 16:12:17:038 kernel/(11019:11019): El algoritmo de planificacion elegido es SRT.
+[INFO] 16:12:17:038 kernel/(11019:11019): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:12:17:038 kernel/(11019:11019): El socket fd_kernel : 4
+[INFO] 16:12:17:039 kernel/(11019:11019): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 16:12:17:039 kernel/(11019:11019): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:12:17:039 kernel/(11019:11019): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 16:17:21:574 kernel/(11019:11019): Cliente conectado (a KERNEL)
+
+[ERROR] 16:17:21:576 kernel/(11019:11071): El cliente socket es: 9
+[ERROR] 16:17:21:577 kernel/(11019:11071): El cliente socket es: 9
+[ERROR] 16:17:21:577 kernel/(11019:11071): El cliente socket es: 9
+[ERROR] 16:17:21:577 kernel/(11019:11071): El cliente socket es: 9
+[ERROR] 16:17:21:577 kernel/(11019:11071): El cliente socket es: 9
+[TRACE] 16:17:21:577 kernel/(11019:11071): El indice tabla de pagina es: 0
+[INFO] 16:17:21:578 kernel/(11019:11071): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:17:21:578 kernel/(11019:11022): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 16:17:21:578 kernel/(11019:11022): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:17:21:578 kernel/(11019:11071): DISCONNECT!
+[WARNING] 16:17:21:578 kernel/(11019:11071): El cliente se desconecto de KERNEL server
+[TRACE] 16:17:21:616 kernel/(11019:11022): Memoria termino de meter al proceso
+[DEBUG] 16:17:21:616 kernel/(11019:11022): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:17:21:616 kernel/(11019:11023): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:17:21:616 kernel/(11019:11023): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 16:17:21:616 kernel/(11019:11023): La cant de instrucciones en la lista: 4
+[DEBUG] 16:17:21:617 kernel/(11019:11023): Antes del send interrupcion
+[DEBUG] 16:17:21:617 kernel/(11019:11023): Despues del send interrupcion
+[TRACE] 16:17:25:619 kernel/(11019:11023): El PC despues del recv es: 2
+[INFO] 16:17:25:619 kernel/(11019:11023): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:17:25:619 kernel/(11019:11021): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 16:17:25:619 kernel/(11019:11021): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 16:17:35:620 kernel/(11019:11021): Entre en agregar a block suspended
+[INFO] 16:17:35:620 kernel/(11019:11021): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 16:17:43:663 kernel/(11019:11021): Memoria termino de meter a swap al proceso
+[INFO] 16:17:43:663 kernel/(11019:11021): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 16:17:43:663 kernel/(11019:11020): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 16:17:51:667 kernel/(11019:11020): Memoria termino de sacar de swap al proceso
+[INFO] 16:17:51:667 kernel/(11019:11020): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 16:17:51:667 kernel/(11019:11020): Memoria termino de meter al proceso
+[DEBUG] 16:17:51:667 kernel/(11019:11020): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:17:51:668 kernel/(11019:11023): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:17:51:668 kernel/(11019:11023): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 16:17:51:668 kernel/(11019:11023): La cant de instrucciones en la lista: 4
+[DEBUG] 16:17:51:668 kernel/(11019:11023): Antes del send interrupcion
+[DEBUG] 16:17:51:668 kernel/(11019:11023): Despues del send interrupcion
+[TRACE] 16:17:55:671 kernel/(11019:11023): El PC despues del recv es: 4
+[INFO] 16:17:55:671 kernel/(11019:11023): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 16:26:36:458 kernel/(11349:11349): El algoritmo de planificacion elegido es SRT.
+[INFO] 16:26:36:462 kernel/(11349:11349): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:26:36:463 kernel/(11349:11349): El socket fd_kernel : 4
+[INFO] 16:26:36:463 kernel/(11349:11349): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 16:26:36:464 kernel/(11349:11349): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:26:36:464 kernel/(11349:11349): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 16:26:40:344 kernel/(11349:11349): Cliente conectado (a KERNEL)
+
+[ERROR] 16:26:40:347 kernel/(11349:11357): El cliente socket es: 9
+[ERROR] 16:26:40:347 kernel/(11349:11357): El cliente socket es: 9
+[ERROR] 16:26:40:347 kernel/(11349:11357): El cliente socket es: 9
+[ERROR] 16:26:40:348 kernel/(11349:11357): El cliente socket es: 9
+[ERROR] 16:26:40:348 kernel/(11349:11357): El cliente socket es: 9
+[TRACE] 16:26:40:348 kernel/(11349:11357): El indice tabla de pagina es: 0
+[INFO] 16:26:40:348 kernel/(11349:11357): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:26:40:349 kernel/(11349:11352): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 16:26:40:349 kernel/(11349:11352): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:26:40:349 kernel/(11349:11357): DISCONNECT!
+[WARNING] 16:26:40:349 kernel/(11349:11357): El cliente se desconecto de KERNEL server
+[TRACE] 16:26:40:387 kernel/(11349:11352): Memoria termino de meter al proceso
+[DEBUG] 16:26:40:387 kernel/(11349:11352): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:26:40:387 kernel/(11349:11353): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:26:40:387 kernel/(11349:11353): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 16:26:40:391 kernel/(11349:11353): La cant de instrucciones en la lista: 4
+[DEBUG] 16:26:40:391 kernel/(11349:11353): Antes del send interrupcion
+[DEBUG] 16:26:40:391 kernel/(11349:11353): Despues del send interrupcion
+[TRACE] 16:26:44:475 kernel/(11349:11353): El PC despues del recv es: 2
+[INFO] 16:26:44:475 kernel/(11349:11353): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:26:44:475 kernel/(11349:11351): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 16:26:44:475 kernel/(11349:11351): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 16:26:54:475 kernel/(11349:11351): Entre en agregar a block suspended
+[INFO] 16:26:54:475 kernel/(11349:11351): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 16:27:02:516 kernel/(11349:11351): Memoria termino de meter a swap al proceso
+[INFO] 16:27:02:516 kernel/(11349:11351): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 16:27:02:516 kernel/(11349:11350): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 16:27:10:520 kernel/(11349:11350): Memoria termino de sacar de swap al proceso
+[INFO] 16:27:10:520 kernel/(11349:11350): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 16:27:10:521 kernel/(11349:11350): Memoria termino de meter al proceso
+[DEBUG] 16:27:10:521 kernel/(11349:11350): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:27:10:521 kernel/(11349:11353): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:27:10:521 kernel/(11349:11353): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 16:27:10:522 kernel/(11349:11353): La cant de instrucciones en la lista: 4
+[DEBUG] 16:27:10:522 kernel/(11349:11353): Antes del send interrupcion
+[DEBUG] 16:27:10:522 kernel/(11349:11353): Despues del send interrupcion
+[TRACE] 16:27:14:603 kernel/(11349:11353): El PC despues del recv es: 4
+[INFO] 16:27:14:604 kernel/(11349:11353): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 16:31:48:771 kernel/(11493:11493): El algoritmo de planificacion elegido es SRT.
+[INFO] 16:31:48:772 kernel/(11493:11493): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:31:48:772 kernel/(11493:11493): El socket fd_kernel : 4
+[INFO] 16:31:48:772 kernel/(11493:11493): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 16:31:48:773 kernel/(11493:11493): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:31:48:773 kernel/(11493:11493): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 16:31:50:867 kernel/(11493:11493): Cliente conectado (a KERNEL)
+
+[ERROR] 16:31:50:870 kernel/(11493:11501): El cliente socket es: 9
+[ERROR] 16:31:50:870 kernel/(11493:11501): El cliente socket es: 9
+[ERROR] 16:31:50:870 kernel/(11493:11501): El cliente socket es: 9
+[ERROR] 16:31:50:870 kernel/(11493:11501): El cliente socket es: 9
+[ERROR] 16:31:50:870 kernel/(11493:11501): El cliente socket es: 9
+[TRACE] 16:31:50:871 kernel/(11493:11501): El indice tabla de pagina es: 0
+[INFO] 16:31:50:871 kernel/(11493:11501): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:31:50:871 kernel/(11493:11496): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 16:31:50:871 kernel/(11493:11496): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:31:50:871 kernel/(11493:11501): DISCONNECT!
+[WARNING] 16:31:50:871 kernel/(11493:11501): El cliente se desconecto de KERNEL server
+[TRACE] 16:31:50:911 kernel/(11493:11496): Memoria termino de meter al proceso
+[DEBUG] 16:31:50:911 kernel/(11493:11496): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:31:50:911 kernel/(11493:11497): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:31:50:912 kernel/(11493:11497): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 16:31:50:912 kernel/(11493:11497): La cant de instrucciones en la lista: 4
+[DEBUG] 16:31:50:912 kernel/(11493:11497): Antes del send interrupcion
+[DEBUG] 16:31:50:912 kernel/(11493:11497): Despues del send interrupcion
+[TRACE] 16:31:54:992 kernel/(11493:11497): El PC despues del recv es: 2
+[INFO] 16:31:54:992 kernel/(11493:11497): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:31:54:992 kernel/(11493:11495): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 16:31:54:992 kernel/(11493:11495): [SUSPENDED] Se suspende 11000 milisegs, 
+[TRACE] 16:32:04:993 kernel/(11493:11495): Entre en agregar a block suspended
+[INFO] 16:32:04:993 kernel/(11493:11495): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 16:32:13:033 kernel/(11493:11495): Memoria termino de meter a swap al proceso
+[INFO] 16:32:13:033 kernel/(11493:11495): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 16:32:13:033 kernel/(11493:11494): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[TRACE] 16:32:21:036 kernel/(11493:11494): Memoria termino de sacar de swap al proceso
+[INFO] 16:32:21:036 kernel/(11493:11494): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 16:32:21:036 kernel/(11493:11494): Memoria termino de meter al proceso
+[DEBUG] 16:32:21:036 kernel/(11493:11494): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:32:21:037 kernel/(11493:11497): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:32:21:037 kernel/(11493:11497): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 5000.000000 milisegundos.
+[TRACE] 16:32:21:037 kernel/(11493:11497): La cant de instrucciones en la lista: 4
+[DEBUG] 16:32:21:037 kernel/(11493:11497): Antes del send interrupcion
+[DEBUG] 16:32:21:037 kernel/(11493:11497): Despues del send interrupcion
+[TRACE] 16:32:25:125 kernel/(11493:11497): El PC despues del recv es: 4
+[INFO] 16:32:25:125 kernel/(11493:11497): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 16:36:09:091 kernel/(11666:11666): El algoritmo de planificacion elegido es SRT.
+[INFO] 16:36:09:092 kernel/(11666:11666): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 16:36:09:092 kernel/(11666:11666): El socket fd_kernel : 4
+[INFO] 16:36:09:095 kernel/(11666:11666): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 16:36:09:095 kernel/(11666:11666): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 16:36:09:095 kernel/(11666:11666): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 16:36:11:684 kernel/(11666:11666): Cliente conectado (a KERNEL)
+
+[ERROR] 16:36:11:686 kernel/(11666:11674): El cliente socket es: 9
+[ERROR] 16:36:11:686 kernel/(11666:11674): El cliente socket es: 9
+[ERROR] 16:36:11:687 kernel/(11666:11674): El cliente socket es: 9
+[ERROR] 16:36:11:687 kernel/(11666:11674): El cliente socket es: 9
+[ERROR] 16:36:11:687 kernel/(11666:11674): El cliente socket es: 9
+[TRACE] 16:36:11:687 kernel/(11666:11674): El indice tabla de pagina es: 0
+[INFO] 16:36:11:687 kernel/(11666:11674): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:36:11:688 kernel/(11666:11669): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 16:36:11:688 kernel/(11666:11669): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 16:36:11:688 kernel/(11666:11674): DISCONNECT!
+[WARNING] 16:36:11:688 kernel/(11666:11674): El cliente se desconecto de KERNEL server
+[TRACE] 16:36:11:728 kernel/(11666:11669): Memoria termino de meter al proceso
+[DEBUG] 16:36:11:728 kernel/(11666:11669): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 16:36:11:728 kernel/(11666:11670): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 16:36:11:728 kernel/(11666:11670): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 16:36:11:729 kernel/(11666:11670): La cant de instrucciones en la lista: 4
+[DEBUG] 16:36:11:729 kernel/(11666:11670): Antes del send interrupcion
+[DEBUG] 16:36:11:729 kernel/(11666:11670): Despues del send interrupcion
+[TRACE] 16:36:18:810 kernel/(11666:11670): El PC despues del recv es: 4
+[INFO] 16:36:18:810 kernel/(11666:11670): [EXIT] Finaliza el proceso de PID: 1

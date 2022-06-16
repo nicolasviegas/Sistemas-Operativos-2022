@@ -81,6 +81,16 @@ void agregarAReady(pcb_t* proceso){
 	log_info(log_kernel, "[READY] Entra el proceso de PID: %d a la cola.", proceso->PID);
 	send_TAM(fd_memoria,METER_EN_MEM_PRINCIPAL);
 	send_TAM(fd_memoria,proceso->indice_tabla_paginas);
+
+	uint32_t indice_proceso; //ESTE RECV ES PARA SABER SI MEMORIA YA TERMINO DE PASAR A SWAP AL PROCESO SUSPENDIDO
+	if (recv(fd_memoria, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+	log_info(log_kernel, "fallo al recibir nro de pagina!");
+	return;
+	}if(indice_proceso == 5555){
+		log_trace(log_kernel,"Memoria termino de meter al proceso");
+	}
+
+
 	//printf("PROCESOS EN READY: %d \n", list_size(colaReady));
 	log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
 

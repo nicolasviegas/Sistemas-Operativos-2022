@@ -68,7 +68,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			 }
 
 			 //todo crear archivo de swap
-			 crear_archivo_swap(indice_tabla);
+			// crear_archivo_swap(indice_tabla);
     	    }
 
     		if(condicion == TLB_RD){
@@ -108,74 +108,82 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 
 				}else{
-					uint32_t indice_tabla;
-									if (recv(cliente_socket, &indice_tabla, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-										log_info(log_memoria, "fallo al recibir nro de pagina!");
-										return;
-									}
-									log_trace(log_memoria,"El indice de la tabla 1er nivel es: %d",indice_tabla);
+							uint32_t indice_tabla;
+							if (recv(cliente_socket, &indice_tabla, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+								log_info(log_memoria, "fallo al recibir nro de pagina!");
+								return;
+							}
+							log_trace(log_memoria,"El indice de la tabla 1er nivel es: %d",indice_tabla);
 
-									uint32_t entrada_1er_nivel;
-									if (recv(cliente_socket, &entrada_1er_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-										log_info(log_memoria, "fallo al recibir nro de pagina!");
-										return;
-									}
-									log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
+							uint32_t entrada_1er_nivel;
+							if (recv(cliente_socket, &entrada_1er_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+								log_info(log_memoria, "fallo al recibir nro de pagina!");
+								return;
+							}
+							log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
 
-									uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
-									send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
-									log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
+							uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
+							send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+							log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
-									uint32_t entrada_2do_nivel;
-									if (recv(cliente_socket, &entrada_2do_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-										log_info(log_memoria, "fallo al recibir nro de pagina!");
-										return;
-									}
-									log_trace(log_memoria,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
+							uint32_t entrada_2do_nivel;
+							if (recv(cliente_socket, &entrada_2do_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+								log_info(log_memoria, "fallo al recibir nro de pagina!");
+								return;
+							}
+							log_trace(log_memoria,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
 
-									//todo funcion que hizo tomi
+							pagina* pagina_buscada = malloc(sizeof(pagina));
+							pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
+//LO COMENTO ACA Y LO AGREGO ABAJO//send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+							//log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+							//free(pagina_buscada);
 
-									pagina* pagina_buscada = malloc(sizeof(pagina));
-									pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
-									send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
-									log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
-									//free(pagina_buscada);
+							uint32_t desplazamiento;
+							if (recv(cliente_socket, &desplazamiento, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+								log_info(log_memoria, "fallo al recibir nro de pagina!");
+								return;
+							}
+							log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
 
-									uint32_t desplazamiento;
-									if (recv(cliente_socket, &desplazamiento, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-										log_info(log_memoria, "fallo al recibir nro de pagina!");
-										return;
-									}
-									log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
+							uint32_t valor_leido;
+							if(pagina_buscada->bit_presencia == 1){
+								valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
+								send_TAM(cliente_socket,valor_leido);
+								log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
+								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+							}
+							else{
 
-									uint32_t valor_leido;
-									if(pagina_buscada->bit_presencia == 1){
-										valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
+								uint32_t frame_a_utilizar = buscar_frame_libre();
+								if(frame_a_utilizar != -1){
+									if(al_proceso_le_quedan_frames(indice_tabla)){
+										log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+
+										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+										valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento); // todo pasar desp
 										send_TAM(cliente_socket,valor_leido);
-										log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
+										log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
+										send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+										log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 									}
 									else{
-										uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
-										uint32_t frame_a_utilizar = buscar_frame_libre();
-										if(frame_a_utilizar != -1){
-											if(al_proceso_le_quedan_frames(indice_tabla)){
-												poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
-												valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento); // todo pasar desp
-												send_TAM(cliente_socket,valor_leido);
-												log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
-											}
-											else{
-												if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
-													ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
-													valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
-													send_TAM(cliente_socket,valor_leido);
-													log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
-										    }
-									   }
-							       }
+										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
+											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+											uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+											valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
+											send_TAM(cliente_socket,valor_leido);
+											log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
+											send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+											log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+									}
+							   }
+						   }
 
-						    }
-							//todo MANDARLE EL MARCO A CPU y agregar RECV
+					}
+					//todo MANDARLE EL MARCO A CPU y agregar RECV
 				}
 
 /////
@@ -429,12 +437,13 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			//(usar la logica de funcion de meter en swap para tener todas en una sola lista y poner en 1
 
 			if(!el_proceso_tiene_almenos_una_pag_en_mem(indice_proceso)){
-				poner_proceso_en_mem_ppal(indice_proceso);
 				log_error(log_memoria,"El proceso es nuevo asi que lo meto de una a mem ppal");
+				poner_proceso_en_mem_ppal(indice_proceso);
 			}else{
 				log_error(log_memoria,"El proceso no es nuevo asi que ya lo trajo swap");
 			}
 
+			send_TAM(cliente_socket,5555); //le aviso a kernel que ya cargue el proceso
 
 			}
 
