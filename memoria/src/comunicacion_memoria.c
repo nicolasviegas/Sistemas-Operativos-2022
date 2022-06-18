@@ -337,10 +337,17 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						}
 						log_trace(log_memoria,"El valor es: %d",valor);
 
-						escribir_memoria_vino_de_tlb(marco_aux,desplazamiento,valor);
+//						escribir_memoria_vino_de_tlb(marco_aux,desplazamiento,valor);
+//
+//						send_TAM(cliente_socket,valor);
+//						//log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
 
-						send_TAM(cliente_socket,valor);
-						//log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
+						//uint32_t valor_leido = leer_de_memoria(marco_aux,desplazamiento);
+
+						escribir_pagina(valor,marco_aux,desplazamiento);
+
+						send_TAM(cliente_socket,100); // el 100 es por que se escribio correctamente
+						log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
 
 
 						//todo ir a buscar a memoria(marco,desplazamiento)   . con nro de marco * tam de pag + desplazamiento
@@ -391,33 +398,60 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							log_trace(log_memoria,"El valor es: %d",valor);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 							if(pagina_buscada->bit_presencia == 1){
 
-								escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
-								send_TAM(cliente_socket,pagina_buscada->frame);
+								//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
+
+								escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
+
+								send_TAM(cliente_socket,100);
+								log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
+
+								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
-								send_TAM(cliente_socket,valor);
 							}
-							uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
-							uint32_t frame_a_utilizar = buscar_frame_libre();
-							if(frame_a_utilizar != -1){
-								if(al_proceso_le_quedan_frames(indice_tabla)){
-									poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
-									escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
-									send_TAM(cliente_socket,pagina_buscada->frame);
-									log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
-									send_TAM(cliente_socket,valor);
-								}
-								else{
-									if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
-										ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
-										escribir_pagina(valor,pagina_buscada->frame,indice_tabla,desplazamiento);
-										send_TAM(cliente_socket,pagina_buscada->frame);
+							else{
+
+								uint32_t frame_a_utilizar = buscar_frame_libre();
+								if(frame_a_utilizar != -1){
+									if(al_proceso_le_quedan_frames(indice_tabla)){
+										log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+
+										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+										//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento); // todo pasar desp
+										escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
+										send_TAM(cliente_socket,100);
+										log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
+										send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 										log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
-										send_TAM(cliente_socket,valor);
-								}
+									}
+									else{
+										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
+											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+											uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+											escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
+											send_TAM(cliente_socket,100);
+											log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
+											send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
+											log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+									}
+							   }
 						   }
-					   }
+
+					}
 
 				}
 				//todo MANDARLE EL MARCO A CPU y agregar RECV

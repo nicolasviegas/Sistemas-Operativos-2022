@@ -267,11 +267,11 @@ void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el 
 }
 
 
-void escribir_pagina(uint32_t valor,uint32_t frame,uint32_t indice_tabla_1er_nivel, uint32_t desplazamiento){// TODO VER COMO SE ESCIBE EN MEMORIA
-	log_error(log_memoria,"Entre a escribir pagina,valor: %d,indice tabla: %d,desplazamiento: %d ",valor,indice_tabla_1er_nivel,desplazamiento);
+void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){// TODO VER COMO SE ESCIBE EN MEMORIA
+	//log_error(log_memoria,"Entre a escribir pagina,valor: %d,indice tabla: %d,desplazamiento: %d ",valor,indice_tabla_1er_nivel,desplazamiento);
 	uint32_t posicion_marco = frame * tamanio_paginas;
-	log_error(log_memoria,"El frame es es %d ",frame);
-	log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);
+	//log_error(log_memoria,"El frame es es %d ",frame);
+	//log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);
 	memcpy(memoria_principal+posicion_marco+desplazamiento,&valor,sizeof(uint32_t));
 	//memcpy(memoria_principal+posicion_marco+desplazamiento,valor,tamanio_paginas);
 	//escribe en memoria la data y pone en 1 el bit de presencia de la pagina
@@ -332,7 +332,7 @@ void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagi
     //info_pagina->tiempo_uso = obtener_tiempo();
 
     log_error(log_memoria,"Antes de escribir pagina el frame es: %d",info_pagina->frame);
-    escribir_pagina(valor,info_pagina->frame,indice_pagina_1er_nivel,0);
+    escribir_pagina(valor,info_pagina->frame,0);
 
 }
 

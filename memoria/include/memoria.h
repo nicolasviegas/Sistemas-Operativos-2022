@@ -102,7 +102,7 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso);
 
 void liberar_memoria(uint32_t frame);
 
-void escribir_pagina(uint32_t valor,uint32_t frame,uint32_t indice_tabla_1er_nivel, uint32_t desplazamiento);
+void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento);
 
 uint32_t leer_de_memoria(uint32_t frame, uint32_t desp);
 

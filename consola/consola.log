@@ -16360,3 +16360,50 @@
 [WARNING] 12:40:30:582 consola/(13226:13226): entre en READ dentro de send_instrucciones
 [WARNING] 12:40:30:582 consola/(13226:13226): Entre en EXIT dentro de send_instrucciones
 [INFO] 12:40:30:582 consola/(13226:13226): [INFO] La consola finalizo correctamente.
+[INFO] 16:45:29:493 consola/(6903:6903): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 16:45:29:493 consola/(6903:6903): entre en READ dentro de send_instrucciones
+[WARNING] 16:45:29:494 consola/(6903:6903): Entre en EXIT dentro de send_instrucciones
+[INFO] 16:45:29:494 consola/(6903:6903): [INFO] La consola finalizo correctamente.
+[INFO] 17:26:54:987 consola/(7986:7986): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:26:54:987 consola/(7986:7986): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:26:54:988 consola/(7986:7986): Entre en EXIT dentro de send_instrucciones
+[INFO] 17:26:54:988 consola/(7986:7986): [INFO] La consola finalizo correctamente.
+[INFO] 17:28:05:942 consola/(8001:8001): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:28:05:942 consola/(8001:8001): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:28:05:942 consola/(8001:8001): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:28:05:943 consola/(8001:8001): Entre en EXIT dentro de send_instrucciones
+[INFO] 17:28:05:943 consola/(8001:8001): [INFO] La consola finalizo correctamente.
+[INFO] 17:32:27:764 consola/(8205:8205): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:32:27:765 consola/(8205:8205): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:32:27:765 consola/(8205:8205): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:32:27:766 consola/(8205:8205): Entre en EXIT dentro de send_instrucciones
+[INFO] 17:32:27:766 consola/(8205:8205): [INFO] La consola finalizo correctamente.
+[INFO] 17:36:17:649 consola/(8366:8366): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:36:17:650 consola/(8366:8366): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:36:17:650 consola/(8366:8366): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:36:17:651 consola/(8366:8366): Entre en EXIT dentro de send_instrucciones
+[INFO] 17:36:17:651 consola/(8366:8366): [INFO] La consola finalizo correctamente.
+[INFO] 17:39:11:487 consola/(8394:8394): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:39:11:488 consola/(8394:8394): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:39:11:488 consola/(8394:8394): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:39:11:493 consola/(8394:8394): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:39:11:494 consola/(8394:8394): Entre en EXIT dentro de send_instrucciones
+[INFO] 17:39:11:494 consola/(8394:8394): [INFO] La consola finalizo correctamente.
+[INFO] 17:41:20:046 consola/(8407:8407): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:41:20:046 consola/(8407:8407): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:41:20:046 consola/(8407:8407): entre en READ dentro de send_instrucciones
+[WARNING] 17:41:20:047 consola/(8407:8407): Entre en EXIT dentro de send_instrucciones
+[INFO] 17:41:20:047 consola/(8407:8407): [INFO] La consola finalizo correctamente.
+[INFO] 17:42:46:610 consola/(8420:8420): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 17:42:46:610 consola/(8420:8420): entre en WRITE dentro de send_instrucciones
+[WARNING] 17:42:46:610 consola/(8420:8420): entre en READ dentro de send_instrucciones
+[WARNING] 17:42:46:611 consola/(8420:8420): Entre en EXIT dentro de send_instrucciones
+[INFO] 17:42:46:611 consola/(8420:8420): [INFO] La consola finalizo correctamente.
