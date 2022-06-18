@@ -268,7 +268,7 @@ void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el 
 
 
 void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){// TODO VER COMO SE ESCIBE EN MEMORIA
-	//log_error(log_memoria,"Entre a escribir pagina,valor: %d,indice tabla: %d,desplazamiento: %d ",valor,indice_tabla_1er_nivel,desplazamiento);
+	log_error(log_memoria,"Entre a escribir pagina,valor: %d ",valor);
 	uint32_t posicion_marco = frame * tamanio_paginas;
 	//log_error(log_memoria,"El frame es es %d ",frame);
 	//log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);

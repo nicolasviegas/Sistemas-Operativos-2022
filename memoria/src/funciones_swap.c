@@ -55,6 +55,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 				log_trace(log_memoria,"Antes de escribir pagina");
 
 				poner_pagina_en_marco(frame_a_escribir,pagina_aux);
+				log_info(log_memoria,"PUSE EL PROCESO CUANDO LO TRAIGO DE SWAP EN EL FRAME %d",frame_a_escribir);
 				escribir_pagina(dataAux,frame_a_escribir,0);
 			}
 			else{
@@ -69,9 +70,6 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 
 
 void pasar_proceso_a_swap(uint32_t indice_tabla){
-	t_list * tabla_primer_nivel_buscada = list_get(lista_tablas_1er_nivel,indice_tabla);
-	uint32_t entrada_primer_nivel_aux;
-	t_list * tabla_segundo_nivel_aux = list_create();
 	t_list * paginas_del_proceso = list_create();
 	pagina* pagina_aux = malloc(sizeof(pagina));
 //	for(int i = 0;i < list_size(tabla_primer_nivel_buscada);i++){
@@ -93,6 +91,8 @@ void pasar_proceso_a_swap(uint32_t indice_tabla){
 			escribir_en_swap(indice_tabla,pagina_aux->frame);
 			liberar_memoria(pagina_aux->frame);
 		}
+
+	sacar_proceso_de_memoria(indice_tabla);
 		//log_warning(log_memoria,"El bit de presencia al pasar el proceso a swap es: %d",pagina_aux->bit_presencia);
 
 	}
