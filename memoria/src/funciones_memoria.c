@@ -268,13 +268,21 @@ void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el 
 
 
 void escribir_pagina(uint32_t valor,uint32_t frame,uint32_t indice_tabla_1er_nivel, uint32_t desplazamiento){// TODO VER COMO SE ESCIBE EN MEMORIA
+	log_error(log_memoria,"Entre a escribir pagina,valor: %d,indice tabla: %d,desplazamiento: %d ",valor,indice_tabla_1er_nivel,desplazamiento);
 	uint32_t posicion_marco = frame * tamanio_paginas;
+	log_error(log_memoria,"El frame es es %d ",frame);
+	log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);
+	memcpy(memoria_principal+posicion_marco+desplazamiento,&valor,sizeof(uint32_t));
 	//memcpy(memoria_principal+posicion_marco+desplazamiento,valor,tamanio_paginas);
 	//escribe en memoria la data y pone en 1 el bit de presencia de la pagina
 }
 
 uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){ // TODO LEER DE MEMORIA
-	return 18;
+	uint32_t valor_leido;
+	uint32_t posicion_marco = frame * tamanio_paginas;
+	memcpy(&valor_leido,memoria_principal+posicion_marco+desplazamiento,sizeof(uint32_t));
+	log_error(log_memoria,"El valor despues de leer en memoria %d ",valor_leido);
+	return valor_leido;
 }
 
 uint32_t buscar_frame_libre(){
@@ -295,6 +303,7 @@ uint32_t buscar_frame_libre(){
 void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagina_1er_nivel) {
 
     pagina* info_paginaAReemplazar =  pagina_a_reemplazar(indice_pagina_1er_nivel);
+
 
 
     uint32_t frame = info_paginaAReemplazar->frame;
@@ -322,8 +331,8 @@ void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagi
     info_pagina->bit_uso = 1;
     //info_pagina->tiempo_uso = obtener_tiempo();
 
-
-    escribir_pagina(valor,info_pagina,indice_pagina_1er_nivel,0);
+    log_error(log_memoria,"Antes de escribir pagina el frame es: %d",info_pagina->frame);
+    escribir_pagina(valor,info_pagina->frame,indice_pagina_1er_nivel,0);
 
 }
 

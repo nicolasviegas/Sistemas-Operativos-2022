@@ -58764,3 +58764,577 @@
 [INFO] 19:29:38:798 cpu/(6229:6253): [EXE] ejecuto EXIT
 [DEBUG] 19:29:38:798 cpu/(6229:6253): El pc antes de send a kernel es: 4
 [TRACE] 19:29:38:798 cpu/(6229:6253): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 11:34:08:203 cpu/(9562:9562): El algoritmo de reemplazo elegido es LRU.
+[INFO] 11:34:08:203 cpu/(9562:9562): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:34:08:203 cpu/(9562:9562): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 11:34:08:203 cpu/(9562:9562): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 11:34:08:204 cpu/(9562:9562): El fd_memoria despues de grar conexiones es: 7
+[INFO] 11:34:18:095 cpu/(9562:9562): Cliente conectado (a CPU)
+
+[INFO] 11:34:18:095 cpu/(9562:9562): Cliente conectado (a CPU)
+
+[WARNING] 11:34:18:096 cpu/(9562:9580): El tam de pags es 64
+[WARNING] 11:34:18:096 cpu/(9562:9580): La cant de entradas por tabla es 4
+[TRACE] 11:36:38:195 cpu/(9562:9580): El pid recibido es: 1
+[INFO] 11:36:38:195 cpu/(9562:9580): Me llego la instruccion READ
+[DEBUG] 11:36:38:195 cpu/(9562:9580): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 11:36:38:195 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:36:38:195 cpu/(9562:9580): El pc es en fetch 0
+[INFO] 11:36:38:195 cpu/(9562:9580): [EXE] ejecuto READ
+[DEBUG] 11:36:38:195 cpu/(9562:9580): El numero de paginas es 0
+[WARNING] 11:36:38:195 cpu/(9562:9580): pase el list find
+[DEBUG] 11:36:38:195 cpu/(9562:9580): El nro de pagina en el esle de la tlb es: 0
+[TRACE] 11:36:38:195 cpu/(9562:9580): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 11:36:38:195 cpu/(9562:9580): El indice tabla pagina 0
+[ERROR] 11:36:38:195 cpu/(9562:9580): La entrada de 1er nivel es: 0
+[ERROR] 11:36:38:195 cpu/(9562:9580): el numero_tabla_segundo_nivel es: 0
+[ERROR] 11:36:38:195 cpu/(9562:9580): La entrada de 2do nivel es: 0
+[ERROR] 11:36:38:195 cpu/(9562:9580): El desplazamiento es: 0
+[DEBUG] 11:36:38:235 cpu/(9562:9580): Me llego el valor leido: 18
+[ERROR] 11:36:38:274 cpu/(9562:9580): el marco es: 0
+[WARNING] 11:36:38:274 cpu/(9562:9580): Amtes de correr algoritmo reemplzo
+[WARNING] 11:36:38:274 cpu/(9562:9580): Entre en correr algoritmo reemplazo
+[WARNING] 11:36:38:274 cpu/(9562:9580): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 11:36:38:274 cpu/(9562:9580): El size de la lista tlb es: 1
+[TRACE] 11:36:38:274 cpu/(9562:9580): El PC es: 1
+[TRACE] 11:36:38:274 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:36:38:274 cpu/(9562:9580): El pc es en fetch 1
+[INFO] 11:36:38:274 cpu/(9562:9580): [EXE] ejecuto EXIT
+[DEBUG] 11:36:38:274 cpu/(9562:9580): El pc antes de send a kernel es: 2
+[TRACE] 11:36:38:274 cpu/(9562:9580): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 11:40:33:247 cpu/(9562:9580): El pid recibido es: 2
+[INFO] 11:40:33:247 cpu/(9562:9580): Me llego la instruccion READ
+[DEBUG] 11:40:33:247 cpu/(9562:9580): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 11:40:33:247 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:40:33:247 cpu/(9562:9580): El pc es en fetch 0
+[INFO] 11:40:33:247 cpu/(9562:9580): [EXE] ejecuto READ
+[DEBUG] 11:40:33:247 cpu/(9562:9580): El numero de paginas es 4
+[WARNING] 11:40:33:247 cpu/(9562:9580): pase el list find
+[DEBUG] 11:40:33:247 cpu/(9562:9580): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 11:40:33:247 cpu/(9562:9580): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 11:40:33:247 cpu/(9562:9580): El indice tabla pagina 1
+[ERROR] 11:40:33:247 cpu/(9562:9580): La entrada de 1er nivel es: 1
+[ERROR] 11:40:33:286 cpu/(9562:9580): el numero_tabla_segundo_nivel es: 3
+[ERROR] 11:40:33:287 cpu/(9562:9580): La entrada de 2do nivel es: 0
+[ERROR] 11:40:33:287 cpu/(9562:9580): El desplazamiento es: 40
+[DEBUG] 11:40:37:331 cpu/(9562:9580): Me llego el valor leido: 18
+[ERROR] 11:40:37:370 cpu/(9562:9580): el marco es: 4
+[WARNING] 11:40:37:370 cpu/(9562:9580): Amtes de correr algoritmo reemplzo
+[WARNING] 11:40:37:370 cpu/(9562:9580): Entre en correr algoritmo reemplazo
+[WARNING] 11:40:37:370 cpu/(9562:9580): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 11:40:37:370 cpu/(9562:9580): El size de la lista tlb es: 1
+[TRACE] 11:40:37:370 cpu/(9562:9580): El PC es: 1
+[TRACE] 11:40:37:370 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:40:37:370 cpu/(9562:9580): El pc es en fetch 1
+[INFO] 11:40:37:370 cpu/(9562:9580): [EXE] ejecuto EXIT
+[DEBUG] 11:40:37:370 cpu/(9562:9580): El pc antes de send a kernel es: 2
+[TRACE] 11:40:37:370 cpu/(9562:9580): Finalizo el ciclo de ejecucion del proceso: 2 
+[TRACE] 11:41:01:788 cpu/(9562:9580): El pid recibido es: 3
+[INFO] 11:41:01:788 cpu/(9562:9580): Me llego la instruccion READ
+[DEBUG] 11:41:01:788 cpu/(9562:9580): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 11:41:01:788 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:41:01:788 cpu/(9562:9580): El pc es en fetch 0
+[INFO] 11:41:01:788 cpu/(9562:9580): [EXE] ejecuto READ
+[DEBUG] 11:41:01:788 cpu/(9562:9580): El numero de paginas es 4
+[WARNING] 11:41:01:788 cpu/(9562:9580): pase el list find
+[DEBUG] 11:41:01:788 cpu/(9562:9580): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 11:41:01:788 cpu/(9562:9580): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 11:41:01:788 cpu/(9562:9580): El indice tabla pagina 2
+[ERROR] 11:41:01:788 cpu/(9562:9580): La entrada de 1er nivel es: 1
+[ERROR] 11:41:01:789 cpu/(9562:9580): el numero_tabla_segundo_nivel es: 5
+[ERROR] 11:41:01:789 cpu/(9562:9580): La entrada de 2do nivel es: 0
+[ERROR] 11:41:01:790 cpu/(9562:9580): El desplazamiento es: 40
+[DEBUG] 11:41:05:831 cpu/(9562:9580): Me llego el valor leido: 18
+[ERROR] 11:41:05:870 cpu/(9562:9580): el marco es: 9
+[WARNING] 11:41:05:870 cpu/(9562:9580): Amtes de correr algoritmo reemplzo
+[WARNING] 11:41:05:870 cpu/(9562:9580): Entre en correr algoritmo reemplazo
+[WARNING] 11:41:05:870 cpu/(9562:9580): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 11:41:05:870 cpu/(9562:9580): El size de la lista tlb es: 1
+[TRACE] 11:41:05:870 cpu/(9562:9580): El PC es: 1
+[TRACE] 11:41:05:870 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:41:05:870 cpu/(9562:9580): El pc es en fetch 1
+[INFO] 11:41:05:870 cpu/(9562:9580): [EXE] ejecuto EXIT
+[DEBUG] 11:41:05:870 cpu/(9562:9580): El pc antes de send a kernel es: 2
+[TRACE] 11:41:05:870 cpu/(9562:9580): Finalizo el ciclo de ejecucion del proceso: 3 
+[TRACE] 11:47:46:977 cpu/(9562:9580): El pid recibido es: 4
+[DEBUG] 11:47:46:983 cpu/(9562:9580): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 11:47:46:983 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:47:46:984 cpu/(9562:9580): El pc es en fetch 0
+[INFO] 11:47:46:984 cpu/(9562:9580): [EXE] ejecuto IO
+[WARNING] 11:47:46:984 cpu/(9562:9580): El tiempo bloqueante es: 11000
+[DEBUG] 11:47:46:984 cpu/(9562:9580): El pc antes de send a kernel es: 1
+[TRACE] 11:47:46:984 cpu/(9562:9580): Finalizo el ciclo de ejecucion del proceso: 4 
+[TRACE] 11:48:13:053 cpu/(9562:9580): El pid recibido es: 4
+[DEBUG] 11:48:13:094 cpu/(9562:9580): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 11:48:13:095 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:48:13:095 cpu/(9562:9580): El pc es en fetch 1
+[INFO] 11:48:13:095 cpu/(9562:9580): [EXE] ejecuto EXIT
+[DEBUG] 11:48:13:095 cpu/(9562:9580): El pc antes de send a kernel es: 2
+[TRACE] 11:48:13:095 cpu/(9562:9580): Finalizo el ciclo de ejecucion del proceso: 4 
+[TRACE] 11:48:29:296 cpu/(9562:9580): El pid recibido es: 5
+[INFO] 11:48:29:337 cpu/(9562:9580): Me llego la instruccion READ
+[DEBUG] 11:48:29:337 cpu/(9562:9580): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 11:48:29:338 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:48:29:338 cpu/(9562:9580): El pc es en fetch 0
+[INFO] 11:48:29:338 cpu/(9562:9580): [EXE] ejecuto READ
+[DEBUG] 11:48:29:338 cpu/(9562:9580): El numero de paginas es 0
+[WARNING] 11:48:29:338 cpu/(9562:9580): pase el list find
+[DEBUG] 11:48:29:338 cpu/(9562:9580): El nro de pagina en el esle de la tlb es: 0
+[TRACE] 11:48:29:338 cpu/(9562:9580): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 11:48:29:339 cpu/(9562:9580): El indice tabla pagina 4
+[ERROR] 11:48:29:339 cpu/(9562:9580): La entrada de 1er nivel es: 0
+[ERROR] 11:48:29:342 cpu/(9562:9580): el numero_tabla_segundo_nivel es: 10
+[ERROR] 11:48:29:342 cpu/(9562:9580): La entrada de 2do nivel es: 0
+[ERROR] 11:48:29:342 cpu/(9562:9580): El desplazamiento es: 0
+[DEBUG] 11:48:29:378 cpu/(9562:9580): Me llego el valor leido: 18
+[ERROR] 11:48:29:418 cpu/(9562:9580): el marco es: 16
+[WARNING] 11:48:29:419 cpu/(9562:9580): Amtes de correr algoritmo reemplzo
+[WARNING] 11:48:29:419 cpu/(9562:9580): Entre en correr algoritmo reemplazo
+[WARNING] 11:48:29:419 cpu/(9562:9580): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 11:48:29:419 cpu/(9562:9580): El size de la lista tlb es: 1
+[TRACE] 11:48:29:419 cpu/(9562:9580): El PC es: 1
+[TRACE] 11:48:29:419 cpu/(9562:9580): Entre en el while de interrupcion
+[DEBUG] 11:48:29:419 cpu/(9562:9580): El pc es en fetch 1
+[INFO] 11:48:29:419 cpu/(9562:9580): [EXE] ejecuto EXIT
+[DEBUG] 11:48:29:419 cpu/(9562:9580): El pc antes de send a kernel es: 2
+[TRACE] 11:48:29:419 cpu/(9562:9580): Finalizo el ciclo de ejecucion del proceso: 5 
+[INFO] 11:50:21:929 cpu/(9812:9812): El algoritmo de reemplazo elegido es LRU.
+[INFO] 11:50:21:936 cpu/(9812:9812): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 11:50:21:937 cpu/(9812:9812): Error al conectar (a CPU)
+
+[INFO] 11:54:59:782 cpu/(10253:10253): El algoritmo de reemplazo elegido es LRU.
+[INFO] 11:54:59:783 cpu/(10253:10253): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 11:54:59:783 cpu/(10253:10253): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 11:54:59:784 cpu/(10253:10253): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 11:54:59:784 cpu/(10253:10253): El fd_memoria despues de grar conexiones es: 7
+[INFO] 11:55:02:372 cpu/(10253:10253): Cliente conectado (a CPU)
+
+[INFO] 11:55:02:376 cpu/(10253:10253): Cliente conectado (a CPU)
+
+[WARNING] 11:55:02:390 cpu/(10253:10261): El tam de pags es 64
+[WARNING] 11:55:02:390 cpu/(10253:10261): La cant de entradas por tabla es 4
+[TRACE] 11:55:32:977 cpu/(10253:10261): El pid recibido es: 1
+[INFO] 11:55:32:978 cpu/(10253:10261): Me llego la instruccion READ
+[DEBUG] 11:55:32:978 cpu/(10253:10261): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 11:55:32:978 cpu/(10253:10261): Entre en el while de interrupcion
+[DEBUG] 11:55:32:979 cpu/(10253:10261): El pc es en fetch 0
+[INFO] 11:55:32:979 cpu/(10253:10261): [EXE] ejecuto READ
+[DEBUG] 11:55:32:982 cpu/(10253:10261): El numero de paginas es 0
+[WARNING] 11:55:32:982 cpu/(10253:10261): pase el list find
+[DEBUG] 11:55:32:982 cpu/(10253:10261): El nro de pagina en el esle de la tlb es: 0
+[TRACE] 11:55:32:982 cpu/(10253:10261): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 11:55:32:982 cpu/(10253:10261): El indice tabla pagina 0
+[ERROR] 11:55:32:982 cpu/(10253:10261): La entrada de 1er nivel es: 0
+[ERROR] 11:55:32:982 cpu/(10253:10261): el numero_tabla_segundo_nivel es: 0
+[ERROR] 11:55:32:983 cpu/(10253:10261): La entrada de 2do nivel es: 0
+[ERROR] 11:55:32:983 cpu/(10253:10261): El desplazamiento es: 0
+[DEBUG] 11:55:33:022 cpu/(10253:10261): Me llego el valor leido: 0
+[ERROR] 11:55:33:063 cpu/(10253:10261): el marco es: 0
+[WARNING] 11:55:33:063 cpu/(10253:10261): Amtes de correr algoritmo reemplzo
+[WARNING] 11:55:33:063 cpu/(10253:10261): Entre en correr algoritmo reemplazo
+[WARNING] 11:55:33:063 cpu/(10253:10261): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 11:55:33:063 cpu/(10253:10261): El size de la lista tlb es: 1
+[TRACE] 11:55:33:063 cpu/(10253:10261): El PC es: 1
+[TRACE] 11:55:33:063 cpu/(10253:10261): Entre en el while de interrupcion
+[DEBUG] 11:55:33:063 cpu/(10253:10261): El pc es en fetch 1
+[INFO] 11:55:33:063 cpu/(10253:10261): [EXE] ejecuto EXIT
+[DEBUG] 11:55:33:063 cpu/(10253:10261): El pc antes de send a kernel es: 2
+[TRACE] 11:55:33:063 cpu/(10253:10261): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 11:58:40:101 cpu/(10571:10571): El algoritmo de reemplazo elegido es LRU.
+[INFO] 11:58:40:101 cpu/(10571:10571): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 11:58:40:106 cpu/(10571:10571): Error al conectar (a CPU)
+
+[INFO] 12:00:10:348 cpu/(10676:10676): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:00:10:349 cpu/(10676:10676): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:00:10:349 cpu/(10676:10676): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:00:10:351 cpu/(10676:10676): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:00:10:351 cpu/(10676:10676): El fd_memoria despues de grar conexiones es: 7
+[INFO] 12:00:14:475 cpu/(10676:10676): Cliente conectado (a CPU)
+
+[INFO] 12:00:14:475 cpu/(10676:10676): Cliente conectado (a CPU)
+
+[WARNING] 12:00:14:476 cpu/(10676:10687): El tam de pags es 64
+[WARNING] 12:00:14:476 cpu/(10676:10687): La cant de entradas por tabla es 4
+[TRACE] 12:00:18:699 cpu/(10676:10687): El pid recibido es: 1
+[INFO] 12:00:18:699 cpu/(10676:10687): Me llego la instruccion READ
+[DEBUG] 12:00:18:699 cpu/(10676:10687): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:00:18:699 cpu/(10676:10687): Entre en el while de interrupcion
+[DEBUG] 12:00:18:699 cpu/(10676:10687): El pc es en fetch 0
+[INFO] 12:00:18:699 cpu/(10676:10687): [EXE] ejecuto READ
+[DEBUG] 12:00:18:700 cpu/(10676:10687): El numero de paginas es 4
+[WARNING] 12:00:18:700 cpu/(10676:10687): pase el list find
+[DEBUG] 12:00:18:700 cpu/(10676:10687): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 12:00:18:700 cpu/(10676:10687): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:00:18:700 cpu/(10676:10687): El indice tabla pagina 0
+[ERROR] 12:00:18:700 cpu/(10676:10687): La entrada de 1er nivel es: 1
+[ERROR] 12:00:18:700 cpu/(10676:10687): el numero_tabla_segundo_nivel es: 1
+[ERROR] 12:00:18:700 cpu/(10676:10687): La entrada de 2do nivel es: 0
+[ERROR] 12:00:18:702 cpu/(10676:10687): El desplazamiento es: 40
+[INFO] 12:00:23:634 cpu/(10676:10687): fallo al recibir valor_leido
+[TRACE] 12:00:23:635 cpu/(10676:10687): El PC es: 1
+[TRACE] 12:00:23:637 cpu/(10676:10687): Entre en el while de interrupcion
+[DEBUG] 12:00:23:637 cpu/(10676:10687): El pc es en fetch 1
+[INFO] 12:00:23:637 cpu/(10676:10687): [EXE] ejecuto EXIT
+[DEBUG] 12:00:23:637 cpu/(10676:10687): El pc antes de send a kernel es: 2
+[TRACE] 12:00:23:637 cpu/(10676:10687): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 12:05:35:814 cpu/(10906:10906): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:05:35:814 cpu/(10906:10906): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:05:35:814 cpu/(10906:10906): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:05:35:815 cpu/(10906:10906): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:05:35:815 cpu/(10906:10906): El fd_memoria despues de grar conexiones es: 7
+[INFO] 12:05:38:132 cpu/(10906:10906): Cliente conectado (a CPU)
+
+[INFO] 12:05:38:133 cpu/(10906:10906): Cliente conectado (a CPU)
+
+[WARNING] 12:05:38:133 cpu/(10906:10915): El tam de pags es 64
+[WARNING] 12:05:38:133 cpu/(10906:10915): La cant de entradas por tabla es 4
+[TRACE] 12:05:41:251 cpu/(10906:10915): El pid recibido es: 1
+[INFO] 12:05:41:251 cpu/(10906:10915): Me llego la instruccion READ
+[DEBUG] 12:05:41:251 cpu/(10906:10915): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:05:41:251 cpu/(10906:10915): Entre en el while de interrupcion
+[DEBUG] 12:05:41:251 cpu/(10906:10915): El pc es en fetch 0
+[INFO] 12:05:41:251 cpu/(10906:10915): [EXE] ejecuto READ
+[DEBUG] 12:05:41:251 cpu/(10906:10915): El numero de paginas es 4
+[WARNING] 12:05:41:251 cpu/(10906:10915): pase el list find
+[DEBUG] 12:05:41:251 cpu/(10906:10915): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 12:05:41:251 cpu/(10906:10915): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:05:41:251 cpu/(10906:10915): El indice tabla pagina 0
+[ERROR] 12:05:41:251 cpu/(10906:10915): La entrada de 1er nivel es: 1
+[ERROR] 12:05:41:251 cpu/(10906:10915): el numero_tabla_segundo_nivel es: 1
+[ERROR] 12:05:41:252 cpu/(10906:10915): La entrada de 2do nivel es: 0
+[ERROR] 12:05:41:252 cpu/(10906:10915): El desplazamiento es: 40
+[INFO] 12:05:45:772 cpu/(10906:10915): fallo al recibir valor_leido
+[TRACE] 12:05:45:772 cpu/(10906:10915): El PC es: 1
+[TRACE] 12:05:45:772 cpu/(10906:10915): Entre en el while de interrupcion
+[DEBUG] 12:05:45:772 cpu/(10906:10915): El pc es en fetch 1
+[INFO] 12:05:45:772 cpu/(10906:10915): [EXE] ejecuto EXIT
+[DEBUG] 12:05:45:772 cpu/(10906:10915): El pc antes de send a kernel es: 2
+[TRACE] 12:05:45:772 cpu/(10906:10915): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 12:09:06:127 cpu/(11104:11104): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:09:06:127 cpu/(11104:11104): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:09:06:127 cpu/(11104:11104): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:09:06:128 cpu/(11104:11104): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:09:06:128 cpu/(11104:11104): El fd_memoria despues de grar conexiones es: 7
+[INFO] 12:09:09:512 cpu/(11104:11104): Cliente conectado (a CPU)
+
+[INFO] 12:09:09:512 cpu/(11104:11104): Cliente conectado (a CPU)
+
+[WARNING] 12:09:09:513 cpu/(11104:11112): El tam de pags es 64
+[WARNING] 12:09:09:513 cpu/(11104:11112): La cant de entradas por tabla es 4
+[TRACE] 12:09:14:251 cpu/(11104:11112): El pid recibido es: 1
+[INFO] 12:09:14:251 cpu/(11104:11112): Me llego la instruccion READ
+[DEBUG] 12:09:14:251 cpu/(11104:11112): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:09:14:251 cpu/(11104:11112): Entre en el while de interrupcion
+[DEBUG] 12:09:14:251 cpu/(11104:11112): El pc es en fetch 0
+[INFO] 12:09:14:251 cpu/(11104:11112): [EXE] ejecuto READ
+[DEBUG] 12:09:14:251 cpu/(11104:11112): El numero de paginas es 4
+[WARNING] 12:09:14:251 cpu/(11104:11112): pase el list find
+[DEBUG] 12:09:14:251 cpu/(11104:11112): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 12:09:14:251 cpu/(11104:11112): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:09:14:251 cpu/(11104:11112): El indice tabla pagina 0
+[ERROR] 12:09:14:251 cpu/(11104:11112): La entrada de 1er nivel es: 1
+[ERROR] 12:09:14:252 cpu/(11104:11112): el numero_tabla_segundo_nivel es: 1
+[ERROR] 12:09:14:252 cpu/(11104:11112): La entrada de 2do nivel es: 0
+[ERROR] 12:09:14:252 cpu/(11104:11112): El desplazamiento es: 40
+[INFO] 12:09:18:741 cpu/(11104:11112): fallo al recibir valor_leido
+[TRACE] 12:09:18:741 cpu/(11104:11112): El PC es: 1
+[TRACE] 12:09:18:741 cpu/(11104:11112): Entre en el while de interrupcion
+[DEBUG] 12:09:18:741 cpu/(11104:11112): El pc es en fetch 1
+[INFO] 12:09:18:741 cpu/(11104:11112): [EXE] ejecuto EXIT
+[DEBUG] 12:09:18:741 cpu/(11104:11112): El pc antes de send a kernel es: 2
+[TRACE] 12:09:18:741 cpu/(11104:11112): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 12:13:26:303 cpu/(11299:11299): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:13:26:303 cpu/(11299:11299): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:13:26:304 cpu/(11299:11299): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:13:26:304 cpu/(11299:11299): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:13:26:304 cpu/(11299:11299): Cliente conectado (a CPU)
+
+[INFO] 12:13:51:064 cpu/(11395:11395): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:13:51:064 cpu/(11395:11395): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:13:51:065 cpu/(11395:11395): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:13:51:065 cpu/(11395:11395): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:13:51:065 cpu/(11395:11395): Cliente conectado (a CPU)
+
+[INFO] 12:17:01:728 cpu/(11640:11640): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:17:01:729 cpu/(11640:11640): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:17:01:729 cpu/(11640:11640): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:17:01:730 cpu/(11640:11640): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:17:01:730 cpu/(11640:11640): El fd_memoria despues de grar conexiones es: 7
+[INFO] 12:17:04:757 cpu/(11640:11640): Cliente conectado (a CPU)
+
+[INFO] 12:17:04:758 cpu/(11640:11640): Cliente conectado (a CPU)
+
+[WARNING] 12:17:04:765 cpu/(11640:11648): El tam de pags es 64
+[WARNING] 12:17:04:765 cpu/(11640:11648): La cant de entradas por tabla es 4
+[TRACE] 12:17:08:327 cpu/(11640:11648): El pid recibido es: 1
+[INFO] 12:17:08:327 cpu/(11640:11648): Me llego la instruccion READ
+[DEBUG] 12:17:08:327 cpu/(11640:11648): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:17:08:327 cpu/(11640:11648): Entre en el while de interrupcion
+[DEBUG] 12:17:08:327 cpu/(11640:11648): El pc es en fetch 0
+[INFO] 12:17:08:327 cpu/(11640:11648): [EXE] ejecuto READ
+[DEBUG] 12:17:08:327 cpu/(11640:11648): El numero de paginas es 4
+[WARNING] 12:17:08:327 cpu/(11640:11648): pase el list find
+[DEBUG] 12:17:08:327 cpu/(11640:11648): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 12:17:08:327 cpu/(11640:11648): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:17:08:327 cpu/(11640:11648): El indice tabla pagina 0
+[ERROR] 12:17:08:327 cpu/(11640:11648): La entrada de 1er nivel es: 1
+[ERROR] 12:17:08:328 cpu/(11640:11648): el numero_tabla_segundo_nivel es: 1
+[ERROR] 12:17:08:328 cpu/(11640:11648): La entrada de 2do nivel es: 0
+[ERROR] 12:17:08:328 cpu/(11640:11648): El desplazamiento es: 40
+[INFO] 12:17:13:031 cpu/(11640:11648): fallo al recibir valor_leido
+[TRACE] 12:17:13:031 cpu/(11640:11648): El PC es: 1
+[TRACE] 12:17:13:031 cpu/(11640:11648): Entre en el while de interrupcion
+[DEBUG] 12:17:13:031 cpu/(11640:11648): El pc es en fetch 1
+[INFO] 12:17:13:031 cpu/(11640:11648): [EXE] ejecuto EXIT
+[DEBUG] 12:17:13:031 cpu/(11640:11648): El pc antes de send a kernel es: 2
+[TRACE] 12:17:13:031 cpu/(11640:11648): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 12:20:49:161 cpu/(11816:11816): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:20:49:162 cpu/(11816:11816): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:20:49:162 cpu/(11816:11816): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:20:49:163 cpu/(11816:11816): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:20:49:163 cpu/(11816:11816): Cliente conectado (a CPU)
+
+[INFO] 12:23:51:240 cpu/(12090:12090): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:23:51:240 cpu/(12090:12090): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:23:51:240 cpu/(12090:12090): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:23:51:241 cpu/(12090:12090): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:23:51:241 cpu/(12090:12090): El fd_memoria despues de grar conexiones es: 7
+[INFO] 12:23:53:707 cpu/(12090:12090): Cliente conectado (a CPU)
+
+[INFO] 12:23:53:708 cpu/(12090:12090): Cliente conectado (a CPU)
+
+[WARNING] 12:23:53:708 cpu/(12090:12098): El tam de pags es 64
+[WARNING] 12:23:53:709 cpu/(12090:12098): La cant de entradas por tabla es 4
+[TRACE] 12:23:56:703 cpu/(12090:12098): El pid recibido es: 1
+[INFO] 12:23:56:703 cpu/(12090:12098): Me llego la instruccion READ
+[DEBUG] 12:23:56:703 cpu/(12090:12098): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:23:56:703 cpu/(12090:12098): Entre en el while de interrupcion
+[DEBUG] 12:23:56:704 cpu/(12090:12098): El pc es en fetch 0
+[INFO] 12:23:56:704 cpu/(12090:12098): [EXE] ejecuto READ
+[DEBUG] 12:23:56:704 cpu/(12090:12098): El numero de paginas es 4
+[WARNING] 12:23:56:704 cpu/(12090:12098): pase el list find
+[DEBUG] 12:23:56:704 cpu/(12090:12098): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 12:23:56:704 cpu/(12090:12098): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:23:56:704 cpu/(12090:12098): El indice tabla pagina 0
+[ERROR] 12:23:56:704 cpu/(12090:12098): La entrada de 1er nivel es: 1
+[ERROR] 12:23:56:704 cpu/(12090:12098): el numero_tabla_segundo_nivel es: 1
+[ERROR] 12:23:56:704 cpu/(12090:12098): La entrada de 2do nivel es: 0
+[ERROR] 12:23:56:704 cpu/(12090:12098): El desplazamiento es: 40
+[INFO] 12:24:01:001 cpu/(12090:12098): fallo al recibir valor_leido
+[TRACE] 12:24:01:001 cpu/(12090:12098): El PC es: 1
+[TRACE] 12:24:01:001 cpu/(12090:12098): Entre en el while de interrupcion
+[DEBUG] 12:24:01:001 cpu/(12090:12098): El pc es en fetch 1
+[INFO] 12:24:01:001 cpu/(12090:12098): [EXE] ejecuto EXIT
+[DEBUG] 12:24:01:001 cpu/(12090:12098): El pc antes de send a kernel es: 2
+[TRACE] 12:24:01:001 cpu/(12090:12098): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 12:26:40:986 cpu/(12256:12256): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:26:40:986 cpu/(12256:12256): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:26:40:987 cpu/(12256:12256): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:26:40:987 cpu/(12256:12256): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:26:40:987 cpu/(12256:12256): Cliente conectado (a CPU)
+
+[INFO] 12:27:19:787 cpu/(12359:12359): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:27:19:787 cpu/(12359:12359): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:27:19:787 cpu/(12359:12359): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:27:19:787 cpu/(12359:12359): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:27:19:788 cpu/(12359:12359): Cliente conectado (a CPU)
+
+[INFO] 12:27:48:517 cpu/(12368:12368): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:27:48:518 cpu/(12368:12368): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:27:48:518 cpu/(12368:12368): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:27:48:518 cpu/(12368:12368): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:27:48:518 cpu/(12368:12368): El fd_memoria despues de grar conexiones es: 7
+[INFO] 12:27:50:543 cpu/(12368:12368): Cliente conectado (a CPU)
+
+[INFO] 12:27:50:543 cpu/(12368:12368): Cliente conectado (a CPU)
+
+[WARNING] 12:27:50:543 cpu/(12368:12376): El tam de pags es 64
+[WARNING] 12:27:50:544 cpu/(12368:12376): La cant de entradas por tabla es 4
+[TRACE] 12:27:54:031 cpu/(12368:12376): El pid recibido es: 1
+[INFO] 12:27:54:031 cpu/(12368:12376): Me llego la instruccion READ
+[DEBUG] 12:27:54:031 cpu/(12368:12376): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:27:54:031 cpu/(12368:12376): Entre en el while de interrupcion
+[DEBUG] 12:27:54:031 cpu/(12368:12376): El pc es en fetch 0
+[INFO] 12:27:54:031 cpu/(12368:12376): [EXE] ejecuto READ
+[DEBUG] 12:27:54:031 cpu/(12368:12376): El numero de paginas es 4
+[WARNING] 12:27:54:031 cpu/(12368:12376): pase el list find
+[DEBUG] 12:27:54:031 cpu/(12368:12376): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 12:27:54:031 cpu/(12368:12376): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:27:54:031 cpu/(12368:12376): El indice tabla pagina 0
+[ERROR] 12:27:54:031 cpu/(12368:12376): La entrada de 1er nivel es: 1
+[ERROR] 12:27:54:031 cpu/(12368:12376): el numero_tabla_segundo_nivel es: 1
+[ERROR] 12:27:54:031 cpu/(12368:12376): La entrada de 2do nivel es: 0
+[ERROR] 12:27:54:031 cpu/(12368:12376): El desplazamiento es: 40
+[INFO] 12:27:58:318 cpu/(12368:12376): fallo al recibir valor_leido
+[TRACE] 12:27:58:318 cpu/(12368:12376): El PC es: 1
+[TRACE] 12:27:58:318 cpu/(12368:12376): Entre en el while de interrupcion
+[DEBUG] 12:27:58:318 cpu/(12368:12376): El pc es en fetch 1
+[INFO] 12:27:58:318 cpu/(12368:12376): [EXE] ejecuto EXIT
+[DEBUG] 12:27:58:318 cpu/(12368:12376): El pc antes de send a kernel es: 2
+[TRACE] 12:27:58:318 cpu/(12368:12376): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 12:29:49:143 cpu/(12503:12503): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:29:49:143 cpu/(12503:12503): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:29:49:144 cpu/(12503:12503): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:29:49:144 cpu/(12503:12503): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:29:49:144 cpu/(12503:12503): Cliente conectado (a CPU)
+
+[INFO] 12:30:17:644 cpu/(12597:12597): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:30:17:644 cpu/(12597:12597): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:30:17:644 cpu/(12597:12597): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:30:17:644 cpu/(12597:12597): El fd_memoria despues de grar conexiones es: 5
+[INFO] 12:30:17:644 cpu/(12597:12597): Cliente conectado (a CPU)
+
+[INFO] 12:30:36:639 cpu/(12694:12694): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:30:36:640 cpu/(12694:12694): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:30:36:640 cpu/(12694:12694): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:30:36:640 cpu/(12694:12694): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:30:36:640 cpu/(12694:12694): El fd_memoria despues de grar conexiones es: 7
+[INFO] 12:30:38:794 cpu/(12694:12694): Cliente conectado (a CPU)
+
+[INFO] 12:30:38:794 cpu/(12694:12694): Cliente conectado (a CPU)
+
+[WARNING] 12:30:38:795 cpu/(12694:12702): El tam de pags es 64
+[WARNING] 12:30:38:795 cpu/(12694:12702): La cant de entradas por tabla es 4
+[TRACE] 12:30:42:359 cpu/(12694:12702): El pid recibido es: 1
+[INFO] 12:30:42:359 cpu/(12694:12702): Me llego la instruccion READ
+[DEBUG] 12:30:42:359 cpu/(12694:12702): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:30:42:359 cpu/(12694:12702): Entre en el while de interrupcion
+[DEBUG] 12:30:42:359 cpu/(12694:12702): El pc es en fetch 0
+[INFO] 12:30:42:359 cpu/(12694:12702): [EXE] ejecuto READ
+[DEBUG] 12:30:42:359 cpu/(12694:12702): El numero de paginas es 4
+[WARNING] 12:30:42:359 cpu/(12694:12702): pase el list find
+[DEBUG] 12:30:42:359 cpu/(12694:12702): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 12:30:42:359 cpu/(12694:12702): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:30:42:359 cpu/(12694:12702): El indice tabla pagina 0
+[ERROR] 12:30:42:359 cpu/(12694:12702): La entrada de 1er nivel es: 1
+[ERROR] 12:30:42:359 cpu/(12694:12702): el numero_tabla_segundo_nivel es: 1
+[ERROR] 12:30:42:359 cpu/(12694:12702): La entrada de 2do nivel es: 0
+[ERROR] 12:30:42:359 cpu/(12694:12702): El desplazamiento es: 40
+[DEBUG] 12:30:46:400 cpu/(12694:12702): Me llego el valor leido: 0
+[ERROR] 12:30:46:438 cpu/(12694:12702): el marco es: 0
+[WARNING] 12:30:46:439 cpu/(12694:12702): Amtes de correr algoritmo reemplzo
+[WARNING] 12:30:46:439 cpu/(12694:12702): Entre en correr algoritmo reemplazo
+[WARNING] 12:30:46:439 cpu/(12694:12702): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 12:30:46:439 cpu/(12694:12702): El size de la lista tlb es: 1
+[TRACE] 12:30:46:439 cpu/(12694:12702): El PC es: 1
+[TRACE] 12:30:46:439 cpu/(12694:12702): Entre en el while de interrupcion
+[DEBUG] 12:30:46:439 cpu/(12694:12702): El pc es en fetch 1
+[INFO] 12:30:46:439 cpu/(12694:12702): [EXE] ejecuto EXIT
+[DEBUG] 12:30:46:439 cpu/(12694:12702): El pc antes de send a kernel es: 2
+[TRACE] 12:30:46:439 cpu/(12694:12702): Finalizo el ciclo de ejecucion del proceso: 1 
+[INFO] 12:37:36:261 cpu/(13022:13022): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:37:36:261 cpu/(13022:13022): Escuchando en 127.0.0.1:8005 (CPU)
+
+[ERROR] 12:37:36:261 cpu/(13022:13022): Error al conectar (a CPU)
+
+[INFO] 12:39:04:984 cpu/(13205:13205): El algoritmo de reemplazo elegido es LRU.
+[INFO] 12:39:04:984 cpu/(13205:13205): Escuchando en 127.0.0.1:8001 (CPU)
+
+[INFO] 12:39:04:984 cpu/(13205:13205): Escuchando en 127.0.0.1:8005 (CPU)
+
+[INFO] 12:39:04:985 cpu/(13205:13205): Cliente conectado en 127.0.0.1:8002 (a CPU)
+
+[TRACE] 12:39:04:985 cpu/(13205:13205): El fd_memoria despues de grar conexiones es: 7
+[INFO] 12:39:07:440 cpu/(13205:13205): Cliente conectado (a CPU)
+
+[INFO] 12:39:07:441 cpu/(13205:13205): Cliente conectado (a CPU)
+
+[WARNING] 12:39:07:441 cpu/(13205:13213): El tam de pags es 64
+[WARNING] 12:39:07:441 cpu/(13205:13213): La cant de entradas por tabla es 4
+[TRACE] 12:39:11:139 cpu/(13205:13213): El pid recibido es: 1
+[INFO] 12:39:11:139 cpu/(13205:13213): Me llego la instruccion READ
+[DEBUG] 12:39:11:139 cpu/(13205:13213): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:39:11:139 cpu/(13205:13213): Entre en el while de interrupcion
+[DEBUG] 12:39:11:139 cpu/(13205:13213): El pc es en fetch 0
+[INFO] 12:39:11:139 cpu/(13205:13213): [EXE] ejecuto READ
+[DEBUG] 12:39:11:139 cpu/(13205:13213): El numero de paginas es 0
+[WARNING] 12:39:11:139 cpu/(13205:13213): pase el list find
+[DEBUG] 12:39:11:139 cpu/(13205:13213): El nro de pagina en el esle de la tlb es: 0
+[TRACE] 12:39:11:139 cpu/(13205:13213): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:39:11:139 cpu/(13205:13213): El indice tabla pagina 0
+[ERROR] 12:39:11:139 cpu/(13205:13213): La entrada de 1er nivel es: 0
+[ERROR] 12:39:11:140 cpu/(13205:13213): el numero_tabla_segundo_nivel es: 0
+[ERROR] 12:39:11:140 cpu/(13205:13213): La entrada de 2do nivel es: 0
+[ERROR] 12:39:11:140 cpu/(13205:13213): El desplazamiento es: 0
+[DEBUG] 12:39:11:178 cpu/(13205:13213): Me llego el valor leido: 0
+[ERROR] 12:39:11:218 cpu/(13205:13213): el marco es: 0
+[WARNING] 12:39:11:218 cpu/(13205:13213): Amtes de correr algoritmo reemplzo
+[WARNING] 12:39:11:219 cpu/(13205:13213): Entre en correr algoritmo reemplazo
+[WARNING] 12:39:11:219 cpu/(13205:13213): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 12:39:11:219 cpu/(13205:13213): El size de la lista tlb es: 1
+[TRACE] 12:39:11:219 cpu/(13205:13213): El PC es: 1
+[TRACE] 12:39:11:219 cpu/(13205:13213): Entre en el while de interrupcion
+[DEBUG] 12:39:11:219 cpu/(13205:13213): El pc es en fetch 1
+[INFO] 12:39:11:219 cpu/(13205:13213): [EXE] ejecuto EXIT
+[DEBUG] 12:39:11:221 cpu/(13205:13213): El pc antes de send a kernel es: 2
+[TRACE] 12:39:11:221 cpu/(13205:13213): Finalizo el ciclo de ejecucion del proceso: 1 
+[TRACE] 12:40:30:688 cpu/(13205:13213): El pid recibido es: 2
+[INFO] 12:40:30:688 cpu/(13205:13213): Me llego la instruccion READ
+[DEBUG] 12:40:30:688 cpu/(13205:13213): la cantidad de instrucciones que me mando kernel: 2
+[TRACE] 12:40:30:688 cpu/(13205:13213): Entre en el while de interrupcion
+[DEBUG] 12:40:30:688 cpu/(13205:13213): El pc es en fetch 0
+[INFO] 12:40:30:688 cpu/(13205:13213): [EXE] ejecuto READ
+[DEBUG] 12:40:30:688 cpu/(13205:13213): El numero de paginas es 4
+[WARNING] 12:40:30:688 cpu/(13205:13213): pase el list find
+[DEBUG] 12:40:30:688 cpu/(13205:13213): El nro de pagina en el esle de la tlb es: 4
+[TRACE] 12:40:30:688 cpu/(13205:13213): Le aviso a memoeria que le voy a mandar cosas
+[ERROR] 12:40:30:688 cpu/(13205:13213): El indice tabla pagina 1
+[ERROR] 12:40:30:688 cpu/(13205:13213): La entrada de 1er nivel es: 1
+[ERROR] 12:40:30:727 cpu/(13205:13213): el numero_tabla_segundo_nivel es: 3
+[ERROR] 12:40:30:727 cpu/(13205:13213): La entrada de 2do nivel es: 0
+[ERROR] 12:40:30:727 cpu/(13205:13213): El desplazamiento es: 0
+[DEBUG] 12:40:34:768 cpu/(13205:13213): Me llego el valor leido: 500
+[ERROR] 12:40:34:810 cpu/(13205:13213): el marco es: 4
+[WARNING] 12:40:34:810 cpu/(13205:13213): Amtes de correr algoritmo reemplzo
+[WARNING] 12:40:34:810 cpu/(13205:13213): Entre en correr algoritmo reemplazo
+[WARNING] 12:40:34:810 cpu/(13205:13213): Entre en LRU CASO EN QUE agrego de una 
+[WARNING] 12:40:34:811 cpu/(13205:13213): El size de la lista tlb es: 1
+[TRACE] 12:40:34:811 cpu/(13205:13213): El PC es: 1
+[TRACE] 12:40:34:811 cpu/(13205:13213): Entre en el while de interrupcion
+[DEBUG] 12:40:34:811 cpu/(13205:13213): El pc es en fetch 1
+[INFO] 12:40:34:811 cpu/(13205:13213): [EXE] ejecuto EXIT
+[DEBUG] 12:40:34:811 cpu/(13205:13213): El pc antes de send a kernel es: 2
+[TRACE] 12:40:34:811 cpu/(13205:13213): Finalizo el ciclo de ejecucion del proceso: 2 

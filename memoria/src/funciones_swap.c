@@ -21,7 +21,7 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
 	usleep(retardo_swap * 1000);
 	log_debug(log_memoria,"Trayendo pagina de swap...");
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
-	return 1; // todo ir a leer a swap y devolver lo leido en vez de un 1
+	return 500; // todo ir a leer a swap y devolver lo leido en vez de un 500
 }
 
 
