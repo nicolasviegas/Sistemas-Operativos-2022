@@ -112,6 +112,8 @@ bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel);
 
 void traer_proceso_de_swap(uint32_t indice_archivo_swap);
 
+void escribir_en_swap(uint32_t indice_archivo_swap,uint32_t frame);
+
 uint32_t buscar_frame_libre();
 
 void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagina_1er_nivel);

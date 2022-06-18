@@ -55,7 +55,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 				log_trace(log_memoria,"Antes de escribir pagina");
 
 				poner_pagina_en_marco(frame_a_escribir,pagina_aux);
-				escribir_pagina(dataAux,frame_a_escribir,indice_archivo_swap,0);
+				escribir_pagina(dataAux,frame_a_escribir,0);
 			}
 			else{
 				log_trace(log_memoria,"Entre en el else, por ende ejecuto reemplazo");

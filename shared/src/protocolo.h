@@ -35,7 +35,8 @@ typedef enum{
 typedef enum{
 	METER_A_SWAP = 1000,
 	SACAR_DE_SWAP = 1001,
-	METER_EN_MEM_PRINCIPAL = 1002
+	METER_EN_MEM_PRINCIPAL = 1002,
+	SACAR_PROCESO_DE_MEMORIA = 1003
 }condicion_if;
 
 #define BACKLOG 20

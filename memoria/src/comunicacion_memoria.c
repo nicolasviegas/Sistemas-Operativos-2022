@@ -510,6 +510,20 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
     				send_TAM(cliente_socket,1773);//esto lo mando a kernel para avisarle que ya lo meti a swap
         		}
+      		if(condicion == SACAR_PROCESO_DE_MEMORIA){
+				uint32_t indice_proceso;
+				if (recv(cliente_socket, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+				log_info(log_memoria, "fallo al recibir nro de pagina!");
+				return;
+				}
+				log_trace(log_memoria,"Saco de memoria el proceso: %d",indice_proceso + 1);
+
+
+				sacar_proceso_de_memoria(indice_proceso);
+				send_TAM(cliente_socket,1773);//esto lo mando a cpu para avisarle que ya lo meti a swap
+			}
+
+
 
 
 

@@ -618,6 +618,20 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 					log_info(log_cpu,"[EXE] ejecuto EXIT");
 				 //log_trace(log_cpu,"Finalizo el proceso");
 				 pcb->PC += 1;
+
+				 send_TAM(fd_memoria,SACAR_PROCESO_DE_MEMORIA);
+				 send_TAM(fd_memoria,pcb->indice_tabla_paginas);
+
+				 uint32_t confirmacion; //aca recibe de memoria el numero de la tabla de segundo nivel
+				 if (recv(fd_memoria, &confirmacion, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+					log_info(log_cpu, "fallo al recibir nro tabla segundo nivel!");
+					return;
+				 }
+
+				 if(confirmacion == 1773){
+					 log_info(log_cpu,"Se libero el proceso %d de memoria",pcb->PID);
+				 }
+
 				 //remover proceso de mem principal
 				break;
 			}

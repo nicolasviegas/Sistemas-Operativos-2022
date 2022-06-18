@@ -333,6 +333,7 @@ void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagi
 
     log_error(log_memoria,"Antes de escribir pagina el frame es: %d",info_pagina->frame);
     escribir_pagina(valor,info_pagina->frame,0);
+    poner_pagina_en_marco(frame,info_pagina);
 
 }
 
@@ -372,7 +373,8 @@ void poner_pagina_en_marco(uint32_t marco,pagina* pagina){
 
 void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 	pagina* paginaAux = malloc(sizeof(pagina));
-	frame* marcoAux = malloc(sizeof(frame));
+	//frame* marcoAux = malloc(sizeof(frame));
+	uint32_t marcoAux;
 	t_list* paginas_del_proceso = list_create();
 	paginas_del_proceso = buscar_paginas_proceso(indice_proceso);
 	t_list* paginas_del_proceso_para_mem = list_create();
@@ -389,14 +391,39 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 		paginaAux = list_get(paginas_del_proceso_para_mem,i);
 		marcoAux = buscar_frame_libre();
 		poner_pagina_en_marco(marcoAux,paginaAux);
-		//log_debug(log_memoria,"bit de presencia es en poner proceso en mem ppal:  %d",paginaAux->bit_presencia);
+
+		log_debug(log_memoria,"El frame donde voy a poner al proceso en mem ppal:  %d",paginaAux->frame);
 	}
 
 
 
 }
 
-///////////////////////////WRITE
-void escribir_memoria_vino_de_tlb(uint32_t marco_aux,uint32_t desplazamiento,uint32_t valor){
-	log_info(log_memoria,"Escribi en la memoria con los datos uqe me paso la tlb");
+void sacar_pagina_de_marco(pagina* pagina_aux){
+	frame* frame_aux = malloc(sizeof(frame));
+
+	for(int i = 0;i<list_size(lista_frames);i++){
+		frame_aux = list_get(lista_frames,i);
+		if(frame_aux->nro_pagina == pagina_aux->nro_pagina){
+			//log_debug(log_memoria,"El frame a liberar es:  %d",i);
+
+			frame_aux->ocupado = false;
+		}
+	}
+}
+
+
+void sacar_proceso_de_memoria(uint32_t indice_proceso){
+	t_list* lista_aux1 = list_create();
+	t_list* lista_aux2 = list_create();
+
+	lista_aux1 = buscar_paginas_proceso(indice_proceso);
+	lista_aux2 = buscar_paginas_proceso_en_mem_ppal(lista_aux1);
+
+	pagina* pagina_aux = malloc(sizeof(pagina));
+	for(int i = 0; i < list_size(lista_aux2);i++){
+		pagina_aux = list_get(lista_aux2,i);
+		sacar_pagina_de_marco(pagina_aux);
+	}
+
 }
