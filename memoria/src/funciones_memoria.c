@@ -238,6 +238,69 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			}
 		}
 	}
+	else{//todo chequear CLOCK NORMAL
+		{
+				pagina* recorredorPaginas;
+				int cantidadFrames = list_size(paginas_proceso_en_mem_ppal);
+
+				//esta es la primera vuelta para encontrar 0|0
+				for(int i = 0; i < cantidadFrames ; i++){
+					if(punteroClock == cantidadFrames)
+					{
+						punteroClock = 0;
+					}
+
+					recorredorPaginas = list_get(paginas_proceso_en_mem_ppal, punteroClock);
+					punteroClock++;
+
+					if(recorredorPaginas->bit_uso == 0){
+						log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
+						log_warning(log_memoria,"Victima CLOCK: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
+						return recorredorPaginas;
+					}
+
+				}
+
+				//esta segunda vuelta es para encontrar 0 modificando el bit de uso
+				for(int i = 0; i < cantidadFrames ; i++){
+					if(punteroClock == cantidadFrames)
+					{
+						punteroClock = 0;
+					}
+
+					recorredorPaginas = list_get(paginas_proceso_en_mem_ppal, punteroClock);
+					punteroClock++;
+
+					if(recorredorPaginas->bit_uso == 0){
+						log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
+						log_warning(log_memoria,"Victima CLOCK: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
+						return recorredorPaginas;
+					}
+
+					recorredorPaginas->bit_uso = 0;
+
+				}
+
+				//esta tercera vuelta es para encontrar 0|0
+				for(int i = 0; i < cantidadFrames ; i++){
+					if(punteroClock == cantidadFrames)
+					{
+						punteroClock = 0;
+					}
+
+					recorredorPaginas = list_get(paginas_proceso_en_mem_ppal, punteroClock);
+					punteroClock++;
+
+					if(recorredorPaginas->bit_uso == 0){
+						log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
+						log_warning(log_memoria,"Victima CLOCK: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
+						return recorredorPaginas;
+					}
+
+				}
+			}
+
+	}
 
 	//list_destroy(paginas_proceso);
 
@@ -427,3 +490,40 @@ void sacar_proceso_de_memoria(uint32_t indice_proceso){
 	}
 
 }
+
+
+void actualizar_bit_uso_tlb(uint32_t marco_aux){
+	t_list* listaAux = list_create();
+	t_list* listaAux2 = list_create();
+	pagina* paginaAux = malloc(sizeof(pagina));
+	for(int i=0;i<list_size(lista_tablas_2do_nivel);i++){
+		listaAux = list_get(lista_tablas_2do_nivel,i);
+		listaAux2 = buscar_paginas_proceso_en_mem_ppal(listaAux);
+		for(int j=0;j<list_size(listaAux2);j++){
+			paginaAux = list_get(listaAux2,j);
+			if(paginaAux->frame == marco_aux){
+				paginaAux->bit_uso = 1;
+				log_trace(log_memoria,"SE ACTUALIZO EL BIT DE USO");
+			}
+		}
+	}
+}
+
+void actualizar_bit_modif_tlb(uint32_t marco_aux){
+	t_list* listaAux = list_create();
+	t_list* listaAux2 = list_create();
+	pagina* paginaAux = malloc(sizeof(pagina));
+	for(int i=0;i<list_size(lista_tablas_2do_nivel);i++){
+		listaAux = list_get(lista_tablas_2do_nivel,i);
+		listaAux2 = buscar_paginas_proceso_en_mem_ppal(listaAux);
+		for(int j=0;j<list_size(listaAux2);j++){
+			paginaAux = list_get(listaAux2,j);
+			if(paginaAux->frame == marco_aux){
+				paginaAux->bit_modificado = 1;
+				log_trace(log_memoria,"SE ACTUALIZO EL BIT DE MODIF");
+			}
+		}
+	}
+}
+
+

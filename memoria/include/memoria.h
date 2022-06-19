@@ -120,6 +120,10 @@ void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagi
 
 void poner_pagina_en_marco(uint32_t marco,pagina* pagina);
 
+void actualizar_bit_uso_tlb(uint32_t marco_aux);
+
+void actualizar_bit_modif_tlb(uint32_t marco_aux);
+
 void cerrar_programa(t_log* logger);
 
 #endif /*CPUH*/
