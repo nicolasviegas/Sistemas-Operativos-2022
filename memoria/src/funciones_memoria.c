@@ -119,7 +119,7 @@ t_list* buscar_paginas_proceso(uint32_t indice_tabla_1er_nivel){
 			pagina* pagina_aux = malloc(sizeof(pagina));
 			uint32_t dataAux;
 
-			log_debug(log_memoria,"EL SIZE DE LA LISTA  TABLA PRIMER NIVEL EN  BUSCAR PAGINAS PROCESO ES: %d",list_size(tabla_primer_nivel_buscada));
+		//	log_debug(log_memoria,"EL SIZE DE LA LISTA  TABLA PRIMER NIVEL EN  BUSCAR PAGINAS PROCESO ES: %d",list_size(tabla_primer_nivel_buscada));
 			for(int i = 0;i < list_size(tabla_primer_nivel_buscada);i++){
 				entrada_primer_nivel_aux = list_get(tabla_primer_nivel_buscada,i);
 				tabla_segundo_nivel_aux = list_get(lista_tablas_2do_nivel,entrada_primer_nivel_aux);
@@ -348,6 +348,14 @@ uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){ // TODO LEER D
 	return valor_leido;
 }
 
+
+void copiar_en_memoria(uint32_t marco_origen,uint32_t desplazamiento_origen,uint32_t marco_destino,uint32_t desplazamiento_destino){
+
+	uint32_t valor_leido = leer_de_memoria(marco_origen,desplazamiento_origen);
+	escribir_pagina(valor_leido,marco_destino,desplazamiento_destino);
+}
+
+
 uint32_t buscar_frame_libre(){
 	//log_error(log_memoria,"Entre a buscar frame libre");
 	frame* frameAux;
@@ -503,7 +511,7 @@ void actualizar_bit_uso_tlb(uint32_t marco_aux){
 			paginaAux = list_get(listaAux2,j);
 			if(paginaAux->frame == marco_aux){
 				paginaAux->bit_uso = 1;
-				log_trace(log_memoria,"SE ACTUALIZO EL BIT DE USO");
+				//log_trace(log_memoria,"SE ACTUALIZO EL BIT DE USO");
 			}
 		}
 	}
@@ -520,10 +528,12 @@ void actualizar_bit_modif_tlb(uint32_t marco_aux){
 			paginaAux = list_get(listaAux2,j);
 			if(paginaAux->frame == marco_aux){
 				paginaAux->bit_modificado = 1;
-				log_trace(log_memoria,"SE ACTUALIZO EL BIT DE MODIF");
+			//	log_trace(log_memoria,"SE ACTUALIZO EL BIT DE MODIF");
 			}
 		}
 	}
 }
+
+
 
 

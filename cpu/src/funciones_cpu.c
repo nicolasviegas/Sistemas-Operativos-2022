@@ -174,6 +174,41 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 		 }
 
+		 uint32_t traer_pag_de_tlb_cpy(tlb* entrada,uint32_t parametro1){
+				 uint32_t marco = entrada->frame;
+
+				 log_debug(log_cpu,"Entre en traer pag de tlb");
+						 ////////Funciones auxiliares /////
+
+
+
+						 bool tienen_misma_pagina(void* elemento){
+						 	if(entrada->numero_pag == ((tlb*) elemento)->numero_pag){
+						 		return true;
+						 	}
+						 	else{
+						 		return false;
+						 	}
+						 }
+
+						 //////////////////////////////
+						 if(algoritmo_config == LRU){
+							 aumentar_tiempo();
+							 list_remove_by_condition(lista_tlb,(void*) tienen_misma_pagina);
+							 entrada->tiempo_uso = 0;
+							 list_add(lista_tlb,entrada);
+							 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
+						 }
+
+
+						 //uint32_t desplazamiento = obtener_desplazamiento(parametro1,entrada->numero_pag);
+						 //send_TAM(fd_memoria,marco);
+						 //send_TAM(fd_memoria,desplazamiento);
+
+						 return marco;
+
+			 }
+
 
 
 		 void correr_tlb_read(uint32_t numero_pagina,uint32_t parametro1,uint32_t tabla_1er_nivel){
@@ -270,21 +305,39 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 			 tlb* entrada_origen = list_find(lista_tlb, &existe_entrada_origen);
 		 			 log_debug(log_cpu,"El numero de pagina origen es: %d",numero_pagina_origen);
 
+		 			 uint32_t marco_origen;
+		 			 uint32_t desplazamiento_origen;
+		 			 uint32_t marco_destino;
+		 			 uint32_t desplazamiento_destino;
+
 
 		 			 if(entrada_origen != NULL){
 			 			 log_debug(log_cpu,"Entre en el caso feliz origen de la tlb en cpy");
 
 		 				send_TAM(fd_memoria,TLB_CPY);//le aviso que tlb read le va a mandar cosas
 		 				send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
-		 			    traer_pag_de_tlb(entrada_origen,parametro2);
+		 			   marco_origen = traer_pag_de_tlb_cpy(entrada_origen,parametro2);
+		 			  desplazamiento_origen = obtener_desplazamiento(parametro2,entrada_origen->numero_pag);
+		 			   	send_TAM(fd_memoria,marco_origen);
+		 			   	send_TAM(fd_memoria,desplazamiento_origen);
+
+
+		 			   uint32_t valor_leido;
+					 if(recv(fd_memoria,&valor_leido,sizeof(uint32_t),0) != sizeof(uint32_t)){
+						 log_error(log_cpu,"Fallo recibiendo el valor leido");
+					 }
+					 if(valor_leido == 18){
+						 log_debug(log_cpu,"Esta listo para copiar:");
+					 }
+
 		 			 }
 		 			 else{
 		 			 log_debug(log_cpu,"Entre en el caso triste origen de la tlb en cpy");
 		 			 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-		 			 uint32_t marco_origen = -1;
+		 			// uint32_t marco_origen = -1;
 		 			 uint32_t entrada_1er_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
 		 			 uint32_t entrada_2do_nivel_origen = obtener_entrada_2do_nivel(numero_pagina_origen);
-		 			 uint32_t desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
+		 			 desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
 
 
 		 			send_TAM(fd_memoria,TLB_CPY); // le aviso a memoria que se viene un tlb read
@@ -308,16 +361,27 @@ instrucciones* fetch(pcb_cpu* pcb){
 					send_TAM(fd_memoria,entrada_2do_nivel_origen);//enviamos a memoria la entrada de segundo nivel
 					log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_origen);
 
-					uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
-					if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-					log_info(log_cpu, "fallo al recibir marcoaux");
-					return;
-					}
-					log_error(log_cpu,"el marco es: %d",marcoaux);
-
 
 					send_TAM(fd_memoria,desplazamiento_origen);//enviamos el desplazamiento
 					log_error(log_cpu,"El desplazamiento es: %d",desplazamiento_origen);
+
+					 uint32_t valor_leido;
+					 if (recv(fd_memoria, &valor_leido, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+									log_info(log_cpu, "fallo al recibir valor_leido");
+									return;
+					 }
+					 if(valor_leido == 18){
+						 log_debug(log_cpu,"Me llego la confirmacion de que se copio el origen ");
+					 }
+
+
+
+					// uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
+					 if (recv(fd_memoria, &marco_origen, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+						log_info(log_cpu, "fallo al recibir marcoaux");
+						return;
+					 }
+					 log_error(log_cpu,"el marco es: %d",marco_origen);
 
 					//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
 					//		 recv_rta_memoria(fd_memoria,&rta_mem);
@@ -326,75 +390,108 @@ instrucciones* fetch(pcb_cpu* pcb){
 					//		}
 					//		 else{
 					log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
-					correr_algoritmo_reemplazo(numero_pagina_origen,marcoaux);
+					correr_algoritmo_reemplazo(numero_pagina_origen,marco_origen);
 					//		}
 		 			}
 
 
-////////////////ORIGEN
+////////////////DESTINO
 
-		 			tlb* entrada_destino = list_find(lista_tlb, &existe_entrada_destino);
-
-		 			//log_debug(log_cpu,"El nro de pagina de entrada destino es: %d",entrada_destino->numero_pag);
-                    if(entrada_destino != NULL){
-                    	log_debug(log_cpu,"Entre en el caso feliz origen de la tlb en cpy");
-						send_TAM(fd_memoria,TLB_CPY);//le aviso que tlb read le va a mandar cosas
-						send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
-						traer_pag_de_tlb(entrada_destino,parametro1);
-                    }
-		 			else{
-			 			 log_debug(log_cpu,"Entre en el caso triste destino de la tlb en cpy");
-
-		 				 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-		 				 uint32_t marco_destino = -1;
-		 //				 uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
-		 				 uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
-		 				 uint32_t entrada_2do_nivel_destino = obtener_entrada_2do_nivel(numero_pagina_destino);
-		 				 uint32_t desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
-//
-		 				    send_TAM(fd_memoria,TLB_CPY); // le aviso a memoria que se viene un tlb read
-							log_trace(log_cpu,"Le aviso a memoria que le voy a mandar cosas");
-
-							send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
-
-							send_TAM(fd_memoria,tabla_1er_nivel); //send indice tabla pagina
-							log_error(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
-
-							send_TAM(fd_memoria,entrada_1er_nivel_destino);
-							log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel_destino);
-
-							uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
-							if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-							log_info(log_cpu, "fallo al recibir nro tabla segundo nivel!");
-							return;
-							}
-							log_error(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
-
-							send_TAM(fd_memoria,entrada_2do_nivel_destino);//enviamos a memoria la entrada de segundo nivel
-							log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_destino);
-
-							uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
-							if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-							log_info(log_cpu, "fallo al recibir marcoaux");
-							return;
-							}
-							log_error(log_cpu,"el marco es: %d",marcoaux);
+		 			 tlb* entrada_destino = list_find(lista_tlb, &existe_entrada_destino);
+		 					 			 log_debug(log_cpu,"El numero de pagina origen es: %d",numero_pagina_origen);
 
 
-							send_TAM(fd_memoria,desplazamiento_destino);//enviamos el desplazamiento
-							log_error(log_cpu,"El desplazamiento es: %d",desplazamiento_destino);
+		 					 			 if(entrada_destino != NULL){
+		 						 			 log_debug(log_cpu,"Entre en el caso feliz origen de la tlb en cpy");
 
-							//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
-							//		 recv_rta_memoria(fd_memoria,&rta_mem);
-							//		 if(rta_mem == 0){
-							//			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
-							//		}
-							//		 else{
-							log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
-							correr_algoritmo_reemplazo(numero_pagina_destino,marcoaux);
-//		 			}
-		 		}
-		 	}
+		 					 				send_TAM(fd_memoria,TLB_CPY);//le aviso que tlb read le va a mandar cosas
+		 					 				send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
+		 					 			    marco_destino = traer_pag_de_tlb_cpy(entrada_destino,parametro1);
+		 					 			    desplazamiento_destino = obtener_desplazamiento(parametro1,entrada_destino->numero_pag);
+		 					 			    send_TAM(fd_memoria,marco_destino);
+		 					 			    send_TAM(fd_memoria,desplazamiento_destino);
+
+
+		 					 			   uint32_t valor_leido;
+		 								 if(recv(fd_memoria,&valor_leido,sizeof(uint32_t),0) != sizeof(uint32_t)){
+		 									 log_error(log_cpu,"Fallo recibiendo el valor leido");
+		 								 }
+		 								 if(valor_leido == 18){
+		 									 log_debug(log_cpu,"Esta listo para copiar:");
+		 								 }
+
+		 					 			 }
+		 					 			 else{
+		 					 			 log_debug(log_cpu,"Entre en el caso triste origen de la tlb en cpy");
+		 					 			 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
+		 					 			// uint32_t marco_origen = -1;
+		 					 			 uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
+		 					 			 uint32_t entrada_2do_nivel_destino = obtener_entrada_2do_nivel(numero_pagina_destino);
+		 					 			 desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
+
+
+		 					 			send_TAM(fd_memoria,TLB_CPY); // le aviso a memoria que se viene un tlb read
+		 								log_trace(log_cpu,"Le aviso a memoria que le voy a mandar cosas");
+
+		 								send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
+
+		 								send_TAM(fd_memoria,tabla_1er_nivel); //send indice tabla pagina
+		 								log_error(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
+
+		 								send_TAM(fd_memoria,entrada_1er_nivel_destino);
+		 								log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel_destino);
+
+		 								uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
+		 								if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+		 								log_info(log_cpu, "fallo al recibir nro tabla segundo nivel!");
+		 								return;
+		 								}
+		 								log_error(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+
+		 								send_TAM(fd_memoria,entrada_2do_nivel_destino);//enviamos a memoria la entrada de segundo nivel
+		 								log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_destino);
+
+
+		 								send_TAM(fd_memoria,desplazamiento_destino);//enviamos el desplazamiento
+		 								log_error(log_cpu,"El desplazamiento es: %d",desplazamiento_destino);
+
+		 								 uint32_t valor_leido;
+		 								 if (recv(fd_memoria, &valor_leido, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+		 												log_info(log_cpu, "fallo al recibir valor_leido");
+		 												return;
+		 								 }
+		 								 if(valor_leido == 18){
+		 									 log_debug(log_cpu,"Me llego la confirmacion de que se copio en el destino ");
+		 								 }
+
+
+
+//		 								 uint32_t marco_destino; //aca recibe de memoria el numero de la tabla de segundo nivel
+		 								 if (recv(fd_memoria, &marco_destino, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+		 									log_info(log_cpu, "fallo al recibir marco_destino");
+		 									return;
+		 								 }
+		 								 log_error(log_cpu,"el marco destino es: %d",marco_destino);
+
+		 								//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
+		 								//		 recv_rta_memoria(fd_memoria,&rta_mem);
+		 								//		 if(rta_mem == 0){
+		 								//			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
+		 								//		}
+		 								//		 else{
+		 								log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
+		 								correr_algoritmo_reemplazo(numero_pagina_destino,marco_destino);
+		 								//		}
+		 					 			}
+
+
+		 			send_TAM(fd_memoria,COPIAR_PAGINAS);
+		 			send_TAM(fd_memoria,marco_origen);
+		 			send_TAM(fd_memoria,desplazamiento_origen);
+		 			send_TAM(fd_memoria,marco_destino);
+					send_TAM(fd_memoria,desplazamiento_destino);
+
+}
 
 
 
