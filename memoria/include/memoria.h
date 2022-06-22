@@ -119,6 +119,8 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap);
 
 void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir);
 
+char* pasar_a_char(uint32_t num);
+
 uint32_t buscar_frame_libre();
 
 void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagina_1er_nivel);

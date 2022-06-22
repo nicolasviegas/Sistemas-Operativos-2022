@@ -348,6 +348,15 @@ uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){ // TODO LEER D
 	return valor_leido;
 }
 
+char* leer_pagina_de_memoria(uint32_t frame){ // TODO LEER DE MEMORIA
+	void* valor_leido;
+	uint32_t posicion_marco = frame * tamanio_paginas;
+
+	memcpy(&valor_leido,memoria_principal+posicion_marco,tamanio_paginas);
+	//log_error(log_memoria,"El valor despues de leer en memoria %s ",valor_leido);
+	//printf("El valor leido de memoria es: %s,",valor_leido);
+	return (char*)valor_leido;
+}
 
 void copiar_en_memoria(uint32_t marco_origen,uint32_t desplazamiento_origen,uint32_t marco_destino,uint32_t desplazamiento_destino){
 
@@ -595,7 +604,7 @@ char *itoa(uint32_t n)
 }
 
 
-char* pasar_a_char(int num){
+char* pasar_a_char(uint32_t num){
 
 	char* terminacion = ".swap\0";
 	//char* str;
@@ -609,6 +618,29 @@ char* pasar_a_char(int num){
 	log_warning(log_memoria,"El nuevo path es: %s",nuevo_path);
 
 	return nuevo_path;
+}
+
+
+char* pasar_a_char2(int num){
+
+	char* terminacion = ".swap\0";
+	//char* str;
+
+
+
+
+
+
+	//char* num_char = my_itoa(num,str);
+	char* num_char = itoa(num);
+
+	char* nuevo_path = strcat(num_char,terminacion);
+
+	if (verificar_archivo(nuevo_path))
+		{
+		return nuevo_path;
+
+		}
 }
 
 

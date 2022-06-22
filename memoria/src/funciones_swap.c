@@ -8,7 +8,7 @@ void crear_archivo_swap(uint32_t indice_tabla){ //TODO
 //itoa(a);
 //fp = fopen(a,"r+w");
 }
-
+/*
 void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 
 	uint32_t tam_swap = 512; //TODO ESTA RE HARDCODEADO TIENE QUE RECIBIRLO ANTES CAMBIAR  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -30,6 +30,7 @@ void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 
 	    size_t textsize = strlen(text) + 1; // + \0 null character
 
+
 	    if (lseek(fd, textsize-1, SEEK_SET) == -1)
 	    {
 	        close(fd);
@@ -43,6 +44,7 @@ void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 	        perror("Error writing last byte of the file");
 	        exit(EXIT_FAILURE);
 	    }
+
 
 
 	    // Now the file is ready to be mmapped.
@@ -76,6 +78,24 @@ void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 	    close(fd);
 
 
+}*/
+
+void escribir_swap(char* filepath,char* text ,int pagina,int offset){
+
+	FILE *file = fopen(filepath, "rb+");
+
+	fseek(file, pagina * tamanio_paginas+offset, SEEK_SET);
+
+	fwrite(text, sizeof(text), 1, file);
+
+
+
+	fclose(file);
+
+
+
+
+
 }
 
 void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
@@ -84,26 +104,69 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	log_debug(log_memoria,"Escribiendo en swap...");
 
 	char* path = pasar_a_char(indice_archivo_swap);
+	//char* path = "0.swap\0";
+
 	int desp = 0;
 	uint32_t contenido_pagina;
 	char* char_contenido;
 
-	/*log_warning(log_memoria,"Frame a escribir : %d",pagina_a_escribir->frame);
+/*
 
-	contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,40);
+	contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,desp);
+			log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
+
+
 	char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
+			//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
 
-	log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
-	escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,40);*/
+	escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,desp);
 
-	for(int i = 0;i < tamanio_paginas/4;i++){
+//////////
+	contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,16);
+			log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
+
+
+			char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
+			//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
+
+			escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,16);
+/////////////
+			contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,44);
+					log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
+
+
+					char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
+					//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
+
+					escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,44);
+*/
+
+
+
+	for(desp = 0; desp < tamanio_paginas ;desp+=4){
 		contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,desp);
+		//log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
+
+
+		char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
+		//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
+
+		escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,desp);
+		//desp += 4;
+	}
+
+
+/*
+	for(int i = 0;i < tamanio_paginas;i++){
+		contenido_pagina = leer_paginade_memoria(pagina_a_escribir->frame,i);
 		log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
 		char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
 		log_debug(log_memoria,"El char contenido es: %s",char_contenido);
-		escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,desp);
-		desp = desp + 4;
+		escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,i);
+		//desp = desp + 4;
 	}
+*/
+
 
 
 
