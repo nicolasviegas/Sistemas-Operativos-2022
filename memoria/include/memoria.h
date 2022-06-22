@@ -123,7 +123,7 @@ char* pasar_a_char(uint32_t num);
 
 uint32_t buscar_frame_libre();
 
-void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagina_1er_nivel);
+void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indice_pagina_1er_nivel);
 
 void poner_pagina_en_marco(uint32_t marco,pagina* pagina);
 

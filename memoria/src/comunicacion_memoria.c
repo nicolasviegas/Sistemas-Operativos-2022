@@ -179,7 +179,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-											uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;
@@ -311,7 +311,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							else{
 								if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 									log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-									uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+									t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
 									ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 								//	valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 									pagina_buscada->bit_uso = 1;
@@ -465,7 +465,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-											uint32_t contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;

@@ -380,7 +380,7 @@ uint32_t buscar_frame_libre(){
 
 
 
-void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagina_1er_nivel) {
+void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indice_pagina_1er_nivel) {
 
     pagina* info_paginaAReemplazar =  pagina_a_reemplazar(indice_pagina_1er_nivel);
 
@@ -412,7 +412,14 @@ void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagi
     //info_pagina->tiempo_uso = obtener_tiempo();
 
     log_error(log_memoria,"Antes de escribir pagina el frame es: %d",info_pagina->frame);
-    escribir_pagina(valor,info_pagina->frame,0);
+    uint32_t valor;
+    uint32_t desp = 0;
+    for(int i = 0 ; i < list_size(lista_valores);i++){
+    	valor = list_get(lista_valores,i);
+    	escribir_pagina(valor,info_pagina->frame,desp);
+    	desp+=4;
+
+    }
     poner_pagina_en_marco(frame,info_pagina);
 
 }

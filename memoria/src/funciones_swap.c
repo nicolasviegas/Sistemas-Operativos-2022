@@ -92,11 +92,20 @@ void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 
 	fclose(file);
 
-
-
-
-
 }
+
+/*void leer_swap(char* filepath,char* text ,int pagina,int offset){
+
+	FILE *file = fopen(filepath, "rb+");
+
+	fseek(file, pagina * tamanio_paginas+offset, SEEK_SET);
+
+	fread(text, sizeof(text), 1, file);
+
+	fclose(file);
+
+}*/
+
 
 void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	//NECESITA EL FRAME SOLO O TDA LA PAG?
@@ -174,17 +183,27 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 }
 
 
-uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
-	usleep(retardo_swap * 1000);
+uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t desp){
 	log_debug(log_memoria,"Trayendo pagina de swap...");
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
 	return 500; // todo ir a leer a swap y devolver lo leido en vez de un 500
 }
 
 
-uint32_t traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
-	uint32_t contenido_de_pagina = leer_de_swap(indice_archivo_swap,nro_pagina);
-	return contenido_de_pagina;
+t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
+
+	t_list* a = list_create();
+	usleep(retardo_swap * 1000);
+
+	for(int desp = 0;desp < tamanio_paginas ; desp+=4){
+		uint32_t contenido_de_pagina = leer_de_swap(indice_archivo_swap,nro_pagina,desp);
+
+
+		list_add(a,contenido_de_pagina);
+	}
+
+
+	return a;
 }
 
 
@@ -204,7 +223,6 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 			//log_trace(log_memoria,"Antes del list get del demonio");
 
 			pagina_aux = list_get(paginas_del_proceso,k);
-			dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina);
 			uint32_t frame_a_escribir = buscar_frame_libre();
 			if(frame_a_escribir != -1){
 				//pagina_aux->bit_presencia = 1;
@@ -213,7 +231,14 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 
 				poner_pagina_en_marco(frame_a_escribir,pagina_aux);
 				log_info(log_memoria,"PUSE EL PROCESO CUANDO LO TRAIGO DE SWAP EN EL FRAME %d",frame_a_escribir);
-				escribir_pagina(dataAux,frame_a_escribir,0);
+				usleep(retardo_swap * 1000);
+
+				for(int desp = 0 ; desp < tamanio_paginas ; desp+=4){
+					dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina,desp);
+
+					escribir_pagina(dataAux,frame_a_escribir,0);
+				}
+
 			}
 			else{
 				log_trace(log_memoria,"Entre en el else, por ende ejecuto reemplazo");
