@@ -51999,3 +51999,524 @@
 [DEBUG] 17:42:59:369 kernel/(8944:8948): Despues del send interrupcion
 [TRACE] 17:43:03:449 kernel/(8944:8948): El PC despues del recv es: 5
 [INFO] 17:43:03:449 kernel/(8944:8948): [EXIT] Finaliza el proceso de PID: 4
+[INFO] 12:16:56:517 kernel/(5561:5561): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:16:56:518 kernel/(5561:5561): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:16:56:518 kernel/(5561:5561): El socket fd_kernel : 4
+[INFO] 12:16:56:518 kernel/(5561:5561): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:16:56:518 kernel/(5561:5561): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:16:56:518 kernel/(5561:5561): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:17:31:430 kernel/(5561:5561): Cliente conectado (a KERNEL)
+
+[ERROR] 12:17:31:431 kernel/(5561:5658): El cliente socket es: 9
+[ERROR] 12:17:31:431 kernel/(5561:5658): El cliente socket es: 9
+[ERROR] 12:17:31:431 kernel/(5561:5658): El cliente socket es: 9
+[TRACE] 12:17:31:432 kernel/(5561:5658): El indice tabla de pagina es: 0
+[INFO] 12:17:31:432 kernel/(5561:5658): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:17:31:432 kernel/(5561:5564): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 12:17:31:432 kernel/(5561:5564): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:17:31:432 kernel/(5561:5658): DISCONNECT!
+[WARNING] 12:17:31:432 kernel/(5561:5658): El cliente se desconecto de KERNEL server
+[INFO] 12:17:31:563 kernel/(5561:5564): fallo al recibir nro de pagina!
+[INFO] 12:19:23:965 kernel/(5892:5892): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:19:23:966 kernel/(5892:5892): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:19:23:966 kernel/(5892:5892): El socket fd_kernel : 4
+[INFO] 12:19:23:966 kernel/(5892:5892): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:19:23:966 kernel/(5892:5892): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:19:23:967 kernel/(5892:5892): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:19:27:797 kernel/(5892:5892): Cliente conectado (a KERNEL)
+
+[ERROR] 12:19:27:798 kernel/(5892:5909): El cliente socket es: 9
+[ERROR] 12:19:27:798 kernel/(5892:5909): El cliente socket es: 9
+[ERROR] 12:19:27:798 kernel/(5892:5909): El cliente socket es: 9
+[TRACE] 12:19:27:799 kernel/(5892:5909): El indice tabla de pagina es: 0
+[INFO] 12:19:27:799 kernel/(5892:5909): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:19:27:799 kernel/(5892:5895): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 12:19:27:799 kernel/(5892:5895): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:19:27:799 kernel/(5892:5909): DISCONNECT!
+[WARNING] 12:19:27:799 kernel/(5892:5909): El cliente se desconecto de KERNEL server
+[TRACE] 12:19:27:839 kernel/(5892:5895): Memoria termino de meter al proceso
+[DEBUG] 12:19:27:839 kernel/(5892:5895): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 12:19:27:839 kernel/(5892:5896): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 12:19:27:839 kernel/(5892:5896): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 12:19:27:839 kernel/(5892:5896): La cant de instrucciones en la lista: 2
+[DEBUG] 12:19:27:839 kernel/(5892:5896): Antes del send interrupcion
+[DEBUG] 12:19:27:839 kernel/(5892:5896): Despues del send interrupcion
+[TRACE] 12:19:31:923 kernel/(5892:5896): El PC despues del recv es: 2
+[INFO] 12:19:31:923 kernel/(5892:5896): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 12:22:04:983 kernel/(6410:6410): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:22:04:983 kernel/(6410:6410): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:22:04:983 kernel/(6410:6410): El socket fd_kernel : 4
+[INFO] 12:22:04:983 kernel/(6410:6410): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:22:04:983 kernel/(6410:6410): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:22:04:984 kernel/(6410:6410): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:22:07:214 kernel/(6410:6410): Cliente conectado (a KERNEL)
+
+[ERROR] 12:22:07:215 kernel/(6410:6427): El cliente socket es: 9
+[ERROR] 12:22:07:215 kernel/(6410:6427): El cliente socket es: 9
+[ERROR] 12:22:07:215 kernel/(6410:6427): El cliente socket es: 9
+[TRACE] 12:22:07:216 kernel/(6410:6427): El indice tabla de pagina es: 0
+[INFO] 12:22:07:216 kernel/(6410:6427): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:22:07:216 kernel/(6410:6413): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 12:22:07:216 kernel/(6410:6413): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:22:07:216 kernel/(6410:6427): DISCONNECT!
+[WARNING] 12:22:07:216 kernel/(6410:6427): El cliente se desconecto de KERNEL server
+[INFO] 12:22:07:357 kernel/(6410:6413): fallo al recibir nro de pagina!
+[INFO] 12:23:50:802 kernel/(6646:6646): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:23:50:802 kernel/(6646:6646): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:23:50:802 kernel/(6646:6646): El socket fd_kernel : 4
+[INFO] 12:23:50:803 kernel/(6646:6646): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:23:50:804 kernel/(6646:6646): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:23:50:804 kernel/(6646:6646): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:23:53:298 kernel/(6646:6646): Cliente conectado (a KERNEL)
+
+[ERROR] 12:23:53:299 kernel/(6646:6660): El cliente socket es: 9
+[ERROR] 12:23:53:299 kernel/(6646:6660): El cliente socket es: 9
+[ERROR] 12:23:53:299 kernel/(6646:6660): El cliente socket es: 9
+[TRACE] 12:23:53:328 kernel/(6646:6660): El indice tabla de pagina es: 0
+[INFO] 12:23:53:328 kernel/(6646:6660): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:23:53:328 kernel/(6646:6660): DISCONNECT!
+[INFO] 12:23:53:328 kernel/(6646:6649): [NEW] Se saca el proceso de PID: 1 de la cola
+[WARNING] 12:23:53:328 kernel/(6646:6660): El cliente se desconecto de KERNEL server
+[INFO] 12:23:53:328 kernel/(6646:6649): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:23:53:419 kernel/(6646:6649): fallo al recibir nro de pagina!
+[INFO] 12:27:13:436 kernel/(7155:7155): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:27:13:436 kernel/(7155:7155): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:27:13:436 kernel/(7155:7155): El socket fd_kernel : 4
+[INFO] 12:27:13:437 kernel/(7155:7155): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:27:13:437 kernel/(7155:7155): Error al conectar (a CPU)
+
+[INFO] 12:27:25:081 kernel/(7186:7186): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:27:25:081 kernel/(7186:7186): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:27:25:081 kernel/(7186:7186): El socket fd_kernel : 4
+[INFO] 12:27:25:083 kernel/(7186:7186): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:27:25:083 kernel/(7186:7186): Error al conectar (a CPU)
+
+[INFO] 12:27:54:422 kernel/(7249:7249): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:27:54:422 kernel/(7249:7249): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:27:54:422 kernel/(7249:7249): El socket fd_kernel : 4
+[INFO] 12:27:54:423 kernel/(7249:7249): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:27:54:424 kernel/(7249:7249): Error al conectar (a CPU)
+
+[INFO] 12:29:59:464 kernel/(7493:7493): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:29:59:465 kernel/(7493:7493): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:29:59:465 kernel/(7493:7493): El socket fd_kernel : 4
+[INFO] 12:29:59:466 kernel/(7493:7493): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:29:59:466 kernel/(7493:7493): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:29:59:467 kernel/(7493:7493): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:30:01:892 kernel/(7493:7493): Cliente conectado (a KERNEL)
+
+[ERROR] 12:30:01:893 kernel/(7493:7504): El cliente socket es: 9
+[ERROR] 12:30:01:893 kernel/(7493:7504): El cliente socket es: 9
+[ERROR] 12:30:01:893 kernel/(7493:7504): El cliente socket es: 9
+[TRACE] 12:30:01:930 kernel/(7493:7504): El indice tabla de pagina es: 0
+[INFO] 12:30:01:930 kernel/(7493:7504): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:30:01:930 kernel/(7493:7504): DISCONNECT!
+[INFO] 12:30:01:930 kernel/(7493:7496): [NEW] Se saca el proceso de PID: 1 de la cola
+[WARNING] 12:30:01:930 kernel/(7493:7504): El cliente se desconecto de KERNEL server
+[INFO] 12:30:01:930 kernel/(7493:7496): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:30:02:024 kernel/(7493:7496): fallo al recibir nro de pagina!
+[INFO] 12:32:16:413 kernel/(7822:7822): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:16:414 kernel/(7822:7822): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:16:414 kernel/(7822:7822): El socket fd_kernel : 4
+[INFO] 12:32:16:415 kernel/(7822:7822): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:16:415 kernel/(7822:7822): Error al conectar (a CPU)
+
+[INFO] 12:32:34:341 kernel/(7869:7869): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:34:341 kernel/(7869:7869): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:34:341 kernel/(7869:7869): El socket fd_kernel : 4
+[INFO] 12:32:34:342 kernel/(7869:7869): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:34:342 kernel/(7869:7869): Error al conectar (a CPU)
+
+[INFO] 12:32:36:798 kernel/(7879:7879): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:36:798 kernel/(7879:7879): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:36:798 kernel/(7879:7879): El socket fd_kernel : 4
+[INFO] 12:32:36:801 kernel/(7879:7879): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:36:801 kernel/(7879:7879): Error al conectar (a CPU)
+
+[INFO] 12:32:37:448 kernel/(7888:7888): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:37:448 kernel/(7888:7888): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:37:448 kernel/(7888:7888): El socket fd_kernel : 4
+[INFO] 12:32:37:449 kernel/(7888:7888): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:37:449 kernel/(7888:7888): Error al conectar (a CPU)
+
+[INFO] 12:32:37:924 kernel/(7897:7897): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:37:924 kernel/(7897:7897): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:37:925 kernel/(7897:7897): El socket fd_kernel : 4
+[INFO] 12:32:37:925 kernel/(7897:7897): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:37:925 kernel/(7897:7897): Error al conectar (a CPU)
+
+[INFO] 12:32:38:320 kernel/(7903:7903): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:38:320 kernel/(7903:7903): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:38:320 kernel/(7903:7903): El socket fd_kernel : 4
+[INFO] 12:32:38:321 kernel/(7903:7903): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:38:321 kernel/(7903:7903): Error al conectar (a CPU)
+
+[INFO] 12:32:38:681 kernel/(7909:7909): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:38:682 kernel/(7909:7909): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:38:682 kernel/(7909:7909): El socket fd_kernel : 4
+[INFO] 12:32:38:682 kernel/(7909:7909): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:38:682 kernel/(7909:7909): Error al conectar (a CPU)
+
+[INFO] 12:32:39:058 kernel/(7915:7915): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:39:058 kernel/(7915:7915): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:39:059 kernel/(7915:7915): El socket fd_kernel : 4
+[INFO] 12:32:39:060 kernel/(7915:7915): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:39:060 kernel/(7915:7915): Error al conectar (a CPU)
+
+[INFO] 12:32:40:830 kernel/(7931:7931): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:40:831 kernel/(7931:7931): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:40:831 kernel/(7931:7931): El socket fd_kernel : 4
+[INFO] 12:32:40:831 kernel/(7931:7931): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:40:831 kernel/(7931:7931): Error al conectar (a CPU)
+
+[INFO] 12:32:41:035 kernel/(7937:7937): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:41:035 kernel/(7937:7937): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:41:035 kernel/(7937:7937): El socket fd_kernel : 4
+[INFO] 12:32:41:036 kernel/(7937:7937): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:41:036 kernel/(7937:7937): Error al conectar (a CPU)
+
+[INFO] 12:32:41:224 kernel/(7943:7943): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:41:225 kernel/(7943:7943): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:41:225 kernel/(7943:7943): El socket fd_kernel : 4
+[INFO] 12:32:41:225 kernel/(7943:7943): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:41:226 kernel/(7943:7943): Error al conectar (a CPU)
+
+[INFO] 12:32:41:419 kernel/(7949:7949): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:41:420 kernel/(7949:7949): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:41:420 kernel/(7949:7949): El socket fd_kernel : 4
+[INFO] 12:32:41:420 kernel/(7949:7949): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:41:421 kernel/(7949:7949): Error al conectar (a CPU)
+
+[INFO] 12:32:41:589 kernel/(7955:7955): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:41:589 kernel/(7955:7955): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:41:589 kernel/(7955:7955): El socket fd_kernel : 4
+[INFO] 12:32:41:590 kernel/(7955:7955): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:41:590 kernel/(7955:7955): Error al conectar (a CPU)
+
+[INFO] 12:32:41:786 kernel/(7961:7961): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:41:786 kernel/(7961:7961): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:41:786 kernel/(7961:7961): El socket fd_kernel : 4
+[INFO] 12:32:41:787 kernel/(7961:7961): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:41:787 kernel/(7961:7961): Error al conectar (a CPU)
+
+[INFO] 12:32:41:972 kernel/(7967:7967): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:41:972 kernel/(7967:7967): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:41:973 kernel/(7967:7967): El socket fd_kernel : 4
+[INFO] 12:32:41:973 kernel/(7967:7967): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:41:973 kernel/(7967:7967): Error al conectar (a CPU)
+
+[INFO] 12:32:42:180 kernel/(7973:7973): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:42:180 kernel/(7973:7973): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:42:180 kernel/(7973:7973): El socket fd_kernel : 4
+[INFO] 12:32:42:181 kernel/(7973:7973): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:42:181 kernel/(7973:7973): Error al conectar (a CPU)
+
+[INFO] 12:32:42:386 kernel/(7979:7979): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:42:386 kernel/(7979:7979): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:42:387 kernel/(7979:7979): El socket fd_kernel : 4
+[INFO] 12:32:42:387 kernel/(7979:7979): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:42:387 kernel/(7979:7979): Error al conectar (a CPU)
+
+[INFO] 12:32:42:578 kernel/(7988:7988): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:42:578 kernel/(7988:7988): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:42:578 kernel/(7988:7988): El socket fd_kernel : 4
+[INFO] 12:32:42:579 kernel/(7988:7988): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:42:579 kernel/(7988:7988): Error al conectar (a CPU)
+
+[INFO] 12:32:42:766 kernel/(7997:7997): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:42:767 kernel/(7997:7997): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:42:767 kernel/(7997:7997): El socket fd_kernel : 4
+[INFO] 12:32:42:767 kernel/(7997:7997): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:42:767 kernel/(7997:7997): Error al conectar (a CPU)
+
+[INFO] 12:32:44:244 kernel/(8008:8008): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:44:244 kernel/(8008:8008): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:44:244 kernel/(8008:8008): El socket fd_kernel : 4
+[INFO] 12:32:44:245 kernel/(8008:8008): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:44:245 kernel/(8008:8008): Error al conectar (a CPU)
+
+[INFO] 12:32:45:945 kernel/(8022:8022): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:45:945 kernel/(8022:8022): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:45:945 kernel/(8022:8022): El socket fd_kernel : 4
+[INFO] 12:32:45:946 kernel/(8022:8022): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:45:946 kernel/(8022:8022): Error al conectar (a CPU)
+
+[INFO] 12:32:46:198 kernel/(8028:8028): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:46:198 kernel/(8028:8028): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:46:198 kernel/(8028:8028): El socket fd_kernel : 4
+[INFO] 12:32:46:199 kernel/(8028:8028): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:46:200 kernel/(8028:8028): Error al conectar (a CPU)
+
+[INFO] 12:32:46:413 kernel/(8034:8034): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:46:414 kernel/(8034:8034): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:46:414 kernel/(8034:8034): El socket fd_kernel : 4
+[INFO] 12:32:46:414 kernel/(8034:8034): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:46:414 kernel/(8034:8034): Error al conectar (a CPU)
+
+[INFO] 12:32:46:655 kernel/(8040:8040): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:46:655 kernel/(8040:8040): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:46:655 kernel/(8040:8040): El socket fd_kernel : 4
+[INFO] 12:32:46:656 kernel/(8040:8040): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:46:656 kernel/(8040:8040): Error al conectar (a CPU)
+
+[INFO] 12:32:46:874 kernel/(8046:8046): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:46:874 kernel/(8046:8046): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:46:875 kernel/(8046:8046): El socket fd_kernel : 4
+[INFO] 12:32:46:875 kernel/(8046:8046): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:46:875 kernel/(8046:8046): Error al conectar (a CPU)
+
+[INFO] 12:32:47:080 kernel/(8052:8052): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:47:080 kernel/(8052:8052): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:47:080 kernel/(8052:8052): El socket fd_kernel : 4
+[INFO] 12:32:47:081 kernel/(8052:8052): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:47:081 kernel/(8052:8052): Error al conectar (a CPU)
+
+[INFO] 12:32:47:284 kernel/(8058:8058): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:47:284 kernel/(8058:8058): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:47:284 kernel/(8058:8058): El socket fd_kernel : 4
+[INFO] 12:32:47:285 kernel/(8058:8058): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:47:285 kernel/(8058:8058): Error al conectar (a CPU)
+
+[INFO] 12:32:47:494 kernel/(8067:8067): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:47:494 kernel/(8067:8067): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:47:494 kernel/(8067:8067): El socket fd_kernel : 4
+[INFO] 12:32:47:495 kernel/(8067:8067): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:47:495 kernel/(8067:8067): Error al conectar (a CPU)
+
+[INFO] 12:32:47:699 kernel/(8076:8076): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:47:700 kernel/(8076:8076): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:47:700 kernel/(8076:8076): El socket fd_kernel : 4
+[INFO] 12:32:47:701 kernel/(8076:8076): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:47:701 kernel/(8076:8076): Error al conectar (a CPU)
+
+[INFO] 12:32:49:141 kernel/(8086:8086): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:49:141 kernel/(8086:8086): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:49:141 kernel/(8086:8086): El socket fd_kernel : 4
+[INFO] 12:32:49:142 kernel/(8086:8086): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:49:142 kernel/(8086:8086): Error al conectar (a CPU)
+
+[INFO] 12:32:49:369 kernel/(8092:8092): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:32:49:370 kernel/(8092:8092): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:32:49:370 kernel/(8092:8092): El socket fd_kernel : 4
+[INFO] 12:32:49:370 kernel/(8092:8092): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[ERROR] 12:32:49:371 kernel/(8092:8092): Error al conectar (a CPU)
+
+[INFO] 12:33:13:799 kernel/(8149:8149): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:33:13:800 kernel/(8149:8149): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:33:13:800 kernel/(8149:8149): El socket fd_kernel : 4
+[INFO] 12:33:13:801 kernel/(8149:8149): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:33:13:801 kernel/(8149:8149): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:33:13:802 kernel/(8149:8149): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:33:15:661 kernel/(8149:8149): Cliente conectado (a KERNEL)
+
+[ERROR] 12:33:15:662 kernel/(8149:8159): El cliente socket es: 9
+[ERROR] 12:33:15:662 kernel/(8149:8159): El cliente socket es: 9
+[ERROR] 12:33:15:662 kernel/(8149:8159): El cliente socket es: 9
+[TRACE] 12:33:15:695 kernel/(8149:8159): El indice tabla de pagina es: 0
+[INFO] 12:33:15:695 kernel/(8149:8159): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:33:15:695 kernel/(8149:8159): DISCONNECT!
+[INFO] 12:33:15:695 kernel/(8149:8152): [NEW] Se saca el proceso de PID: 1 de la cola
+[WARNING] 12:33:15:695 kernel/(8149:8159): El cliente se desconecto de KERNEL server
+[INFO] 12:33:15:695 kernel/(8149:8152): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:33:15:785 kernel/(8149:8152): fallo al recibir nro de pagina!
+[INFO] 12:36:42:472 kernel/(8745:8745): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:36:42:472 kernel/(8745:8745): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:36:42:472 kernel/(8745:8745): El socket fd_kernel : 4
+[INFO] 12:36:42:473 kernel/(8745:8745): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:36:42:473 kernel/(8745:8745): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:36:42:474 kernel/(8745:8745): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:36:45:725 kernel/(8745:8745): Cliente conectado (a KERNEL)
+
+[ERROR] 12:36:45:727 kernel/(8745:8759): El cliente socket es: 9
+[ERROR] 12:36:45:727 kernel/(8745:8759): El cliente socket es: 9
+[ERROR] 12:36:45:727 kernel/(8745:8759): El cliente socket es: 9
+[TRACE] 12:36:45:765 kernel/(8745:8759): El indice tabla de pagina es: 0
+[INFO] 12:36:45:765 kernel/(8745:8759): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:36:45:765 kernel/(8745:8759): DISCONNECT!
+[INFO] 12:36:45:765 kernel/(8745:8748): [NEW] Se saca el proceso de PID: 1 de la cola
+[WARNING] 12:36:45:765 kernel/(8745:8759): El cliente se desconecto de KERNEL server
+[INFO] 12:36:45:765 kernel/(8745:8748): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 12:36:45:815 kernel/(8745:8748): Memoria termino de meter al proceso
+[DEBUG] 12:36:45:815 kernel/(8745:8748): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 12:36:45:815 kernel/(8745:8749): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 12:36:45:815 kernel/(8745:8749): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 12:36:45:816 kernel/(8745:8749): La cant de instrucciones en la lista: 2
+[DEBUG] 12:36:45:816 kernel/(8745:8749): Antes del send interrupcion
+[DEBUG] 12:36:45:816 kernel/(8745:8749): Despues del send interrupcion
+[TRACE] 12:36:49:916 kernel/(8745:8749): El PC despues del recv es: 2
+[INFO] 12:36:49:916 kernel/(8745:8749): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 12:41:19:748 kernel/(9434:9434): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:41:19:748 kernel/(9434:9434): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:41:19:749 kernel/(9434:9434): El socket fd_kernel : 4
+[INFO] 12:41:19:749 kernel/(9434:9434): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:41:19:749 kernel/(9434:9434): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:41:19:749 kernel/(9434:9434): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:41:21:126 kernel/(9434:9434): Cliente conectado (a KERNEL)
+
+[ERROR] 12:41:21:128 kernel/(9434:9445): El cliente socket es: 9
+[ERROR] 12:41:21:128 kernel/(9434:9445): El cliente socket es: 9
+[ERROR] 12:41:21:128 kernel/(9434:9445): El cliente socket es: 9
+[ERROR] 12:41:21:128 kernel/(9434:9445): El cliente socket es: 9
+[TRACE] 12:41:21:129 kernel/(9434:9445): El indice tabla de pagina es: 0
+[INFO] 12:41:21:129 kernel/(9434:9445): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:41:21:129 kernel/(9434:9437): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 12:41:21:129 kernel/(9434:9437): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:41:21:129 kernel/(9434:9445): DISCONNECT!
+[WARNING] 12:41:21:129 kernel/(9434:9445): El cliente se desconecto de KERNEL server
+[INFO] 12:41:21:267 kernel/(9434:9437): fallo al recibir nro de pagina!
+[INFO] 12:44:31:193 kernel/(9952:9952): El algoritmo de planificacion elegido es SRT.
+[INFO] 12:44:31:194 kernel/(9952:9952): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[TRACE] 12:44:31:194 kernel/(9952:9952): El socket fd_kernel : 4
+[INFO] 12:44:31:194 kernel/(9952:9952): Cliente conectado en 127.0.0.1:8002 (a KERNEL)
+
+[INFO] 12:44:31:194 kernel/(9952:9952): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 12:44:31:195 kernel/(9952:9952): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 12:44:33:432 kernel/(9952:9952): Cliente conectado (a KERNEL)
+
+[ERROR] 12:44:33:433 kernel/(9952:9969): El cliente socket es: 9
+[ERROR] 12:44:33:434 kernel/(9952:9969): El cliente socket es: 9
+[ERROR] 12:44:33:434 kernel/(9952:9969): El cliente socket es: 9
+[ERROR] 12:44:33:434 kernel/(9952:9969): El cliente socket es: 9
+[TRACE] 12:44:33:434 kernel/(9952:9969): El indice tabla de pagina es: 0
+[INFO] 12:44:33:434 kernel/(9952:9969): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:44:33:434 kernel/(9952:9955): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 12:44:33:434 kernel/(9952:9955): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 12:44:33:435 kernel/(9952:9969): DISCONNECT!
+[WARNING] 12:44:33:435 kernel/(9952:9969): El cliente se desconecto de KERNEL server
+[TRACE] 12:44:33:471 kernel/(9952:9955): Memoria termino de meter al proceso
+[DEBUG] 12:44:33:471 kernel/(9952:9955): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 12:44:33:471 kernel/(9952:9956): El proceso 1 fue elegido mediante el algoritmo SRT: 
+[INFO] 12:44:33:471 kernel/(9952:9956): [EXEC] Ingresa el carpincho de PID: 1 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 12:44:33:471 kernel/(9952:9956): La cant de instrucciones en la lista: 3
+[DEBUG] 12:44:33:471 kernel/(9952:9956): Antes del send interrupcion
+[DEBUG] 12:44:33:471 kernel/(9952:9956): Despues del send interrupcion
+[TRACE] 12:44:37:591 kernel/(9952:9956): El PC despues del recv es: 3
+[INFO] 12:44:37:591 kernel/(9952:9956): [EXIT] Finaliza el proceso de PID: 1
+[INFO] 12:45:21:260 kernel/(9952:9952): Cliente conectado (a KERNEL)
+
+[ERROR] 12:45:21:262 kernel/(9952:10068): El cliente socket es: 10
+[ERROR] 12:45:21:262 kernel/(9952:10068): El cliente socket es: 10
+[ERROR] 12:45:21:262 kernel/(9952:10068): El cliente socket es: 10
+[ERROR] 12:45:21:262 kernel/(9952:10068): El cliente socket es: 10
+[TRACE] 12:45:21:299 kernel/(9952:10068): El indice tabla de pagina es: 1
+[INFO] 12:45:21:299 kernel/(9952:10068): [NEW] Entra el proceso de PID: 2 a la cola.
+[INFO] 12:45:21:299 kernel/(9952:10068): DISCONNECT!
+[INFO] 12:45:21:299 kernel/(9952:9955): [NEW] Se saca el proceso de PID: 2 de la cola
+[WARNING] 12:45:21:299 kernel/(9952:10068): El cliente se desconecto de KERNEL server
+[INFO] 12:45:21:299 kernel/(9952:9955): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 12:45:21:339 kernel/(9952:9955): Memoria termino de meter al proceso
+[DEBUG] 12:45:21:339 kernel/(9952:9955): [----------------PROCESOS EN READY: 1 --------------------]
+
+[WARNING] 12:45:21:339 kernel/(9952:9956): El proceso 2 fue elegido mediante el algoritmo SRT: 
+[INFO] 12:45:21:339 kernel/(9952:9956): [EXEC] Ingresa el carpincho de PID: 2 con una rafaga de ejecucion estimada de 10000.000000 milisegundos.
+[TRACE] 12:45:21:340 kernel/(9952:9956): La cant de instrucciones en la lista: 3
+[DEBUG] 12:45:21:340 kernel/(9952:9956): Antes del send interrupcion
+[DEBUG] 12:45:21:340 kernel/(9952:9956): Despues del send interrupcion
+[TRACE] 12:45:25:499 kernel/(9952:9956): El PC despues del recv es: 3
+[INFO] 12:45:25:499 kernel/(9952:9956): [EXIT] Finaliza el proceso de PID: 2

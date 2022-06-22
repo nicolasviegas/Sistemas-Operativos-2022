@@ -13,6 +13,8 @@ void escribir_en_swap(uint32_t indice_archivo_swap,uint32_t frame){
 	//NECESITA EL FRAME SOLO O TDA LA PAG?
 	usleep(retardo_swap * 1000);
 	log_debug(log_memoria,"Escribiendo en swap...");
+
+
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
 }
 

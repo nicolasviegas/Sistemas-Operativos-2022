@@ -68,7 +68,10 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			 }
 
 			 //todo crear archivo de swap
-			// crear_archivo_swap(indice_tabla);
+
+			char* path_char = pasar_a_char(indice_tabla);
+
+			crear_archivo(path_char);//todo chequear con valgrind que tira errores
     	    }
 
     		if(condicion == TLB_RD){

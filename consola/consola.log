@@ -16683,3 +16683,58 @@
 [WARNING] 17:42:28:964 consola/(9199:9199): entre en READ dentro de send_instrucciones
 [WARNING] 17:42:28:964 consola/(9199:9199): Entre en EXIT dentro de send_instrucciones
 [INFO] 17:42:28:964 consola/(9199:9199): [INFO] La consola finalizo correctamente.
+[INFO] 12:17:31:430 consola/(5657:5657): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:17:31:430 consola/(5657:5657): entre en READ dentro de send_instrucciones
+[WARNING] 12:17:31:430 consola/(5657:5657): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:17:31:430 consola/(5657:5657): [INFO] La consola finalizo correctamente.
+[INFO] 12:19:27:797 consola/(5908:5908): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:19:27:797 consola/(5908:5908): entre en READ dentro de send_instrucciones
+[WARNING] 12:19:27:798 consola/(5908:5908): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:19:27:798 consola/(5908:5908): [INFO] La consola finalizo correctamente.
+[INFO] 12:22:07:214 consola/(6426:6426): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:22:07:214 consola/(6426:6426): entre en READ dentro de send_instrucciones
+[WARNING] 12:22:07:214 consola/(6426:6426): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:22:07:214 consola/(6426:6426): [INFO] La consola finalizo correctamente.
+[INFO] 12:23:53:298 consola/(6659:6659): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:23:53:298 consola/(6659:6659): entre en READ dentro de send_instrucciones
+[WARNING] 12:23:53:299 consola/(6659:6659): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:23:53:299 consola/(6659:6659): [INFO] La consola finalizo correctamente.
+[INFO] 12:30:01:892 consola/(7503:7503): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:30:01:892 consola/(7503:7503): entre en READ dentro de send_instrucciones
+[WARNING] 12:30:01:892 consola/(7503:7503): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:30:01:892 consola/(7503:7503): [INFO] La consola finalizo correctamente.
+[INFO] 12:33:15:661 consola/(8158:8158): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:33:15:661 consola/(8158:8158): entre en READ dentro de send_instrucciones
+[WARNING] 12:33:15:661 consola/(8158:8158): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:33:15:662 consola/(8158:8158): [INFO] La consola finalizo correctamente.
+[INFO] 12:36:45:726 consola/(8758:8758): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:36:45:726 consola/(8758:8758): entre en READ dentro de send_instrucciones
+[WARNING] 12:36:45:726 consola/(8758:8758): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:36:45:726 consola/(8758:8758): [INFO] La consola finalizo correctamente.
+[ERROR] 12:38:38:825 consola/(9009:9009): Error al conectar (a KERNEL)
+
+[INFO] 12:41:21:127 consola/(9444:9444): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:41:21:127 consola/(9444:9444): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:41:21:127 consola/(9444:9444): entre en READ dentro de send_instrucciones
+[WARNING] 12:41:21:127 consola/(9444:9444): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:41:21:127 consola/(9444:9444): [INFO] La consola finalizo correctamente.
+[INFO] 12:44:33:432 consola/(9968:9968): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:44:33:432 consola/(9968:9968): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:44:33:433 consola/(9968:9968): entre en READ dentro de send_instrucciones
+[WARNING] 12:44:33:433 consola/(9968:9968): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:44:33:433 consola/(9968:9968): [INFO] La consola finalizo correctamente.
+[INFO] 12:45:21:260 consola/(10067:10067): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 12:45:21:260 consola/(10067:10067): entre en WRITE dentro de send_instrucciones
+[WARNING] 12:45:21:261 consola/(10067:10067): entre en READ dentro de send_instrucciones
+[WARNING] 12:45:21:261 consola/(10067:10067): Entre en EXIT dentro de send_instrucciones
+[INFO] 12:45:21:261 consola/(10067:10067): [INFO] La consola finalizo correctamente.

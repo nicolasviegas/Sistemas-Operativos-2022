@@ -534,6 +534,81 @@ void actualizar_bit_modif_tlb(uint32_t marco_aux){
 	}
 }
 
+int verificar_archivo(char *ruta)
+{
+	FILE *file;
+	char *ruta_final = string_new();
+	string_append(&ruta_final, ruta);
+	int ret = 0;
+	if ((file = fopen(ruta_final, "r")))
+	{
+		ret = 1;
+		fclose(file);
+	}
+	free(ruta_final);
+	return ret;
+}
 
+
+void crear_archivo(char *nuevo_archivo)
+{
+	char *ruta_archivo = string_new();
+
+	string_append(&ruta_archivo, nuevo_archivo);
+
+	if (!verificar_archivo(nuevo_archivo))
+	{
+		FILE *archivo = fopen(ruta_archivo, "w+");
+		//w+ es para que sea de lectura escritura.si queremos escribir y leer en binario cambiarlo a wb+
+		fclose(archivo);
+	}
+	else
+	{
+		//error_show("El directorio: %s ya existe\n", ruta_archivo);
+	}
+	free(ruta_archivo);
+}
+
+/*char *my_itoa(int num, char *str)
+{
+	log_warning(log_memoria,"Antes del if en myitoa");
+
+        if(str == NULL)
+        {
+                return NULL;
+        }
+
+    	log_warning(log_memoria,"despues del if en myitoa");
+
+        sprintf(str, "%d", num);
+        return str;
+}*/
+
+char *itoa(uint32_t n)
+{
+    int len = n==0 ? 1 : floor(log(abs(n)))+1;
+    if (n<0) len++; // room for negative sign '-'
+
+    char    *buf = calloc(sizeof(char), len+1); // +1 for null
+    snprintf(buf, len+1, "%d", n);
+    return   buf;
+}
+
+
+char* pasar_a_char(int num){
+
+	char* terminacion = ".swap\0";
+	//char* str;
+
+
+	//char* num_char = my_itoa(num,str);
+	char* num_char = itoa(num);
+
+	char* nuevo_path = strcat(num_char,terminacion);
+
+	log_warning(log_memoria,"El nuevo path es: %s",nuevo_path);
+
+	return nuevo_path;
+}
 
 
