@@ -9,10 +9,102 @@ void crear_archivo_swap(uint32_t indice_tabla){ //TODO
 //fp = fopen(a,"r+w");
 }
 
-void escribir_en_swap(uint32_t indice_archivo_swap,uint32_t frame){
+void escribir_swap(char* filepath,char* text ,int pagina,int offset){
+
+	uint32_t tam_swap = 512; //TODO ESTA RE HARDCODEADO TIENE QUE RECIBIRLO ANTES CAMBIAR  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+	 printf("Will write text '%s'\n", text);
+
+	    int fd = open(filepath, O_RDWR | O_CREAT, (mode_t)0600);
+
+	    if (fd == -1)
+	    {
+	        perror("Error opening file for writing");
+	        exit(EXIT_FAILURE);
+	    }
+
+	    ftruncate(fd,0);
+	    ftruncate(fd,tam_swap);
+
+	    // Stretch the file size to the size of the (mmapped) array of char
+
+	    size_t textsize = strlen(text) + 1; // + \0 null character
+
+	    if (lseek(fd, textsize-1, SEEK_SET) == -1)
+	    {
+	        close(fd);
+	        perror("Error calling lseek() to 'stretch' the file");
+	        exit(EXIT_FAILURE);
+	    }
+
+	    if (write(fd, "", 1) == -1)
+	    {
+	        close(fd);
+	        perror("Error writing last byte of the file");
+	        exit(EXIT_FAILURE);
+	    }
+
+
+	    // Now the file is ready to be mmapped.
+
+	    char *map = mmap(NULL, tam_swap, PROT_READ | PROT_WRITE, MAP_FILE | MAP_SHARED , fd, 0);
+	    if (map == MAP_FAILED)
+	    {
+	        close(fd);
+	        perror("Error mmapping the file");
+	        exit(EXIT_FAILURE);
+	    }
+
+	    memcpy(map +pagina*tamanio_paginas +offset,text,textsize);
+
+	    // Write it now to disk
+	    if (msync(map, textsize, MS_SYNC) == -1)
+	    {
+	        perror("Could not sync the file to disk");
+	    }
+	   // printf("direccion pagina 1: %p\n",map);
+
+	    // Don't forget to free the mmapped memory
+	    if (munmap(map, tam_swap) == -1)
+	    {
+	        close(fd);
+	        perror("Error un-mmapping the file");
+	        exit(EXIT_FAILURE);
+	    }
+
+	    // Un-mmaping doesn't close the file, so we still need to do that.
+	    close(fd);
+
+
+}
+
+void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	//NECESITA EL FRAME SOLO O TDA LA PAG?
 	usleep(retardo_swap * 1000);
 	log_debug(log_memoria,"Escribiendo en swap...");
+
+	char* path = pasar_a_char(indice_archivo_swap);
+	int desp = 0;
+	uint32_t contenido_pagina;
+	char* char_contenido;
+
+	/*log_warning(log_memoria,"Frame a escribir : %d",pagina_a_escribir->frame);
+
+	contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,40);
+	char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
+
+	log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
+	escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,40);*/
+
+	for(int i = 0;i < tamanio_paginas/4;i++){
+		contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,desp);
+		log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
+		char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
+		log_debug(log_memoria,"El char contenido es: %s",char_contenido);
+		escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,desp);
+		desp = desp + 4;
+	}
+
 
 
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
@@ -90,7 +182,7 @@ void pasar_proceso_a_swap(uint32_t indice_tabla){
 		pagina_aux = list_get(paginas_del_proceso,k);
 		if(pagina_aux->bit_presencia == 1){ //todo controlar si se modifica el bit cuando liberamos memoria
 			pagina_aux->bit_presencia = 0;//
-			escribir_en_swap(indice_tabla,pagina_aux->frame);
+			escribir_en_swap(indice_tabla,pagina_aux);
 			liberar_memoria(pagina_aux->frame);
 		}
 

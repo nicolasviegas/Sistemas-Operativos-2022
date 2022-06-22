@@ -394,7 +394,7 @@ void ejecutar_reemplazo(uint32_t valor, pagina* info_pagina,uint32_t indice_pagi
 //        }
 //    }
 
-    escribir_en_swap(indice_pagina_1er_nivel,info_paginaAReemplazar->frame);
+    escribir_en_swap(indice_pagina_1er_nivel,info_paginaAReemplazar);
 
     //GUARDAMOS EN RAM LO QUE SE QUIERE USAR
     info_pagina->frame = frame;
@@ -609,6 +609,20 @@ char* pasar_a_char(int num){
 	log_warning(log_memoria,"El nuevo path es: %s",nuevo_path);
 
 	return nuevo_path;
+}
+
+
+char* pasar_a_char_sin_terminacion(int num){
+
+
+	//char* str;
+
+
+	//char* num_char = my_itoa(num,str);
+	char* num_char = itoa(num);
+
+
+	return num_char;
 }
 
 

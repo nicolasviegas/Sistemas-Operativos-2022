@@ -23,6 +23,11 @@
 #include "protocolo.h"
 #include "socket.h"
 #include "math.h"
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <unistd.h>
 
 
 typedef enum{
@@ -112,7 +117,7 @@ bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel);
 
 void traer_proceso_de_swap(uint32_t indice_archivo_swap);
 
-void escribir_en_swap(uint32_t indice_archivo_swap,uint32_t frame);
+void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir);
 
 uint32_t buscar_frame_libre();
 
