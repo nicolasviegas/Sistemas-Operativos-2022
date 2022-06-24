@@ -326,15 +326,27 @@ void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el 
 	//liberar desde el (frame * tam_paginas) hasta (frame + 1 * tam_paginas)
 	frame* frame_aux = list_get(lista_frames,marco1);
 	frame_aux->ocupado = false;
+	int desp = 0;
+/*	for(int i = 0;i < tamanio_paginas;i++){
+		escribir_pagina(0,marco1,desp);
+		desp+=4;
+	}*/
+
 	//todo liberar memoria posta
 }
 
 
 void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){// TODO VER COMO SE ESCIBE EN MEMORIA
-	log_error(log_memoria,"Entre a escribir pagina,valor: %d ",valor);
+
+	if(valor != 0){
+		log_error(log_memoria,"Entre a escribir pagina,valor: %d ",valor);
+		log_error(log_memoria,"El frame es es %d ",frame);
+		log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);
+		log_error(log_memoria,"El desplazamiento es: %d",desplazamiento);
+	}
+
 	uint32_t posicion_marco = frame * tamanio_paginas;
-	//log_error(log_memoria,"El frame es es %d ",frame);
-	//log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);
+
 	memcpy(memoria_principal+posicion_marco+desplazamiento,&valor,sizeof(uint32_t));
 	//memcpy(memoria_principal+posicion_marco+desplazamiento,valor,tamanio_paginas);
 	//escribe en memoria la data y pone en 1 el bit de presencia de la pagina
@@ -344,7 +356,9 @@ uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){ // TODO LEER D
 	uint32_t valor_leido;
 	uint32_t posicion_marco = frame * tamanio_paginas;
 	memcpy(&valor_leido,memoria_principal+posicion_marco+desplazamiento,sizeof(uint32_t));
-	log_error(log_memoria,"El valor despues de leer en memoria %d ",valor_leido);
+	if(valor_leido != 0){
+		log_error(log_memoria,"El valor despues de leer en memoria %d ",valor_leido);
+	}
 	return valor_leido;
 }
 
@@ -362,6 +376,7 @@ void copiar_en_memoria(uint32_t marco_origen,uint32_t desplazamiento_origen,uint
 
 	uint32_t valor_leido = leer_de_memoria(marco_origen,desplazamiento_origen);
 	escribir_pagina(valor_leido,marco_destino,desplazamiento_destino);
+
 }
 
 
@@ -402,6 +417,8 @@ void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indi
 //            return false;
 //        }
 //    }
+
+    log_error(log_memoria,"La info pagina a reemplazar en ejecutra reemplazo es: %d",info_paginaAReemplazar->nro_pagina);
 
     escribir_en_swap(indice_pagina_1er_nivel,info_paginaAReemplazar);
 
@@ -566,22 +583,29 @@ int verificar_archivo(char *ruta)
 }
 
 
-void crear_archivo(char *nuevo_archivo)
-{
+void crear_archivo(char *nuevo_archivo){
 	char *ruta_archivo = string_new();
+	//char a = '0';
+	//uint32_t x = 0;
 
 	string_append(&ruta_archivo, nuevo_archivo);
 
 	if (!verificar_archivo(nuevo_archivo))
 	{
-		FILE *archivo = fopen(ruta_archivo, "w+");
+		FILE *archivo = fopen(ruta_archivo, "wb+");
 		//w+ es para que sea de lectura escritura.si queremos escribir y leer en binario cambiarlo a wb+
+
+		//fwrite(a,sizeof(a),1,archivo);
+
+
 		fclose(archivo);
 	}
 	else
 	{
 		//error_show("El directorio: %s ya existe\n", ruta_archivo);
 	}
+
+
 	free(ruta_archivo);
 }
 
@@ -613,7 +637,7 @@ char *itoa(uint32_t n)
 
 char* pasar_a_char(uint32_t num){
 
-	char* terminacion = ".swap\0";
+	char* terminacion = ".swap";
 	//char* str;
 
 
@@ -622,7 +646,7 @@ char* pasar_a_char(uint32_t num){
 
 	char* nuevo_path = strcat(num_char,terminacion);
 
-	log_warning(log_memoria,"El nuevo path es: %s",nuevo_path);
+	//log_warning(log_memoria,"El nuevo path es: %s",nuevo_path);
 
 	return nuevo_path;
 }
@@ -665,3 +689,17 @@ char* pasar_a_char_sin_terminacion(int num){
 }
 
 
+void poner_archivo_con_ceros(char* path_char,uint32_t tam_proceso){
+	FILE *fp= fopen( path_char , "rb+" );
+	char* a = "0";
+	int x = tam_proceso / 4;
+
+	fseek(fp, 0, SEEK_SET);
+	for(int i = 0 ; i < x;i++){
+		fwrite(a,sizeof(a),1,fp);
+	}
+
+
+
+	fclose(fp);
+}

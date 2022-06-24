@@ -117,6 +117,8 @@ bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel);
 
 void traer_proceso_de_swap(uint32_t indice_archivo_swap);
 
+void crear_archivo(char* path_char);
+
 void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir);
 
 char* pasar_a_char(uint32_t num);

@@ -72,6 +72,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			char* path_char = pasar_a_char(indice_tabla);
 
 			crear_archivo(path_char);//todo chequear con valgrind que tira errores
+
+			poner_archivo_con_ceros(path_char,tam_proceso);
+
     	    }
 
     		if(condicion == TLB_RD){
@@ -152,6 +155,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 //a partir de aca copiar par aweite
 							uint32_t valor_leido;
 							if(pagina_buscada->bit_presencia == 1){
+								log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
 
 								valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 								pagina_buscada->bit_uso = 1;
@@ -166,9 +170,11 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								uint32_t frame_a_utilizar = buscar_frame_libre();
 								if(frame_a_utilizar != -1){
 									if(al_proceso_le_quedan_frames(indice_tabla)){
-										log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
 
 										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+										log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
+
 										valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 										pagina_buscada->bit_uso = 1;
 										send_TAM(cliente_socket,valor_leido);
@@ -179,7 +185,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											t_list* contenido_de_pagina = list_create();
+											log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
+											contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;
@@ -435,6 +443,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							if(pagina_buscada->bit_presencia == 1){
 
 								//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
+								log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 
 								escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
 								pagina_buscada->bit_uso = 1;
@@ -450,7 +459,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								uint32_t frame_a_utilizar = buscar_frame_libre();
 								if(frame_a_utilizar != -1){
 									if(al_proceso_le_quedan_frames(indice_tabla)){
-										log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
+										log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 
 										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
 										//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento); // todo pasar desp
@@ -467,6 +477,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
 											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+											log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
+
 											escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;
 											pagina_buscada->bit_modificado = 1;
@@ -543,7 +555,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				log_info(log_memoria, "fallo al recibir nro de pagina!");
 				return;
 				}
-				log_trace(log_memoria,"Saco de memoria el proceso: %d",indice_proceso + 1);
+				log_trace(log_memoria,"[-------------]Saco de memoria el proceso: %d",indice_proceso + 1);
 
 
 				sacar_proceso_de_memoria(indice_proceso);

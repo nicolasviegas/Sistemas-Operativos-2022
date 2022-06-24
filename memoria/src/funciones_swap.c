@@ -84,7 +84,9 @@ void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 
 	FILE *file = fopen(filepath, "rb+");
 
-	fseek(file, pagina * tamanio_paginas+offset, SEEK_SET);
+	int desp = pagina * tamanio_paginas + offset;
+
+	fseek(file, desp, SEEK_SET);
 
 	fwrite(text, sizeof(text), 1, file);
 
@@ -94,23 +96,12 @@ void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 
 }
 
-/*void leer_swap(char* filepath,char* text ,int pagina,int offset){
-
-	FILE *file = fopen(filepath, "rb+");
-
-	fseek(file, pagina * tamanio_paginas+offset, SEEK_SET);
-
-	fread(text, sizeof(text), 1, file);
-
-	fclose(file);
-
-}*/
 
 
 void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	//NECESITA EL FRAME SOLO O TDA LA PAG?
 	usleep(retardo_swap * 1000);
-	log_debug(log_memoria,"Escribiendo en swap...");
+	log_debug(log_memoria,"Escribiendo en swap la pagina .... %d",pagina_a_escribir->nro_pagina);
 
 	char* path = pasar_a_char(indice_archivo_swap);
 	//char* path = "0.swap\0";
@@ -119,39 +110,9 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	uint32_t contenido_pagina;
 	char* char_contenido;
 
-/*
 
-	contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,desp);
-			log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
-
-
-	char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
-			//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
-
-	escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,desp);
-
-//////////
-	contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,16);
-			log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
-
-
-			char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
-			//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
-
-			escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,16);
-/////////////
-			contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,44);
-					log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
-
-
-					char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
-					//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
-
-					escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,44);
-*/
-
-
-
+///////////////////////////////////////////////////////////////
+//ESTE ES EL BUENO DESCOMENTAR
 	for(desp = 0; desp < tamanio_paginas ;desp+=4){
 		contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,desp);
 		//log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
@@ -163,7 +124,7 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 		escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,desp);
 		//desp += 4;
 	}
-
+////////////////////////////////////////////////////////////
 
 /*
 	for(int i = 0;i < tamanio_paginas;i++){
@@ -178,28 +139,131 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 
 
 
+/*	uint32_t off=0;
+	for(int i=0;i<tamanio_paginas; i++){
+		escribir_pagina(0,pagina_a_escribir->frame,off);
+	}*/
+
 
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
 }
 
+
+
+
+////////////////////
+uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset){
+
+	int fd = open(filepath, O_RDONLY, (mode_t)0600);
+	//int fd = open("/home/utnso/tp-2022-1c-yaguarethreads-/memoria/0.swap",O_RDONLY);
+
+	 ftruncate(fd,0);
+	 ftruncate(fd,512);
+
+
+
+
+	  if (fd == -1){
+	        perror("Error opening file for writing");
+	       // exit(EXIT_FAILURE);
+	    }
+
+
+	    struct stat fileInfo = {0};
+
+
+	    if (fstat(fd, &fileInfo) == -1){
+	        perror("Error getting the file size");
+	       // exit(EXIT_FAILURE);
+	    }
+
+
+	    if (fileInfo.st_size == 0){
+	        fprintf(stderr, "Error: File is empty, nothing to do\n");
+	     //   exit(EXIT_FAILURE);
+	    }
+
+	  //  printf("File size is %ji\n", (intmax_t)fileInfo.st_size);
+
+	    char *map = mmap(NULL, 512, PROT_READ, MAP_FILE | MAP_SHARED , fd, 0);
+	    if (map == MAP_FAILED)
+	    {
+	        close(fd);
+	        perror("Error mmapping the file");
+	      //  exit(EXIT_FAILURE);
+	    }
+
+	    char* valor_leido = NULL;
+
+	    valor_leido = (char *)realloc(valor_leido, sizeof(valor_leido));
+
+	    memcpy(valor_leido,map +pagina*tamanio_paginas +offset,sizeof(tamanio_paginas));
+
+	  //  printf("Lei el valor %s\n",valor_leido);
+
+	    // Don't forget to free the mmapped memory
+	    if (munmap(map, fileInfo.st_size) == -1){
+	        close(fd);
+	        perror("Error un-mmapping the file");
+	      //  exit(EXIT_FAILURE);
+	    }
+
+	    // Un-mmaping doesn't close the file, so we still need to do that.
+	    close(fd);
+
+	    uint32_t valor = atoi(valor_leido);
+
+	    log_info(log_memoria,"Entre en leer memoria de mati: el valor leido del archivo %s es: %d",filepath,valor);
+
+	    return valor;
+}
+
+//////////////////
 
 uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t desp){
-	log_debug(log_memoria,"Trayendo pagina de swap...");
-	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
-	return 500; // todo ir a leer a swap y devolver lo leido en vez de un 500
-}
+	//log_debug(log_memoria,"Trayendo pagina de swap...");
 
+		//char* valor_leido;
+		uint32_t valor_leido;// = 500;
+
+		char* path = pasar_a_char(indice_archivo_swap);
+		/*//char*path = "0.swap";
+		FILE *file = fopen(path, "rb+");
+		int offset = nro_pagina * tamanio_paginas + desp;
+		//fseek(file, offset, SEEK_SET);
+
+		//fread(&valor_leido, tamanio_paginas, 1, file);
+		fgets(valor_leido,offset,path);
+
+		log_warning(log_memoria,"El valor leido de swap es : %s",valor_leido);
+
+		fclose(file);*/
+
+	//int offset = nro_pagina * tamanio_paginas + desp;
+
+	//log_info(log_memoria,"El offset %d y el nro de pagna %d con el que voy a entrar a la funcion de mati en swap es",desp,nro_pagina);
+
+	valor_leido = lectura_swap(path,nro_pagina,desp);
+	//uint32_t valor_leido = 500;
+
+
+	return valor_leido; // todo ir a leer a swap y devolver lo leido en vez de un 500
+}
 
 t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
 
 	t_list* a = list_create();
 	usleep(retardo_swap * 1000);
 
+	log_info(log_memoria,"El nro de pagina que traigo de swap es: %d",nro_pagina);
 	for(int desp = 0;desp < tamanio_paginas ; desp+=4){
 		uint32_t contenido_de_pagina = leer_de_swap(indice_archivo_swap,nro_pagina,desp);
 
+    	log_info(log_memoria,"El valor en la lista de valores que me vinieron de swap es: %d",contenido_de_pagina);
 
 		list_add(a,contenido_de_pagina);
+
+		//log_debug(log_memoria,"El size de la lista con los valores que tenia la pag(deberia ser 16): %d",list_size(a));
 	}
 
 
@@ -236,7 +300,16 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 				for(int desp = 0 ; desp < tamanio_paginas ; desp+=4){
 					dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina,desp);
 
-					escribir_pagina(dataAux,frame_a_escribir,0);
+					if(dataAux != 0){
+						log_warning(log_memoria,"El valor que lei de swap es: %d",dataAux);
+						log_warning(log_memoria,"El desplazamiento que lei de swap es: %d",desp);
+					}
+
+
+
+					escribir_pagina(dataAux,frame_a_escribir,desp);
+
+					leer_de_memoria(frame_a_escribir,desp);
 				}
 
 			}
