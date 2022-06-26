@@ -311,7 +311,7 @@ void cargar_lista_frames(){
 	log_trace(log_memoria,"Cant marcos seran %d",cantidad_marcos);
 	for(int i=0;i < cantidad_marcos;i++){
 		frame* marco = malloc(sizeof(frame));
-		marco->nro_pagina = 0;
+		marco->nro_pagina = -1;
 		marco->ocupado = false;
 		pthread_mutex_lock(&mutexListaFrame);
 		list_add(lista_frames,marco);
@@ -329,6 +329,8 @@ void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el 
 	pthread_mutex_lock(&mutexListaFrame);
 	frame* frame_aux = list_get(lista_frames,marco1);
 	frame_aux->ocupado = false;
+	frame_aux->nro_pagina = -1;
+	log_warning(log_memoria,"//////////////////MIRAME MIRAME SE PUSO UN FRAME (el %d) COMO LIBREEEEE//////////////////",marco1);
 	pthread_mutex_unlock(&mutexListaFrame);
 
 	int desp = 0;
@@ -397,19 +399,15 @@ uint32_t buscar_frame_libre(){
 	frame* frameAux;
 //	frame* frame_libre;
 	pthread_mutex_lock(&mutexListaFrame);
-	int a = 0;
 	for(int i=0;i < list_size(lista_frames);i++){
 		frameAux = list_get(lista_frames,i);
-		while(a < 7){
 			if(frameAux->ocupado){
-				log_info(log_memoria,"*******************************EL FRAME %d QUE ACABO DE BUSCAR ESTA OCUPADO",a);
+				log_info(log_memoria,"*******************************EL FRAME %d QUE ACABO DE BUSCAR ESTA OCUPADO",i);
 
 				}else{
-				log_info(log_memoria,"-------------------------------------EL FRAME %d QUE ACABO DE BUSCAR ESTA LIBRE",a);
-				break;
-			}
-			a++;
-		}
+				log_info(log_memoria,"-------------------------------------EL FRAME %d QUE ACABO DE BUSCAR ESTA LIBRE",i);
+
+				}
 		//log_warning(log_memoria,"Estoy pensando....");
 		if(!frameAux->ocupado){
 
@@ -520,6 +518,7 @@ void poner_pagina_en_marco(uint32_t marco,pagina* pagina){
 	pagina->frame = marco;
 	pagina->bit_presencia = 1;
 
+
 }
 
 void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
@@ -556,7 +555,7 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 
 void sacar_pagina_de_marco(pagina* pagina_aux){
 	frame* frame_aux = malloc(sizeof(frame));
-
+	//log_debug(log_memoria,"El numero de pagina que se compara con el frame es %d",pagina_aux->nro_pagina);
 	for(int i = 0;i<list_size(lista_frames);i++){
 		pthread_mutex_lock(&mutexListaFrame);
 
@@ -565,6 +564,7 @@ void sacar_pagina_de_marco(pagina* pagina_aux){
 			//log_debug(log_memoria,"El frame a liberar es:  %d",i);
 
 			frame_aux->ocupado = false;
+			log_warning(log_memoria,"//////////////////MIRAME MIRAME SE PUSO UN FRAME (el %d) COMO LIBREEEEE, con pagina %d //////////////////",i,pagina_aux->nro_pagina);
 		}
 		pthread_mutex_unlock(&mutexListaFrame);
 

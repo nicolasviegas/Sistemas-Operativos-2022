@@ -288,7 +288,7 @@ void pasar_proceso_a_swap(uint32_t indice_tabla){
 			liberar_memoria(pagina_aux->frame);
 		}
 
-	sacar_proceso_de_memoria(indice_tabla);
+	//sacar_proceso_de_memoria(indice_tabla);
 		//log_warning(log_memoria,"El bit de presencia al pasar el proceso a swap es: %d",pagina_aux->bit_presencia);
 
 	}
