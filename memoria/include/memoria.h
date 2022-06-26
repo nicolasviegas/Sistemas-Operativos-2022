@@ -39,7 +39,9 @@ typedef enum{
 
 pthread_mutex_t mutexListaFrame;
 
-pthread_mutex_t mutexSwap;
+pthread_mutex_t mutexEscribirEnMemoria;
+
+pthread_mutex_t mutexLeerEnMemoria;
 
 
 t_config* config_memoria;

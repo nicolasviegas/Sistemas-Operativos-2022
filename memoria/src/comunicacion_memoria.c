@@ -166,9 +166,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
 							else{
-								pthread_mutex_lock(&mutexListaFrame);
+								//pthread_mutex_lock(&mutexListaFrame);
 								uint32_t frame_a_utilizar = buscar_frame_libre();
-								pthread_mutex_unlock(&mutexListaFrame);
+								//pthread_mutex_unlock(&mutexListaFrame);
 
 								if(frame_a_utilizar != -1){
 									if(al_proceso_le_quedan_frames(indice_tabla)){
@@ -308,9 +308,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 					}
 					else{
-							pthread_mutex_lock(&mutexListaFrame);
+							//pthread_mutex_lock(&mutexListaFrame);
 						uint32_t frame_a_utilizar = buscar_frame_libre();
-							pthread_mutex_unlock(&mutexListaFrame);
+							//pthread_mutex_unlock(&mutexListaFrame);
 
 						if(frame_a_utilizar != -1){
 							if(al_proceso_le_quedan_frames(indice_tabla)){
@@ -464,9 +464,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
 							else{
-									pthread_mutex_lock(&mutexListaFrame);
+									//pthread_mutex_lock(&mutexListaFrame);
 								uint32_t frame_a_utilizar = buscar_frame_libre();
-									pthread_mutex_unlock(&mutexListaFrame);
+								//	pthread_mutex_unlock(&mutexListaFrame);
 
 								if(frame_a_utilizar != -1){
 									if(al_proceso_le_quedan_frames(indice_tabla)){
@@ -514,7 +514,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				log_info(log_memoria, "fallo al recibir nro de pagina!");
 				return;
 				}
-				log_trace(log_memoria,"Meto a swap al proceso es: %d",indice_proceso + 1);
+				log_trace(log_memoria,"Meto a swap al proceso es: %d",indice_proceso);
 
 
 //todo a partir de aca memoria va a trabajar con swap
@@ -531,7 +531,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			return;
 			}
 
-			log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso + 1);
+			log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso);
 			//todo meter el proceso a la mem principal y poner el bit de presencia en 1
 			//(usar la logica de funcion de meter en swap para tener todas en una sola lista y poner en 1
 
@@ -552,7 +552,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
     				log_info(log_memoria, "fallo al recibir nro de pagina!");
     				return;
     				}
-    				log_trace(log_memoria,"Saco de swap el proceso: %d",indice_proceso + 1);
+    				log_trace(log_memoria,"Saco de swap el proceso: %d",indice_proceso);
 
     //todo a partir de aca memoria va a trabajar con swap
 
@@ -566,7 +566,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				log_info(log_memoria, "fallo al recibir nro de pagina!");
 				return;
 				}
-				log_trace(log_memoria,"[-------------]Saco de memoria el proceso: %d",indice_proceso + 1);
+				log_trace(log_memoria,"[-------------]Saco de memoria el proceso: %d",indice_proceso);
 
 
 				sacar_proceso_de_memoria(indice_proceso);

@@ -342,6 +342,7 @@ void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el 
 
 
 void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){// TODO VER COMO SE ESCIBE EN MEMORIA
+	pthread_mutex_lock(&mutexEscribirEnMemoria);
 
 	if(valor != 0){
 		log_error(log_memoria,"Entre a escribir pagina,valor: %d ",valor);
@@ -355,19 +356,25 @@ void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){// 
 	memcpy(memoria_principal+posicion_marco+desplazamiento,&valor,sizeof(uint32_t));
 	//memcpy(memoria_principal+posicion_marco+desplazamiento,valor,tamanio_paginas);
 	//escribe en memoria la data y pone en 1 el bit de presencia de la pagina
+	pthread_mutex_unlock(&mutexEscribirEnMemoria);
 }
 
 uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){ // TODO LEER DE MEMORIA
 	uint32_t valor_leido;
 	uint32_t posicion_marco = frame * tamanio_paginas+desplazamiento;
+
+	//log_error(log_memoria,"dentro de leer de memoria %d ",valor_leido);
+
+
+
 	memcpy(&valor_leido,memoria_principal+posicion_marco,sizeof(uint32_t));
 	if(valor_leido != 0){
-		log_error(log_memoria,"El valor despues de leer en memoria %d ",valor_leido);
+		log_error(log_memoria,"El valor que leo en memoria principal %d con posicion marco: %d",valor_leido,posicion_marco);
 	}
 	return valor_leido;
 }
 
-char* leer_pagina_de_memoria(uint32_t frame){ // TODO LEER DE MEMORIA
+/*char* leer_pagina_de_memoria(uint32_t frame){ // TODO LEER DE MEMORIA
 	void* valor_leido;
 	uint32_t posicion_marco = frame * tamanio_paginas;
 
@@ -375,7 +382,7 @@ char* leer_pagina_de_memoria(uint32_t frame){ // TODO LEER DE MEMORIA
 	//log_error(log_memoria,"El valor despues de leer en memoria %s ",valor_leido);
 	//printf("El valor leido de memoria es: %s,",valor_leido);
 	return (char*)valor_leido;
-}
+}*/
 
 void copiar_en_memoria(uint32_t marco_origen,uint32_t desplazamiento_origen,uint32_t marco_destino,uint32_t desplazamiento_destino){
 
@@ -388,18 +395,42 @@ void copiar_en_memoria(uint32_t marco_origen,uint32_t desplazamiento_origen,uint
 uint32_t buscar_frame_libre(){
 	//log_error(log_memoria,"Entre a buscar frame libre");
 	frame* frameAux;
-	frame* frame_libre;
-//	pthread_mutex_lock(&mutexListaFrame);
-
+//	frame* frame_libre;
+	pthread_mutex_lock(&mutexListaFrame);
+	int a = 0;
 	for(int i=0;i < list_size(lista_frames);i++){
 		frameAux = list_get(lista_frames,i);
+		while(a < 7){
+			if(frameAux->ocupado){
+				log_info(log_memoria,"*******************************EL FRAME %d QUE ACABO DE BUSCAR ESTA OCUPADO",a);
 
+				}else{
+				log_info(log_memoria,"-------------------------------------EL FRAME %d QUE ACABO DE BUSCAR ESTA LIBRE",a);
+				break;
+			}
+			a++;
+		}
+		//log_warning(log_memoria,"Estoy pensando....");
 		if(!frameAux->ocupado){
+
+			if(frameAux->ocupado){
+				log_info(log_memoria,"*******************************EL FRAME  QUE ACABO DE ELEGIR %d ESTA OCUPADO", i );
+
+			}else{
+				log_info(log_memoria,"-------------------------------------EL FRAME QUE ACABO DE ELEGIR %d ESTA LIBRE",i);
+
+			}
+
+
+
+			frameAux->ocupado = true;
+			pthread_mutex_unlock(&mutexListaFrame);
 			return i;
+
 		}
 
 	}
-//	pthread_mutex_unlock(&mutexListaFrame);
+	pthread_mutex_unlock(&mutexListaFrame);
 
 	return -1;
 }
@@ -483,7 +514,7 @@ void poner_pagina_en_marco(uint32_t marco,pagina* pagina){
 
 	frame* frame_buscado = list_get(lista_frames,marco);
 	frame_buscado->nro_pagina = pagina->nro_pagina;
-	frame_buscado->ocupado = true;
+	//frame_buscado->ocupado = true;
 	pthread_mutex_unlock(&mutexListaFrame);
 
 	pagina->frame = marco;
@@ -509,10 +540,10 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 
 	for(int i=0;i<list_size(paginas_del_proceso_para_mem);i++){
 		paginaAux = list_get(paginas_del_proceso_para_mem,i);
-			pthread_mutex_lock(&mutexListaFrame);
+			//pthread_mutex_lock(&mutexListaFrame);
 
 		marcoAux = buscar_frame_libre();
-			pthread_mutex_unlock(&mutexListaFrame);
+			//pthread_mutex_unlock(&mutexListaFrame);
 
 		poner_pagina_en_marco(marcoAux,paginaAux);
 
