@@ -13,7 +13,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
     fd_kernel = cliente_socket;
     //fd_cpu = 7;
-    fd_cpu = 5;
+    fd_cpu = 5;//TODO HARDCODEADO
 
    // send_TAM(fd_cpu,tamanio_paginas);
     send_TAM(fd_cpu,tamanio_paginas);
@@ -166,8 +166,10 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
 							else{
-
+								pthread_mutex_lock(&mutexListaFrame);
 								uint32_t frame_a_utilizar = buscar_frame_libre();
+								pthread_mutex_unlock(&mutexListaFrame);
+
 								if(frame_a_utilizar != -1){
 									if(al_proceso_le_quedan_frames(indice_tabla)){
 										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
@@ -185,9 +187,14 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-											t_list* contenido_de_pagina = list_create();
+											log_info(log_memoria,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+											log_info(log_memoria,"El indice tabla que voy a pasar por parametro es : %d",indice_tabla);
+											//t_list* contenido_de_pagina = list_create();
 											log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
-											contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+
+											log_info(log_memoria,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;
@@ -301,8 +308,10 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 					}
 					else{
-
+							pthread_mutex_lock(&mutexListaFrame);
 						uint32_t frame_a_utilizar = buscar_frame_libre();
+							pthread_mutex_unlock(&mutexListaFrame);
+
 						if(frame_a_utilizar != -1){
 							if(al_proceso_le_quedan_frames(indice_tabla)){
 								log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
@@ -455,8 +464,10 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
 							else{
-
+									pthread_mutex_lock(&mutexListaFrame);
 								uint32_t frame_a_utilizar = buscar_frame_libre();
+									pthread_mutex_unlock(&mutexListaFrame);
+
 								if(frame_a_utilizar != -1){
 									if(al_proceso_le_quedan_frames(indice_tabla)){
 										log_error(log_memoria,"Entre ya que al proceso le quedan frames");

@@ -45,7 +45,7 @@ void inicializar_listas(){
 	lista_frames = list_create();
 	cargar_lista_frames();
 
-	pthread_mutex_init(&mutexSwap, NULL);
+	pthread_mutex_init(&mutexListaFrame, NULL);
 
 }
 

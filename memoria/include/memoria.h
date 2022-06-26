@@ -10,6 +10,7 @@
 #include<sys/socket.h>
 #include<netdb.h>
 #include<string.h>
+#include <pthread.h>
 #include<commons/log.h>
 #include<commons/config.h>
 #include<commons/collections/list.h>
@@ -36,6 +37,7 @@ typedef enum{
 }t_algoritmo_memoria;
 
 
+pthread_mutex_t mutexListaFrame;
 
 pthread_mutex_t mutexSwap;
 
@@ -86,6 +88,7 @@ t_list* lista_tablas_2do_nivel; // lista de tablas de 2do nivel
 
 t_list* lista_frames;
 
+pthread_mutex_t mutexSwap;
 
 
 //uint32_t indice_tabla;
@@ -128,6 +131,8 @@ uint32_t buscar_frame_libre();
 void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indice_pagina_1er_nivel);
 
 void poner_pagina_en_marco(uint32_t marco,pagina* pagina);
+
+void poner_archivo_con_ceros(char* path_char,uint32_t tam_proceso);
 
 void actualizar_bit_uso_tlb(uint32_t marco_aux);
 

@@ -102,6 +102,8 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	//NECESITA EL FRAME SOLO O TDA LA PAG?
 	usleep(retardo_swap * 1000);
 	log_debug(log_memoria,"Escribiendo en swap la pagina .... %d",pagina_a_escribir->nro_pagina);
+	log_debug(log_memoria,"Escribiendo en swap el frame .... %d",pagina_a_escribir->frame);
+
 
 	char* path = pasar_a_char(indice_archivo_swap);
 	//char* path = "0.swap\0";
@@ -287,7 +289,11 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 			//log_trace(log_memoria,"Antes del list get del demonio");
 
 			pagina_aux = list_get(paginas_del_proceso,k);
+				pthread_mutex_lock(&mutexListaFrame);
+
 			uint32_t frame_a_escribir = buscar_frame_libre();
+				pthread_mutex_unlock(&mutexListaFrame);
+
 			if(frame_a_escribir != -1){
 				//pagina_aux->bit_presencia = 1;
 				pagina_aux->bit_uso = 1;
@@ -304,8 +310,6 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 						log_warning(log_memoria,"El valor que lei de swap es: %d",dataAux);
 						log_warning(log_memoria,"El desplazamiento que lei de swap es: %d",desp);
 					}
-
-
 
 					escribir_pagina(dataAux,frame_a_escribir,desp);
 
