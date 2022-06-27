@@ -73,6 +73,7 @@ typedef struct{
 typedef struct{
 	bool ocupado;
 	uint32_t nro_pagina;
+	uint32_t indice_proceso;
 //	uint32_t bit_uso;
 //	uint32_t bit_modificado;
 }frame;
@@ -132,7 +133,7 @@ uint32_t buscar_frame_libre();
 
 void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indice_pagina_1er_nivel);
 
-void poner_pagina_en_marco(uint32_t marco,pagina* pagina);
+void poner_pagina_en_marco(uint32_t marco,pagina* pagina,uint32_t indice_proceso);
 
 void poner_archivo_con_ceros(char* path_char,uint32_t tam_proceso);
 

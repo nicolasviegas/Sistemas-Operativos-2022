@@ -313,6 +313,7 @@ void cargar_lista_frames(){
 		frame* marco = malloc(sizeof(frame));
 		marco->nro_pagina = -1;
 		marco->ocupado = false;
+		marco->indice_proceso = -1;
 		pthread_mutex_lock(&mutexListaFrame);
 		list_add(lista_frames,marco);
 		pthread_mutex_unlock(&mutexListaFrame);
@@ -330,14 +331,15 @@ void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el 
 	frame* frame_aux = list_get(lista_frames,marco1);
 	frame_aux->ocupado = false;
 	frame_aux->nro_pagina = -1;
-	log_warning(log_memoria,"//////////////////MIRAME MIRAME SE PUSO UN FRAME (el %d) COMO LIBREEEEE//////////////////",marco1);
+	frame_aux->indice_proceso = -1;
+	//log_warning(log_memoria,"//////////////////MIRAME MIRAME SE PUSO UN FRAME (el %d) COMO LIBREEEEE//////////////////",marco1);
 	pthread_mutex_unlock(&mutexListaFrame);
 
-	int desp = 0;
-/*	for(int i = 0;i < tamanio_paginas;i++){
+	//int desp = 0;
+	for(int desp = 0;desp < tamanio_paginas;desp+=4){
 		escribir_pagina(0,marco1,desp);
-		desp+=4;
-	}*/
+		//desp+=4;
+	}
 
 	//todo liberar memoria posta
 }
@@ -401,13 +403,13 @@ uint32_t buscar_frame_libre(){
 	pthread_mutex_lock(&mutexListaFrame);
 	for(int i=0;i < list_size(lista_frames);i++){
 		frameAux = list_get(lista_frames,i);
-			if(frameAux->ocupado){
-				log_info(log_memoria,"*******************************EL FRAME %d QUE ACABO DE BUSCAR ESTA OCUPADO",i);
-
-				}else{
-				log_info(log_memoria,"-------------------------------------EL FRAME %d QUE ACABO DE BUSCAR ESTA LIBRE",i);
-
-				}
+//			if(frameAux->ocupado){
+//				log_info(log_memoria,"*******************************EL FRAME %d QUE ACABO DE BUSCAR ESTA OCUPADO",i);
+//
+//				}else{
+//				log_info(log_memoria,"-------------------------------------EL FRAME %d QUE ACABO DE BUSCAR ESTA LIBRE",i);
+//
+//				}
 		//log_warning(log_memoria,"Estoy pensando....");
 		if(!frameAux->ocupado){
 
@@ -421,7 +423,7 @@ uint32_t buscar_frame_libre(){
 
 
 
-			frameAux->ocupado = true;
+//			frameAux->ocupado = true;
 			pthread_mutex_unlock(&mutexListaFrame);
 			return i;
 
@@ -477,7 +479,7 @@ void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indi
     	desp+=4;
 
     }
-    poner_pagina_en_marco(frame,info_pagina);
+    poner_pagina_en_marco(frame,info_pagina,indice_pagina_1er_nivel);
 
 }
 
@@ -506,13 +508,14 @@ bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel){
 	return false;
 }
 
-void poner_pagina_en_marco(uint32_t marco,pagina* pagina){
+void poner_pagina_en_marco(uint32_t marco,pagina* pagina,uint32_t indice_proceso){
 	//log_error(log_memoria,"Entre en poner pagina en marco la re concha de tu madre");
 	pthread_mutex_lock(&mutexListaFrame);
 
 	frame* frame_buscado = list_get(lista_frames,marco);
 	frame_buscado->nro_pagina = pagina->nro_pagina;
-	//frame_buscado->ocupado = true;
+	frame_buscado->indice_proceso = indice_proceso;
+	frame_buscado->ocupado = true;
 	pthread_mutex_unlock(&mutexListaFrame);
 
 	pagina->frame = marco;
@@ -542,9 +545,10 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 			//pthread_mutex_lock(&mutexListaFrame);
 
 		marcoAux = buscar_frame_libre();
+		log_trace(log_memoria,"El marco que se eligio es: %d",marcoAux);
 			//pthread_mutex_unlock(&mutexListaFrame);
 
-		poner_pagina_en_marco(marcoAux,paginaAux);
+		poner_pagina_en_marco(marcoAux,paginaAux,indice_proceso);
 
 		log_debug(log_memoria,"El frame donde voy a poner al proceso en mem ppal:  %d",paginaAux->frame);
 	}
@@ -553,17 +557,22 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 
 }
 
-void sacar_pagina_de_marco(pagina* pagina_aux){
+void sacar_pagina_de_marco(pagina* pagina_aux,uint32_t indice_proceso){
 	frame* frame_aux = malloc(sizeof(frame));
 	//log_debug(log_memoria,"El numero de pagina que se compara con el frame es %d",pagina_aux->nro_pagina);
 	for(int i = 0;i<list_size(lista_frames);i++){
 		pthread_mutex_lock(&mutexListaFrame);
 
 		frame_aux = list_get(lista_frames,i);
-		if(frame_aux->nro_pagina == pagina_aux->nro_pagina){
+		if(frame_aux->nro_pagina == pagina_aux->nro_pagina && frame_aux->indice_proceso == indice_proceso){
 			//log_debug(log_memoria,"El frame a liberar es:  %d",i);
 
 			frame_aux->ocupado = false;
+			//int desp =0;
+			for(int desp = 0;desp<tamanio_paginas;desp+=4){
+				escribir_pagina(0,i,desp);
+				//desp += 4;
+			}
 			log_warning(log_memoria,"//////////////////MIRAME MIRAME SE PUSO UN FRAME (el %d) COMO LIBREEEEE, con pagina %d //////////////////",i,pagina_aux->nro_pagina);
 		}
 		pthread_mutex_unlock(&mutexListaFrame);
@@ -582,7 +591,7 @@ void sacar_proceso_de_memoria(uint32_t indice_proceso){
 	pagina* pagina_aux = malloc(sizeof(pagina));
 	for(int i = 0; i < list_size(lista_aux2);i++){
 		pagina_aux = list_get(lista_aux2,i);
-		sacar_pagina_de_marco(pagina_aux);
+		sacar_pagina_de_marco(pagina_aux,indice_proceso);
 	}
 
 }

@@ -48,6 +48,7 @@ void inicializar_listas(){
 	pthread_mutex_init(&mutexListaFrame, NULL);
 	pthread_mutex_init(&mutexEscribirEnMemoria, NULL);
 	pthread_mutex_init(&mutexLeerEnMemoria, NULL);
+	pthread_mutex_init(&mutexSwap, NULL);
 
 
 }

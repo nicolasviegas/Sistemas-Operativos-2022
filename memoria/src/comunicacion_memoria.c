@@ -174,7 +174,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									if(al_proceso_le_quedan_frames(indice_tabla)){
 										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
 
-										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 										log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
 
 										valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
@@ -187,15 +187,16 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-											log_info(log_memoria,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+											//log_info(log_memoria,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 											log_info(log_memoria,"El indice tabla que voy a pasar por parametro es : %d",indice_tabla);
 											//t_list* contenido_de_pagina = list_create();
 											log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
 											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
 
-											log_info(log_memoria,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
-
+											//log_info(log_memoria,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
+											//pthread_mutex_lock(&mutexSwap);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+											//pthread_mutex_unlock(&mutexSwap);
 											valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;
 											send_TAM(cliente_socket,valor_leido);
@@ -316,7 +317,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							if(al_proceso_le_quedan_frames(indice_tabla)){
 								log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
 
-								poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+								poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 								//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 								pagina_buscada->bit_uso = 1;
 								pagina_buscada->bit_modificado = 1;
@@ -329,7 +330,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 									log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
 									t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+									//pthread_mutex_lock(&mutexSwap);
 									ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+									//pthread_mutex_unlock(&mutexSwap);
 								//	valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 									pagina_buscada->bit_uso = 1;
 									pagina_buscada->bit_modificado = 1;
@@ -473,7 +476,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
 										log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 
-										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada);
+										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 										//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento); // todo pasar desp
 										escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
 										pagina_buscada->bit_uso = 1;
@@ -487,7 +490,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
 											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											//pthread_mutex_lock(&mutexSwap);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
+											//pthread_mutex_unlock(&mutexSwap);
 											log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 
 											escribir_pagina(valor,pagina_buscada->frame,desplazamiento);

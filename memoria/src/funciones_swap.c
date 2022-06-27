@@ -194,7 +194,7 @@ t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
 	for(int desp = 0;desp < tamanio_paginas ; desp+=4){
 		uint32_t contenido_de_pagina = leer_de_swap(indice_archivo_swap,nro_pagina,desp);
 
-    	log_info(log_memoria,"El valor en la lista de valores que me vinieron de swap es: %d",contenido_de_pagina);
+    	//log_info(log_memoria,"El valor en la lista de valores que me vinieron de swap es: %d",contenido_de_pagina);
 
 		list_add(a,contenido_de_pagina);
 
@@ -218,6 +218,8 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 
 		log_trace(log_memoria,"El size de la lista paginas por proceso es: %d",list_size(paginas_del_proceso));
 
+		//TODO CHEQUEAR SI EL PROCESO TIENE MENOS PAGINAS QUE EL LIMITE
+
 		for(int k=0;k < marcos_por_proceso;k++){
 			//log_trace(log_memoria,"Antes del list get del demonio");
 
@@ -236,8 +238,8 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 				pagina_aux->bit_uso = 1;
 				log_trace(log_memoria,"Antes de escribir pagina");
 
-				poner_pagina_en_marco(frame_a_escribir,pagina_aux);
-				log_info(log_memoria,"PUSE EL PROCESO(indice archivo) %d CUANDO LO TRAIGO DE SWAP EN EL FRAME %d",indice_archivo_swap,frame_a_escribir);
+				poner_pagina_en_marco(frame_a_escribir,pagina_aux,indice_archivo_swap);
+			//	log_info(log_memoria,"PUSE EL PROCESO(indice archivo) %d CUANDO LO TRAIGO DE SWAP EN EL FRAME %d",indice_archivo_swap,frame_a_escribir);
 				//usleep(retardo_swap * 1000); todo descomentar a futuro
 
 				for(int desp = 0 ; desp < tamanio_paginas ; desp+=4){
@@ -256,8 +258,9 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 			}
 			else{
 				log_trace(log_memoria,"Entre en el else, por ende ejecuto reemplazo");
-
+				//pthread_mutex_lock(&mutexSwap);
 				ejecutar_reemplazo(dataAux,pagina_aux,indice_archivo_swap);
+				//pthread_mutex_unlock(&mutexSwap);
 			}
 
 		}
