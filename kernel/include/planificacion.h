@@ -123,6 +123,7 @@ sem_t contadorReadySuspended;
 sem_t medianoPlazo;
 
 bool hay_alguien_exe;
+uint32_t proceso_en_ejecucion;
 
 //void enviar_pcb_a_cpu(void* pcb_proceso);
 void enviar_pcb_a_cpu(pcb_t* pcb_proceso);

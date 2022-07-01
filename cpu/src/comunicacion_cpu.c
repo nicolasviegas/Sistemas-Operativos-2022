@@ -259,8 +259,9 @@ static void procesar_conexion_cpu(void* void_args) {
 			proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 
 			decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
-
-			//interrupcion = check_interrupt(cliente_socket_interrupcion);
+			log_warning(log_cpu,"ANTES DEL CHECK INTERRUPT");
+//			send_TAM(fd_kernel,12);
+			interrupcion = check_interrupt(cliente_socket_interrupcion);
 
 			//log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
 

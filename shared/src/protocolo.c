@@ -730,7 +730,7 @@ bool recv_interrupcion(int fd, uint32_t* parametro1) {
     size_t size = sizeof(uint32_t);
     void* stream = malloc(size);
 
-    if (recv(fd, stream, size, 0) != size) {
+    if (recv(fd, stream, size, MSG_DONTWAIT) != size) {
         free(stream);
         return false;
     }

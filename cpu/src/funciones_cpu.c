@@ -746,15 +746,16 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 bool check_interrupt(int cliente_socket){
 	uint32_t cod_interrup;
 	if (!recv_interrupcion(cliente_socket, &cod_interrup)) {
-			log_error(log_cpu, "fallo recibiendo la interrupcion");
+			log_error(log_cpu, "no se interrumpio");
 
 	}
 	if(cod_interrup == 777){
 		interrupcion = true;
 		log_debug(log_cpu,"Recibi una interrupcion");
 		return interrupcion;
-	}else{
-		//log_error(log_cpu,"No recibi ninguna interrupcion: %d",cod_interrup);
-		return false;
 	}
+		//else{
+//		//log_error(log_cpu,"No recibi ninguna interrupcion: %d",cod_interrup);
+//		return false;
+//	}
 }

@@ -248,20 +248,39 @@ void hiloNew_Ready(){
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
 
+			//&& proceso_en_ejecucion != proceso->PID
 
-			if(hay_alguien_exe){
+			if(hay_alguien_exe ){
 			if(algoritmo_config == SRT){
 
 						//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 						//  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
-				  	  	log_debug(log_kernel,"Envio una interrupcion");
+				  	  	log_debug(log_kernel,"Envio una interrupcion 1");
+//				  	  uint32_t a;
+//				  	  						if (!recv_TAM(fd_cpu, &a)) {
+//				  	  										log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//				  	  						}
+//
+//				  	  						log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 6");
 				  	  	send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 						}else{
 						//	log_debug(log_kernel,"Entre en send interrupcion");
-							send_interrupcion(fd_cpu_interrupt,1);
+//							uint32_t a;
+//													if (!recv_TAM(fd_cpu, &a)) {
+//																	log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//													}
+//
+//													log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 7");
+							//send_interrupcion(fd_cpu_interrupt,1);
 						}
 			}else{
-				send_interrupcion(fd_cpu_interrupt,1);
+//				uint32_t a;
+//										if (!recv_TAM(fd_cpu, &a)) {
+//														log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//										}
+//
+//										log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 8");
+				//send_interrupcion(fd_cpu_interrupt,1);
 			}
 			sem_post(&contadorProcesosEnMemoria);
 		}
@@ -298,9 +317,26 @@ void hiloReady_Exe(){
 			enviar_pcb_a_cpu(procesoAEjecutar);
 
 			hay_alguien_exe = true;
+			//proceso_en_ejecucion = procesoAEjecutar->PID;
+
+
+//			uint32_t a;
+//			if (!recv_TAM(fd_cpu, &a)) {
+//							log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//			}
+//
+//			log_debug(log_kernel,"Despues de recibir el nro para sincronizarme ");
+
 
 			log_debug(log_kernel,"Antes del send interrupcion");
-			send_interrupcion(fd_cpu_interrupt,1);
+//			uint32_t a;
+//						if (!recv_TAM(fd_cpu, &a)) {
+//										log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//						}
+//
+//						log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 9");
+			//send_interrupcion(fd_cpu_interrupt,1);
+
 			log_debug(log_kernel,"Despues del send interrupcion");
 
 			uint32_t pc;
@@ -367,7 +403,7 @@ void hiloBlockASuspension(){
 
 		sem_wait(&analizarSuspension);
 
-		//log_trace(log_kernel,"Entre en hilo bloq a suspension");
+		log_trace(log_kernel,"Entre en hilo bloq a suspension");
 
 
 
@@ -393,14 +429,32 @@ void hiloBlockASuspension(){
 
 								//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 								//  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
-								  	log_debug(log_kernel,"Envio una interrupcion");
+								  	log_debug(log_kernel,"Envio una interrupcion 2");
+//								  	uint32_t a;
+//								  							if (!recv_TAM(fd_cpu, &a)) {
+//								  											log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//								  							}
+//
+//								  							log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 1 ");
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
 								//	log_debug(log_kernel,"Entre en send interrupcion");
-									send_interrupcion(fd_cpu_interrupt,1);
+//									uint32_t a;
+//															if (!recv_TAM(fd_cpu, &a)) {
+//																			log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//															}
+//
+//															log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 2 ");
+									//send_interrupcion(fd_cpu_interrupt,1);
 								}
 							}else{
-								send_interrupcion(fd_cpu_interrupt,1);
+//								uint32_t a;
+//														if (!recv_TAM(fd_cpu, &a)) {
+//																		log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//														}
+//
+//														log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 3 ");
+								//send_interrupcion(fd_cpu_interrupt,1);
 						}
 
 ////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
@@ -461,14 +515,32 @@ void hiloSuspensionAReady(){
 					if(algoritmo_config == SRT){
 
 								//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
-								  log_debug(log_kernel,"Envio una interrupcion");
+								  log_debug(log_kernel,"Envio una interrupcion 3");
+//								  uint32_t a;
+//								  						if (!recv_TAM(fd_cpu, &a)) {
+//								  										log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//								  						}
+//
+//								  						log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 4");
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
 									//log_debug(log_kernel,"Entre en send interrupcion");
-									send_interrupcion(fd_cpu_interrupt,1);
+//									uint32_t a;
+//															if (!recv_TAM(fd_cpu, &a)) {
+//																			log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//															}
+//
+//															log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 5 ");
+									//send_interrupcion(fd_cpu_interrupt,1);
 								}
 					}else{
-						send_interrupcion(fd_cpu_interrupt,1);
+//						uint32_t a;
+//												if (!recv_TAM(fd_cpu, &a)) {
+//																log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
+//												}
+//
+//												log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 5");
+						//send_interrupcion(fd_cpu_interrupt,1);
 					}
 
 		sem_post(&contadorProcesosEnMemoria);
