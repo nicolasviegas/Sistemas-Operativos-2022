@@ -128,7 +128,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								return;
 							}
 							log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
-
+							usleep(retardo_memoria*1000);
 							uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
 							send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
 							log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
@@ -159,9 +159,10 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 								valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 								pagina_buscada->bit_uso = 1;
+								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,valor_leido);
 								log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
-
+								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
@@ -179,8 +180,10 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 										valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 										pagina_buscada->bit_uso = 1;
+										usleep(retardo_memoria*1000);
 										send_TAM(cliente_socket,valor_leido);
 										log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
+										usleep(retardo_memoria*1000);
 										send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 										log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 									}
@@ -199,8 +202,10 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											//pthread_mutex_unlock(&mutexSwap);
 											valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;
+											usleep(retardo_memoria*1000);
 											send_TAM(cliente_socket,valor_leido);
 											log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
+											usleep(retardo_memoria*1000);
 											send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 											log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 									}
@@ -269,6 +274,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
 
 					uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
+					usleep(retardo_memoria*1000);
 					send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
 					log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
@@ -323,6 +329,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								pagina_buscada->bit_modificado = 1;
 								send_TAM(cliente_socket,18);
 								log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
+								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
@@ -338,6 +345,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									pagina_buscada->bit_modificado = 1;
 									send_TAM(cliente_socket,18);
 									log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
+									usleep(retardo_memoria*1000);
 									send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 									log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
@@ -421,6 +429,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
 
 							uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
+							usleep(retardo_memoria*1000);
 							send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
 							log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
@@ -462,7 +471,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								pagina_buscada->bit_modificado = 1;
 								send_TAM(cliente_socket,100);
 								log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
-
+								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
@@ -483,6 +492,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										pagina_buscada->bit_modificado = 1;
 										send_TAM(cliente_socket,100);
 										log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
+										usleep(retardo_memoria*1000);
 										send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 										log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 									}
@@ -500,6 +510,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											pagina_buscada->bit_modificado = 1;
 											send_TAM(cliente_socket,100);
 											log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
+											usleep(retardo_memoria*1000);
 											send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 											log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 									}

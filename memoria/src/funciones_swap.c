@@ -31,7 +31,7 @@ void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	//NECESITA EL FRAME SOLO O TDA LA PAG?
 	char* c = pasar_a_char(indice_archivo_swap);
-//	usleep(retardo_swap * 1000); todo DESCOMENTAR EN UN FUTRUROOOOOO
+	usleep(retardo_swap * 1000);
 	log_debug(log_memoria,"Escribiendo en swap la pagina %d, en el archivo %s ... ",pagina_a_escribir->nro_pagina,c);
 	log_debug(log_memoria,"Escribiendo en swap el frame %d, en el archivo %s ...  ",pagina_a_escribir->frame,c);
 
@@ -188,7 +188,7 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
 
 	t_list* a = list_create();
-	//usleep(retardo_swap * 1000);//todo volver a agregar en un futuro
+	usleep(retardo_swap * 1000);
 
 	log_info(log_memoria,"El nro de pagina que traigo de swap es: %d",nro_pagina);
 	for(int desp = 0;desp < tamanio_paginas ; desp+=4){
@@ -240,7 +240,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 
 				poner_pagina_en_marco(frame_a_escribir,pagina_aux,indice_archivo_swap);
 			//	log_info(log_memoria,"PUSE EL PROCESO(indice archivo) %d CUANDO LO TRAIGO DE SWAP EN EL FRAME %d",indice_archivo_swap,frame_a_escribir);
-				//usleep(retardo_swap * 1000); todo descomentar a futuro
+				usleep(retardo_swap * 1000);
 
 				for(int desp = 0 ; desp < tamanio_paginas ; desp+=4){
 					dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina,desp);
