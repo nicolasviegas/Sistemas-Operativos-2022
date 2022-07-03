@@ -213,7 +213,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 
 
 		t_list* paginas_del_proceso = buscar_paginas_proceso(indice_archivo_swap);
-		pagina* pagina_aux = malloc(sizeof(pagina));
+		pagina* pagina_aux;
 		uint32_t dataAux;
 
 		log_trace(log_memoria,"El size de la lista paginas por proceso es: %d",list_size(paginas_del_proceso));
@@ -270,7 +270,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 
 void pasar_proceso_a_swap(uint32_t indice_tabla){
 	t_list * paginas_del_proceso;
-	pagina* pagina_aux = malloc(sizeof(pagina));
+	pagina* pagina_aux;
 //	for(int i = 0;i < list_size(tabla_primer_nivel_buscada);i++){
 //		entrada_primer_nivel_aux = list_get(tabla_primer_nivel_buscada,i);
 //		tabla_segundo_nivel_aux = list_get(lista_tablas_2do_nivel,entrada_primer_nivel_aux);

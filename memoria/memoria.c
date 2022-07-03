@@ -58,7 +58,7 @@ void cerrar_programa5(t_log* logger) {
     log_destroy(logger);
     list_clean_and_destroy_elements(lista_tablas_1er_nivel,free);
     list_clean_and_destroy_elements(lista_tablas_2do_nivel,free);
-    list_clean_and_destroy_elements(lista_tablas_2do_nivel,free);
+    list_clean_and_destroy_elements(lista_frames,free);
 }
 //void sighandler(int s) {
 //    cerrar_programa(logger);

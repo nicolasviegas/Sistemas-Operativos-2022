@@ -140,7 +140,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							}
 							log_trace(log_memoria,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
 
-							pagina* pagina_buscada = malloc(sizeof(pagina));
+							pagina* pagina_buscada;
 							pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
 //LO COMENTO ACA Y LO AGREGO ABAJO//send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 							//log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
@@ -288,7 +288,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					//todo funcion que hizo tomi
 
 					//uint32_t marco_x = 7;//todo funcion_que devuelve marco(); ya esat hecha
-					pagina* pagina_buscada = malloc(sizeof(pagina));
+					pagina* pagina_buscada;
 					pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
 				//	send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 					//log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
@@ -440,7 +440,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							}
 							log_trace(log_memoria,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
 
-							pagina* pagina_buscada = malloc(sizeof(pagina));
+							pagina* pagina_buscada;
 							pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
 //							send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 //							log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);

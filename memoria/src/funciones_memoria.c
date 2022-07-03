@@ -68,8 +68,8 @@ t_list* dividir_proceso_en_paginas(uint32_t tam_proceso){
 
 t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta funcion carga la tabla de primer nivel con numeritos y la de seg nivel con lista de paginas
 	t_list* tabla_de_1er_nivel = list_create();
-	t_list* lista_aux = list_create();
-	t_list* lista_aux2 = list_create();
+	t_list* lista_aux;
+	t_list* lista_aux2;
 
 	while(list_size(lista_paginas_del_proceso) != 0){
 		//log_warning(log_memoria,"El size de la lista dentro del for en antes del if es: %d",list_size(lista_paginas_del_proceso));
@@ -111,12 +111,12 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta func
 
 
 t_list* buscar_paginas_proceso(uint32_t indice_tabla_1er_nivel){
-			t_list * tabla_primer_nivel_buscada = list_create();
+			t_list * tabla_primer_nivel_buscada;
 			tabla_primer_nivel_buscada = list_get(lista_tablas_1er_nivel,indice_tabla_1er_nivel);
 			uint32_t entrada_primer_nivel_aux;
-			t_list * tabla_segundo_nivel_aux = list_create();
+			t_list * tabla_segundo_nivel_aux;
 			t_list * paginas_del_proceso = list_create();
-			pagina* pagina_aux = malloc(sizeof(pagina));
+			pagina* pagina_aux;
 			uint32_t dataAux;
 
 		//	log_debug(log_memoria,"EL SIZE DE LA LISTA  TABLA PRIMER NIVEL EN  BUSCAR PAGINAS PROCESO ES: %d",list_size(tabla_primer_nivel_buscada));
@@ -136,7 +136,7 @@ t_list* buscar_paginas_proceso(uint32_t indice_tabla_1er_nivel){
 
 t_list* buscar_paginas_proceso_en_mem_ppal(t_list* paginas_proceso) {
 	t_list* paginas_del_proceso_en_mem_ppal = list_create();
-	pagina* pagina_aux = malloc(sizeof(pagina));
+	pagina* pagina_aux;
 	for(int i = 0;i < list_size(paginas_proceso);i++){
 		pagina_aux = list_get(paginas_proceso,i);
 		if(pagina_aux->bit_presencia == 1){
@@ -310,7 +310,7 @@ void cargar_lista_frames(){
 	int cantidad_marcos = tamanio_memoria / tamanio_paginas;
 	log_trace(log_memoria,"Cant marcos seran %d",cantidad_marcos);
 	for(int i=0;i < cantidad_marcos;i++){
-		frame* marco = malloc(sizeof(frame));
+		frame* marco = malloc(sizeof(frame)); // no se libera?
 		marco->nro_pagina = -1;
 		marco->ocupado = false;
 		marco->indice_proceso = -1;
@@ -525,7 +525,7 @@ void poner_pagina_en_marco(uint32_t marco,pagina* pagina,uint32_t indice_proceso
 }
 
 void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
-	pagina* paginaAux = malloc(sizeof(pagina));
+	pagina* paginaAux;
 	//frame* marcoAux = malloc(sizeof(frame));
 	uint32_t marcoAux;
 	t_list* paginas_del_proceso;
@@ -558,7 +558,7 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 }
 
 void sacar_pagina_de_marco(pagina* pagina_aux,uint32_t indice_proceso){
-	frame* frame_aux = malloc(sizeof(frame));
+	frame* frame_aux = (sizeof(frame));
 	//log_debug(log_memoria,"El numero de pagina que se compara con el frame es %d",pagina_aux->nro_pagina);
 	for(int i = 0;i<list_size(lista_frames);i++){
 		pthread_mutex_lock(&mutexListaFrame);
@@ -588,7 +588,7 @@ void sacar_proceso_de_memoria(uint32_t indice_proceso){
 	lista_aux1 = buscar_paginas_proceso(indice_proceso);
 	lista_aux2 = buscar_paginas_proceso_en_mem_ppal(lista_aux1);
 
-	pagina* pagina_aux = malloc(sizeof(pagina));
+	pagina* pagina_aux;
 	for(int i = 0; i < list_size(lista_aux2);i++){
 		pagina_aux = list_get(lista_aux2,i);
 		sacar_pagina_de_marco(pagina_aux,indice_proceso);
@@ -600,7 +600,7 @@ void sacar_proceso_de_memoria(uint32_t indice_proceso){
 void actualizar_bit_uso_tlb(uint32_t marco_aux){
 	t_list* listaAux;
 	t_list* listaAux2;
-	pagina* paginaAux = malloc(sizeof(pagina));
+	pagina* paginaAux;
 	for(int i=0;i<list_size(lista_tablas_2do_nivel);i++){
 		listaAux = list_get(lista_tablas_2do_nivel,i);
 		listaAux2 = buscar_paginas_proceso_en_mem_ppal(listaAux);
@@ -615,9 +615,9 @@ void actualizar_bit_uso_tlb(uint32_t marco_aux){
 }
 
 void actualizar_bit_modif_tlb(uint32_t marco_aux){
-	t_list* listaAux = list_create();
-	t_list* listaAux2 = list_create();
-	pagina* paginaAux = malloc(sizeof(pagina));
+	t_list* listaAux;
+	t_list* listaAux2;
+	pagina* paginaAux;
 	for(int i=0;i<list_size(lista_tablas_2do_nivel);i++){
 		listaAux = list_get(lista_tablas_2do_nivel,i);
 		listaAux2 = buscar_paginas_proceso_en_mem_ppal(listaAux);
