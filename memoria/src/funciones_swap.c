@@ -269,7 +269,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 
 
 void pasar_proceso_a_swap(uint32_t indice_tabla){
-	t_list * paginas_del_proceso = list_create();
+	t_list * paginas_del_proceso;
 	pagina* pagina_aux = malloc(sizeof(pagina));
 //	for(int i = 0;i < list_size(tabla_primer_nivel_buscada);i++){
 //		entrada_primer_nivel_aux = list_get(tabla_primer_nivel_buscada,i);

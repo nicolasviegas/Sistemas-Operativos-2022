@@ -45,12 +45,12 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 			 //lo vamos a  hacer con tam = 512 para que tenga que ocupar 2 tablas de 2do nivel
 
-			 t_list* lista_paginas_del_proceso = list_create(); //todo liberar, ESTA LISTA tiene la cantidad de paginas totales del proceso
+			 t_list* lista_paginas_del_proceso; //todo liberar, ESTA LISTA tiene la cantidad de paginas totales del proceso
 			 lista_paginas_del_proceso = dividir_proceso_en_paginas(tam_proceso);
 
 			 log_debug(log_memoria,"El size de la lista de paginas del proceso es: %d",list_size(lista_paginas_del_proceso));
 
-			 t_list* tabla_1er_nivel_del_proceso = list_create();
+			 t_list* tabla_1er_nivel_del_proceso;
 			 tabla_1er_nivel_del_proceso = colocar_paginas_en_tabla(lista_paginas_del_proceso);
 
 

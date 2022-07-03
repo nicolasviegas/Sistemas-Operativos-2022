@@ -150,8 +150,8 @@ t_list* buscar_paginas_proceso_en_mem_ppal(t_list* paginas_proceso) {
 
 pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 
-	t_list* paginas_proceso = list_create();
-	t_list* paginas_proceso_en_mem_ppal = list_create();
+	t_list* paginas_proceso;
+	t_list* paginas_proceso_en_mem_ppal;
 
 
 
@@ -486,9 +486,9 @@ void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indi
 
 
 bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel){
-	t_list* paginas_del_proceso = list_create();
+	t_list* paginas_del_proceso;
 	paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
-	t_list* paginas_del_proceso_en_mem = list_create();
+	t_list* paginas_del_proceso_en_mem;
 	paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
 	log_error(log_memoria,"El proceso %d tiene %d paginas en memoria",indice_tabla_1er_nivel,list_size(paginas_del_proceso_en_mem));
 	if(list_size(paginas_del_proceso_en_mem) > 0 ){
@@ -498,9 +498,9 @@ bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel){
 }
 
 bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel){
-	t_list* paginas_del_proceso = list_create();
+	t_list* paginas_del_proceso;
 	paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
-	t_list* paginas_del_proceso_en_mem = list_create();
+	t_list* paginas_del_proceso_en_mem;
 	paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
 	if(list_size(paginas_del_proceso_en_mem) < marcos_por_proceso){
 		return true;
@@ -528,9 +528,9 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 	pagina* paginaAux = malloc(sizeof(pagina));
 	//frame* marcoAux = malloc(sizeof(frame));
 	uint32_t marcoAux;
-	t_list* paginas_del_proceso = list_create();
+	t_list* paginas_del_proceso;
 	paginas_del_proceso = buscar_paginas_proceso(indice_proceso);
-	t_list* paginas_del_proceso_para_mem = list_create();
+	t_list* paginas_del_proceso_para_mem;
 	if(list_size(paginas_del_proceso) > marcos_por_proceso){
 		paginas_del_proceso_para_mem = list_take(paginas_del_proceso,marcos_por_proceso);
 	}
@@ -582,8 +582,8 @@ void sacar_pagina_de_marco(pagina* pagina_aux,uint32_t indice_proceso){
 
 
 void sacar_proceso_de_memoria(uint32_t indice_proceso){
-	t_list* lista_aux1 = list_create();
-	t_list* lista_aux2 = list_create();
+	t_list* lista_aux1;
+	t_list* lista_aux2;
 
 	lista_aux1 = buscar_paginas_proceso(indice_proceso);
 	lista_aux2 = buscar_paginas_proceso_en_mem_ppal(lista_aux1);
@@ -598,8 +598,8 @@ void sacar_proceso_de_memoria(uint32_t indice_proceso){
 
 
 void actualizar_bit_uso_tlb(uint32_t marco_aux){
-	t_list* listaAux = list_create();
-	t_list* listaAux2 = list_create();
+	t_list* listaAux;
+	t_list* listaAux2;
 	pagina* paginaAux = malloc(sizeof(pagina));
 	for(int i=0;i<list_size(lista_tablas_2do_nivel);i++){
 		listaAux = list_get(lista_tablas_2do_nivel,i);
