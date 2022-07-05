@@ -39,11 +39,14 @@ void inicializar_config(){
 
 void cerrar_programa3(t_log* logger) {
     log_destroy(logger);
+    config_destroy(config_cpu);
+    list_clean_and_destroy_elements(lista_instrucciones_cpu,free);
+    list_clean_and_destroy_elements(lista_pcb_cpu,free);
+    list_clean_and_destroy_elements(lista_tlb,free);
+
+
+    close(fd_cpu);
 }
-//void sighandler(int s) {
-//    cerrar_programa(logger);
-//    exit(0);
-//}
 
 
 

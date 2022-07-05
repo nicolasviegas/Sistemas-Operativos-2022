@@ -1,6 +1,7 @@
 //#include "../memoria/include/memoria.h"
 #include "include/memoria.h"
 
+
 int obtener_algoritmo(char* algoritmo_char){
 
 	 t_algoritmo_memoria switcher;
@@ -53,19 +54,32 @@ void inicializar_listas(){
 
 }
 
-
 void cerrar_programa5(t_log* logger) {
     log_destroy(logger);
+
+    free(memoria_principal);
+
     list_clean_and_destroy_elements(lista_tablas_1er_nivel,free);
     list_clean_and_destroy_elements(lista_tablas_2do_nivel,free);
     list_clean_and_destroy_elements(lista_frames,free);
+
+    pthread_mutex_destroy(&mutexEscribirEnMemoria);
+    pthread_mutex_destroy(&mutexLeerEnMemoria);
+    pthread_mutex_destroy(&mutexListaFrame);
+    pthread_mutex_destroy(&mutexSwap);
+
+
+    config_destroy(config_memoria);
+
+    close(fd_memoria);
+    printf("Cerro el programa correctamente");
 }
-//void sighandler(int s) {
-//    cerrar_programa(logger);
-//    exit(0);
-//}
 
 
+void sighandler(int x){
+	cerrar_programa5(log_memoria);
+	exit(EXIT_SUCCESS);
+}
 
 
 int main() {
@@ -74,7 +88,7 @@ int main() {
 
 
 
-    //signal(SIGINT, sighandler);
+    signal(SIGINT, sighandler);
 
     log_memoria = log_create("memoria.log","memoria",1,LOG_LEVEL_TRACE);
 
@@ -102,5 +116,5 @@ int main() {
 
     cerrar_programa5(log_memoria);
 
-    return 0;
+    return EXIT_SUCCESS;
 }

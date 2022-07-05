@@ -99,11 +99,9 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta func
 	log_debug(log_memoria,"El size de la lista de tablas de 2do nivel es %d",list_size(lista_tablas_2do_nivel));
 
 
-//	list_clean_and_destroy_elements(lista_aux,free);
-//	list_destroy(lista_aux);
-//	list_clean_and_destroy_elements(lista_aux2,free);
-//	list_destroy(lista_aux2);
-	//log_debug(log_memoria,"El size de la lista de tablas de 2do nivel despues de liberar es %d",list_size(lista_tablas_2do_nivel));
+	//LIST DESTROY PAGINAS DEL PROCESO????
+	list_destroy(lista_paginas_del_proceso);
+
 	return tabla_de_1er_nivel;
 }
 
@@ -302,7 +300,8 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 
 	}
 
-	//list_destroy(paginas_proceso);
+	list_destroy(paginas_proceso);
+	list_destroy(paginas_proceso_en_mem_ppal);
 
 }
 
@@ -494,6 +493,8 @@ bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel){
 	if(list_size(paginas_del_proceso_en_mem) > 0 ){
 		return true;
 	}
+	list_destroy(paginas_del_proceso);
+	list_destroy(paginas_del_proceso_en_mem);
 	return false;
 }
 
@@ -505,6 +506,8 @@ bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel){
 	if(list_size(paginas_del_proceso_en_mem) < marcos_por_proceso){
 		return true;
 	}
+	list_destroy(paginas_del_proceso);
+	list_destroy(paginas_del_proceso_en_mem);
 	return false;
 }
 
@@ -553,7 +556,8 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 		log_debug(log_memoria,"El frame donde voy a poner al proceso en mem ppal:  %d",paginaAux->frame);
 	}
 
-
+	list_destroy(paginas_del_proceso);
+	list_destroy(paginas_del_proceso_para_mem);
 
 }
 

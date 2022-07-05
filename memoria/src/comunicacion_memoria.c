@@ -200,6 +200,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											//pthread_mutex_lock(&mutexSwap);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											//pthread_mutex_unlock(&mutexSwap);
+											list_destroy(contenido_de_pagina);
 											valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;
 											usleep(retardo_memoria*1000);
@@ -340,6 +341,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									//pthread_mutex_lock(&mutexSwap);
 									ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 									//pthread_mutex_unlock(&mutexSwap);
+									list_destroy(contenido_de_pagina);
 								//	valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 									pagina_buscada->bit_uso = 1;
 									pagina_buscada->bit_modificado = 1;
@@ -503,6 +505,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											//pthread_mutex_lock(&mutexSwap);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											//pthread_mutex_unlock(&mutexSwap);
+											list_destroy(contenido_de_pagina);
 											log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 
 											escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
@@ -572,7 +575,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
     //todo a partir de aca memoria va a trabajar con swap
 
-    				traer_proceso_de_swap(indice_proceso);
+    				//traer_proceso_de_swap(indice_proceso); // LO COMENTAMOS POR QUE NO HACE FALTA; LAS PAGINAS SE CARGAN A Demanda
 
     				send_TAM(cliente_socket,1773);//esto lo mando a kernel para avisarle que ya lo meti a swap
         		}

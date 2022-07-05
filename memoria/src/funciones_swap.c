@@ -91,7 +91,7 @@ uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset){
 	//int fd = open("/home/utnso/tp-2022-1c-yaguarethreads-/memoria/0.swap",O_RDONLY);
 
 	 ftruncate(fd,0);
-	 ftruncate(fd,512);
+	 ftruncate(fd,2048);
 
 
 
@@ -118,7 +118,7 @@ uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset){
 
 	  //  printf("File size is %ji\n", (intmax_t)fileInfo.st_size);
 
-	    char *map = mmap(NULL, 512, PROT_READ, MAP_FILE | MAP_SHARED , fd, 0);
+	    char *map = mmap(NULL, 2048, PROT_READ, MAP_FILE | MAP_SHARED , fd, 0);
 	    if (map == MAP_FAILED)
 	    {
 	        close(fd);
@@ -264,7 +264,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 			}
 
 		}
-	// ir a swap y hacer fread y memcpy en mem principal
+//	// ir a swap y hacer fread y memcpy en mem principal
 }
 
 

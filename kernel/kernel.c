@@ -109,7 +109,29 @@ void inicializar_planificacion(){
 
 void cerrar_programa2(t_log* logger) {
     log_destroy(logger);
+    config_destroy(config_kernel);
+    list_clean_and_destroy_elements(listaPotencialesRetensores,free);
+    list_clean_and_destroy_elements(listaExe,free);
+    list_clean_and_destroy_elements(listaBlock,free);
+    list_clean_and_destroy_elements(listaBlockSuspended,free);
+    list_clean_and_destroy_elements(listaExit,free);
+    list_clean_and_destroy_elements(colaReady,free);
+    list_clean_and_destroy_elements(lista_instrucciones_kernel,free);
+    list_clean_and_destroy_elements(lista_pcb_en_memoria,free);
+    queue_clean_and_destroy_elements(colaNew,free);
+    queue_clean_and_destroy_elements(colaReadySuspended,free);
+
+    pthread_mutex_destroy(&mutexBlock);
+    pthread_mutex_destroy(&mutexBlockSuspended);
+    pthread_mutex_destroy(&mutexExe);
+    pthread_mutex_destroy(&mutexExit);
+    pthread_mutex_destroy(&mutexNew);
+    pthread_mutex_destroy(&mutexPotencialesRetensores);
+    pthread_mutex_destroy(&mutexReadySuspended);
+
+    close(fd_kernel);
 }
+
 
 int main() {
 

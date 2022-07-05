@@ -29,6 +29,7 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <signal.h>
 
 
 typedef enum{
