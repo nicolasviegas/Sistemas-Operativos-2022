@@ -105,6 +105,16 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					}
 					log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
 
+
+					uint32_t tamanio;
+					if (recv(cliente_socket, &tamanio, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+						log_info(log_memoria, "fallo al recibir nro de pagina!");
+						return;
+					}
+					log_trace(log_memoria,"El desplazamienmto es: %d",tamanio);
+
+
+
 					uint32_t valor_leido = leer_de_memoria(marco_aux,desplazamiento);
 					actualizar_bit_uso_tlb(marco_aux);
 
@@ -128,7 +138,19 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								return;
 							}
 							log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
+
+							uint32_t tamanio;
+							if (recv(cliente_socket, &tamanio, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+								log_info(log_memoria, "fallo al recibir nro de pagina!");
+								return;
+							}
+							log_trace(log_memoria,"El tamanio del proceso: %d",tamanio);
+
+
 							usleep(retardo_memoria*1000);
+
+
+
 							uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
 							send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
 							log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
@@ -194,7 +216,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											log_info(log_memoria,"El indice tabla que voy a pasar por parametro es : %d",indice_tabla);
 											//t_list* contenido_de_pagina = list_create();
 											log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
-											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina,tamanio);
 
 											//log_info(log_memoria,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
 											//pthread_mutex_lock(&mutexSwap);
@@ -248,6 +270,13 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					}
 					log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
 
+					uint32_t tamanio;
+					if (recv(cliente_socket, &tamanio, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+						log_info(log_memoria, "fallo al recibir nro de pagina!");
+						return;
+					}
+					log_trace(log_memoria,"El desplazamienmto es: %d",tamanio);
+
 
 					actualizar_bit_uso_tlb(marco_aux);
 					actualizar_bit_modif_tlb(marco_aux);
@@ -273,6 +302,14 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						return;
 					}
 					log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
+
+					uint32_t tamanio;
+					if (recv(cliente_socket, &tamanio, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+						log_info(log_memoria, "fallo al recibir nro de pagina!");
+						return;
+					}
+					log_trace(log_memoria,"El tamanio del proceso: %d",tamanio);
+
 
 					uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
 					usleep(retardo_memoria*1000);
@@ -337,7 +374,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							else{
 								if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 									log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-									t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+									t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina,tamanio);
 									//pthread_mutex_lock(&mutexSwap);
 									ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 									//pthread_mutex_unlock(&mutexSwap);
@@ -391,6 +428,13 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						}
 						log_trace(log_memoria,"El desplazamienmto es: %d",desplazamiento);
 
+						uint32_t tamanio;
+						if (recv(cliente_socket, &tamanio, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+							log_info(log_memoria, "fallo al recibir nro de pagina!");
+							return;
+						}
+						log_trace(log_memoria,"El tamanio: %d",tamanio);
+
 						uint32_t valor;
 							if (recv(cliente_socket, &valor, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
 							log_info(log_memoria, "fallo al recibir nro de pagina!");
@@ -429,6 +473,17 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								return;
 							}
 							log_trace(log_memoria,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
+
+
+							uint32_t tamanio;
+							if (recv(cliente_socket, &tamanio, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+								log_info(log_memoria, "fallo al recibir nro de pagina!");
+								return;
+							}
+							log_trace(log_memoria,"El tamanio del proceso: %d",tamanio);
+
+
+
 
 							uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
 							usleep(retardo_memoria*1000);
@@ -501,7 +556,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
 											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina);
+											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina,tamanio);
 											//pthread_mutex_lock(&mutexSwap);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											//pthread_mutex_unlock(&mutexSwap);
@@ -622,6 +677,12 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				return;
 				}
 				log_trace(log_memoria,"El desplazamiento destino a cambiar es: %d",desplazamiento_destino );
+
+				uint32_t tamanio;
+				if (recv(cliente_socket, &tamanio, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+					log_info(log_memoria, "fallo al recibir nro de pagina!");
+					return;
+				}
 
 
 				copiar_en_memoria(marco_origen,desplazamiento_origen,marco_destino,desplazamiento_destino);

@@ -141,7 +141,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 
-		 void traer_pag_de_tlb(tlb* entrada,uint32_t parametro1){
+		 void traer_pag_de_tlb(tlb* entrada,uint32_t parametro1,uint32_t tamanio){
 			 uint32_t marco = entrada->frame;
 
 			 log_debug(log_cpu,"Entre en traer pag de tlb");
@@ -171,10 +171,11 @@ instrucciones* fetch(pcb_cpu* pcb){
 					 uint32_t desplazamiento = obtener_desplazamiento(parametro1,entrada->numero_pag);
 					 send_TAM(fd_memoria,marco);
 					 send_TAM(fd_memoria,desplazamiento);
+					 send_TAM(fd_memoria,tamanio);
 
 		 }
 
-		 uint32_t traer_pag_de_tlb_cpy(tlb* entrada,uint32_t parametro1){
+		 uint32_t traer_pag_de_tlb_cpy(tlb* entrada,uint32_t parametro1,uint32_t tamanio){
 				 uint32_t marco = entrada->frame;
 
 				 log_debug(log_cpu,"Entre en traer pag de tlb");
@@ -211,7 +212,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 
-		 void correr_tlb_read(uint32_t numero_pagina,uint32_t parametro1,uint32_t tabla_1er_nivel){
+		 void correr_tlb_read(uint32_t numero_pagina,uint32_t parametro1,uint32_t tabla_1er_nivel,uint32_t tamanio){
 
 			 bool existe_entrada(void* elem){
 				 return ((tlb*) elem)->numero_pag == numero_pagina;
@@ -222,7 +223,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 			 if(entrada != NULL){
 				 send_TAM(fd_memoria,TLB_RD);//le aviso que tlb read le va a mandar cosas
 				 send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
-				 traer_pag_de_tlb(entrada,parametro1);
+				 traer_pag_de_tlb(entrada,parametro1,tamanio);
 
 				 uint32_t valor_leido;
 				 if(recv(fd_memoria,&valor_leido,sizeof(uint32_t),0) != sizeof(uint32_t)){
@@ -247,6 +248,9 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 			 send_TAM(fd_memoria,entrada_1er_nivel);
 			 log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
+
+			 send_TAM(fd_memoria,tamanio);
+			 log_error(log_cpu,"El tamanio del proceso es: %d",tamanio);
 
 			 uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
 			 if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -292,7 +296,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 	}
 
 
-		 	 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t numero_pagina_destino,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel){
+		 	 void correr_tlb_copy(uint32_t numero_pagina_origen,uint32_t numero_pagina_destino,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel,uint32_t tamanio){
 
 		 		 	 bool existe_entrada_origen(void* elem){
 		 		 		 return ((tlb*) elem)->numero_pag == numero_pagina_origen;
@@ -316,10 +320,11 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 		 				send_TAM(fd_memoria,TLB_CPY);//le aviso que tlb read le va a mandar cosas
 		 				send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
-		 			   marco_origen = traer_pag_de_tlb_cpy(entrada_origen,parametro2);
+		 			   marco_origen = traer_pag_de_tlb_cpy(entrada_origen,parametro2,tamanio);
 		 			  desplazamiento_origen = obtener_desplazamiento(parametro2,entrada_origen->numero_pag);
 		 			   	send_TAM(fd_memoria,marco_origen);
 		 			   	send_TAM(fd_memoria,desplazamiento_origen);
+		 			    send_TAM(fd_memoria,tamanio);
 
 
 		 			   uint32_t valor_leido;
@@ -350,6 +355,9 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 					send_TAM(fd_memoria,entrada_1er_nivel_origen);
 					log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel_origen);
+
+					 send_TAM(fd_memoria,tamanio);
+					 log_error(log_cpu,"El tamanio del proceso es: %d",tamanio);
 
 					uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
 					if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -406,10 +414,11 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 		 					 				send_TAM(fd_memoria,TLB_CPY);//le aviso que tlb read le va a mandar cosas
 		 					 				send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
-		 					 			    marco_destino = traer_pag_de_tlb_cpy(entrada_destino,parametro1);
+		 					 			    marco_destino = traer_pag_de_tlb_cpy(entrada_destino,parametro1,tamanio);
 		 					 			    desplazamiento_destino = obtener_desplazamiento(parametro1,entrada_destino->numero_pag);
 		 					 			    send_TAM(fd_memoria,marco_destino);
 		 					 			    send_TAM(fd_memoria,desplazamiento_destino);
+		 					 			    send_TAM(fd_memoria,tamanio);
 
 
 		 					 			   uint32_t valor_leido;
@@ -440,6 +449,9 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 		 								send_TAM(fd_memoria,entrada_1er_nivel_destino);
 		 								log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel_destino);
+
+										 send_TAM(fd_memoria,tamanio);
+										 log_error(log_cpu,"El tamanio del proceso es: %d",tamanio);
 
 		 								uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
 		 								if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -490,12 +502,13 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 			send_TAM(fd_memoria,desplazamiento_origen);
 		 			send_TAM(fd_memoria,marco_destino);
 					send_TAM(fd_memoria,desplazamiento_destino);
+					send_TAM(fd_memoria,tamanio);
 
 }
 
 
 
-		 		 void correr_tlb_write(uint32_t numero_pagina,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel){
+		 		 void correr_tlb_write(uint32_t numero_pagina,uint32_t parametro1,uint32_t parametro2,uint32_t tabla_1er_nivel,uint32_t tamanio){
 
 		 			bool existe_entrada(void* elem){
 							 return ((tlb*) elem)->numero_pag == numero_pagina;
@@ -507,7 +520,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 							 send_TAM(fd_memoria,TLB_WR);//le aviso que tlb read le va a mandar cosas
 							 send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
 
-							 traer_pag_de_tlb(entrada,parametro1);
+							 traer_pag_de_tlb(entrada,parametro1,tamanio);
 
 							 send_TAM(fd_memoria,parametro2);//enviamos el valor a escribir
 
@@ -555,6 +568,9 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 						 send_TAM(fd_memoria,entrada_1er_nivel);
 						 log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
+
+						 send_TAM(fd_memoria,tamanio);
+						 log_error(log_cpu,"El tamanio del proceso es: %d",tamanio);
 
 						 uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
 						 if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -674,7 +690,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 
 				log_debug(log_cpu,"El numero de paginas es %d",numero_pagina);
 
-				 correr_tlb_read(numero_pagina,parametro1,pcb->indice_tabla_paginas);
+				 correr_tlb_read(numero_pagina,parametro1,pcb->indice_tabla_paginas,pcb->tamanio);
 				 pcb->PC += 1;
 				 log_trace(log_cpu,"El PC es: %d",pcb->PC);
 				 break;
@@ -692,7 +708,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				log_debug(log_cpu,"El numero de paginas destino es %d",numero_pagina_destino);
 
 
-				correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2,pcb->indice_tabla_paginas);
+				correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2,pcb->indice_tabla_paginas,pcb->tamanio);
 				pcb->PC += 1;
 				break;
 			}
@@ -704,7 +720,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 				uint32_t numero_pagina_write = obtener_numero_pagina(parametro1);
 				log_debug(log_cpu,"El numero de paginas es %d",numero_pagina_write);
-				correr_tlb_write(numero_pagina_write,parametro1,parametro2,pcb->indice_tabla_paginas);
+				correr_tlb_write(numero_pagina_write,parametro1,parametro2,pcb->indice_tabla_paginas,pcb->tamanio);
 				pcb->PC += 1;
 				break;
 			}

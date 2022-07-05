@@ -85,13 +85,13 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 
 
 ////////////////////
-uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset){
+uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset,uint32_t tamanio){
 
 	int fd = open(filepath, O_RDONLY, (mode_t)0600);
 	//int fd = open("/home/utnso/tp-2022-1c-yaguarethreads-/memoria/0.swap",O_RDONLY);
 
 	 ftruncate(fd,0);
-	 ftruncate(fd,2048);
+	 ftruncate(fd,tamanio);
 
 
 
@@ -118,7 +118,7 @@ uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset){
 
 	  //  printf("File size is %ji\n", (intmax_t)fileInfo.st_size);
 
-	    char *map = mmap(NULL, 2048, PROT_READ, MAP_FILE | MAP_SHARED , fd, 0);
+	    char *map = mmap(NULL, tamanio, PROT_READ, MAP_FILE | MAP_SHARED , fd, 0);
 	    if (map == MAP_FAILED)
 	    {
 	        close(fd);
@@ -155,7 +155,7 @@ uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset){
 
 //////////////////
 
-uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t desp){
+uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t desp,uint32_t tamanio){
 	//log_debug(log_memoria,"Trayendo pagina de swap...");
 
 		//char* valor_leido;
@@ -178,21 +178,21 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 
 	//log_info(log_memoria,"El offset %d y el nro de pagna %d con el que voy a entrar a la funcion de mati en swap es",desp,nro_pagina);
 
-	valor_leido = lectura_swap(path,nro_pagina,desp);
+	valor_leido = lectura_swap(path,nro_pagina,desp,tamanio);
 	//uint32_t valor_leido = 500;
 
 
 	return valor_leido; // todo ir a leer a swap y devolver lo leido en vez de un 500
 }
 
-t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
+t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina,uint32_t tamanio){
 
 	t_list* a = list_create();
 	usleep(retardo_swap * 1000);
 
 	log_info(log_memoria,"El nro de pagina que traigo de swap es: %d",nro_pagina);
 	for(int desp = 0;desp < tamanio_paginas ; desp+=4){
-		uint32_t contenido_de_pagina = leer_de_swap(indice_archivo_swap,nro_pagina,desp);
+		uint32_t contenido_de_pagina = leer_de_swap(indice_archivo_swap,nro_pagina,desp,tamanio);
 
     	//log_info(log_memoria,"El valor en la lista de valores que me vinieron de swap es: %d",contenido_de_pagina);
 
@@ -206,7 +206,7 @@ t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina){
 }
 
 
-void traer_proceso_de_swap(uint32_t indice_archivo_swap){
+void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio){
 	log_trace(log_memoria,"El indice archivo swap es: %d",indice_archivo_swap);
 	log_trace(log_memoria,"El size de la tabla global de 1er nuevel es %d", list_size(lista_tablas_1er_nivel));
 	log_trace(log_memoria,"El size de la tabla global de 2do nuevel es %d", list_size(lista_tablas_2do_nivel));
@@ -243,7 +243,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap){
 				usleep(retardo_swap * 1000);
 
 				for(int desp = 0 ; desp < tamanio_paginas ; desp+=4){
-					dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina,desp);
+					dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina,desp,tamanio);
 
 					if(dataAux != 0){
 						log_warning(log_memoria,"El valor que lei de swap es: %d",dataAux);
