@@ -40,19 +40,23 @@ void inicializar_config(){
 void cerrar_programa3(t_log* logger) {
     log_destroy(logger);
     config_destroy(config_cpu);
-    list_clean_and_destroy_elements(lista_instrucciones_cpu,free);
-    list_clean_and_destroy_elements(lista_pcb_cpu,free);
-    list_clean_and_destroy_elements(lista_tlb,free);
+    list_destroy_and_destroy_elements(lista_instrucciones_cpu,free);
+    list_destroy_and_destroy_elements(lista_pcb_cpu,free);
+    list_destroy_and_destroy_elements(lista_tlb,free);
 
 
     close(fd_cpu);
 }
 
 
+void sighandler(int x){
+	cerrar_programa3(log_cpu);
+	exit(EXIT_SUCCESS);
+}
 
 
 int main() {
-    //signal(SIGINT, sighandler);
+    signal(SIGINT, sighandler);
 
 
 
@@ -98,5 +102,5 @@ int main() {
 
     cerrar_programa3(log_cpu); //hay que agregar listas a destruir, el config y otras cosas
 
-    return 0;
+    return EXIT_SUCCESS;
 }

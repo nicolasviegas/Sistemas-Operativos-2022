@@ -110,16 +110,16 @@ void inicializar_planificacion(){
 void cerrar_programa2(t_log* logger) {
     log_destroy(logger);
     config_destroy(config_kernel);
-    list_clean_and_destroy_elements(listaPotencialesRetensores,free);
-    list_clean_and_destroy_elements(listaExe,free);
-    list_clean_and_destroy_elements(listaBlock,free);
-    list_clean_and_destroy_elements(listaBlockSuspended,free);
-    list_clean_and_destroy_elements(listaExit,free);
-    list_clean_and_destroy_elements(colaReady,free);
-    list_clean_and_destroy_elements(lista_instrucciones_kernel,free);
-    list_clean_and_destroy_elements(lista_pcb_en_memoria,free);
-    queue_clean_and_destroy_elements(colaNew,free);
-    queue_clean_and_destroy_elements(colaReadySuspended,free);
+    list_destroy_and_destroy_elements(listaPotencialesRetensores,free);
+    list_destroy_and_destroy_elements(listaExe,free);
+    list_destroy_and_destroy_elements(listaBlock,free);
+    list_destroy_and_destroy_elements(listaBlockSuspended,free);
+    list_destroy_and_destroy_elements(listaExit,free);
+    list_destroy_and_destroy_elements(colaReady,free);
+    list_destroy_and_destroy_elements(lista_instrucciones_kernel,free);
+    list_destroy_and_destroy_elements(lista_pcb_en_memoria,free);
+    queue_destroy_and_destroy_elements(colaNew,free);
+    queue_destroy_and_destroy_elements(colaReadySuspended,free);
 
     pthread_mutex_destroy(&mutexBlock);
     pthread_mutex_destroy(&mutexBlockSuspended);
@@ -133,12 +133,19 @@ void cerrar_programa2(t_log* logger) {
 }
 
 
+
+void sighandler(int x){
+	cerrar_programa2(log_kernel);
+	exit(EXIT_SUCCESS);
+}
+
+
 int main() {
 
 
     contador_cliente = 0;
 
-    //signal(SIGINT, sighandler);
+    signal(SIGINT, sighandler);
 
     log_kernel = log_create("kernel.log","kernel",1,LOG_LEVEL_TRACE);
 

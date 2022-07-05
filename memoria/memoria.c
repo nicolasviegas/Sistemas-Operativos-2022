@@ -59,9 +59,9 @@ void cerrar_programa5(t_log* logger) {
 
     free(memoria_principal);
 
-    list_clean_and_destroy_elements(lista_tablas_1er_nivel,free);
-    list_clean_and_destroy_elements(lista_tablas_2do_nivel,free);
-    list_clean_and_destroy_elements(lista_frames,free);
+    list_destroy_and_destroy_elements(lista_tablas_1er_nivel,free);
+    list_destroy_and_destroy_elements(lista_tablas_2do_nivel,free);
+    list_destroy_and_destroy_elements(lista_frames,free);
 
     pthread_mutex_destroy(&mutexEscribirEnMemoria);
     pthread_mutex_destroy(&mutexLeerEnMemoria);

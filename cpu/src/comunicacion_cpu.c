@@ -290,6 +290,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		free(pcb_proceso_cpu);
 
+
 	 }
 
 

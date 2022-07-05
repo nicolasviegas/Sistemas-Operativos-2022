@@ -79,6 +79,8 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 
 
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
+	free(path);
+
 }
 
 
@@ -149,6 +151,8 @@ uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset,uint32_t tamanio)
 	    if(valor != 0){
 		    log_info(log_memoria,"Entre en leer memoria de mati: el valor leido del archivo %s es: %d",filepath,valor);
 	    }
+
+	    free(valor_leido);
 
 	    return valor;
 }
