@@ -651,46 +651,32 @@ int verificar_archivo(char *ruta)
 }
 
 
-void crear_archivo(char *nuevo_archivo){
-	char *ruta_archivo = string_new();
-	//char a = '0';
-	//uint32_t x = 0;
-
-	string_append(&ruta_archivo, nuevo_archivo);
-
-	if (!verificar_archivo(nuevo_archivo))
-	{
-		FILE *archivo = fopen(ruta_archivo, "wb+");
-		//w+ es para que sea de lectura escritura.si queremos escribir y leer en binario cambiarlo a wb+
-
-		//fwrite(a,sizeof(a),1,archivo);
-
-
-		fclose(archivo);
-	}
-	else
-	{
-		//error_show("El directorio: %s ya existe\n", ruta_archivo);
-	}
-
-
-	free(ruta_archivo);
-}
-
-/*char *my_itoa(int num, char *str)
+void crear_archivo(char *nuevo_archivo)
 {
-	log_warning(log_memoria,"Antes del if en myitoa");
+    char *ruta_final= string_new();
 
-        if(str == NULL)
-        {
-                return NULL;
-        }
+    string_append(&ruta_final, "/home/utnso/swap/");
+    string_append(&ruta_final, nuevo_archivo);
+    struct stat st = {0};
 
-    	log_warning(log_memoria,"despues del if en myitoa");
+    if (stat("/home/utnso/swap", &st) == -1) { //poner ruta a la carpeta donde se vana crear los archivos .swap
 
-        sprintf(str, "%d", num);
-        return str;
-}*/
+         mkdir("/home/utnso/swap/", 775);
+         printf("created directory swap successfully! \n");
+
+     }
+    if (!verificar_archivo(nuevo_archivo))
+     {
+         FILE *archivo = fopen(ruta_final, "w+");
+         //w+ es para que sea de lectura escritura.si queremos escribir y leer en binario cambiarlo a wb+
+         fclose(archivo);
+     }
+     else
+     {
+         //error_show("El directorio: %s ya existe\n", ruta_archivo);
+     }
+     free(ruta_final);
+}
 
 char *itoa(uint32_t n)
 {
