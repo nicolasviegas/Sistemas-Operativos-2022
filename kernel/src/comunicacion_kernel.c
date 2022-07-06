@@ -44,8 +44,8 @@ static void procesar_conexion_kernel(void* void_args) {
 
         	//Una vez que la consola nos da todas las instrucciones, aca abajo cargamos estas instrucciones en el pcb y se lo enviamos a cpu
 
-        	//ACA HAY QUE HACER UNA FUNCION QUE LE PIDA LA TABLA DE PAGINAS A MEMORIA
-        	//TODO
+
+
         	pedir_tabla_a_memoria();
 
         	send_TAM(fd_memoria,tam_proceso);

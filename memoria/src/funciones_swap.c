@@ -2,13 +2,6 @@
 
 
 
-void crear_archivo_swap(uint32_t indice_tabla){ //TODO
-//FILE* fp;
-//char* a;
-//itoa(a);
-//fp = fopen(a,"r+w");
-}
-
 
 void escribir_swap(char* filepath,char* text ,int pagina,int offset){
 
@@ -80,6 +73,7 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
 	free(path);
+	//free(char_contenido);
 
 }
 
@@ -185,7 +179,7 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 	valor_leido = lectura_swap(path,nro_pagina,desp,tamanio);
 	//uint32_t valor_leido = 500;
 
-
+	free(path);
 	return valor_leido; // todo ir a leer a swap y devolver lo leido en vez de un 500
 }
 
