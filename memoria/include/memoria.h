@@ -122,7 +122,7 @@ bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel);
 
 bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel);
 
-void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio);
+void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio, pagina* pagina_buscada,uint32_t frame_a_utilizar);
 
 void crear_archivo(char* path_char);
 

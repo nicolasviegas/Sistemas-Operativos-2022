@@ -210,39 +210,24 @@ t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina,ui
 }
 
 
-void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio){
+void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio, pagina* pagina_buscada,uint32_t frame_a_utilizar){
 	log_trace(log_memoria,"El indice archivo swap es: %d",indice_archivo_swap);
 	log_trace(log_memoria,"El size de la tabla global de 1er nuevel es %d", list_size(lista_tablas_1er_nivel));
 	log_trace(log_memoria,"El size de la tabla global de 2do nuevel es %d", list_size(lista_tablas_2do_nivel));
 
 
-		t_list* paginas_del_proceso = buscar_paginas_proceso(indice_archivo_swap);
-		pagina* pagina_aux;
+		//t_list* paginas_del_proceso = buscar_paginas_proceso(indice_archivo_swap);
+		pagina* pagina_aux = pagina_buscada;
 		uint32_t dataAux;
 
-		log_trace(log_memoria,"El size de la lista paginas por proceso es: %d",list_size(paginas_del_proceso));
-
-		//TODO CHEQUEAR SI EL PROCESO TIENE MENOS PAGINAS QUE EL LIMITE
-
-		for(int k=0;k < marcos_por_proceso;k++){
-			//log_trace(log_memoria,"Antes del list get del demonio");
-
-			pagina_aux = list_get(paginas_del_proceso,k);
-				//pthread_mutex_lock(&mutexListaFrame);
-
-			uint32_t frame_a_escribir = buscar_frame_libre();
-
-			frame* a = list_get(lista_frames,frame_a_escribir);
+		//log_trace(log_memoria,"El size de la lista paginas por proceso es: %d",list_size(paginas_del_proceso));
 
 
-				//pthread_mutex_unlock(&mutexListaFrame);
 
-			if(frame_a_escribir != -1){
-				//pagina_aux->bit_presencia = 1;
 				pagina_aux->bit_uso = 1;
 				log_trace(log_memoria,"Antes de escribir pagina");
 
-				poner_pagina_en_marco(frame_a_escribir,pagina_aux,indice_archivo_swap);
+				poner_pagina_en_marco(frame_a_utilizar,pagina_aux,indice_archivo_swap);
 			//	log_info(log_memoria,"PUSE EL PROCESO(indice archivo) %d CUANDO LO TRAIGO DE SWAP EN EL FRAME %d",indice_archivo_swap,frame_a_escribir);
 				usleep(retardo_swap * 1000);
 
@@ -254,20 +239,15 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio){
 						log_warning(log_memoria,"El desplazamiento que lei de swap es: %d",desp);
 					}
 
-					escribir_pagina(dataAux,frame_a_escribir,desp);
+					escribir_pagina(dataAux,frame_a_utilizar,desp);
 
-					leer_de_memoria(frame_a_escribir,desp);
+					leer_de_memoria(frame_a_utilizar,desp);
 				}
 
-			}
-			else{
-				log_trace(log_memoria,"Entre en el else, por ende ejecuto reemplazo");
-				//pthread_mutex_lock(&mutexSwap);
-				ejecutar_reemplazo(dataAux,pagina_aux,indice_archivo_swap);
-				//pthread_mutex_unlock(&mutexSwap);
-			}
 
-		}
+
+
+
 //	// ir a swap y hacer fread y memcpy en mem principal
 }
 

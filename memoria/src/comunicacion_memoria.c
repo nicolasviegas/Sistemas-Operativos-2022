@@ -197,9 +197,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									if(al_proceso_le_quedan_frames(indice_tabla)){
 										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
 
-										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
+										//poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 										log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
-
+										traer_proceso_de_swap(indice_tabla,tamanio,pagina_buscada,frame_a_utilizar);
 										valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 										pagina_buscada->bit_uso = 1;
 										usleep(retardo_memoria*1000);
@@ -360,8 +360,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						if(frame_a_utilizar != -1){
 							if(al_proceso_le_quedan_frames(indice_tabla)){
 								log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
-
-								poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
+								traer_proceso_de_swap(indice_tabla,tamanio,pagina_buscada,frame_a_utilizar);
+								//poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 								//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 								pagina_buscada->bit_uso = 1;
 								pagina_buscada->bit_modificado = 1;
@@ -541,8 +541,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									if(al_proceso_le_quedan_frames(indice_tabla)){
 										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
 										log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
-
-										poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
+										traer_proceso_de_swap(indice_tabla,tamanio,pagina_buscada,frame_a_utilizar);
+										//poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 										//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento); // todo pasar desp
 										escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
 										pagina_buscada->bit_uso = 1;
@@ -611,7 +611,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 			if(!el_proceso_tiene_almenos_una_pag_en_mem(indice_proceso)){
 				log_error(log_memoria,"El proceso es nuevo asi que lo meto de una a mem ppal");
-				poner_proceso_en_mem_ppal(indice_proceso);
+				//poner_proceso_en_mem_ppal(indice_proceso);
 			}else{
 				log_error(log_memoria,"El proceso no es nuevo asi que ya lo trajo swap");
 			}

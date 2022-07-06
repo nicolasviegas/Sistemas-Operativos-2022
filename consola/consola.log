@@ -34991,3 +34991,119 @@
 [WARNING] 18:09:52:718 consola/(8481:8481): entre en I/O dentro de send_instrucciones
 [WARNING] 18:09:52:718 consola/(8481:8481): Entre en EXIT dentro de send_instrucciones
 [INFO] 18:09:52:718 consola/(8481:8481): [INFO] La consola finalizo correctamente.
+[INFO] 15:32:01:432 consola/(13856:13856): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 15:32:01:445 consola/(13856:13856): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:32:01:445 consola/(13856:13856): entre en I/O dentro de send_instrucciones
+[WARNING] 15:32:01:446 consola/(13856:13856): Entre en EXIT dentro de send_instrucciones
+[INFO] 15:32:01:446 consola/(13856:13856): [INFO] La consola finalizo correctamente.
+[INFO] 15:33:36:723 consola/(13881:13881): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 15:33:36:723 consola/(13881:13881): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:33:36:723 consola/(13881:13881): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:33:36:724 consola/(13881:13881): entre en I/O dentro de send_instrucciones
+[WARNING] 15:33:36:724 consola/(13881:13881): entre en READ dentro de send_instrucciones
+[WARNING] 15:33:36:724 consola/(13881:13881): Entre en EXIT dentro de send_instrucciones
+[INFO] 15:33:36:724 consola/(13881:13881): [INFO] La consola finalizo correctamente.
+[INFO] 15:40:47:041 consola/(14035:14035): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 15:40:47:041 consola/(14035:14035): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:40:47:042 consola/(14035:14035): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:40:47:042 consola/(14035:14035): entre en I/O dentro de send_instrucciones
+[WARNING] 15:40:47:042 consola/(14035:14035): entre en READ dentro de send_instrucciones
+[WARNING] 15:40:47:043 consola/(14035:14035): Entre en EXIT dentro de send_instrucciones
+[INFO] 15:40:47:043 consola/(14035:14035): [INFO] La consola finalizo correctamente.
+[INFO] 15:41:32:278 consola/(14043:14043): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 15:41:32:278 consola/(14043:14043): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:41:32:279 consola/(14043:14043): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:41:32:279 consola/(14043:14043): entre en I/O dentro de send_instrucciones
+[WARNING] 15:41:32:280 consola/(14043:14043): entre en READ dentro de send_instrucciones
+[WARNING] 15:41:32:280 consola/(14043:14043): entre en READ dentro de send_instrucciones
+[WARNING] 15:41:32:283 consola/(14043:14043): Entre en EXIT dentro de send_instrucciones
+[INFO] 15:41:32:284 consola/(14043:14043): [INFO] La consola finalizo correctamente.
+[INFO] 15:43:27:337 consola/(14199:14199): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 15:43:27:337 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:338 consola/(14199:14199): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:43:27:338 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:338 consola/(14199:14199): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:43:27:339 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:339 consola/(14199:14199): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:43:27:339 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:339 consola/(14199:14199): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:43:27:340 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:340 consola/(14199:14199): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:43:27:340 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:341 consola/(14199:14199): entre en I/O dentro de send_instrucciones
+[WARNING] 15:43:27:341 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:341 consola/(14199:14199): entre en READ dentro de send_instrucciones
+[WARNING] 15:43:27:341 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:341 consola/(14199:14199): entre en READ dentro de send_instrucciones
+[WARNING] 15:43:27:342 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:342 consola/(14199:14199): entre en READ dentro de send_instrucciones
+[WARNING] 15:43:27:342 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:342 consola/(14199:14199): entre en READ dentro de send_instrucciones
+[WARNING] 15:43:27:343 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:343 consola/(14199:14199): entre en READ dentro de send_instrucciones
+[WARNING] 15:43:27:343 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:343 consola/(14199:14199): entre en I/O dentro de send_instrucciones
+[WARNING] 15:43:27:343 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:343 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:344 consola/(14199:14199): entre en I/O dentro de send_instrucciones
+[WARNING] 15:43:27:344 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:344 consola/(14199:14199): entre en I/O dentro de send_instrucciones
+[WARNING] 15:43:27:344 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:345 consola/(14199:14199): entre en I/O dentro de send_instrucciones
+[WARNING] 15:43:27:345 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:345 consola/(14199:14199): entre en I/O dentro de send_instrucciones
+[WARNING] 15:43:27:345 consola/(14199:14199): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:43:27:348 consola/(14199:14199): Entre en EXIT dentro de send_instrucciones
+[INFO] 15:43:27:348 consola/(14199:14199): [INFO] La consola finalizo correctamente.
+[INFO] 15:47:25:244 consola/(14254:14254): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 15:47:25:244 consola/(14254:14254): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:47:25:244 consola/(14254:14254): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:47:25:245 consola/(14254:14254): entre en I/O dentro de send_instrucciones
+[WARNING] 15:47:25:245 consola/(14254:14254): entre en READ dentro de send_instrucciones
+[WARNING] 15:47:25:245 consola/(14254:14254): entre en READ dentro de send_instrucciones
+[WARNING] 15:47:25:245 consola/(14254:14254): Entre en EXIT dentro de send_instrucciones
+[INFO] 15:47:25:246 consola/(14254:14254): [INFO] La consola finalizo correctamente.
+[INFO] 15:47:49:675 consola/(14261:14261): Cliente conectado en 127.0.0.1:8000 (a KERNEL)
+
+[WARNING] 15:47:49:675 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:675 consola/(14261:14261): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:47:49:675 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:676 consola/(14261:14261): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:47:49:676 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:676 consola/(14261:14261): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:47:49:677 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:677 consola/(14261:14261): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:47:49:677 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:677 consola/(14261:14261): entre en WRITE dentro de send_instrucciones
+[WARNING] 15:47:49:678 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:678 consola/(14261:14261): entre en I/O dentro de send_instrucciones
+[WARNING] 15:47:49:678 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:678 consola/(14261:14261): entre en READ dentro de send_instrucciones
+[WARNING] 15:47:49:679 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:679 consola/(14261:14261): entre en READ dentro de send_instrucciones
+[WARNING] 15:47:49:679 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:679 consola/(14261:14261): entre en READ dentro de send_instrucciones
+[WARNING] 15:47:49:679 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:680 consola/(14261:14261): entre en READ dentro de send_instrucciones
+[WARNING] 15:47:49:680 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:680 consola/(14261:14261): entre en READ dentro de send_instrucciones
+[WARNING] 15:47:49:681 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:681 consola/(14261:14261): entre en I/O dentro de send_instrucciones
+[WARNING] 15:47:49:681 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:681 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:681 consola/(14261:14261): entre en I/O dentro de send_instrucciones
+[WARNING] 15:47:49:681 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:681 consola/(14261:14261): entre en I/O dentro de send_instrucciones
+[WARNING] 15:47:49:681 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:682 consola/(14261:14261): entre en I/O dentro de send_instrucciones
+[WARNING] 15:47:49:682 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:682 consola/(14261:14261): entre en I/O dentro de send_instrucciones
+[WARNING] 15:47:49:682 consola/(14261:14261): entre en NO_OP dentro de send_instrucciones
+[WARNING] 15:47:49:683 consola/(14261:14261): Entre en EXIT dentro de send_instrucciones
+[INFO] 15:47:49:683 consola/(14261:14261): [INFO] La consola finalizo correctamente.
