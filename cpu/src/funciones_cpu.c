@@ -283,15 +283,8 @@ instrucciones* fetch(pcb_cpu* pcb){
 						 }
 						 log_error(log_cpu,"el marco es: %d",marcoaux);
 
-	//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
-	//		 recv_rta_memoria(fd_memoria,&rta_mem);
-	//		 if(rta_mem == 0){
-	//			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
-	//		}
-	//		 else{
-			 log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
-				correr_algoritmo_reemplazo(numero_pagina,marcoaux);
-	//		}
+						 log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
+						 correr_algoritmo_reemplazo(numero_pagina,marcoaux);
 		 }
 	}
 
@@ -338,8 +331,6 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 			 }
 		 			 else{
 		 			 log_debug(log_cpu,"Entre en el caso triste origen de la tlb en cpy");
-		 			 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-		 			// uint32_t marco_origen = -1;
 		 			 uint32_t entrada_1er_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
 		 			 uint32_t entrada_2do_nivel_origen = obtener_entrada_2do_nivel(numero_pagina_origen);
 		 			 desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
@@ -391,15 +382,9 @@ instrucciones* fetch(pcb_cpu* pcb){
 					 }
 					 log_error(log_cpu,"el marco es: %d",marco_origen);
 
-					//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
-					//		 recv_rta_memoria(fd_memoria,&rta_mem);
-					//		 if(rta_mem == 0){
-					//			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
-					//		}
-					//		 else{
 					log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 					correr_algoritmo_reemplazo(numero_pagina_origen,marco_origen);
-					//		}
+
 		 			}
 
 
@@ -432,8 +417,6 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 					 			 }
 		 					 			 else{
 		 					 			 log_debug(log_cpu,"Entre en el caso triste origen de la tlb en cpy");
-		 					 			 //send condicion a memoria para que sepa que le voy a pasar todo lo de abajo
-		 					 			// uint32_t marco_origen = -1;
 		 					 			 uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
 		 					 			 uint32_t entrada_2do_nivel_destino = obtener_entrada_2do_nivel(numero_pagina_destino);
 		 					 			 desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
@@ -485,15 +468,9 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 								 }
 		 								 log_error(log_cpu,"el marco destino es: %d",marco_destino);
 
-		 								//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
-		 								//		 recv_rta_memoria(fd_memoria,&rta_mem);
-		 								//		 if(rta_mem == 0){
-		 								//			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
-		 								//		}
-		 								//		 else{
 		 								log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 		 								correr_algoritmo_reemplazo(numero_pagina_destino,marco_destino);
-		 								//		}
+
 		 					 			}
 
 
@@ -621,24 +598,8 @@ instrucciones* fetch(pcb_cpu* pcb){
 						 }
 						 log_error(log_cpu,"el marco es: %d",marcoaux);
 
-//					 uint32_t valor_leido;
-//					 if(recv(fd_memoria,&valor_leido,sizeof(uint32_t),0) != sizeof(uint32_t)){
-//						 log_error(log_cpu,"Fallo escribiendo en memoria");
-//					 }
-//					 if(valor_leido == parametro2){
-//						 log_debug(log_cpu,"Escribi en memoria el valor: %d",valor_leido);
-//					 }
-
-
-				//		 uint32_t rta_mem; //todo aca se podria recibir una rta de memorai para ver si es valido leer o no
-				//		 recv_rta_memoria(fd_memoria,&rta_mem);
-				//		 if(rta_mem == 0){
-				//			 log_error(log_cpu, "La direccion donde se quiso leer no es valida");
-				//		}
-				//		 else{
 						 log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 							correr_algoritmo_reemplazo(numero_pagina,marcoaux);
-//		 			  }
 		 		 	 }
 		 		 	}
 

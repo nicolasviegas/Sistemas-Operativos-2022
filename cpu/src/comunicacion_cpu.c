@@ -34,7 +34,7 @@ static void procesar_conexion_cpu(void* void_args) {
 	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
 	// printf("El cliente socket en cpu.c procesar conexion es : %d\n",cliente_socket);
-	// fd_kernel = cliente_socket;/////////////////////////////////////////////todo HARDCODEADO, PREGUNTAR
+	// fd_kernel = cliente_socket;///////////////////////////////////////////// HARDCODEADO, PREGUNTAR
 	 //fd_kernel = 8;
 
 	 /*if(!recv_TAM(fd_memoria,&tam_paginas)){
@@ -74,7 +74,7 @@ static void procesar_conexion_cpu(void* void_args) {
 	 	// log_warning(log_cpu,"La cant de entradas por tabla es %d",cant_entradas_por_tabla);
 
 	 while (cliente_socket != -1 && cliente_socket_interrupcion != -1) {
-		 fd_kernel = cliente_socket;//todo ojo con esto preguntar
+		 fd_kernel = cliente_socket;
 
 
 		 //log_error(log_cpu,"El fd kernel es: %d",fd_kernel);
@@ -287,6 +287,8 @@ static void procesar_conexion_cpu(void* void_args) {
 		log_trace(log_cpu,"Finalizo el ciclo de ejecucion del proceso: %d ",pcb_proceso_cpu->PID);
 
 		tlb_flush();
+
+	    list_destroy_and_destroy_elements(lista_instrucciones_cpu,free);
 
 		free(pcb_proceso_cpu);
 

@@ -494,8 +494,6 @@ void hiloSuspensionAReady(){
 
 		sem_wait(&multiprogramacion);
 
-		//todo Mandar el mensaje a memoria para que saque el proceso de swap y lo ponga en mp
-
 		send_TAM(fd_memoria,SACAR_DE_SWAP);
 		send_TAM(fd_memoria,proceso->indice_tabla_paginas);
 

@@ -177,10 +177,9 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 	//log_info(log_memoria,"El offset %d y el nro de pagna %d con el que voy a entrar a la funcion de mati en swap es",desp,nro_pagina);
 
 	valor_leido = lectura_swap(path,nro_pagina,desp,tamanio);
-	//uint32_t valor_leido = 500;
 
 	free(path);
-	return valor_leido; // todo ir a leer a swap y devolver lo leido en vez de un 500
+	return valor_leido;
 }
 
 t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina,uint32_t tamanio){
@@ -263,14 +262,13 @@ void pasar_proceso_a_swap(uint32_t indice_tabla){
 	//log_warning(log_memoria,"EL SIZE DE LA LISTA PAGINAS POR PROCESO ES %d",list_size(paginas_del_proceso));
 	for(int k=0;k < list_size(paginas_del_proceso);k++){
 		pagina_aux = list_get(paginas_del_proceso,k);
-		if(pagina_aux->bit_presencia == 1){ //todo controlar si se modifica el bit cuando liberamos memoria
-			pagina_aux->bit_presencia = 0;//
+		if(pagina_aux->bit_presencia == 1){
+			pagina_aux->bit_presencia = 0;
+			pagina_aux->bit_uso = 0;
+			pagina_aux->bit_modificado = 0;
 			escribir_en_swap(indice_tabla,pagina_aux);
 			liberar_memoria(pagina_aux->frame);
 		}
-
-	//sacar_proceso_de_memoria(indice_tabla);
-		//log_warning(log_memoria,"El bit de presencia al pasar el proceso a swap es: %d",pagina_aux->bit_presencia);
 
 	}
 }

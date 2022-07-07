@@ -21,12 +21,7 @@ uint32_t asignar_tabla_1er_nivel_a_proceso(t_list* tabla_1er_nivel){ // Devuelve
 uint32_t obtener_nro_tabla_2do_nivel(uint32_t numero_tabla_1er_nivel,uint32_t entrada_primer_nivel){
 	t_list* tabla_1er_nivel_buscada = list_get(lista_tablas_1er_nivel,numero_tabla_1er_nivel);
 	uint32_t entrada_buscada;
-	//log_debug(log_memoria,"Pase el list get de la tabla de primer nivel");
 	entrada_buscada = list_get(tabla_1er_nivel_buscada,entrada_primer_nivel);
-	//log_debug(log_memoria,"LA entrada buscada es: %d",entrada_buscada);
-	//list_clean_and_destroy_elements(tabla_1er_nivel_buscada,&free);todo VER COMO HACER ESTE LIST AND DESTROY
-	//list_destroy(tabla_1er_nivel_buscada);///////////////////////////////////////////////////////////TODO ESTE DESTROY HACE CAGADA
-	//log_debug(log_memoria,"Pase el list destroy en obtener nro tabla 2do nivel");
 
 	return entrada_buscada;
 
@@ -176,6 +171,8 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			if(recorredorPaginas->bit_uso == 0 && recorredorPaginas->bit_modificado == 0 ){
 				log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
 				log_warning(log_memoria,"Victima CLOCK-M: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
+				log_warning(log_memoria,"ENTRE POR EL 0 | 0");
+
 				return recorredorPaginas;
 			}
 
@@ -194,6 +191,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			if(recorredorPaginas->bit_uso == 0 && recorredorPaginas->bit_modificado == 1 ){
 				log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
 				log_warning(log_memoria,"Victima CLOCK-M: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
+				log_warning(log_memoria,"ENTRE POR EL 0 | 1");
 				return recorredorPaginas;
 			}
 
@@ -214,6 +212,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			if(recorredorPaginas->bit_uso == 0 && recorredorPaginas->bit_modificado == 0 ){
 				log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
 				log_warning(log_memoria,"Victima CLOCK-M: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
+				log_warning(log_memoria,"ENTRE POR EL 0 | 0 EN LA TERCER VUELTA");
 				return recorredorPaginas;
 			}
 
@@ -232,6 +231,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			if(recorredorPaginas->bit_uso == 0 && recorredorPaginas->bit_modificado == 1 ){
 				log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
 				log_warning(log_memoria,"Victima CLOCK-M: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
+				log_warning(log_memoria,"ENTRE POR EL 0 | 1 EN LA CUARTA VUELTA");
 				return recorredorPaginas;
 			}
 		}
@@ -256,7 +256,6 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 						log_warning(log_memoria,"Victima CLOCK: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
 						return recorredorPaginas;
 					}
-
 				}
 
 				//esta segunda vuelta es para encontrar 0 modificando el bit de uso
@@ -339,12 +338,10 @@ void liberar_memoria(uint32_t marco1){//liberamos la memoria posta y ponemos el 
 		escribir_pagina(0,marco1,desp);
 		//desp+=4;
 	}
-
-	//todo liberar memoria posta
 }
 
 
-void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){// TODO VER COMO SE ESCIBE EN MEMORIA
+void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){
 	pthread_mutex_lock(&mutexEscribirEnMemoria);
 
 	if(valor != 0){
@@ -362,7 +359,7 @@ void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){// 
 	pthread_mutex_unlock(&mutexEscribirEnMemoria);
 }
 
-uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){ // TODO LEER DE MEMORIA
+uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){
 	uint32_t valor_leido;
 	uint32_t posicion_marco = frame * tamanio_paginas+desplazamiento;
 
@@ -377,7 +374,7 @@ uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){ // TODO LEER D
 	return valor_leido;
 }
 
-/*char* leer_pagina_de_memoria(uint32_t frame){ // TODO LEER DE MEMORIA
+/*char* leer_pagina_de_memoria(uint32_t frame){
 	void* valor_leido;
 	uint32_t posicion_marco = frame * tamanio_paginas;
 
@@ -461,7 +458,10 @@ void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indi
 
     log_error(log_memoria,"La info pagina a reemplazar en ejecutra reemplazo es: %d",info_paginaAReemplazar->nro_pagina);
 
-    escribir_en_swap(indice_pagina_1er_nivel,info_paginaAReemplazar);
+    if(info_paginaAReemplazar->bit_modificado == 1){
+    	escribir_en_swap(indice_pagina_1er_nivel,info_paginaAReemplazar);
+    }
+
 
     //GUARDAMOS EN RAM LO QUE SE QUIERE USAR
     info_pagina->frame = frame;

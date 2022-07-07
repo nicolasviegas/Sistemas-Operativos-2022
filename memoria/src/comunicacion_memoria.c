@@ -13,13 +13,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
     fd_kernel = cliente_socket;
 
-    //descoment
-//    fd_cpu = 5;//TODO HARDCODEADO
-//
-//    send_TAM(fd_cpu,tamanio_paginas);
-//
-//    send_TAM(fd_cpu,cant_entradas_por_tabla);
-
     send_TAM(cliente_socket,tamanio_paginas);
 
     send_TAM(cliente_socket,cant_entradas_por_tabla);
@@ -37,9 +30,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
     	    }
 
     	    if(condicion == 666){
-    	     //
-    	    //todo recibir tam de kernel
-
     	    	uint32_t tam_proceso;
 				log_trace(log_memoria,"la condicion antes del recv es: %d",tam_proceso);
 				if (recv(cliente_socket, &tam_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -65,7 +55,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			 log_debug(log_memoria,"El size de la tabla de primer nivel es: %d",list_size(tabla_1er_nivel_del_proceso));
 
 
-    	     //todo asignar en memoria
 			 if(indice_tabla == -1){
 				 log_error(log_memoria,"No hay mas entradas para tablas de primer nivel");
 			 }else{
@@ -73,11 +62,9 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				 log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
 			 }
 
-			 //todo crear archivo de swap
-
 			char* path_char = pasar_a_char(indice_tabla);
 
-			crear_archivo(path_char);//todo chequear con valgrind que tira errores
+			crear_archivo(path_char);
 
 			poner_archivo_con_ceros(path_char,tam_proceso);
 
@@ -158,7 +145,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 
 							uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
-							send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+							send_TAM(cliente_socket,indice_tabla_segundo_nivel);
 							log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
 							uint32_t entrada_2do_nivel;
@@ -223,8 +210,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											//t_list* contenido_de_pagina = list_create();
 											log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
 											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina,tamanio);
-
-											//log_info(log_memoria,"BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB");
 											//pthread_mutex_lock(&mutexSwap);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											//pthread_mutex_unlock(&mutexSwap);
@@ -242,7 +227,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						   }
 
 					}
-					//todo MANDARLE EL MARCO A CPU y agregar RECV
 				}
 
 /////
@@ -319,7 +303,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 					uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
 					usleep(retardo_memoria*1000);
-					send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+					send_TAM(cliente_socket,indice_tabla_segundo_nivel);
 					log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
 					uint32_t entrada_2do_nivel;
@@ -329,14 +313,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					}
 					log_trace(log_memoria,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
 
-					//todo funcion que hizo tomi
-
-					//uint32_t marco_x = 7;//todo funcion_que devuelve marco(); ya esat hecha
 					pagina* pagina_buscada;
 					pagina_buscada = buscar_pagina_en_tabla_2do_nivel(indice_tabla_segundo_nivel,entrada_2do_nivel);
-				//	send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
-					//log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
-					//free(pagina_buscada);
 
 					uint32_t desplazamiento;
 					if (recv(cliente_socket, &desplazamiento, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -464,7 +442,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
 
 
-						//todo ir a buscar a memoria(marco,desplazamiento)   . con nro de marco * tam de pag + desplazamiento
 					}else{
 							uint32_t indice_tabla;
 							if (recv(cliente_socket, &indice_tabla, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -493,7 +470,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 							uint32_t indice_tabla_segundo_nivel = obtener_nro_tabla_2do_nivel(indice_tabla,entrada_1er_nivel);
 							usleep(retardo_memoria*1000);
-							send_TAM(cliente_socket,indice_tabla_segundo_nivel);//todo ACA HAY QUE PONER LA FUNCION QUE CALCULA EL NRO DE TABLA DE SEGUNDO NIVEL QUE YA ESTA HECHA
+							send_TAM(cliente_socket,indice_tabla_segundo_nivel);
 							log_trace(log_memoria,"El indice de la tabla 2do nivel es: %d",indice_tabla_segundo_nivel);
 
 							uint32_t entrada_2do_nivel;
@@ -549,7 +526,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 										traer_proceso_de_swap(indice_tabla,tamanio,pagina_buscada,frame_a_utilizar);
 										//poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
-										//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento); // todo pasar desp
+										//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 										escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
 										pagina_buscada->bit_uso = 1;
 										pagina_buscada->bit_modificado = 1;
@@ -584,7 +561,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					}
 
 				}
-				//todo MANDARLE EL MARCO A CPU y agregar RECV
 		}
 	/////
 
@@ -595,9 +571,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				return;
 				}
 				log_trace(log_memoria,"Meto a swap al proceso es: %d",indice_proceso);
-
-
-//todo a partir de aca memoria va a trabajar con swap
 
 				pasar_proceso_a_swap(indice_proceso);
 
@@ -612,8 +585,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			}
 
 			log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso);
-			//todo meter el proceso a la mem principal y poner el bit de presencia en 1
-			//(usar la logica de funcion de meter en swap para tener todas en una sola lista y poner en 1
+
 
 			if(!el_proceso_tiene_almenos_una_pag_en_mem(indice_proceso)){
 				log_error(log_memoria,"El proceso es nuevo asi que lo meto de una a mem ppal");
@@ -633,8 +605,6 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
     				return;
     				}
     				log_trace(log_memoria,"Saco de swap el proceso: %d",indice_proceso);
-
-    //todo a partir de aca memoria va a trabajar con swap
 
     				//traer_proceso_de_swap(indice_proceso); // LO COMENTAMOS POR QUE NO HACE FALTA; LAS PAGINAS SE CARGAN A Demanda
 
