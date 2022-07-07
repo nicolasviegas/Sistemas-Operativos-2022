@@ -12,13 +12,19 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
     free(args);
 
     fd_kernel = cliente_socket;
-    //fd_cpu = 7;
-    fd_cpu = 5;//TODO HARDCODEADO
 
-   // send_TAM(fd_cpu,tamanio_paginas);
-    send_TAM(fd_cpu,tamanio_paginas);
+    //descoment
+//    fd_cpu = 5;//TODO HARDCODEADO
+//
+//    send_TAM(fd_cpu,tamanio_paginas);
+//
+//    send_TAM(fd_cpu,cant_entradas_por_tabla);
 
-    send_TAM(fd_cpu,cant_entradas_por_tabla);
+    send_TAM(cliente_socket,tamanio_paginas);
+
+    send_TAM(cliente_socket,cant_entradas_por_tabla);
+
+    log_debug(log_memoria,"el cliente sock es: %d",cliente_socket);
 
     while (cliente_socket != -1) {
     	//log_trace(log_memoria,"Estoy dentro del while cliente socket");

@@ -50,6 +50,25 @@ static void procesar_conexion_kernel(void* void_args) {
 
         	send_TAM(fd_memoria,tam_proceso);
 
+        	if(mensaje_unico_memoria == 1){
+        		uint32_t aux1;
+        		       	 if(!recv_interrupcion(fd_memoria,&aux1)){
+        		       	 		log_error(log_kernel, "Fallo recibiendo aux");
+        		       	 		return;
+        		       	 	}
+
+        		       	// 	log_warning(log_cpu,"El tam de pags es %d",tam_paginas);
+        		       	uint32_t aux2;
+        		       	 	if(!recv_interrupcion(fd_memoria,&aux2)){
+        		       	 		 log_error(log_kernel, "Fallo recibiendo aux");
+        		       	 		 return;
+        		       	 	 }
+        		       	 	mensaje_unico_memoria = 0;
+        	}
+
+
+
+
         	uint32_t indice_tabla;
         	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {//puede ser fd_memoria en vez de cliente socket
         	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");

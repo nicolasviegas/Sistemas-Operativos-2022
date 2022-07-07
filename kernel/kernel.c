@@ -73,6 +73,8 @@ void inicializar_config(){
 	  grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
 	  alfa = obtener_float_de_config(config_kernel,"ALFA");
 	  tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
+
+	  mensaje_unico_memoria = 1 ;
 }
 
 void inicializar_listas(){
@@ -114,7 +116,7 @@ void cerrar_programa2(t_log* logger) {
     list_destroy_and_destroy_elements(listaExe,free);
     list_destroy_and_destroy_elements(listaBlock,free);
     list_destroy_and_destroy_elements(listaBlockSuspended,free);
-    list_destroy_and_destroy_elements(listaExit,free);
+   // list_destroy_and_destroy_elements(listaExit,free);
     list_destroy_and_destroy_elements(colaReady,free);
     list_destroy_and_destroy_elements(lista_instrucciones_kernel,free);
     list_destroy_and_destroy_elements(lista_pcb_en_memoria,free);

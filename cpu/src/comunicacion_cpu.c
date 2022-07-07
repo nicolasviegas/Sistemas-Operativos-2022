@@ -59,17 +59,17 @@ static void procesar_conexion_cpu(void* void_args) {
 	 log_warning(log_cpu,"La cant de entradas por tabla es %d",cant_entradas_por_tabla);
 
 
-	 if(!recv_TAM(fd_memoria,&aux1)){
-	 		log_error(log_cpu, "Fallo recibiendo pid");
-	 		return;
-	 	}
-
-	// 	log_warning(log_cpu,"El tam de pags es %d",tam_paginas);
-
-	 	if(!recv_TAM(fd_memoria,&aux2)){
-	 		 log_error(log_cpu, "Fallo recibiendo pid");
-	 		 return;
-	 	 }
+//	 if(!recv_TAM(fd_memoria,&aux1)){
+//	 		log_error(log_cpu, "Fallo recibiendo pid");
+//	 		return;
+//	 	}
+//
+//	// 	log_warning(log_cpu,"El tam de pags es %d",tam_paginas);
+//
+//	 	if(!recv_TAM(fd_memoria,&aux2)){
+//	 		 log_error(log_cpu, "Fallo recibiendo pid");
+//	 		 return;
+//	 	 }
 
 	 	// log_warning(log_cpu,"La cant de entradas por tabla es %d",cant_entradas_por_tabla);
 
