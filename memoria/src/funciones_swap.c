@@ -28,8 +28,10 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	log_debug(log_memoria,"Escribiendo en swap la pagina %d, en el archivo %s ... ",pagina_a_escribir->nro_pagina,c);
 	log_debug(log_memoria,"Escribiendo en swap el frame %d, en el archivo %s ...  ",pagina_a_escribir->frame,c);
 
+	char *asd = string_new();
+	string_append_with_format(&asd,"%s/",path_swap);
+	string_append(&asd,c);
 
-	char* path = pasar_a_char(indice_archivo_swap);
 	//char* path = "0.swap\0";
 
 	int desp = 0;
@@ -39,6 +41,8 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 
 ///////////////////////////////////////////////////////////////
 //ESTE ES EL BUENO DESCOMENTAR
+	log_warning(log_memoria,"[EL PATH EN ESCRIBIR SWAP ES: %s]",asd);
+
 	for(desp = 0; desp < tamanio_paginas ;desp+=4){
 		contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,desp);
 		//log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
@@ -47,7 +51,7 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 		char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
 		//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
 
-		escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,desp);
+		escribir_swap(asd,char_contenido,pagina_a_escribir->nro_pagina,desp);
 		//desp += 4;
 	}
 ////////////////////////////////////////////////////////////
@@ -72,7 +76,7 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 
 
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
-	free(path);
+	free(asd);
 	//free(char_contenido);
 
 }
@@ -84,6 +88,8 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset,uint32_t tamanio){
 
 	int fd = open(filepath, O_RDONLY, (mode_t)0600);
+	//log_info(log_memoria,"[RUTA DEL ARCHIVO DESPUES DEL OPEN %s]",filepath);
+
 	//int fd = open("/home/utnso/tp-2022-1c-yaguarethreads-/memoria/0.swap",O_RDONLY);
 
 	 ftruncate(fd,0);
@@ -160,6 +166,13 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 		uint32_t valor_leido;// = 500;
 
 		char* path = pasar_a_char(indice_archivo_swap);
+
+		char *ruta_archivo = string_new();
+			string_append_with_format(&ruta_archivo,"%s/",path_swap);
+			string_append(&ruta_archivo,path);
+
+
+		//log_info(log_memoria,"[RUTA DEL ARCHIVO EN LA FUNCION DE LEER DE SWAP %s]",ruta_archivo);
 		/*//char*path = "0.swap";
 		FILE *file = fopen(path, "rb+");
 		int offset = nro_pagina * tamanio_paginas + desp;
@@ -176,9 +189,9 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 
 	//log_info(log_memoria,"El offset %d y el nro de pagna %d con el que voy a entrar a la funcion de mati en swap es",desp,nro_pagina);
 
-	valor_leido = lectura_swap(path,nro_pagina,desp,tamanio);
+	valor_leido = lectura_swap(ruta_archivo,nro_pagina,desp,tamanio);
 
-	free(path);
+	free(ruta_archivo);
 	return valor_leido;
 }
 

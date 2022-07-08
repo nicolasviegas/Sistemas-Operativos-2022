@@ -288,7 +288,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		tlb_flush();
 
-	    list_destroy_and_destroy_elements(lista_instrucciones_cpu,free);
+	    //list_destroy_and_destroy_elements(lista_instrucciones_cpu,free);
 
 		free(pcb_proceso_cpu);
 
