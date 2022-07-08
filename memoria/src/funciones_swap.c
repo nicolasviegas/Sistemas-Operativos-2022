@@ -54,29 +54,10 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 		escribir_swap(asd,char_contenido,pagina_a_escribir->nro_pagina,desp);
 		//desp += 4;
 	}
-////////////////////////////////////////////////////////////
-
-/*
-	for(int i = 0;i < tamanio_paginas;i++){
-		contenido_pagina = leer_paginade_memoria(pagina_a_escribir->frame,i);
-		log_debug(log_memoria,"El contenido que lei de memoria antes de escribirlo en swap es: %d ",contenido_pagina);
-		char_contenido = pasar_a_char_sin_terminacion(contenido_pagina);
-		log_debug(log_memoria,"El char contenido es: %s",char_contenido);
-		escribir_swap(path,char_contenido,pagina_a_escribir->nro_pagina,i);
-		//desp = desp + 4;
-	}
-*/
-
-
-
-/*	uint32_t off=0;
-	for(int i=0;i<tamanio_paginas; i++){
-		escribir_pagina(0,pagina_a_escribir->frame,off);
-	}*/
-
 
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
 	free(asd);
+	free(c);
 	//free(char_contenido);
 
 }
@@ -168,8 +149,8 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 		char* path = pasar_a_char(indice_archivo_swap);
 
 		char *ruta_archivo = string_new();
-			string_append_with_format(&ruta_archivo,"%s/",path_swap);
-			string_append(&ruta_archivo,path);
+		string_append_with_format(&ruta_archivo,"%s/",path_swap);
+		string_append(&ruta_archivo,path);
 
 
 		//log_info(log_memoria,"[RUTA DEL ARCHIVO EN LA FUNCION DE LEER DE SWAP %s]",ruta_archivo);
@@ -192,6 +173,7 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 	valor_leido = lectura_swap(ruta_archivo,nro_pagina,desp,tamanio);
 
 	free(ruta_archivo);
+	free(path);
 	return valor_leido;
 }
 

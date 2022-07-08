@@ -243,6 +243,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		lista_instrucciones_cpu = list_take_and_remove(lista_instrucciones_cpu,0);
 
+
 		/*------------------------------------ACA COMIENZA EL CICLO DE EJECUCION----------------------*/
 		instrucciones* proxima_a_ejecutar = malloc(sizeof(instrucciones)); //hacer un free al final
 
@@ -269,17 +270,13 @@ static void procesar_conexion_cpu(void* void_args) {
 
 			}
 
-		//log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
-		//log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
 
 		log_debug(log_cpu,"El pc antes de send a kernel es: %d",pcb_proceso_cpu->PC);
 		send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
-		//log_debug(log_cpu,"El tiempo bloqueante antes de mandarlo es: %d ",tiempo_bloqueante);
 
 		send_tiempo_bloqueante(fd_kernel,tiempo_bloqueante);
 
-		//log_trace(log_cpu,"Pase el send pc del PID: %d",pcb_proceso_cpu->PID );
 
 
 		free(proxima_a_ejecutar);
@@ -288,7 +285,7 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		tlb_flush();
 
-	    //list_destroy_and_destroy_elements(lista_instrucciones_cpu,free);
+		list_clean_and_destroy_elements(pcb_proceso_cpu->instrucciones,free);
 
 		free(pcb_proceso_cpu);
 
