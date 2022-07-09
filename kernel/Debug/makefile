@@ -27,7 +27,7 @@ endif
 all: kernel
 
 dependents:
-	-cd /home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug && $(MAKE) clean all
+	-cd /home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug && $(MAKE) all
 
 # Tool invocations
 kernel: $(OBJS) $(USER_OBJS) /home/utnso/tp-2022-1c-yaguarethreads-/shared/Debug/libshared.so

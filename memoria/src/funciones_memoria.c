@@ -652,31 +652,13 @@ int verificar_archivo(char *ruta)
 
 
 void crear_archivo(char *nuevo_archivo){
-
+	char *ruta_archivo = string_new();
 	//char a = '0';
 	//uint32_t x = 0;
-	char *ruta_archivo = string_new();
-	string_append_with_format(&ruta_archivo,"%s/",path_swap);
-	//string_append(&ruta_archivo,"/");
-	//string_append(&ruta_archivo,"hola.txt");
+
 	string_append(&ruta_archivo, nuevo_archivo);
 
-	struct stat st = {0};
-
-	if (stat(path_swap, &st) == -1) { //poner ruta a la carpeta donde se vana crear los archivos .swap
-
-		 mkdir(path_swap, 0775);
-		 printf("created directory swap successfully! \n");
-
-	}
-
-	//FILE *archivox = fopen(ruta_archivo, "wb+");
-
-	log_debug(log_memoria,"el nombre del path con el archivo adentro es: %s",ruta_archivo);
-
-
-
-	if (!verificar_archivo(ruta_archivo))
+	if (!verificar_archivo(nuevo_archivo))
 	{
 		FILE *archivo = fopen(ruta_archivo, "wb+");
 		//w+ es para que sea de lectura escritura.si queremos escribir y leer en binario cambiarlo a wb+
@@ -688,7 +670,7 @@ void crear_archivo(char *nuevo_archivo){
 	}
 	else
 	{
-		error_show("El directorio: %s ya existe\n", ruta_archivo);
+		//error_show("El directorio: %s ya existe\n", ruta_archivo);
 	}
 
 
@@ -724,7 +706,6 @@ char *itoa(uint32_t n)
 char* pasar_a_char(uint32_t num){
 
 	char* terminacion = ".swap";
-
 	//char* str;
 
 
@@ -777,7 +758,6 @@ char* pasar_a_char_sin_terminacion(int num){
 
 
 void poner_archivo_con_ceros(char* path_char,uint32_t tam_proceso){
-	log_trace(log_memoria,"[LLENO DE CEROS EL ARCHIVO DE SAWP que esta en: %s]",path_char);
 	FILE *fp= fopen( path_char , "rb+" );
 	char* a = "0";
 	int x = tam_proceso / 4;

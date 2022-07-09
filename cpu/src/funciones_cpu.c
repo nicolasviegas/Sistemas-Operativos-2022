@@ -14,7 +14,6 @@ void cargar_instruccion_cpu(int id, char* nombre, uint32_t parametro1, uint32_t 
 	list_add(lista_instrucciones_cpu,estructura_instrucciones);
 	//free(estructura_instrucciones);
 }
-
 instrucciones* fetch(pcb_cpu* pcb){
 	instrucciones* a = malloc(sizeof(instrucciones));//TODO ELIMINAR EL MALLOC
 	log_debug(log_cpu,"El pc es en fetch %d",pcb->PC);
