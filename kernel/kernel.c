@@ -65,14 +65,18 @@ void inicializar_config(){
 	  puerto_cpu_interrupt = config_get_string_value(config_kernel,"PUERTO_CPU_INTERRUPT");
 
 	  char* algoritmo_char = config_get_string_value(config_kernel,"ALGORITMO_PLANIFICACION");
+	  log_info(log_kernel,"El algoritmo de planificacion es: %s\n",algoritmo_char);
 	  algoritmo_config = obtener_algoritmo(algoritmo_char);
 
 
 
 	  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
+	  log_info(log_kernel,"El estimacion inicial es: %d\n",estimacion_inicial);
 	  grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
+	  log_info(log_kernel,"El grado de multiprogramacion es: %d\n",grado_multiprogramacion);
 	  alfa = obtener_float_de_config(config_kernel,"ALFA");
 	  tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
+	  log_info(log_kernel,"El tiempo maximo de bloqueo es: %d\n",tiempo_max_bloqueado);
 
 	  mensaje_unico_memoria = 1 ;
 }
@@ -172,9 +176,6 @@ int main() {
 
     fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 	//int fd_kernel_1 = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
-
-
-    log_trace(log_kernel,"El socket fd_kernel : %d",fd_kernel);
 
     /////////////////////////////////////////////////////////
 

@@ -118,8 +118,8 @@ static void* serializar_READ(uint32_t parametro1) {
     memcpy(stream, &cop, sizeof(op_code_instrucciones));
     memcpy(stream+sizeof(op_code_instrucciones), &parametro1, sizeof(uint32_t));
 
-    printf("El cop en serializar READ es: %d\n",cop);
-    printf("El parametro 1 es: %d\n",parametro1);
+  //  printf("El cop en serializar READ es: %d\n",cop);
+   // printf("El parametro 1 es: %d\n",parametro1);
     //printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
@@ -174,9 +174,9 @@ static void* serializar_WRITE(uint32_t parametro1, uint32_t parametro2) {
     memcpy(stream+sizeof(op_code_instrucciones), &parametro1, sizeof(uint32_t));
     memcpy(stream+sizeof(op_code_instrucciones)+sizeof(uint32_t), &parametro2, sizeof(uint32_t));
 
-    printf("El cop en serializar WRITE es: %d\n",cop);
-    printf("El parametro 1 es: %d\n",parametro1);
-    printf("El parametro 2 es: %d\n",parametro2);
+   // printf("El cop en serializar WRITE es: %d\n",cop);
+   // printf("El parametro 1 es: %d\n",parametro1);
+  //  printf("El parametro 2 es: %d\n",parametro2);
    // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
 
     return stream;
@@ -224,9 +224,9 @@ static void* serializar_COPY(uint32_t parametro1, uint32_t parametro2) {
     memcpy(stream+sizeof(op_code_instrucciones), &parametro1, sizeof(uint32_t));
     memcpy(stream+sizeof(op_code_instrucciones)+sizeof(uint32_t), &parametro2, sizeof(uint32_t));
 
-    printf("El cop en serializar COPY es: %d\n",cop);
-    printf("El parametro 1 es: %d\n",parametro1);
-    printf("El parametro 2 es: %d\n",parametro2);
+//    printf("El cop en serializar COPY es: %d\n",cop);
+//    printf("El parametro 1 es: %d\n",parametro1);
+//    printf("El parametro 2 es: %d\n",parametro2);
   //  printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
 
     return stream;
@@ -273,7 +273,7 @@ static void* serializar_EXIT() {
     memcpy(stream, &cop, sizeof(op_code_instrucciones));
 
 
-    printf("El cop en serializar EXIT es: %d\n",cop);
+  //  printf("El cop en serializar EXIT es: %d\n",cop);
 
   //  printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
@@ -340,7 +340,7 @@ void deserializar_cant_instrucciones(void* stream, uint32_t* cantidad) {
 
 
 bool send_cant_instrucciones(int fd,uint32_t cantidad){
-	printf("Entre en send_cant instrucciones \n");
+	//printf("Entre en send_cant instrucciones \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_cant_instrucciones(cantidad);
@@ -534,7 +534,7 @@ static void* serializar_indice_tabla_paginas_a_cpu(uint32_t parametro1) {
     memcpy(stream, &parametro1, sizeof(uint32_t));
 
    // printf("El cop en serializar READ es: %d\n",cop);
-    printf("El tam a enviar es: %d\n",parametro1);
+  //  printf("El tam a enviar es: %d\n",parametro1);
    // printf("El tam del stream cuando lo serializamos es %d\n", sizeof(stream));
     return stream;
 }
@@ -765,7 +765,7 @@ void deserializar_tam_paginas(void* stream, uint32_t* cantidad) {
 
 
 bool send_tam_paginas(int fd,uint32_t cantidad){
-	printf("Entre en send_cant instrucciones \n");
+	//printf("Entre en send_cant instrucciones \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_tam_paginas(cantidad);
@@ -796,7 +796,7 @@ bool recv_tam_paginas(int fd, uint32_t* cantidad) {
 }
 
 bool send_numero_pagina(int fd,uint32_t numero_pagina){
-	printf("Entre en send_cant instrucciones \n");
+	//printf("Entre en send_cant instrucciones \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_tam_paginas(numero_pagina);
@@ -827,7 +827,7 @@ bool recv_numero_pagina(int fd, uint32_t* numero_pagina) {
 }
 
 bool send_entrada_1er_nivel(int fd,uint32_t entrada_1er_nivel){
-	printf("Entre en send_cant instrucciones \n");
+//	printf("Entre en send_cant instrucciones \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_tam_paginas(entrada_1er_nivel);
@@ -859,7 +859,7 @@ bool recv_entrada_1er_nivel(int fd, uint32_t* entrada_1er_nivel) {
 
 
 bool send_entrada_2do_nivel(int fd,uint32_t entrada_2do_nivel){
-	printf("Entre en send_cant instrucciones \n");
+	//printf("Entre en send_cant instrucciones \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_tam_paginas(entrada_2do_nivel);
@@ -891,7 +891,7 @@ bool recv_entrada_2do_nivel(int fd, uint32_t* entrada_2do_nivel) {
 
 
 bool send_desplazamiento(int fd,uint32_t desplazamiento){
-	printf("Entre en send_cant instrucciones \n");
+	//printf("Entre en send_cant instrucciones \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_tam_paginas(desplazamiento);
@@ -922,7 +922,7 @@ bool recv_desplazamiento(int fd, uint32_t* desplazamiento) {
 }
 
 bool send_valor(int fd,uint32_t valor){
-	printf("Entre en send_cant instrucciones \n");
+	//printf("Entre en send_cant instrucciones \n");
 	   size_t size = sizeof(uint32_t);
 
 	    void* stream = serializar_tam_paginas(valor);

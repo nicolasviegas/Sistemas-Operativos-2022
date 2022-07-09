@@ -14,14 +14,26 @@ void cargar_instruccion_cpu(int id, char* nombre, uint32_t parametro1, uint32_t 
 	list_add(lista_instrucciones_cpu,estructura_instrucciones);
 	//free(estructura_instrucciones);
 }
+
 instrucciones* fetch(pcb_cpu* pcb){
 	instrucciones* a = malloc(sizeof(instrucciones));//TODO ELIMINAR EL MALLOC
-	log_debug(log_cpu,"El pc es en fetch %d",pcb->PC);
+	//log_debug(log_cpu,"El pc es en fetch %d",pcb->PC);
 	a = list_get(pcb->instrucciones,pcb->PC);
 	return a;
 }
 
+t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parametro1, uint32_t parametro2){
+	instrucciones* estructura_instrucciones = malloc(sizeof(instrucciones));
 
+	estructura_instrucciones->id = id;
+	estructura_instrucciones->nombre = nombre;
+	estructura_instrucciones->parametro1 = parametro1;
+	estructura_instrucciones->parametro2 = parametro2;
+
+	list_add(a,estructura_instrucciones);
+	//free(estructura_instrucciones);
+	return a;
+}
 
 ////////////////////////////////////////////MMU///////////////////////////////////////////////////////////////////////
 
@@ -65,7 +77,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 		 void correr_algoritmo_reemplazo(uint32_t numero_pagina,uint32_t marco){
-			 log_warning(log_cpu,"Entre en correr algoritmo reemplazo");
+			// log_warning(log_cpu,"Entre en correr algoritmo reemplazo");
 			 if(algoritmo_config == FIFO){
 				 if(list_size(lista_tlb) >= entradas_tlb){
 					 log_warning(log_cpu,"Entre en FIFO CASO EN QUE LA TLB ESTA LLENA");
@@ -75,7 +87,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 					 elemento->numero_pag = numero_pagina;
 					 list_remove_and_destroy_element(lista_tlb,0,free);
 					 list_add(lista_tlb,elemento);
-					 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
+					// log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
 				 }
 				 else{
 					 log_warning(log_cpu,"Entre en FIFO CASO EN QUE agrego de una ");
@@ -83,7 +95,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 					 elemento->frame = marco;
 					 elemento->numero_pag = numero_pagina;
 					 list_add(lista_tlb,elemento);
-					 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
+					// log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
 				 }
 			 }
 			 else{
@@ -100,7 +112,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 					 for(int i=0;i<list_size(lista_tlb);i++){
-						 log_warning(log_cpu,"Entre en EL FOR DE  LRU CASO EN QUE LA TLB ESTA LLENA");
+					//	 log_warning(log_cpu,"Entre en EL FOR DE  LRU CASO EN QUE LA TLB ESTA LLENA");
 
 					 elementoAux = list_get(lista_tlb,i);
 
@@ -117,11 +129,11 @@ instrucciones* fetch(pcb_cpu* pcb){
 				    }
 
 					 aumentar_tiempo();
-					 log_warning(log_cpu,"Antes del remove and destroy, el index a remover es: %d",indexARemover);
+					// log_warning(log_cpu,"Antes del remove and destroy, el index a remover es: %d",indexARemover);
 
 					 list_remove_and_destroy_element(lista_tlb,indexARemover,free);
 					 list_add(lista_tlb,elemento);
-					 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
+					 //log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
 				 }
 				 else{
 					 log_warning(log_cpu,"Entre en LRU CASO EN QUE agrego de una ");
@@ -131,7 +143,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 					 elemento->numero_pag = numero_pagina;
 					 elemento->tiempo_uso = 0;/////
 					 list_add(lista_tlb,elemento);
-					 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
+					// log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
 
 				 }
 			 }
@@ -144,7 +156,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 void traer_pag_de_tlb(tlb* entrada,uint32_t parametro1,uint32_t tamanio){
 			 uint32_t marco = entrada->frame;
 
-			 log_debug(log_cpu,"Entre en traer pag de tlb");
+			 log_debug(log_cpu,"TLB HIT!");
 					 ////////Funciones auxiliares /////
 
 
@@ -164,7 +176,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 						 list_remove_by_condition(lista_tlb,(void*) tienen_misma_pagina);
 						 entrada->tiempo_uso = 0;
 						 list_add(lista_tlb,entrada);
-						 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
+					//	 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
 					 }
 
 
@@ -178,7 +190,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 		 uint32_t traer_pag_de_tlb_cpy(tlb* entrada,uint32_t parametro1,uint32_t tamanio){
 				 uint32_t marco = entrada->frame;
 
-				 log_debug(log_cpu,"Entre en traer pag de tlb");
+				 log_debug(log_cpu,"TLB HIT!");
 						 ////////Funciones auxiliares /////
 
 
@@ -198,13 +210,8 @@ instrucciones* fetch(pcb_cpu* pcb){
 							 list_remove_by_condition(lista_tlb,(void*) tienen_misma_pagina);
 							 entrada->tiempo_uso = 0;
 							 list_add(lista_tlb,entrada);
-							 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
+						//	 log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
 						 }
-
-
-						 //uint32_t desplazamiento = obtener_desplazamiento(parametro1,entrada->numero_pag);
-						 //send_TAM(fd_memoria,marco);
-						 //send_TAM(fd_memoria,desplazamiento);
 
 						 return marco;
 
@@ -219,7 +226,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 			}
 
 			 tlb* entrada = list_find(lista_tlb, &existe_entrada);
-			 log_warning(log_cpu,"pase el list find");
+			// log_warning(log_cpu,"pase el list find");
 			 if(entrada != NULL){
 				 send_TAM(fd_memoria,TLB_RD);//le aviso que tlb read le va a mandar cosas
 				 send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
@@ -239,7 +246,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 			 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
 
 			 send_TAM(fd_memoria,TLB_RD); // le aviso a memoria que se viene un tlb read
-			 log_trace(log_cpu,"Le aviso a memoeria que le voy a mandar cosas");
+			 log_trace(log_cpu,"TLB MISS!");
 
 			 send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
@@ -283,7 +290,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 						 }
 						 log_error(log_cpu,"el marco es: %d",marcoaux);
 
-						 log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
+						// log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 						 correr_algoritmo_reemplazo(numero_pagina,marcoaux);
 		 }
 	}
@@ -337,7 +344,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 		 			send_TAM(fd_memoria,TLB_CPY); // le aviso a memoria que se viene un tlb read
-					log_trace(log_cpu,"Le aviso a memoria que le voy a mandar cosas");
+					log_trace(log_cpu,"TLB MISS!");
 
 					send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
@@ -423,7 +430,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 
 
 		 					 			send_TAM(fd_memoria,TLB_CPY); // le aviso a memoria que se viene un tlb read
-		 								log_trace(log_cpu,"Le aviso a memoria que le voy a mandar cosas");
+		 								log_trace(log_cpu,"TLB MISS!");
 
 		 								send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
@@ -492,7 +499,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 						}
 
 						 tlb* entrada = list_find(lista_tlb, &existe_entrada);
-						 log_warning(log_cpu,"pase el list find");
+						// log_warning(log_cpu,"pase el list find");
 						 if(entrada != NULL){
 							 send_TAM(fd_memoria,TLB_WR);//le aviso que tlb read le va a mandar cosas
 							 send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
@@ -536,7 +543,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 						 uint32_t desplazamiento = obtener_desplazamiento(parametro1,numero_pagina);
 
 						 send_TAM(fd_memoria,TLB_WR); // le aviso a memoria que se viene un tlb read
-						 log_trace(log_cpu,"Le aviso a memoeria que le voy a mandar cosas");
+						 log_trace(log_cpu,"TLB MISS!");
 
 						 send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
@@ -598,7 +605,7 @@ instrucciones* fetch(pcb_cpu* pcb){
 						 }
 						 log_error(log_cpu,"el marco es: %d",marcoaux);
 
-						 log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
+						// log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 							correr_algoritmo_reemplazo(numero_pagina,marcoaux);
 		 		 	 }
 		 		 	}
@@ -625,48 +632,51 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 				}
 				//log_warning(log_cpu,"El program counter es: %d",pcb->PC);
 
-				log_warning(log_cpu,"Termine NO_OP");
+				//log_warning(log_cpu,"Termine NO_OP");
 
 				pcb->PC += 1;
 
-				 log_trace(log_cpu,"El PC es: %d",pcb->PC);
+				// log_trace(log_cpu,"El PC es: %d",pcb->PC);
 
 
 			break;
 			}
 			case IO:{
 
-				log_info(log_cpu,"[EXE] ejecuto IO");
 				tiempo_bloqueante = instruccion_a_decodificar->parametro1;
-				log_warning(log_cpu,"El tiempo bloqueante es: %d",tiempo_bloqueante);
+				log_info(log_cpu,"[EXE] ejecuto I/O, bloqueo por: %d",tiempo_bloqueante);
+
+				//log_warning(log_cpu,"El tiempo bloqueante es: %d",tiempo_bloqueante);
 				pcb->PC += 1;
 				//interrupcion = true; // ESTO ES DE PRUEBA, VA ESTO O NO?
 				break;
 			 }
 			 case READ:{
 				 tiempo_bloqueante = 0;
-				log_info(log_cpu,"[EXE] ejecuto READ");
 				 uint32_t parametro1 = instruccion_a_decodificar->parametro1;
 				 uint32_t numero_pagina = obtener_numero_pagina(parametro1);
 
-				log_debug(log_cpu,"El numero de paginas es %d",numero_pagina);
+				 log_info(log_cpu,"[EXE] ejecuto READ en la pagina: %d",numero_pagina);
+
+			//	log_debug(log_cpu,"El numero de paginas es %d",numero_pagina);
 
 				 correr_tlb_read(numero_pagina,parametro1,pcb->indice_tabla_paginas,pcb->tamanio);
 				 pcb->PC += 1;
-				 log_trace(log_cpu,"El PC es: %d",pcb->PC);
+				// log_trace(log_cpu,"El PC es: %d",pcb->PC);
 				 break;
 			}
 			 case COPY:{
 				tiempo_bloqueante = 0;
-				log_info(log_cpu,"[EXE] ejecuto COPY");
 				// log_warning(log_cpu,"Entre en COPY");
 				uint32_t parametro1 = instruccion_a_decodificar->parametro1;
 				uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 				uint32_t numero_pagina_origen = obtener_numero_pagina(parametro2);
 				uint32_t numero_pagina_destino = obtener_numero_pagina(parametro1);
 				 //log_trace(log_cpu,"Antes de correr tlb copy");
-				log_debug(log_cpu,"El numero de paginas origen es %d",numero_pagina_origen);
-				log_debug(log_cpu,"El numero de paginas destino es %d",numero_pagina_destino);
+				log_info(log_cpu,"[EXE] ejecuto COPY, pagina origen: %d , pagina destino: %d",numero_pagina_origen,numero_pagina_destino);
+
+				//log_debug(log_cpu,"El numero de paginas origen es %d",numero_pagina_origen);
+				//log_debug(log_cpu,"El numero de paginas destino es %d",numero_pagina_destino);
 
 
 				correr_tlb_copy(numero_pagina_origen,numero_pagina_destino,parametro1,parametro2,pcb->indice_tabla_paginas,pcb->tamanio);
@@ -675,12 +685,14 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 			}
 			 case WRITE:{
 				tiempo_bloqueante = 0;
-				log_info(log_cpu,"[EXE] ejecuto WRITE");
+				//log_info(log_cpu,"[EXE] ejecuto WRITE");
 				// log_warning(log_cpu,"Entre en WRITE");
 				uint32_t parametro1 = instruccion_a_decodificar->parametro1;
 				uint32_t parametro2 = instruccion_a_decodificar->parametro2;
 				uint32_t numero_pagina_write = obtener_numero_pagina(parametro1);
-				log_debug(log_cpu,"El numero de paginas es %d",numero_pagina_write);
+				//log_debug(log_cpu,"El numero de paginas es %d",numero_pagina_write);
+				log_info(log_cpu,"[EXE] ejecuto WRITE, pagina a escribir: %d",numero_pagina_write);
+
 				correr_tlb_write(numero_pagina_write,parametro1,parametro2,pcb->indice_tabla_paginas,pcb->tamanio);
 				pcb->PC += 1;
 				break;
@@ -723,7 +735,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 bool check_interrupt(int cliente_socket){
 	uint32_t cod_interrup;
 	if (!recv_interrupcion(cliente_socket, &cod_interrup)) {
-			log_error(log_cpu, "no se interrumpio");
+			//log_error(log_cpu, "no se interrumpio");
 
 	}
 	if(cod_interrup == 777){
@@ -731,8 +743,5 @@ bool check_interrupt(int cliente_socket){
 		log_debug(log_cpu,"Recibi una interrupcion");
 		return interrupcion;
 	}
-		//else{
-//		//log_error(log_cpu,"No recibi ninguna interrupcion: %d",cod_interrup);
-//		return false;
-//	}
+
 }

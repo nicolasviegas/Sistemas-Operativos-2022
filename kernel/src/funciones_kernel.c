@@ -70,7 +70,7 @@ void enviar_pcb_a_cpu(pcb_t* pcb_proceso){
 	//lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
 	list_clean(lista_instrucciones_kernel);
 
-	log_trace(log_kernel, "La cant de instrucciones en la lista: %d",b);
+	log_trace(log_kernel, "Cantidad de instrucciones restantes del proceso %d: %d",pcb_proceso->PID,(b - pcb_proceso->PC));
 
 	//log_trace(log_kernel,"El PC del proceso %d es: %d",pcb_proceso->PID,pcb_proceso->PC);
 
@@ -91,7 +91,7 @@ void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso
 			//log_warning(logger,"El id de las intrucciones en send instrucciones es: %d",a->id);
 			a = list_get(pcb_proceso->instrucciones,indice);
 
-			printf("[SEND INSTRUCCIONES KERNEL A CPU] la instruccion es: %s \n",a->nombre);
+			//printf("[SEND INSTRUCCIONES KERNEL A CPU] la instruccion es: %s \n",a->nombre);
 
 			if(a->id == NO_OP){
 				//log_warning(logger,"entre en NO_OP dentro de send_instrucciones");

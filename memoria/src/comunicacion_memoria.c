@@ -64,9 +64,17 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 			char* path_char = pasar_a_char(indice_tabla);
 
+			log_debug(log_memoria,"El path  char es: %s",path_char);
+
 			crear_archivo(path_char);
 
-			poner_archivo_con_ceros(path_char,tam_proceso);
+			char *ruta_archivo = string_new();
+				string_append_with_format(&ruta_archivo,"%s/",path_swap);
+				string_append(&ruta_archivo, path_char);
+
+			poner_archivo_con_ceros(ruta_archivo,tam_proceso);
+
+			free(ruta_archivo);
 
     	    }
 

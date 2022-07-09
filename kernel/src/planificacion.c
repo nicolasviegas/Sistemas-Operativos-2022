@@ -10,14 +10,14 @@ int obtener_algoritmo(char* algoritmo_char){
 	    if (strcmp(algoritmo_char,"FIFO") == 0)
 	    {
 	        switcher = FIFO;
-	        log_info(log_kernel, "El algoritmo de planificacion elegido es FIFO.");
+	        //log_info(log_kernel, "El algoritmo de planificacion elegido es FIFO.");
 	    }
 
 	    //SFJ SIN DESALOJO
 	    if (strcmp(algoritmo_char,"SRT") == 0)
 	    {
 	        switcher = SRT;
-	        log_info(log_kernel, "El algoritmo de planificacion elegido es SRT.");
+	     //   log_info(log_kernel, "El algoritmo de planificacion elegido es SRT.");
 	    }
 	    return switcher;
 }
@@ -151,7 +151,7 @@ void sacarDeBlock(pcb_t* proceso){
 
 
 void agregarABlockSuspended(pcb_t* pcb){
-	log_trace(log_kernel,"Entre en agregar a block suspended");
+//	log_trace(log_kernel,"Entre en agregar a block suspended");
 	pthread_mutex_lock(&mutexBlockSuspended);
 
 	pcb->suspendido = true;
@@ -328,7 +328,6 @@ void hiloReady_Exe(){
 //			log_debug(log_kernel,"Despues de recibir el nro para sincronizarme ");
 
 
-			log_debug(log_kernel,"Antes del send interrupcion");
 //			uint32_t a;
 //						if (!recv_TAM(fd_cpu, &a)) {
 //										log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
@@ -337,14 +336,13 @@ void hiloReady_Exe(){
 //						log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 9");
 			//send_interrupcion(fd_cpu_interrupt,1);
 
-			log_debug(log_kernel,"Despues del send interrupcion");
 
 			uint32_t pc;
 			if (!recv_PC(fd_cpu, &pc)) {
 				log_error(log_kernel, "Fallo recibiendo pc");
 			}
 
-			log_trace(log_kernel,"El PC despues del recv es: %d",pc);
+			//log_trace(log_kernel,"El PC despues del recv es: %d",pc);
 
 			procesoAEjecutar->PC = pc;
 
@@ -403,7 +401,7 @@ void hiloBlockASuspension(){
 
 		sem_wait(&analizarSuspension);
 
-		log_trace(log_kernel,"Entre en hilo bloq a suspension");
+		//log_trace(log_kernel,"Entre en hilo bloq a suspension");
 
 
 
@@ -660,7 +658,7 @@ pcb_t* obtenerSiguienteSJF(){
 
     pthread_mutex_unlock(&mutexReady);
 
-	log_warning(log_kernel,"El proceso %d fue elegido mediante el algoritmo SRT: ",procesoAux->PID);
+	log_warning(log_kernel,"El proceso %d fue elegido mediante el algoritmo SRT ",procesoAux->PID);
 
 	return procesoPlanificado;
 }

@@ -8,14 +8,14 @@ int obtener_algoritmo(char* algoritmo_char){
 	    if (strcmp(algoritmo_char,"FIFO") == 0)
 	    {
 	        switcher = FIFO;
-	        log_info(log_cpu, "El algoritmo de reemplazo elegido es FIFO.");
+	       // log_info(log_cpu, "El algoritmo de reemplazo elegido es FIFO.");
 	    }
 
 
 	    if (strcmp(algoritmo_char,"LRU") == 0)
 	    {
 	        switcher = LRU;
-	        log_info(log_cpu, "El algoritmo de reemplazo elegido es LRU.");
+	       // log_info(log_cpu, "El algoritmo de reemplazo elegido es LRU.");
 	    }
 	    return switcher;
 }
@@ -28,10 +28,13 @@ void inicializar_config(){
 	  puerto_memoria = config_get_string_value(config_cpu,"PUERTO_MEMORIA");
 
 	  entradas_tlb = config_get_int_value(config_cpu,"ENTRADAS_TLB");
+	  log_info(log_cpu,"La cantidad de entradas de la TLB son: %d \n",entradas_tlb);
 	  reemplazo_tlb = config_get_string_value(config_cpu,"REEMPLAZO_TLB");
-	  char* reemplazo_tlb = config_get_string_value(config_cpu,"REEMPLAZO_TLB");
+	  log_info(log_cpu,"El algoritmo d reemplazo de la TLB es: %s \n",reemplazo_tlb);
+	  //char* reemplazo_tlb = config_get_string_value(config_cpu,"REEMPLAZO_TLB");
 	  algoritmo_config = obtener_algoritmo(reemplazo_tlb);
 	  retardo_noop = config_get_int_value(config_cpu,"RETARDO_NOOP");
+	  log_info(log_cpu,"El retardo NO_OP es: %d \n",retardo_noop);
 
 }
 
@@ -74,7 +77,7 @@ int main() {
     //fd_kernel = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
     fd_cpu = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha_dispatch);
 
-    fd_cpu_interrupt = iniciar_servidor(log_cpu,"CPU",ip,puerto_interrupt);
+    fd_cpu_interrupt = iniciar_servidor(log_cpu,"CPU INTERRUPT",ip,puerto_interrupt);
 
 
 
@@ -90,7 +93,7 @@ int main() {
 
 
 //	log_trace(log_cpu,"El tamaño de las paginas es %d", tam_paginas);
-   log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
+ //  log_trace(log_cpu,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
 
     //conexion entre cpu (Servidor) y kernel(cliente)

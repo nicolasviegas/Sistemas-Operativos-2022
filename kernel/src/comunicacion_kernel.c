@@ -35,7 +35,7 @@ static void procesar_conexion_kernel(void* void_args) {
     t_list* lista_intrucciones_1 = list_create();
     while (cliente_socket != -1) {
 
-    	log_error(log_kernel,"El cliente socket es: %d",cliente_socket);
+    	//log_error(log_kernel,"El cliente socket es: %d",cliente_socket);
 
         if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
         	contador_cliente++;
