@@ -55,6 +55,21 @@ void inicializar_listas(){
 }
 
 void cerrar_programa5(t_log* logger) {
+
+	//log_warning(log_memoria,"La cant de archivos swap que se crearon: %d",cant_archivos_swap);
+
+	for(int i = 0; i < cant_archivos_swap ; i++){
+		char* nombre = pasar_a_char(i);
+
+
+		char *ruta_archivo = string_new();
+		string_append_with_format(&ruta_archivo,"%s/",path_swap);
+		string_append(&ruta_archivo, nombre);
+		remove(ruta_archivo);
+		free(ruta_archivo);
+
+	}
+
     log_destroy(logger);
 
     free(memoria_principal);
@@ -86,7 +101,7 @@ int main() {
 
     char* ip;
 
-
+    cant_archivos_swap = 0;
 
     signal(SIGINT, sighandler);
 

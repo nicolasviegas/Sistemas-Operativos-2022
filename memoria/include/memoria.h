@@ -59,6 +59,8 @@ char* path_swap;
 
 int punteroClock;
 
+int cant_archivos_swap;
+
 t_log* log_memoria;
 
 typedef struct{

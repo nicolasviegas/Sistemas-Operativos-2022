@@ -34,7 +34,7 @@ typedef struct{
 
 	float rafagaAnterior;
 	float estimacionActual;
-	int estimacionAnterior;
+	float estimacionAnterior;
 	float horaDeIngresoAExe;
 	bool suspendido;
 	uint32_t tiempo_bloqueo;

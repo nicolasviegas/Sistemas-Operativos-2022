@@ -316,7 +316,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 
 		 			 if(entrada_origen != NULL){
-			 			 log_debug(log_cpu,"Entre en el caso feliz origen de la tlb en cpy");
+			 			 log_debug(log_cpu,"TLB HIT!");
 
 		 				send_TAM(fd_memoria,TLB_CPY);//le aviso que tlb read le va a mandar cosas
 		 				send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
@@ -337,14 +337,14 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 		 			 }
 		 			 else{
-		 			 log_debug(log_cpu,"Entre en el caso triste origen de la tlb en cpy");
+		 			 log_trace(log_cpu,"TLB MISS!");
 		 			 uint32_t entrada_1er_nivel_origen = obtener_entrada_1er_nivel(numero_pagina_origen);
 		 			 uint32_t entrada_2do_nivel_origen = obtener_entrada_2do_nivel(numero_pagina_origen);
 		 			 desplazamiento_origen = obtener_desplazamiento(parametro2,numero_pagina_origen);
 
 
 		 			send_TAM(fd_memoria,TLB_CPY); // le aviso a memoria que se viene un tlb read
-					log_trace(log_cpu,"TLB MISS!");
+					//log_trace(log_cpu,"TLB MISS!");
 
 					send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
@@ -402,7 +402,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 
 		 					 			 if(entrada_destino != NULL){
-		 						 			 log_debug(log_cpu,"Entre en el caso feliz origen de la tlb en cpy");
+		 						 			 log_debug(log_cpu,"TLB HIT!");
 
 		 					 				send_TAM(fd_memoria,TLB_CPY);//le aviso que tlb read le va a mandar cosas
 		 					 				send_TAM(fd_memoria,1234);//el 1234 es para avisarle a memoria que esta en la tlb
@@ -423,14 +423,14 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 		 					 			 }
 		 					 			 else{
-		 					 			 log_debug(log_cpu,"Entre en el caso triste origen de la tlb en cpy");
+		 					 			 log_trace(log_cpu,"TLB MISS!");
 		 					 			 uint32_t entrada_1er_nivel_destino = obtener_entrada_1er_nivel(numero_pagina_destino);
 		 					 			 uint32_t entrada_2do_nivel_destino = obtener_entrada_2do_nivel(numero_pagina_destino);
 		 					 			 desplazamiento_destino = obtener_desplazamiento(parametro1,numero_pagina_destino);
 
 
 		 					 			send_TAM(fd_memoria,TLB_CPY); // le aviso a memoria que se viene un tlb read
-		 								log_trace(log_cpu,"TLB MISS!");
+		 								//log_trace(log_cpu,"TLB MISS!");
 
 		 								send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 

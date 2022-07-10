@@ -306,7 +306,7 @@ void hiloReady_Exe(){
 			pthread_mutex_unlock(&mutexExe);*/
 
 			if(algoritmo_config == SRT){
-				log_info(log_kernel, "[EXEC] Ingresa el carpincho de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", procesoAEjecutar->PID, procesoAEjecutar->estimacionActual);
+				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", procesoAEjecutar->PID, procesoAEjecutar->estimacionActual);
 				time_t a = time(NULL);
 				procesoAEjecutar->horaDeIngresoAExe = ((float) a)*1000;
 			}else{
@@ -413,7 +413,7 @@ void hiloBlockASuspension(){
 
 			if(pcb->tiempo_bloqueo <= tiempo_max_bloqueado){
 
-						log_info(log_kernel,"[BLOCK] Se bloquea el proceso %d milisegs, ",pcb->tiempo_bloqueo);
+						log_info(log_kernel,"[BLOCK] Se bloquea el proceso %d, %d milisegs, ",pcb->PID,pcb->tiempo_bloqueo);
 
 						usleep(pcb->tiempo_bloqueo*1000);
 
@@ -459,7 +459,7 @@ void hiloBlockASuspension(){
 
 						//sem_post(&multiprogramacion);
 					}else{//sino solo lo bloqueo y lo devuelvo a ready
-						log_info(log_kernel,"[SUSPENDED] Se suspende %d milisegs, ",pcb->tiempo_bloqueo);
+						log_info(log_kernel,"[SUSPENDED] Se suspende el proceso %d, %d milisegs, ",pcb->PID,pcb->tiempo_bloqueo);
 
 						usleep(tiempo_max_bloqueado*1000);
 
@@ -642,7 +642,7 @@ pcb_t* obtenerSiguienteSJF(){
 
 	//log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
 
-    for(i=1;i<list_size(colaReady);i++){
+    for(i=0;i<list_size(colaReady);i++){
     	procesoAux = list_get(colaReady,i);
     	log_error(log_kernel,"El proceso %d, tiene una estimacion actual de: %f",procesoAux->PID,procesoAux->estimacionActual);
     	if(shortestJob > procesoAux->estimacionActual){
@@ -655,10 +655,9 @@ pcb_t* obtenerSiguienteSJF(){
     procesoPlanificado = list_remove(colaReady, indexARemover);
 
 
-
     pthread_mutex_unlock(&mutexReady);
 
-	log_warning(log_kernel,"El proceso %d fue elegido mediante el algoritmo SRT ",procesoAux->PID);
+	log_warning(log_kernel,"El proceso %d fue elegido mediante el algoritmo SRT ",procesoPlanificado->PID);
 
 	return procesoPlanificado;
 }

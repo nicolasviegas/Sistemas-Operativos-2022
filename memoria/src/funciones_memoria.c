@@ -666,8 +666,8 @@ void crear_archivo(char *nuevo_archivo){
 	if (stat(path_swap, &st) == -1) { //poner ruta a la carpeta donde se vana crear los archivos .swap
 
 		 mkdir(path_swap, 0775);
-		 printf("created directory swap successfully! \n");
-
+		// printf("created directory swap successfully! \n");
+		 log_info(log_memoria,"Se creo el directorio swap correctamente");
 	}
 
 	//FILE *archivox = fopen(ruta_archivo, "wb+");
@@ -683,12 +683,13 @@ void crear_archivo(char *nuevo_archivo){
 
 		//fwrite(a,sizeof(a),1,archivo);
 
-
+		cant_archivos_swap++;
 		fclose(archivo);
 	}
 	else
 	{
-		error_show("El directorio: %s ya existe\n", ruta_archivo);
+		//error_show("El directorio: %s ya existe\n", ruta_archivo);
+		log_error("El directorio: %s ya existe\n", ruta_archivo);
 	}
 
 
