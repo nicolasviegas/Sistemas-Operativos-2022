@@ -17,13 +17,12 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
     send_TAM(cliente_socket,cant_entradas_por_tabla);
 
-    log_debug(log_memoria,"el cliente sock es: %d",cliente_socket);
 
     while (cliente_socket != -1) {
     	//log_trace(log_memoria,"Estoy dentro del while cliente socket");
 
     		uint32_t condicion;
-    		log_trace(log_memoria,"la condicion antes del recv es: %d",condicion);
+    		//log_trace(log_memoria,"la condicion antes del recv es: %d",condicion);
     	    if (recv(cliente_socket, &condicion, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
     		log_info(log_memoria, "DISCONNECT!");
     		return;
@@ -31,7 +30,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
     	    if(condicion == 666){
     	    	uint32_t tam_proceso;
-				log_trace(log_memoria,"la condicion antes del recv es: %d",tam_proceso);
+				//log_trace(log_memoria,"la condicion antes del recv es: %d",tam_proceso);
 				if (recv(cliente_socket, &tam_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
 				log_info(log_memoria, "DISCONNECT!");
 				return;
@@ -59,12 +58,12 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				 log_error(log_memoria,"No hay mas entradas para tablas de primer nivel");
 			 }else{
 				 send_indice_a_kernel(fd_kernel,indice_tabla);
-				 log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
+				 //log_trace(log_memoria,"envie el inice a kernel %d", indice_tabla);
 			 }
 
 			char* path_char = pasar_a_char(indice_tabla);
 
-			log_debug(log_memoria,"El path  char es: %s",path_char);
+			//log_debug(log_memoria,"El path  char es: %s",path_char);
 
 			crear_archivo(path_char);
 
@@ -79,7 +78,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
     	    }
 
     		if(condicion == TLB_RD){
-    			log_warning(log_memoria, "Voy a recibir de TLB READ ");
+    			//log_warning(log_memoria, "Voy a recibir de TLB READ ");
 
     			//send_TAM(cliente_socket,TLB_CPY);
     ////
@@ -120,7 +119,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					actualizar_bit_uso_tlb(marco_aux);
 
 					send_TAM(cliente_socket,valor_leido);
-					log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
+					//log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
 
 
 
@@ -184,7 +183,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								pagina_buscada->bit_uso = 1;
 								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,valor_leido);
-								log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
+							//	log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
 								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
@@ -196,7 +195,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 								if(frame_a_utilizar != -1){
 									if(al_proceso_le_quedan_frames(indice_tabla)){
-										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
+									//	log_error(log_memoria,"Entre ya que al proceso le quedan frames");
 
 										//poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 										log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
@@ -205,16 +204,16 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										pagina_buscada->bit_uso = 1;
 										usleep(retardo_memoria*1000);
 										send_TAM(cliente_socket,valor_leido);
-										log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
+										//log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
 										usleep(retardo_memoria*1000);
 										send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 										log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 									}
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
-											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+										//	log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
 											//log_info(log_memoria,"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-											log_info(log_memoria,"El indice tabla que voy a pasar por parametro es : %d",indice_tabla);
+										//	log_info(log_memoria,"El indice tabla que voy a pasar por parametro es : %d",indice_tabla);
 											//t_list* contenido_de_pagina = list_create();
 											log_info(log_memoria,"La pagina buscada  es: %d",pagina_buscada->nro_pagina);
 											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina,tamanio);
@@ -226,7 +225,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											pagina_buscada->bit_uso = 1;
 											usleep(retardo_memoria*1000);
 											send_TAM(cliente_socket,valor_leido);
-											log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
+										//	log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
 											usleep(retardo_memoria*1000);
 											send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 											log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
@@ -241,7 +240,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
     		}
     		if(condicion == TLB_CPY){
-    			log_warning(log_memoria, "Voy a recibir de TLB CPY ");
+    			//log_warning(log_memoria, "Voy a recibir de TLB CPY ");
 
 				//send_TAM(cliente_socket,TLB_CPY);
 	////
@@ -280,7 +279,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 					actualizar_bit_modif_tlb(marco_aux);
 
 					send_TAM(cliente_socket,18);
-					log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
+					//log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
 
 
 
@@ -339,7 +338,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						pagina_buscada->bit_uso = 1;
 						pagina_buscada->bit_modificado = 1;
 						send_TAM(cliente_socket,18);
-						log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
+						//log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
 
 						send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 						log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
@@ -351,21 +350,21 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 						if(frame_a_utilizar != -1){
 							if(al_proceso_le_quedan_frames(indice_tabla)){
-								log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+								//log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
 								traer_proceso_de_swap(indice_tabla,tamanio,pagina_buscada,frame_a_utilizar);
 								//poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 								//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
 								pagina_buscada->bit_uso = 1;
 								pagina_buscada->bit_modificado = 1;
 								send_TAM(cliente_socket,18);
-								log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
+								//log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
 								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 							}
 							else{
 								if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
-									log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+								//	log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
 									t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina,tamanio);
 									//pthread_mutex_lock(&mutexSwap);
 									ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
@@ -375,7 +374,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 									pagina_buscada->bit_uso = 1;
 									pagina_buscada->bit_modificado = 1;
 									send_TAM(cliente_socket,18);
-									log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
+								//	log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
 									usleep(retardo_memoria*1000);
 									send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 									log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
@@ -393,7 +392,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
     		}
     		if(condicion == TLB_WR){
-					log_warning(log_memoria, "Voy a recibir de TLB WRITE ");
+					//log_warning(log_memoria, "Voy a recibir de TLB WRITE ");
 
 					//send_TAM(cliente_socket,TLB_CPY);
 		////
@@ -447,7 +446,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						actualizar_bit_modif_tlb(marco_aux);
 
 						send_TAM(cliente_socket,100); // el 100 es por que se escribio correctamente
-						log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
+						//log_warning(log_memoria,"Le mande un 18 a cpu (vino por TLB)");
 
 
 					}else{
@@ -512,13 +511,13 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							if(pagina_buscada->bit_presencia == 1){
 
 								//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
-								log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
+								//log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 
 								escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
 								pagina_buscada->bit_uso = 1;
 								pagina_buscada->bit_modificado = 1;
 								send_TAM(cliente_socket,100);
-								log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
+								//log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
 								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
@@ -530,8 +529,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 								if(frame_a_utilizar != -1){
 									if(al_proceso_le_quedan_frames(indice_tabla)){
-										log_error(log_memoria,"Entre ya que al proceso le quedan frames");
-										log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
+								//		log_error(log_memoria,"Entre ya que al proceso le quedan frames");
+									//	log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 										traer_proceso_de_swap(indice_tabla,tamanio,pagina_buscada,frame_a_utilizar);
 										//poner_pagina_en_marco(frame_a_utilizar,pagina_buscada,indice_tabla);
 										//valor_leido = leer_de_memoria(pagina_buscada->frame,desplazamiento);
@@ -539,26 +538,26 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										pagina_buscada->bit_uso = 1;
 										pagina_buscada->bit_modificado = 1;
 										send_TAM(cliente_socket,100);
-										log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
+										//log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
 										usleep(retardo_memoria*1000);
 										send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 										log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
 									}
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
-											log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
+										//	log_error(log_memoria,"Entre ya que el proceso tiene al menos un pag en memoria");
 											t_list* contenido_de_pagina = traer_pagina_de_swap(indice_tabla,pagina_buscada->nro_pagina,tamanio);
 											//pthread_mutex_lock(&mutexSwap);
 											ejecutar_reemplazo(contenido_de_pagina,pagina_buscada,indice_tabla);
 											//pthread_mutex_unlock(&mutexSwap);
 											list_destroy(contenido_de_pagina);
-											log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
+											//log_info(log_memoria,"La pagina en la que voy a escribir con la instruccion que me dieron es: %d",pagina_buscada->nro_pagina);
 
 											escribir_pagina(valor,pagina_buscada->frame,desplazamiento);
 											pagina_buscada->bit_uso = 1;
 											pagina_buscada->bit_modificado = 1;
 											send_TAM(cliente_socket,100);
-											log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
+											//log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
 											usleep(retardo_memoria*1000);
 											send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
 											log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
@@ -596,10 +595,10 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 
 
 			if(!el_proceso_tiene_almenos_una_pag_en_mem(indice_proceso)){
-				log_error(log_memoria,"El proceso es nuevo asi que lo meto de una a mem ppal");
+				//log_error(log_memoria,"El proceso es nuevo asi que lo meto de una a mem ppal");
 				//poner_proceso_en_mem_ppal(indice_proceso);
 			}else{
-				log_error(log_memoria,"El proceso no es nuevo asi que ya lo trajo swap");
+				//log_error(log_memoria,"El proceso no es nuevo asi que ya lo trajo swap");
 			}
 
 			send_TAM(cliente_socket,5555); //le aviso a kernel que ya cargue el proceso
@@ -624,7 +623,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				log_info(log_memoria, "fallo al recibir nro de pagina!");
 				return;
 				}
-				log_trace(log_memoria,"[-------------]Saco de memoria el proceso: %d",indice_proceso);
+				log_trace(log_memoria,"Saco de memoria el proceso: %d",indice_proceso);
 
 
 				sacar_proceso_de_memoria(indice_proceso);

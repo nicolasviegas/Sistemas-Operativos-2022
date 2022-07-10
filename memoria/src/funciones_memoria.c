@@ -42,7 +42,7 @@ t_list* dividir_proceso_en_paginas(uint32_t tam_proceso){
 	float a = (float)tam_proceso/(float)tamanio_paginas;
 	uint32_t cant_pags = ceil(a);
 
-	log_debug(log_memoria,"El float es: %f",a);
+	//log_debug(log_memoria,"El float es: %f",a);
 	t_list* lista_con_todas_las_paginas = list_create();
 
 
@@ -171,7 +171,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			if(recorredorPaginas->bit_uso == 0 && recorredorPaginas->bit_modificado == 0 ){
 				log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
 				log_warning(log_memoria,"Victima CLOCK-M: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
-				log_warning(log_memoria,"ENTRE POR EL 0 | 0");
+				//log_warning(log_memoria,"ENTRE POR EL 0 | 0");
 
 				return recorredorPaginas;
 			}
@@ -191,7 +191,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			if(recorredorPaginas->bit_uso == 0 && recorredorPaginas->bit_modificado == 1 ){
 				log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
 				log_warning(log_memoria,"Victima CLOCK-M: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
-				log_warning(log_memoria,"ENTRE POR EL 0 | 1");
+				//log_warning(log_memoria,"ENTRE POR EL 0 | 1");
 				return recorredorPaginas;
 			}
 
@@ -212,7 +212,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			if(recorredorPaginas->bit_uso == 0 && recorredorPaginas->bit_modificado == 0 ){
 				log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
 				log_warning(log_memoria,"Victima CLOCK-M: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
-				log_warning(log_memoria,"ENTRE POR EL 0 | 0 EN LA TERCER VUELTA");
+				//log_warning(log_memoria,"ENTRE POR EL 0 | 0 EN LA TERCER VUELTA");
 				return recorredorPaginas;
 			}
 
@@ -231,7 +231,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			if(recorredorPaginas->bit_uso == 0 && recorredorPaginas->bit_modificado == 1 ){
 				log_warning(log_memoria,"Indice de la tabla 1er nivel de la pagina a meter: %d", indice_tabla_1er_nivel);
 				log_warning(log_memoria,"Victima CLOCK-M: pagina:%d - frame:%d \n", recorredorPaginas->nro_pagina, recorredorPaginas->frame);
-				log_warning(log_memoria,"ENTRE POR EL 0 | 1 EN LA CUARTA VUELTA");
+			//	log_warning(log_memoria,"ENTRE POR EL 0 | 1 EN LA CUARTA VUELTA");
 				return recorredorPaginas;
 			}
 		}
@@ -306,7 +306,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 
 void cargar_lista_frames(){
 	int cantidad_marcos = tamanio_memoria / tamanio_paginas;
-	log_trace(log_memoria,"Cant marcos seran %d",cantidad_marcos);
+	//log_trace(log_memoria,"Cant marcos seran %d",cantidad_marcos);
 	for(int i=0;i < cantidad_marcos;i++){
 		frame* marco = malloc(sizeof(frame)); // no se libera?
 		marco->nro_pagina = -1;
@@ -316,7 +316,7 @@ void cargar_lista_frames(){
 		list_add(lista_frames,marco);
 		pthread_mutex_unlock(&mutexListaFrame);
 	}
-	log_trace(log_memoria,"Se genero la lista de marcos, con %d marcos",list_size(lista_frames));
+	//log_trace(log_memoria,"Se genero la lista de marcos, con %d marcos",list_size(lista_frames));
 
 }
 
@@ -368,21 +368,12 @@ uint32_t leer_de_memoria(uint32_t frame,uint32_t desplazamiento){
 
 
 	memcpy(&valor_leido,memoria_principal+posicion_marco,sizeof(uint32_t));
-	if(valor_leido != 0){
-		log_error(log_memoria,"El valor que leo en memoria principal %d con posicion marco: %d",valor_leido,posicion_marco);
-	}
+//	if(valor_leido != 0){
+//		log_error(log_memoria,"El valor que leo en memoria principal %d con posicion marco: %d",valor_leido,posicion_marco);
+//	}
 	return valor_leido;
 }
 
-/*char* leer_pagina_de_memoria(uint32_t frame){
-	void* valor_leido;
-	uint32_t posicion_marco = frame * tamanio_paginas;
-
-	memcpy(&valor_leido,memoria_principal+posicion_marco,tamanio_paginas);
-	//log_error(log_memoria,"El valor despues de leer en memoria %s ",valor_leido);
-	//printf("El valor leido de memoria es: %s,",valor_leido);
-	return (char*)valor_leido;
-}*/
 
 void copiar_en_memoria(uint32_t marco_origen,uint32_t desplazamiento_origen,uint32_t marco_destino,uint32_t desplazamiento_destino){
 
@@ -410,10 +401,10 @@ uint32_t buscar_frame_libre(){
 		if(!frameAux->ocupado){
 
 			if(frameAux->ocupado){
-				log_info(log_memoria,"*******************************EL FRAME  QUE ACABO DE ELEGIR %d ESTA OCUPADO", i );
+				//log_info(log_memoria,"*******************************EL FRAME  QUE ACABO DE ELEGIR %d ESTA OCUPADO", i );
 
 			}else{
-				log_info(log_memoria,"-------------------------------------EL FRAME QUE ACABO DE ELEGIR %d ESTA LIBRE",i);
+				//log_info(log_memoria,"-------------------------------------EL FRAME QUE ACABO DE ELEGIR %d ESTA LIBRE",i);
 
 			}
 
@@ -442,21 +433,8 @@ void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indi
     uint32_t frame = info_paginaAReemplazar->frame;
     uint32_t  biteme = info_paginaAReemplazar->bit_modificado;
     info_paginaAReemplazar->bit_presencia = 0;
-//
-//    if(!send_pag_swamp(socketSwamp,info_paginaAReemplazar, carpincho->pid)){
-//        return false;
-//    }
-//
-//    if(biteme != 0){
-//        MEM_SWAP_MESSAGE respuesta;
-//        recv(socketSwamp, &respuesta, sizeof(MEM_SWAP_MESSAGE), 0);
-//
-//        if(respuesta != PAGE_ADDED){
-//            return false;
-//        }
-//    }
 
-    log_error(log_memoria,"La info pagina a reemplazar en ejecutra reemplazo es: %d",info_paginaAReemplazar->nro_pagina);
+    log_error(log_memoria,"La pagina a reemplazar es: %d",info_paginaAReemplazar->nro_pagina);
 
     if(info_paginaAReemplazar->bit_modificado == 1){
     	escribir_en_swap(indice_pagina_1er_nivel,info_paginaAReemplazar);
@@ -469,7 +447,7 @@ void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indi
     info_pagina->bit_uso = 1;
     //info_pagina->tiempo_uso = obtener_tiempo();
 
-    log_error(log_memoria,"Antes de escribir pagina el frame es: %d",info_pagina->frame);
+    //log_error(log_memoria,"Antes de escribir pagina el frame es: %d",info_pagina->frame);
     uint32_t valor;
     uint32_t desp = 0;
     for(int i = 0 ; i < list_size(lista_valores);i++){
@@ -489,7 +467,7 @@ bool el_proceso_tiene_almenos_una_pag_en_mem(uint32_t indice_tabla_1er_nivel){
 	paginas_del_proceso = buscar_paginas_proceso(indice_tabla_1er_nivel);
 	t_list* paginas_del_proceso_en_mem;
 	paginas_del_proceso_en_mem = buscar_paginas_proceso_en_mem_ppal(paginas_del_proceso);
-	log_error(log_memoria,"El proceso %d tiene %d paginas en memoria",indice_tabla_1er_nivel,list_size(paginas_del_proceso_en_mem));
+	//log_error(log_memoria,"El proceso %d tiene %d paginas en memoria",indice_tabla_1er_nivel,list_size(paginas_del_proceso_en_mem));
 	if(list_size(paginas_del_proceso_en_mem) > 0 ){
 		return true;
 	}
@@ -577,7 +555,7 @@ void sacar_pagina_de_marco(pagina* pagina_aux,uint32_t indice_proceso){
 				escribir_pagina(0,i,desp);
 				//desp += 4;
 			}
-			log_warning(log_memoria,"//////////////////MIRAME MIRAME SE PUSO UN FRAME (el %d) COMO LIBREEEEE, con pagina %d //////////////////",i,pagina_aux->nro_pagina);
+			//log_warning(log_memoria,"//////////////////MIRAME MIRAME SE PUSO UN FRAME (el %d) COMO LIBREEEEE, con pagina %d //////////////////",i,pagina_aux->nro_pagina);
 		}
 		pthread_mutex_unlock(&mutexListaFrame);
 
@@ -672,7 +650,7 @@ void crear_archivo(char *nuevo_archivo){
 
 	//FILE *archivox = fopen(ruta_archivo, "wb+");
 
-	log_debug(log_memoria,"el nombre del path con el archivo adentro es: %s",ruta_archivo);
+	//log_debug(log_memoria,"el nombre del path con el archivo adentro es: %s",ruta_archivo);
 
 
 
@@ -778,7 +756,7 @@ char* pasar_a_char_sin_terminacion(int num){
 
 
 void poner_archivo_con_ceros(char* path_char,uint32_t tam_proceso){
-	log_trace(log_memoria,"[LLENO DE CEROS EL ARCHIVO DE SAWP que esta en: %s]",path_char);
+	//log_trace(log_memoria,"[LLENO DE CEROS EL ARCHIVO DE SAWP que esta en: %s]",path_char);
 	FILE *fp= fopen( path_char , "rb+" );
 	char* a = "0";
 	int x = tam_proceso / 4;

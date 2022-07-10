@@ -11,14 +11,14 @@ int obtener_algoritmo(char* algoritmo_char){
 	    if (strcmp(algoritmo_char,"CLOCK") == 0)
 	    {
 	        switcher = CLOCK;
-	        log_info(log_memoria, "El algoritmo de reemplazo elegido es CLOCK.");
+	      //  log_info(log_memoria, "El algoritmo de reemplazo elegido es CLOCK.");
 	    }
 
 
 	    if (strcmp(algoritmo_char,"CLOCK-M") == 0)
 	    {
 	        switcher = CLOCK_M;
-	        log_info(log_memoria, "El algoritmo de reemplazo elegido es CLOCK-M.");
+	       // log_info(log_memoria, "El algoritmo de reemplazo elegido es CLOCK-M.");
 	    }
 	    return switcher;
 }
@@ -31,12 +31,20 @@ void inicializar_config(){
 	  tamanio_memoria = config_get_int_value(config_memoria,"TAM_MEMORIA");
 	  tamanio_paginas = config_get_int_value(config_memoria,"TAM_PAGINA");
 	  cant_entradas_por_tabla = config_get_int_value(config_memoria,"ENTRADAS_POR_TABLA");
+	  log_info(log_memoria,"Cantidad de entradas por tabla: %d\n",cant_entradas_por_tabla);
 	  retardo_memoria = config_get_int_value(config_memoria,"RETARDO_MEMORIA");
+	  log_info(log_memoria,"Retardo memoria: %d\n",retardo_memoria);
 	  retardo_swap = config_get_int_value(config_memoria,"RETARDO_SWAP");
+	  log_info(log_memoria,"Retardo swap: %d\n",retardo_swap);
 	  char* algoritmo_char = config_get_string_value(config_memoria,"ALGORITMO_REEMPLAZO");
+	  log_info(log_memoria,"El algoritmo seleccionado es: %s\n",algoritmo_char);
+
 	  algoritmo_config = obtener_algoritmo(algoritmo_char);
 	  marcos_por_proceso = config_get_int_value(config_memoria,"MARCOS_POR_PROCESO");
+	  log_info(log_memoria,"Cantidad de marcos por proceso: %d\n",marcos_por_proceso);
+
 	  path_swap = config_get_string_value(config_memoria,"PATH_SWAP");
+	  log_info(log_memoria,"Path swap: %s\n",path_swap);
 
 }
 
@@ -118,16 +126,9 @@ int main() {
     fd_memoria = iniciar_servidor(log_memoria,"MEMORIA",ip,puerto_escucha);
 
 
-    //log_trace(log_memoria,"El socket de memoria es : %d",fd_memoria);
-
-
-    //
-
     //conexion entre cpu (Servidor) y kernel(cliente)
     while(server_escuchar_memoria(log_memoria,"MEMORIA",fd_memoria));
 
-
-  //  log_warning(log_cpu,"Despues de server escuchar");
 
     cerrar_programa5(log_memoria);
 
