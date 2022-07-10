@@ -221,6 +221,8 @@ pcb_t* sacarDeReadySuspended(){
 
 	pthread_mutex_unlock(&mutexReadySuspended);
 
+	agregarAReady(proceso);
+
 	return proceso;
 }
 
@@ -505,7 +507,7 @@ void hiloSuspensionAReady(){
 
 
 
-		agregarAReady(proceso);
+	//	agregarAReady(proceso);
 
 		if(hay_alguien_exe){
 					if(algoritmo_config == SRT){
