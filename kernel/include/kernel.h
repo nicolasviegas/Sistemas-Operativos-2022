@@ -25,15 +25,6 @@
 #include "../include/funciones_kernel.h"
 #include "../include/planificacion.h"
 
-typedef enum{ //tipos de identificadores a parsear
-    NEW = 25, //0
-    READY = 26, //1
-    EXEC = 27, //2
-    BLOCKED = 28,//3 LO AGREGO YO
-    SUSPENDED_BLOCKED = 29, //4
-    SUSPENDED_READY = 30,
-	FINISH = 31, //5
-}op_estados;
 
 typedef enum{ //tipos de identificadores a parsear
     NEW = 25, //0
@@ -44,6 +35,7 @@ typedef enum{ //tipos de identificadores a parsear
     SUSPENDED_READY = 30,
 	FINISH = 31, //5
 }op_estados;
+
 
 pthread_t hiloNewReady;
 

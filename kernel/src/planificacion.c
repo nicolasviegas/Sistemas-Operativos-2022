@@ -121,6 +121,7 @@ void agregarABlock(pcb_t* proceso){		//ver semaforos
 	sem_post(&contadorBlock);
 
 	sem_post(&analizarSuspension);
+
 	sem_wait(&suspensionFinalizada);
 }
 

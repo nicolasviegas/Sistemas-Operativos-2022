@@ -146,7 +146,7 @@ static void procesar_conexion_kernel(void* void_args) {
 
             	break;
             }
-           /* case READ:
+            case READ:
             {
             	uint32_t parametro1;
             	if (!recv_READ(cliente_socket, &parametro1)) {
@@ -181,7 +181,7 @@ static void procesar_conexion_kernel(void* void_args) {
             	//log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
             	//log_warning(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
             	break;
-			}*/
+			}
             case EXIT:
             {
             	//cargar_instruccion(EXIT,"EXIT",NULL,NULL);

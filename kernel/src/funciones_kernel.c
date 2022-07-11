@@ -51,6 +51,7 @@ void pedir_tabla_a_memoria(){
 void enviar_pcb_a_cpu(pcb_t* pcb_proceso){
 
 	//log_trace(log_kernel,"Entre a enviar pcb a cpu");
+
 	uint32_t b = list_size(pcb_proceso->instrucciones);
 
 	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);

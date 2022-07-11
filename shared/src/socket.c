@@ -27,7 +27,6 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
             close(socket_servidor);
             continue;
         }
-
         // Ni bien conecta uno nos vamos del for
         conecto = true;
         break;
