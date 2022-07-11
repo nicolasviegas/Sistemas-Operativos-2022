@@ -1,8 +1,17 @@
-![Screenshot 2022-04-26 123448](https://user-images.githubusercontent.com/62635603/178351694-f29f58ff-09dd-4ea4-afc6-1b113e07b288.png)
 
-TP: **KISS**
+## TP
+[KISS]: https://docs.google.com/document/d/17WP76Vsi6ZrYlpYT8xOPXzLf42rQgtyKsOdVkyL5Jj0/edit
 
-Integrantes:
-_Nicolas Viegas_
-_Tomas Rossi_
-_Matias Rizzato Busta_
+[KISS]
+
+
+<!-- Integrantes -->
+## Integrantes
+
+* _Nicolas Viegas_
+* _Tomas Rossi_
+* _Matias Rizzato Busta_
+
+
+[KISS]: https://docs.google.com/document/d/17WP76Vsi6ZrYlpYT8xOPXzLf42rQgtyKsOdVkyL5Jj0/edit
+
