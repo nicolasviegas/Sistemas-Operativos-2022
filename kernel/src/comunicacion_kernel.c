@@ -79,13 +79,10 @@ static void procesar_conexion_kernel(void* void_args) {
 //////////////////////////////////////////////////////////////////////////////////////////////
 
         	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
-        //	uint32_t a = list_size(lista_instrucciones_kernel);
-
 
 
         	pcb_proceso->PID = contador_cliente;
         	pcb_proceso->tamanio = tam;
-        	//pcb_proceso->instrucciones = lista_instrucciones_kernel;
         	pcb_proceso->instrucciones = lista_intrucciones_1;
         	pcb_proceso->PC = 0;//contador_instruccion;//arranca desde la instruccion 0
         	pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
@@ -100,26 +97,18 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso-> suspendido = false;
         	pcb_proceso->tiempo_bloqueo = 0;
 
-        	//////////////////////////////////////////////////////////////////////////////////////////////////////
-        /*	if(list_size(lista_pcb_en_memoria) <= grado_multiprogramacion ){
-        		if(algoritmo_actual == "FIFO"){
-        		}
-        	}
-*/
+
         	agregarANew(pcb_proceso);
         	//log_warning(log_kernel,"pase el agregar a NEW");
 
 
-        	//interrupcion = false; //esto hay que borrarlo
 
-        	//list_destroy(lista_intrucciones_1);
         	//log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
 
         	//log_trace(log_kernel,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
 
 
-          // return;
         	break;
         }
 
@@ -137,7 +126,7 @@ static void procesar_conexion_kernel(void* void_args) {
 
          //  log_warning(log_kernel, "Deserialice NO_OP el parametro es: %d",parametro1);
            //cargar_instruccion(NO_OP,"NO_OP",parametro1,NULL);
-           cargar_instruccion2(NO_OP,"NO_OP",parametro1,NULL,lista_intrucciones_1);
+           cargar_instruccion2(NO_OP,"NO_OP",parametro1,(uint32_t)NULL,lista_intrucciones_1);
 
                // log_info(log_kernel, "entre al case NO_OP");
                 break;
@@ -150,8 +139,7 @@ static void procesar_conexion_kernel(void* void_args) {
             	     log_error(log_kernel, "Fallo recibiendo IO");
             	     break;
             	}
-            	//cargar_instruccion(IO,"I\O",parametro1,NULL);
-            	cargar_instruccion2(IO,"I\O",parametro1,NULL,lista_intrucciones_1);
+            	cargar_instruccion2(IO,"I\O",parametro1,(uint32_t)NULL,lista_intrucciones_1);
             	//log_warning(log_kernel, "Deserialice IO el parametro es: %d",parametro1);
             	//log_info(log_kernel, "entre a IO");
 
@@ -165,7 +153,7 @@ static void procesar_conexion_kernel(void* void_args) {
         	     log_error(log_kernel, "Fallo recibiendo READ");
         	     break;
             	}
-            	cargar_instruccion2(READ,"READ",parametro1,NULL,lista_intrucciones_1);
+            	cargar_instruccion2(READ,"READ",parametro1,(uint32_t)NULL,lista_intrucciones_1);
         //	log_warning(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
         	//log_info(log_kernel, "entre a IO");
         	break;
@@ -197,7 +185,7 @@ static void procesar_conexion_kernel(void* void_args) {
             case EXIT:
             {
             	//cargar_instruccion(EXIT,"EXIT",NULL,NULL);
-            	cargar_instruccion2(EXIT,"EXIT",NULL,NULL,lista_intrucciones_1);
+            	cargar_instruccion2(EXIT,"EXIT",(uint32_t)NULL,(uint32_t)NULL,lista_intrucciones_1);
             	//log_warning(log_kernel, "Entre en EXIT");
 
 				break;

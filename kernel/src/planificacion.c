@@ -71,7 +71,6 @@ void agregarAReady(pcb_t* proceso){
 	//log_trace(log_kernel,"Entre en agregar a ready");
 
 	time_t a = time(NULL);
-	//proceso->horaDeIngresoAReady = ((float) a)*1000;
 
 	pthread_mutex_lock(&mutexReady);
 
@@ -103,7 +102,6 @@ void agregarAReady(pcb_t* proceso){
 void agregarABlock(pcb_t* proceso){		//ver semaforos
 	//log_trace(log_kernel,"Entre en agregar a block ");
 	//log_info(log_kernel, "ADSSSS el proceso %d tiene el PC en %d",proceso->PID,proceso->PC);
-	//sem_wait(&contadorExe);
 
 	bool tienenMismoPID(void* elemento){
 
@@ -113,7 +111,6 @@ void agregarABlock(pcb_t* proceso){		//ver semaforos
 			return false;
 	}
 
-	//list_remove_by_condition(listaExe, tienenMismoPID);
 
 	pthread_mutex_lock(&mutexBlock);
 
@@ -124,7 +121,7 @@ void agregarABlock(pcb_t* proceso){		//ver semaforos
 	sem_post(&contadorBlock);
 
 	sem_post(&analizarSuspension);
-	// como funciona el analizar suspension?
+
 	sem_wait(&suspensionFinalizada);
 }
 
@@ -221,7 +218,7 @@ pcb_t* sacarDeReadySuspended(){
 
 	pthread_mutex_unlock(&mutexReadySuspended);
 
-	agregarAReady(proceso);
+	agregarAReady(proceso);//todo ESTE AGREGAR A READY ES EL QUE CAMBIAMOS PARA QUE FINALICE ACORDE A LAS PRUEBAS, CUALQUIER COSA COMENTAR ESTE Y DESCOMENTAR EL QUE QUEDO MARCADO
 
 	return proceso;
 }
@@ -250,7 +247,6 @@ void hiloNew_Ready(){
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
 			agregarAReady(proceso);
 
-			//&& proceso_en_ejecucion != proceso->PID
 
 			if(hay_alguien_exe ){
 			if(algoritmo_config == SRT){
@@ -258,31 +254,13 @@ void hiloNew_Ready(){
 						//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 						//  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
 				  	  	log_debug(log_kernel,"Envio una interrupcion 1");
-//				  	  uint32_t a;
-//				  	  						if (!recv_TAM(fd_cpu, &a)) {
-//				  	  										log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//				  	  						}
-//
-//				  	  						log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 6");
+
 				  	  	send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 						}else{
-						//	log_debug(log_kernel,"Entre en send interrupcion");
-//							uint32_t a;
-//													if (!recv_TAM(fd_cpu, &a)) {
-//																	log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//													}
-//
-//													log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 7");
-							//send_interrupcion(fd_cpu_interrupt,1);
+
 						}
 			}else{
-//				uint32_t a;
-//										if (!recv_TAM(fd_cpu, &a)) {
-//														log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//										}
-//
-//										log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 8");
-				//send_interrupcion(fd_cpu_interrupt,1);
+
 			}
 			sem_post(&contadorProcesosEnMemoria);
 		}
@@ -303,9 +281,6 @@ void hiloReady_Exe(){
 
 		if(procesoAEjecutar != NULL) {
 
-			/*pthread_mutex_lock(&mutexExe);
-			list_add(listaExe, procesoAEjecutar);
-			pthread_mutex_unlock(&mutexExe);*/
 
 			if(algoritmo_config == SRT){
 				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", procesoAEjecutar->PID, procesoAEjecutar->estimacionActual);
@@ -319,24 +294,6 @@ void hiloReady_Exe(){
 			enviar_pcb_a_cpu(procesoAEjecutar);
 
 			hay_alguien_exe = true;
-			//proceso_en_ejecucion = procesoAEjecutar->PID;
-
-
-//			uint32_t a;
-//			if (!recv_TAM(fd_cpu, &a)) {
-//							log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//			}
-//
-//			log_debug(log_kernel,"Despues de recibir el nro para sincronizarme ");
-
-
-//			uint32_t a;
-//						if (!recv_TAM(fd_cpu, &a)) {
-//										log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//						}
-//
-//						log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 9");
-			//send_interrupcion(fd_cpu_interrupt,1);
 
 
 			uint32_t pc;
@@ -348,7 +305,7 @@ void hiloReady_Exe(){
 
 			procesoAEjecutar->PC = pc;
 
-			//uint32_t tiempo_bloq_kernel;
+
 			//EL CPU ME DEVUELVE EL TIEMPO QUE SE VA A BLOQUEAR EL PROCESO POR E/S
 			if (!recv_tiempo_bloqueante(fd_cpu, &tiempo_bloq_kernel)) {
 				log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
@@ -360,10 +317,6 @@ void hiloReady_Exe(){
 			time_t b = time(NULL);
 			float tiempoDeFin = ((float) b)*1000;
 			procesoAEjecutar->rafagaAnterior = diferencia_de_tiempo(procesoAEjecutar->horaDeIngresoAExe, tiempoDeFin);
-
-			/*log_error(log_kernel,"La hora de ingreso del proceso %d a exe es: %f",procesoAEjecutar->PID,procesoAEjecutar->horaDeIngresoAExe);
-			log_error(log_kernel,"La tiempo que estuvo el proceso %d en cpu (rafaga anterior) es: %f",procesoAEjecutar->PID,procesoAEjecutar->rafagaAnterior);
-			log_error(log_kernel,"La estimacion anterior el proceso %d es: %d",procesoAEjecutar->PID,procesoAEjecutar->estimacionAnterior);*/
 
 			procesoAEjecutar->estimacionActual = alfa*(procesoAEjecutar->rafagaAnterior) + (1-alfa)*(procesoAEjecutar->estimacionAnterior);
 			procesoAEjecutar->estimacionAnterior = procesoAEjecutar->estimacionActual;
@@ -388,10 +341,7 @@ void hiloReady_Exe(){
 			hay_alguien_exe = false;
 
 
-		}/*else{
-
-
-		}*/
+		}
 	}
 }
 
@@ -407,7 +357,6 @@ void hiloBlockASuspension(){
 
 
 
-		//if(condiciones_de_suspension()){ // si el tiempo de bloqueo es > al del config hay que suspenderlo
 		if(list_size(listaBlock) != 0){
 
 			pcb_t* pcb = list_get(listaBlock,0);
@@ -430,36 +379,17 @@ void hiloBlockASuspension(){
 								//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 								//  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
 								  	log_debug(log_kernel,"Envio una interrupcion 2");
-//								  	uint32_t a;
-//								  							if (!recv_TAM(fd_cpu, &a)) {
-//								  											log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//								  							}
-//
-//								  							log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 1 ");
+
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
-								//	log_debug(log_kernel,"Entre en send interrupcion");
-//									uint32_t a;
-//															if (!recv_TAM(fd_cpu, &a)) {
-//																			log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//															}
-//
-//															log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 2 ");
-									//send_interrupcion(fd_cpu_interrupt,1);
+
 								}
 							}else{
-//								uint32_t a;
-//														if (!recv_TAM(fd_cpu, &a)) {
-//																		log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//														}
-//
-//														log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 3 ");
-								//send_interrupcion(fd_cpu_interrupt,1);
+
 						}
 
 ////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
 
-						//sem_post(&multiprogramacion);
 					}else{//sino solo lo bloqueo y lo devuelvo a ready
 						log_info(log_kernel,"[SUSPENDED] Se suspende el proceso %d, %d milisegs, ",pcb->PID,pcb->tiempo_bloqueo);
 
@@ -507,38 +437,21 @@ void hiloSuspensionAReady(){
 
 
 
-	//	agregarAReady(proceso);
+	//	agregarAReady(proceso); //TODO DATO IMPORTANTE, SI ESTE AGREGAR LO DESCOMENTAMOS EL I/O FUNCIONA COMO ERA AL PRINCIPIO, NO TERMINAN EN FIFO
 
 		if(hay_alguien_exe){
 					if(algoritmo_config == SRT){
 
 								//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 								  log_debug(log_kernel,"Envio una interrupcion 3");
-//								  uint32_t a;
-//								  						if (!recv_TAM(fd_cpu, &a)) {
-//								  										log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//								  						}
-//
-//								  						log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 4");
+
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
 									//log_debug(log_kernel,"Entre en send interrupcion");
-//									uint32_t a;
-//															if (!recv_TAM(fd_cpu, &a)) {
-//																			log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//															}
-//
-//															log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 5 ");
-									//send_interrupcion(fd_cpu_interrupt,1);
+
 								}
 					}else{
-//						uint32_t a;
-//												if (!recv_TAM(fd_cpu, &a)) {
-//																log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
-//												}
-//
-//												log_debug(log_kernel,"Despues de recibir el nro para sincronizarme 5");
-						//send_interrupcion(fd_cpu_interrupt,1);
+
 					}
 
 		sem_post(&contadorProcesosEnMemoria);
@@ -681,14 +594,6 @@ void terminarEjecucion(pcb_t* pcb){
 	void* stream = malloc(size);
 
 	op_estados opCode = FINISH;
-
-
-	//DESCOMENTAR
-
-//	memcpy(stream, &opCode, sizeof(op_estados));
-//	memcpy(stream + sizeof(op_estados), &(pcb->PID), sizeof(uint32_t));
-//
-//	send(fd_memoria, stream, size, 0);
 
 
 	sem_post(&contadorProcesosEnMemoria);

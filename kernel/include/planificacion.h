@@ -15,10 +15,6 @@
 typedef struct{
 	uint32_t pid;
 	uint32_t nro_frame;
-	union uso{ //union guarda dos tipos en la misma locacion de memoria
-		uint32_t bit_U;    // bit de uso
-		uint32_t TUR;       // tiempo de ultima referencia
-	};
 	bool bit_P;
 }pagina; // VER SI NO HAY QUE MOVER A MEM
 
@@ -51,8 +47,6 @@ t_list* lista_pcb_en_memoria;
 t_list* lista_pcb_totales;
 
 void cargar_PCB_kernel(int contador_cliente, uint32_t tam, t_list* lista_nueva_kernel, t_list* tabla_paginas, int estimacion_inicial, int alfa);
-
-//void cargar_lista_nueva(t_list* lista_nueva_kernel,int fd_cpu);
 
 void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* lista_instrucciones);
 
@@ -125,7 +119,6 @@ sem_t medianoPlazo;
 bool hay_alguien_exe;
 uint32_t proceso_en_ejecucion;
 
-//void enviar_pcb_a_cpu(void* pcb_proceso);
 void enviar_pcb_a_cpu(pcb_t* pcb_proceso);
 
 

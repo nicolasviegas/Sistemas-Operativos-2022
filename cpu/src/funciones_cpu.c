@@ -80,7 +80,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 			// log_warning(log_cpu,"Entre en correr algoritmo reemplazo");
 			 if(algoritmo_config == FIFO){
 				 if(list_size(lista_tlb) >= entradas_tlb){
-					 log_warning(log_cpu,"Entre en FIFO CASO EN QUE LA TLB ESTA LLENA");
+					 log_warning(log_cpu,"La TLB esta llena");
 
 					 tlb* elemento = malloc(sizeof(tlb));
 					 elemento->frame = marco;
@@ -90,7 +90,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 					// log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
 				 }
 				 else{
-					 log_warning(log_cpu,"Entre en FIFO CASO EN QUE agrego de una ");
+					 log_warning(log_cpu,"Agrego a la TLB ");
 					 tlb* elemento = malloc(sizeof(tlb));
 					 elemento->frame = marco;
 					 elemento->numero_pag = numero_pagina;
@@ -100,7 +100,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 			 }
 			 else{
 				 if(list_size(lista_tlb) >= entradas_tlb){
-					 log_warning(log_cpu,"Entre en LRU CASO EN QUE LA TLB ESTA LLENA");
+					 log_warning(log_cpu,"La TLB esta llena");
 					 tlb* elemento = malloc(sizeof(tlb));
 					 elemento->frame = marco;
 					 elemento->numero_pag = numero_pagina;
@@ -116,10 +116,10 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 					 elementoAux = list_get(lista_tlb,i);
 
-					 log_debug(log_cpu,"El tiempo del elemento %d es %d",i,elementoAux->tiempo_uso);
+					// log_debug(log_cpu,"El tiempo del elemento %d es %d",i,elementoAux->tiempo_uso);
 
 					 if(tiempo_mas_grande < elementoAux->tiempo_uso){
-						 log_trace(log_cpu,"Entre en EL IF DE  LRU CASO EN QUE LA TLB ESTA LLENA");
+						// log_trace(log_cpu,"Entre en EL IF DE  LRU CASO EN QUE LA TLB ESTA LLENA");
 
 					 tiempo_mas_grande = elementoAux->tiempo_uso;
 					 indexARemover = i;
@@ -136,7 +136,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 					 //log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
 				 }
 				 else{
-					 log_warning(log_cpu,"Entre en LRU CASO EN QUE agrego de una ");
+					 log_warning(log_cpu,"Agrego a la TLB");
 					 aumentar_tiempo();
 					 tlb* elemento = malloc(sizeof(tlb));
 					 elemento->frame = marco;

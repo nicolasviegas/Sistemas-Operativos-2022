@@ -26,13 +26,11 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 	char* c = pasar_a_char(indice_archivo_swap);
 	usleep(retardo_swap * 1000);
 	log_debug(log_memoria,"Escribiendo en swap la pagina %d, en el archivo %s ... ",pagina_a_escribir->nro_pagina,c);
-	log_debug(log_memoria,"Escribiendo en swap el frame %d, en el archivo %s ...  ",pagina_a_escribir->frame,c);
+	//log_debug(log_memoria,"Escribiendo en swap el frame %d, en el archivo %s ...  ",pagina_a_escribir->frame,c);
 
 	char *asd = string_new();
 	string_append_with_format(&asd,"%s/",path_swap);
 	string_append(&asd,c);
-
-	//char* path = "0.swap\0";
 
 	int desp = 0;
 	uint32_t contenido_pagina;
@@ -41,7 +39,7 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 
 ///////////////////////////////////////////////////////////////
 //ESTE ES EL BUENO DESCOMENTAR
-	log_warning(log_memoria,"[EL PATH EN ESCRIBIR SWAP ES: %s]",asd);
+	//log_warning(log_memoria,"[EL PATH EN ESCRIBIR SWAP ES: %s]",asd);
 
 	for(desp = 0; desp < tamanio_paginas ;desp+=4){
 		contenido_pagina = leer_de_memoria(pagina_a_escribir->frame,desp);
@@ -52,13 +50,11 @@ void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir){
 		//log_debug(log_memoria,"El char contenido es: %s",char_contenido);
 
 		escribir_swap(asd,char_contenido,pagina_a_escribir->nro_pagina,desp);
-		//desp += 4;
 	}
 
 	// ir a memoria y hacer memcpy desde la direccion y pegarlo en swap
 	free(asd);
 	free(c);
-	//free(char_contenido);
 
 }
 
@@ -130,7 +126,7 @@ uint32_t lectura_swap(char*filepath,uint32_t pagina,int offset,uint32_t tamanio)
 	    uint32_t valor = atoi(valor_leido);
 
 	    if(valor != 0){
-		    log_info(log_memoria,"Entre en leer memoria de mati: el valor leido del archivo %s es: %d",filepath,valor);
+		    //log_info(log_memoria,"Entre en leer memoria de mati: el valor leido del archivo %s es: %d",filepath,valor);
 	    }
 
 	    free(valor_leido);
@@ -154,19 +150,7 @@ uint32_t leer_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina, uint32_t
 
 
 		//log_info(log_memoria,"[RUTA DEL ARCHIVO EN LA FUNCION DE LEER DE SWAP %s]",ruta_archivo);
-		/*//char*path = "0.swap";
-		FILE *file = fopen(path, "rb+");
-		int offset = nro_pagina * tamanio_paginas + desp;
-		//fseek(file, offset, SEEK_SET);
 
-		//fread(&valor_leido, tamanio_paginas, 1, file);
-		fgets(valor_leido,offset,path);
-
-		log_warning(log_memoria,"El valor leido de swap es : %s",valor_leido);
-
-		fclose(file);*/
-
-	//int offset = nro_pagina * tamanio_paginas + desp;
 
 	//log_info(log_memoria,"El offset %d y el nro de pagna %d con el que voy a entrar a la funcion de mati en swap es",desp,nro_pagina);
 
@@ -199,12 +183,11 @@ t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina,ui
 
 
 void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio, pagina* pagina_buscada,uint32_t frame_a_utilizar){
-	log_trace(log_memoria,"El indice archivo swap es: %d",indice_archivo_swap);
-	log_trace(log_memoria,"El size de la tabla global de 1er nuevel es %d", list_size(lista_tablas_1er_nivel));
-	log_trace(log_memoria,"El size de la tabla global de 2do nuevel es %d", list_size(lista_tablas_2do_nivel));
+	//log_trace(log_memoria,"El indice archivo swap es: %d",indice_archivo_swap);
+	//log_trace(log_memoria,"El size de la tabla global de 1er nuevel es %d", list_size(lista_tablas_1er_nivel));
+	//log_trace(log_memoria,"El size de la tabla global de 2do nuevel es %d", list_size(lista_tablas_2do_nivel));
 
 
-		//t_list* paginas_del_proceso = buscar_paginas_proceso(indice_archivo_swap);
 		pagina* pagina_aux = pagina_buscada;
 		uint32_t dataAux;
 
@@ -213,7 +196,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio, pagina
 
 
 				pagina_aux->bit_uso = 1;
-				log_trace(log_memoria,"Antes de escribir pagina");
+		//		log_trace(log_memoria,"Antes de escribir pagina");
 
 				poner_pagina_en_marco(frame_a_utilizar,pagina_aux,indice_archivo_swap);
 			//	log_info(log_memoria,"PUSE EL PROCESO(indice archivo) %d CUANDO LO TRAIGO DE SWAP EN EL FRAME %d",indice_archivo_swap,frame_a_escribir);
@@ -223,8 +206,8 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio, pagina
 					dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina,desp,tamanio);
 
 					if(dataAux != 0){
-						log_warning(log_memoria,"El valor que lei de swap es: %d",dataAux);
-						log_warning(log_memoria,"El desplazamiento que lei de swap es: %d",desp);
+						log_warning(log_memoria,"El valor que lei de swap del archivo %d es: %d",indice_archivo_swap+1,dataAux);
+						//log_warning(log_memoria,"El desplazamiento que lei de swap es: %d",desp);
 					}
 
 					escribir_pagina(dataAux,frame_a_utilizar,desp);
@@ -243,14 +226,6 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio, pagina
 void pasar_proceso_a_swap(uint32_t indice_tabla){
 	t_list * paginas_del_proceso;
 	pagina* pagina_aux;
-//	for(int i = 0;i < list_size(tabla_primer_nivel_buscada);i++){
-//		entrada_primer_nivel_aux = list_get(tabla_primer_nivel_buscada,i);
-//		tabla_segundo_nivel_aux = list_get(lista_tablas_2do_nivel,entrada_primer_nivel_aux);
-//		for(int j = 0;j < list_size(tabla_segundo_nivel_aux);j++){
-//			pagina_aux = list_get(tabla_segundo_nivel_aux,j);
-//			list_add(paginas_del_proceso,pagina_aux);
-//		}
-//	}
 
 	paginas_del_proceso = buscar_paginas_proceso(indice_tabla);
 

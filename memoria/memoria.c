@@ -11,14 +11,12 @@ int obtener_algoritmo(char* algoritmo_char){
 	    if (strcmp(algoritmo_char,"CLOCK") == 0)
 	    {
 	        switcher = CLOCK;
-	      //  log_info(log_memoria, "El algoritmo de reemplazo elegido es CLOCK.");
 	    }
 
 
 	    if (strcmp(algoritmo_char,"CLOCK-M") == 0)
 	    {
 	        switcher = CLOCK_M;
-	       // log_info(log_memoria, "El algoritmo de reemplazo elegido es CLOCK-M.");
 	    }
 	    return switcher;
 }
@@ -62,10 +60,7 @@ void inicializar_listas(){
 
 }
 
-void cerrar_programa5(t_log* logger) {
-
-	//log_warning(log_memoria,"La cant de archivos swap que se crearon: %d",cant_archivos_swap);
-
+void eliminar_archivos_swap(){
 	for(int i = 0; i < cant_archivos_swap ; i++){
 		char* nombre = pasar_a_char(i);
 
@@ -77,6 +72,15 @@ void cerrar_programa5(t_log* logger) {
 		free(ruta_archivo);
 
 	}
+}
+
+void cerrar_programa5(t_log* logger) {
+
+	//log_warning(log_memoria,"La cant de archivos swap que se crearon: %d",cant_archivos_swap);
+
+
+
+	eliminar_archivos_swap();
 
     log_destroy(logger);
 

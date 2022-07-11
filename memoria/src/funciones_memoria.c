@@ -10,11 +10,8 @@
 
 
 uint32_t asignar_tabla_1er_nivel_a_proceso(t_list* tabla_1er_nivel){ // Devuelve el numero de tabla que se le asiga al proceso, o -1 si no hay mas lugar para entradas
-	//t_list* nueva_entrada = list_create();
 	uint32_t a;
 	a = list_add(lista_tablas_1er_nivel,tabla_1er_nivel);
-	//list_clean_and_destroy_elements(nueva_entrada,free);
-	//list_destroy(nueva_entrada);
 	return a;
 }
 
@@ -33,8 +30,6 @@ pagina* buscar_pagina_en_tabla_2do_nivel(uint32_t nro_tabla_2do_nivel,uint32_t n
 	//log_debug(log_memoria,"El indice de la tabla de paginas de segundo nivel en la global es: %d",nro_tabla_2do_nivel);
 	//log_debug(log_memoria,"El indice de la tabla de paginas de segundo nivel en la global es: %d",nro_entrada);
 	pagina* pagina_buscada = list_get(tabla_2do_nivel_buscada,nro_entrada);
-	//list_clean_and_destroy_elements(tabla_2do_nivel_buscada,free);
-	//list_destroy(tabla_2do_nivel_buscada);
 	return pagina_buscada;
 }
 
@@ -53,7 +48,6 @@ t_list* dividir_proceso_en_paginas(uint32_t tam_proceso){
 		pagina_nueva->bit_presencia = 0;
 		pagina_nueva->bit_uso = 0;
 		pagina_nueva->frame = 0;
-		//pagina_nueva->tiempo_uso = 0;
 
 		list_add(lista_con_todas_las_paginas,pagina_nueva);
 	}
@@ -94,7 +88,6 @@ t_list* colocar_paginas_en_tabla(t_list* lista_paginas_del_proceso){ //esta func
 	log_debug(log_memoria,"El size de la lista de tablas de 2do nivel es %d",list_size(lista_tablas_2do_nivel));
 
 
-	//LIST DESTROY PAGINAS DEL PROCESO????
 	list_destroy(lista_paginas_del_proceso);
 
 	return tabla_de_1er_nivel;
@@ -118,7 +111,6 @@ t_list* buscar_paginas_proceso(uint32_t indice_tabla_1er_nivel){
 				tabla_segundo_nivel_aux = list_get(lista_tablas_2do_nivel,entrada_primer_nivel_aux);
 				for(int j = 0;j < list_size(tabla_segundo_nivel_aux);j++){
 					pagina_aux = list_get(tabla_segundo_nivel_aux,j);
-					//pagina_aux->bit_presencia = 0;//
 					list_add(paginas_del_proceso,pagina_aux);
 				}
 			}
@@ -236,7 +228,7 @@ pagina* pagina_a_reemplazar(uint32_t indice_tabla_1er_nivel) {
 			}
 		}
 	}
-	else{//todo chequear CLOCK NORMAL
+	else{// CLOCK NORMAL
 		{
 				pagina* recorredorPaginas;
 				int cantidadFrames = list_size(paginas_proceso_en_mem_ppal);
@@ -345,17 +337,17 @@ void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){
 	pthread_mutex_lock(&mutexEscribirEnMemoria);
 
 	if(valor != 0){
-		log_error(log_memoria,"Entre a escribir pagina,valor: %d ",valor);
-		log_error(log_memoria,"El frame es es %d ",frame);
-		log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);
-		log_error(log_memoria,"El desplazamiento es: %d",desplazamiento);
+		log_error(log_memoria,"Escribo en el frame %d,el valor: %d ",frame,valor);
+		//log_error(log_memoria,"Escribo la pagina,el valor: %d ",valor);
+
+		//log_error(log_memoria,"El frame es es %d ",frame);
+		//log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);
+		//log_error(log_memoria,"El desplazamiento es: %d",desplazamiento);
 	}
 
 	uint32_t posicion_marco = frame * tamanio_paginas;
 
 	memcpy(memoria_principal+posicion_marco+desplazamiento,&valor,sizeof(uint32_t));
-	//memcpy(memoria_principal+posicion_marco+desplazamiento,valor,tamanio_paginas);
-	//escribe en memoria la data y pone en 1 el bit de presencia de la pagina
 	pthread_mutex_unlock(&mutexEscribirEnMemoria);
 }
 
@@ -386,7 +378,6 @@ void copiar_en_memoria(uint32_t marco_origen,uint32_t desplazamiento_origen,uint
 uint32_t buscar_frame_libre(){
 	//log_error(log_memoria,"Entre a buscar frame libre");
 	frame* frameAux;
-//	frame* frame_libre;
 	pthread_mutex_lock(&mutexListaFrame);
 	for(int i=0;i < list_size(lista_frames);i++){
 		frameAux = list_get(lista_frames,i);
@@ -410,7 +401,6 @@ uint32_t buscar_frame_libre(){
 
 
 
-//			frameAux->ocupado = true;
 			pthread_mutex_unlock(&mutexListaFrame);
 			return i;
 
@@ -434,7 +424,7 @@ void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indi
     uint32_t  biteme = info_paginaAReemplazar->bit_modificado;
     info_paginaAReemplazar->bit_presencia = 0;
 
-    log_error(log_memoria,"La pagina a reemplazar es: %d",info_paginaAReemplazar->nro_pagina);
+    //log_error(log_memoria,"La pagina a reemplazar es: %d",info_paginaAReemplazar->nro_pagina);
 
     if(info_paginaAReemplazar->bit_modificado == 1){
     	escribir_en_swap(indice_pagina_1er_nivel,info_paginaAReemplazar);
@@ -507,7 +497,6 @@ void poner_pagina_en_marco(uint32_t marco,pagina* pagina,uint32_t indice_proceso
 
 void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 	pagina* paginaAux;
-	//frame* marcoAux = malloc(sizeof(frame));
 	uint32_t marcoAux;
 	t_list* paginas_del_proceso;
 	paginas_del_proceso = buscar_paginas_proceso(indice_proceso);
@@ -523,11 +512,9 @@ void poner_proceso_en_mem_ppal(uint32_t indice_proceso){
 
 	for(int i=0;i<list_size(paginas_del_proceso_para_mem);i++){
 		paginaAux = list_get(paginas_del_proceso_para_mem,i);
-			//pthread_mutex_lock(&mutexListaFrame);
 
 		marcoAux = buscar_frame_libre();
 		log_trace(log_memoria,"El marco que se eligio es: %d",marcoAux);
-			//pthread_mutex_unlock(&mutexListaFrame);
 
 		poner_pagina_en_marco(marcoAux,paginaAux,indice_proceso);
 
@@ -550,10 +537,8 @@ void sacar_pagina_de_marco(pagina* pagina_aux,uint32_t indice_proceso){
 			//log_debug(log_memoria,"El frame a liberar es:  %d",i);
 
 			frame_aux->ocupado = false;
-			//int desp =0;
 			for(int desp = 0;desp<tamanio_paginas;desp+=4){
 				escribir_pagina(0,i,desp);
-				//desp += 4;
 			}
 			//log_warning(log_memoria,"//////////////////MIRAME MIRAME SE PUSO UN FRAME (el %d) COMO LIBREEEEE, con pagina %d //////////////////",i,pagina_aux->nro_pagina);
 		}
@@ -631,12 +616,9 @@ int verificar_archivo(char *ruta)
 
 void crear_archivo(char *nuevo_archivo){
 
-	//char a = '0';
-	//uint32_t x = 0;
+
 	char *ruta_archivo = string_new();
 	string_append_with_format(&ruta_archivo,"%s/",path_swap);
-	//string_append(&ruta_archivo,"/");
-	//string_append(&ruta_archivo,"hola.txt");
 	string_append(&ruta_archivo, nuevo_archivo);
 
 	struct stat st = {0};
@@ -648,8 +630,6 @@ void crear_archivo(char *nuevo_archivo){
 		 log_info(log_memoria,"Se creo el directorio swap correctamente");
 	}
 
-	//FILE *archivox = fopen(ruta_archivo, "wb+");
-
 	//log_debug(log_memoria,"el nombre del path con el archivo adentro es: %s",ruta_archivo);
 
 
@@ -659,7 +639,6 @@ void crear_archivo(char *nuevo_archivo){
 		FILE *archivo = fopen(ruta_archivo, "wb+");
 		//w+ es para que sea de lectura escritura.si queremos escribir y leer en binario cambiarlo a wb+
 
-		//fwrite(a,sizeof(a),1,archivo);
 
 		cant_archivos_swap++;
 		fclose(archivo);
@@ -674,20 +653,6 @@ void crear_archivo(char *nuevo_archivo){
 	free(ruta_archivo);
 }
 
-/*char *my_itoa(int num, char *str)
-{
-	log_warning(log_memoria,"Antes del if en myitoa");
-
-        if(str == NULL)
-        {
-                return NULL;
-        }
-
-    	log_warning(log_memoria,"despues del if en myitoa");
-
-        sprintf(str, "%d", num);
-        return str;
-}*/
 
 char *itoa(uint32_t n)
 {
@@ -704,10 +669,7 @@ char* pasar_a_char(uint32_t num){
 
 	char* terminacion = ".swap";
 
-	//char* str;
 
-
-	//char* num_char = my_itoa(num,str);
 	char* num_char = itoa(num);
 
 	char* nuevo_path = strcat(num_char,terminacion);
@@ -743,11 +705,6 @@ char* pasar_a_char2(int num){
 
 char* pasar_a_char_sin_terminacion(int num){
 
-
-	//char* str;
-
-
-	//char* num_char = my_itoa(num,str);
 	char* num_char = itoa(num);
 
 

@@ -53,7 +53,7 @@ uint32_t tamanio_paginas;
 uint32_t cant_entradas_por_tabla;
 uint32_t retardo_memoria;
 uint32_t retardo_swap;
-char* algoritmo_config;
+int algoritmo_config;
 uint32_t marcos_por_proceso;
 char* path_swap;
 
@@ -130,11 +130,15 @@ void crear_archivo(char* path_char);
 
 void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir);
 
+t_list* traer_pagina_de_swap(uint32_t indice_archivo_swap,uint32_t nro_pagina,uint32_t tamanio);
+
 char* pasar_a_char(uint32_t num);
 
 uint32_t buscar_frame_libre();
 
 void ejecutar_reemplazo(t_list* lista_valores, pagina* info_pagina,uint32_t indice_pagina_1er_nivel);
+
+void cargar_lista_frames();
 
 void poner_pagina_en_marco(uint32_t marco,pagina* pagina,uint32_t indice_proceso);
 

@@ -2,16 +2,6 @@
 
 
 
-/*
-void cerrar_programa(t_log* logger) {
-    log_destroy(logger);
-}
-void sighandler(int s) {
-    cerrar_programa(logger);
-    exit(0);
-}
-*/
-
 void inicializar_semaforos(){
 
 	pthread_mutex_init(&mutexPotencialesRetensores, NULL);
@@ -169,13 +159,7 @@ int main() {
     inicializar_planificacion();
 
 
-    ////////////////////
-	//log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
-
-    ///
-
     fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
-	//int fd_kernel_1 = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 
     /////////////////////////////////////////////////////////
 
@@ -207,8 +191,6 @@ int main() {
 
     //conexion entre Kernel (Servidor) y consola(cliente)
     while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
-  //  while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel_1));
-
 
     log_info(log_kernel,"Finalizo kernel");
 
