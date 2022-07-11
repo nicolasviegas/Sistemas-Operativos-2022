@@ -7,12 +7,12 @@ OUTFILE = memoria.out
 SRC = $(shell find ./src -type f -iname "*.c" -exec basename {} \;)
 OBJ = $(SRC:%.c=./obj/%.o)
 
-SHARED = $(shell find ../shared/obj/*.o)
-LINK = -lpthread -lcommons -lm -lreadline
+SHARED = $(shell find ../shared/Debug/src/*.o)
+LINK = -lshared -lpthread -lcommons -lm -lreadline
 CFLAGS = -c
 
 build: makefolder makeshared $(OBJ)
-	$(CC) -o $(OUTFILE) memoria.c $(OBJ) $(SHARED) $(LINK)
+	$(CC) -o $(OUTFILE) memoria.c $(OBJ) $(LINK)
 
 valgrind: build
 	valgrind --leak-check=full --show-leak-kinds=all --log-file=valgrind.log ./$(OUTFILE)
@@ -27,10 +27,10 @@ makefolder:
 	if [ ! -d ./obj ]; then mkdir obj; fi
 
 makeshared:
-	make -C ../shared
+	make -C ../shared/Debug
 
 makeshared_debug:
-	make debug -C ../shared
+	make debug -C ../shared/Debug
 
 # Clean
 

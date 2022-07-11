@@ -2,16 +2,6 @@
 
 
 
-/*
-void cerrar_programa(t_log* logger) {
-    log_destroy(logger);
-}
-void sighandler(int s) {
-    cerrar_programa(logger);
-    exit(0);
-}
-*/
-
 void inicializar_semaforos(){
 
 	pthread_mutex_init(&mutexPotencialesRetensores, NULL);
@@ -65,14 +55,20 @@ void inicializar_config(){
 	  puerto_cpu_interrupt = config_get_string_value(config_kernel,"PUERTO_CPU_INTERRUPT");
 
 	  char* algoritmo_char = config_get_string_value(config_kernel,"ALGORITMO_PLANIFICACION");
+	  log_info(log_kernel,"El algoritmo de planificacion es: %s\n",algoritmo_char);
 	  algoritmo_config = obtener_algoritmo(algoritmo_char);
 
 
 
 	  estimacion_inicial = config_get_int_value(config_kernel,"ESTIMACION_INICIAL");
+	  log_info(log_kernel,"El estimacion inicial es: %d\n",estimacion_inicial);
 	  grado_multiprogramacion = config_get_int_value(config_kernel,"GRADO_MULTIPROGRAMACION");
+	  log_info(log_kernel,"El grado de multiprogramacion es: %d\n",grado_multiprogramacion);
 	  alfa = obtener_float_de_config(config_kernel,"ALFA");
 	  tiempo_max_bloqueado = config_get_int_value(config_kernel,"TIEMPO_MAXIMO_BLOQUEADO");
+	  log_info(log_kernel,"El tiempo maximo de bloqueo es: %d\n",tiempo_max_bloqueado);
+
+	  mensaje_unico_memoria = 1 ;
 }
 
 void inicializar_listas(){
@@ -109,14 +105,43 @@ void inicializar_planificacion(){
 
 void cerrar_programa2(t_log* logger) {
     log_destroy(logger);
+    config_destroy(config_kernel);
+    list_destroy_and_destroy_elements(listaPotencialesRetensores,free);
+    list_destroy_and_destroy_elements(listaExe,free);
+    list_destroy_and_destroy_elements(listaBlock,free);
+    list_destroy_and_destroy_elements(listaBlockSuspended,free);
+   // list_destroy_and_destroy_elements(listaExit,free);
+    list_destroy_and_destroy_elements(colaReady,free);
+    list_destroy_and_destroy_elements(lista_instrucciones_kernel,free);
+    list_destroy_and_destroy_elements(lista_pcb_en_memoria,free);
+    queue_destroy_and_destroy_elements(colaNew,free);
+    queue_destroy_and_destroy_elements(colaReadySuspended,free);
+
+    pthread_mutex_destroy(&mutexBlock);
+    pthread_mutex_destroy(&mutexBlockSuspended);
+    pthread_mutex_destroy(&mutexExe);
+    pthread_mutex_destroy(&mutexExit);
+    pthread_mutex_destroy(&mutexNew);
+    pthread_mutex_destroy(&mutexPotencialesRetensores);
+    pthread_mutex_destroy(&mutexReadySuspended);
+
+    close(fd_kernel);
 }
+
+
+
+void sighandler(int x){
+	cerrar_programa2(log_kernel);
+	exit(EXIT_SUCCESS);
+}
+
 
 int main() {
 
 
     contador_cliente = 0;
 
-    //signal(SIGINT, sighandler);
+    signal(SIGINT, sighandler);
 
     log_kernel = log_create("kernel.log","kernel",1,LOG_LEVEL_TRACE);
 
@@ -134,16 +159,7 @@ int main() {
     inicializar_planificacion();
 
 
-    ////////////////////
-	//log_trace(log_kernel,"EL ALGORITMO DE PLANIF ES: %d",algoritmo_config);
-
-    ///
-
-   // fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
-	int fd_kernel_1 = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
-
-
-    //log_trace(log_kernel,"El socket : %d",fd_kernel);
+    fd_kernel = iniciar_servidor(log_kernel,"KERNEL",ip,puerto_escucha);
 
     /////////////////////////////////////////////////////////
 
@@ -165,8 +181,6 @@ int main() {
     //log_trace(log_kernel,"El fd_cpu despues de grar conexiones es: %d",fd_cpu);
 
 
-    //send_tam(fd_cpu,algoritmo_config);
-
     fd_cpu_interrupt = 0;
     if (!generar_conexiones_cpu(log_kernel, ip_cpu, puerto_cpu_interrupt, &fd_cpu_interrupt)) {
       		cerrar_programa2(log_kernel);
@@ -176,9 +190,7 @@ int main() {
    // log_trace(log_kernel,"El fd_cpu despues de grar conexiones puerto interrupt es: %d",fd_cpu);
 
     //conexion entre Kernel (Servidor) y consola(cliente)
-   // while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
-    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel_1));
-
+    while(server_escuchar_kernel(log_kernel,"KERNEL",fd_kernel));
 
     log_info(log_kernel,"Finalizo kernel");
 

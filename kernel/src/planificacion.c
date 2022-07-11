@@ -10,14 +10,14 @@ int obtener_algoritmo(char* algoritmo_char){
 	    if (strcmp(algoritmo_char,"FIFO") == 0)
 	    {
 	        switcher = FIFO;
-	        log_info(log_kernel, "El algoritmo de planificacion elegido es FIFO.");
+	        //log_info(log_kernel, "El algoritmo de planificacion elegido es FIFO.");
 	    }
 
 	    //SFJ SIN DESALOJO
 	    if (strcmp(algoritmo_char,"SRT") == 0)
 	    {
 	        switcher = SRT;
-	        log_info(log_kernel, "El algoritmo de planificacion elegido es SRT.");
+	     //   log_info(log_kernel, "El algoritmo de planificacion elegido es SRT.");
 	    }
 	    return switcher;
 }
@@ -71,7 +71,6 @@ void agregarAReady(pcb_t* proceso){
 	//log_trace(log_kernel,"Entre en agregar a ready");
 
 	time_t a = time(NULL);
-	//proceso->horaDeIngresoAReady = ((float) a)*1000;
 
 	pthread_mutex_lock(&mutexReady);
 
@@ -79,6 +78,17 @@ void agregarAReady(pcb_t* proceso){
 	list_add(colaReady, proceso);
 
 	log_info(log_kernel, "[READY] Entra el proceso de PID: %d a la cola.", proceso->PID);
+	send_TAM(fd_memoria,METER_EN_MEM_PRINCIPAL);
+	send_TAM(fd_memoria,proceso->indice_tabla_paginas);
+
+	uint32_t indice_proceso; //ESTE RECV ES PARA SABER SI MEMORIA YA TERMINO DE PASAR A SWAP AL PROCESO SUSPENDIDO
+	if (recv(fd_memoria, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+	log_info(log_kernel, "fallo al recibir nro de pagina!");
+	return;
+	}if(indice_proceso == 5555){
+		log_trace(log_kernel,"Memoria termino de meter al proceso");
+	}
+
 
 	//printf("PROCESOS EN READY: %d \n", list_size(colaReady));
 	log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
@@ -92,7 +102,6 @@ void agregarAReady(pcb_t* proceso){
 void agregarABlock(pcb_t* proceso){		//ver semaforos
 	//log_trace(log_kernel,"Entre en agregar a block ");
 	//log_info(log_kernel, "ADSSSS el proceso %d tiene el PC en %d",proceso->PID,proceso->PC);
-	//sem_wait(&contadorExe);
 
 	bool tienenMismoPID(void* elemento){
 
@@ -102,7 +111,6 @@ void agregarABlock(pcb_t* proceso){		//ver semaforos
 			return false;
 	}
 
-	//list_remove_by_condition(listaExe, tienenMismoPID);
 
 	pthread_mutex_lock(&mutexBlock);
 
@@ -113,7 +121,6 @@ void agregarABlock(pcb_t* proceso){		//ver semaforos
 	sem_post(&contadorBlock);
 
 	sem_post(&analizarSuspension);
-	// como funciona el analizar suspension?
 	sem_wait(&suspensionFinalizada);
 }
 
@@ -140,7 +147,7 @@ void sacarDeBlock(pcb_t* proceso){
 
 
 void agregarABlockSuspended(pcb_t* pcb){
-	log_trace(log_kernel,"Entre en agregar a block suspended");
+//	log_trace(log_kernel,"Entre en agregar a block suspended");
 	pthread_mutex_lock(&mutexBlockSuspended);
 
 	pcb->suspendido = true;
@@ -150,22 +157,19 @@ void agregarABlockSuspended(pcb_t* pcb){
 
 	pthread_mutex_unlock(&mutexBlockSuspended);
 
-	size_t size = sizeof(op_estados)+sizeof(uint32_t);
+	send_TAM(fd_memoria,METER_A_SWAP); //HAY QUE DESCOMENTAR Y HACER EL RECV
+	send_TAM(fd_memoria,pcb->indice_tabla_paginas);
 
-	void* stream = malloc(size);
-
-	op_estados opCode = SUSPENDED_BLOCKED;
-
-	memcpy(stream, &opCode, sizeof(op_estados));
-	memcpy(stream + sizeof(op_estados), &(pcb->PID), sizeof(uint32_t));
-	log_trace(log_kernel,"Le avise a memoria que libere los recursos");
-	//todo
-	//send(fd_memoria, stream, size, 0); HAY QUE DESCOMENTAR Y HACER EL RECV
-
+	uint32_t indice_proceso; //ESTE RECV ES PARA SABER SI MEMORIA YA TERMINO DE PASAR A SWAP AL PROCESO SUSPENDIDO
+	if (recv(fd_memoria, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+	log_info(log_kernel, "fallo al recibir nro de pagina!");
+	return;
+	}if(indice_proceso == 1773){
+		log_trace(log_kernel,"Memoria termino de meter a swap al proceso");
+	}
 
 	agregarAReadySuspended(pcb); //ESTO LO COMENTAMOS NOSOTROS
 
-	free(stream);
 }
 
 
@@ -213,6 +217,8 @@ pcb_t* sacarDeReadySuspended(){
 
 	pthread_mutex_unlock(&mutexReadySuspended);
 
+	agregarAReady(proceso);//todo ESTE AGREGAR A READY ES EL QUE CAMBIAMOS PARA QUE FINALICE ACORDE A LAS PRUEBAS, CUALQUIER COSA COMENTAR ESTE Y DESCOMENTAR EL QUE QUEDO MARCADO
+
 	return proceso;
 }
 
@@ -241,19 +247,19 @@ void hiloNew_Ready(){
 			agregarAReady(proceso);
 
 
-			if(hay_alguien_exe){
+			if(hay_alguien_exe ){
 			if(algoritmo_config == SRT){
 
 						//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 						//  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
-				  	  	log_debug(log_kernel,"Envio una interrupcion");
+				  	  	log_debug(log_kernel,"Envio una interrupcion 1");
+
 				  	  	send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 						}else{
-						//	log_debug(log_kernel,"Entre en send interrupcion");
-							send_interrupcion(fd_cpu_interrupt,1);
+
 						}
 			}else{
-				send_interrupcion(fd_cpu_interrupt,1);
+
 			}
 			sem_post(&contadorProcesosEnMemoria);
 		}
@@ -274,12 +280,9 @@ void hiloReady_Exe(){
 
 		if(procesoAEjecutar != NULL) {
 
-			/*pthread_mutex_lock(&mutexExe);
-			list_add(listaExe, procesoAEjecutar);
-			pthread_mutex_unlock(&mutexExe);*/
 
 			if(algoritmo_config == SRT){
-				log_info(log_kernel, "[EXEC] Ingresa el carpincho de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", procesoAEjecutar->PID, procesoAEjecutar->estimacionActual);
+				log_info(log_kernel, "[EXEC] Ingresa el proceso de PID: %d con una rafaga de ejecucion estimada de %f milisegundos.", procesoAEjecutar->PID, procesoAEjecutar->estimacionActual);
 				time_t a = time(NULL);
 				procesoAEjecutar->horaDeIngresoAExe = ((float) a)*1000;
 			}else{
@@ -291,16 +294,17 @@ void hiloReady_Exe(){
 
 			hay_alguien_exe = true;
 
-			send_interrupcion(fd_cpu_interrupt,1);
 
 			uint32_t pc;
 			if (!recv_PC(fd_cpu, &pc)) {
 				log_error(log_kernel, "Fallo recibiendo pc");
 			}
+
 			//log_trace(log_kernel,"El PC despues del recv es: %d",pc);
+
 			procesoAEjecutar->PC = pc;
 
-			//uint32_t tiempo_bloq_kernel;
+
 			//EL CPU ME DEVUELVE EL TIEMPO QUE SE VA A BLOQUEAR EL PROCESO POR E/S
 			if (!recv_tiempo_bloqueante(fd_cpu, &tiempo_bloq_kernel)) {
 				log_error(log_kernel, "Fallo recibiendo el tiempo bloqueante");
@@ -312,10 +316,6 @@ void hiloReady_Exe(){
 			time_t b = time(NULL);
 			float tiempoDeFin = ((float) b)*1000;
 			procesoAEjecutar->rafagaAnterior = diferencia_de_tiempo(procesoAEjecutar->horaDeIngresoAExe, tiempoDeFin);
-
-			/*log_error(log_kernel,"La hora de ingreso del proceso %d a exe es: %f",procesoAEjecutar->PID,procesoAEjecutar->horaDeIngresoAExe);
-			log_error(log_kernel,"La tiempo que estuvo el proceso %d en cpu (rafaga anterior) es: %f",procesoAEjecutar->PID,procesoAEjecutar->rafagaAnterior);
-			log_error(log_kernel,"La estimacion anterior el proceso %d es: %d",procesoAEjecutar->PID,procesoAEjecutar->estimacionAnterior);*/
 
 			procesoAEjecutar->estimacionActual = alfa*(procesoAEjecutar->rafagaAnterior) + (1-alfa)*(procesoAEjecutar->estimacionAnterior);
 			procesoAEjecutar->estimacionAnterior = procesoAEjecutar->estimacionActual;
@@ -340,10 +340,7 @@ void hiloReady_Exe(){
 			hay_alguien_exe = false;
 
 
-		}/*else{
-
-
-		}*/
+		}
 	}
 }
 
@@ -359,7 +356,6 @@ void hiloBlockASuspension(){
 
 
 
-		//if(condiciones_de_suspension()){ // si el tiempo de bloqueo es > al del config hay que suspenderlo
 		if(list_size(listaBlock) != 0){
 
 			pcb_t* pcb = list_get(listaBlock,0);
@@ -367,7 +363,7 @@ void hiloBlockASuspension(){
 
 			if(pcb->tiempo_bloqueo <= tiempo_max_bloqueado){
 
-						log_info(log_kernel,"[BLOCK] Se bloquea el proceso %d milisegs, ",pcb->tiempo_bloqueo);
+						log_info(log_kernel,"[BLOCK] Se bloquea el proceso %d, %d milisegs, ",pcb->PID,pcb->tiempo_bloqueo);
 
 						usleep(pcb->tiempo_bloqueo*1000);
 
@@ -381,21 +377,20 @@ void hiloBlockASuspension(){
 
 								//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 								//  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
-								  	log_debug(log_kernel,"Envio una interrupcion");
+								  	log_debug(log_kernel,"Envio una interrupcion 2");
+
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
-								//	log_debug(log_kernel,"Entre en send interrupcion");
-									send_interrupcion(fd_cpu_interrupt,1);
+
 								}
 							}else{
-								send_interrupcion(fd_cpu_interrupt,1);
+
 						}
 
 ////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
 
-						//sem_post(&multiprogramacion);
 					}else{//sino solo lo bloqueo y lo devuelvo a ready
-						log_info(log_kernel,"[SUSPENDED] Se suspende %d milisegs, ",pcb->tiempo_bloqueo);
+						log_info(log_kernel,"[SUSPENDED] Se suspende el proceso %d, %d milisegs, ",pcb->PID,pcb->tiempo_bloqueo);
 
 						usleep(tiempo_max_bloqueado*1000);
 
@@ -428,20 +423,34 @@ void hiloSuspensionAReady(){
 
 		sem_wait(&multiprogramacion);
 
-		agregarAReady(proceso);
+		send_TAM(fd_memoria,SACAR_DE_SWAP);
+		send_TAM(fd_memoria,proceso->indice_tabla_paginas);
+
+		uint32_t indice_proceso; //ESTE RECV ES PARA SABER SI MEMORIA YA TERMINO DE PASAR A SWAP AL PROCESO SUSPENDIDO
+		if (recv(fd_memoria, &indice_proceso, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
+		log_info(log_kernel, "fallo al recibir nro de pagina!");
+		return;
+		}if(indice_proceso == 1773){
+			log_trace(log_kernel,"Memoria termino de sacar de swap al proceso");
+		}
+
+
+
+	//	agregarAReady(proceso); //TODO DATO IMPORTANTE, SI ESTE AGREGAR LO DESCOMENTAMOS EL I/O FUNCIONA COMO ERA AL PRINCIPIO, NO TERMINAN EN FIFO
 
 		if(hay_alguien_exe){
 					if(algoritmo_config == SRT){
 
 								//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
-								  log_debug(log_kernel,"Envio una interrupcion");
+								  log_debug(log_kernel,"Envio una interrupcion 3");
+
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
 									//log_debug(log_kernel,"Entre en send interrupcion");
-									send_interrupcion(fd_cpu_interrupt,1);
+
 								}
 					}else{
-						send_interrupcion(fd_cpu_interrupt,1);
+
 					}
 
 		sem_post(&contadorProcesosEnMemoria);
@@ -547,7 +556,7 @@ pcb_t* obtenerSiguienteSJF(){
 
 	//log_debug(log_kernel,"[----------------PROCESOS EN READY: %d --------------------]\n", list_size(colaReady));
 
-    for(i=1;i<list_size(colaReady);i++){
+    for(i=0;i<list_size(colaReady);i++){
     	procesoAux = list_get(colaReady,i);
     	log_error(log_kernel,"El proceso %d, tiene una estimacion actual de: %f",procesoAux->PID,procesoAux->estimacionActual);
     	if(shortestJob > procesoAux->estimacionActual){
@@ -560,10 +569,9 @@ pcb_t* obtenerSiguienteSJF(){
     procesoPlanificado = list_remove(colaReady, indexARemover);
 
 
-
     pthread_mutex_unlock(&mutexReady);
 
-	log_warning(log_kernel,"El proceso %d fue elegido mediante el algoritmo SRT: ",procesoAux->PID);
+	log_warning(log_kernel,"El proceso %d fue elegido mediante el algoritmo SRT ",procesoPlanificado->PID);
 
 	return procesoPlanificado;
 }
@@ -585,14 +593,6 @@ void terminarEjecucion(pcb_t* pcb){
 	void* stream = malloc(size);
 
 	op_estados opCode = FINISH;
-
-
-	//DESCOMENTAR
-
-//	memcpy(stream, &opCode, sizeof(op_estados));
-//	memcpy(stream + sizeof(op_estados), &(pcb->PID), sizeof(uint32_t));
-//
-//	send(fd_memoria, stream, size, 0);
 
 
 	sem_post(&contadorProcesosEnMemoria);

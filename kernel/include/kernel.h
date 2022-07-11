@@ -16,8 +16,11 @@
 #include<commons/collections/queue.h>
 #include<commons/string.h>
 #include<assert.h>
-#include "../../shared/include/utils.h"
-#include "../../shared/include/consola-kernel.h"
+//#include "../../shared/include/utils.h"
+//#include "../../shared/include/consola-kernel.h"
+#include "utils.h"
+#include "protocolo.h"
+#include "consola-kernel.h"
 #include "../include/comunicacion_kernel.h"
 #include "../include/funciones_kernel.h"
 #include "../include/planificacion.h"
@@ -32,6 +35,15 @@ typedef enum{ //tipos de identificadores a parsear
 	FINISH = 31, //5
 }op_estados;
 
+typedef enum{ //tipos de identificadores a parsear
+    NEW = 25, //0
+    READY = 26, //1
+    EXEC = 27, //2
+    BLOCKED = 28,//3 LO AGREGO YO
+    SUSPENDED_BLOCKED = 29, //4
+    SUSPENDED_READY = 30,
+	FINISH = 31, //5
+}op_estados;
 
 pthread_t hiloNewReady;
 
@@ -55,7 +67,9 @@ uint32_t grado_multiprogramacion;
 uint32_t tiempo_max_bloqueado;
 
 
+uint32_t mensaje_unico_memoria;
 
+uint32_t tam_proceso;
 
 t_list* lista_instrucciones_kernel;
 

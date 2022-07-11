@@ -10,7 +10,6 @@ void cargar_instruccion(int id, char* nombre, uint32_t parametro1, uint32_t para
 	estructura_instrucciones->parametro2 = parametro2;
 
 	list_add(lista_instrucciones_kernel,estructura_instrucciones);
-	//free(estructura_instrucciones);
 }
 
 void cargar_instruccion2(int id, char* nombre, uint32_t parametro1, uint32_t parametro2,t_list* lista){
@@ -22,7 +21,6 @@ void cargar_instruccion2(int id, char* nombre, uint32_t parametro1, uint32_t par
 	estructura_instrucciones->parametro2 = parametro2;
 
 	list_add(lista,estructura_instrucciones);
-	//free(estructura_instrucciones);
 }
 
 void cerrar_programa4(t_log* logger) {
@@ -43,7 +41,6 @@ void conexion_kernel_a_memoria(){
 		}
 		log_trace(log_kernel,"El fd_memoria despues de grar conexiones es: %d",fd_memoria);
 
-		//return fd_memoria;
 }
 
 void pedir_tabla_a_memoria(){
@@ -54,23 +51,18 @@ void pedir_tabla_a_memoria(){
 void enviar_pcb_a_cpu(pcb_t* pcb_proceso){
 
 	//log_trace(log_kernel,"Entre a enviar pcb a cpu");
-	//pcb_t* pcb_proceso = (pcb_t *) proceso;
-
-	//uint32_t a = list_size(lista_instrucciones_kernel);
 	uint32_t b = list_size(pcb_proceso->instrucciones);
 
 	send_pid_to_cpu(fd_cpu,pcb_proceso->PID);
 	send_TAM(fd_cpu,pcb_proceso->tamanio);
-	//send_cant_instrucciones(fd_cpu,a);
 	send_cant_instrucciones(fd_cpu,b);
 	send_indice_tabla_paginas_a_cpu(fd_cpu,pcb_proceso->indice_tabla_paginas);
 	send_instrucciones_kernel_a_cpu(fd_cpu,log_kernel,pcb_proceso);
 	send_PC(fd_cpu,pcb_proceso->PC);
 
-	//lista_instrucciones_kernel = list_take_and_remove(lista_instrucciones_kernel,0);
 	list_clean(lista_instrucciones_kernel);
 
-	//log_trace(log_kernel, "La cant de instrucciones en la lista: %d",b);
+	log_trace(log_kernel, "Cantidad de instrucciones restantes del proceso %d: %d",pcb_proceso->PID,(b - pcb_proceso->PC));
 
 	//log_trace(log_kernel,"El PC del proceso %d es: %d",pcb_proceso->PID,pcb_proceso->PC);
 
@@ -79,7 +71,6 @@ void enviar_pcb_a_cpu(pcb_t* pcb_proceso){
 
 void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso){
 		//printf("[SEND INSTRUCCIONES KERNEL A CPU] cantidad de instrucciones: %d \n",list_size(pcb_proceso->instrucciones));
-		//instrucciones* a = malloc(sizeof(instrucciones));
 		instrucciones* a;
 		int cant_instrucciones = list_size(pcb_proceso->instrucciones);
 		int indice = 0;
@@ -91,7 +82,7 @@ void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso
 			//log_warning(logger,"El id de las intrucciones en send instrucciones es: %d",a->id);
 			a = list_get(pcb_proceso->instrucciones,indice);
 
-			printf("[SEND INSTRUCCIONES KERNEL A CPU] la instruccion es: %s \n",a->nombre);
+			//printf("[SEND INSTRUCCIONES KERNEL A CPU] la instruccion es: %s \n",a->nombre);
 
 			if(a->id == NO_OP){
 				//log_warning(logger,"entre en NO_OP dentro de send_instrucciones");
@@ -125,6 +116,5 @@ void send_instrucciones_kernel_a_cpu(int fd_cpu,t_log* logger,pcb_t* pcb_proceso
 		}
 
 }
-
 
 

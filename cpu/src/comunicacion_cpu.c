@@ -1,7 +1,8 @@
 #include "../include/comunicacion_cpu.h"
 #include "../include/cpu.h"
 #include "../include/funciones_cpu.h"
-
+#include "protocolo.h"
+#include <math.h>
 
 typedef struct {
     t_log* log;
@@ -27,16 +28,58 @@ static void procesar_conexion_cpu(void* void_args) {
 	 op_code_instrucciones co_op;
 	 uint32_t pc;
 
+	 uint32_t aux1;
+	 uint32_t aux2;
+
 	 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// log_trace(log_cpu,"El socket de kernel en cpu.c es : %d",fd_kernel);
 	// printf("El cliente socket en cpu.c procesar conexion es : %d\n",cliente_socket);
-	 fd_kernel = cliente_socket;/////////////////////////////////////////////todo HARDCODEADO, PREGUNTAR
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// fd_kernel = cliente_socket;///////////////////////////////////////////// HARDCODEADO, PREGUNTAR
+	 //fd_kernel = 8;
+
+	 /*if(!recv_TAM(fd_memoria,&tam_paginas)){
+		 log_error(log_cpu, "Fallo recibiendo pid");
+		 return;
+	 }
+
+	 log_warning(log_cpu,"El tam de pags es %d",tam_paginas);*/
+
+	if(!recv_TAM(fd_memoria,&tam_paginas)){
+		log_error(log_cpu, "Fallo recibiendo pid");
+		return;
+	}
+
+	log_warning(log_cpu,"El tam de pags es %d",tam_paginas);
+
+	if(!recv_TAM(fd_memoria,&cant_entradas_por_tabla)){
+		 log_error(log_cpu, "Fallo recibiendo pid");
+		 return;
+	 }
+
+	 log_warning(log_cpu,"La cant de entradas por tabla es %d",cant_entradas_por_tabla);
 
 
+//	 if(!recv_TAM(fd_memoria,&aux1)){
+//	 		log_erfror(log_cpu, "Fallo recibiendo pid");
+//	 		return;
+//	 	}
+//
+//	// 	log_warning(log_cpu,"El tam de pags es %d",tam_paginas);
+//
+//	 	if(!recv_TAM(fd_memoria,&aux2)){
+//	 		 log_error(log_cpu, "Fallo recibiendo pid");
+//	 		 return;
+//	 	 }
+
+	 	// log_warning(log_cpu,"La cant de entradas por tabla es %d",cant_entradas_por_tabla);
 
 	 while (cliente_socket != -1 && cliente_socket_interrupcion != -1) {
+		 fd_kernel = cliente_socket;
+		 t_list* lista_intrucciones_local = list_create();
 
+
+		 //log_error(log_cpu,"El fd kernel es: %d",fd_kernel);
+		// log_error(log_cpu,"El cliente socket es: %d",cliente_socket);
 		 if (!recv_pid_to_cpu(cliente_socket, &pid)) {
 		 		log_error(log_cpu, "Fallo recibiendo pid");
 		 		break;
@@ -88,12 +131,11 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	          log_error(log_cpu, "Fallo recibiendo NO_OP");
 					             	         break;
 					             	      }
-					             	// log_info(log_cpu,"Me llego la instruccion NO_OP");
-					          //  log_warning(log_cpu, "Deserialice NO_OP el parametro es: %d",parametro1);
-					             	 cargar_instruccion_cpu(NO_OP,"NO_OP",parametro1,(uint32_t)NULL);
+
+					             	 //cargar_instruccion_cpu(NO_OP,"NO_OP",parametro1,(uint32_t)NULL);
+					             	 lista_intrucciones_local = cargar_instruccion_local(lista_intrucciones_local,NO_OP,"NO_OP",parametro1,(uint32_t)NULL);
 
 
-					                // log_info(log_kernel, "entre al case NO_OP");
 					                 break;
 					             }
 					             case IO:
@@ -104,61 +146,67 @@ static void procesar_conexion_cpu(void* void_args) {
 					             	     log_error(log_cpu, "Fallo recibiendo IO");
 					             	     break;
 					             	}
-					             	cargar_instruccion_cpu(IO,"I\O",parametro1,(uint32_t)NULL);
-					             	//log_info(log_cpu,"Me llego la instruccion I/O");
-					             	//log_warning(log_cpu, "Deserialice IO el parametro es: %d",parametro1);
-					             	//log_info(log_kernel, "entre a IO");
+					             	//cargar_instruccion_cpu(IO,"I\O",parametro1,(uint32_t)NULL);
+					             	lista_intrucciones_local = cargar_instruccion_local(lista_intrucciones_local,IO,"I\O",parametro1,(uint32_t)NULL);
 
 
 					             	break;
 					             }
 					             case READ:
 					             {
-					             	uint32_t parametro1;
-
+					            	 uint32_t parametro1;
 					             	if (!recv_READ(cliente_socket, &parametro1)) {
 					         	     log_error(log_cpu, "Fallo recibiendo READ");
 					         	     break;
 					         	}
-					             	cargar_instruccion_cpu(READ,"READ",parametro1,(uint32_t)NULL);
-					         	//log_warning(log_cpu, "Deserialice READ el parametro es: %d",parametro1);
-					             	log_info(log_cpu,"Me llego la instruccion READ");
-					         	//log_info(log_kernel, "entre a IO");
+					             	//cargar_instruccion_cpu(READ,"READ",parametro1,(uint32_t)NULL);
+					             	lista_intrucciones_local = cargar_instruccion_local(lista_intrucciones_local,READ,"READ",parametro1,(uint32_t)NULL);
+
+					            // 	log_info(log_cpu,"Me llego la instruccion READ");
+
 					         	break;
 					 			}
 					             case COPY:
 					             {
-					             	uint32_t parametro1, parametro2;
-
+					            	 uint32_t parametro1;
+					            	 uint32_t parametro2;
 					 				if (!recv_COPY(cliente_socket, &parametro1, &parametro2)) {
 					 				   log_error(log_cpu, "Fallo recibiendo COPY");
 					 				   break;
 					 				}
 
-					 				cargar_instruccion_cpu(COPY,"COPY",parametro1,parametro2);
+					 				//cargar_instruccion_cpu(COPY,"COPY",parametro1,parametro2);
+					             	lista_intrucciones_local = cargar_instruccion_local(lista_intrucciones_local,COPY,"COPY",parametro1,parametro2);
+
 					 				//log_warning(log_cpu, "Deserialice COPY el parametro1 es: %d",parametro1);
 					 				//log_warning(log_cpu, "Deserialice COPY el parametro2 es: %d",parametro2);
-					 				log_info(log_cpu,"Me llego la instruccion COPY");
+					 				//log_info(log_cpu,"Me llego la instruccion COPY");
+
 					 				break;
 					            	}
 					             case WRITE:
 					             {
-					             	uint32_t parametro1, parametro2;
 
+					            	uint32_t parametro1;
+					            	 uint32_t parametro2;
 					             	if (!recv_WRITE(cliente_socket, &parametro1, &parametro2)) {
 					             	   log_error(log_cpu, "Fallo recibiendo WRITE");
 					             	   break;
 					             	}
 
-					             	cargar_instruccion_cpu(READ,"READ",parametro1,parametro2);
-					             	//log_warning(log_cpu, "Deserialice WRITE el parametro1 es: %d",parametro1);
-					             	//log_warning(log_cpu, "Deserialice WRITE el parametro2 es: %d",parametro2);
-					             	log_info(log_cpu,"Me llego la instruccion WRITE");
+					             //	cargar_instruccion_cpu(WRITE,"WRITE",parametro1,parametro2);
+					             	lista_intrucciones_local = cargar_instruccion_local(lista_intrucciones_local,WRITE,"WRITE",parametro1,parametro2);
+
+
+					            // 	log_info(log_cpu,"Me llego la instruccion WRITE");
+
 					             	break;
 					 			}
 					             case EXIT:
 					             {
-					            	 cargar_instruccion_cpu(EXIT,"EXIT",(uint32_t)NULL,(uint32_t)NULL);
+					            	// cargar_instruccion_cpu(EXIT,"EXIT",(uint32_t)NULL,(uint32_t)NULL);
+						             lista_intrucciones_local = cargar_instruccion_local(lista_intrucciones_local,EXIT,"EXIT",(uint32_t)NULL,(uint32_t)NULL);
+
 					             //	log_warning(log_cpu, "Entre en EXIT");
 					            	// log_info(log_cpu,"Me llego la instruccion EXIT");
 
@@ -190,14 +238,18 @@ static void procesar_conexion_cpu(void* void_args) {
 
 
 		pcb_proceso_cpu->PID = pid;
-		pcb_proceso_cpu->instrucciones = lista_instrucciones_cpu;
+		//pcb_proceso_cpu->instrucciones = lista_instrucciones_cpu;
+		pcb_proceso_cpu->instrucciones = lista_intrucciones_local;
 		pcb_proceso_cpu->PC = pc;
 		pcb_proceso_cpu->indice_tabla_paginas = indice_tabla;
 		pcb_proceso_cpu->tamanio = tam;
 
 		list_add(lista_pcb_cpu,pcb_proceso_cpu);
 
-		lista_instrucciones_cpu = list_take_and_remove(lista_instrucciones_cpu,0);
+	//	lista_instrucciones_cpu = list_take_and_remove(lista_instrucciones_cpu,0);
+
+
+
 
 		/*------------------------------------ACA COMIENZA EL CICLO DE EJECUCION----------------------*/
 		instrucciones* proxima_a_ejecutar = malloc(sizeof(instrucciones)); //hacer un free al final
@@ -206,6 +258,8 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		interrupcion = false;
 
+		//log_debug(log_cpu,"la cantidad de instrucciones que me mando kernel: %d",list_size(pcb_proceso_cpu->instrucciones));
+
 			while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones) && tiempo_bloqueante == 0){//la interrupcion verla segun el puerto interrupt
 
 			//log_trace(log_cpu,"Entre en el while de interrupcion");
@@ -213,7 +267,8 @@ static void procesar_conexion_cpu(void* void_args) {
 			proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 
 			decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
-
+			//log_warning(log_cpu,"ANTES DEL CHECK INTERRUPT");
+//			send_TAM(fd_kernel,12);
 			interrupcion = check_interrupt(cliente_socket_interrupcion);
 
 			//log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
@@ -222,23 +277,38 @@ static void procesar_conexion_cpu(void* void_args) {
 
 			}
 
-		//log_warning(log_cpu, "el fd_cpu antes de send pc es: %d",fd_cpu);
-		//log_warning(log_cpu, "el fd_kernel antes de send pc es: %d",fd_kernel);
 
+		//log_debug(log_cpu,"El pc antes de send a kernel es: %d",pcb_proceso_cpu->PC);
 		send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
-		//log_debug(log_cpu,"El tiempo bloqueante antes de mandarlo es: %d ",tiempo_bloqueante);
 
 		send_tiempo_bloqueante(fd_kernel,tiempo_bloqueante);
 
-		//log_trace(log_cpu,"Pase el send pc del PID: %d",pcb_proceso_cpu->PID );
 
 
-		free(proxima_a_ejecutar);
 
 		log_trace(log_cpu,"Finalizo el ciclo de ejecucion del proceso: %d ",pcb_proceso_cpu->PID);
 
-		free(pcb_proceso_cpu);
+
+		//list_destroy(pcb_proceso_cpu->instrucciones);
+
+//		while(list_size(pcb_proceso_cpu->instrucciones) != 0){
+//			list_remove_and_destroy_element(pcb_proceso_cpu->instrucciones,0,free);
+//		}
+
+		tlb_flush();
+
+
+//		while(list_size(pcb_proceso_cpu->instrucciones)!= 0){
+//			list_clean_and_destroy_elements(pcb_proceso_cpu->instrucciones,&free);
+//		}
+		list_destroy(pcb_proceso_cpu->instrucciones);
+		//list_destroy(lista_intrucciones_local);//esto no se si va ELIMINAR SI ROMPE
+
+		free(proxima_a_ejecutar);
+
+	//	free(pcb_proceso_cpu);
+
 
 	 }
 

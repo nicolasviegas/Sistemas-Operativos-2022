@@ -6,10 +6,15 @@
 #include <string.h>
 #include <commons/log.h>
 #include <commons/config.h>
-#include "../../shared/include/utils.h"
-#include "../../shared/include/socket.h"
-#include "../../shared/include/protocolo.h"
-#include "../../shared/include/consola-kernel.h"
+//#include "../../shared/include/utils.h"
+//#include "../../shared/include/socket.h"
+//#include "../../shared/include/protocolo.h"
+//#include "../../shared/include/consola-kernel.h"
+#include "utils.h"
+#include "socket.h"
+#include "protocolo.h"
+#include "consola-kernel.h"
+
 
 /*typedef struct{
 	int id;

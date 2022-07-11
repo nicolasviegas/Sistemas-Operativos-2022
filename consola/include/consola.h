@@ -16,9 +16,16 @@
 #include<commons/collections/queue.h>
 #include<commons/string.h>
 #include<assert.h>
-#include "../../shared/include/utils.h"
-#include "../../shared/include/consola-kernel.h"
+//#include "../shared/include/utils.h"
+//#include "../../shared/include/consola-kernel.h"
+#include "utils.h"
+#include "consola-kernel.h"
 #include "../include/comunicacion_consola.h"
+
+char* path;
+uint32_t tam;
+char* ip;
+char* puerto;
 
 
 char* path;

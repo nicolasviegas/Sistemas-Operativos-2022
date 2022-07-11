@@ -1,6 +1,8 @@
 #include "../include/comunicacion_kernel.h"
 #include "../include/kernel.h"
+#include "protocolo.h"
 #include "../include/funciones_kernel.h"
+
 
 
 typedef struct {
@@ -26,12 +28,14 @@ static void procesar_conexion_kernel(void* void_args) {
 	return;
     }
 
+    tam_proceso = tam;
+
 
     op_code_instrucciones cop;
     t_list* lista_intrucciones_1 = list_create();
     while (cliente_socket != -1) {
 
-
+    	//log_error(log_kernel,"El cliente socket es: %d",cliente_socket);
 
         if (recv(cliente_socket, &cop, sizeof(op_code_instrucciones), 0) != sizeof(op_code_instrucciones)) {
         	contador_cliente++;
@@ -40,27 +44,45 @@ static void procesar_conexion_kernel(void* void_args) {
 
         	//Una vez que la consola nos da todas las instrucciones, aca abajo cargamos estas instrucciones en el pcb y se lo enviamos a cpu
 
-        	//ACA HAY QUE HACER UNA FUNCION QUE LE PIDA LA TABLA DE PAGINAS A MEMORIA
-        	//TODO
+
+
         	pedir_tabla_a_memoria();
+
+        	send_TAM(fd_memoria,tam_proceso);
+
+        	if(mensaje_unico_memoria == 1){
+        		uint32_t aux1;
+        		       	 if(!recv_interrupcion(fd_memoria,&aux1)){
+        		       	 		log_error(log_kernel, "Fallo recibiendo aux");
+        		       	 		return;
+        		       	 	}
+
+        		       	// 	log_warning(log_cpu,"El tam de pags es %d",tam_paginas);
+        		       	uint32_t aux2;
+        		       	 	if(!recv_interrupcion(fd_memoria,&aux2)){
+        		       	 		 log_error(log_kernel, "Fallo recibiendo aux");
+        		       	 		 return;
+        		       	 	 }
+        		       	 	mensaje_unico_memoria = 0;
+        	}
+
+
+
 
         	uint32_t indice_tabla;
         	if (!recv_indice_a_kernel(fd_memoria, &indice_tabla)) {//puede ser fd_memoria en vez de cliente socket
         	            	     log_error(log_kernel, "Fallo recibiendo indice tabla");
         	            	     break;
         	}
-        	//log_trace(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
+        	log_trace(log_kernel,"El indice tabla de pagina es: %d",indice_tabla);
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 
         	pcb_t* pcb_proceso = malloc(sizeof(pcb_t));
-        //	uint32_t a = list_size(lista_instrucciones_kernel);
-
 
 
         	pcb_proceso->PID = contador_cliente;
         	pcb_proceso->tamanio = tam;
-        	//pcb_proceso->instrucciones = lista_instrucciones_kernel;
         	pcb_proceso->instrucciones = lista_intrucciones_1;
         	pcb_proceso->PC = 0;//contador_instruccion;//arranca desde la instruccion 0
         	pcb_proceso->indice_tabla_paginas = indice_tabla;//esta hardcodeado pero hay que cambiarlo, con una funcion que se lo pida a memoria
@@ -75,27 +97,18 @@ static void procesar_conexion_kernel(void* void_args) {
         	pcb_proceso-> suspendido = false;
         	pcb_proceso->tiempo_bloqueo = 0;
 
-        	//////////////////////////////////////////////////////////////////////////////////////////////////////
-        /*	if(list_size(lista_pcb_en_memoria) <= grado_multiprogramacion ){
-        		if(algoritmo_actual == "FIFO"){
 
-        		}
-        	}
-*/
         	agregarANew(pcb_proceso);
         	//log_warning(log_kernel,"pase el agregar a NEW");
 
 
-        	//interrupcion = false; //esto hay que borrarlo
 
-        	//list_destroy(lista_intrucciones_1);
         	//log_trace(log_kernel,"El PID ES: %d",contador_cliente);
         	log_info(log_kernel, "DISCONNECT!");
 
         	//log_trace(log_kernel,"El socket de cpu despues de grar conexiones es: %d",fd_cpu);
 
 
-          // return;
         	break;
         }
 
@@ -113,7 +126,7 @@ static void procesar_conexion_kernel(void* void_args) {
 
          //  log_warning(log_kernel, "Deserialice NO_OP el parametro es: %d",parametro1);
            //cargar_instruccion(NO_OP,"NO_OP",parametro1,NULL);
-           cargar_instruccion2(NO_OP,"NO_OP",parametro1,NULL,lista_intrucciones_1);
+           cargar_instruccion2(NO_OP,"NO_OP",parametro1,(uint32_t)NULL,lista_intrucciones_1);
 
                // log_info(log_kernel, "entre al case NO_OP");
                 break;
@@ -126,8 +139,7 @@ static void procesar_conexion_kernel(void* void_args) {
             	     log_error(log_kernel, "Fallo recibiendo IO");
             	     break;
             	}
-            	//cargar_instruccion(IO,"I\O",parametro1,NULL);
-            	cargar_instruccion2(IO,"I\O",parametro1,NULL,lista_intrucciones_1);
+            	cargar_instruccion2(IO,"I\O",parametro1,(uint32_t)NULL,lista_intrucciones_1);
             	//log_warning(log_kernel, "Deserialice IO el parametro es: %d",parametro1);
             	//log_info(log_kernel, "entre a IO");
 
@@ -137,48 +149,43 @@ static void procesar_conexion_kernel(void* void_args) {
            /* case READ:
             {
             	uint32_t parametro1;
-
             	if (!recv_READ(cliente_socket, &parametro1)) {
         	     log_error(log_kernel, "Fallo recibiendo READ");
         	     break;
             	}
-            cargar_instruccion(READ,"READ",parametro1,NULL);
-        	log_warning(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
+            	cargar_instruccion2(READ,"READ",parametro1,(uint32_t)NULL,lista_intrucciones_1);
+        //	log_warning(log_kernel, "Deserialice READ el parametro es: %d",parametro1);
         	//log_info(log_kernel, "entre a IO");
         	break;
 			}
             case COPY:
             {
             	uint32_t parametro1, parametro2;
-
 				if (!recv_COPY(cliente_socket, &parametro1, &parametro2)) {
 				   log_error(logger, "Fallo recibiendo COPY");
 				   break;
 				}
-
-				 cargar_instruccion(COPY,"COPY",parametro1,parametro2);
-				log_warning(log_kernel, "Deserialice COPY el parametro1 es: %d",parametro1);
-				log_warning(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
+				cargar_instruccion2(COPY,"COPY",parametro1,parametro2,lista_intrucciones_1);
+				//log_warning(log_kernel, "Deserialice COPY el parametro1 es: %d",parametro1);
+				//log_warning(log_kernel, "Deserialice COPY el parametro2 es: %d",parametro2);
 				break;
            	}
             case WRITE:
             {
             	uint32_t parametro1, parametro2;
-
             	if (!recv_WRITE(cliente_socket, &parametro1, &parametro2)) {
             	   log_error(logger, "Fallo recibiendo WRITE");
             	   break;
             	}
-
-            	cargar_instruccion(READ,"READ",parametro1,parametro2);
-            	log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
-            	log_warning(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
+            	cargar_instruccion2(WRITE,"WRITE",parametro1,parametro2,lista_intrucciones_1);
+            	//log_warning(log_kernel, "Deserialice WRITE el parametro1 es: %d",parametro1);
+            	//log_warning(log_kernel, "Deserialice WRITE el parametro2 es: %d",parametro2);
             	break;
 			}*/
             case EXIT:
             {
             	//cargar_instruccion(EXIT,"EXIT",NULL,NULL);
-            	cargar_instruccion2(EXIT,"EXIT",NULL,NULL,lista_intrucciones_1);
+            	cargar_instruccion2(EXIT,"EXIT",(uint32_t)NULL,(uint32_t)NULL,lista_intrucciones_1);
             	//log_warning(log_kernel, "Entre en EXIT");
 
 				break;
