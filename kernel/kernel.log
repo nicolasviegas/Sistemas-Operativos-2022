@@ -22485,3 +22485,1426 @@
 [INFO] 17:15:03:920 kernel/(5944:5948): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 49.517601 milisegundos.
 [TRACE] 17:15:03:921 kernel/(5944:5948): Cantidad de instrucciones restantes del proceso 5: 1
 [INFO] 17:15:03:966 kernel/(5944:5948): [EXIT] Finaliza el proceso de PID: 5
+[INFO] 11:14:32:934 kernel/(5835:5835): El algoritmo de planificacion es: SRT
+
+[INFO] 11:14:32:934 kernel/(5835:5835): El estimacion inicial es: 50000
+
+[INFO] 11:14:32:934 kernel/(5835:5835): El grado de multiprogramacion es: 6
+
+[INFO] 11:14:32:934 kernel/(5835:5835): El tiempo maximo de bloqueo es: 1000
+
+[INFO] 11:14:32:935 kernel/(5835:5835): Escuchando en 127.0.0.1:8000 (KERNEL)
+
+[INFO] 11:14:32:935 kernel/(5835:5835): Cliente conectado en 127.0.0.1:8002 (a MEMORIA)
+
+[INFO] 11:14:32:935 kernel/(5835:5835): Cliente conectado en 127.0.0.1:8001 (a CPU)
+
+[INFO] 11:14:32:936 kernel/(5835:5835): Cliente conectado en 127.0.0.1:8005 (a CPU)
+
+[INFO] 11:14:41:876 kernel/(5835:5835): Cliente conectado (a KERNEL)
+
+[TRACE] 11:14:41:882 kernel/(5835:5864): El indice tabla de pagina es: 0
+[INFO] 11:14:41:882 kernel/(5835:5864): [NEW] Entra el proceso de PID: 1 a la cola.
+[INFO] 11:14:41:882 kernel/(5835:5838): [NEW] Se saca el proceso de PID: 1 de la cola
+[INFO] 11:14:41:882 kernel/(5835:5838): [READY] Entra el proceso de PID: 1 a la cola.
+[INFO] 11:14:41:882 kernel/(5835:5864): DISCONNECT!
+[WARNING] 11:14:41:882 kernel/(5835:5864): El cliente se desconecto de KERNEL server
+[TRACE] 11:14:41:922 kernel/(5835:5838): Memoria termino de meter al proceso
+[DEBUG] 11:14:41:922 kernel/(5835:5838): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:14:41:922 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 50000.000000
+[WARNING] 11:14:41:922 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:41:922 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 50000.000000 milisegundos.
+[TRACE] 11:14:41:922 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 64
+[INFO] 11:14:42:384 kernel/(5835:5835): Cliente conectado (a KERNEL)
+
+[TRACE] 11:14:42:426 kernel/(5835:5867): El indice tabla de pagina es: 1
+[INFO] 11:14:42:426 kernel/(5835:5867): [NEW] Entra el proceso de PID: 2 a la cola.
+[INFO] 11:14:42:426 kernel/(5835:5838): [NEW] Se saca el proceso de PID: 2 de la cola
+[INFO] 11:14:42:426 kernel/(5835:5838): [READY] Entra el proceso de PID: 2 a la cola.
+[INFO] 11:14:42:426 kernel/(5835:5867): DISCONNECT!
+[WARNING] 11:14:42:426 kernel/(5835:5867): El cliente se desconecto de KERNEL server
+[TRACE] 11:14:42:466 kernel/(5835:5838): Memoria termino de meter al proceso
+[DEBUG] 11:14:42:466 kernel/(5835:5838): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:14:42:466 kernel/(5835:5838): Envio una interrupcion 1
+[INFO] 11:14:42:889 kernel/(5835:5835): Cliente conectado (a KERNEL)
+
+[TRACE] 11:14:42:930 kernel/(5835:5870): El indice tabla de pagina es: 2
+[INFO] 11:14:42:930 kernel/(5835:5870): [NEW] Entra el proceso de PID: 3 a la cola.
+[INFO] 11:14:42:930 kernel/(5835:5870): DISCONNECT!
+[INFO] 11:14:42:930 kernel/(5835:5838): [NEW] Se saca el proceso de PID: 3 de la cola
+[WARNING] 11:14:42:930 kernel/(5835:5870): El cliente se desconecto de KERNEL server
+[INFO] 11:14:42:930 kernel/(5835:5838): [READY] Entra el proceso de PID: 3 a la cola.
+[TRACE] 11:14:42:970 kernel/(5835:5838): Memoria termino de meter al proceso
+[DEBUG] 11:14:42:970 kernel/(5835:5838): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:14:42:970 kernel/(5835:5838): Envio una interrupcion 1
+[INFO] 11:14:43:396 kernel/(5835:5835): Cliente conectado (a KERNEL)
+
+[TRACE] 11:14:43:438 kernel/(5835:5873): El indice tabla de pagina es: 3
+[INFO] 11:14:43:438 kernel/(5835:5873): [NEW] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:14:43:438 kernel/(5835:5873): DISCONNECT!
+[INFO] 11:14:43:438 kernel/(5835:5838): [NEW] Se saca el proceso de PID: 4 de la cola
+[WARNING] 11:14:43:438 kernel/(5835:5873): El cliente se desconecto de KERNEL server
+[INFO] 11:14:43:438 kernel/(5835:5838): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:14:43:478 kernel/(5835:5838): Memoria termino de meter al proceso
+[DEBUG] 11:14:43:478 kernel/(5835:5838): [----------------PROCESOS EN READY: 3 --------------------]
+
+[DEBUG] 11:14:43:478 kernel/(5835:5838): Envio una interrupcion 1
+[INFO] 11:14:43:903 kernel/(5835:5835): Cliente conectado (a KERNEL)
+
+[INFO] 11:14:43:929 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:43:942 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:43:942 kernel/(5835:5839): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:14:43:942 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:43:942 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:43:942 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:43:942 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 40000.000000
+[WARNING] 11:14:43:942 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:43:942 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 40000.000000 milisegundos.
+[TRACE] 11:14:43:942 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 62
+[TRACE] 11:14:43:942 kernel/(5835:5876): El indice tabla de pagina es: 4
+[INFO] 11:14:43:952 kernel/(5835:5876): [NEW] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:14:43:953 kernel/(5835:5838): [NEW] Se saca el proceso de PID: 5 de la cola
+[INFO] 11:14:43:953 kernel/(5835:5838): [READY] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:14:43:953 kernel/(5835:5876): DISCONNECT!
+[WARNING] 11:14:43:953 kernel/(5835:5876): El cliente se desconecto de KERNEL server
+[TRACE] 11:14:43:990 kernel/(5835:5838): Memoria termino de meter al proceso
+[DEBUG] 11:14:43:990 kernel/(5835:5838): [----------------PROCESOS EN READY: 4 --------------------]
+
+[DEBUG] 11:14:43:990 kernel/(5835:5838): Envio una interrupcion 1
+[INFO] 11:14:43:990 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:44:029 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:44:030 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:44:030 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:44:030 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:44:030 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:44:030 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:44:030 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 32000.000000
+[WARNING] 11:14:44:030 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:44:030 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 32000.000000 milisegundos.
+[TRACE] 11:14:44:030 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 61
+[INFO] 11:14:45:071 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:45:110 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:45:110 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:45:110 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:45:110 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:45:110 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:45:110 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:45:110 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 25600.000000
+[WARNING] 11:14:45:110 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:45:110 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 25600.000000 milisegundos.
+[TRACE] 11:14:45:110 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 60
+[INFO] 11:14:45:110 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:45:149 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:45:150 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:45:150 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:45:150 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:45:150 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:45:150 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:45:150 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 20480.000000
+[WARNING] 11:14:45:150 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:45:150 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 20480.000000 milisegundos.
+[TRACE] 11:14:45:150 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 59
+[INFO] 11:14:48:352 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:48:390 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:48:390 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:48:390 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:48:390 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:48:390 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:48:390 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:48:390 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 16384.000000
+[WARNING] 11:14:48:390 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:48:390 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 16384.000000 milisegundos.
+[TRACE] 11:14:48:390 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 52
+[INFO] 11:14:49:392 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:49:430 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:49:430 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:49:430 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:49:430 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:49:430 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:49:430 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:49:430 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 13107.200195
+[WARNING] 11:14:49:430 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:49:430 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 13107.200195 milisegundos.
+[TRACE] 11:14:49:430 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 50
+[INFO] 11:14:50:471 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:50:509 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:50:510 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:50:510 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:50:510 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:50:510 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:50:510 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:50:510 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 10485.759766
+[WARNING] 11:14:50:510 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:50:510 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 10485.759766 milisegundos.
+[TRACE] 11:14:50:510 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 48
+[INFO] 11:14:51:551 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:51:590 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:51:590 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:51:590 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:51:590 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:51:590 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:51:590 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:51:590 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 8388.607422
+[WARNING] 11:14:51:590 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:51:590 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 8388.607422 milisegundos.
+[TRACE] 11:14:51:590 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 46
+[INFO] 11:14:52:631 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:52:670 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:14:52:670 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:52:670 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:52:670 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:52:670 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:52:670 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:52:670 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 6710.885742
+[WARNING] 11:14:52:670 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:52:670 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 6710.885742 milisegundos.
+[TRACE] 11:14:52:670 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 44
+[INFO] 11:14:54:830 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 1 a la cola.
+[INFO] 11:14:54:830 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 1 de la cola.
+[INFO] 11:14:54:830 kernel/(5835:5837): [SUSPENDED] Se suspende el proceso 1, 5000 milisegs, 
+[INFO] 11:14:55:830 kernel/(5835:5837): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 1 a la cola.
+[TRACE] 11:14:58:877 kernel/(5835:5837): Memoria termino de meter a swap al proceso
+[INFO] 11:14:58:877 kernel/(5835:5837): [READY-SUSPENDED] Ingresa el proceso de PID: 1 de la cola.
+[INFO] 11:14:58:877 kernel/(5835:5836): [READY-SUSPENDED] Sale el proceso de PID: 1 de la cola.
+[INFO] 11:14:58:877 kernel/(5835:5836): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:14:58:878 kernel/(5835:5836): Memoria termino de meter al proceso
+[DEBUG] 11:14:58:878 kernel/(5835:5836): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:14:58:878 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:58:878 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:58:878 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:58:878 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:14:58:878 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 5368.708496
+[WARNING] 11:14:58:878 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:14:58:878 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 5368.708496 milisegundos.
+[TRACE] 11:14:58:878 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 32
+[TRACE] 11:14:58:918 kernel/(5835:5836): Memoria termino de sacar de swap al proceso
+[DEBUG] 11:14:58:918 kernel/(5835:5836): Envio una interrupcion 3
+[INFO] 11:15:01:421 kernel/(5835:5839): [READY] Entra el proceso de PID: 1 a la cola.
+[TRACE] 11:15:01:458 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:01:458 kernel/(5835:5839): [----------------PROCESOS EN READY: 5 --------------------]
+
+[ERROR] 11:15:01:458 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:01:458 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:01:458 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:01:458 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:01:458 kernel/(5835:5839): El proceso 1, tiene una estimacion actual de: 4294.966797
+[WARNING] 11:15:01:458 kernel/(5835:5839): El proceso 1 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:01:458 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 1 con una rafaga de ejecucion estimada de 4294.966797 milisegundos.
+[TRACE] 11:15:01:458 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 1: 30
+[INFO] 11:15:08:402 kernel/(5835:5839): [EXIT] Finaliza el proceso de PID: 1
+[ERROR] 11:15:08:402 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:08:402 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:08:402 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:08:402 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[WARNING] 11:15:08:402 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:08:402 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 50000.000000 milisegundos.
+[TRACE] 11:15:08:402 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 35
+[INFO] 11:15:12:489 kernel/(5835:5839): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:12:530 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:12:530 kernel/(5835:5839): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:15:12:530 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:12:530 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:12:530 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:12:530 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 40000.000000
+[WARNING] 11:15:12:530 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:12:530 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 40000.000000 milisegundos.
+[TRACE] 11:15:12:530 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 31
+[INFO] 11:15:19:539 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[INFO] 11:15:19:539 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 11:15:19:539 kernel/(5835:5837): [SUSPENDED] Se suspende el proceso 2, 5000 milisegs, 
+[INFO] 11:15:20:539 kernel/(5835:5837): [BLOCK-SUSPENDED] Ingresa el pcb de PID: 2 a la cola.
+[TRACE] 11:15:24:581 kernel/(5835:5837): Memoria termino de meter a swap al proceso
+[INFO] 11:15:24:581 kernel/(5835:5837): [READY-SUSPENDED] Ingresa el proceso de PID: 2 de la cola.
+[INFO] 11:15:24:581 kernel/(5835:5836): [READY-SUSPENDED] Sale el proceso de PID: 2 de la cola.
+[INFO] 11:15:24:581 kernel/(5835:5836): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:24:581 kernel/(5835:5836): Memoria termino de meter al proceso
+[DEBUG] 11:15:24:581 kernel/(5835:5836): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:15:24:581 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:24:581 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:24:581 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:24:581 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 32000.000000
+[WARNING] 11:15:24:581 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:24:581 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 32000.000000 milisegundos.
+[TRACE] 11:15:24:581 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 23
+[TRACE] 11:15:24:621 kernel/(5835:5836): Memoria termino de sacar de swap al proceso
+[DEBUG] 11:15:24:622 kernel/(5835:5836): Envio una interrupcion 3
+[INFO] 11:15:27:086 kernel/(5835:5839): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:27:122 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:27:122 kernel/(5835:5839): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:15:27:122 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:27:122 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:27:122 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:27:122 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 25600.000000
+[WARNING] 11:15:27:122 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:27:122 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 25600.000000 milisegundos.
+[TRACE] 11:15:27:122 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 21
+[INFO] 11:15:37:135 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[INFO] 11:15:37:136 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 11:15:37:136 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 2, 100 milisegs, 
+[INFO] 11:15:37:236 kernel/(5835:5837): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:37:273 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:15:37:274 kernel/(5835:5837): [----------------PROCESOS EN READY: 4 --------------------]
+
+[DEBUG] 11:15:37:274 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:15:37:274 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:274 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:274 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:274 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 20480.000000
+[WARNING] 11:15:37:274 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:37:274 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 20480.000000 milisegundos.
+[TRACE] 11:15:37:274 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 11
+[INFO] 11:15:37:274 kernel/(5835:5839): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:37:314 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:37:314 kernel/(5835:5839): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:15:37:314 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:314 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:314 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:314 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 16384.000000
+[WARNING] 11:15:37:314 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:37:314 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 16384.000000 milisegundos.
+[TRACE] 11:15:37:314 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 10
+[INFO] 11:15:37:354 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[INFO] 11:15:37:354 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 11:15:37:354 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 2, 100 milisegs, 
+[INFO] 11:15:37:454 kernel/(5835:5837): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:37:494 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:15:37:494 kernel/(5835:5837): [----------------PROCESOS EN READY: 4 --------------------]
+
+[DEBUG] 11:15:37:494 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:15:37:494 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:494 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:494 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:494 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 13107.200195
+[WARNING] 11:15:37:494 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:37:494 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 13107.200195 milisegundos.
+[TRACE] 11:15:37:494 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 8
+[INFO] 11:15:37:535 kernel/(5835:5839): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:37:573 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:37:574 kernel/(5835:5839): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:15:37:574 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:574 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:574 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:574 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 10485.759766
+[WARNING] 11:15:37:574 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:37:574 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 10485.759766 milisegundos.
+[TRACE] 11:15:37:574 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 7
+[INFO] 11:15:37:614 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[INFO] 11:15:37:614 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 11:15:37:614 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 2, 100 milisegs, 
+[INFO] 11:15:37:714 kernel/(5835:5837): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:37:754 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:15:37:754 kernel/(5835:5837): [----------------PROCESOS EN READY: 4 --------------------]
+
+[DEBUG] 11:15:37:754 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:15:37:754 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:754 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:754 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:754 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 8388.607422
+[WARNING] 11:15:37:754 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:37:754 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 8388.607422 milisegundos.
+[TRACE] 11:15:37:754 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 6
+[INFO] 11:15:37:794 kernel/(5835:5839): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:37:834 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:37:834 kernel/(5835:5839): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:15:37:834 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:834 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:834 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:37:834 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 6710.885742
+[WARNING] 11:15:37:834 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:37:834 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 6710.885742 milisegundos.
+[TRACE] 11:15:37:834 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 5
+[INFO] 11:15:37:874 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[INFO] 11:15:37:874 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 11:15:37:874 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 2, 100 milisegs, 
+[INFO] 11:15:37:974 kernel/(5835:5837): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:38:014 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:15:38:014 kernel/(5835:5837): [----------------PROCESOS EN READY: 4 --------------------]
+
+[DEBUG] 11:15:38:014 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:15:38:014 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:014 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:014 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:014 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 5368.708496
+[WARNING] 11:15:38:014 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:38:014 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 5368.708496 milisegundos.
+[TRACE] 11:15:38:014 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 4
+[INFO] 11:15:38:054 kernel/(5835:5839): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:38:094 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:38:094 kernel/(5835:5839): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:15:38:094 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:094 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:094 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:094 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 4294.966797
+[WARNING] 11:15:38:094 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:38:094 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 4294.966797 milisegundos.
+[TRACE] 11:15:38:094 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 3
+[INFO] 11:15:38:134 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 2 a la cola.
+[INFO] 11:15:38:134 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 2 de la cola.
+[INFO] 11:15:38:134 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 2, 100 milisegs, 
+[INFO] 11:15:38:234 kernel/(5835:5837): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:38:274 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:15:38:274 kernel/(5835:5837): [----------------PROCESOS EN READY: 4 --------------------]
+
+[DEBUG] 11:15:38:274 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:15:38:274 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:274 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:274 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:274 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 3435.973389
+[WARNING] 11:15:38:274 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:38:274 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 3435.973389 milisegundos.
+[TRACE] 11:15:38:274 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 2
+[INFO] 11:15:38:314 kernel/(5835:5839): [READY] Entra el proceso de PID: 2 a la cola.
+[TRACE] 11:15:38:354 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:38:354 kernel/(5835:5839): [----------------PROCESOS EN READY: 4 --------------------]
+
+[ERROR] 11:15:38:354 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:354 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:354 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:354 kernel/(5835:5839): El proceso 2, tiene una estimacion actual de: 2748.778809
+[WARNING] 11:15:38:354 kernel/(5835:5839): El proceso 2 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:38:354 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 2 con una rafaga de ejecucion estimada de 2748.778809 milisegundos.
+[TRACE] 11:15:38:354 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 2: 1
+[INFO] 11:15:38:394 kernel/(5835:5839): [EXIT] Finaliza el proceso de PID: 2
+[ERROR] 11:15:38:394 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:394 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:38:394 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[WARNING] 11:15:38:394 kernel/(5835:5839): El proceso 3 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:38:394 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 3 con una rafaga de ejecucion estimada de 50000.000000 milisegundos.
+[TRACE] 11:15:38:394 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 3: 85
+[INFO] 11:15:42:553 kernel/(5835:5839): [READY] Entra el proceso de PID: 3 a la cola.
+[TRACE] 11:15:42:594 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:42:594 kernel/(5835:5839): [----------------PROCESOS EN READY: 3 --------------------]
+
+[ERROR] 11:15:42:594 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:42:594 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:42:594 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 40000.000000
+[WARNING] 11:15:42:594 kernel/(5835:5839): El proceso 3 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:42:594 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 3 con una rafaga de ejecucion estimada de 40000.000000 milisegundos.
+[TRACE] 11:15:42:594 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 3: 81
+[INFO] 11:15:43:596 kernel/(5835:5839): [READY] Entra el proceso de PID: 3 a la cola.
+[TRACE] 11:15:43:634 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:15:43:634 kernel/(5835:5839): [----------------PROCESOS EN READY: 3 --------------------]
+
+[ERROR] 11:15:43:634 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:43:634 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:15:43:634 kernel/(5835:5839): El proceso 3, tiene una estimacion actual de: 32000.000000
+[WARNING] 11:15:43:634 kernel/(5835:5839): El proceso 3 fue elegido mediante el algoritmo SRT 
+[INFO] 11:15:43:634 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 3 con una rafaga de ejecucion estimada de 32000.000000 milisegundos.
+[TRACE] 11:15:43:634 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 3: 80
+[INFO] 11:19:20:154 kernel/(5835:5839): [EXIT] Finaliza el proceso de PID: 3
+[ERROR] 11:19:20:154 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:20:154 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[WARNING] 11:19:20:154 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:20:154 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 50000.000000 milisegundos.
+[TRACE] 11:19:20:154 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 64
+[INFO] 11:19:20:194 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:20:194 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:20:194 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:20:294 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:20:334 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:20:334 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:20:334 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:20:334 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:20:334 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 40000.000000
+[WARNING] 11:19:20:334 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:20:334 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 40000.000000 milisegundos.
+[TRACE] 11:19:20:334 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 62
+[INFO] 11:19:20:374 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:20:414 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:20:414 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:20:414 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:20:414 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 32000.000000
+[WARNING] 11:19:20:414 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:20:414 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 32000.000000 milisegundos.
+[TRACE] 11:19:20:414 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 61
+[INFO] 11:19:20:454 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:20:454 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:20:454 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:20:554 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:20:594 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:20:594 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:20:594 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:20:594 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:20:594 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 25600.000000
+[WARNING] 11:19:20:594 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:20:594 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 25600.000000 milisegundos.
+[TRACE] 11:19:20:594 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 60
+[INFO] 11:19:20:635 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:20:674 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:20:674 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:20:674 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:20:674 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 20480.000000
+[WARNING] 11:19:20:674 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:20:674 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 20480.000000 milisegundos.
+[TRACE] 11:19:20:674 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 59
+[INFO] 11:19:20:714 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:20:715 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:20:715 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:20:815 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:20:854 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:20:854 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:20:854 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:20:854 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:20:854 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 16384.000000
+[WARNING] 11:19:20:854 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:20:854 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 16384.000000 milisegundos.
+[TRACE] 11:19:20:854 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 58
+[INFO] 11:19:20:894 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:20:934 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:20:934 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:20:934 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:20:934 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 13107.200195
+[WARNING] 11:19:20:934 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:20:934 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 13107.200195 milisegundos.
+[TRACE] 11:19:20:934 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 57
+[INFO] 11:19:20:974 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:20:974 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:20:974 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:21:074 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:21:114 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:21:114 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:21:114 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:21:114 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:21:114 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 10485.759766
+[WARNING] 11:19:21:114 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:21:114 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 10485.759766 milisegundos.
+[TRACE] 11:19:21:114 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 56
+[INFO] 11:19:21:154 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:21:194 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:21:194 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:21:194 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:21:194 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 8388.607422
+[WARNING] 11:19:21:194 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:21:194 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 8388.607422 milisegundos.
+[TRACE] 11:19:21:194 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 55
+[INFO] 11:19:21:234 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:21:234 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:21:234 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:21:334 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:21:374 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:21:374 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:21:374 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:21:374 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:21:374 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 6710.885742
+[WARNING] 11:19:21:374 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:21:374 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 6710.885742 milisegundos.
+[TRACE] 11:19:21:374 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 54
+[INFO] 11:19:21:414 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:21:454 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:21:454 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:21:454 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:21:454 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 5368.708496
+[WARNING] 11:19:21:454 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:21:454 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 5368.708496 milisegundos.
+[TRACE] 11:19:21:454 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 53
+[INFO] 11:19:21:494 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:21:494 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:21:494 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:21:594 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:21:634 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:21:634 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:21:634 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:21:634 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:21:634 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 4294.966797
+[WARNING] 11:19:21:634 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:21:634 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 4294.966797 milisegundos.
+[TRACE] 11:19:21:634 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 52
+[INFO] 11:19:21:674 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:21:714 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:21:714 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:21:714 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:21:714 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 3435.973389
+[WARNING] 11:19:21:714 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:21:714 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 3435.973389 milisegundos.
+[TRACE] 11:19:21:714 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 51
+[INFO] 11:19:21:754 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:21:754 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:21:754 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:21:854 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:21:894 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:21:894 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:21:894 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:21:894 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:21:894 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 2748.778809
+[WARNING] 11:19:21:894 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:21:894 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 2748.778809 milisegundos.
+[TRACE] 11:19:21:894 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 50
+[INFO] 11:19:21:934 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:21:974 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:21:974 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:21:974 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:21:974 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 2199.022949
+[WARNING] 11:19:21:974 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:21:974 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 2199.022949 milisegundos.
+[TRACE] 11:19:21:974 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 49
+[INFO] 11:19:22:014 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:22:014 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:22:014 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:22:114 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:22:154 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:22:154 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:22:154 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:22:154 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:22:154 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 1759.218384
+[WARNING] 11:19:22:154 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:22:154 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 1759.218384 milisegundos.
+[TRACE] 11:19:22:154 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 48
+[INFO] 11:19:22:194 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:22:234 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:22:234 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:22:234 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:22:234 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 1407.374756
+[WARNING] 11:19:22:234 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:22:234 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 1407.374756 milisegundos.
+[TRACE] 11:19:22:234 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 47
+[INFO] 11:19:22:274 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:22:274 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:22:274 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:22:374 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:22:414 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:22:414 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:22:414 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:22:414 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:22:414 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 1125.899780
+[WARNING] 11:19:22:414 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:22:414 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 1125.899780 milisegundos.
+[TRACE] 11:19:22:414 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 46
+[INFO] 11:19:22:454 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:22:494 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:22:494 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:22:494 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:22:494 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 900.719849
+[WARNING] 11:19:22:494 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:22:494 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 900.719849 milisegundos.
+[TRACE] 11:19:22:494 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 45
+[INFO] 11:19:22:534 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:22:534 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:22:534 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:22:634 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:22:674 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:22:674 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:22:674 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:22:674 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:22:674 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 720.575867
+[WARNING] 11:19:22:674 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:22:674 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 720.575867 milisegundos.
+[TRACE] 11:19:22:674 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 44
+[INFO] 11:19:22:714 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:22:754 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:22:754 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:22:754 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:22:754 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 576.460693
+[WARNING] 11:19:22:754 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:22:754 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 576.460693 milisegundos.
+[TRACE] 11:19:22:754 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 43
+[INFO] 11:19:22:794 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:22:794 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:22:794 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:22:894 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:22:934 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:22:934 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:22:934 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:22:934 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:22:934 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 461.168549
+[WARNING] 11:19:22:934 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:22:934 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 461.168549 milisegundos.
+[TRACE] 11:19:22:934 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 42
+[INFO] 11:19:22:974 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:23:014 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:23:014 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:23:014 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:23:014 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 368.934845
+[WARNING] 11:19:23:014 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:23:014 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 368.934845 milisegundos.
+[TRACE] 11:19:23:014 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 41
+[INFO] 11:19:23:054 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:23:054 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:23:054 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:23:154 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:23:194 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:23:194 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:23:194 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:23:194 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:23:194 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 295.147888
+[WARNING] 11:19:23:194 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:23:194 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 295.147888 milisegundos.
+[TRACE] 11:19:23:194 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 40
+[INFO] 11:19:23:234 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:23:274 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:23:274 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:23:274 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:23:274 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 236.118317
+[WARNING] 11:19:23:274 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:23:274 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 236.118317 milisegundos.
+[TRACE] 11:19:23:274 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 39
+[INFO] 11:19:23:314 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:23:314 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:23:314 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:23:414 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:23:454 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:23:454 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:23:454 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:23:454 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:23:454 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 188.894653
+[WARNING] 11:19:23:454 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:23:454 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 188.894653 milisegundos.
+[TRACE] 11:19:23:454 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 38
+[INFO] 11:19:23:494 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:23:534 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:23:534 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:23:534 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:23:534 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 151.115723
+[WARNING] 11:19:23:534 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:23:534 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 151.115723 milisegundos.
+[TRACE] 11:19:23:534 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 37
+[INFO] 11:19:23:574 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:23:574 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:23:574 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:23:674 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:23:714 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:23:714 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:23:714 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:23:714 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:23:714 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 120.892578
+[WARNING] 11:19:23:714 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:23:714 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 120.892578 milisegundos.
+[TRACE] 11:19:23:714 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 36
+[INFO] 11:19:23:754 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:23:794 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:23:794 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:23:794 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:23:794 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 96.714066
+[WARNING] 11:19:23:794 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:23:794 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 96.714066 milisegundos.
+[TRACE] 11:19:23:794 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 35
+[INFO] 11:19:23:834 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:23:834 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:23:834 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:23:934 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:23:974 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:23:974 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:23:974 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:23:974 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:23:974 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 77.371254
+[WARNING] 11:19:23:974 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:23:974 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 77.371254 milisegundos.
+[TRACE] 11:19:23:974 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 34
+[INFO] 11:19:24:014 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:24:054 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:24:054 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:24:054 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:24:054 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 61.897003
+[WARNING] 11:19:24:054 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:24:054 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 61.897003 milisegundos.
+[TRACE] 11:19:24:054 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 33
+[INFO] 11:19:24:094 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:24:094 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:24:094 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:24:194 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:24:234 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:24:234 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:24:234 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:24:234 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:24:234 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 49.517601
+[WARNING] 11:19:24:234 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:24:234 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 49.517601 milisegundos.
+[TRACE] 11:19:24:234 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 32
+[INFO] 11:19:24:274 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:24:314 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:24:314 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:24:314 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:24:314 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 39.614082
+[WARNING] 11:19:24:314 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:24:314 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 39.614082 milisegundos.
+[TRACE] 11:19:24:314 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 31
+[INFO] 11:19:24:354 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:24:354 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:24:354 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:24:454 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:24:494 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:24:494 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:24:494 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:24:494 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:24:494 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 31.691265
+[WARNING] 11:19:24:494 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:24:494 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 31.691265 milisegundos.
+[TRACE] 11:19:24:494 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 30
+[INFO] 11:19:24:534 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:24:574 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:24:574 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:24:574 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:24:574 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 25.353012
+[WARNING] 11:19:24:574 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:24:574 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 25.353012 milisegundos.
+[TRACE] 11:19:24:574 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 29
+[INFO] 11:19:24:614 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:24:614 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:24:614 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:24:714 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:24:754 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:24:754 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:24:754 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:24:754 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:24:754 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 20.282410
+[WARNING] 11:19:24:754 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:24:754 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 20.282410 milisegundos.
+[TRACE] 11:19:24:754 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 28
+[INFO] 11:19:24:794 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:24:834 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:24:834 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:24:834 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:24:834 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 16.225927
+[WARNING] 11:19:24:834 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:24:834 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 16.225927 milisegundos.
+[TRACE] 11:19:24:834 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 27
+[INFO] 11:19:24:874 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:24:874 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:24:874 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:24:974 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:25:013 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:25:013 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:25:014 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:25:014 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:25:014 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 12.980742
+[WARNING] 11:19:25:014 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:25:014 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 12.980742 milisegundos.
+[TRACE] 11:19:25:014 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 26
+[INFO] 11:19:25:054 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:25:094 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:25:094 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:25:094 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:25:094 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 10.384593
+[WARNING] 11:19:25:094 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:25:094 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 10.384593 milisegundos.
+[TRACE] 11:19:25:094 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 25
+[INFO] 11:19:25:134 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:25:134 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:25:134 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:25:234 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:25:274 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:25:274 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:25:274 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:25:274 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:25:274 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 8.307674
+[WARNING] 11:19:25:274 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:25:274 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 8.307674 milisegundos.
+[TRACE] 11:19:25:274 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 24
+[INFO] 11:19:25:314 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:25:354 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:25:354 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:25:354 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:25:354 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 6.646140
+[WARNING] 11:19:25:354 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:25:354 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 6.646140 milisegundos.
+[TRACE] 11:19:25:354 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 23
+[INFO] 11:19:25:394 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:25:394 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:25:394 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:25:494 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:25:534 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:25:534 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:25:534 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:25:534 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:25:534 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 5.316912
+[WARNING] 11:19:25:534 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:25:534 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 5.316912 milisegundos.
+[TRACE] 11:19:25:534 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 22
+[INFO] 11:19:25:574 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:25:614 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:25:614 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:25:614 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:25:614 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 4.253530
+[WARNING] 11:19:25:614 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:25:614 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 4.253530 milisegundos.
+[TRACE] 11:19:25:614 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 21
+[INFO] 11:19:25:656 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:25:656 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:25:656 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:25:756 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:25:794 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:25:794 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:25:794 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:25:794 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:25:794 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 3.402824
+[WARNING] 11:19:25:794 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:25:794 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 3.402824 milisegundos.
+[TRACE] 11:19:25:794 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 19
+[INFO] 11:19:25:834 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:25:874 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:25:874 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:25:874 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:25:874 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 2.722259
+[WARNING] 11:19:25:874 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:25:874 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 2.722259 milisegundos.
+[TRACE] 11:19:25:874 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 18
+[INFO] 11:19:25:914 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:25:914 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:25:914 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:26:014 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:26:054 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:26:054 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:26:054 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:26:054 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:26:054 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 2.177807
+[WARNING] 11:19:26:054 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:26:054 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 2.177807 milisegundos.
+[TRACE] 11:19:26:054 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 17
+[INFO] 11:19:26:094 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:26:134 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:26:134 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:26:134 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:26:134 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 1.742246
+[WARNING] 11:19:26:134 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:26:134 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 1.742246 milisegundos.
+[TRACE] 11:19:26:134 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 16
+[INFO] 11:19:26:174 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:26:174 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:26:174 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:26:274 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:26:314 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:26:314 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:26:314 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:26:314 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:26:314 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 1.393797
+[WARNING] 11:19:26:314 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:26:314 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 1.393797 milisegundos.
+[TRACE] 11:19:26:314 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 15
+[INFO] 11:19:26:354 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:26:393 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:26:394 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:26:394 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:26:394 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 1.115037
+[WARNING] 11:19:26:394 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:26:394 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 1.115037 milisegundos.
+[TRACE] 11:19:26:394 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 14
+[INFO] 11:19:26:434 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:26:434 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:26:434 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:26:534 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:26:573 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:26:574 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:26:574 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:26:574 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:26:574 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.892030
+[WARNING] 11:19:26:574 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:26:574 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.892030 milisegundos.
+[TRACE] 11:19:26:574 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 13
+[INFO] 11:19:26:614 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:26:653 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:26:654 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:26:654 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:26:654 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.713624
+[WARNING] 11:19:26:654 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:26:654 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.713624 milisegundos.
+[TRACE] 11:19:26:654 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 12
+[INFO] 11:19:26:694 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:26:694 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:26:694 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:26:794 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:26:834 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:26:834 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:26:834 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:26:834 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:26:834 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.570899
+[WARNING] 11:19:26:834 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:26:834 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.570899 milisegundos.
+[TRACE] 11:19:26:834 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 11
+[INFO] 11:19:26:874 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:26:914 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:26:914 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:26:914 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:26:914 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.456719
+[WARNING] 11:19:26:914 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:26:914 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.456719 milisegundos.
+[TRACE] 11:19:26:914 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 10
+[INFO] 11:19:26:954 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:26:954 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:26:954 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:27:054 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:27:094 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:27:094 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:27:094 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:27:094 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:27:094 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.365375
+[WARNING] 11:19:27:094 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:27:094 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.365375 milisegundos.
+[TRACE] 11:19:27:094 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 9
+[INFO] 11:19:27:134 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:27:174 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:27:174 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:27:174 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:27:174 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.292300
+[WARNING] 11:19:27:174 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:27:174 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.292300 milisegundos.
+[TRACE] 11:19:27:174 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 8
+[INFO] 11:19:27:214 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:27:214 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:27:214 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:27:314 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:27:354 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:27:354 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:27:354 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:27:354 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:27:354 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.233840
+[WARNING] 11:19:27:354 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:27:354 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.233840 milisegundos.
+[TRACE] 11:19:27:354 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 7
+[INFO] 11:19:27:394 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:27:434 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:27:434 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:27:434 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:27:434 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.187072
+[WARNING] 11:19:27:434 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:27:434 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.187072 milisegundos.
+[TRACE] 11:19:27:434 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 6
+[INFO] 11:19:27:474 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:27:474 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:27:474 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:27:574 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:27:614 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:27:614 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:27:614 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:27:614 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:27:614 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.149658
+[WARNING] 11:19:27:614 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:27:614 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.149658 milisegundos.
+[TRACE] 11:19:27:614 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 5
+[INFO] 11:19:27:654 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:27:694 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:27:694 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:27:694 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:27:694 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.119726
+[WARNING] 11:19:27:694 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:27:694 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.119726 milisegundos.
+[TRACE] 11:19:27:694 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 4
+[INFO] 11:19:27:734 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:27:734 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:27:734 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:27:834 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:27:874 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:27:875 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:27:875 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:27:875 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:27:875 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.095781
+[WARNING] 11:19:27:875 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:27:875 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.095781 milisegundos.
+[TRACE] 11:19:27:875 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 3
+[INFO] 11:19:27:914 kernel/(5835:5839): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:27:954 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:27:954 kernel/(5835:5839): [----------------PROCESOS EN READY: 2 --------------------]
+
+[ERROR] 11:19:27:954 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:27:954 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.076625
+[WARNING] 11:19:27:954 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:27:954 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.076625 milisegundos.
+[TRACE] 11:19:27:954 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 2
+[INFO] 11:19:27:994 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 4 a la cola.
+[INFO] 11:19:27:994 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 4 de la cola.
+[INFO] 11:19:27:994 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 4, 100 milisegs, 
+[INFO] 11:19:28:094 kernel/(5835:5837): [READY] Entra el proceso de PID: 4 a la cola.
+[TRACE] 11:19:28:134 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:28:134 kernel/(5835:5837): [----------------PROCESOS EN READY: 2 --------------------]
+
+[DEBUG] 11:19:28:134 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:28:134 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[ERROR] 11:19:28:134 kernel/(5835:5839): El proceso 4, tiene una estimacion actual de: 0.061300
+[WARNING] 11:19:28:134 kernel/(5835:5839): El proceso 4 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:28:134 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 4 con una rafaga de ejecucion estimada de 0.061300 milisegundos.
+[TRACE] 11:19:28:134 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 4: 1
+[INFO] 11:19:28:214 kernel/(5835:5839): [EXIT] Finaliza el proceso de PID: 4
+[ERROR] 11:19:28:214 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 50000.000000
+[WARNING] 11:19:28:214 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:28:214 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 50000.000000 milisegundos.
+[TRACE] 11:19:28:214 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 49
+[INFO] 11:19:30:293 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:30:294 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:30:294 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:30:394 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:30:433 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:30:434 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:30:434 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:30:434 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 40000.000000
+[WARNING] 11:19:30:434 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:30:434 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 40000.000000 milisegundos.
+[TRACE] 11:19:30:434 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 46
+[INFO] 11:19:31:438 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:31:478 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:31:478 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:31:478 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 32000.000000
+[WARNING] 11:19:31:478 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:31:478 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 32000.000000 milisegundos.
+[TRACE] 11:19:31:478 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 45
+[INFO] 11:19:31:479 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:31:479 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:31:479 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:31:579 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:31:617 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:31:617 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:31:618 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:31:618 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 25600.000000
+[WARNING] 11:19:31:618 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:31:618 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 25600.000000 milisegundos.
+[TRACE] 11:19:31:618 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 43
+[INFO] 11:19:33:700 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:33:738 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:33:738 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:33:738 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 20480.000000
+[WARNING] 11:19:33:738 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:33:738 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 20480.000000 milisegundos.
+[TRACE] 11:19:33:738 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 42
+[INFO] 11:19:33:738 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:33:739 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:33:739 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:33:839 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:33:878 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:33:878 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:33:879 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:33:879 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 16384.000000
+[WARNING] 11:19:33:879 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:33:879 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 16384.000000 milisegundos.
+[TRACE] 11:19:33:879 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 40
+[INFO] 11:19:34:920 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:34:958 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:34:958 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:34:958 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 13107.200195
+[WARNING] 11:19:34:958 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:34:958 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 13107.200195 milisegundos.
+[TRACE] 11:19:34:958 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 39
+[INFO] 11:19:34:959 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:34:959 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:34:959 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:35:059 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:35:098 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:35:098 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:35:098 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:35:098 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 10485.759766
+[WARNING] 11:19:35:098 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:35:098 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 10485.759766 milisegundos.
+[TRACE] 11:19:35:098 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 37
+[INFO] 11:19:36:680 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:36:718 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:36:718 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:36:718 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 8388.607422
+[WARNING] 11:19:36:718 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:36:718 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 8388.607422 milisegundos.
+[TRACE] 11:19:36:718 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 36
+[INFO] 11:19:36:718 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:36:718 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:36:718 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:36:818 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:36:862 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:36:863 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:36:863 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:36:863 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 6710.885742
+[WARNING] 11:19:36:863 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:36:863 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 6710.885742 milisegundos.
+[TRACE] 11:19:36:863 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 34
+[INFO] 11:19:38:404 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:38:444 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:38:444 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:38:444 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 5368.708496
+[WARNING] 11:19:38:444 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:38:444 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 5368.708496 milisegundos.
+[TRACE] 11:19:38:444 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 33
+[INFO] 11:19:38:446 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:38:446 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:38:446 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:38:546 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:38:586 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:38:586 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:38:586 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:38:586 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 4294.966797
+[WARNING] 11:19:38:586 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:38:586 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 4294.966797 milisegundos.
+[TRACE] 11:19:38:586 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 31
+[INFO] 11:19:40:128 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:40:165 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:40:166 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:40:166 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 3435.973389
+[WARNING] 11:19:40:166 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:40:166 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 3435.973389 milisegundos.
+[TRACE] 11:19:40:166 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 30
+[INFO] 11:19:40:166 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:40:166 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:40:166 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:40:267 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:40:305 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:40:306 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:40:306 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:40:306 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 2748.778809
+[WARNING] 11:19:40:306 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:40:306 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 2748.778809 milisegundos.
+[TRACE] 11:19:40:306 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 28
+[INFO] 11:19:41:848 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:41:886 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:41:886 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:41:886 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 2199.022949
+[WARNING] 11:19:41:886 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:41:886 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 2199.022949 milisegundos.
+[TRACE] 11:19:41:886 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 27
+[INFO] 11:19:41:886 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:41:886 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:41:886 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:41:987 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:42:026 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:42:026 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:42:026 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:42:026 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 1759.218384
+[WARNING] 11:19:42:026 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:42:026 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 1759.218384 milisegundos.
+[TRACE] 11:19:42:026 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 25
+[INFO] 11:19:44:067 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:44:106 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:44:106 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:44:106 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 1407.374756
+[WARNING] 11:19:44:106 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:44:106 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 1407.374756 milisegundos.
+[TRACE] 11:19:44:106 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 24
+[INFO] 11:19:44:106 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:44:106 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:44:106 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:44:206 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:44:246 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:44:246 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:44:246 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:44:246 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 1125.899780
+[WARNING] 11:19:44:246 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:44:246 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 1125.899780 milisegundos.
+[TRACE] 11:19:44:246 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 22
+[INFO] 11:19:45:287 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:45:326 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:45:326 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:45:326 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 900.719849
+[WARNING] 11:19:45:326 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:45:326 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 900.719849 milisegundos.
+[TRACE] 11:19:45:326 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 21
+[INFO] 11:19:45:326 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:45:326 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:45:327 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:45:427 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:45:466 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:45:466 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:45:466 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:45:466 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 720.575867
+[WARNING] 11:19:45:466 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:45:466 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 720.575867 milisegundos.
+[TRACE] 11:19:45:466 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 19
+[INFO] 11:19:47:548 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:47:586 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:47:586 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:47:586 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 576.460693
+[WARNING] 11:19:47:586 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:47:586 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 576.460693 milisegundos.
+[TRACE] 11:19:47:586 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 18
+[INFO] 11:19:47:587 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:47:587 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:47:587 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:47:687 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:47:726 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:47:726 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:47:726 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:47:726 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 461.168549
+[WARNING] 11:19:47:726 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:47:726 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 461.168549 milisegundos.
+[TRACE] 11:19:47:726 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 16
+[INFO] 11:19:48:767 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:48:806 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:48:806 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:48:806 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 368.934845
+[WARNING] 11:19:48:806 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:48:806 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 368.934845 milisegundos.
+[TRACE] 11:19:48:806 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 15
+[INFO] 11:19:48:806 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:48:806 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:48:806 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:48:907 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:48:946 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:48:946 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:48:946 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:48:946 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 295.147888
+[WARNING] 11:19:48:946 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:48:946 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 295.147888 milisegundos.
+[TRACE] 11:19:48:946 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 13
+[INFO] 11:19:50:528 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:50:566 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:50:566 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:50:566 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 236.118317
+[WARNING] 11:19:50:566 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:50:566 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 236.118317 milisegundos.
+[TRACE] 11:19:50:566 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 12
+[INFO] 11:19:50:566 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:50:566 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:50:567 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:50:667 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:50:706 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:50:706 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:50:706 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:50:706 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 188.894653
+[WARNING] 11:19:50:706 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:50:706 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 188.894653 milisegundos.
+[TRACE] 11:19:50:706 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 10
+[INFO] 11:19:52:250 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:52:290 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:52:290 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:52:290 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 151.115723
+[WARNING] 11:19:52:290 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:52:290 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 151.115723 milisegundos.
+[TRACE] 11:19:52:290 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 9
+[INFO] 11:19:52:290 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:52:290 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:52:290 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:52:391 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:52:430 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:52:430 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:52:430 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:52:430 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 120.892578
+[WARNING] 11:19:52:430 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:52:430 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 120.892578 milisegundos.
+[TRACE] 11:19:52:430 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 7
+[INFO] 11:19:53:971 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:54:010 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:54:010 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:54:010 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 96.714066
+[WARNING] 11:19:54:010 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:54:010 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 96.714066 milisegundos.
+[TRACE] 11:19:54:010 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 6
+[INFO] 11:19:54:011 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:54:011 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:54:011 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:54:111 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:54:150 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:54:150 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:54:150 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:54:150 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 77.371254
+[WARNING] 11:19:54:150 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:54:150 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 77.371254 milisegundos.
+[TRACE] 11:19:54:150 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 4
+[INFO] 11:19:55:693 kernel/(5835:5839): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:55:730 kernel/(5835:5839): Memoria termino de meter al proceso
+[DEBUG] 11:19:55:730 kernel/(5835:5839): [----------------PROCESOS EN READY: 1 --------------------]
+
+[ERROR] 11:19:55:730 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 61.897003
+[WARNING] 11:19:55:730 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:55:730 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 61.897003 milisegundos.
+[TRACE] 11:19:55:730 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 3
+[INFO] 11:19:55:730 kernel/(5835:5839): [BLOCK] Entra el proceso de PID: 5 a la cola.
+[INFO] 11:19:55:730 kernel/(5835:5837): [BLOCK] Sale el proceso de PID: 5 de la cola.
+[INFO] 11:19:55:730 kernel/(5835:5837): [BLOCK] Se bloquea el proceso 5, 100 milisegs, 
+[INFO] 11:19:55:830 kernel/(5835:5837): [READY] Entra el proceso de PID: 5 a la cola.
+[TRACE] 11:19:55:870 kernel/(5835:5837): Memoria termino de meter al proceso
+[DEBUG] 11:19:55:870 kernel/(5835:5837): [----------------PROCESOS EN READY: 1 --------------------]
+
+[DEBUG] 11:19:55:870 kernel/(5835:5837): Envio una interrupcion 2
+[ERROR] 11:19:55:870 kernel/(5835:5839): El proceso 5, tiene una estimacion actual de: 49.517601
+[WARNING] 11:19:55:870 kernel/(5835:5839): El proceso 5 fue elegido mediante el algoritmo SRT 
+[INFO] 11:19:55:870 kernel/(5835:5839): [EXEC] Ingresa el proceso de PID: 5 con una rafaga de ejecucion estimada de 49.517601 milisegundos.
+[TRACE] 11:19:55:870 kernel/(5835:5839): Cantidad de instrucciones restantes del proceso 5: 1
+[INFO] 11:19:55:910 kernel/(5835:5839): [EXIT] Finaliza el proceso de PID: 5

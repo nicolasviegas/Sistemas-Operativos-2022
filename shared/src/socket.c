@@ -12,7 +12,7 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
     hints.ai_flags = AI_PASSIVE;
 
     // Recibe los addrinfo
-    getaddrinfo(ip, puerto, &hints, &servinfo);
+    getaddrinfo(NULL, puerto, &hints, &servinfo);
 
     bool conecto = false;
 
