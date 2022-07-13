@@ -27,5 +27,14 @@
 * [_Commons_]
 * [_Serializacion_]
 
-
+## Como correrlo
+* ``cd tp-2022-1c-yaguarethreads-``
+* ``./install_commons.sh``
+* ``./deploy.sh``
+* ``cd scripts_config``
+* ``./config_integrales.sh``
+* ``cd ..``
+* ``cd "modulo"``
+* ``./"modulo".out``
+ 
 
