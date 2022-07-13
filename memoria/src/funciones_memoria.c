@@ -666,7 +666,7 @@ char* pasar_a_char(uint32_t num){
 	char* terminacion = ".swap";
 
 
-	char* num_char = itoa(num);
+	char* num_char = itoa(num+1);
 	//char* num_char = itoa(num);
 
 

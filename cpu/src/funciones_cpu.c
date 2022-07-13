@@ -277,7 +277,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 				log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 				return;
 			 }
-			 log_info(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+			 log_info(log_cpu,"El numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
 
 			 send_TAM(fd_memoria,entrada_2do_nivel);//enviamos a memoria la entrada de segundo nivel
 			 log_info(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
@@ -375,7 +375,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 					log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 					return;
 					}
-					log_info(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+					log_info(log_cpu,"El numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
 
 					send_TAM(fd_memoria,entrada_2do_nivel_origen);//enviamos a memoria la entrada de segundo nivel
 					log_info(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_origen);
@@ -461,7 +461,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 		 								log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 		 								return;
 		 								}
-		 								log_info(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+		 								log_info(log_cpu,"El numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
 
 		 								send_TAM(fd_memoria,entrada_2do_nivel_destino);//enviamos a memoria la entrada de segundo nivel
 		 								log_info(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_destino);
@@ -556,7 +556,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 							log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 							return;
 						 }
-						 log_info(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+						 log_info(log_cpu,"El numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
 
 						 send_TAM(fd_memoria,entrada_2do_nivel);//enviamos a memoria la entrada de segundo nivel
 						 log_info(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
