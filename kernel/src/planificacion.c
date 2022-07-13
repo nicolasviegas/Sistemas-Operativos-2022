@@ -169,6 +169,7 @@ void agregarABlockSuspended(pcb_t* pcb){
 		log_trace(log_kernel,"Memoria termino de meter a swap al proceso");
 	}
 
+
 	agregarAReadySuspended(pcb); //ESTO LO COMENTAMOS NOSOTROS
 
 }
@@ -218,6 +219,7 @@ pcb_t* sacarDeReadySuspended(){
 
 	pthread_mutex_unlock(&mutexReadySuspended);
 
+	//log_error(log_kernel,"[===========] agregue a ready desde sacar de ready suspended");
 	agregarAReady(proceso);//todo ESTE AGREGAR A READY ES EL QUE CAMBIAMOS PARA QUE FINALICE ACORDE A LAS PRUEBAS, CUALQUIER COSA COMENTAR ESTE Y DESCOMENTAR EL QUE QUEDO MARCADO
 
 	return proceso;
@@ -245,6 +247,7 @@ void hiloNew_Ready(){
 			proceso->estimacionActual = estimacion_inicial;	//"estimacio_inicial" va a ser una variable que vamos a obtener del cfg
 
 			sem_wait(&multiprogramacion); //HAY QUE VER DONDE PONER EL POST DE ESTE SEM, PORQUE SE QUEDA TRABADO EN EL LVL MAX DE MULTIPROGRAMACION
+			//log_error(log_kernel,"[===========] agregue a ready desde hilo new ready");
 			agregarAReady(proceso);
 
 
@@ -253,15 +256,14 @@ void hiloNew_Ready(){
 
 						//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 						//  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
-				  	  	log_debug(log_kernel,"Envio una interrupcion 1");
+				if(list_size(colaReady)>1){
+					log_debug(log_kernel,"Envio una interrupcion");
 
-				  	  	send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
-						}else{
-
-						}
-			}else{
-
+					send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
+					}
 			}
+			}
+
 			sem_post(&contadorProcesosEnMemoria);
 		}
 	}
@@ -270,12 +272,16 @@ void hiloNew_Ready(){
 // Hilo que maneja los procesos de Ready a Execute     -    CASO SRT
 void hiloReady_Exe(){
 
+	//while(list_size(colaReady)>0){
 	while(1){
 		//log_trace(log_kernel,"Entre en hilo ready exe");
 
 		pthread_mutex_lock(&multiprocesamiento);
 
+		//log_debug(log_kernel,"[[[[LA COLA READY TIENE %d ELEMENTOS antes de obtener sig ready",list_size(colaReady));
 		pcb_t* procesoAEjecutar = obtenerSiguienteDeReady();
+		//log_debug(log_kernel,"[[[[LA COLA READY TIENE %d ELEMENTOS despues de obtener sig ready",list_size(colaReady));
+
 
 		// Aca se crea un hilo de cpu y se le pasa ese pcb, cuando el proceso hace mate_close se pasa el pcb a EXIT y se mata el hilo
 
@@ -291,17 +297,20 @@ void hiloReady_Exe(){
 
 			}
 
-			enviar_pcb_a_cpu(procesoAEjecutar);
-
 			hay_alguien_exe = true;
 
+
+			enviar_pcb_a_cpu(procesoAEjecutar);
+
+
+	//		log_trace(log_kernel,"ANTES DE RECIBIR EL PC DE CPU");
 
 			uint32_t pc;
 			if (!recv_PC(fd_cpu, &pc)) {
 				log_error(log_kernel, "Fallo recibiendo pc");
 			}
 
-			//log_trace(log_kernel,"El PC despues del recv es: %d",pc);
+			//log_trace(log_kernel,"DESPUS DE RECIBIR EL PC DE CPU");
 
 			procesoAEjecutar->PC = pc;
 
@@ -328,6 +337,7 @@ void hiloReady_Exe(){
 				sem_wait(&suspensionFinalizada);
 			}else{
 				if(procesoAEjecutar->PC < list_size(procesoAEjecutar->instrucciones)){
+					//log_error(log_kernel,"[===========] agregue a ready desde hilo ready exe");
 					agregarAReady(procesoAEjecutar);
 				}else{
 					terminarEjecucion(procesoAEjecutar);
@@ -369,7 +379,7 @@ void hiloBlockASuspension(){
 						usleep(pcb->tiempo_bloqueo*1000);
 
 						//sem_post(&medianoPlazo); //esto para desbloquear el hilo suspension a ready
-
+						//log_error(log_kernel,"[===========] agregue a ready desde sacar de hilo block a suspension");
 						agregarAReady(pcb);
 						//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion, en block a suspension");
 ////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
@@ -378,15 +388,17 @@ void hiloBlockASuspension(){
 
 								//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
 								//  log_debug(log_kernel,"Entre en send interrupcion en hilo new ready, Proceso nuevo 777");
-								  	log_debug(log_kernel,"Envio una interrupcion 2");
+								if(list_size(colaReady)>1){
+									log_debug(log_kernel,"Envio una interrupcion");
 
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
+
+								}
+
 								}else{
 
 								}
-							}else{
-
-						}
+							}
 
 ////////////////////////////////////////////////////////////////////////////-----------------------/////////////////////////
 
@@ -443,7 +455,7 @@ void hiloSuspensionAReady(){
 					if(algoritmo_config == SRT){
 
 								//log_debug(log_kernel,"Despues de agregar a ready tendria que mandar la interrupcion");
-								  log_debug(log_kernel,"Envio una interrupcion 3");
+								  log_debug(log_kernel,"Envio una interrupcion");
 
 									send_interrupcion(fd_cpu_interrupt,777); ///777 es que hay una interrupcion
 								}else{
@@ -559,7 +571,7 @@ pcb_t* obtenerSiguienteSJF(){
 
     for(i=0;i<list_size(colaReady);i++){
     	procesoAux = list_get(colaReady,i);
-    	log_error(log_kernel,"El proceso %d, tiene una estimacion actual de: %f",procesoAux->PID,procesoAux->estimacionActual);
+    	log_info(log_kernel,"El proceso %d, tiene una estimacion actual de: %f",procesoAux->PID,procesoAux->estimacionActual);
     	if(shortestJob > procesoAux->estimacionActual){
     		shortestJob = procesoAux->estimacionActual;
     		indexARemover = i;

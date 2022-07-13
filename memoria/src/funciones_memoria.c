@@ -337,12 +337,8 @@ void escribir_pagina(uint32_t valor,uint32_t frame, uint32_t desplazamiento){
 	pthread_mutex_lock(&mutexEscribirEnMemoria);
 
 	if(valor != 0){
-		log_error(log_memoria,"Escribo en el frame %d,el valor: %d ",frame,valor);
-		//log_error(log_memoria,"Escribo la pagina,el valor: %d ",valor);
+		log_info(log_memoria,"Escribo en el frame %d,el valor: %d ",frame,valor);
 
-		//log_error(log_memoria,"El frame es es %d ",frame);
-		//log_error(log_memoria,"El tam pagina %d ",tamanio_paginas);
-		//log_error(log_memoria,"El desplazamiento es: %d",desplazamiento);
 	}
 
 	uint32_t posicion_marco = frame * tamanio_paginas;
@@ -671,10 +667,11 @@ char* pasar_a_char(uint32_t num){
 
 
 	char* num_char = itoa(num);
+	//char* num_char = itoa(num);
+
+
 
 	char* nuevo_path = strcat(num_char,terminacion);
-
-	//log_warning(log_memoria,"El nuevo path es: %s",nuevo_path);
 
 	return nuevo_path;
 }

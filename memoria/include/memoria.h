@@ -126,6 +126,8 @@ bool al_proceso_le_quedan_frames(uint32_t indice_tabla_1er_nivel);
 
 void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio, pagina* pagina_buscada,uint32_t frame_a_utilizar);
 
+void pasar_proceso_a_swap(uint32_t indice_tabla);
+
 void crear_archivo(char* path_char);
 
 void escribir_en_swap(uint32_t indice_archivo_swap,pagina* pagina_a_escribir);
@@ -143,6 +145,8 @@ void cargar_lista_frames();
 void poner_pagina_en_marco(uint32_t marco,pagina* pagina,uint32_t indice_proceso);
 
 void poner_archivo_con_ceros(char* path_char,uint32_t tam_proceso);
+
+void sacar_proceso_de_memoria(uint32_t indice_proceso);
 
 void actualizar_bit_uso_tlb(uint32_t marco_aux);
 

@@ -60,9 +60,12 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 	/////////////////////////////////////////////TLB/////////////////////////////////////////////////////////////////////
 
 
-		 void tlb_flush(){
-			 list_clean_and_destroy_elements(lista_tlb,&free);
-//			 log_trace(log_cpu,"Se limpio la TLB");
+		 void tlb_flush(uint32_t pid){
+			 if(pid != ultimo_proceso_cpu){
+				 list_clean_and_destroy_elements(lista_tlb,&free);
+				 log_trace(log_cpu,"Se limpio la TLB");
+			 }
+
 		 }
 
 		 void aumentar_tiempo(){
@@ -78,6 +81,7 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 		 void correr_algoritmo_reemplazo(uint32_t numero_pagina,uint32_t marco){
 			// log_warning(log_cpu,"Entre en correr algoritmo reemplazo");
+			 tlb* pagina_aux_fifo = malloc(sizeof(tlb));
 			 if(algoritmo_config == FIFO){
 				 if(list_size(lista_tlb) >= entradas_tlb){
 					 log_warning(log_cpu,"La TLB esta llena");
@@ -85,6 +89,9 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 					 tlb* elemento = malloc(sizeof(tlb));
 					 elemento->frame = marco;
 					 elemento->numero_pag = numero_pagina;
+
+					 pagina_aux_fifo =list_get(lista_tlb,0);
+					 log_warning(log_cpu,"Victima TLB por FIFO: pagina %d",pagina_aux_fifo->numero_pag);
 					 list_remove_and_destroy_element(lista_tlb,0,free);
 					 list_add(lista_tlb,elemento);
 					// log_warning(log_cpu,"El size de la lista tlb es: %d",list_size(lista_tlb));
@@ -100,6 +107,8 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 			 }
 			 else{
 				 if(list_size(lista_tlb) >= entradas_tlb){
+					 tlb* pagina_aux_lru = malloc(sizeof(tlb));
+
 					 log_warning(log_cpu,"La TLB esta llena");
 					 tlb* elemento = malloc(sizeof(tlb));
 					 elemento->frame = marco;
@@ -129,6 +138,10 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 				    }
 
 					 aumentar_tiempo();
+
+					 pagina_aux_lru =list_get(lista_tlb,indexARemover);
+					 log_warning(log_cpu,"Victima TLB por LRU: pagina %d",pagina_aux_lru->numero_pag);
+
 					// log_warning(log_cpu,"Antes del remove and destroy, el index a remover es: %d",indexARemover);
 
 					 list_remove_and_destroy_element(lista_tlb,indexARemover,free);
@@ -251,33 +264,33 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 			 send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
 			 send_TAM(fd_memoria,tabla_1er_nivel); //send indice tabla pagina
-			 log_error(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
+			 log_info(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
 
 			 send_TAM(fd_memoria,entrada_1er_nivel);
-			 log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
+			 log_info(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
 
 			 send_TAM(fd_memoria,tamanio);
-			 log_error(log_cpu,"El tamanio del proceso es: %d",tamanio);
+			 log_info(log_cpu,"El tamanio del proceso es: %d",tamanio);
 
 			 uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
 			 if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-				log_info(log_cpu, "fallo al recibir nro tabla segundo nivel!");
+				log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 				return;
 			 }
-			 log_error(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+			 log_info(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
 
 			 send_TAM(fd_memoria,entrada_2do_nivel);//enviamos a memoria la entrada de segundo nivel
-			 log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
+			 log_info(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
 
 
 //aca estaba el recv marco aux
 
 			 send_TAM(fd_memoria,desplazamiento);//enviamos el desplazamiento
-			 log_error(log_cpu,"El desplazamiento es: %d",desplazamiento);
+			 log_info(log_cpu,"El desplazamiento es: %d",desplazamiento);
 
 			 uint32_t valor_leido;
 			 if (recv(fd_memoria, &valor_leido, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-			 				log_info(log_cpu, "fallo al recibir valor_leido");
+			 				log_error(log_cpu, "fallo al recibir valor_leido");
 			 				return;
 			 }
 			 log_debug(log_cpu,"Me llego el valor leido: %d",valor_leido);
@@ -285,10 +298,10 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 			 uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
 						 if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-							log_info(log_cpu, "fallo al recibir marcoaux");
+							log_error(log_cpu, "fallo al recibir marcoaux");
 							return;
 						 }
-						 log_error(log_cpu,"el marco es: %d",marcoaux);
+						 log_info(log_cpu,"el marco es: %d",marcoaux);
 
 						// log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 						 correr_algoritmo_reemplazo(numero_pagina,marcoaux);
@@ -349,31 +362,31 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 					send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
 					send_TAM(fd_memoria,tabla_1er_nivel); //send indice tabla pagina
-					log_error(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
+					log_info(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
 
 					send_TAM(fd_memoria,entrada_1er_nivel_origen);
-					log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel_origen);
+					log_info(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel_origen);
 
 					 send_TAM(fd_memoria,tamanio);
-					 log_error(log_cpu,"El tamanio del proceso es: %d",tamanio);
+					 log_info(log_cpu,"El tamanio del proceso es: %d",tamanio);
 
 					uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
 					if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-					log_info(log_cpu, "fallo al recibir nro tabla segundo nivel!");
+					log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 					return;
 					}
-					log_error(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+					log_info(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
 
 					send_TAM(fd_memoria,entrada_2do_nivel_origen);//enviamos a memoria la entrada de segundo nivel
-					log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_origen);
+					log_info(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_origen);
 
 
 					send_TAM(fd_memoria,desplazamiento_origen);//enviamos el desplazamiento
-					log_error(log_cpu,"El desplazamiento es: %d",desplazamiento_origen);
+					log_info(log_cpu,"El desplazamiento es: %d",desplazamiento_origen);
 
 					 uint32_t valor_leido;
 					 if (recv(fd_memoria, &valor_leido, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-									log_info(log_cpu, "fallo al recibir valor_leido");
+									log_error(log_cpu, "fallo al recibir valor_leido");
 									return;
 					 }
 					 if(valor_leido == 18){
@@ -384,10 +397,10 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 					// uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
 					 if (recv(fd_memoria, &marco_origen, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-						log_info(log_cpu, "fallo al recibir marcoaux");
+						log_error(log_cpu, "fallo al recibir marcoaux");
 						return;
 					 }
-					 log_error(log_cpu,"el marco es: %d",marco_origen);
+					 log_info(log_cpu,"el marco es: %d",marco_origen);
 
 					log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 					correr_algoritmo_reemplazo(numero_pagina_origen,marco_origen);
@@ -435,31 +448,31 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 		 								send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
 		 								send_TAM(fd_memoria,tabla_1er_nivel); //send indice tabla pagina
-		 								log_error(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
+		 								log_info(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
 
 		 								send_TAM(fd_memoria,entrada_1er_nivel_destino);
-		 								log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel_destino);
+		 								log_info(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel_destino);
 
 										 send_TAM(fd_memoria,tamanio);
-										 log_error(log_cpu,"El tamanio del proceso es: %d",tamanio);
+										 log_info(log_cpu,"El tamanio del proceso es: %d",tamanio);
 
 		 								uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
 		 								if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-		 								log_info(log_cpu, "fallo al recibir nro tabla segundo nivel!");
+		 								log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 		 								return;
 		 								}
-		 								log_error(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+		 								log_info(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
 
 		 								send_TAM(fd_memoria,entrada_2do_nivel_destino);//enviamos a memoria la entrada de segundo nivel
-		 								log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_destino);
+		 								log_info(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel_destino);
 
 
 		 								send_TAM(fd_memoria,desplazamiento_destino);//enviamos el desplazamiento
-		 								log_error(log_cpu,"El desplazamiento es: %d",desplazamiento_destino);
+		 								log_info(log_cpu,"El desplazamiento es: %d",desplazamiento_destino);
 
 		 								 uint32_t valor_leido;
 		 								 if (recv(fd_memoria, &valor_leido, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-		 												log_info(log_cpu, "fallo al recibir valor_leido");
+		 												log_error(log_cpu, "fallo al recibir valor_leido");
 		 												return;
 		 								 }
 		 								 if(valor_leido == 18){
@@ -470,10 +483,10 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 //		 								 uint32_t marco_destino; //aca recibe de memoria el numero de la tabla de segundo nivel
 		 								 if (recv(fd_memoria, &marco_destino, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-		 									log_info(log_cpu, "fallo al recibir marco_destino");
+		 									log_error(log_cpu, "fallo al recibir marco_destino");
 		 									return;
 		 								 }
-		 								 log_error(log_cpu,"el marco destino es: %d",marco_destino);
+		 								 log_info(log_cpu,"el marco destino es: %d",marco_destino);
 
 		 								log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 		 								correr_algoritmo_reemplazo(numero_pagina_destino,marco_destino);
@@ -508,16 +521,6 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 							 send_TAM(fd_memoria,parametro2);//enviamos el valor a escribir
 
-//							 uint32_t valor_leido;
-//							 if(recv(fd_memoria,&valor_leido,sizeof(uint32_t),0) != sizeof(uint32_t)){
-//								 log_error(log_cpu,"Fallo escribiendo en memoria");
-//							 }
-//							 if(valor_leido == parametro2){
-//								 log_debug(log_cpu,"Escribi en memoria el valor: %d",valor_leido);
-//							 }
-
-
-
 							 uint32_t rta_mem;
 							 if(recv(fd_memoria,&rta_mem,sizeof(uint32_t),0) != sizeof(uint32_t)){
 								 log_error(log_cpu,"Fallo escribiendo en memoria");
@@ -525,14 +528,6 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 							 if(rta_mem == 100){
 								 log_debug(log_cpu,"Se escribio en memoria exitosamente");
 							 }
-
-//							 uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
-//							 if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-//								log_info(log_cpu, "fallo al recibir marcoaux");
-//								return;
-//							 }
-//							 log_error(log_cpu,"el marco es: %d",marcoaux);
-
 
 						 }
 						 else{ //caso en que no este en la tlb
@@ -548,23 +543,23 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 						 send_TAM(fd_memoria,4321);//le aviso que no estaba en la tlb
 
 						 send_TAM(fd_memoria,tabla_1er_nivel); //send indice tabla pagina
-						 log_error(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
+						 log_info(log_cpu,"El indice tabla pagina %d",tabla_1er_nivel);
 
 						 send_TAM(fd_memoria,entrada_1er_nivel);
-						 log_error(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
+						 log_info(log_cpu,"La entrada de 1er nivel es: %d",entrada_1er_nivel);
 
 						 send_TAM(fd_memoria,tamanio);
-						 log_error(log_cpu,"El tamanio del proceso es: %d",tamanio);
+						 log_info(log_cpu,"El tamanio del proceso es: %d",tamanio);
 
 						 uint32_t numero_tabla_segundo_nivel; //aca recibe de memoria el numero de la tabla de segundo nivel
 						 if (recv(fd_memoria, &numero_tabla_segundo_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-							log_info(log_cpu, "fallo al recibir nro tabla segundo nivel!");
+							log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 							return;
 						 }
-						 log_error(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
+						 log_info(log_cpu,"el numero_tabla_segundo_nivel es: %d",numero_tabla_segundo_nivel);
 
 						 send_TAM(fd_memoria,entrada_2do_nivel);//enviamos a memoria la entrada de segundo nivel
-						 log_error(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
+						 log_info(log_cpu,"La entrada de 2do nivel es: %d",entrada_2do_nivel);
 //ESTE HAY QUE PONERLO ANTES DEL EJECUTAR ALGOREEMPLAZO
 //						 uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
 //						 if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -575,10 +570,10 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 
 						 send_TAM(fd_memoria,desplazamiento);//enviamos el desplazamiento
-						 log_error(log_cpu,"El desplazamiento es: %d",desplazamiento);
+						 log_info(log_cpu,"El desplazamiento es: %d",desplazamiento);
 
 						 send_TAM(fd_memoria,parametro2);//enviamos el valor a escribir
-						 log_error(log_cpu,"El valor a escribir es: %d",parametro2);
+						 log_info(log_cpu,"El valor a escribir es: %d",parametro2);
 
 
 
@@ -600,10 +595,10 @@ t_list* cargar_instruccion_local(t_list* a,int id, char* nombre, uint32_t parame
 
 						 uint32_t marcoaux; //aca recibe de memoria el numero de la tabla de segundo nivel
 						 if (recv(fd_memoria, &marcoaux, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-							log_info(log_cpu, "fallo al recibir marcoaux");
+							log_error(log_cpu, "fallo al recibir marcoaux");
 							return;
 						 }
-						 log_error(log_cpu,"el marco es: %d",marcoaux);
+						 log_info(log_cpu,"el marco es: %d",marcoaux);
 
 						// log_warning(log_cpu,"Amtes de correr algoritmo reemplzo");
 							correr_algoritmo_reemplazo(numero_pagina,marcoaux);
@@ -710,7 +705,7 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 
 				 uint32_t confirmacion; //aca recibe de memoria el numero de la tabla de segundo nivel
 				 if (recv(fd_memoria, &confirmacion, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
-					log_info(log_cpu, "fallo al recibir nro tabla segundo nivel!");
+					log_error(log_cpu, "fallo al recibir nro tabla segundo nivel!");
 					return;
 				 }
 
@@ -733,15 +728,23 @@ void decode_and_execute(pcb_cpu* pcb,instrucciones* instruccion_a_decodificar){
 }
 
 bool check_interrupt(int cliente_socket){
+
 	uint32_t cod_interrup;
 	if (!recv_interrupcion(cliente_socket, &cod_interrup)) {
 			//log_error(log_cpu, "no se interrumpio");
 
 	}
+
+	//log_debug(log_cpu,"ESTOY ADENTRO DE CHECJ INTERRUPT");
+
 	if(cod_interrup == 777){
-		interrupcion = true;
+	//	log_debug(log_cpu,"RECIBI EL 777");
+
+		//interrupcion = true;
 		log_debug(log_cpu,"Recibi una interrupcion");
-		return interrupcion;
+		return true;
 	}
+
+	return false;
 
 }

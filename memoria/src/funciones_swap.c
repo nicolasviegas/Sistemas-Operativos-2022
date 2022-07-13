@@ -206,7 +206,7 @@ void traer_proceso_de_swap(uint32_t indice_archivo_swap,uint32_t tamanio, pagina
 					dataAux = leer_de_swap(indice_archivo_swap,pagina_aux->nro_pagina,desp,tamanio);
 
 					if(dataAux != 0){
-						log_warning(log_memoria,"El valor que lei de swap del archivo %d es: %d",indice_archivo_swap+1,dataAux);
+						log_warning(log_memoria,"El valor que lei de swap del archivo %d es: %d",indice_archivo_swap,dataAux);
 						//log_warning(log_memoria,"El desplazamiento que lei de swap es: %d",desp);
 					}
 

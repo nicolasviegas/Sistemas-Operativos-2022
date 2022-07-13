@@ -54,7 +54,7 @@ void send_instrucciones(t_list* lista_instrucciones,int fd_mod2){
 		else if(a->id == WRITE){
 			//log_warning(log_consola,"entre en WRITE dentro de send_instrucciones");
 			send_WRITE(fd_mod2,a->parametro1,a->parametro2);
-			log_info(log_consola,"Envio la intruccion WRITE con la dir log: %d y %d",a->parametro1,a->parametro2);
+			log_info(log_consola,"Envio la intruccion WRITE con la dir log: %d y el valor %d",a->parametro1,a->parametro2);
 		}
 		else if(a->id == EXIT){
 			//log_warning(log_consola,"Entre en EXIT dentro de send_instrucciones");

@@ -74,6 +74,8 @@ int main() {
     lista_pcb_cpu = list_create();
     lista_tlb = list_create();
 
+    ultimo_proceso_cpu = 1 ;
+
     //fd_kernel = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha);
     fd_cpu = iniciar_servidor(log_cpu,"CPU",ip,puerto_escucha_dispatch);
 

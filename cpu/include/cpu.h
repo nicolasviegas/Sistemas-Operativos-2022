@@ -57,6 +57,7 @@ t_log* log_cpu;
 
 t_list* lista_tlb;
 
+
 char* ip;
 uint32_t entradas_tlb;
 char* reemplazo_tlb;
@@ -71,6 +72,7 @@ uint32_t cant_entradas_por_tabla; // falta recibirlo
 
 uint32_t tiempo_bloqueante;
 
+uint32_t ultimo_proceso_cpu;
 //t_paquete* paquete_consola_kernel;
 
 //agregas colas_new, colas_ready, etc

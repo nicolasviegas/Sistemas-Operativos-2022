@@ -129,12 +129,15 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 				}else{
 							log_info(log_memoria,"Tengo que ir a buscar la pagina que me pidio CPU");
 
+
 							uint32_t indice_tabla;
 							if (recv(cliente_socket, &indice_tabla, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
 								log_info(log_memoria, "fallo al recibir nro de pagina!");
 								return;
 							}
-							log_trace(log_memoria,"El indice de la tabla 1er nivel es: %d",indice_tabla);
+
+
+							log_trace(log_memoria,"El indice de la tabla 1er nivel del proceso %d es: %d",indice_tabla+1,indice_tabla);
 
 							uint32_t entrada_1er_nivel;
 							if (recv(cliente_socket, &entrada_1er_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -289,7 +292,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 						log_info(log_memoria, "fallo al recibir nro de pagina!");
 						return;
 					}
-					log_trace(log_memoria,"El indice de la tabla 1er nivel es: %d",indice_tabla);
+
+					log_trace(log_memoria,"El indice de la tabla 1er nivel del proceso %d es: %d",indice_tabla+1,indice_tabla);
 
 					uint32_t entrada_1er_nivel;
 					if (recv(cliente_socket, &entrada_1er_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -399,7 +403,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 							log_info(log_memoria, "fallo al recibir nro de pagina!");
 							return;
 						}
-						log_trace(log_memoria,"El marco es: %d",marco_aux);
+						//log_trace(log_memoria,"El marco es 1: %d",marco_aux);
 
 
 						uint32_t desplazamiento;
@@ -440,7 +444,8 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								log_info(log_memoria, "fallo al recibir nro de pagina!");
 								return;
 							}
-							log_trace(log_memoria,"El indice de la tabla 1er nivel es: %d",indice_tabla);
+
+							log_trace(log_memoria,"El indice de la tabla 1er nivel del proceso %d es: %d",indice_tabla+1,indice_tabla);
 
 							uint32_t entrada_1er_nivel;
 							if (recv(cliente_socket, &entrada_1er_nivel, sizeof(uint32_t), 0) != sizeof(uint32_t)) {
@@ -502,7 +507,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 								//log_warning(log_memoria,"Le mande un 18 a cpu(La pagina ya estaba en memoria)");
 								usleep(retardo_memoria*1000);
 								send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
-								log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+								log_trace(log_memoria,"el marco es 2: %d",pagina_buscada->frame);
 							}
 							else{
 								uint32_t frame_a_utilizar = buscar_frame_libre();
@@ -519,7 +524,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 										//log_warning(log_memoria,"Le mande un 18 a cpu (al proceso le quedaban frames)");
 										usleep(retardo_memoria*1000);
 										send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
-										log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+										log_trace(log_memoria,"el marco es 3: %d",pagina_buscada->frame);
 									}
 									else{
 										if(el_proceso_tiene_almenos_una_pag_en_mem(indice_tabla)){
@@ -535,7 +540,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 											//log_warning(log_memoria,"Le mande un 18 a cpu (tuvo que reemplazar)");
 											usleep(retardo_memoria*1000);
 											send_TAM(cliente_socket,pagina_buscada->frame);//aca hay que pasar el marco en vez del 7
-											log_trace(log_memoria,"el marco es: %d",pagina_buscada->frame);
+											log_trace(log_memoria,"el marco es 2: %d",pagina_buscada->frame);
 									}
 							   }
 						   }
@@ -565,7 +570,7 @@ static void procesar_conexion_memoria_kernel(void* void_args) {
 			return;
 			}
 
-			log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso + 1);
+		//	log_trace(log_memoria,"Meto a mem principal el proceso: %d",indice_proceso + 1);
 
 
 			if(!el_proceso_tiene_almenos_una_pag_en_mem(indice_proceso)){

@@ -258,6 +258,8 @@ static void procesar_conexion_cpu(void* void_args) {
 
 		interrupcion = false;
 
+		tlb_flush(pcb_proceso_cpu->PID);
+
 		//log_debug(log_cpu,"la cantidad de instrucciones que me mando kernel: %d",list_size(pcb_proceso_cpu->instrucciones));
 
 			while(!interrupcion && pcb_proceso_cpu->PC < list_size(pcb_proceso_cpu->instrucciones) && tiempo_bloqueante == 0){//la interrupcion verla segun el puerto interrupt
@@ -267,17 +269,16 @@ static void procesar_conexion_cpu(void* void_args) {
 			proxima_a_ejecutar = fetch(pcb_proceso_cpu);
 
 			decode_and_execute(pcb_proceso_cpu, proxima_a_ejecutar);
-			//log_warning(log_cpu,"ANTES DEL CHECK INTERRUPT");
-//			send_TAM(fd_kernel,12);
+
 			interrupcion = check_interrupt(cliente_socket_interrupcion);
 
-			//log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d",pcb_proceso_cpu->PC);
+			//log_trace(log_cpu,"El pc despues de ejecutar una instruccion es: %d y la lista es de: %d",pcb_proceso_cpu->PC,list_size(pcb_proceso_cpu->instrucciones));
 
 			//log_warning(log_cpu,"El tiempo bloqueante en el while de ejecucion es: %d",tiempo_bloqueante);
 
 			}
 
-
+			//log_error(log_cpu,"[[[[[[[[[sali del while interrupcion]]]]]]] ");
 		//log_debug(log_cpu,"El pc antes de send a kernel es: %d",pcb_proceso_cpu->PC);
 		send_PC(fd_kernel,pcb_proceso_cpu->PC);
 
@@ -285,30 +286,13 @@ static void procesar_conexion_cpu(void* void_args) {
 		send_tiempo_bloqueante(fd_kernel,tiempo_bloqueante);
 
 
-
+		ultimo_proceso_cpu = pcb_proceso_cpu->PID;
 
 		log_trace(log_cpu,"Finalizo el ciclo de ejecucion del proceso: %d ",pcb_proceso_cpu->PID);
 
-
-		//list_destroy(pcb_proceso_cpu->instrucciones);
-
-//		while(list_size(pcb_proceso_cpu->instrucciones) != 0){
-//			list_remove_and_destroy_element(pcb_proceso_cpu->instrucciones,0,free);
-//		}
-
-		tlb_flush();
-
-
-//		while(list_size(pcb_proceso_cpu->instrucciones)!= 0){
-//			list_clean_and_destroy_elements(pcb_proceso_cpu->instrucciones,&free);
-//		}
 		list_destroy(pcb_proceso_cpu->instrucciones);
-		//list_destroy(lista_intrucciones_local);//esto no se si va ELIMINAR SI ROMPE
 
 		free(proxima_a_ejecutar);
-
-	//	free(pcb_proceso_cpu);
-
 
 	 }
 
@@ -332,10 +316,8 @@ int server_escuchar_cpu(t_log* logger, char* server_name, int server_socket,int 
         args->fd_interrupt = cliente_socket_1;
         args->server_name = server_name;
 
-       // log_error(log_cpu,"Estoy en sv escuchar antes de procesar conexion");
         pthread_create(&hilo, NULL, (void*) procesar_conexion_cpu, (void*) args);
         pthread_detach(hilo);
-     //  log_error(log_cpu,"Estoy en sv escuchar despues de procesar conexion");
 
         return 1;
     }
