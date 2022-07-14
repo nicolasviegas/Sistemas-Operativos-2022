@@ -12,7 +12,7 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
     hints.ai_flags = AI_PASSIVE;
 
     // Recibe los addrinfo
-    getaddrinfo(ip, puerto, &hints, &servinfo);
+    getaddrinfo(NULL, puerto, &hints, &servinfo);
 
     bool conecto = false;
 
@@ -22,8 +22,8 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
         if (socket_servidor == -1) // fallo de crear socket
             continue;
 
-       // if (setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEADDR, &(int){1}, sizeof(int)) < 0)
-        //    error("setsockopt(SO_REUSEADDR) failed");
+        if (setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEADDR, &(int){1}, sizeof(int)) < 0)
+            error("setsockopt(SO_REUSEADDR) failed");
 
         if (bind(socket_servidor, p->ai_addr, p->ai_addrlen) == -1) {
             // Si entra aca fallo el bind
