@@ -43,7 +43,7 @@ int iniciar_servidor(t_log* logger, const char* name, char* ip, char* puerto) {
     listen(socket_servidor, SOMAXCONN); // Escuchando (hasta SOMAXCONN conexiones simultaneas)
 
     // Aviso al logger
-    log_info(logger, "Escuchando en %s:%s (%s)\n", ip, puerto, name);
+    log_info(logger, "Escuchando en :%s (%s)\n", puerto, name);
 
     freeaddrinfo(servinfo);
 
@@ -57,7 +57,7 @@ int esperar_cliente(t_log* logger, const char* name, int socket_servidor) {
 
     int socket_cliente = accept(socket_servidor, (void*) &dir_cliente, &tam_direccion);
 
-    log_info(logger, "Cliente conectado (a %s)\n", name);
+    log_info(logger, "Cliente conectado a (%s)\n", name);
 
     return socket_cliente;
 }

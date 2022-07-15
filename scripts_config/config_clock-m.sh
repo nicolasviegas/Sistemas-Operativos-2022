@@ -35,9 +35,9 @@ fi
 
 touch kernel.config
 
-echo 'IP_MEMORIA=127.0.0.1' >kernel.config
+echo 'IP_MEMORIA=192.168.3.x' >kernel.config
 echo 'PUERTO_MEMORIA=8002' >>kernel.config
-echo 'IP_CPU=127.0.0.1' >>kernel.config
+echo 'IP_CPU=192.168.3.x' >>kernel.config
 echo 'PUERTO_CPU_DISPATCH=8001' >>kernel.config
 echo 'PUERTO_CPU_INTERRUPT=8005' >>kernel.config
 echo 'PUERTO_ESCUCHA=8000' >>kernel.config
@@ -63,7 +63,7 @@ touch cpu.config
 echo 'ENTRADAS_TLB=1' >cpu.config
 echo 'REEMPLAZO_TLB=LRU' >>cpu.config
 echo 'RETARDO_NOOP=1000' >>cpu.config
-echo 'IP_MEMORIA=127.0.0.1' >>cpu.config
+echo 'IP_MEMORIA=192.168.3.x' >>cpu.config
 echo 'PUERTO_MEMORIA=8002' >>cpu.config
 echo 'PUERTO_ESCUCHA_DISPATCH=8001' >>cpu.config
 echo 'PUERTO_ESCUCHA_INTERRUPT=8005' >>cpu.config
