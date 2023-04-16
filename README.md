@@ -16,16 +16,6 @@
 * [_Tomas Rossi_]
 * [_Matias Rizzato Busta_]
 
-## Material utilizado
-[_Guia Sockets_]:https://docs.google.com/document/d/17E5ge5eC6wRAeh5AWETRBB7UrmqBQ6i0JjfUD7KRY68/edit
-[_Pruebas_]: https://docs.google.com/document/d/1SBBTCweMCiBg6TPTt7zxdinRh4ealRasbu0bVlkty5o/edit
-[_Commons_]: https://github.com/sisoputnfrba/so-commons-library
-[_Serializacion_]:https://docs.google.com/presentation/d/1-S30Imgw-4KxIyHK-p7kO07UZdY7OGrLTXSGhfkl1Ug/edit#slide=id.p1
-
-* [_Guia Sockets_]
-* [_Pruebas_]
-* [_Commons_]
-* [_Serializacion_]
 
 ## Material utilizado
 [_Guia Sockets_]:https://docs.google.com/document/d/17E5ge5eC6wRAeh5AWETRBB7UrmqBQ6i0JjfUD7KRY68/edit
